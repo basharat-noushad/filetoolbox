@@ -119,7 +119,7 @@ export function CropImageClient() {
       if (drag.type === 'new') {
         const nx = Math.min(drag.startX, pt.x)
         const ny = Math.min(drag.startY, pt.y)
-        let nw = Math.abs(dx)
+        const nw = Math.abs(dx)
         let nh = Math.abs(dy)
         if (ratio) nh = nw / ratio
         return {
