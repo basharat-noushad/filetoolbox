@@ -16,8 +16,23 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://filetoolbox.com'),
   title: { template: '%s | FileToolBox', default: 'FileToolBox — Free PDF & Image Tools Online' },
   description: 'Free online tools for PDF and images. Merge, compress, convert, crop, resize and more. No registration required. Secure and private.',
-  openGraph: { type: 'website', locale: 'en_US', siteName: 'FileToolBox' },
-  twitter: { card: 'summary_large_image' },
+  keywords: ['pdf tools', 'image tools', 'merge pdf', 'compress pdf', 'crop image', 'resize image', 'convert image', 'free online tools'],
+  authors: [{ name: 'FileToolBox' }],
+  creator: 'FileToolBox',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'FileToolBox',
+    title: 'FileToolBox — Free PDF & Image Tools Online',
+    description: 'Free online tools for PDF and images. Merge, compress, convert, crop, resize and more. No registration required.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'pdf and image + — Free PDF & Image Tools' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FileToolBox — Free PDF & Image Tools Online',
+    description: 'Free online tools for PDF and images. No sign-up required.',
+    images: ['/og-image.png'],
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

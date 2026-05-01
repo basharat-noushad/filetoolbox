@@ -10,6 +10,14 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'Word to PDF Online Free — Convert DOCX to PDF | FileToolBox',
     description: 'Convert Word documents to PDF online for free. Preserves formatting perfectly. No registration needed. Fast and reliable.',
     keywords: tool.keywords,
+    openGraph: {
+      title: 'Word to PDF Online Free — Convert DOCX to PDF | FileToolBox',
+      description: 'Convert Word documents to PDF online for free. Preserves formatting perfectly. No registration needed. Fast and reliable.',
+    },
+    twitter: {
+      title: 'Word to PDF Online Free — Convert DOCX to PDF | FileToolBox',
+      description: 'Convert Word documents to PDF online for free. Preserves formatting perfectly. No registration needed. Fast and reliable.',
+    },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
   }
 }

@@ -10,6 +10,14 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'Compress PDF Online Free — Reduce PDF Size | FileToolBox',
     description: 'Compress PDF files online for free. Reduce PDF file size without losing quality. No registration needed. 100% browser-based.',
     keywords: tool.keywords,
+    openGraph: {
+      title: 'Compress PDF Online Free — Reduce PDF Size | FileToolBox',
+      description: 'Compress PDF files online for free. Reduce PDF file size without losing quality. No registration needed. 100% browser-based.',
+    },
+    twitter: {
+      title: 'Compress PDF Online Free — Reduce PDF Size | FileToolBox',
+      description: 'Compress PDF files online for free. Reduce PDF file size without losing quality. No registration needed. 100% browser-based.',
+    },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
   }
 }

@@ -14,6 +14,10 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Merge PDF Online Free | FileToolBox',
       description: 'Combine multiple PDF files into one. Free, secure, no sign-up required.',
     },
+    twitter: {
+      title: 'Merge PDF Online Free | FileToolBox',
+      description: 'Combine multiple PDF files into one. Free, secure, no sign-up required.',
+    },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
   }
 }

@@ -10,6 +10,14 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'PDF to JPG Online Free — Convert PDF Pages to Images | FileToolBox',
     description: 'Convert PDF pages to high-quality JPG images online for free. Download individually or as a ZIP. No registration required.',
     keywords: tool.keywords,
+    openGraph: {
+      title: 'PDF to JPG Online Free — Convert PDF Pages to Images | FileToolBox',
+      description: 'Convert PDF pages to high-quality JPG images online for free. Download individually or as a ZIP. No registration required.',
+    },
+    twitter: {
+      title: 'PDF to JPG Online Free — Convert PDF Pages to Images | FileToolBox',
+      description: 'Convert PDF pages to high-quality JPG images online for free. Download individually or as a ZIP. No registration required.',
+    },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
   }
 }

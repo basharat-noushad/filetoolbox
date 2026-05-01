@@ -10,6 +10,14 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'Flip Image Online Free — Mirror Photo Horizontally or Vertically | FileToolBox',
     description: 'Flip images horizontally or vertically online for free. Mirror any photo in one click. No registration required.',
     keywords: tool.keywords,
+    openGraph: {
+      title: 'Flip Image Online Free — Mirror Photo Horizontally or Vertically | FileToolBox',
+      description: 'Flip images horizontally or vertically online for free. Mirror any photo in one click. No registration required.',
+    },
+    twitter: {
+      title: 'Flip Image Online Free — Mirror Photo Horizontally or Vertically | FileToolBox',
+      description: 'Flip images horizontally or vertically online for free. Mirror any photo in one click. No registration required.',
+    },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
   }
 }

@@ -10,6 +10,14 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'Rotate Image Online Free — Rotate Photos 90° 180° 270° | FileToolBox',
     description: 'Rotate images online for free. Rotate photos 90°, 180°, or 270°. Fix portrait/landscape orientation instantly. No registration.',
     keywords: tool.keywords,
+    openGraph: {
+      title: 'Rotate Image Online Free — Rotate Photos 90° 180° 270° | FileToolBox',
+      description: 'Rotate images online for free. Rotate photos 90°, 180°, or 270°. Fix portrait/landscape orientation instantly. No registration.',
+    },
+    twitter: {
+      title: 'Rotate Image Online Free — Rotate Photos 90° 180° 270° | FileToolBox',
+      description: 'Rotate images online for free. Rotate photos 90°, 180°, or 270°. Fix portrait/landscape orientation instantly. No registration.',
+    },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
   }
 }

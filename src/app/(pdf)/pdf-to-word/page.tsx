@@ -10,6 +10,14 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'PDF to Word Online Free — Convert PDF to DOCX | FileToolBox',
     description: 'Convert PDF files to editable Word documents (.docx) online for free. No registration, no watermarks. Fast and accurate conversion.',
     keywords: tool.keywords,
+    openGraph: {
+      title: 'PDF to Word Online Free — Convert PDF to DOCX | FileToolBox',
+      description: 'Convert PDF files to editable Word documents (.docx) online for free. No registration, no watermarks. Fast and accurate conversion.',
+    },
+    twitter: {
+      title: 'PDF to Word Online Free — Convert PDF to DOCX | FileToolBox',
+      description: 'Convert PDF files to editable Word documents (.docx) online for free. No registration, no watermarks. Fast and accurate conversion.',
+    },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
   }
 }

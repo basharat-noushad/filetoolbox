@@ -10,6 +10,14 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'Convert Image to WebP Online Free — JPG PNG to WebP | FileToolBox',
     description: 'Convert JPG or PNG images to WebP format online for free. Smaller files, better web performance. No registration required.',
     keywords: tool.keywords,
+    openGraph: {
+      title: 'Convert Image to WebP Online Free — JPG PNG to WebP | FileToolBox',
+      description: 'Convert JPG or PNG images to WebP format online for free. Smaller files, better web performance. No registration required.',
+    },
+    twitter: {
+      title: 'Convert Image to WebP Online Free — JPG PNG to WebP | FileToolBox',
+      description: 'Convert JPG or PNG images to WebP format online for free. Smaller files, better web performance. No registration required.',
+    },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
   }
 }

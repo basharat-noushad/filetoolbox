@@ -10,6 +10,14 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'JPG to PDF Online Free — Convert Images to PDF | FileToolBox',
     description: 'Convert JPG images to a PDF file online for free. Add multiple images and download as a single PDF. No registration needed.',
     keywords: tool.keywords,
+    openGraph: {
+      title: 'JPG to PDF Online Free — Convert Images to PDF | FileToolBox',
+      description: 'Convert JPG images to a PDF file online for free. Add multiple images and download as a single PDF. No registration needed.',
+    },
+    twitter: {
+      title: 'JPG to PDF Online Free — Convert Images to PDF | FileToolBox',
+      description: 'Convert JPG images to a PDF file online for free. Add multiple images and download as a single PDF. No registration needed.',
+    },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
   }
 }

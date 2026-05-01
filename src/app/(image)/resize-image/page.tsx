@@ -10,6 +10,14 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'Resize Image Online Free — Change Image Dimensions | FileToolBox',
     description: 'Resize images to any dimension online for free. Set width, height, or use presets. Aspect ratio lock included. No registration.',
     keywords: tool.keywords,
+    openGraph: {
+      title: 'Resize Image Online Free — Change Image Dimensions | FileToolBox',
+      description: 'Resize images to any dimension online for free. Set width, height, or use presets. Aspect ratio lock included. No registration.',
+    },
+    twitter: {
+      title: 'Resize Image Online Free — Change Image Dimensions | FileToolBox',
+      description: 'Resize images to any dimension online for free. Set width, height, or use presets. Aspect ratio lock included. No registration.',
+    },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
   }
 }
