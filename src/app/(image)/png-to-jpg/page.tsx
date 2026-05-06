@@ -7,7 +7,7 @@ const tool = getToolBySlug('png-to-jpg')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'PNG to JPG Online Free — Convert PNG to JPEG | PDF and Image +',
+    title: 'PNG to JPG Online Free — Convert PNG to JPEG',
     description: 'Convert PNG images to JPG format online for free. Control quality. Batch conversion supported. No registration required.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'PNG to JPG Online Free — Convert PNG to JPEG | PDF and Image +',
       description: 'Convert PNG images to JPG format online for free. Control quality. Batch conversion supported. No registration required.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

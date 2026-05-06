@@ -7,7 +7,7 @@ const tool = getToolBySlug('pdf-to-word')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'PDF to Word Online Free — Convert PDF to DOCX | PDF and Image +',
+    title: 'PDF to Word Online Free — Convert PDF to DOCX',
     description: 'Convert PDF files to editable Word documents (.docx) online for free. No registration, no watermarks. Fast and accurate conversion.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'PDF to Word Online Free — Convert PDF to DOCX | PDF and Image +',
       description: 'Convert PDF files to editable Word documents (.docx) online for free. No registration, no watermarks. Fast and accurate conversion.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

@@ -7,7 +7,7 @@ const tool = getToolBySlug('add-page-numbers-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Add Page Numbers to PDF Online Free | PDF and Image +',
+    title: 'Add Page Numbers to PDF Online Free',
     description: 'Add automatic page numbers to any PDF file online. Choose from bottom center, bottom right, or top center position. Free and instant.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Add Page Numbers to PDF Online Free | PDF and Image +',
       description: 'Add automatic page numbers to any PDF file online. Choose from bottom center, bottom right, or top center position. Free and instant.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

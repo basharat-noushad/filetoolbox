@@ -7,7 +7,7 @@ const tool = getToolBySlug('protect-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Protect PDF — Add Password to PDF Free Online | PDF and Image +',
+    title: 'Protect PDF — Add Password to PDF Free Online',
     description: 'Add password protection to your PDF files online. Secure sensitive documents with encryption. Free, no registration, files stay private.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Protect PDF — Add Password to PDF Free Online | PDF and Image +',
       description: 'Add password protection to your PDF files online. Secure sensitive documents with encryption. Free, no registration, files stay private.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

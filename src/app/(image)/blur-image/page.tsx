@@ -7,7 +7,7 @@ const tool = getToolBySlug('blur-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Blur Image Online Free — Gaussian Blur Photo Tool | PDF and Image +',
+    title: 'Blur Image Online Free — Gaussian Blur Photo Tool',
     description: 'Apply Gaussian blur to images online for free. Control blur intensity with a simple slider. Blur backgrounds, hide details, or create effects.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Blur Image Online Free — Gaussian Blur Photo Tool | PDF and Image +',
       description: 'Apply Gaussian blur to images online for free. Control intensity with a slider.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

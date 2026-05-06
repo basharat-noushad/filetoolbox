@@ -7,7 +7,7 @@ const tool = getToolBySlug('pdf-to-excel')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'PDF to Excel Converter Free Online | PDF and Image +',
+    title: 'PDF to Excel Converter Free Online',
     description: 'Convert PDF files to Excel spreadsheets (.xlsx) online for free. Extract tables and data from any PDF. Powered by LibreOffice. No registration.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'PDF to Excel Converter Free Online | PDF and Image +',
       description: 'Convert PDF files to Excel spreadsheets (.xlsx) online for free. Extract tables and data from any PDF. Powered by LibreOffice. No registration.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

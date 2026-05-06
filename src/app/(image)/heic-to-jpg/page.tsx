@@ -7,7 +7,7 @@ const tool = getToolBySlug('heic-to-jpg')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'HEIC to JPG Converter Free Online | PDF and Image +',
+    title: 'HEIC to JPG Converter Free Online',
     description: 'Convert HEIC/HEIF photos from iPhone to JPG format online for free. Works directly in your browser. No app download. Fast and private.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'HEIC to JPG Converter Free Online | PDF and Image +',
       description: 'Convert HEIC/HEIF photos from iPhone to JPG format online for free. Works in your browser — no app needed.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

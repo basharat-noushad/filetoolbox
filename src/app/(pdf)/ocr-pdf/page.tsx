@@ -7,7 +7,7 @@ const tool = getToolBySlug('ocr-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'OCR PDF — Extract Text from Scanned PDF Free | PDF and Image +',
+    title: 'OCR PDF — Extract Text from Scanned PDF Free',
     description: 'Extract text from scanned PDF files using OCR technology. Convert image-based PDFs to searchable, copyable text. Free online OCR tool.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'OCR PDF — Extract Text from Scanned PDF Free | PDF and Image +',
       description: 'Extract text from scanned PDF files using OCR technology. Convert image-based PDFs to searchable, copyable text. Free online OCR tool.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

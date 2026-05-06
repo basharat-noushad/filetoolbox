@@ -7,7 +7,7 @@ const tool = getToolBySlug('image-to-base64')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Image to Base64 Converter Free Online | PDF and Image +',
+    title: 'Image to Base64 Converter Free Online',
     description: 'Convert images to Base64 encoded strings online for free. Useful for embedding images in HTML, CSS, or JSON data. Copy and use instantly.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Image to Base64 Converter Free Online | PDF and Image +',
       description: 'Convert images to Base64 encoded strings for embedding in HTML, CSS, or JSON. Free and instant.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

@@ -7,7 +7,7 @@ const tool = getToolBySlug('excel-to-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Excel to PDF Converter Free Online | PDF and Image +',
+    title: 'Excel to PDF Converter Free Online',
     description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout. Powered by LibreOffice. No sign-up.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Excel to PDF Converter Free Online | PDF and Image +',
       description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout. Powered by LibreOffice. No sign-up.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

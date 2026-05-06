@@ -7,7 +7,7 @@ const tool = getToolBySlug('compress-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Compress Image Online Free — Reduce Image File Size | PDF and Image +',
+    title: 'Compress Image Online Free — Reduce Image File Size',
     description: 'Compress images online for free without visible quality loss. Supports JPG, PNG, WebP. See before/after file size comparison.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Compress Image Online Free — Reduce Image File Size | PDF and Image +',
       description: 'Compress images online for free without visible quality loss. Supports JPG, PNG, WebP. See before/after file size comparison.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

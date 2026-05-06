@@ -5,7 +5,7 @@ export function StructuredData({ tool, howToSteps, faqs }: {
   howToSteps: string[]
   faqs: { q: string; a: string }[]
 }) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com'
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com').replace(/\/$/, '')
   const toolUrl = `${siteUrl}/${tool.slug}`
 
   const schemas = [

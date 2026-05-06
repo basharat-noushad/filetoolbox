@@ -7,12 +7,12 @@ const tool = getToolBySlug('meme-generator')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Meme Generator Online Free — Create Memes Instantly | PDF and Image +',
+    title: 'Meme Generator Online Free — Create Memes Instantly',
     description: 'Create custom memes online for free. Upload any image, add top and bottom text with Impact font. Download your meme instantly. No sign-up.',
     keywords: tool.keywords,
     openGraph: { title: 'Meme Generator Online Free | PDF and Image +', description: 'Create custom memes online for free. Upload any image, add text, download instantly.' },
     twitter: { title: 'Meme Generator Online Free | PDF and Image +', description: 'Create custom memes online for free. Upload any image, add text, download instantly.' },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

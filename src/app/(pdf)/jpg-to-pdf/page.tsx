@@ -7,7 +7,7 @@ const tool = getToolBySlug('jpg-to-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'JPG to PDF Online Free — Convert Images to PDF | PDF and Image +',
+    title: 'JPG to PDF Online Free — Convert Images to PDF',
     description: 'Convert JPG images to a PDF file online for free. Add multiple images and download as a single PDF. No registration needed.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'JPG to PDF Online Free — Convert Images to PDF | PDF and Image +',
       description: 'Convert JPG images to a PDF file online for free. Add multiple images and download as a single PDF. No registration needed.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

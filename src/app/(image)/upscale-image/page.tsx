@@ -7,12 +7,12 @@ const tool = getToolBySlug('upscale-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Upscale Image Online Free — Increase Image Resolution | PDF and Image +',
+    title: 'Upscale Image Online Free — Increase Image Resolution',
     description: 'Upscale images up to 4x resolution online for free. Increase image size without losing quality using high-quality interpolation. No sign-up.',
     keywords: tool.keywords,
     openGraph: { title: 'Upscale Image Free Online | PDF and Image +', description: 'Increase image resolution up to 4x online for free. High-quality bicubic interpolation.' },
     twitter: { title: 'Upscale Image Free Online | PDF and Image +', description: 'Increase image resolution up to 4x online for free. High-quality bicubic interpolation.' },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

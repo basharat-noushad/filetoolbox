@@ -7,7 +7,7 @@ const tool = getToolBySlug('merge-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Merge PDF Online Free — Combine PDF Files | PDF and Image +',
+    title: 'Merge PDF Online Free — Combine PDF Files',
     description: 'Merge multiple PDF files into one document online for free. No registration, no file size limit. Files processed securely in your browser.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Merge PDF Online Free | PDF and Image +',
       description: 'Combine multiple PDF files into one. Free, secure, no sign-up required.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

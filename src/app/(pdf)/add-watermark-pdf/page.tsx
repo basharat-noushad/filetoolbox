@@ -7,7 +7,7 @@ const tool = getToolBySlug('add-watermark-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Add Watermark to PDF Online Free | PDF and Image +',
+    title: 'Add Watermark to PDF Online Free',
     description: 'Add a text watermark to every page of your PDF online. Control opacity, font size, and rotation. Free, no registration, browser-based.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Add Watermark to PDF Online Free | PDF and Image +',
       description: 'Add a text watermark to every page of your PDF online. Control opacity, font size, and rotation. Free, no registration, browser-based.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

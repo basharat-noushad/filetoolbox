@@ -7,7 +7,7 @@ const tool = getToolBySlug('rotate-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Rotate Image Online Free — Rotate Photos 90° 180° 270° | PDF and Image +',
+    title: 'Rotate Image Online Free — Rotate Photos 90° 180° 270°',
     description: 'Rotate images online for free. Rotate photos 90°, 180°, or 270°. Fix portrait/landscape orientation instantly. No registration.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Rotate Image Online Free — Rotate Photos 90° 180° 270° | PDF and Image +',
       description: 'Rotate images online for free. Rotate photos 90°, 180°, or 270°. Fix portrait/landscape orientation instantly. No registration.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

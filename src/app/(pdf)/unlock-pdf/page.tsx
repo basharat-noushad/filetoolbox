@@ -7,7 +7,7 @@ const tool = getToolBySlug('unlock-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Unlock PDF — Remove Password from PDF Free Online | PDF and Image +',
+    title: 'Unlock PDF — Remove Password from PDF Free Online',
     description: 'Remove password protection from PDF files online for free. Enter your password and get an unlocked PDF instantly. Secure and private.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Unlock PDF — Remove Password from PDF Free Online | PDF and Image +',
       description: 'Remove password protection from PDF files online for free. Enter your password and get an unlocked PDF instantly. Secure and private.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

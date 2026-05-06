@@ -7,7 +7,7 @@ const tool = getToolBySlug('delete-pdf-pages')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Delete PDF Pages Online Free — Remove Pages from PDF | PDF and Image +',
+    title: 'Delete PDF Pages Online Free — Remove Pages from PDF',
     description: 'Remove specific pages from a PDF document online for free. Enter page numbers to delete and download the clean PDF instantly.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Delete PDF Pages Online Free — Remove Pages from PDF | PDF and Image +',
       description: 'Remove specific pages from a PDF document online for free. Enter page numbers to delete and download the clean PDF instantly.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

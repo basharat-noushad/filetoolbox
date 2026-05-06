@@ -7,7 +7,7 @@ const tool = getToolBySlug('sign-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Sign PDF Online Free — Electronic Signature | PDF and Image +',
+    title: 'Sign PDF Online Free — Electronic Signature',
     description: 'Sign PDF documents online with a hand-drawn digital signature. Draw your signature directly in your browser. Free, secure, no registration.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Sign PDF Online Free — Electronic Signature | PDF and Image +',
       description: 'Sign PDF documents online with a hand-drawn digital signature. Draw your signature directly in your browser. Free, secure, no registration.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

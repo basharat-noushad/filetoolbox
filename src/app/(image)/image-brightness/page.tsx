@@ -7,12 +7,12 @@ const tool = getToolBySlug('image-brightness')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Adjust Image Brightness & Contrast Online Free | PDF and Image +',
+    title: 'Adjust Image Brightness & Contrast Online Free',
     description: 'Adjust brightness, contrast, and saturation of images online for free. Fine-tune your photos with simple sliders. Instant, no registration.',
     keywords: tool.keywords,
     openGraph: { title: 'Adjust Image Brightness & Contrast Free | PDF and Image +', description: 'Adjust brightness, contrast, and saturation of images online for free with simple sliders.' },
     twitter: { title: 'Adjust Image Brightness & Contrast Free | PDF and Image +', description: 'Adjust brightness, contrast, and saturation of images online for free with simple sliders.' },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

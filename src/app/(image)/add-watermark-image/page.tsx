@@ -7,7 +7,7 @@ const tool = getToolBySlug('add-watermark-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Add Watermark to Image Online Free | PDF and Image +',
+    title: 'Add Watermark to Image Online Free',
     description: 'Add a text watermark to any image online for free. Control position, opacity, and size. Protect your photos and artwork. No registration needed.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Add Watermark to Image Online Free | PDF and Image +',
       description: 'Add a text watermark to any image online for free. Control position, opacity, and size. Protect your photos and artwork.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 

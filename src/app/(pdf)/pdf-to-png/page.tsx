@@ -7,7 +7,7 @@ const tool = getToolBySlug('pdf-to-png')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'PDF to PNG Online Free — Convert PDF Pages to PNG Images | PDF and Image +',
+    title: 'PDF to PNG Online Free — Convert PDF Pages to PNG Images',
     description: 'Convert PDF pages to high-quality PNG images online for free. Transparent background support. Download as ZIP. No registration.',
     keywords: tool.keywords,
     openGraph: {
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'PDF to PNG Online Free — Convert PDF Pages to PNG Images | PDF and Image +',
       description: 'Convert PDF pages to high-quality PNG images online for free. Transparent background support. Download as ZIP. No registration.',
     },
-    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },
+    alternates: { canonical: `/${tool.slug}` },
   }
 }
 
