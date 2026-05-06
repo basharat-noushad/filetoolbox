@@ -32,8 +32,8 @@ export function MobileNav() {
       )}
 
       {/* Drawer */}
-      <div className={`fixed top-0 left-0 h-full w-72 bg-white z-50 shadow-2xl transform transition-transform duration-300 ease-out md:hidden flex flex-col ${open ? 'translate-x-0' : '-translate-x-full'}`}>
-        <div className="flex items-center justify-between px-4 h-16 border-b border-gray-200">
+      <div className={`fixed top-0 left-0 h-full w-72 bg-white z-50 shadow-2xl shadow-brand-900/10 transform transition-transform duration-300 ease-out md:hidden flex flex-col ${open ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className="flex items-center justify-between px-4 h-16 border-b border-brand-100">
           <Link href="/" onClick={() => setOpen(false)} className="hover:opacity-80 transition-opacity">
             <Image src="/logo.svg" alt="pdf and image +" width={150} height={38} />
           </Link>
@@ -61,10 +61,10 @@ export function MobileNav() {
             </svg>
           </button>
           {section === 'pdf' && (
-            <div className="bg-brand-50 border-y border-brand-100">
+            <div className="bg-brand-50/60 border-y border-brand-100">
               {pdfTools.map(tool => (
                 <Link key={tool.slug} href={`/${tool.slug}`} onClick={() => setOpen(false)}
-                  className="block px-8 py-2.5 text-sm text-gray-700 hover:text-brand-600 hover:bg-brand-100 transition-colors cursor-pointer">
+                  className="block px-8 py-2.5 text-sm text-gray-600 hover:text-brand-600 hover:bg-brand-100 transition-colors cursor-pointer">
                   {tool.name}
                 </Link>
               ))}
@@ -87,10 +87,10 @@ export function MobileNav() {
             </svg>
           </button>
           {section === 'image' && (
-            <div className="bg-green-50 border-y border-green-100">
+            <div className="bg-emerald-50/60 border-y border-emerald-100">
               {imageTools.map(tool => (
                 <Link key={tool.slug} href={`/${tool.slug}`} onClick={() => setOpen(false)}
-                  className="block px-8 py-2.5 text-sm text-gray-700 hover:text-green-600 hover:bg-green-100 transition-colors cursor-pointer">
+                  className="block px-8 py-2.5 text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-100 transition-colors cursor-pointer">
                   {tool.name}
                 </Link>
               ))}
@@ -105,7 +105,7 @@ export function MobileNav() {
           </div>
         </nav>
 
-        <div className="px-4 py-4 border-t border-gray-100 text-xs text-gray-400">
+        <div className="px-4 py-4 border-t border-brand-100 text-xs text-gray-400">
           Free forever · No registration · Files stay private
         </div>
       </div>

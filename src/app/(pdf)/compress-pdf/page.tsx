@@ -7,15 +7,15 @@ const tool = getToolBySlug('compress-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Compress PDF Online Free — Reduce PDF Size | FileToolBox',
+    title: 'Compress PDF Online Free — Reduce PDF Size | PDF and Image +',
     description: 'Compress PDF files online for free. Reduce PDF file size without losing quality. No registration needed. 100% browser-based.',
     keywords: tool.keywords,
     openGraph: {
-      title: 'Compress PDF Online Free — Reduce PDF Size | FileToolBox',
+      title: 'Compress PDF Online Free — Reduce PDF Size | PDF and Image +',
       description: 'Compress PDF files online for free. Reduce PDF file size without losing quality. No registration needed. 100% browser-based.',
     },
     twitter: {
-      title: 'Compress PDF Online Free — Reduce PDF Size | FileToolBox',
+      title: 'Compress PDF Online Free — Reduce PDF Size | PDF and Image +',
       description: 'Compress PDF files online for free. Reduce PDF file size without losing quality. No registration needed. 100% browser-based.',
     },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },

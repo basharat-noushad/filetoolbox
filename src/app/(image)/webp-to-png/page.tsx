@@ -7,15 +7,15 @@ const tool = getToolBySlug('webp-to-png')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'WebP to PNG Online Free — Convert WebP to PNG | FileToolBox',
+    title: 'WebP to PNG Online Free — Convert WebP to PNG | PDF and Image +',
     description: 'Convert WebP images to PNG format online for free. Fast, lossless conversion. No registration required.',
     keywords: tool.keywords,
     openGraph: {
-      title: 'WebP to PNG Online Free — Convert WebP to PNG | FileToolBox',
+      title: 'WebP to PNG Online Free — Convert WebP to PNG | PDF and Image +',
       description: 'Convert WebP images to PNG format online for free. Fast, lossless conversion. No registration required.',
     },
     twitter: {
-      title: 'WebP to PNG Online Free — Convert WebP to PNG | FileToolBox',
+      title: 'WebP to PNG Online Free — Convert WebP to PNG | PDF and Image +',
       description: 'Convert WebP images to PNG format online for free. Fast, lossless conversion. No registration required.',
     },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },

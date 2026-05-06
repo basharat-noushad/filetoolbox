@@ -14,8 +14,8 @@ export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps
   return (
     <>
       <StructuredData tool={tool} howToSteps={howToSteps} faqs={faqs} />
-      <div className="min-h-screen bg-gray-50">
-        <div className="bg-white border-b border-gray-200">
+      <div className="min-dvh bg-background">
+        <div className="bg-white border-b border-brand-100">
           <div className="max-w-6xl mx-auto px-4 py-2 flex justify-center">
             <AdBanner slot="header" format="leaderboard" />
           </div>
@@ -29,8 +29,11 @@ export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps
               </div>
               <div className="flex flex-wrap gap-2 mb-6">
                 {['No registration required', 'Files processed in browser', 'Free forever', '100% secure'].map(badge => (
-                  <span key={badge} className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 text-sm rounded-full border border-green-200 font-medium">
-                    ✓ {badge}
+                  <span key={badge} className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 text-sm rounded-full border border-emerald-200 font-medium">
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {badge}
                   </span>
                 ))}
               </div>
@@ -43,7 +46,7 @@ export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps
                 <ol className="space-y-3">
                   {howToSteps.map((step, i) => (
                     <li key={i} className="flex gap-3">
-                      <span className="flex-shrink-0 w-7 h-7 rounded-full bg-brand-600 text-white text-sm font-bold flex items-center justify-center">
+                      <span className="flex-shrink-0 w-7 h-7 rounded-full bg-brand-500 text-white text-sm font-bold flex items-center justify-center">
                         {i + 1}
                       </span>
                       <span className="text-gray-700 pt-0.5 leading-relaxed">{step}</span>
@@ -55,7 +58,7 @@ export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">Frequently Asked Questions</h2>
                 <div className="space-y-4">
                   {faqs.map((faq, i) => (
-                    <div key={i} className="border border-gray-200 rounded-xl p-5 bg-white">
+                    <div key={i} className="border border-brand-100 rounded-xl p-5 bg-white">
                       <h3 className="font-semibold text-gray-900 mb-2">{faq.q}</h3>
                       <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
                     </div>

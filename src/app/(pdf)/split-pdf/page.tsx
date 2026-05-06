@@ -7,15 +7,15 @@ const tool = getToolBySlug('split-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Split PDF Online Free — Extract PDF Pages | FileToolBox',
+    title: 'Split PDF Online Free — Extract PDF Pages | PDF and Image +',
     description: 'Split PDF files by page range or extract individual pages online for free. Download as ZIP. No registration required.',
     keywords: tool.keywords,
     openGraph: {
-      title: 'Split PDF Online Free — Extract PDF Pages | FileToolBox',
+      title: 'Split PDF Online Free — Extract PDF Pages | PDF and Image +',
       description: 'Split PDF files by page range or extract individual pages online for free. Download as ZIP. No registration required.',
     },
     twitter: {
-      title: 'Split PDF Online Free — Extract PDF Pages | FileToolBox',
+      title: 'Split PDF Online Free — Extract PDF Pages | PDF and Image +',
       description: 'Split PDF files by page range or extract individual pages online for free. Download as ZIP. No registration required.',
     },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },

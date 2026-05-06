@@ -5,22 +5,19 @@ import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
 
 export function PdfToWordClient() {
-  const [file, setFile] = useState<File | null>(null)
+  const [files, setFiles] = useState<File[]>([])
   const [result, setResult] = useState<Blob | null>(null)
   const [processing, setProcessing] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const handleConvert = async () => {
-    if (!file) { setError('Please select a PDF file first.'); return }
+    if (files.length === 0) { setError('Please select a PDF file.'); return }
     setProcessing(true); setError(null)
     try {
       const formData = new FormData()
-      formData.append('file', file)
+      formData.append('file', files[0])
       const res = await fetch('/api/pdf-to-word', { method: 'POST', body: formData })
-      if (!res.ok) {
-        const msg = res.status === 503 ? 'Conversion service unavailable. Please try again later.' : 'Conversion failed. Please try again.'
-        throw new Error(msg)
-      }
+      if (!res.ok) throw new Error('Conversion failed. Please try again.')
       setResult(await res.blob())
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An unexpected error occurred.')
@@ -33,11 +30,12 @@ export function PdfToWordClient() {
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <FileDropzone
         accept={{ 'application/pdf': ['.pdf'] }}
-        onFilesSelected={f => setFile(f[0] || null)}
+        onFilesSelected={setFiles}
         label="Drag & drop your PDF here"
+        sublabel="Converts to editable .docx — max 50MB"
       />
       {error && <p className="mt-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2">{error}</p>}
-      <Button onClick={handleConvert} disabled={!file || processing} className="mt-4 w-full cursor-pointer" size="lg">
+      <Button onClick={handleConvert} disabled={files.length === 0 || processing} className="mt-4 w-full cursor-pointer" size="lg">
         {processing ? 'Converting…' : 'Convert to Word'}
       </Button>
       {result && <ToolResult blob={result} filename="converted.docx" label="PDF converted to Word successfully!" />}

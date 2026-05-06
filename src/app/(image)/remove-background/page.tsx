@@ -7,15 +7,15 @@ const tool = getToolBySlug('remove-background')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Remove Background Online Free — AI Background Remover | FileToolBox',
+    title: 'Remove Background Online Free — AI Background Remover | PDF and Image +',
     description: 'Remove image background automatically in seconds. Powered by AI. Free to use. Download transparent PNG. No registration.',
     keywords: tool.keywords,
     openGraph: {
-      title: 'Remove Background Online Free — AI Background Remover | FileToolBox',
+      title: 'Remove Background Online Free — AI Background Remover | PDF and Image +',
       description: 'Remove image background automatically in seconds. Powered by AI. Free to use. Download transparent PNG. No registration.',
     },
     twitter: {
-      title: 'Remove Background Online Free — AI Background Remover | FileToolBox',
+      title: 'Remove Background Online Free — AI Background Remover | PDF and Image +',
       description: 'Remove image background automatically in seconds. Powered by AI. Free to use. Download transparent PNG. No registration.',
     },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },

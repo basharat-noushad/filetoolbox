@@ -13,27 +13,55 @@ const plusJakarta = Plus_Jakarta_Sans({
   variable: '--font-plus-jakarta',
 })
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com'
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://filetoolbox.com'),
-  title: { template: '%s | FileToolBox', default: 'FileToolBox — Free PDF & Image Tools Online' },
-  description: 'Free online tools for PDF and images. Merge, compress, convert, crop, resize and more. No registration required. Secure and private.',
-  keywords: ['pdf tools', 'image tools', 'merge pdf', 'compress pdf', 'crop image', 'resize image', 'convert image', 'free online tools'],
-  authors: [{ name: 'FileToolBox' }],
-  creator: 'FileToolBox',
+  metadataBase: new URL(SITE_URL),
+  title: { template: '%s | PDF and Image +', default: 'PDF and Image + — Free PDF & Image Tools Online' },
+  description: 'Free online PDF and image tools. Merge, compress, convert, crop, resize and more — no sign-up, no watermarks, 100% private.',
+  keywords: ['pdf tools online', 'image tools', 'merge pdf', 'compress pdf', 'pdf to word', 'pdf converter', 'crop image', 'resize image', 'free online tools'],
+  authors: [{ name: 'PDF and Image +', url: SITE_URL }],
+  creator: 'PDF and Image +',
+  publisher: 'PDF and Image +',
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'FileToolBox',
-    title: 'FileToolBox — Free PDF & Image Tools Online',
-    description: 'Free online tools for PDF and images. Merge, compress, convert, crop, resize and more. No registration required.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'pdf and image + — Free PDF & Image Tools' }],
+    siteName: 'PDF and Image +',
+    title: 'PDF and Image + — Free PDF & Image Tools Online',
+    description: 'Free online PDF and image tools. No sign-up, no watermarks, 100% private.',
+    url: SITE_URL,
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'PDF and Image + — Free PDF & Image Tools' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FileToolBox — Free PDF & Image Tools Online',
-    description: 'Free online tools for PDF and images. No sign-up required.',
+    title: 'PDF and Image + — Free PDF & Image Tools Online',
+    description: 'Free online PDF and image tools. No sign-up, no watermarks, 100% private.',
     images: ['/og-image.png'],
   },
+  alternates: { canonical: SITE_URL },
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'PDF and Image +',
+  url: SITE_URL,
+  description: 'Free online PDF and image tools. No sign-up required.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/?q={search_term_string}` },
+    'query-input': 'required name=search_term_string',
+  },
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'PDF and Image +',
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.svg`,
+  sameAs: [],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -43,6 +71,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={plusJakarta.variable}>
       <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="RX6OShW8isolrP6Ut1Gq1w" async />
         {isAdSenseConfigured && (
           <Script async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisherId}`}

@@ -7,15 +7,15 @@ const tool = getToolBySlug('word-to-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Word to PDF Online Free — Convert DOCX to PDF | FileToolBox',
+    title: 'Word to PDF Online Free — Convert DOCX to PDF | PDF and Image +',
     description: 'Convert Word documents to PDF online for free. Preserves formatting perfectly. No registration needed. Fast and reliable.',
     keywords: tool.keywords,
     openGraph: {
-      title: 'Word to PDF Online Free — Convert DOCX to PDF | FileToolBox',
+      title: 'Word to PDF Online Free — Convert DOCX to PDF | PDF and Image +',
       description: 'Convert Word documents to PDF online for free. Preserves formatting perfectly. No registration needed. Fast and reliable.',
     },
     twitter: {
-      title: 'Word to PDF Online Free — Convert DOCX to PDF | FileToolBox',
+      title: 'Word to PDF Online Free — Convert DOCX to PDF | PDF and Image +',
       description: 'Convert Word documents to PDF online for free. Preserves formatting perfectly. No registration needed. Fast and reliable.',
     },
     alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${tool.slug}` },

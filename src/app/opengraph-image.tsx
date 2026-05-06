@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'FileToolBox — Free PDF & Image Tools Online'
+export const alt = 'PDF and Image + — Free PDF & Image Tools Online'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -10,7 +10,7 @@ export default function Image() {
     (
       <div
         style={{
-          background: 'linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 60%, #2563eb 100%)',
+          background: '#1e1b4b',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -24,19 +24,19 @@ export default function Image() {
         {/* Logo row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '24px' }}>
           <div style={{
-            width: 80, height: 80, borderRadius: 18, background: 'white',
+            width: 76, height: 76, borderRadius: 18, background: '#6366f1',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: 44, fontWeight: 900, color: '#2563EB',
+            fontSize: 40, fontWeight: 900, color: 'white',
           }}>
-            F
+            P+
           </div>
-          <span style={{ fontSize: 64, fontWeight: 800, color: 'white', letterSpacing: '-1px' }}>
-            FileToolBox
+          <span style={{ fontSize: 58, fontWeight: 800, color: 'white', letterSpacing: '-1px' }}>
+            PDF and Image +
           </span>
         </div>
 
         {/* Tagline */}
-        <div style={{ fontSize: 30, color: '#93c5fd', marginBottom: '48px', textAlign: 'center' }}>
+        <div style={{ fontSize: 28, color: '#818cf8', marginBottom: '48px', textAlign: 'center' }}>
           Free PDF &amp; Image Tools — No Sign-up Required
         </div>
 
@@ -46,11 +46,11 @@ export default function Image() {
             <div
               key={t}
               style={{
-                background: 'rgba(255,255,255,0.15)',
-                border: '1px solid rgba(255,255,255,0.3)',
+                background: 'rgba(99,102,241,0.2)',
+                border: '1px solid rgba(99,102,241,0.4)',
                 borderRadius: '10px',
                 padding: '10px 22px',
-                color: 'white',
+                color: '#c7d2fe',
                 fontSize: 22,
                 fontWeight: 600,
               }}
@@ -63,8 +63,8 @@ export default function Image() {
         {/* Bottom strip */}
         <div style={{
           position: 'absolute', bottom: 0, left: 0, right: 0,
-          height: '8px',
-          background: 'linear-gradient(90deg, #EA580C, #F97316)',
+          height: '6px',
+          background: '#6366f1',
         }} />
       </div>
     ),
