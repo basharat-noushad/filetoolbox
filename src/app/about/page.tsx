@@ -156,7 +156,7 @@ export default function AboutPage() {
           </p>
           <p className="text-gray-600 leading-relaxed mb-4">
             A small number of tools that require server-side processing (such as PDF-to-Word conversion)
-            use a self-hosted <strong>Gotenberg</strong> instance. In those cases, your file is processed
+            use a self-hosted <strong>Stirling PDF</strong> instance. In those cases, your file is processed
             immediately and never stored — it is deleted from memory as soon as the converted file is returned.
           </p>
           <p className="text-gray-600 leading-relaxed">

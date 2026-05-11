@@ -95,8 +95,12 @@ The Site may contain links to third-party websites. We are not responsible for t
   },
   {
     id: 'governing-law',
-    heading: '10. Governing Law',
-    content: `These terms are governed by and construed in accordance with the laws of Australia. Any disputes shall be subject to the exclusive jurisdiction of the courts of Australia.`,
+    heading: '10. Governing Law & International Use',
+    content: `These terms are governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions. Any disputes arising from or relating to these terms or the use of the Site shall be subject to the jurisdiction of the courts of the United States.
+
+PDF and Image + is a globally accessible service with infrastructure hosted in the United States. If you access the Site from outside the United States, you do so at your own initiative and are responsible for compliance with your local laws to the extent applicable.
+
+Nothing in these terms limits any rights you may have under the mandatory consumer protection or data protection laws of your country of residence. Users in the European Union may have additional rights under the GDPR. Users in the United Kingdom may have rights under the UK GDPR. Users in California may have rights under the CCPA.`,
   },
   {
     id: 'contact',
