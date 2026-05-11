@@ -243,7 +243,7 @@ export default function HelpPage() {
           <div className="bg-brand-900 rounded-2xl p-8 text-center">
             <p className="text-white font-bold text-lg mb-2">Still need help?</p>
             <p className="text-brand-300 text-sm mb-5">
-              If your question isn't answered here, send us a message and we'll get back to you within 24–48 hours.
+              If your question isn&apos;t answered here, send us a message and we&apos;ll get back to you within 24–48 hours.
             </p>
             <Link
               href="/contact"
