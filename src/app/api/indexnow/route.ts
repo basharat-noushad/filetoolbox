@@ -12,8 +12,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
+  const STATIC_PAGES = ['about', 'blog', 'contact', 'help', 'privacy', 'terms']
+
   const urls = [
     SITE_URL,
+    ...STATIC_PAGES.map(p => `${SITE_URL}/${p}`),
     ...tools.map(t => `${SITE_URL}/${t.slug}`),
   ]
 
