@@ -33,6 +33,7 @@ const FAQS = [
   { q: 'Does WebP to PNG conversion lose quality?', a: 'No. The conversion preserves all quality and transparency from the WebP file.' },
   { q: 'Can I convert multiple WebP files?', a: 'This tool processes one file at a time. For batch conversion, use the tool multiple times.' },
   { q: 'Will transparency be preserved?', a: 'Yes. If the WebP file has transparency, it will be preserved in the PNG output.' },
+  { q: 'Why is my PNG file larger than the original WebP?', a: 'WebP uses advanced lossy or lossless compression that is more efficient than PNG. The PNG format stores pixel data with less compression, resulting in larger files — but with universal compatibility.' },
 ]
 
 export default function WebpToPngPage() {

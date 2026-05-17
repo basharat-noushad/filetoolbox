@@ -7,7 +7,7 @@ const tool = getToolBySlug('pdf-to-ppt')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'PDF to PowerPoint Converter Free Online',
+    title: 'PDF to PowerPoint Converter Free Online — PDF to PPTX',
     description: 'Convert PDF files to editable PowerPoint presentations (.pptx) online for free. Each PDF page becomes a slide. No registration required.',
     keywords: tool.keywords,
     openGraph: {

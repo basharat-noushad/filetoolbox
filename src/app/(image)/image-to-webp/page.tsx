@@ -33,6 +33,7 @@ const FAQS = [
   { q: 'Is WebP supported everywhere?', a: 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge). Older browsers may not support it.' },
   { q: 'How much smaller will my WebP file be?', a: 'Typically 25-40% smaller than equivalent JPG files, and 60-80% smaller than PNG files.' },
   { q: 'Does WebP support transparency?', a: 'Yes. WebP supports transparency (alpha channel) like PNG, while still being much smaller.' },
+  { q: 'Can I batch convert multiple images to WebP?', a: 'Yes. Select multiple files to convert up to 20 images at once. All converted files are packaged and downloaded as a single ZIP.' },
 ]
 
 export default function ImageToWebpPage() {

@@ -7,7 +7,7 @@ const tool = getToolBySlug('png-to-svg')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'PNG to SVG Converter Free Online',
+    title: 'PNG to SVG Converter Online Free — Raster to Vector',
     description: 'Convert PNG images to SVG format online for free. Embed raster images in scalable SVG containers for web use. Fast and easy conversion.',
     keywords: tool.keywords,
     openGraph: { title: 'PNG to SVG Converter Free | PDF and Image +', description: 'Convert PNG to SVG online for free. Create scalable SVG files for web use.' },

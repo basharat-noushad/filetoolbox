@@ -33,6 +33,8 @@ const FAQS = [
   { q: 'Does it support PNG images too?', a: 'Yes. Both JPG/JPEG and PNG images are supported for conversion to PDF.' },
   { q: 'Will the image quality be preserved?', a: 'Yes. Images are embedded at their original resolution with no quality loss.' },
   { q: 'Can I reorder the images before converting?', a: 'The images appear in the PDF in the order they are listed. Select files in the desired order.' },
+  { q: 'Can I mix JPG and PNG images in the same PDF?', a: 'Yes. Both JPG and PNG files can be combined into a single PDF. Each image becomes one page.' },
+  { q: 'What page size will the output PDF use?', a: 'Each page is sized to match the dimensions of the corresponding image. There is no fixed page size — the PDF adapts to each image.' },
 ]
 
 export default function JpgToPdfPage() {

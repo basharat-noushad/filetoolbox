@@ -33,6 +33,7 @@ const FAQS = [
   { q: 'Will each PDF page become a separate JPG?', a: 'Yes. Each page of your PDF becomes an individual JPG image, numbered sequentially.' },
   { q: 'How are the images delivered?', a: 'All images are bundled in a single ZIP file for convenient download.' },
   { q: 'Can I convert just specific pages?', a: 'Currently all pages are converted. Use the Split PDF tool first to extract specific pages, then convert.' },
+  { q: 'What is the difference between 72 DPI and 300 DPI output?', a: '72 DPI is suitable for screen display and web use. 150 DPI is good for general-purpose use. 300 DPI produces print-quality images suitable for professional printing.' },
 ]
 
 export default function PdfToJpgPage() {

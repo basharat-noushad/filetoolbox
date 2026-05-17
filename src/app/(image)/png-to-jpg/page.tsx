@@ -33,6 +33,7 @@ const FAQS = [
   { q: 'Can I convert multiple PNGs at once?', a: 'Yes. Select multiple PNG files and all will be converted. Multiple files are delivered as a ZIP.' },
   { q: 'Why convert PNG to JPG?', a: 'JPG files are typically much smaller than PNG, making them better for web use, email, and storage.' },
   { q: 'What quality setting should I use?', a: '85% quality provides an excellent balance between file size and visual quality for most uses.' },
+  { q: 'What happens to transparent areas in my PNG?', a: 'JPG does not support transparency. Any transparent areas in your PNG will be filled with a white background in the output JPG.' },
 ]
 
 export default function PngToJpgPage() {

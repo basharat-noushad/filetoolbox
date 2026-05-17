@@ -7,7 +7,7 @@ const tool = getToolBySlug('pdf-to-pdfa')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'PDF to PDF/A Converter Free Online',
+    title: 'PDF to PDF/A Converter Free Online — Archive Format',
     description: 'Convert PDF files to PDF/A format for long-term archiving. Meets ISO 19005 standard. Free online PDF/A converter. No registration required.',
     keywords: tool.keywords,
     openGraph: {

@@ -7,7 +7,7 @@ const tool = getToolBySlug('gif-to-mp4')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'GIF to MP4 Converter Free Online',
+    title: 'GIF to MP4 Converter Online Free — Convert GIF to Video',
     description: 'Convert animated GIF files to MP4 video online for free. Smaller file size, better compatibility. Processed in your browser via WebAssembly.',
     keywords: tool.keywords,
     openGraph: { title: 'GIF to MP4 Converter Free | PDF and Image +', description: 'Convert animated GIFs to MP4 video online for free. Browser-based WebAssembly processing.' },

@@ -33,6 +33,8 @@ const FAQS = [
   { q: 'Can I convert multiple JPGs at once?', a: 'Yes. Select multiple files and all will be converted. Multiple files are delivered as a ZIP.' },
   { q: 'Will the image quality improve?', a: 'Converting JPG to PNG is lossless — quality will not degrade further. However, JPG compression artifacts already in the image will remain.' },
   { q: 'What is the output file size?', a: 'PNG files are typically larger than JPG. The exact size depends on image content and complexity.' },
+  { q: 'Why does my JPG to PNG file get larger?', a: 'PNG is a lossless format that stores pixel data without compression artifacts. It is naturally larger than JPG. The upside is zero quality degradation.' },
+  { q: 'When should I convert JPG to PNG?', a: 'Convert to PNG when you need transparency support, plan to edit the image further, or need pixel-perfect quality for logos or graphics.' },
 ]
 
 export default function JpgToPngPage() {

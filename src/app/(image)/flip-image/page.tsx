@@ -33,6 +33,7 @@ const FAQS = [
   { q: 'Will the image quality be affected?', a: 'No. Flipping is lossless — image quality is preserved perfectly.' },
   { q: 'Can I flip and then rotate?', a: 'Yes. Use the Rotate Image tool after flipping. Both tools work independently in your browser.' },
   { q: 'What formats are supported?', a: 'JPG, PNG, WebP, and other common image formats are all supported.' },
+  { q: 'What is the difference between flip and rotate?', a: 'Flip mirrors the image along an axis — horizontal flip reverses left and right, vertical flip turns it upside down. Rotate turns the image by a fixed angle (90°, 180°, 270°).' },
 ]
 
 export default function FlipImagePage() {

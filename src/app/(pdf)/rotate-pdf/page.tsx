@@ -33,6 +33,8 @@ const FAQS = [
   { q: 'What rotation angles are supported?', a: '90° clockwise, 90° counter-clockwise, and 180° rotation are all supported.' },
   { q: 'Will the rotation be saved permanently?', a: 'Yes. The downloaded PDF has the rotation permanently applied — it will display correctly everywhere.' },
   { q: 'Can I rotate a scanned PDF?', a: 'Yes. This tool works with all PDF types including scanned documents.' },
+  { q: 'Why is my PDF displaying sideways?', a: 'This usually happens when a document was scanned in the wrong orientation, or exported from an app that did not embed the correct page rotation. Rotating here fixes it permanently.' },
+  { q: 'Will rotation affect the file size?', a: 'Rotation causes only a negligible change in file size — typically a few kilobytes. The visual content is not re-encoded.' },
 ]
 
 export default function RotatePdfPage() {

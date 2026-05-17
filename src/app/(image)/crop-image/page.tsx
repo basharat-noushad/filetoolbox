@@ -33,6 +33,7 @@ const FAQS = [
   { q: 'Can I set exact pixel dimensions for the crop?', a: 'Use the Free mode and resize the crop handle to your desired dimensions.' },
   { q: 'Will the output be the same format as the input?', a: 'Yes. The cropped image preserves the original format (JPG, PNG, WebP).' },
   { q: 'Is there a size limit?', a: 'No. All processing is done in your browser locally with no file size limits.' },
+  { q: 'What formats are supported for cropping?', a: 'JPG, PNG, WebP, and other common image formats are all supported. The output preserves the original format.' },
 ]
 
 export default function CropImagePage() {

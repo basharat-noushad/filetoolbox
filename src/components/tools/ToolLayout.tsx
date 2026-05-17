@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Tool } from '@/types/tools'
 import { AdBanner } from '@/components/ads/AdBanner'
 import { RelatedTools } from '@/components/tools/RelatedTools'
@@ -65,6 +66,14 @@ export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps
                   ))}
                 </div>
               </section>
+              <div className="mt-6 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <p className="text-sm text-gray-600">
+                  Want a deeper guide?{' '}
+                  <Link href="/blog" className="text-brand-600 hover:underline font-medium">
+                    Read our PDF and Image guides →
+                  </Link>
+                </p>
+              </div>
             </main>
             <aside className="hidden lg:block w-[300px] flex-shrink-0">
               <div className="sticky top-24">

@@ -33,6 +33,7 @@ const FAQS = [
   { q: 'Will the image quality be affected?', a: 'No. Rotation is lossless — image quality is preserved perfectly.' },
   { q: 'What formats are supported?', a: 'JPG, PNG, WebP, and other common image formats are supported.' },
   { q: 'Why is my photo sideways?', a: 'Photos taken on mobile devices sometimes have incorrect EXIF orientation data. Rotation fixes this permanently.' },
+  { q: 'Can I rotate multiple images at once?', a: 'Currently the tool processes one image at a time. For batch operations, process each image individually — it only takes a few seconds per image.' },
 ]
 
 export default function RotateImagePage() {

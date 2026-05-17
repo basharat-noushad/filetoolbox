@@ -33,6 +33,8 @@ const FAQS = [
   { q: 'Will compression affect the quality?', a: 'Low and Medium compression preserve quality well. High compression may slightly reduce image quality but keeps text sharp.' },
   { q: 'Is there a file size limit?', a: 'No file size limit. All processing is done in your browser, so you are only limited by your device memory.' },
   { q: 'What happens to my PDF after compression?', a: 'Your file is processed entirely in your browser. It never leaves your device. We have zero access to your files.' },
+  { q: 'Can I compress a password-protected PDF?', a: 'No. You must unlock a password-protected PDF first using the Unlock PDF tool, then compress the unlocked file.' },
+  { q: 'What if my PDF is still too large to email after compression?', a: 'Try the High compression level. Most email clients accept attachments up to 25MB. If the file is still too large, split it first using the Split PDF tool.' },
 ]
 
 export default function CompressPdfPage() {

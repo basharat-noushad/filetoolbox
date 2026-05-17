@@ -7,7 +7,7 @@ const tool = getToolBySlug('bulk-image-compressor')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Bulk Image Compressor — Compress Multiple Images Free',
+    title: 'Bulk Image Compressor Free Online — Compress Multiple Images',
     description: 'Compress multiple images at once online for free. Upload up to 20 images and download all compressed files as a ZIP. Fast batch compression.',
     keywords: tool.keywords,
     openGraph: { title: 'Bulk Image Compressor Free | PDF and Image +', description: 'Compress up to 20 images at once and download as ZIP. Free, fast, browser-based.' },

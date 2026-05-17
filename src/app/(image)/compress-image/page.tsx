@@ -33,6 +33,7 @@ const FAQS = [
   { q: 'How much compression can I achieve?', a: 'Typically 40-80% size reduction depending on the image and quality setting, with no visible quality loss.' },
   { q: 'Will compression affect image dimensions?', a: 'No. Compression only reduces file size, not the pixel dimensions of your image.' },
   { q: 'Is there a file size limit?', a: 'No. All compression is done locally in your browser with no upload limits.' },
+  { q: 'What quality setting should I use?', a: '80% quality is the sweet spot for most images — it gives significant size reduction with barely visible quality loss. Use 90%+ when the image needs to be print-ready.' },
 ]
 
 export default function CompressImagePage() {

@@ -7,7 +7,7 @@ const tool = getToolBySlug('reorder-pdf-pages')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Reorder PDF Pages Online Free — Rearrange PDF',
+    title: 'Reorder PDF Pages Online Free — Rearrange PDF Pages',
     description: 'Rearrange pages in a PDF online for free. Simply enter the new page order and download your reorganized PDF. No registration required.',
     keywords: tool.keywords,
     openGraph: {

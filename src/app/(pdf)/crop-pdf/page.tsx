@@ -7,7 +7,7 @@ const tool = getToolBySlug('crop-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Crop PDF Online Free — Trim PDF Margins',
+    title: 'Crop PDF Online Free — Trim PDF Margins and Pages',
     description: 'Crop or trim the margins of any PDF document online for free. Set custom margins for all sides. Instant and free, no registration required.',
     keywords: tool.keywords,
     openGraph: { title: 'Crop PDF Online Free | PDF and Image +', description: 'Crop PDF margins online for free. Set top, right, bottom, and left margins. Instant processing.' },

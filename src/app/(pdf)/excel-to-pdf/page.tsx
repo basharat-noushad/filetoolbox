@@ -7,16 +7,16 @@ const tool = getToolBySlug('excel-to-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Excel to PDF Converter Free Online',
-    description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout. Powered by LibreOffice. No sign-up.',
+    title: 'Excel to PDF Converter Free Online — XLSX to PDF',
+    description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout. No registration needed.',
     keywords: tool.keywords,
     openGraph: {
-      title: 'Excel to PDF Converter Free Online | PDF and Image +',
-      description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout. Powered by LibreOffice. No sign-up.',
+      title: 'Excel to PDF Converter Free Online — XLSX to PDF | PDF and Image +',
+      description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout.',
     },
     twitter: {
-      title: 'Excel to PDF Converter Free Online | PDF and Image +',
-      description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout. Powered by LibreOffice. No sign-up.',
+      title: 'Excel to PDF Converter Free Online — XLSX to PDF | PDF and Image +',
+      description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout.',
     },
     alternates: { canonical: `/${tool.slug}` },
   }
@@ -31,11 +31,11 @@ const HOW_TO_STEPS = [
 const FAQS = [
   {
     q: 'Will the formatting be preserved when converting Excel to PDF?',
-    a: 'Yes. Our converter uses LibreOffice, which preserves cell formatting, borders, colors, formulas display, and page layout as accurately as possible.',
+    a: 'Yes. The converter preserves cell formatting, borders, colors, and page layout as accurately as possible. Complex conditional formatting or macros may not translate, but the visual output is preserved.',
   },
   {
     q: 'Can I convert Excel files with multiple sheets?',
-    a: 'Yes. All sheets in your workbook will be included in the converted PDF. Each sheet becomes a separate section in the PDF document.',
+    a: 'Yes. All sheets in your workbook are included in the PDF. Each sheet becomes a separate section in the document.',
   },
   {
     q: 'Is there a maximum file size?',
@@ -43,7 +43,11 @@ const FAQS = [
   },
   {
     q: 'Is my Excel file stored on your servers?',
-    a: 'No. Your file is processed by our conversion server and immediately deleted after your PDF is generated. We do not store any of your files.',
+    a: 'Your file is processed by our conversion server and immediately deleted after your PDF is generated. We do not store any of your files.',
+  },
+  {
+    q: 'What Excel formats are supported?',
+    a: 'Both .xlsx (Excel 2007 and later) and .xls (Excel 97-2003) formats are supported.',
   },
 ]
 

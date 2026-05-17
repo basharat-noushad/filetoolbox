@@ -33,6 +33,8 @@ const FAQS = [
   { q: 'Will aspect ratio be maintained?', a: 'Yes, by default. You can disable aspect ratio lock to set width and height independently.' },
   { q: 'What are the preset sizes?', a: 'Presets include 1920×1080 (HD), 1280×720 (720p), 800×600, and 512×512 (square).' },
   { q: 'Will resizing reduce quality?', a: 'Enlarging beyond the original size may reduce sharpness. Reducing size is lossless in terms of quality.' },
+  { q: 'What happens if I only set width without height?', a: 'With aspect ratio lock enabled (default), the height is calculated automatically to maintain the original proportions. Disable the lock to set both dimensions independently.' },
+  { q: 'Will resizing reduce the file size?', a: 'Yes. Reducing pixel dimensions also reduces file size significantly. A 4000×3000 image resized to 1920×1440 will be roughly 4-6× smaller.' },
 ]
 
 export default function ResizeImagePage() {
