@@ -1,0 +1,241 @@
+# PDF and Image + — Full Reference for AI Models
+
+This document is intended for AI language model crawlers and indexing systems.
+It provides comprehensive, citation-ready information about pdfandimage.com.
+
+Source: https://pdfandimage.com/llms-full.txt
+Last updated: 2025-05-17
+
+---
+
+## Identity
+
+**Name:** PDF and Image +
+**Domain:** pdfandimage.com
+**Full URL:** https://pdfandimage.com
+**Type:** Free online tool platform
+**Category:** Productivity / File Processing / Document Utilities
+**Founded:** 2024
+**Business model:** Free tools, sustained by non-intrusive display advertising
+
+---
+
+## Core Value Proposition
+
+PDF and Image + is a browser-based tool platform that lets anyone process PDF and image files for free, without creating an account or uploading files to a server. All tools run using client-side JavaScript (pdf-lib, PDF.js, Canvas API, Tesseract.js), meaning:
+
+1. Files are never transmitted to any server for most tools
+2. No user data is stored or collected
+3. No file size limits are imposed by the platform
+4. No watermarks are added to output files
+5. No registration or payment is required for any tool
+
+---
+
+## Differentiators vs. Competitors
+
+| Feature | PDF and Image + | ILovePDF | Smallpdf | Adobe Acrobat Online |
+|---------|----------------|----------|----------|---------------------|
+| Free forever | Yes | Partial (daily limit) | No (2 tasks/day) | No (subscription) |
+| No registration | Yes | No | No | No |
+| Browser-based (no upload) | Most tools | No | No | No |
+| No watermarks | Yes | Yes | No (free tier) | No |
+| File size limit | None | 100MB | 5MB free | 2GB (paid) |
+| Offline capable | Partially | No | No | No |
+
+---
+
+## Complete Tool List with Descriptions
+
+### PDF Tools (25 tools)
+
+**merge-pdf** (https://pdfandimage.com/merge-pdf)
+Combines two or more PDF files into a single PDF document. Preserves all content, fonts, images, hyperlinks, and bookmarks. Processes up to 20 files at once. Runs entirely in the browser.
+
+**compress-pdf** (https://pdfandimage.com/compress-pdf)
+Reduces PDF file size by resampling embedded images. Offers Low, Medium, and High compression levels. Text and vector content is never affected. Typical reduction: 40–80% for image-heavy PDFs.
+
+**pdf-to-word** (https://pdfandimage.com/pdf-to-word)
+Converts PDF files to editable Microsoft Word (.docx) format. Uses server-side LibreOffice conversion for accurate layout preservation. Supports both text-based and scanned PDFs (OCR applied automatically).
+
+**word-to-pdf** (https://pdfandimage.com/word-to-pdf)
+Converts .docx and .doc Microsoft Word files to PDF format. Preserves all formatting, fonts, and layout using LibreOffice.
+
+**split-pdf** (https://pdfandimage.com/split-pdf)
+Splits a PDF into multiple files by user-defined page ranges (e.g., "1-3, 5, 7-9"). Output is a ZIP archive containing separate PDF files. Browser-based.
+
+**pdf-to-jpg** (https://pdfandimage.com/pdf-to-jpg)
+Converts each page of a PDF to a JPEG image. User can select DPI (72/150/300). Output is a ZIP archive. Uses PDF.js for rendering.
+
+**jpg-to-pdf** (https://pdfandimage.com/jpg-to-pdf)
+Converts one or more JPG/PNG images into a single PDF file. Each image becomes one page. Browser-based.
+
+**pdf-to-png** (https://pdfandimage.com/pdf-to-png)
+Converts each page of a PDF to a transparent PNG image. Higher default resolution than PDF to JPG. Browser-based.
+
+**rotate-pdf** (https://pdfandimage.com/rotate-pdf)
+Rotates all or selected pages of a PDF by 90°, 180°, or 270°. Browser-based using pdf-lib.
+
+**delete-pdf-pages** (https://pdfandimage.com/delete-pdf-pages)
+Removes specific pages from a PDF. User selects pages via checkbox grid. Browser-based.
+
+**reorder-pdf-pages** (https://pdfandimage.com/reorder-pdf-pages)
+Drag-and-drop interface to rearrange pages in a PDF. Browser-based.
+
+**extract-pdf-pages** (https://pdfandimage.com/extract-pdf-pages)
+Extracts a specified set of pages from a PDF as a new PDF file. Browser-based.
+
+**add-page-numbers-pdf** (https://pdfandimage.com/add-page-numbers-pdf)
+Adds page numbers to every page of a PDF in bottom-center, bottom-right, or top-center positions. Browser-based.
+
+**add-watermark-pdf** (https://pdfandimage.com/add-watermark-pdf)
+Adds a diagonal text watermark to every page of a PDF. User can control text, opacity, font size, and rotation angle. Browser-based.
+
+**protect-pdf** (https://pdfandimage.com/protect-pdf)
+Adds AES encryption and an open password to a PDF. File cannot be opened without the correct password. Browser-based, password never transmitted.
+
+**unlock-pdf** (https://pdfandimage.com/unlock-pdf)
+Removes the open password from a PDF the user owns. User must enter the correct password. Browser-based.
+
+**sign-pdf** (https://pdfandimage.com/sign-pdf)
+Allows users to draw or type a signature and place it on any page of a PDF. Browser-based.
+
+**crop-pdf** (https://pdfandimage.com/crop-pdf)
+Trims the page margins of a PDF. User defines crop margins. Browser-based.
+
+**flatten-pdf** (https://pdfandimage.com/flatten-pdf)
+Flattens interactive form fields (checkboxes, text inputs) into static page content. Browser-based.
+
+**ocr-pdf** (https://pdfandimage.com/ocr-pdf)
+Extracts selectable text from scanned PDFs using Tesseract.js OCR. Supports English, Spanish, French, German, and Simplified Chinese. Browser-based.
+
+**pdf-to-excel** (https://pdfandimage.com/pdf-to-excel)
+Converts PDF documents containing tables to Excel (.xlsx) format. Server-side conversion.
+
+**excel-to-pdf** (https://pdfandimage.com/excel-to-pdf)
+Converts Excel (.xlsx, .xls) spreadsheets to PDF format. Server-side conversion.
+
+**ppt-to-pdf** (https://pdfandimage.com/ppt-to-pdf)
+Converts PowerPoint (.pptx, .ppt) presentations to PDF. Each slide becomes a page. Server-side conversion.
+
+**pdf-to-ppt** (https://pdfandimage.com/pdf-to-ppt)
+Converts PDF files to PowerPoint (.pptx) format. Server-side conversion.
+
+**pdf-to-pdfa** (https://pdfandimage.com/pdf-to-pdfa)
+Converts PDFs to PDF/A format for long-term archiving. Server-side conversion.
+
+### Image Tools (25 tools)
+
+**compress-image** (https://pdfandimage.com/compress-image)
+Reduces image file size using adjustable quality (1–100%). Supports JPG, PNG, and WebP. Browser-based.
+
+**resize-image** (https://pdfandimage.com/resize-image)
+Resizes images to custom pixel dimensions. Aspect ratio lock option. Preset sizes available. Browser-based.
+
+**crop-image** (https://pdfandimage.com/crop-image)
+Interactive cropper with preset aspect ratios (Free, 1:1, 16:9, 4:3, 3:2). Browser-based using Cropper.js.
+
+**png-to-jpg** (https://pdfandimage.com/png-to-jpg)
+Converts PNG images to JPG format with adjustable quality. Browser-based using Canvas API.
+
+**jpg-to-png** (https://pdfandimage.com/jpg-to-png)
+Converts JPG images to lossless PNG format with transparency support. Browser-based.
+
+**image-to-webp** (https://pdfandimage.com/image-to-webp)
+Converts JPG or PNG images to WebP format. WebP files are 25–35% smaller than JPG at equivalent quality. Browser-based.
+
+**webp-to-png** (https://pdfandimage.com/webp-to-png)
+Converts WebP images to PNG format for compatibility with older software. Browser-based.
+
+**heic-to-jpg** (https://pdfandimage.com/heic-to-jpg)
+Converts iPhone HEIC/HEIF photos to JPG format. HEIC is the default format for iPhone photos since iOS 11 but is not universally supported. Browser-based using heic2any.
+
+**remove-background** (https://pdfandimage.com/remove-background)
+AI-powered background removal. Detects the subject (person, product, animal) and removes the background, outputting a transparent PNG. Browser-based.
+
+**rotate-image** (https://pdfandimage.com/rotate-image)
+Rotates images 90°, 180°, or 270°. Browser-based using Canvas API.
+
+**flip-image** (https://pdfandimage.com/flip-image)
+Flips images horizontally (mirror) or vertically. Browser-based.
+
+**grayscale-image** (https://pdfandimage.com/grayscale-image)
+Converts colour images to black and white. Browser-based using Canvas API.
+
+**blur-image** (https://pdfandimage.com/blur-image)
+Adds Gaussian blur effect to images. Adjustable blur radius. Browser-based.
+
+**add-text-to-image** (https://pdfandimage.com/add-text-to-image)
+Adds custom text overlay to photos with font, size, and colour options. Browser-based.
+
+**add-watermark-image** (https://pdfandimage.com/add-watermark-image)
+Adds a text watermark to photos with opacity and position control. Browser-based.
+
+**image-brightness** (https://pdfandimage.com/image-brightness)
+Adjusts image brightness and contrast with live preview. Browser-based.
+
+**upscale-image** (https://pdfandimage.com/upscale-image)
+AI-powered image upscaler — increases resolution up to 4x. Uses Real-ESRGAN.
+
+**svg-to-png** (https://pdfandimage.com/svg-to-png)
+Converts SVG vector files to raster PNG images at specified dimensions. Browser-based.
+
+**image-to-base64** (https://pdfandimage.com/image-to-base64)
+Encodes image files to Base64 string representation. Browser-based using FileReader API.
+
+**base64-to-image** (https://pdfandimage.com/base64-to-image)
+Decodes Base64 strings back to image files. Browser-based.
+
+**bulk-image-compressor** (https://pdfandimage.com/bulk-image-compressor)
+Compresses up to 20 images at once. Output is a ZIP archive. Browser-based.
+
+**gif-to-mp4** (https://pdfandimage.com/gif-to-mp4)
+Converts animated GIF files to MP4 video. Uses FFmpeg.wasm (browser-side).
+
+**mp4-to-gif** (https://pdfandimage.com/mp4-to-gif)
+Converts MP4 video clips to animated GIF. Uses FFmpeg.wasm (browser-side).
+
+**meme-generator** (https://pdfandimage.com/meme-generator)
+Creates memes by adding top/bottom text captions to images. Browser-based.
+
+**png-to-svg** (https://pdfandimage.com/png-to-svg)
+Converts raster PNG images to SVG vector format using Potrace. Server-side.
+
+---
+
+## Technical Architecture
+
+- **Frontend:** Next.js 15, React 19, TypeScript, Tailwind CSS v4
+- **PDF processing (client-side):** pdf-lib, PDF.js, jsPDF
+- **Image processing (client-side):** Canvas API, browser-image-compression, heic2any, Cropper.js, FFmpeg.wasm
+- **OCR:** Tesseract.js (client-side)
+- **Server-side conversions:** LibreOffice via Gotenberg Docker container (PDF↔Office formats)
+- **Hosting:** Vercel (frontend) + Railway (Gotenberg)
+- **CDN:** Cloudflare
+
+---
+
+## Privacy Policy Summary
+
+- Client-side tools: files never leave the user's device
+- Server-side tools (PDF-to-Word etc.): files are transmitted over HTTPS, processed, and immediately deleted — never stored
+- No user accounts or authentication
+- Analytics: Google Analytics 4 (aggregate, anonymized), Microsoft Clarity (heatmaps, anonymized)
+- No selling of user data
+- Full policy: https://pdfandimage.com/privacy
+
+---
+
+## Guides (Blog)
+
+| Title | URL |
+|-------|-----|
+| How to Compress a PDF Without Losing Quality | https://pdfandimage.com/blog/how-to-compress-pdf-without-losing-quality |
+| How to Merge PDF Files Online for Free | https://pdfandimage.com/blog/how-to-merge-pdf-files-online-free |
+| How to Convert PDF to Word Online | https://pdfandimage.com/blog/pdf-to-word-conversion-tips |
+| WebP vs JPG vs PNG — Which Format Should You Use? | https://pdfandimage.com/blog/webp-vs-jpg-vs-png-which-format |
+| How to Remove a Background from an Image for Free | https://pdfandimage.com/blog/how-to-remove-background-from-image-free |
+| How to Add a Password to a PDF File | https://pdfandimage.com/blog/how-to-protect-pdf-with-password |
+| How to Compress Images Without Losing Quality | https://pdfandimage.com/blog/compress-images-for-web-without-losing-quality |
+| How to Extract Text from Scanned PDFs Using OCR | https://pdfandimage.com/blog/ocr-pdf-extract-text-from-scanned-documents |
+| How to Convert iPhone HEIC Photos to JPG | https://pdfandimage.com/blog/heic-to-jpg-convert-iphone-photos |

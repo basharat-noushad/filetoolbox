@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com'
-const LAST_UPDATED = 'January 1, 2025'
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com').replace(/\/$/, '')
+const LAST_UPDATED = '2025-01-01'
+const LAST_UPDATED_DISPLAY = 'January 1, 2025'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy — PDF and Image +',
-  description: 'PDF and Image + privacy policy. Learn how we protect your data. Your files never leave your browser. We collect no personal information.',
+  description: 'PDF and Image + privacy policy. Your files never leave your browser. We collect no personal information. Full details on data handling and analytics.',
   keywords: ['pdf tool privacy policy', 'no data collection pdf tool', 'browser based private pdf', 'image tool privacy'],
   alternates: { canonical: `${SITE_URL}/privacy` },
   openGraph: {
@@ -14,6 +15,31 @@ export const metadata: Metadata = {
     description: 'Your files never leave your browser. PDF and Image + collects no personal information. Full privacy policy.',
     url: `${SITE_URL}/privacy`,
   },
+}
+
+// E-E-A-T: privacy policy schema signals to Google this is a legitimate, trustworthy site
+const privacySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${SITE_URL}/privacy`,
+  url: `${SITE_URL}/privacy`,
+  name: 'Privacy Policy — PDF and Image +',
+  description: 'Privacy policy for pdfandimage.com. Files are processed locally in the browser. No personal data collected.',
+  datePublished: '2025-01-01',
+  dateModified: LAST_UPDATED,
+  isPartOf: { '@type': 'WebSite', name: 'PDF and Image +', url: SITE_URL },
+  about: {
+    '@type': 'Organization',
+    name: 'PDF and Image +',
+    url: SITE_URL,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'PDF and Image +',
+    url: SITE_URL,
+    logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.svg` },
+  },
+  inLanguage: 'en',
 }
 
 const sections = [
@@ -84,7 +110,7 @@ We do not sell, trade, or rent personal information to third parties under any c
   },
   {
     id: 'childrens',
-    heading: '8. Children\'s Privacy',
+    heading: "8. Children's Privacy",
     content: `PDF and Image + is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.`,
   },
   {
@@ -101,60 +127,60 @@ We do not sell, trade, or rent personal information to third parties under any c
 
 export default function PrivacyPage() {
   return (
-    <main>
-      {/* Hero */}
-      <section className="bg-brand-900 text-white py-14 px-4">
-        <div className="max-w-2xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-3">Privacy Policy</h1>
-          <p className="text-brand-300">Last updated: {LAST_UPDATED}</p>
-        </div>
-      </section>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(privacySchema) }} />
 
-      <div className="max-w-5xl mx-auto px-4 py-14 flex flex-col lg:flex-row gap-10">
+      <main>
+        <section className="bg-brand-900 text-white py-14 px-4">
+          <div className="max-w-2xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-3">Privacy Policy</h1>
+            <p className="text-brand-300">Last updated: <time dateTime={LAST_UPDATED}>{LAST_UPDATED_DISPLAY}</time></p>
+          </div>
+        </section>
 
-        {/* ToC sidebar */}
-        <aside className="lg:w-56 shrink-0">
-          <div className="sticky top-24">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Contents</p>
-            <nav className="space-y-1">
+        <div className="max-w-5xl mx-auto px-4 py-14 flex flex-col lg:flex-row gap-10">
+          <aside className="lg:w-56 shrink-0">
+            <div className="sticky top-24">
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Contents</p>
+              <nav aria-label="Privacy policy sections">
+                <ul className="space-y-1">
+                  {sections.map(s => (
+                    <li key={s.id}>
+                      <a href={`#${s.id}`} className="block text-sm text-gray-600 hover:text-brand-600 py-1 transition-colors">
+                        {s.heading}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
+          </aside>
+
+          <article className="flex-1 min-w-0">
+            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5 mb-10">
+              <p className="text-sm font-semibold text-emerald-800 mb-1">🔒 Key privacy commitment</p>
+              <p className="text-sm text-emerald-700 leading-relaxed">
+                Your files are processed locally in your browser and never uploaded to our servers
+                (with the narrow exception of server-side conversion tools described in Section 2).
+                We collect no personal information.
+              </p>
+            </div>
+
+            <div className="space-y-10">
               {sections.map(s => (
-                <a
-                  key={s.id}
-                  href={`#${s.id}`}
-                  className="block text-sm text-gray-600 hover:text-brand-600 py-1 transition-colors"
-                >
-                  {s.heading}
-                </a>
+                <section key={s.id} id={s.id} className="scroll-mt-24">
+                  <h2 className="text-lg font-bold text-gray-900 mb-3">{s.heading}</h2>
+                  <div className="text-gray-600 text-sm leading-relaxed whitespace-pre-line">{s.content}</div>
+                </section>
               ))}
-            </nav>
-          </div>
-        </aside>
+            </div>
 
-        {/* Content */}
-        <article className="flex-1 min-w-0">
-          <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5 mb-10">
-            <p className="text-sm font-semibold text-emerald-800 mb-1">🔒 Key privacy commitment</p>
-            <p className="text-sm text-emerald-700 leading-relaxed">
-              Your files are processed locally in your browser and never uploaded to our servers
-              (with the narrow exception of server-side conversion tools described in Section 2).
-              We collect no personal information.
-            </p>
-          </div>
-
-          <div className="space-y-10">
-            {sections.map(s => (
-              <section key={s.id} id={s.id} className="scroll-mt-24">
-                <h2 className="text-lg font-bold text-gray-900 mb-3">{s.heading}</h2>
-                <div className="text-gray-600 text-sm leading-relaxed whitespace-pre-line">{s.content}</div>
-              </section>
-            ))}
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-gray-100 text-sm text-gray-500">
-            Have questions? <Link href="/contact" className="text-brand-600 hover:underline">Contact us</Link>.
-          </div>
-        </article>
-      </div>
-    </main>
+            <div className="mt-12 pt-8 border-t border-gray-100 text-sm text-gray-500">
+              Have questions? <Link href="/contact" className="text-brand-600 hover:underline">Contact us</Link>.
+            </div>
+          </article>
+        </div>
+      </main>
+    </>
   )
 }
