@@ -1,0 +1,201 @@
+{
+  "instructions": "Queue of blog topics for the automated pipeline. The blog-post.yml workflow picks the FIRST item with status 'pending', writes the post, then sets status to 'published' with the slug and date. Add new topics anytime — keep highest-priority keywords at the top. 28 topics = ~14 weeks at 2 posts/week.",
+  "topics": [
+    {
+      "keyword": "how to compress a pdf without losing quality",
+      "workingTitle": "How to Compress a PDF Without Losing Quality (Free, 2026)",
+      "relatedTool": "compress-pdf",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to convert pdf to word for free",
+      "workingTitle": "How to Convert PDF to Word for Free — No Email, No Watermark",
+      "relatedTool": "pdf-to-word",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "heic to jpg converter",
+      "workingTitle": "How to Convert HEIC to JPG on Any Device (iPhone Photos Fix)",
+      "relatedTool": "heic-to-jpg",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to remove background from image for free",
+      "workingTitle": "How to Remove the Background from Any Image for Free",
+      "relatedTool": "remove-background",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "png vs jpg vs webp",
+      "workingTitle": "PNG vs JPG vs WebP — Which Image Format Should You Use?",
+      "relatedTool": "image-to-webp",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to merge pdf files into one",
+      "workingTitle": "How to Merge PDF Files Into One Document (3 Easy Ways)",
+      "relatedTool": "merge-pdf",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to sign a pdf online free",
+      "workingTitle": "How to Sign a PDF Online for Free (Legally Valid E-Signatures)",
+      "relatedTool": "sign-pdf",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to reduce image file size for web",
+      "workingTitle": "How to Reduce Image File Size for the Web Without Losing Quality",
+      "relatedTool": "compress-image",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "remove password from pdf",
+      "workingTitle": "How to Remove a Password from a PDF You Own",
+      "relatedTool": "unlock-pdf",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "best free pdf tools online",
+      "workingTitle": "10 Best Free PDF Tools Online in 2026 (No Sign-Up Required)",
+      "relatedTool": "merge-pdf",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to split a pdf into separate pages",
+      "workingTitle": "How to Split a PDF Into Separate Pages or Files (Free)",
+      "relatedTool": "split-pdf",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to convert jpg to pdf",
+      "workingTitle": "How to Convert JPG Images to PDF (Combine Multiple Photos)",
+      "relatedTool": "jpg-to-pdf",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to password protect a pdf",
+      "workingTitle": "How to Password Protect a PDF for Free (Encrypt Any Document)",
+      "relatedTool": "protect-pdf",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "extract text from scanned pdf ocr",
+      "workingTitle": "How to Extract Text from a Scanned PDF with OCR (Free)",
+      "relatedTool": "ocr-pdf",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "convert pdf to excel free",
+      "workingTitle": "How to Convert PDF Tables to Excel for Free",
+      "relatedTool": "pdf-to-excel",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "resize image for instagram",
+      "workingTitle": "How to Resize Images for Instagram, Facebook & LinkedIn (2026 Sizes)",
+      "relatedTool": "resize-image",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "ai image upscaler free",
+      "workingTitle": "How to Upscale an Image Without Losing Quality (Free AI Upscaler)",
+      "relatedTool": "upscale-image",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "add watermark to photos",
+      "workingTitle": "How to Add a Watermark to Your Photos (Protect Your Work)",
+      "relatedTool": "add-watermark-image",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "why are my images saving as webp",
+      "workingTitle": "Why Are Images Saving as WebP? How to Convert WebP to PNG",
+      "relatedTool": "webp-to-png",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "convert pdf to jpg images",
+      "workingTitle": "How to Convert PDF Pages to JPG Images (Free & Private)",
+      "relatedTool": "pdf-to-jpg",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "convert gif to mp4",
+      "workingTitle": "GIF to MP4: How to Convert GIFs to Video (and Why You Should)",
+      "relatedTool": "gif-to-mp4",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to make a gif from a video",
+      "workingTitle": "How to Make a GIF from a Video (MP4 to GIF, Free)",
+      "relatedTool": "mp4-to-gif",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "delete pages from pdf",
+      "workingTitle": "How to Delete Pages from a PDF (Remove Any Page Free)",
+      "relatedTool": "delete-pdf-pages",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "add page numbers to pdf",
+      "workingTitle": "How to Add Page Numbers to a PDF (Free Online Tool)",
+      "relatedTool": "add-page-numbers-pdf",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "convert svg to png",
+      "workingTitle": "How to Convert SVG to PNG at Any Resolution (Free)",
+      "relatedTool": "svg-to-png",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "crop image to square circle",
+      "workingTitle": "How to Crop an Image to a Square (Profile Pictures Done Right)",
+      "relatedTool": "crop-image",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "powerpoint to pdf converter",
+      "workingTitle": "How to Convert PowerPoint to PDF Without Losing Formatting",
+      "relatedTool": "ppt-to-pdf",
+      "category": "PDF Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "compress multiple images at once",
+      "workingTitle": "How to Compress Multiple Images at Once (Batch Compression Free)",
+      "relatedTool": "bulk-image-compressor",
+      "category": "Image Tips",
+      "status": "pending"
+    }
+  ]
+}
