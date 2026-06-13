@@ -925,6 +925,126 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+
+  // ── 10 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-sign-pdf-online-free',
+    title: 'How to Sign a PDF Online for Free',
+    metaTitle: 'How to Sign a PDF Online for Free (E-Signatures)',
+    metaDescription: 'Sign a PDF online for free — draw, type, or upload your signature in your browser. No software, no account, no watermark. Step-by-step guide.',
+    excerpt: 'You can add a legally valid signature to a PDF in under a minute, free, in your browser. This guide covers drawn vs typed signatures, legal validity, and how to sign without any software.',
+    category: 'PDF Guide',
+    readTime: '5 min read',
+    datePublished: '2026-06-13',
+    dateModified: '2026-06-13',
+    relatedTool: 'sign-pdf',
+    relatedTools: ['protect-pdf', 'flatten-pdf', 'add-watermark-pdf'],
+    keywords: ['sign pdf online free', 'how to sign a pdf', 'electronic signature pdf', 'pdf signature tool', 'esign pdf online'],
+    sections: [
+      {
+        paragraphs: [
+          'To sign a PDF online for free, you do not need Adobe Acrobat, DocuSign, or any paid software. You can add your signature directly in your browser — draw it with your mouse or finger, type your name in a signature-style font, or upload a photo of your handwritten signature. The whole process takes under a minute, your document stays on your device, and the signed PDF is ready to download and send straight away.',
+        ],
+      },
+      {
+        heading: 'What Counts as a Valid Electronic Signature?',
+        paragraphs: [
+          'An electronic signature is any electronic mark that shows a person\'s intent to agree to a document. That includes a typed name in a script font, a signature drawn with a mouse or touchscreen, or a scanned image of a handwritten signature pasted onto the page. None of these require special hardware or paid software — they just need to be clearly tied to the signer and applied to the final document.',
+          'For the vast majority of everyday documents — freelance contracts, NDAs, lease agreements, permission slips, invoices, internal HR forms — a simple electronic signature like this is perfectly sufficient and is treated the same as a handwritten signature in most jurisdictions.',
+        ],
+        tip: 'If you only need to confirm "I agree" on a standard business document, a typed or drawn signature is almost always enough. Save dedicated digital-certificate signing for documents that specifically require it.',
+      },
+      {
+        heading: 'How to Sign a PDF Online — Step by Step',
+        steps: [
+          'Open the Sign PDF tool and upload the PDF document you need to sign.',
+          'Choose how to create your signature: draw it with your mouse, trackpad, or finger; type your name and pick a signature-style font; or upload an image of your existing signature.',
+          'Drag the signature onto the page and resize or reposition it so it sits exactly where it needs to go.',
+          'Add the date or any other required text, such as your printed name or title, next to the signature.',
+          'Click "Sign PDF" to apply the signature to the document and download the signed file.',
+          'Open the downloaded PDF and check that the signature, date, and any text fields appear correctly before sending it on.',
+        ],
+      },
+      {
+        heading: 'Drawn, Typed, or Uploaded — Which Signature Should You Use?',
+        paragraphs: [
+          'The Sign PDF tool supports three ways to create a signature, and each suits a different situation:',
+        ],
+        bullets: [
+          'Drawn signature — use your mouse, trackpad, or a touchscreen to draw your signature freehand. This is the closest equivalent to a pen-and-paper signature and looks the most natural on the page.',
+          'Typed signature — type your name and the tool renders it in a cursive, signature-style font. Fast and consistent, good for documents you sign often.',
+          'Uploaded signature — take a photo or scan of your handwritten signature on paper, crop it down, and upload it. This gives you your actual signature without needing a touchscreen.',
+          'For most people, a drawn signature on a laptop trackpad or phone screen takes a few seconds and looks the most authentic.',
+        ],
+      },
+      {
+        heading: 'Is a Free Online Signature Legally Binding?',
+        paragraphs: [
+          'In most countries, yes. In the United States, the ESIGN Act and UETA give electronic signatures the same legal status as handwritten ones for the vast majority of contracts and agreements. In the EU and UK, the eIDAS regulation and UK eIDAS recognise "simple" and "advanced" electronic signatures — a typed or drawn signature on a document generally qualifies as a simple electronic signature, which is valid for most business and personal agreements.',
+          'What actually makes a signature enforceable is less about the tool and more about intent and context: both parties need to clearly understand they are signing a binding document, and you should keep a copy of the signed file as your record.',
+        ],
+        bullets: [
+          'Certain documents are excluded from simple e-signatures in most jurisdictions and require notarization, a wet-ink signature, or a qualified digital certificate — common examples include wills, certain real estate transfers, court filings, and some government immigration or tax forms.',
+          'For high-value contracts where the other party may dispute signing later, consider a service that also logs an audit trail (IP address, timestamp, identity verification) in addition to the visual signature.',
+          'When in doubt for an important document, check with a lawyer or the receiving organisation about what signature type they require before you sign and send.',
+        ],
+      },
+      {
+        heading: 'Tips for a Clean, Professional-Looking Signature',
+        bullets: [
+          'If drawing on a trackpad, slow down — fast strokes on a trackpad often come out jagged compared to a pen.',
+          'If using a phone or tablet, draw with your finger or a stylus for a smoother result than a mouse.',
+          'For an uploaded signature, sign on plain white paper with a dark pen, photograph it in good light, and crop tightly around the signature before uploading.',
+          'Keep the signature a reasonable size — roughly the width of a printed name, not stretched across the page.',
+          'Save your typed or drawn signature style and reuse the same one across documents so your signature looks consistent.',
+        ],
+      },
+      {
+        heading: 'What to Do After Signing a PDF',
+        paragraphs: [
+          'Once your document is signed, think about how it needs to be shared and stored. If the signed PDF contains sensitive information — a contract, financial details, personal data — use the Protect PDF tool to add a password before emailing it, so only the intended recipient can open it.',
+          'If the document includes fillable form fields that you filled in alongside your signature, run it through the Flatten PDF tool afterwards. Flattening locks the form fields and signature into the page itself so nothing can be accidentally edited or removed later.',
+          'If you are sending a document that should clearly be marked as a draft, a copy, or confidential, the Add Watermark to PDF tool lets you stamp that text across every page before or after signing.',
+        ],
+      },
+      {
+        heading: 'Common Situations Where You Need to Sign a PDF',
+        bullets: [
+          'Freelance and contractor agreements — sign and return a contract the same day without printing anything.',
+          'Rental and lease agreements — landlords and tenants both sign the same PDF and email it back and forth.',
+          'School and permission forms — sign consent forms, report cards, or enrollment paperwork sent home as PDFs.',
+          'Invoices and quotes — add a signature to approve a quote or confirm receipt of an invoice.',
+          'HR paperwork — offer letters, policy acknowledgements, and onboarding documents that need a quick signature.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I sign a PDF online for free?',
+        a: 'Open the Sign PDF tool, upload your document, then draw, type, or upload your signature and drag it onto the page. Click "Sign PDF" to apply it and download the signed document. It is completely free, with no account or watermark.',
+      },
+      {
+        q: 'Is an electronic signature the same as a digital signature?',
+        a: 'Not quite. An electronic signature is any electronic mark showing intent to agree — a typed name, drawn signature, or uploaded image. A digital signature uses a cryptographic certificate to verify the signer\'s identity and detect tampering. Most everyday documents only need an electronic signature.',
+      },
+      {
+        q: 'Can I sign a PDF on my phone?',
+        a: 'Yes. Open the Sign PDF tool in your phone\'s browser, upload the PDF, and draw your signature with your finger directly on the screen. The signed PDF downloads to your phone just as it would on a desktop.',
+      },
+      {
+        q: 'Does signing a PDF online cost anything?',
+        a: 'No. The Sign PDF tool is free with no sign-up, no per-document limits, and no watermark added to your file.',
+      },
+      {
+        q: 'Will the other party know I signed it electronically?',
+        a: 'Yes — an electronic signature looks like a signature on the page, the same as a scanned wet-ink signature would. There is no hidden indicator that distinguishes it, though some signing services add a visible timestamp if you choose to include one.',
+      },
+      {
+        q: 'Can I sign a PDF that has fillable form fields?',
+        a: 'Yes. Fill in the form fields first, then add your signature on top using the Sign PDF tool. Afterwards, use the Flatten PDF tool to lock the completed form and signature so the fields cannot be edited later.',
+      },
+    ],
+  },
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
