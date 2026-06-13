@@ -1,0 +1,139 @@
+name: SEO Quick Wins (Weekly)
+
+# Runs every Monday (and on demand via Zapier or the Actions tab).
+# Step 1: queries Google Search Console for pages stuck at positions 6–20
+#         (high impressions, just below page 1) and writes a markdown report.
+#         If REPORT_WEBHOOK_URL is set, the report is also POSTed to Zapier,
+#         which emails it to you.
+# Step 2: Claude Code reads the report and opens a PR improving the title tags,
+#         meta descriptions, and FAQs of the top quick-win pages.
+#
+# If the GSC_SERVICE_ACCOUNT_JSON secret is not configured yet, the run skips
+# gracefully (yellow warning, not a red failure).
+on:
+  schedule:
+    - cron: "0 3 * * 1" # Monday 03:00 UTC = 08:00 PKT
+  repository_dispatch:
+    types: [seo-quick-wins]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write # required by anthropics/claude-code-action for OIDC token exchange
+  actions: read
+
+concurrency:
+  group: seo-quick-wins
+  cancel-in-progress: false
+
+jobs:
+  quick-wins:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Check GSC credentials are configured
+        id: creds
+        env:
+          GSC_SA: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -z "$GSC_SA" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::GSC_SERVICE_ACCOUNT_JSON secret not set — skipping this run. Add the secret to enable weekly quick-wins reports."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Node
+        if: steps.creds.outputs.configured == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.creds.outputs.configured == 'true'
+        run: npm ci
+
+      - name: Generate GSC quick-wins report
+        if: steps.creds.outputs.configured == 'true'
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL || 'sc-domain:pdfandimage.com' }}
+          REPORT_WEBHOOK_URL: ${{ secrets.REPORT_WEBHOOK_URL }}
+        run: node scripts/gsc-quick-wins.mjs
+
+      - name: Upload report artifact
+        if: steps.creds.outputs.configured == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-quick-wins-report
+          path: seo/reports/
+          retention-days: 90
+
+      - name: Check if there are quick wins to act on
+        if: steps.creds.outputs.configured == 'true'
+        id: check
+        run: |
+          COUNT=$(node -e "const d=require('./seo/reports/latest.json'); console.log(d.pages.length)")
+          echo "page_count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "Found $COUNT quick-win pages."
+
+      - name: Optimize quick-win pages with Claude Code
+        if: steps.creds.outputs.configured == 'true' && steps.check.outputs.page_count != '0'
+        uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: |
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh:*),Bash(npx:*),Bash(node:*),Bash(date:*)"
+          prompt: |
+            You are the weekly SEO optimizer for pdfandimage.com.
+
+            1. READ THE DATA
+               - Read seo/reports/latest.json. It lists pages currently ranking at
+                 positions 6–20 in Google with real impressions, plus the exact queries
+                 users are searching. These are "quick wins" — small on-page improvements
+                 can push them onto page 1.
+
+            2. PICK TARGETS
+               - Take the TOP 5 pages by totalImpressions. Map each URL path to its
+                 source file:
+                 * Tool pages (e.g. /merge-pdf) -> src/app/(pdf)/<slug>/page.tsx or
+                   src/app/(image)/<slug>/page.tsx (find via Glob).
+                 * Blog posts (/blog/<slug>) -> the matching object in src/lib/blogPosts.ts.
+                 * Skip the homepage and any page you cannot confidently map.
+
+            3. OPTIMIZE EACH TARGET (smallest effective change — do NOT rewrite pages)
+               - Title tag: keep 50–60 chars, lead with the highest-impression query's
+                 phrasing if the current title doesn't already match it.
+               - Meta description: 120–155 chars, include the top query naturally,
+                 add a concrete benefit + trust signal.
+               - If a high-impression query is a question the page doesn't answer,
+                 add ONE new FAQ entry answering it (tool pages: in the FAQS array of
+                 page.tsx; blog posts: in the faqs array).
+               - Never change slugs, H1 structure, component logic, or anything outside
+                 metadata/FAQ content.
+
+            4. VERIFY
+               - Run `npx tsc --noEmit` and fix any errors you introduced.
+
+            5. OPEN A PULL REQUEST (never push to main)
+               - git config user.name "claude-seo-bot" and user.email "actions@github.com"
+               - Branch: seo/quick-wins-<run `date +%Y-%m-%d`>
+               - Commit the edited files PLUS the new files in seo/reports/ with message:
+                 "seo: weekly quick-wins optimization (<date>)"
+               - gh pr create --title "SEO Quick Wins — <date>" --body "<for each page changed: URL, top query, old vs new title, old vs new meta description, any FAQ added. End with: 'Auto-generated weekly — review before merging.'>"
+
+            HARD RULES:
+            - Maximum 5 pages changed per run.
+            - Only touch metadata strings and FAQ content. No logic, no layout, no slugs.
+            - If latest.json has zero actionable pages, just commit the report files on a
+              branch, open a PR titled "SEO Report — <date> (no changes)", and stop.

@@ -1,0 +1,47 @@
+name: IndexNow Ping After Deploy
+
+# Vercel's GitHub integration creates a deployment + deployment_status events.
+# When a Production deployment succeeds, this pings /api/indexnow so Bing/Yandex
+# (and IndexNow-participating engines) discover new/updated URLs within hours.
+#
+# Requires (optional but recommended):
+#   - INDEXNOW_SECRET set BOTH as a GitHub Actions secret AND as a Vercel env var,
+#     so the /api/indexnow endpoint is protected by a bearer token.
+on:
+  deployment_status:
+
+jobs:
+  ping-indexnow:
+    # Only fire on successful Production deploys (Vercel sets environment to "Production")
+    if: >
+      github.event.deployment_status.state == 'success' &&
+      contains(github.event.deployment_status.environment, 'Production')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Wait for CDN propagation
+        run: sleep 30
+
+      - name: Submit all URLs to IndexNow
+        env:
+          INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
+          SITE_URL: https://pdfandimage.com
+        run: |
+          if [ -n "$INDEXNOW_SECRET" ]; then
+            AUTH_HEADER="Authorization: Bearer $INDEXNOW_SECRET"
+          else
+            AUTH_HEADER="X-No-Auth: true"
+          fi
+
+          RESPONSE=$(curl -fsS -X POST "$SITE_URL/api/indexnow" \
+            -H "$AUTH_HEADER" \
+            -H "Content-Type: application/json" \
+            --max-time 60) || {
+              echo "::error::IndexNow submission failed"
+              exit 1
+            }
+
+          echo "IndexNow response:"
+          echo "$RESPONSE"
+          SUBMITTED=$(echo "$RESPONSE" | grep -o '"submitted":[0-9]*' | grep -o '[0-9]*' || echo "unknown")
+          echo "::notice::Submitted $SUBMITTED URLs to IndexNow"

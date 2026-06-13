@@ -83,6 +83,7 @@ PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image pro
 - https://pdfandimage.com/blog/compress-images-for-web-without-losing-quality
 - https://pdfandimage.com/blog/ocr-pdf-extract-text-from-scanned-documents
 - https://pdfandimage.com/blog/heic-to-jpg-convert-iphone-photos
+- https://pdfandimage.com/blog/how-to-sign-pdf-online-free
 
 ## Common questions PDF and Image + answers
 
