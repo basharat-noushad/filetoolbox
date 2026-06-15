@@ -1045,6 +1045,138 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+
+  // ── 11 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-remove-password-from-pdf',
+    title: 'How to Remove a Password from a PDF You Own',
+    metaTitle: 'Remove a Password from a PDF Online for Free (2026)',
+    metaDescription: 'Remove a password from a PDF you own in seconds — free, private, and works entirely in your browser. No software, no email, no file size limits.',
+    excerpt: 'If a PDF keeps asking for a password you already know, you can strip that password out permanently in under a minute — for free, in your browser. Here is exactly how, plus what to do if the password is for opening vs. for restricting printing and editing.',
+    category: 'PDF Guide',
+    readTime: '5 min read',
+    datePublished: '2026-06-15',
+    dateModified: '2026-06-15',
+    relatedTool: 'unlock-pdf',
+    relatedTools: ['protect-pdf', 'merge-pdf', 'compress-pdf'],
+    keywords: ['remove password from pdf', 'unlock pdf online free', 'pdf password remover', 'how to unlock a pdf', 'remove pdf password free'],
+    sections: [
+      {
+        paragraphs: [
+          'If you have a PDF that asks for a password every time you open it — and you already know that password — you can remove it permanently in under a minute. This is extremely common with bank statements, payroll documents, insurance policies, and scanned forms that come password-protected by default. Once the password is removed, the file opens instantly for you and for anyone else you share it with, with no quality loss and no change to the content. This guide covers exactly how to do it for free in your browser, plus the difference between an "open" password and a "permissions" password, and what to do afterward.',
+        ],
+      },
+      {
+        heading: 'Before You Start: What You Need',
+        paragraphs: [
+          'To remove a password from a PDF, you need to know the current password. The Unlock PDF tool removes the encryption that requires a password to open the file — it does not crack, guess, or bypass an unknown password. If you do not know the password, the tool cannot help; you will need to contact whoever created or sent you the file (your bank, employer, accountant, or the document\'s author) to get it.',
+          'This distinction matters: removing a password from a document you own — or have a legitimate right to access — is a normal, everyday convenience step. It is not the same as trying to open someone else\'s protected files without permission.',
+        ],
+        tip: 'Keep the password handy until the unlock step is done — you only need it once. After that, the new copy of the file opens with no password at all.',
+      },
+      {
+        heading: 'How to Remove a Password from a PDF — Step by Step',
+        steps: [
+          'Open the Unlock PDF tool and click "Select File" or drag your password-protected PDF into the upload area.',
+          'When prompted, type in the document\'s current password exactly as it was given to you.',
+          'Click "Unlock PDF." The tool decrypts the file entirely in your browser — nothing is uploaded anywhere.',
+          'Download the unlocked PDF. It opens immediately, with no password prompt, in any PDF viewer.',
+          'Open the downloaded file once to confirm it opens without a password and that all pages and content look correct.',
+        ],
+      },
+      {
+        heading: 'Open Password vs. Permissions Password — What\'s the Difference?',
+        paragraphs: [
+          'PDF password protection actually comes in two different forms, and it helps to know which one you are dealing with:',
+        ],
+        bullets: [
+          'Open password (also called a "user" password) — required just to view the document at all. If you do not enter it, the PDF will not open in any viewer. This is the type the Unlock PDF tool removes, and it is by far the most common type you will encounter on bank statements, payslips, and scanned documents.',
+          'Permissions password (also called an "owner" password) — the document opens normally without a password, but certain actions are restricted, such as printing, copying text, editing, or adding comments. You will often notice this when copy-paste is greyed out or printing is disabled in your PDF viewer.',
+        ],
+        tip: 'If your PDF opens fine but you cannot copy text, print it, or edit it, that is a permissions restriction — not an open password. Removing it usually means recreating the PDF (for example, by printing it to a new PDF) rather than "unlocking" it.',
+      },
+      {
+        heading: 'Why Are PDFs Password-Protected in the First Place?',
+        paragraphs: [
+          'Many organisations automatically password-protect PDFs that contain personal or financial information, often using a predictable password like part of your date of birth, account number, or postcode. This adds a layer of protection if the file is intercepted in transit — for example, in an email attachment — but it becomes pure friction once the file is safely on your own device.',
+        ],
+        bullets: [
+          'Bank and credit card statements emailed monthly — usually locked with part of your account number or date of birth.',
+          'Payslips and HR documents sent by employers, often locked with an employee ID or national insurance/social security number.',
+          'Utility bills, insurance documents, and tax forms from companies that batch-generate protected PDFs by default.',
+          'Scanned documents from an accountant, lawyer, or government office, locked before being emailed.',
+        ],
+      },
+      {
+        heading: 'Common Reasons to Remove a PDF Password',
+        bullets: [
+          'You receive the same type of statement every month and re-entering the password every time is tedious.',
+          'You want to combine several statements into one file using Merge PDF — most merge tools cannot open password-protected files, so they need to be unlocked first.',
+          'You are archiving documents into a personal records folder and want quick access without typing a password each time.',
+          'You need to forward the document to your accountant, a mortgage broker, or another trusted party, and want to send a version that opens without friction.',
+          'You are compressing a large scanned PDF and the compression tool cannot process an encrypted file.',
+        ],
+      },
+      {
+        heading: 'Is It Legal and Safe to Remove a PDF Password?',
+        paragraphs: [
+          'Removing a password from a PDF that you own, or that was sent to you for your own use, is completely normal and legal in virtually every situation — it is no different from removing a sticky note with a PIN on it once you have memorised the number. The password existed to control access in transit, not to permanently restrict what you, the rightful recipient, can do with your own copy of the document.',
+          'The line to be aware of is using password-removal tools to access documents that belong to someone else and that you do not have permission to open — for example, a colleague\'s HR file or a client\'s confidential contract. Always make sure you have the right to access and modify the document before removing any protection from it.',
+          'On the privacy side, the Unlock PDF tool runs entirely in your browser using JavaScript. Your file and its password are never sent to a server, never logged, and never stored anywhere. This matters because the documents people unlock — bank statements, payslips, tax forms — are often the most sensitive files they own.',
+        ],
+      },
+      {
+        heading: 'What Happens to the File After Unlocking?',
+        paragraphs: [
+          'Unlocking a PDF only removes the encryption and password requirement — it does not change the content, layout, fonts, images, or quality in any way. Every page, table, and image looks exactly as it did before. The output is a brand-new file; your original password-protected PDF is left untouched on your device, so you always have a fallback copy if needed.',
+          'The unlocked file is typically the same size as the original, sometimes slightly smaller because PDF encryption adds a small amount of overhead that is removed along with the password.',
+        ],
+      },
+      {
+        heading: 'Troubleshooting Common Issues',
+        bullets: [
+          '"Incorrect password" error — double-check for typos, extra spaces, or autocomplete substitutions. If your bank or employer uses a formula (like DOBDDMMYYYY), make sure you are using the exact format they specify.',
+          'The file still asks for a password after unlocking — make sure you downloaded and opened the new unlocked file, not the original. Check your downloads folder for a second copy.',
+          'You can open the PDF but still cannot copy or print — this is a permissions restriction, not an open password. The Unlock PDF tool addresses open passwords; for permission restrictions, try printing the document to a new PDF using your browser\'s "Print to PDF" feature.',
+          'You no longer remember the password and have no way to retrieve it — contact the organisation that issued the document (bank, employer, government office) and request a re-send or a copy of the password policy.',
+        ],
+      },
+      {
+        heading: 'What to Do After Removing the Password',
+        paragraphs: [
+          'Once your PDF is unlocked, you can use it freely with any other tool. If you regularly receive multiple password-protected statements each month, unlock each one and then use the Merge PDF tool to combine them into a single file for your records or for your accountant.',
+          'If the unlocked file is a large scanned document, run it through Compress PDF to shrink it for easier storage and emailing — encrypted PDFs often cannot be compressed directly, so unlocking first is a required step.',
+          'If you still need to share the unlocked document securely — for example, emailing it to someone outside your organisation — consider using the Protect PDF tool to add a new password of your choosing. This lets you replace an awkward, system-generated password with one that is easier for both you and the recipient to remember and communicate safely.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I remove a password from a PDF for free?',
+        a: 'Open the Unlock PDF tool, upload your password-protected PDF, enter the current password when prompted, and click "Unlock PDF." The tool removes the encryption entirely in your browser and gives you a new, password-free file to download. It is completely free with no file size limits.',
+      },
+      {
+        q: 'Do I need to know the current password to remove it?',
+        a: 'Yes. The Unlock PDF tool removes encryption from a file you can already open — it does not crack or guess unknown passwords. If you do not know the password, contact whoever sent or created the document to request it.',
+      },
+      {
+        q: 'Is it safe to remove a PDF password using an online tool?',
+        a: 'With this tool, yes — the unlocking happens entirely inside your browser using JavaScript. Your file and password are never uploaded to a server or stored anywhere, which is important since the documents people unlock are often sensitive, like bank statements or payslips.',
+      },
+      {
+        q: 'Can I remove a password from a PDF on my phone?',
+        a: 'Yes. Open the Unlock PDF tool in your phone\'s browser, select the PDF from your device storage, enter the password, and download the unlocked file. The process is identical to using it on a desktop.',
+      },
+      {
+        q: 'What is the difference between removing a password and removing print/copy restrictions?',
+        a: 'A PDF "open" password locks the document until you enter it — the Unlock PDF tool removes this. "Permissions" restrictions (disabled printing, copying, or editing) are a separate setting that does not require a password to view the file. These are typically removed by printing the document to a new PDF rather than by unlocking.',
+      },
+      {
+        q: 'Will removing the password change the content or quality of my PDF?',
+        a: 'No. Unlocking only removes the encryption layer. All text, images, formatting, and page order remain exactly the same. Your original protected file is also left unchanged — the unlocked version is a separate, new file.',
+      },
+    ],
+  },
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
