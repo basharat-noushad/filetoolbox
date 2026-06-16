@@ -96,7 +96,10 @@
       "workingTitle": "How to Remove a Password from a PDF You Own",
       "relatedTool": "unlock-pdf",
       "category": "PDF Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-remove-password-from-pdf",
+      "publishedDate": "2026-06-15",
+      "note": "Written by blog pipeline — PR #2"
     },
     {
       "keyword": "best free pdf tools online",
