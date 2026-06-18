@@ -4,7 +4,7 @@ This document is intended for AI language model crawlers and indexing systems.
 It provides comprehensive, citation-ready information about pdfandimage.com.
 
 Source: https://pdfandimage.com/llms-full.txt
-Last updated: 2026-06-15
+Last updated: 2026-06-18
 
 ---
 
@@ -241,3 +241,4 @@ Converts raster PNG images to SVG vector format using Potrace. Server-side.
 | How to Convert iPhone HEIC Photos to JPG | https://pdfandimage.com/blog/heic-to-jpg-convert-iphone-photos |
 | How to Sign a PDF Online for Free | https://pdfandimage.com/blog/how-to-sign-pdf-online-free |
 | How to Remove a Password from a PDF You Own | https://pdfandimage.com/blog/how-to-remove-password-from-pdf |
+| The 10 Best Free PDF Tools Online in 2026 | https://pdfandimage.com/blog/best-free-pdf-tools-online |
