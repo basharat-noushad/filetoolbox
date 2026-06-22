@@ -116,7 +116,10 @@
       "workingTitle": "How to Split a PDF Into Separate Pages or Files (Free)",
       "relatedTool": "split-pdf",
       "category": "PDF Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-split-pdf-into-separate-pages",
+      "publishedDate": "2026-06-22",
+      "note": "Written by blog pipeline — PR #4"
     },
     {
       "keyword": "how to convert jpg to pdf",

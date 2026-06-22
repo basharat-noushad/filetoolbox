@@ -1299,6 +1299,125 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── 13 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-split-pdf-into-separate-pages',
+    title: 'How to Split a PDF Into Separate Pages or Files',
+    metaTitle: 'How to Split a PDF Into Separate Pages Online (Free)',
+    metaDescription: 'Split a PDF into separate pages or files for free, in your browser. Step-by-step guide covering page ranges, individual pages, and quality.',
+    excerpt: 'Whether you need one page pulled out or a 100-page report broken into chapters, splitting a PDF takes seconds and no software. Here is exactly how to do it, and how to choose between page ranges and individual pages.',
+    category: 'PDF Guide',
+    readTime: '5 min read',
+    datePublished: '2026-06-22',
+    dateModified: '2026-06-22',
+    relatedTool: 'split-pdf',
+    relatedTools: ['merge-pdf', 'extract-pdf-pages', 'delete-pdf-pages'],
+    keywords: ['split pdf', 'split pdf into separate pages', 'how to split a pdf', 'split pdf online free', 'separate pdf pages'],
+    sections: [
+      {
+        paragraphs: [
+          'If you need to split a PDF into separate pages or files, you do not need Adobe Acrobat or any software installed — a browser-based tool can do it in seconds, for free, with no file uploaded to a server. Splitting comes up constantly: a long report needs breaking into chapters, a scanned batch of forms needs separating into one file per person, or you just need to pull a single page out of a much longer document. This guide covers exactly how to do it, and how to choose between splitting by page range and extracting individual pages.',
+        ],
+      },
+      {
+        heading: 'How to Split a PDF Into Separate Pages — Step by Step',
+        steps: [
+          'Open the Split PDF tool and click "Select File" or drag your PDF into the upload area.',
+          'Preview the page count and thumbnails so you can see exactly what you are working with.',
+          'Choose how to split: by page range (e.g. "1-5, 6-10, 11-15") or by extracting specific individual pages.',
+          'Enter the ranges or select the pages you want, in the format the tool expects.',
+          'Click "Split PDF." The tool processes the file entirely in your browser and packages the resulting files into a ZIP.',
+          'Download the ZIP and open a couple of the resulting PDFs to confirm the page ranges came out as expected.',
+        ],
+      },
+      {
+        heading: 'Splitting by Page Range vs. Extracting Individual Pages',
+        paragraphs: [
+          'There are two different things people mean when they say "split a PDF," and picking the right one saves time:',
+        ],
+        bullets: [
+          'Split by page range — breaks one PDF into several smaller PDFs, each containing a continuous block of pages (for example, pages 1-10 become one file, 11-20 become another). Use this when a long document needs to become several shorter, complete documents — splitting a 60-page report into three 20-page chapters, for instance.',
+          'Extract individual pages — pulls out specific, possibly non-consecutive pages (for example, just pages 2, 7, and 15) into a new file. Use this when you only need a handful of pages out of a much longer document, not the whole thing split into pieces.',
+        ],
+        tip: 'If you are not sure which you need, ask: "Do I want the whole document broken into several complete pieces, or do I just want a few specific pages pulled out?" The first is a range split; the second is an extraction. The Extract PDF Pages tool is built specifically for the second case.',
+      },
+      {
+        heading: 'Common Reasons to Split a PDF',
+        bullets: [
+          'Breaking a long report, e-book, or manual into chapters so each section can be shared or read separately.',
+          'Separating a scanned batch — for example, a stack of signed forms scanned together — into one file per person or per document.',
+          'Pulling a single page (an invoice, a certificate, a contract page) out of a multi-page PDF without sending the whole document.',
+          'Splitting a large PDF so each part fits under an email attachment limit or an upload portal\'s file size cap.',
+          'Removing a cover page, table of contents, or appendix so the main content stands as its own file.',
+          'Preparing print-ready files where each chapter or section needs to be printed and bound separately.',
+        ],
+      },
+      {
+        heading: 'Does Splitting a PDF Affect Quality?',
+        paragraphs: [
+          'No — splitting is completely non-destructive. Each resulting file is a direct copy of the original pages, including their original resolution, fonts, embedded images, and any hyperlinks or form fields on those pages. There is no re-rendering or re-compression involved, so the output looks exactly like the corresponding pages in the source document.',
+          'The original PDF is also never modified. The Split PDF tool only ever reads your file to generate new ones — your source document stays exactly as it was before you started.',
+        ],
+      },
+      {
+        heading: 'What Happens to File Size After Splitting?',
+        paragraphs: [
+          'Each split file is roughly proportional to the number of pages it contains — a 100-page, 10MB PDF split into ten equal chunks produces ten files of roughly 1MB each, plus a small amount of overhead per file for PDF structure data. If your goal is actually to reduce file size rather than to separate content, splitting alone will not shrink the total amount of data; run each resulting file through the Compress PDF tool afterward if individual files still need to be smaller.',
+        ],
+      },
+      {
+        heading: 'Splitting a Password-Protected PDF',
+        paragraphs: [
+          'If your PDF is locked with an open password, most split tools — including this one — cannot read its contents until the password is removed. Use the Unlock PDF tool first to remove the password (you will need to know it), then split the unlocked file. The split files themselves will not carry over the original password, so add a new one with the Protect PDF tool afterward if the resulting pieces still need to be secured.',
+        ],
+      },
+      {
+        heading: 'What to Do After Splitting',
+        paragraphs: [
+          'Once you have your separated files, a few follow-up steps are common. If you split a document into pieces but later need to recombine a subset of them — say, chapters 2 and 4 of a report — use the Merge PDF tool to stitch the relevant files back into one document in the order you choose.',
+          'If you only needed a handful of non-consecutive pages rather than a full range split, the Extract PDF Pages tool is the more direct route — it produces a single new PDF containing just the pages you selected, rather than a full ZIP of every range.',
+          'If some pages in the original document are no longer needed at all — a blank scan, a duplicate, an outdated cover sheet — it is often faster to use the Delete PDF Pages tool to remove them before splitting, rather than splitting first and discarding unwanted pieces afterward.',
+        ],
+      },
+      {
+        heading: 'Tips for a Clean Split',
+        bullets: [
+          'Check the total page count before entering ranges — an off-by-one error (entering "1-10" when you meant "1-11") is the most common mistake.',
+          'For documents with a clear structure (chapters, sections, numbered forms), note down the starting page of each section before you begin so you are not counting pages on the fly.',
+          'Use the thumbnail preview, if the tool offers one, to visually confirm where each section starts and ends rather than relying on the document\'s printed page numbers, which sometimes do not match the PDF\'s internal page count.',
+          'Name your downloaded files descriptively right after splitting — "report-pages-1-10.pdf" is far easier to find later than the tool\'s default output name.',
+          'If you need the exact same split done regularly (e.g. monthly statements split by account), keep a note of the page ranges so future splits are quick to repeat.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I split a PDF into separate pages for free?',
+        a: 'Open the Split PDF tool, upload your PDF, choose to split by page range or extract individual pages, and click "Split PDF." The tool processes everything in your browser and gives you a ZIP file containing the separated PDFs. It is completely free with no file size limits.',
+      },
+      {
+        q: 'Can I split a PDF into one file per page?',
+        a: 'Yes. Enter a range for every single page (or use a "split every page" option if the tool offers one) and each page will be saved as its own individual PDF file inside the downloaded ZIP.',
+      },
+      {
+        q: 'What is the difference between splitting and extracting pages?',
+        a: 'Splitting breaks a PDF into multiple complete files, typically by continuous page ranges. Extracting pulls out specific pages — consecutive or not — into a single new file. Use Split PDF for the first case and Extract PDF Pages for the second.',
+      },
+      {
+        q: 'Will splitting a PDF reduce its quality?',
+        a: 'No. Splitting copies the original pages exactly as they are, including resolution, fonts, and embedded images. There is no re-compression involved, so quality is identical to the source document.',
+      },
+      {
+        q: 'Can I split a password-protected PDF?',
+        a: 'Not directly. Use the Unlock PDF tool first to remove the open password (you need to know it), then split the unlocked file. The resulting split files will not carry the original password.',
+      },
+      {
+        q: 'How do I recombine PDF files after splitting them?',
+        a: 'Use the Merge PDF tool. Upload the split files you want back together, arrange them in the correct order, and merge them into a single PDF again.',
+      },
+    ],
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
