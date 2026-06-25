@@ -1418,6 +1418,132 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
+  // ── 14 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-convert-jpg-to-pdf',
+    title: 'How to Convert JPG Images to PDF (Combine Multiple Photos)',
+    metaTitle: 'How to Convert JPG to PDF (Combine Photos Free)',
+    metaDescription: 'Convert JPG images to PDF for free, in your browser. Combine multiple photos into one PDF, control page order, and keep full image quality.',
+    excerpt: 'Need to turn one photo or a whole stack of scanned pages into a single PDF? Here is exactly how to convert JPG images to PDF for free, with no software and no quality loss.',
+    category: 'PDF Guide',
+    readTime: '4 min read',
+    datePublished: '2026-06-25',
+    dateModified: '2026-06-25',
+    relatedTool: 'jpg-to-pdf',
+    relatedTools: ['pdf-to-jpg', 'merge-pdf', 'compress-pdf'],
+    keywords: ['convert jpg to pdf', 'jpg to pdf', 'how to convert jpg to pdf', 'image to pdf', 'combine images into pdf'],
+    sections: [
+      {
+        paragraphs: [
+          'If you need to convert JPG images to PDF, you do not need to install anything or sign up for an account — a browser-based tool can turn one photo, or twenty, into a single PDF in seconds. This comes up all the time: a landlord wants scanned ID pages as one file, a teacher asks for homework photos as a single PDF, or you just photographed a stack of receipts and need them in one document for expenses. This guide covers exactly how to convert JPG to PDF, how page order and quality work, and what to do with mixed file types.',
+        ],
+      },
+      {
+        heading: 'How to Convert JPG to PDF — Step by Step',
+        steps: [
+          'Open the JPG to PDF tool and click "Select Files" or drag your images into the upload area.',
+          'Add up to 20 JPG or PNG images at once — they appear as a list in the order they were added.',
+          'Check the order of your images. The first image in the list becomes the first page of the PDF, so reorder if you photographed pages out of sequence.',
+          'Click "Convert to PDF." The tool processes everything in your browser — your photos are never uploaded to a server.',
+          'Download the finished PDF and open it to confirm every page is right-side up and in the correct order before sending it anywhere.',
+        ],
+      },
+      {
+        heading: 'Does Converting JPG to PDF Reduce Image Quality?',
+        paragraphs: [
+          'No — the conversion is non-destructive. Each JPG is embedded into the PDF at its original resolution, and the PDF page is sized to match the image exactly, so nothing gets stretched, cropped, or recompressed in the process. What you see in the photo is what ends up on the page.',
+          'If the resulting PDF is too large to email or upload afterward, that is a separate step — run it through the Compress PDF tool once the images are combined, rather than worrying about quality loss during the JPG-to-PDF conversion itself.',
+        ],
+      },
+      {
+        heading: 'One Image Per Page, or Multiple Images on One Page?',
+        paragraphs: [
+          'Most JPG to PDF tools, including this one, place each image on its own page — so 5 photos become a 5-page PDF, one image filling each page at its original size and aspect ratio. This is the standard behavior for combining scanned documents, ID photos, or receipts, since each source image is treated as a complete page.',
+        ],
+        tip: 'If you need several small images arranged together on a single page (like a contact sheet or a collage), convert each group to PDF separately and arrange them in an image editor first, since most browser-based converters do not support multi-image-per-page layouts.',
+      },
+      {
+        heading: 'Common Reasons to Convert JPG to PDF',
+        bullets: [
+          'Combining multiple scanned or photographed pages — IDs, contracts, forms — into a single document instead of sending separate image files.',
+          'Submitting photographed homework, assignments, or worksheets as one PDF for an online portal that only accepts a single file.',
+          'Turning a stack of receipt photos into one PDF for expense reports or tax records.',
+          'Converting a photo of a printed document into a more "official" looking, easily shareable PDF format.',
+          'Archiving printed photos or certificates as searchable, easy-to-store PDF files instead of loose image files.',
+          'Sending a portfolio, certificate set, or set of product photos to a client or employer as a single attachment instead of a folder of separate files.',
+        ],
+      },
+      {
+        heading: 'Converting Mixed JPG and PNG Files Together',
+        paragraphs: [
+          'You are not limited to a single image format — JPG and PNG files can be combined in the same conversion, in any order you like. Each image keeps its own resolution and is placed on its own page regardless of which format it started as, so a mix of phone photos (JPG) and screenshots (PNG) can go into one PDF in a single pass.',
+          'This matters in practice more often than it sounds: a typical "scan this and send it to me" request ends up being a phone photo of a paper form (JPG) plus a screenshot of a confirmation email (PNG). Rather than converting each separately and merging the PDFs afterward, you can drop both formats into the same upload and get a single, correctly ordered PDF in one step.',
+        ],
+      },
+      {
+        heading: 'Privacy: Are My Photos Uploaded to a Server?',
+        paragraphs: [
+          'No. The conversion happens entirely inside your browser using JavaScript — your images are read, embedded into a new PDF, and assembled on your own device. Nothing is sent to a server in the process, which matters if the photos contain personal documents like ID cards, medical paperwork, bank statements, or signed contracts.',
+          'Because no upload happens, there is also no waiting on a slow connection — even a folder of high-resolution phone photos converts in a second or two, since the work is limited by your device, not by a network round trip. Once you close the browser tab, no copy of your images exists anywhere outside your own computer or phone.',
+        ],
+      },
+      {
+        heading: 'Converting JPG to PDF on a Phone vs. a Computer',
+        paragraphs: [
+          'The process works the same way on a phone browser as it does on a desktop, which is useful since most "photo to PDF" needs start with a phone camera. On mobile, take or select your photos first, then open the tool in your mobile browser and upload directly from your camera roll — there is no need to email photos to yourself or transfer them to a computer first.',
+          'On desktop, the advantage is mainly screen space: it is easier to see the full list of images and drag them into the right order before converting, which matters more once you are combining ten or more pages. For a single photo, phone or desktop makes no real difference.',
+        ],
+      },
+      {
+        heading: 'What If You Need to Go the Other Direction?',
+        paragraphs: [
+          'If you already have a PDF and need individual JPG images instead — for example, to post a single page on social media or attach one page to an email — use the PDF to JPG tool, which does the reverse conversion and extracts every page as its own image file.',
+          'If you have several existing PDFs (not images) that need combining into one document, use the Merge PDF tool instead — JPG to PDF is specifically for converting image files into PDF pages, while Merge PDF combines PDFs that already exist.',
+        ],
+      },
+      {
+        heading: 'Tips for a Clean Result',
+        bullets: [
+          'Check photo orientation before converting — a sideways phone photo will produce a sideways PDF page, since the conversion does not auto-rotate images.',
+          'Crop out background clutter (desk edges, fingers, shadows) before converting if the PDF is going somewhere official, like a visa or loan application.',
+          'Name your image files in the order you want them to appear (e.g. "page-01.jpg", "page-02.jpg") before uploading — most tools list files in the order they are added, which usually matches alphabetical filename order.',
+          'If file size matters, compress your photos first or run the finished PDF through the Compress PDF tool — a PDF built from several full-resolution phone photos can be tens of megabytes.',
+          'If a recipient specifically asked for "one PDF per page" rather than one combined file, convert images one at a time instead of uploading the whole batch together.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I convert a JPG to PDF for free?',
+        a: 'Open the JPG to PDF tool, upload one or more images, check the order, and click "Convert to PDF." The tool runs entirely in your browser and the PDF downloads immediately — no account, no email, and no watermark.',
+      },
+      {
+        q: 'Can I combine multiple JPG images into one PDF?',
+        a: 'Yes. Add up to 20 images at once and they will be combined into a single PDF, with each image becoming its own page in the order you arranged them.',
+      },
+      {
+        q: 'Will converting JPG to PDF reduce the image quality?',
+        a: 'No. Each image is embedded at its original resolution and the PDF page is sized to match, so there is no resizing, cropping, or recompression during conversion.',
+      },
+      {
+        q: 'Can I convert PNG images to PDF the same way?',
+        a: 'Yes. The JPG to PDF tool also accepts PNG files, and you can mix JPG and PNG images in the same conversion — each one becomes its own page regardless of format.',
+      },
+      {
+        q: 'Does the PDF keep the same orientation as my photos?',
+        a: 'Yes, each page matches the orientation of its source image exactly. If a photo was taken sideways, rotate it before converting since the tool does not auto-rotate images.',
+      },
+      {
+        q: 'How do I convert a PDF back to JPG images?',
+        a: 'Use the PDF to JPG tool to do the reverse — it extracts every page of a PDF as a separate JPG image, which you can download individually or as a ZIP.',
+      },
+      {
+        q: 'Are my photos uploaded to a server when I convert them to PDF?',
+        a: 'No. The conversion runs entirely in your browser using JavaScript. Your images are never uploaded anywhere, which matters for personal documents like IDs, contracts, or medical paperwork.',
+      },
+    ],
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
