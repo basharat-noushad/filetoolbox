@@ -1418,6 +1418,121 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
+  // ── 14 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-convert-pdf-tables-to-excel-free',
+    title: 'How to Convert PDF Tables to Excel for Free',
+    metaTitle: 'How to Convert PDF Tables to Excel for Free (2026)',
+    metaDescription: 'Convert PDF tables to Excel for free — keep rows, columns, and numbers editable. Step-by-step guide covering scanned PDFs, formatting, and accuracy tips.',
+    excerpt: 'Retyping a PDF table into a spreadsheet wastes time and introduces errors. This guide shows you exactly how to convert PDF tables to Excel for free, with tips for getting clean, accurate results every time.',
+    category: 'PDF Guide',
+    readTime: '5 min read',
+    datePublished: '2026-06-29',
+    dateModified: '2026-06-29',
+    relatedTool: 'pdf-to-excel',
+    relatedTools: ['excel-to-pdf', 'pdf-to-word', 'compress-pdf'],
+    keywords: ['convert pdf to excel', 'pdf to excel free', 'pdf to excel converter', 'pdf table to excel', 'extract pdf table to spreadsheet'],
+    sections: [
+      {
+        paragraphs: [
+          'If you need to convert PDF tables to Excel, you do not need to manually retype every row — a free online converter can turn a PDF full of tables into an editable spreadsheet in seconds. This comes up all the time: a bank statement, an invoice, a financial report, or a data export lands as a PDF, and the actual task is doing math, sorting, or analysis on the numbers inside it. This guide covers exactly how to convert PDF to Excel, what affects accuracy, and how to handle the trickier cases like scanned documents and multi-page tables.',
+        ],
+      },
+      {
+        heading: 'How to Convert PDF to Excel — Step by Step',
+        steps: [
+          'Open the PDF to Excel tool and click "Select File" or drag your PDF into the upload area.',
+          'Wait while the tool analyzes the document and detects table structures, rows, and columns.',
+          'Preview the result if the tool offers one, to confirm the tables were detected correctly.',
+          'Click "Convert to Excel" to generate the .xlsx file.',
+          'Download the spreadsheet and open it to check that numbers, headers, and column alignment came through correctly.',
+        ],
+      },
+      {
+        heading: 'Why Convert a PDF Table to Excel?',
+        paragraphs: [
+          'A PDF is built to look the same everywhere — it is not built to be calculated on. The moment you need to sum a column, filter rows, build a chart, or merge data from multiple reports, you need the numbers in a real spreadsheet, not locked inside a fixed-layout document.',
+        ],
+        bullets: [
+          'Doing math on the numbers — totals, averages, formulas — which is not possible directly in a PDF.',
+          'Combining data from several PDF reports into one master spreadsheet for analysis.',
+          'Sorting and filtering rows, which only works in an actual table structure, not a flat PDF page.',
+          'Re-using financial data (invoices, statements, budgets) in accounting software that expects spreadsheet input.',
+          'Building charts and pivot tables from data that originally arrived as a static PDF report.',
+        ],
+      },
+      {
+        heading: 'What Makes PDF-to-Excel Conversion Accurate or Inaccurate',
+        paragraphs: [
+          'Table conversion works by detecting the visual structure of a table — rows, columns, and cell boundaries — and rebuilding it as actual spreadsheet cells. How well this works depends heavily on how the original PDF was made:',
+        ],
+        bullets: [
+          'Native, text-based PDFs (exported directly from Excel, accounting software, or a database report) convert most accurately, because the underlying text and its position are already precise.',
+          'PDFs with clear gridlines and consistent column spacing convert more reliably than tables that rely only on whitespace to separate columns.',
+          'Scanned PDFs (a photographed or scanned paper document) require OCR to even recognize the text before table structure can be detected, which introduces more room for error, especially with small or blurry numbers.',
+          'Merged cells, multi-line headers, and tables that span multiple pages are the hardest cases and are the most likely spots to double-check after conversion.',
+        ],
+        tip: 'If you have a choice in how the PDF was created — for example, exporting a report yourself — export directly to Excel or CSV instead of PDF if that option exists. Converting back from PDF is a workaround for when you only have the PDF, not the ideal starting point.',
+      },
+      {
+        heading: 'Converting Scanned PDF Tables',
+        paragraphs: [
+          'If your PDF is a scan or photo of a printed table rather than a digitally generated document, the converter needs to run OCR (optical character recognition) first to turn the pixels into readable text before it can detect rows and columns. Scanned tables convert less reliably than digital ones — expect to spend a few minutes double-checking numbers, especially decimal points and similar-looking digits like 0/O or 1/I, which OCR can occasionally misread.',
+          'For best results with a scan, make sure the original image is as high-resolution and well-lit as possible. A blurry or low-contrast scan produces far more OCR errors than a crisp 300 DPI scan.',
+        ],
+      },
+      {
+        heading: 'Checking and Cleaning Up the Result',
+        bullets: [
+          'Compare the row and column count in the spreadsheet against the original PDF table to catch any merged or split cells.',
+          'Spot-check a handful of numbers, particularly totals and any figures with decimals, against the source PDF.',
+          'Re-apply number formatting in Excel (currency symbols, decimal places, thousand separators) since these sometimes convert as plain text rather than formatted numbers.',
+          'If a multi-page table split into separate sheets or got cut off at a page break, manually stitch the rows back together in one sheet before doing any calculations.',
+          'Remove any header or footer text (page numbers, document titles) that got pulled into the spreadsheet alongside the actual table data.',
+        ],
+      },
+      {
+        heading: 'Converting Multiple PDF Reports at Once',
+        paragraphs: [
+          'If you regularly receive the same type of report as a PDF — monthly statements, weekly sales summaries — convert each one individually and then combine the resulting spreadsheets in Excel using copy-paste or a simple formula-based merge. Table layouts can shift slightly between reports (an extra column, a renamed header), so it is worth checking the first one or two conversions carefully before assuming every future report will convert identically.',
+        ],
+      },
+      {
+        heading: 'What to Do Before and After Converting',
+        paragraphs: [
+          'If your PDF is large or contains many pages you do not need converted, it is often faster to extract just the relevant pages first. If your source PDF is password-protected, you will need to remove that protection before any converter can read its contents.',
+          'Once your spreadsheet is in good shape and you need to share a clean, non-editable version of the data again — for a report or presentation — use the Excel to PDF tool to convert it back, which is the reverse of the process in this guide.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I convert a PDF table to Excel for free?',
+        a: 'Open the PDF to Excel tool, upload your PDF, and click "Convert to Excel." The tool detects the table structure and produces a downloadable .xlsx file with your data in actual spreadsheet cells. It is free with no sign-up required.',
+      },
+      {
+        q: 'Can I convert a scanned PDF table to Excel?',
+        a: 'Yes, but accuracy depends on scan quality. The converter runs OCR to read the text in the scan before detecting table structure. A high-resolution, well-lit scan converts far more accurately than a blurry photo, and you should still double-check numbers afterward.',
+      },
+      {
+        q: 'Why did my PDF to Excel conversion mess up the column alignment?',
+        a: 'This usually happens with tables that rely on whitespace rather than visible gridlines to separate columns, or with merged cells and multi-line headers. Native, text-based PDFs with clear gridlines convert far more reliably than complex or scanned layouts.',
+      },
+      {
+        q: 'Will the numbers in my Excel file keep their formatting?',
+        a: 'Not always automatically. Currency symbols, decimal places, and thousand separators sometimes come through as plain text. Re-apply number formatting in Excel after conversion to be safe, and spot-check key totals against the source PDF.',
+      },
+      {
+        q: 'Can I convert a multi-page PDF table to one spreadsheet?',
+        a: 'Yes, the converter processes the whole document, but a table that spans a page break can sometimes split awkwardly. Check where pages break in the original table and manually stitch any split rows back together in the resulting spreadsheet if needed.',
+      },
+      {
+        q: 'Is there a file size limit for converting PDF to Excel?',
+        a: 'No fixed limit for typical documents. Very large or image-heavy PDFs may take longer to process since the tool needs to analyze every page for table structure before generating the spreadsheet.',
+      },
+    ],
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
