@@ -126,7 +126,10 @@
       "workingTitle": "How to Convert JPG Images to PDF (Combine Multiple Photos)",
       "relatedTool": "jpg-to-pdf",
       "category": "PDF Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-convert-jpg-to-pdf",
+      "publishedDate": "2026-06-25",
+      "note": "Written by blog pipeline — PR #5"
     },
     {
       "keyword": "how to password protect a pdf",
