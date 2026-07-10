@@ -146,14 +146,20 @@
       "workingTitle": "How to Convert PDF Tables to Excel for Free",
       "relatedTool": "pdf-to-excel",
       "category": "PDF Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-convert-pdf-tables-to-excel-free",
+      "publishedDate": "2026-06-29",
+      "note": "Written by blog pipeline — PR #6"
     },
     {
       "keyword": "resize image for instagram",
       "workingTitle": "How to Resize Images for Instagram, Facebook & LinkedIn (2026 Sizes)",
       "relatedTool": "resize-image",
       "category": "Image Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "resize-images-for-instagram-facebook-linkedin",
+      "publishedDate": "2026-07-02",
+      "note": "Written by blog pipeline — PR #8 (skipped duplicate 'how to convert jpg to pdf', already open as PR #5)"
     },
     {
       "keyword": "ai image upscaler free",

@@ -244,3 +244,5 @@ Converts raster PNG images to SVG vector format using Potrace. Server-side.
 | The 10 Best Free PDF Tools Online in 2026 | https://pdfandimage.com/blog/best-free-pdf-tools-online |
 | How to Split a PDF Into Separate Pages or Files | https://pdfandimage.com/blog/how-to-split-pdf-into-separate-pages |
 | How to Convert JPG Images to PDF (Combine Multiple Photos) | https://pdfandimage.com/blog/how-to-convert-jpg-to-pdf |
+| How to Convert PDF Tables to Excel for Free | https://pdfandimage.com/blog/how-to-convert-pdf-tables-to-excel-free |
+| How to Resize Images for Instagram, Facebook & LinkedIn (2026 Sizes) | https://pdfandimage.com/blog/resize-images-for-instagram-facebook-linkedin |

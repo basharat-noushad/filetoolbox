@@ -1540,6 +1540,232 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         q: 'Are my photos uploaded to a server when I convert them to PDF?',
         a: 'No. The conversion runs entirely in your browser using JavaScript. Your images are never uploaded anywhere, which matters for personal documents like IDs, contracts, or medical paperwork.',
+    slug: 'how-to-convert-pdf-tables-to-excel-free',
+    title: 'How to Convert PDF Tables to Excel for Free',
+    metaTitle: 'How to Convert PDF Tables to Excel for Free (2026)',
+    metaDescription: 'Convert PDF tables to Excel for free — keep rows, columns, and numbers editable. Step-by-step guide covering scanned PDFs, formatting, and accuracy tips.',
+    excerpt: 'Retyping a PDF table into a spreadsheet wastes time and introduces errors. This guide shows you exactly how to convert PDF tables to Excel for free, with tips for getting clean, accurate results every time.',
+    category: 'PDF Guide',
+    readTime: '5 min read',
+    datePublished: '2026-06-29',
+    dateModified: '2026-06-29',
+    relatedTool: 'pdf-to-excel',
+    relatedTools: ['excel-to-pdf', 'pdf-to-word', 'compress-pdf'],
+    keywords: ['convert pdf to excel', 'pdf to excel free', 'pdf to excel converter', 'pdf table to excel', 'extract pdf table to spreadsheet'],
+    sections: [
+      {
+        paragraphs: [
+          'If you need to convert PDF tables to Excel, you do not need to manually retype every row — a free online converter can turn a PDF full of tables into an editable spreadsheet in seconds. This comes up all the time: a bank statement, an invoice, a financial report, or a data export lands as a PDF, and the actual task is doing math, sorting, or analysis on the numbers inside it. This guide covers exactly how to convert PDF to Excel, what affects accuracy, and how to handle the trickier cases like scanned documents and multi-page tables.',
+        ],
+      },
+      {
+        heading: 'How to Convert PDF to Excel — Step by Step',
+        steps: [
+          'Open the PDF to Excel tool and click "Select File" or drag your PDF into the upload area.',
+          'Wait while the tool analyzes the document and detects table structures, rows, and columns.',
+          'Preview the result if the tool offers one, to confirm the tables were detected correctly.',
+          'Click "Convert to Excel" to generate the .xlsx file.',
+          'Download the spreadsheet and open it to check that numbers, headers, and column alignment came through correctly.',
+        ],
+      },
+      {
+        heading: 'Why Convert a PDF Table to Excel?',
+        paragraphs: [
+          'A PDF is built to look the same everywhere — it is not built to be calculated on. The moment you need to sum a column, filter rows, build a chart, or merge data from multiple reports, you need the numbers in a real spreadsheet, not locked inside a fixed-layout document.',
+        ],
+        bullets: [
+          'Doing math on the numbers — totals, averages, formulas — which is not possible directly in a PDF.',
+          'Combining data from several PDF reports into one master spreadsheet for analysis.',
+          'Sorting and filtering rows, which only works in an actual table structure, not a flat PDF page.',
+          'Re-using financial data (invoices, statements, budgets) in accounting software that expects spreadsheet input.',
+          'Building charts and pivot tables from data that originally arrived as a static PDF report.',
+        ],
+      },
+      {
+        heading: 'What Makes PDF-to-Excel Conversion Accurate or Inaccurate',
+        paragraphs: [
+          'Table conversion works by detecting the visual structure of a table — rows, columns, and cell boundaries — and rebuilding it as actual spreadsheet cells. How well this works depends heavily on how the original PDF was made:',
+        ],
+        bullets: [
+          'Native, text-based PDFs (exported directly from Excel, accounting software, or a database report) convert most accurately, because the underlying text and its position are already precise.',
+          'PDFs with clear gridlines and consistent column spacing convert more reliably than tables that rely only on whitespace to separate columns.',
+          'Scanned PDFs (a photographed or scanned paper document) require OCR to even recognize the text before table structure can be detected, which introduces more room for error, especially with small or blurry numbers.',
+          'Merged cells, multi-line headers, and tables that span multiple pages are the hardest cases and are the most likely spots to double-check after conversion.',
+        ],
+        tip: 'If you have a choice in how the PDF was created — for example, exporting a report yourself — export directly to Excel or CSV instead of PDF if that option exists. Converting back from PDF is a workaround for when you only have the PDF, not the ideal starting point.',
+      },
+      {
+        heading: 'Converting Scanned PDF Tables',
+        paragraphs: [
+          'If your PDF is a scan or photo of a printed table rather than a digitally generated document, the converter needs to run OCR (optical character recognition) first to turn the pixels into readable text before it can detect rows and columns. Scanned tables convert less reliably than digital ones — expect to spend a few minutes double-checking numbers, especially decimal points and similar-looking digits like 0/O or 1/I, which OCR can occasionally misread.',
+          'For best results with a scan, make sure the original image is as high-resolution and well-lit as possible. A blurry or low-contrast scan produces far more OCR errors than a crisp 300 DPI scan.',
+        ],
+      },
+      {
+        heading: 'Checking and Cleaning Up the Result',
+        bullets: [
+          'Compare the row and column count in the spreadsheet against the original PDF table to catch any merged or split cells.',
+          'Spot-check a handful of numbers, particularly totals and any figures with decimals, against the source PDF.',
+          'Re-apply number formatting in Excel (currency symbols, decimal places, thousand separators) since these sometimes convert as plain text rather than formatted numbers.',
+          'If a multi-page table split into separate sheets or got cut off at a page break, manually stitch the rows back together in one sheet before doing any calculations.',
+          'Remove any header or footer text (page numbers, document titles) that got pulled into the spreadsheet alongside the actual table data.',
+        ],
+      },
+      {
+        heading: 'Converting Multiple PDF Reports at Once',
+        paragraphs: [
+          'If you regularly receive the same type of report as a PDF — monthly statements, weekly sales summaries — convert each one individually and then combine the resulting spreadsheets in Excel using copy-paste or a simple formula-based merge. Table layouts can shift slightly between reports (an extra column, a renamed header), so it is worth checking the first one or two conversions carefully before assuming every future report will convert identically.',
+        ],
+      },
+      {
+        heading: 'What to Do Before and After Converting',
+        paragraphs: [
+          'If your PDF is large or contains many pages you do not need converted, it is often faster to extract just the relevant pages first. If your source PDF is password-protected, you will need to remove that protection before any converter can read its contents.',
+          'Once your spreadsheet is in good shape and you need to share a clean, non-editable version of the data again — for a report or presentation — use the Excel to PDF tool to convert it back, which is the reverse of the process in this guide.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I convert a PDF table to Excel for free?',
+        a: 'Open the PDF to Excel tool, upload your PDF, and click "Convert to Excel." The tool detects the table structure and produces a downloadable .xlsx file with your data in actual spreadsheet cells. It is free with no sign-up required.',
+      },
+      {
+        q: 'Can I convert a scanned PDF table to Excel?',
+        a: 'Yes, but accuracy depends on scan quality. The converter runs OCR to read the text in the scan before detecting table structure. A high-resolution, well-lit scan converts far more accurately than a blurry photo, and you should still double-check numbers afterward.',
+      },
+      {
+        q: 'Why did my PDF to Excel conversion mess up the column alignment?',
+        a: 'This usually happens with tables that rely on whitespace rather than visible gridlines to separate columns, or with merged cells and multi-line headers. Native, text-based PDFs with clear gridlines convert far more reliably than complex or scanned layouts.',
+      },
+      {
+        q: 'Will the numbers in my Excel file keep their formatting?',
+        a: 'Not always automatically. Currency symbols, decimal places, and thousand separators sometimes come through as plain text. Re-apply number formatting in Excel after conversion to be safe, and spot-check key totals against the source PDF.',
+      },
+      {
+        q: 'Can I convert a multi-page PDF table to one spreadsheet?',
+        a: 'Yes, the converter processes the whole document, but a table that spans a page break can sometimes split awkwardly. Check where pages break in the original table and manually stitch any split rows back together in the resulting spreadsheet if needed.',
+      },
+      {
+        q: 'Is there a file size limit for converting PDF to Excel?',
+        a: 'No fixed limit for typical documents. Very large or image-heavy PDFs may take longer to process since the tool needs to analyze every page for table structure before generating the spreadsheet.',
+      },
+    ],
+  },
+
+  // ── 15 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'resize-images-for-instagram-facebook-linkedin',
+    title: 'How to Resize Images for Instagram, Facebook & LinkedIn (2026 Sizes)',
+    metaTitle: 'How to Resize Images for Social Media (2026 Sizes)',
+    metaDescription: 'Resize images for Instagram, Facebook, and LinkedIn for free — exact 2026 pixel dimensions for posts, stories, covers, and profile pictures, plus a quick how-to.',
+    excerpt: 'Upload the wrong dimensions and a social platform crops your photo in the worst possible place. Here are the exact sizes for Instagram, Facebook, and LinkedIn, and how to resize an image to match in seconds.',
+    category: 'Image Guide',
+    readTime: '5 min read',
+    datePublished: '2026-07-02',
+    dateModified: '2026-07-02',
+    relatedTool: 'resize-image',
+    relatedTools: ['crop-image', 'compress-image', 'image-to-webp'],
+    keywords: ['resize image for instagram', 'instagram image size', 'facebook cover photo size', 'linkedin image size', 'social media image sizes 2026'],
+    sections: [
+      {
+        paragraphs: [
+          'Every social platform crops, stretches, or squeezes images that do not match its expected dimensions, and the result is almost always worse than the original photo — a face cut off at the edge of a cover photo, a logo squashed on a profile picture, a landscape shot turned into an awkward square. Resizing an image to the exact pixel dimensions a platform expects fixes this before you upload, instead of hoping the platform crops it kindly. This guide gives you the current sizes for Instagram, Facebook, and LinkedIn, and exactly how to resize an image to match in a free browser tool.',
+        ],
+      },
+      {
+        heading: 'How to Resize an Image for Social Media — Step by Step',
+        steps: [
+          'Open the Resize Image tool and upload the photo or graphic you want to post.',
+          'Enter the exact width and height in pixels for the platform and placement you are targeting (see the tables below).',
+          'If you only want to shrink the file without changing its shape, turn on "lock aspect ratio" so the image scales proportionally instead of stretching.',
+          'Click "Resize" and preview the result to make sure nothing important — faces, logos, text — got pushed outside the new frame.',
+          'Download the resized image and upload it directly to the platform.',
+        ],
+      },
+      {
+        heading: 'Instagram Image Sizes (2026)',
+        bullets: [
+          'Square post: 1080 × 1080 px (1:1)',
+          'Portrait post: 1080 × 1350 px (4:5) — Instagram\'s current preference; it takes up more vertical space in the feed',
+          'Landscape post: 1080 × 566 px (1.91:1)',
+          'Story / Reel: 1080 × 1920 px (9:16)',
+          'Profile picture: 320 × 320 px (displayed as a circle, so keep the subject centered)',
+        ],
+        tip: 'When in doubt on Instagram, use portrait 1080 × 1350. It occupies more screen space than a square post in most people\'s feeds, which generally means more visibility for the same content.',
+      },
+      {
+        heading: 'Facebook Image Sizes (2026)',
+        bullets: [
+          'Shared post image: 1200 × 630 px',
+          'Cover photo (desktop): 820 × 312 px',
+          'Cover photo (mobile crop): 640 × 360 px — design your cover with key content centered so it survives both crops',
+          'Profile picture: 320 × 320 px (displayed smaller, but upload at full size for clarity on high-density screens)',
+          'Event image: 1920 × 1005 px',
+        ],
+      },
+      {
+        heading: 'LinkedIn Image Sizes (2026)',
+        bullets: [
+          'Shared post image: 1200 × 627 px',
+          'Profile picture: 400 × 400 px',
+          'Cover (background) photo: 1584 × 396 px',
+          'Company page logo: 300 × 300 px',
+          'Company page cover: 1128 × 191 px',
+        ],
+      },
+      {
+        heading: 'Why Uploading the Wrong Size Backfires',
+        paragraphs: [
+          'When you upload an image that does not match a platform\'s expected aspect ratio, the platform does not politely resize it to fit — it crops to the closest supported ratio, usually centered, which frequently cuts off heads, logos, or text near the edges. On covers and banners this is the most common failure: a carefully designed 1600 × 400 banner with text on the left gets center-cropped on mobile and the text disappears entirely.',
+          'Uploading an image far larger than needed causes a different problem — the platform compresses it itself, and you lose control over exactly how much quality is discarded. Resizing to the platform\'s actual dimensions before upload means you control the crop and the platform does less re-processing on top of it.',
+        ],
+      },
+      {
+        heading: 'Designing for Multiple Crops at Once',
+        paragraphs: [
+          'Cover photos and banners are the trickiest case because platforms often display different crops on desktop versus mobile, as shown in the Facebook cover sizes above. The safest approach is to keep any text or faces within the smaller, more conservative dimension (the mobile crop) even when you export at the larger desktop size — that way the important content survives regardless of which crop a given visitor sees.',
+          'If you are creating one graphic to post as both a square and a portrait version (common for repurposing the same design across a square Instagram grid and a portrait Story), design with extra margin on the top and bottom. That margin gets trimmed for the square version, but the core content stays centered and intact either way.',
+        ],
+      },
+      {
+        heading: 'Resizing vs. Cropping — Which One Do You Need?',
+        paragraphs: [
+          'Resizing changes an image\'s pixel dimensions while keeping the same content, either stretching it to a new shape or scaling it proportionally. Cropping removes part of the image entirely to change its aspect ratio without stretching anything. For social media, you usually want to crop first to get the right aspect ratio, then resize to the exact target dimensions — that avoids the stretched, slightly distorted look that comes from forcing an image with the wrong ratio into a fixed width and height.',
+          'If your source photo already has roughly the right proportions (a landscape photo you want to post as a Facebook cover, for instance), resizing alone with aspect ratio locked is enough. If the proportions are very different (a tall portrait photo you want to use as a wide LinkedIn banner), crop first with the Crop Image tool, then resize.',
+        ],
+      },
+      {
+        heading: 'Keeping File Size Reasonable',
+        paragraphs: [
+          'Social platforms recompress every image on upload regardless of what you send, so there is no benefit to uploading an unnecessarily large file — it only slows down your own upload and gives the platform more data to crush during its own compression pass. After resizing to the target dimensions, run the image through the Compress Image tool if it is still several megabytes; a well-compressed JPG or WebP at the correct dimensions looks identical to viewers but uploads faster and gives the platform less reason to re-compress aggressively.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the best Instagram post size in 2026?',
+        a: 'Portrait 1080 × 1350 px (a 4:5 ratio) is currently the best choice for standard feed posts — it takes up more vertical space in the feed than a square post. Use 1080 × 1080 for a classic square grid look, or 1080 × 1920 for Stories and Reels.',
+      },
+      {
+        q: 'How do I resize an image without stretching it?',
+        a: 'Turn on the "lock aspect ratio" option in the Resize Image tool before entering a new width or height. This scales the image proportionally instead of stretching it to fit an unrelated shape. If the target ratio is genuinely different from your source image, crop first, then resize.',
+      },
+      {
+        q: 'What size should a Facebook cover photo be?',
+        a: 'Facebook displays cover photos at 820 × 312 px on desktop and crops to roughly 640 × 360 px on mobile. Keep any text or faces centered within the smaller mobile crop so nothing important gets cut off on either device.',
+      },
+      {
+        q: 'Why does my LinkedIn banner look cropped on mobile?',
+        a: 'LinkedIn (like most platforms) crops cover images differently across devices. Design your 1584 × 396 px banner with key content — logos, text — concentrated in the center third, since the edges are the most likely to be trimmed on smaller screens.',
+      },
+      {
+        q: 'Does resizing an image reduce its quality?',
+        a: 'Shrinking an image (making it smaller) does not meaningfully reduce quality since you are simply discarding pixels you do not need. Enlarging a small image to a much larger size can introduce blurriness, since the tool has to invent new pixel data — for that, an AI upscaler works better than a basic resize.',
+      },
+      {
+        q: 'Should I resize an image before or after compressing it?',
+        a: 'Resize first, then compress. Resizing to the correct pixel dimensions removes the most unnecessary data, and compressing afterward fine-tunes the remaining file size. Doing it in the other order wastes compression effort on pixels you are about to delete anyway.',
       },
     ],
   },
