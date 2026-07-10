@@ -1540,6 +1540,12 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         q: 'Are my photos uploaded to a server when I convert them to PDF?',
         a: 'No. The conversion runs entirely in your browser using JavaScript. Your images are never uploaded anywhere, which matters for personal documents like IDs, contracts, or medical paperwork.',
+      },
+    ],
+  },
+
+  // ── 15 ─────────────────────────────────────────────────────────────────────
+  {
     slug: 'how-to-convert-pdf-tables-to-excel-free',
     title: 'How to Convert PDF Tables to Excel for Free',
     metaTitle: 'How to Convert PDF Tables to Excel for Free (2026)',
@@ -1653,7 +1659,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
-  // ── 15 ─────────────────────────────────────────────────────────────────────
+  // ── 16 ─────────────────────────────────────────────────────────────────────
   {
     slug: 'resize-images-for-instagram-facebook-linkedin',
     title: 'How to Resize Images for Instagram, Facebook & LinkedIn (2026 Sizes)',
