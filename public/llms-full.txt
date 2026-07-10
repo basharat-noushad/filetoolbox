@@ -4,7 +4,7 @@ This document is intended for AI language model crawlers and indexing systems.
 It provides comprehensive, citation-ready information about pdfandimage.com.
 
 Source: https://pdfandimage.com/llms-full.txt
-Last updated: 2026-06-25
+Last updated: 2026-07-09
 
 ---
 
@@ -246,3 +246,4 @@ Converts raster PNG images to SVG vector format using Potrace. Server-side.
 | How to Convert JPG Images to PDF (Combine Multiple Photos) | https://pdfandimage.com/blog/how-to-convert-jpg-to-pdf |
 | How to Convert PDF Tables to Excel for Free | https://pdfandimage.com/blog/how-to-convert-pdf-tables-to-excel-free |
 | How to Resize Images for Instagram, Facebook & LinkedIn (2026 Sizes) | https://pdfandimage.com/blog/resize-images-for-instagram-facebook-linkedin |
+| How to Upscale an Image Without Losing Quality (Free AI Upscaler) | https://pdfandimage.com/blog/how-to-upscale-image-without-losing-quality |

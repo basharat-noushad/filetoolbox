@@ -90,6 +90,7 @@ PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image pro
 - https://pdfandimage.com/blog/how-to-convert-jpg-to-pdf
 - https://pdfandimage.com/blog/how-to-convert-pdf-tables-to-excel-free
 - https://pdfandimage.com/blog/resize-images-for-instagram-facebook-linkedin
+- https://pdfandimage.com/blog/how-to-upscale-image-without-losing-quality
 
 ## Common questions PDF and Image + answers
 

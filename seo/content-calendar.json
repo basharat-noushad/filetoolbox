@@ -166,7 +166,10 @@
       "workingTitle": "How to Upscale an Image Without Losing Quality (Free AI Upscaler)",
       "relatedTool": "upscale-image",
       "category": "Image Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-upscale-image-without-losing-quality",
+      "publishedDate": "2026-07-09",
+      "note": "Written by blog pipeline — PR #8"
     },
     {
       "keyword": "add watermark to photos",
