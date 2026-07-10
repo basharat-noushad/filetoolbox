@@ -153,7 +153,10 @@
       "workingTitle": "How to Resize Images for Instagram, Facebook & LinkedIn (2026 Sizes)",
       "relatedTool": "resize-image",
       "category": "Image Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "resize-images-for-instagram-facebook-linkedin",
+      "publishedDate": "2026-07-02",
+      "note": "Written by blog pipeline — PR #8 (skipped duplicate 'how to convert jpg to pdf', already open as PR #5)"
     },
     {
       "keyword": "ai image upscaler free",

@@ -1533,6 +1533,123 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
+  // ── 15 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'resize-images-for-instagram-facebook-linkedin',
+    title: 'How to Resize Images for Instagram, Facebook & LinkedIn (2026 Sizes)',
+    metaTitle: 'How to Resize Images for Social Media (2026 Sizes)',
+    metaDescription: 'Resize images for Instagram, Facebook, and LinkedIn for free — exact 2026 pixel dimensions for posts, stories, covers, and profile pictures, plus a quick how-to.',
+    excerpt: 'Upload the wrong dimensions and a social platform crops your photo in the worst possible place. Here are the exact sizes for Instagram, Facebook, and LinkedIn, and how to resize an image to match in seconds.',
+    category: 'Image Guide',
+    readTime: '5 min read',
+    datePublished: '2026-07-02',
+    dateModified: '2026-07-02',
+    relatedTool: 'resize-image',
+    relatedTools: ['crop-image', 'compress-image', 'image-to-webp'],
+    keywords: ['resize image for instagram', 'instagram image size', 'facebook cover photo size', 'linkedin image size', 'social media image sizes 2026'],
+    sections: [
+      {
+        paragraphs: [
+          'Every social platform crops, stretches, or squeezes images that do not match its expected dimensions, and the result is almost always worse than the original photo — a face cut off at the edge of a cover photo, a logo squashed on a profile picture, a landscape shot turned into an awkward square. Resizing an image to the exact pixel dimensions a platform expects fixes this before you upload, instead of hoping the platform crops it kindly. This guide gives you the current sizes for Instagram, Facebook, and LinkedIn, and exactly how to resize an image to match in a free browser tool.',
+        ],
+      },
+      {
+        heading: 'How to Resize an Image for Social Media — Step by Step',
+        steps: [
+          'Open the Resize Image tool and upload the photo or graphic you want to post.',
+          'Enter the exact width and height in pixels for the platform and placement you are targeting (see the tables below).',
+          'If you only want to shrink the file without changing its shape, turn on "lock aspect ratio" so the image scales proportionally instead of stretching.',
+          'Click "Resize" and preview the result to make sure nothing important — faces, logos, text — got pushed outside the new frame.',
+          'Download the resized image and upload it directly to the platform.',
+        ],
+      },
+      {
+        heading: 'Instagram Image Sizes (2026)',
+        bullets: [
+          'Square post: 1080 × 1080 px (1:1)',
+          'Portrait post: 1080 × 1350 px (4:5) — Instagram\'s current preference; it takes up more vertical space in the feed',
+          'Landscape post: 1080 × 566 px (1.91:1)',
+          'Story / Reel: 1080 × 1920 px (9:16)',
+          'Profile picture: 320 × 320 px (displayed as a circle, so keep the subject centered)',
+        ],
+        tip: 'When in doubt on Instagram, use portrait 1080 × 1350. It occupies more screen space than a square post in most people\'s feeds, which generally means more visibility for the same content.',
+      },
+      {
+        heading: 'Facebook Image Sizes (2026)',
+        bullets: [
+          'Shared post image: 1200 × 630 px',
+          'Cover photo (desktop): 820 × 312 px',
+          'Cover photo (mobile crop): 640 × 360 px — design your cover with key content centered so it survives both crops',
+          'Profile picture: 320 × 320 px (displayed smaller, but upload at full size for clarity on high-density screens)',
+          'Event image: 1920 × 1005 px',
+        ],
+      },
+      {
+        heading: 'LinkedIn Image Sizes (2026)',
+        bullets: [
+          'Shared post image: 1200 × 627 px',
+          'Profile picture: 400 × 400 px',
+          'Cover (background) photo: 1584 × 396 px',
+          'Company page logo: 300 × 300 px',
+          'Company page cover: 1128 × 191 px',
+        ],
+      },
+      {
+        heading: 'Why Uploading the Wrong Size Backfires',
+        paragraphs: [
+          'When you upload an image that does not match a platform\'s expected aspect ratio, the platform does not politely resize it to fit — it crops to the closest supported ratio, usually centered, which frequently cuts off heads, logos, or text near the edges. On covers and banners this is the most common failure: a carefully designed 1600 × 400 banner with text on the left gets center-cropped on mobile and the text disappears entirely.',
+          'Uploading an image far larger than needed causes a different problem — the platform compresses it itself, and you lose control over exactly how much quality is discarded. Resizing to the platform\'s actual dimensions before upload means you control the crop and the platform does less re-processing on top of it.',
+        ],
+      },
+      {
+        heading: 'Designing for Multiple Crops at Once',
+        paragraphs: [
+          'Cover photos and banners are the trickiest case because platforms often display different crops on desktop versus mobile, as shown in the Facebook cover sizes above. The safest approach is to keep any text or faces within the smaller, more conservative dimension (the mobile crop) even when you export at the larger desktop size — that way the important content survives regardless of which crop a given visitor sees.',
+          'If you are creating one graphic to post as both a square and a portrait version (common for repurposing the same design across a square Instagram grid and a portrait Story), design with extra margin on the top and bottom. That margin gets trimmed for the square version, but the core content stays centered and intact either way.',
+        ],
+      },
+      {
+        heading: 'Resizing vs. Cropping — Which One Do You Need?',
+        paragraphs: [
+          'Resizing changes an image\'s pixel dimensions while keeping the same content, either stretching it to a new shape or scaling it proportionally. Cropping removes part of the image entirely to change its aspect ratio without stretching anything. For social media, you usually want to crop first to get the right aspect ratio, then resize to the exact target dimensions — that avoids the stretched, slightly distorted look that comes from forcing an image with the wrong ratio into a fixed width and height.',
+          'If your source photo already has roughly the right proportions (a landscape photo you want to post as a Facebook cover, for instance), resizing alone with aspect ratio locked is enough. If the proportions are very different (a tall portrait photo you want to use as a wide LinkedIn banner), crop first with the Crop Image tool, then resize.',
+        ],
+      },
+      {
+        heading: 'Keeping File Size Reasonable',
+        paragraphs: [
+          'Social platforms recompress every image on upload regardless of what you send, so there is no benefit to uploading an unnecessarily large file — it only slows down your own upload and gives the platform more data to crush during its own compression pass. After resizing to the target dimensions, run the image through the Compress Image tool if it is still several megabytes; a well-compressed JPG or WebP at the correct dimensions looks identical to viewers but uploads faster and gives the platform less reason to re-compress aggressively.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the best Instagram post size in 2026?',
+        a: 'Portrait 1080 × 1350 px (a 4:5 ratio) is currently the best choice for standard feed posts — it takes up more vertical space in the feed than a square post. Use 1080 × 1080 for a classic square grid look, or 1080 × 1920 for Stories and Reels.',
+      },
+      {
+        q: 'How do I resize an image without stretching it?',
+        a: 'Turn on the "lock aspect ratio" option in the Resize Image tool before entering a new width or height. This scales the image proportionally instead of stretching it to fit an unrelated shape. If the target ratio is genuinely different from your source image, crop first, then resize.',
+      },
+      {
+        q: 'What size should a Facebook cover photo be?',
+        a: 'Facebook displays cover photos at 820 × 312 px on desktop and crops to roughly 640 × 360 px on mobile. Keep any text or faces centered within the smaller mobile crop so nothing important gets cut off on either device.',
+      },
+      {
+        q: 'Why does my LinkedIn banner look cropped on mobile?',
+        a: 'LinkedIn (like most platforms) crops cover images differently across devices. Design your 1584 × 396 px banner with key content — logos, text — concentrated in the center third, since the edges are the most likely to be trimmed on smaller screens.',
+      },
+      {
+        q: 'Does resizing an image reduce its quality?',
+        a: 'Shrinking an image (making it smaller) does not meaningfully reduce quality since you are simply discarding pixels you do not need. Enlarging a small image to a much larger size can introduce blurriness, since the tool has to invent new pixel data — for that, an AI upscaler works better than a basic resize.',
+      },
+      {
+        q: 'Should I resize an image before or after compressing it?',
+        a: 'Resize first, then compress. Resizing to the correct pixel dimensions removes the most unnecessary data, and compressing afterward fine-tunes the remaining file size. Doing it in the other order wastes compression effort on pixels you are about to delete anyway.',
+      },
+    ],
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
