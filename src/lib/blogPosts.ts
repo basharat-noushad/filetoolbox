@@ -1420,6 +1420,132 @@ export const BLOG_POSTS: BlogPost[] = [
 
   // ── 14 ─────────────────────────────────────────────────────────────────────
   {
+    slug: 'how-to-convert-jpg-to-pdf',
+    title: 'How to Convert JPG Images to PDF (Combine Multiple Photos)',
+    metaTitle: 'How to Convert JPG to PDF (Combine Photos Free)',
+    metaDescription: 'Convert JPG images to PDF for free, in your browser. Combine multiple photos into one PDF, control page order, and keep full image quality.',
+    excerpt: 'Need to turn one photo or a whole stack of scanned pages into a single PDF? Here is exactly how to convert JPG images to PDF for free, with no software and no quality loss.',
+    category: 'PDF Guide',
+    readTime: '4 min read',
+    datePublished: '2026-06-25',
+    dateModified: '2026-06-25',
+    relatedTool: 'jpg-to-pdf',
+    relatedTools: ['pdf-to-jpg', 'merge-pdf', 'compress-pdf'],
+    keywords: ['convert jpg to pdf', 'jpg to pdf', 'how to convert jpg to pdf', 'image to pdf', 'combine images into pdf'],
+    sections: [
+      {
+        paragraphs: [
+          'If you need to convert JPG images to PDF, you do not need to install anything or sign up for an account — a browser-based tool can turn one photo, or twenty, into a single PDF in seconds. This comes up all the time: a landlord wants scanned ID pages as one file, a teacher asks for homework photos as a single PDF, or you just photographed a stack of receipts and need them in one document for expenses. This guide covers exactly how to convert JPG to PDF, how page order and quality work, and what to do with mixed file types.',
+        ],
+      },
+      {
+        heading: 'How to Convert JPG to PDF — Step by Step',
+        steps: [
+          'Open the JPG to PDF tool and click "Select Files" or drag your images into the upload area.',
+          'Add up to 20 JPG or PNG images at once — they appear as a list in the order they were added.',
+          'Check the order of your images. The first image in the list becomes the first page of the PDF, so reorder if you photographed pages out of sequence.',
+          'Click "Convert to PDF." The tool processes everything in your browser — your photos are never uploaded to a server.',
+          'Download the finished PDF and open it to confirm every page is right-side up and in the correct order before sending it anywhere.',
+        ],
+      },
+      {
+        heading: 'Does Converting JPG to PDF Reduce Image Quality?',
+        paragraphs: [
+          'No — the conversion is non-destructive. Each JPG is embedded into the PDF at its original resolution, and the PDF page is sized to match the image exactly, so nothing gets stretched, cropped, or recompressed in the process. What you see in the photo is what ends up on the page.',
+          'If the resulting PDF is too large to email or upload afterward, that is a separate step — run it through the Compress PDF tool once the images are combined, rather than worrying about quality loss during the JPG-to-PDF conversion itself.',
+        ],
+      },
+      {
+        heading: 'One Image Per Page, or Multiple Images on One Page?',
+        paragraphs: [
+          'Most JPG to PDF tools, including this one, place each image on its own page — so 5 photos become a 5-page PDF, one image filling each page at its original size and aspect ratio. This is the standard behavior for combining scanned documents, ID photos, or receipts, since each source image is treated as a complete page.',
+        ],
+        tip: 'If you need several small images arranged together on a single page (like a contact sheet or a collage), convert each group to PDF separately and arrange them in an image editor first, since most browser-based converters do not support multi-image-per-page layouts.',
+      },
+      {
+        heading: 'Common Reasons to Convert JPG to PDF',
+        bullets: [
+          'Combining multiple scanned or photographed pages — IDs, contracts, forms — into a single document instead of sending separate image files.',
+          'Submitting photographed homework, assignments, or worksheets as one PDF for an online portal that only accepts a single file.',
+          'Turning a stack of receipt photos into one PDF for expense reports or tax records.',
+          'Converting a photo of a printed document into a more "official" looking, easily shareable PDF format.',
+          'Archiving printed photos or certificates as searchable, easy-to-store PDF files instead of loose image files.',
+          'Sending a portfolio, certificate set, or set of product photos to a client or employer as a single attachment instead of a folder of separate files.',
+        ],
+      },
+      {
+        heading: 'Converting Mixed JPG and PNG Files Together',
+        paragraphs: [
+          'You are not limited to a single image format — JPG and PNG files can be combined in the same conversion, in any order you like. Each image keeps its own resolution and is placed on its own page regardless of which format it started as, so a mix of phone photos (JPG) and screenshots (PNG) can go into one PDF in a single pass.',
+          'This matters in practice more often than it sounds: a typical "scan this and send it to me" request ends up being a phone photo of a paper form (JPG) plus a screenshot of a confirmation email (PNG). Rather than converting each separately and merging the PDFs afterward, you can drop both formats into the same upload and get a single, correctly ordered PDF in one step.',
+        ],
+      },
+      {
+        heading: 'Privacy: Are My Photos Uploaded to a Server?',
+        paragraphs: [
+          'No. The conversion happens entirely inside your browser using JavaScript — your images are read, embedded into a new PDF, and assembled on your own device. Nothing is sent to a server in the process, which matters if the photos contain personal documents like ID cards, medical paperwork, bank statements, or signed contracts.',
+          'Because no upload happens, there is also no waiting on a slow connection — even a folder of high-resolution phone photos converts in a second or two, since the work is limited by your device, not by a network round trip. Once you close the browser tab, no copy of your images exists anywhere outside your own computer or phone.',
+        ],
+      },
+      {
+        heading: 'Converting JPG to PDF on a Phone vs. a Computer',
+        paragraphs: [
+          'The process works the same way on a phone browser as it does on a desktop, which is useful since most "photo to PDF" needs start with a phone camera. On mobile, take or select your photos first, then open the tool in your mobile browser and upload directly from your camera roll — there is no need to email photos to yourself or transfer them to a computer first.',
+          'On desktop, the advantage is mainly screen space: it is easier to see the full list of images and drag them into the right order before converting, which matters more once you are combining ten or more pages. For a single photo, phone or desktop makes no real difference.',
+        ],
+      },
+      {
+        heading: 'What If You Need to Go the Other Direction?',
+        paragraphs: [
+          'If you already have a PDF and need individual JPG images instead — for example, to post a single page on social media or attach one page to an email — use the PDF to JPG tool, which does the reverse conversion and extracts every page as its own image file.',
+          'If you have several existing PDFs (not images) that need combining into one document, use the Merge PDF tool instead — JPG to PDF is specifically for converting image files into PDF pages, while Merge PDF combines PDFs that already exist.',
+        ],
+      },
+      {
+        heading: 'Tips for a Clean Result',
+        bullets: [
+          'Check photo orientation before converting — a sideways phone photo will produce a sideways PDF page, since the conversion does not auto-rotate images.',
+          'Crop out background clutter (desk edges, fingers, shadows) before converting if the PDF is going somewhere official, like a visa or loan application.',
+          'Name your image files in the order you want them to appear (e.g. "page-01.jpg", "page-02.jpg") before uploading — most tools list files in the order they are added, which usually matches alphabetical filename order.',
+          'If file size matters, compress your photos first or run the finished PDF through the Compress PDF tool — a PDF built from several full-resolution phone photos can be tens of megabytes.',
+          'If a recipient specifically asked for "one PDF per page" rather than one combined file, convert images one at a time instead of uploading the whole batch together.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I convert a JPG to PDF for free?',
+        a: 'Open the JPG to PDF tool, upload one or more images, check the order, and click "Convert to PDF." The tool runs entirely in your browser and the PDF downloads immediately — no account, no email, and no watermark.',
+      },
+      {
+        q: 'Can I combine multiple JPG images into one PDF?',
+        a: 'Yes. Add up to 20 images at once and they will be combined into a single PDF, with each image becoming its own page in the order you arranged them.',
+      },
+      {
+        q: 'Will converting JPG to PDF reduce the image quality?',
+        a: 'No. Each image is embedded at its original resolution and the PDF page is sized to match, so there is no resizing, cropping, or recompression during conversion.',
+      },
+      {
+        q: 'Can I convert PNG images to PDF the same way?',
+        a: 'Yes. The JPG to PDF tool also accepts PNG files, and you can mix JPG and PNG images in the same conversion — each one becomes its own page regardless of format.',
+      },
+      {
+        q: 'Does the PDF keep the same orientation as my photos?',
+        a: 'Yes, each page matches the orientation of its source image exactly. If a photo was taken sideways, rotate it before converting since the tool does not auto-rotate images.',
+      },
+      {
+        q: 'How do I convert a PDF back to JPG images?',
+        a: 'Use the PDF to JPG tool to do the reverse — it extracts every page of a PDF as a separate JPG image, which you can download individually or as a ZIP.',
+      },
+      {
+        q: 'Are my photos uploaded to a server when I convert them to PDF?',
+        a: 'No. The conversion runs entirely in your browser using JavaScript. Your images are never uploaded anywhere, which matters for personal documents like IDs, contracts, or medical paperwork.',
+      },
+    ],
+  },
+
+  // ── 15 ─────────────────────────────────────────────────────────────────────
+  {
     slug: 'how-to-convert-pdf-tables-to-excel-free',
     title: 'How to Convert PDF Tables to Excel for Free',
     metaTitle: 'How to Convert PDF Tables to Excel for Free (2026)',
@@ -1533,7 +1659,124 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
-  // ── 15 ─────────────────────────────────────────────────────────────────────
+  // ── 16 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'resize-images-for-instagram-facebook-linkedin',
+    title: 'How to Resize Images for Instagram, Facebook & LinkedIn (2026 Sizes)',
+    metaTitle: 'How to Resize Images for Social Media (2026 Sizes)',
+    metaDescription: 'Resize images for Instagram, Facebook, and LinkedIn for free — exact 2026 pixel dimensions for posts, stories, covers, and profile pictures, plus a quick how-to.',
+    excerpt: 'Upload the wrong dimensions and a social platform crops your photo in the worst possible place. Here are the exact sizes for Instagram, Facebook, and LinkedIn, and how to resize an image to match in seconds.',
+    category: 'Image Guide',
+    readTime: '5 min read',
+    datePublished: '2026-07-02',
+    dateModified: '2026-07-02',
+    relatedTool: 'resize-image',
+    relatedTools: ['crop-image', 'compress-image', 'image-to-webp'],
+    keywords: ['resize image for instagram', 'instagram image size', 'facebook cover photo size', 'linkedin image size', 'social media image sizes 2026'],
+    sections: [
+      {
+        paragraphs: [
+          'Every social platform crops, stretches, or squeezes images that do not match its expected dimensions, and the result is almost always worse than the original photo — a face cut off at the edge of a cover photo, a logo squashed on a profile picture, a landscape shot turned into an awkward square. Resizing an image to the exact pixel dimensions a platform expects fixes this before you upload, instead of hoping the platform crops it kindly. This guide gives you the current sizes for Instagram, Facebook, and LinkedIn, and exactly how to resize an image to match in a free browser tool.',
+        ],
+      },
+      {
+        heading: 'How to Resize an Image for Social Media — Step by Step',
+        steps: [
+          'Open the Resize Image tool and upload the photo or graphic you want to post.',
+          'Enter the exact width and height in pixels for the platform and placement you are targeting (see the tables below).',
+          'If you only want to shrink the file without changing its shape, turn on "lock aspect ratio" so the image scales proportionally instead of stretching.',
+          'Click "Resize" and preview the result to make sure nothing important — faces, logos, text — got pushed outside the new frame.',
+          'Download the resized image and upload it directly to the platform.',
+        ],
+      },
+      {
+        heading: 'Instagram Image Sizes (2026)',
+        bullets: [
+          'Square post: 1080 × 1080 px (1:1)',
+          'Portrait post: 1080 × 1350 px (4:5) — Instagram\'s current preference; it takes up more vertical space in the feed',
+          'Landscape post: 1080 × 566 px (1.91:1)',
+          'Story / Reel: 1080 × 1920 px (9:16)',
+          'Profile picture: 320 × 320 px (displayed as a circle, so keep the subject centered)',
+        ],
+        tip: 'When in doubt on Instagram, use portrait 1080 × 1350. It occupies more screen space than a square post in most people\'s feeds, which generally means more visibility for the same content.',
+      },
+      {
+        heading: 'Facebook Image Sizes (2026)',
+        bullets: [
+          'Shared post image: 1200 × 630 px',
+          'Cover photo (desktop): 820 × 312 px',
+          'Cover photo (mobile crop): 640 × 360 px — design your cover with key content centered so it survives both crops',
+          'Profile picture: 320 × 320 px (displayed smaller, but upload at full size for clarity on high-density screens)',
+          'Event image: 1920 × 1005 px',
+        ],
+      },
+      {
+        heading: 'LinkedIn Image Sizes (2026)',
+        bullets: [
+          'Shared post image: 1200 × 627 px',
+          'Profile picture: 400 × 400 px',
+          'Cover (background) photo: 1584 × 396 px',
+          'Company page logo: 300 × 300 px',
+          'Company page cover: 1128 × 191 px',
+        ],
+      },
+      {
+        heading: 'Why Uploading the Wrong Size Backfires',
+        paragraphs: [
+          'When you upload an image that does not match a platform\'s expected aspect ratio, the platform does not politely resize it to fit — it crops to the closest supported ratio, usually centered, which frequently cuts off heads, logos, or text near the edges. On covers and banners this is the most common failure: a carefully designed 1600 × 400 banner with text on the left gets center-cropped on mobile and the text disappears entirely.',
+          'Uploading an image far larger than needed causes a different problem — the platform compresses it itself, and you lose control over exactly how much quality is discarded. Resizing to the platform\'s actual dimensions before upload means you control the crop and the platform does less re-processing on top of it.',
+        ],
+      },
+      {
+        heading: 'Designing for Multiple Crops at Once',
+        paragraphs: [
+          'Cover photos and banners are the trickiest case because platforms often display different crops on desktop versus mobile, as shown in the Facebook cover sizes above. The safest approach is to keep any text or faces within the smaller, more conservative dimension (the mobile crop) even when you export at the larger desktop size — that way the important content survives regardless of which crop a given visitor sees.',
+          'If you are creating one graphic to post as both a square and a portrait version (common for repurposing the same design across a square Instagram grid and a portrait Story), design with extra margin on the top and bottom. That margin gets trimmed for the square version, but the core content stays centered and intact either way.',
+        ],
+      },
+      {
+        heading: 'Resizing vs. Cropping — Which One Do You Need?',
+        paragraphs: [
+          'Resizing changes an image\'s pixel dimensions while keeping the same content, either stretching it to a new shape or scaling it proportionally. Cropping removes part of the image entirely to change its aspect ratio without stretching anything. For social media, you usually want to crop first to get the right aspect ratio, then resize to the exact target dimensions — that avoids the stretched, slightly distorted look that comes from forcing an image with the wrong ratio into a fixed width and height.',
+          'If your source photo already has roughly the right proportions (a landscape photo you want to post as a Facebook cover, for instance), resizing alone with aspect ratio locked is enough. If the proportions are very different (a tall portrait photo you want to use as a wide LinkedIn banner), crop first with the Crop Image tool, then resize.',
+        ],
+      },
+      {
+        heading: 'Keeping File Size Reasonable',
+        paragraphs: [
+          'Social platforms recompress every image on upload regardless of what you send, so there is no benefit to uploading an unnecessarily large file — it only slows down your own upload and gives the platform more data to crush during its own compression pass. After resizing to the target dimensions, run the image through the Compress Image tool if it is still several megabytes; a well-compressed JPG or WebP at the correct dimensions looks identical to viewers but uploads faster and gives the platform less reason to re-compress aggressively.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the best Instagram post size in 2026?',
+        a: 'Portrait 1080 × 1350 px (a 4:5 ratio) is currently the best choice for standard feed posts — it takes up more vertical space in the feed than a square post. Use 1080 × 1080 for a classic square grid look, or 1080 × 1920 for Stories and Reels.',
+      },
+      {
+        q: 'How do I resize an image without stretching it?',
+        a: 'Turn on the "lock aspect ratio" option in the Resize Image tool before entering a new width or height. This scales the image proportionally instead of stretching it to fit an unrelated shape. If the target ratio is genuinely different from your source image, crop first, then resize.',
+      },
+      {
+        q: 'What size should a Facebook cover photo be?',
+        a: 'Facebook displays cover photos at 820 × 312 px on desktop and crops to roughly 640 × 360 px on mobile. Keep any text or faces centered within the smaller mobile crop so nothing important gets cut off on either device.',
+      },
+      {
+        q: 'Why does my LinkedIn banner look cropped on mobile?',
+        a: 'LinkedIn (like most platforms) crops cover images differently across devices. Design your 1584 × 396 px banner with key content — logos, text — concentrated in the center third, since the edges are the most likely to be trimmed on smaller screens.',
+      },
+      {
+        q: 'Does resizing an image reduce its quality?',
+        a: 'Shrinking an image (making it smaller) does not meaningfully reduce quality since you are simply discarding pixels you do not need. Enlarging a small image to a much larger size can introduce blurriness, since the tool has to invent new pixel data — for that, an AI upscaler works better than a basic resize.',
+      },
+      {
+        q: 'Should I resize an image before or after compressing it?',
+        a: 'Resize first, then compress. Resizing to the correct pixel dimensions removes the most unnecessary data, and compressing afterward fine-tunes the remaining file size. Doing it in the other order wastes compression effort on pixels you are about to delete anyway.',
+      },
+    ],
+  },
+
+  // ── 17 ─────────────────────────────────────────────────────────────────────
   {
     slug: 'how-to-upscale-image-without-losing-quality',
     title: 'How to Upscale an Image Without Losing Quality (Free AI Upscaler)',
