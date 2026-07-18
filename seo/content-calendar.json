@@ -176,7 +176,10 @@
       "workingTitle": "How to Add a Watermark to Your Photos (Protect Your Work)",
       "relatedTool": "add-watermark-image",
       "category": "Image Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-add-watermark-to-photos",
+      "publishedDate": "2026-07-13",
+      "note": "Written by blog pipeline"
     },
     {
       "keyword": "why are my images saving as webp",

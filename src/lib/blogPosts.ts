@@ -1883,6 +1883,109 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
+  // ── 18 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-add-watermark-to-photos',
+    title: 'How to Add a Watermark to Your Photos (Protect Your Work)',
+    metaTitle: 'How to Add a Watermark to Your Photos (Free)',
+    metaDescription: 'Add a watermark to your photos for free in your browser. Learn how to protect images from theft with text or logo watermarks — position, opacity, and more.',
+    excerpt: 'Unwatermarked photos get lifted and reposted without credit. Here is how to add a watermark to your photos for free, with the positioning and opacity settings that actually deter theft.',
+    category: 'Image Guide',
+    readTime: '5 min read',
+    datePublished: '2026-07-13',
+    dateModified: '2026-07-13',
+    relatedTool: 'add-watermark-image',
+    relatedTools: ['compress-image', 'resize-image', 'add-text-to-image'],
+    keywords: ['add watermark to photos', 'watermark photo online free', 'how to watermark images', 'photo watermark tool', 'protect photos from theft'],
+    sections: [
+      {
+        paragraphs: [
+          'If you post photos online — product shots, portfolio work, event photography — someone will eventually save one and reuse it without credit. A watermark will not stop a determined thief, but it does two things that matter: it makes casual reuse annoying enough that most people skip it, and it keeps your name attached to the image wherever it ends up. This guide covers how to add a watermark to your photos for free, and the settings that make a watermark effective without ruining the photo.',
+        ],
+      },
+      {
+        heading: 'Text Watermark or Logo Watermark?',
+        paragraphs: [
+          'Both work, and the right choice depends on what you are protecting.',
+        ],
+        bullets: [
+          'Text watermark — your name, brand, or website URL rendered directly on the image. Fastest to set up, works for any photo, and a URL doubles as free advertising if someone reposts the image.',
+          'Logo watermark — a small PNG of your logo overlaid on the photo. Looks more polished for a business or brand, especially with a transparent-background logo, but takes a bit more setup than typing text.',
+        ],
+        tip: 'For portfolios and client galleries, a subtle text watermark with your studio name or website is usually enough. For product photography going on marketplaces or social media, a logo watermark reinforces brand recognition every time the image is shared.',
+      },
+      {
+        heading: 'How to Add a Watermark to a Photo — Step by Step',
+        steps: [
+          'Open the Add Watermark to Image tool and upload your photo.',
+          'Choose text or image watermark, then enter your text (or upload your logo file).',
+          'Set the position — corner placements are common, but centered or repeated (tiled) watermarks are harder to crop out.',
+          'Adjust opacity and font size so the watermark is clearly visible but does not obscure the photo underneath.',
+          'Click "Add Watermark" and download the result — your original photo is left untouched.',
+        ],
+      },
+      {
+        heading: 'Where to Place a Watermark for Best Protection',
+        paragraphs: [
+          'Placement is the single biggest factor in whether a watermark actually deters reuse. A watermark tucked into a corner takes seconds to crop out, especially on square or landscape photos where cropping five percent off one edge barely changes the composition.',
+        ],
+        bullets: [
+          'Center placement — much harder to crop without cutting into the main subject. The strongest option if theft prevention is the priority.',
+          'Corner placement — less intrusive visually, but easiest to remove by cropping. Best for casual use where you mainly want attribution, not hard protection.',
+          'Diagonal or tiled watermark — repeats the mark across the image so no single crop removes it. Common for stock photography and preview images that should not be usable at all without a license.',
+        ],
+      },
+      {
+        heading: 'Getting the Opacity Right',
+        paragraphs: [
+          'Opacity is a tradeoff between visibility and usability. Too faint, and the watermark is easy to clone-stamp out or simply ignore. Too strong, and it distracts from the photo itself — which defeats the point if you are trying to showcase your work.',
+          'A good starting point is 30–50% opacity for corner or center placements, and lower (15–25%) for a diagonal tiled watermark, since the repetition compensates for the reduced strength of any single instance. Preview the result at the size your photo will actually be viewed — a watermark that looks subtle at full resolution can look heavy-handed once the image is displayed small on a phone screen.',
+        ],
+      },
+      {
+        heading: 'Watermarking Without Ruining the Photo',
+        bullets: [
+          'Use a font size proportional to the image — a fixed pixel size looks tiny on a 4000px photo and huge on a 800px one. Most watermark tools scale text relative to image dimensions for this reason.',
+          'Pick a color with contrast against the busiest part of the photo, or use a semi-transparent white/black watermark that reads on both light and dark backgrounds.',
+          'Avoid placing the watermark directly over the subject\'s face or the product\'s key detail — off-subject areas (background, negative space) keep the watermark visible without distracting from what matters.',
+          'Keep the text short. A full sentence is easy to read once but clutters the image every time it is seen; a name, handle, or short URL communicates the same thing with far less visual weight.',
+        ],
+      },
+      {
+        heading: 'Batch Watermarking Multiple Photos',
+        paragraphs: [
+          'If you are watermarking an entire shoot or product catalog, apply the same text, position, and opacity settings consistently across every photo rather than adjusting per image — consistency reads as professional and makes your work instantly recognizable as a set. After watermarking, run the batch through the Compress Image tool to keep file sizes reasonable for upload, since the extra layer adds a small amount of data to each file.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I add a watermark to a photo for free?',
+        a: 'Use the Add Watermark to Image tool. Upload your photo, choose a text or logo watermark, set the position and opacity, and download the result. It is free, works in your browser, and does not require an account.',
+      },
+      {
+        q: 'Does a watermark actually stop people from stealing photos?',
+        a: 'A watermark will not stop someone determined to steal an image outright, but it deters casual reuse and keeps your name attached to the photo if it is shared or reposted. Center or tiled placements are much harder to crop out than a corner watermark.',
+      },
+      {
+        q: 'What opacity should I use for a photo watermark?',
+        a: '30–50% opacity works well for corner or center placements — visible enough to deter cropping, subtle enough not to distract from the photo. Tiled or diagonal watermarks can use lower opacity (15–25%) since the repetition compensates.',
+      },
+      {
+        q: 'Should I use a text watermark or a logo watermark?',
+        a: 'A text watermark (your name or website) is fastest to set up and works for any photo. A logo watermark looks more polished for a business or brand and reinforces recognition each time the image is shared. Either can be applied with the same tool.',
+      },
+      {
+        q: 'Where is the best place to put a watermark?',
+        a: 'Center or diagonal/tiled placements are the hardest to crop out and offer the strongest protection. Corner placements are less visually intrusive but can be cropped out in seconds, so they work better for attribution than for theft prevention.',
+      },
+      {
+        q: 'Will watermarking reduce my photo quality?',
+        a: 'No — the watermark is added as an overlay on top of the existing image data, and the underlying photo is not recompressed or altered beyond adding the watermark layer. Your original file is also never modified; the tool produces a new watermarked copy.',
+      },
+    ],
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
