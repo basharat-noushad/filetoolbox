@@ -92,6 +92,7 @@ PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image pro
 - https://pdfandimage.com/blog/resize-images-for-instagram-facebook-linkedin
 - https://pdfandimage.com/blog/how-to-upscale-image-without-losing-quality
 - https://pdfandimage.com/blog/how-to-add-watermark-to-photos
+- https://pdfandimage.com/blog/why-are-images-saving-as-webp
 
 ## Common questions PDF and Image + answers
 

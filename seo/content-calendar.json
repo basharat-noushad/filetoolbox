@@ -186,7 +186,10 @@
       "workingTitle": "Why Are Images Saving as WebP? How to Convert WebP to PNG",
       "relatedTool": "webp-to-png",
       "category": "Image Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "why-are-images-saving-as-webp",
+      "publishedDate": "2026-07-20",
+      "note": "Written by blog pipeline"
     },
     {
       "keyword": "convert pdf to jpg images",
