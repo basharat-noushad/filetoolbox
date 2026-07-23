@@ -196,7 +196,10 @@
       "workingTitle": "How to Convert PDF Pages to JPG Images (Free & Private)",
       "relatedTool": "pdf-to-jpg",
       "category": "PDF Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-convert-pdf-to-jpg-images",
+      "publishedDate": "2026-07-23",
+      "note": "Written by blog pipeline"
     },
     {
       "keyword": "convert gif to mp4",
