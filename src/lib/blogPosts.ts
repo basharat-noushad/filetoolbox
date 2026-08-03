@@ -2084,6 +2084,123 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
+  // ── 20 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-make-a-gif-from-a-video',
+    title: 'How to Make a GIF from a Video (MP4 to GIF, Free)',
+    metaTitle: 'How to Make a GIF from a Video Online — Free & Fast',
+    metaDescription: 'Make a GIF from a video for free in your browser. Upload an MP4, trim the clip, and download a looping GIF — no software or watermark.',
+    excerpt: 'Turning a video clip into a looping GIF takes seconds once you know the right settings. This guide covers exactly how to convert MP4 to GIF for free, and how to keep the file size small.',
+    category: 'Image Guide',
+    readTime: '5 min read',
+    datePublished: '2026-08-03',
+    dateModified: '2026-08-03',
+    relatedTool: 'mp4-to-gif',
+    relatedTools: ['gif-to-mp4', 'compress-image', 'resize-image'],
+    keywords: ['how to make a gif from a video', 'mp4 to gif', 'convert video to gif free', 'video to gif converter online', 'make a gif online'],
+    sections: [
+      {
+        paragraphs: [
+          'Making a GIF from a video is one of the most common small edits people need — a funny clip for a group chat, a reaction for social media, a short product demo to embed on a page that does not support video playback. You do not need a video editor or any software installation to do it. A free browser-based converter can turn any short MP4 clip into a looping GIF in seconds, entirely on your device.',
+        ],
+      },
+      {
+        heading: 'Why Convert a Video to GIF?',
+        paragraphs: [
+          'GIFs and videos serve different purposes, and that difference is exactly why people convert between them.',
+        ],
+        bullets: [
+          'Autoplay everywhere — GIFs play automatically and loop on nearly every platform, including places that block autoplaying video (some messaging apps, older forums, certain email clients).',
+          'No player controls — a GIF just plays; there is no pause button, progress bar, or "click to play" overlay to distract from a quick moment.',
+          'Universal compatibility — GIF is one of the oldest and most widely supported image formats, so it displays correctly almost anywhere without a video codec or player.',
+          'Easy sharing — many chat apps, forums, and social platforms treat GIFs as images, making them easier to paste inline than a video file.',
+          'Short, repeatable moments — reactions, memes, and looping demos work better as a few-second loop than as a video with a start and end.',
+        ],
+      },
+      {
+        heading: 'How to Make a GIF from a Video — Step by Step',
+        steps: [
+          'Open the MP4 to GIF tool and click "Select File" or drag your video into the upload area.',
+          'Set the start and end time to trim the clip to just the part you want as a GIF — shorter clips make smaller, faster-loading files.',
+          'Choose a frame rate. Lower frame rates (10–15 fps) keep the file size down; higher frame rates (24–30 fps) look smoother but produce larger files.',
+          'Set the output width if you want to resize the GIF smaller — reducing dimensions is one of the most effective ways to shrink file size.',
+          'Click "Convert to GIF." The tool processes the clip in your browser and generates the animated GIF.',
+          'Preview the result, then download the GIF file to your device.',
+        ],
+      },
+      {
+        heading: 'Why Are GIFs Sometimes Huge Files?',
+        paragraphs: [
+          'GIF is an older format that does not compress video the way modern codecs do — every frame is stored as a series of individual images, so a long or high-resolution clip can produce a surprisingly large file. A 10-second clip at full resolution and 30 fps can easily exceed 20–30MB as a GIF, even though the source MP4 might be a fraction of that size.',
+          'This is normal and expected — it is a limitation of the GIF format itself, not a problem with the conversion. The fix is controlling the three variables that determine GIF size: clip length, frame rate, and dimensions.',
+        ],
+        tip: 'If your GIF is too large for the platform you are uploading to (many chat apps and forums cap GIF size around 5–15MB), trim the clip shorter first, then reduce the frame rate before reducing dimensions — trimming has the biggest impact on file size.',
+      },
+      {
+        heading: 'Getting the Smallest Possible GIF',
+        bullets: [
+          'Trim to the essential moment — a 2–3 second loop is almost always enough, and cutting length in half roughly halves the file size.',
+          'Lower the frame rate — 12–15 fps looks smooth for most reactions and short clips while cutting file size significantly compared to the source video\'s native frame rate.',
+          'Reduce the output width — a GIF at 480px wide is dramatically smaller than the same clip at 1080px, and most platforms display GIFs at a small size anyway.',
+          'Avoid busy, high-motion footage if size matters most — scenes with lots of movement and color change compress less efficiently than simpler footage.',
+          'Crop out unnecessary background — a tighter frame means fewer pixels to encode in every frame of the loop.',
+        ],
+      },
+      {
+        heading: 'GIFs Do Not Have Sound',
+        paragraphs: [
+          'The GIF format has no audio track at all — it is purely a sequence of images played in a loop. When you convert a video with sound into a GIF, the audio is simply discarded; there is no way to preserve it, no matter which converter you use. This is a limitation of the format, not a setting you can toggle.',
+          'If the sound is an important part of the clip — a joke that only lands with the audio, a voiceover, background music — a GIF is the wrong format entirely. In that case, keep the clip as a short MP4 instead, or use a platform that supports short video clips with sound rather than converting to GIF.',
+        ],
+      },
+      {
+        heading: 'Does the GIF Loop Automatically?',
+        paragraphs: [
+          'Yes. Standard GIF conversion produces an infinitely looping animation by default — as soon as it reaches the last frame, it restarts from the beginning. This is standard behavior across virtually every platform that displays GIFs, so there is nothing extra to configure for looping to work.',
+        ],
+      },
+      {
+        heading: 'Converting the Other Direction',
+        paragraphs: [
+          'If you already have a GIF and need it as a video instead — for example, a platform that requires MP4 uploads rather than GIFs, or you want a smaller file with the same visual content — use the GIF to MP4 tool. MP4 uses modern video compression, so the same animation is typically far smaller as an MP4 than as a GIF, at equal or better visual quality.',
+        ],
+      },
+      {
+        heading: 'Cleaning Up the Source Video First',
+        paragraphs: [
+          'If your source video is portrait, landscape, or an unusual aspect ratio and you only want part of the frame in the final GIF, resize or crop it before converting. Use the Resize Image tool on individual frames if needed, or trim to the correct region directly in your video player before uploading. Starting with exactly the footage you want avoids wasted file size on parts of the frame nobody needs to see.',
+          'This step matters most for clips filmed vertically on a phone but destined for a platform or chat that displays GIFs at a wider aspect ratio — without cropping first, you end up with unnecessary black bars or wasted space baked into every frame of the final GIF.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I make a GIF from a video for free?',
+        a: 'Open the MP4 to GIF tool, upload your video, trim it to the section you want, and click "Convert to GIF." The tool processes everything in your browser and the GIF downloads directly. It is completely free with no watermark.',
+      },
+      {
+        q: 'What is the best frame rate for a GIF?',
+        a: '10–15 fps is a good default for most reactions and short clips — it looks smooth while keeping the file size manageable. Use 24–30 fps only when you need very smooth motion and file size is not a concern.',
+      },
+      {
+        q: 'Why is my GIF so much larger than the original video?',
+        a: 'GIF stores each frame individually and does not compress as efficiently as modern video codecs like MP4. This is a limitation of the format itself. Reduce the clip length, frame rate, or dimensions to bring the file size down.',
+      },
+      {
+        q: 'Is there a maximum video length for converting to GIF?',
+        a: 'There is no hard limit, but longer clips produce much larger GIF files because of how the format stores frames. For practical file sizes, keep clips under 10–15 seconds, and trim to the essential moment whenever possible.',
+      },
+      {
+        q: 'Can I convert a GIF back into a video?',
+        a: 'Yes. Use the GIF to MP4 tool to convert an animated GIF into an MP4 video file, which is typically much smaller than the GIF at the same visual quality.',
+      },
+      {
+        q: 'Will the GIF loop automatically when I share it?',
+        a: 'Yes. GIFs generated from video are set to loop infinitely by default, which is how virtually every platform displays them — no extra setting is needed.',
+      },
+    ],
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>

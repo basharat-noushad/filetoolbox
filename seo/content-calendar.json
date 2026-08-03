@@ -210,7 +210,10 @@
       "workingTitle": "How to Make a GIF from a Video (MP4 to GIF, Free)",
       "relatedTool": "mp4-to-gif",
       "category": "Image Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-make-a-gif-from-a-video",
+      "publishedDate": "2026-08-03",
+      "note": "Written by blog pipeline — skipped 'convert pdf to jpg images' (open PR #11) and 'convert gif to mp4' (open PR #12), both already in flight"
     },
     {
       "keyword": "delete pages from pdf",
