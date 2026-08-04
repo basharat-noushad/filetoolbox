@@ -95,6 +95,7 @@ PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image pro
 - https://pdfandimage.com/blog/why-are-images-saving-as-webp
 - https://pdfandimage.com/blog/how-to-convert-pdf-to-jpg-images
 - https://pdfandimage.com/blog/convert-gif-to-mp4-video
+- https://pdfandimage.com/blog/how-to-make-a-gif-from-a-video
 
 ## Common questions PDF and Image + answers
 

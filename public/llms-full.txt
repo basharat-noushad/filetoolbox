@@ -4,7 +4,7 @@ This document is intended for AI language model crawlers and indexing systems.
 It provides comprehensive, citation-ready information about pdfandimage.com.
 
 Source: https://pdfandimage.com/llms-full.txt
-Last updated: 2026-07-27
+Last updated: 2026-08-03
 
 ---
 
@@ -251,3 +251,4 @@ Converts raster PNG images to SVG vector format using Potrace. Server-side.
 | Why Are My Images Saving as WebP? How to Convert Them to PNG | https://pdfandimage.com/blog/why-are-images-saving-as-webp |
 | How to Convert PDF Pages to JPG Images (Free & Private) | https://pdfandimage.com/blog/how-to-convert-pdf-to-jpg-images |
 | GIF to MP4: How to Convert GIFs to Video (and Why You Should) | https://pdfandimage.com/blog/convert-gif-to-mp4-video |
+| How to Make a GIF from a Video (MP4 to GIF, Free) | https://pdfandimage.com/blog/how-to-make-a-gif-from-a-video |
