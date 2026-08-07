@@ -2415,6 +2415,128 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
+  // ── 23 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-delete-pages-from-pdf',
+    title: 'How to Delete Pages from a PDF (Free, No Software)',
+    metaTitle: 'How to Delete Pages from a PDF for Free',
+    metaDescription: 'Delete pages from a PDF in seconds — free, in your browser. Remove one page, several pages, or a range without installing software.',
+    excerpt: 'A blank scan, a duplicate cover sheet, an outdated appendix — deleting a page from a PDF should not require a full editor. Here is exactly how to do it for free, in your browser.',
+    category: 'PDF Guide',
+    readTime: '4 min read',
+    datePublished: '2026-08-06',
+    dateModified: '2026-08-06',
+    relatedTool: 'delete-pdf-pages',
+    relatedTools: ['split-pdf', 'merge-pdf', 'reorder-pdf-pages'],
+    keywords: ['delete pages from pdf', 'remove pages from pdf', 'how to delete a page in pdf', 'delete pdf pages online free', 'remove pdf page'],
+    sections: [
+      {
+        paragraphs: [
+          'A stray blank page from a scanner, a cover sheet that does not belong, an old appendix that got superseded — these are some of the most common reasons people need to delete pages from a PDF. Opening a full document editor just to remove one page is overkill. A free browser-based tool can do it in under a minute, with no software to install and no file uploaded to a server.',
+        ],
+      },
+      {
+        heading: 'How to Delete Pages from a PDF — Step by Step',
+        steps: [
+          'Open the Delete PDF Pages tool and click "Select File" or drag your PDF into the upload area.',
+          'Wait for the page thumbnails to load — you will see every page in the document as a preview.',
+          'Click each page you want to remove. Selected pages are marked so you can double-check before continuing.',
+          'Review the selection carefully — a quick zoom on each thumbnail confirms you are removing the right pages.',
+          'Click "Delete Pages" to generate the new PDF with the selected pages removed.',
+          'Download the result. Your original file is untouched — the tool creates a brand new PDF.',
+        ],
+      },
+      {
+        heading: 'Why Not Just Print to PDF Excluding Certain Pages?',
+        paragraphs: [
+          'Printing to PDF with a page range is a common workaround, but it has real downsides. It flattens the document, which can strip searchable text, form fields, hyperlinks, and bookmarks. It also re-renders every page as a fresh print job, which can subtly shift fonts or image quality depending on your printer driver.',
+          'Deleting pages directly, rather than printing around them, keeps the rest of the document exactly as it was — same text layer, same embedded fonts, same metadata, same links. Only the pages you chose to remove disappear.',
+        ],
+      },
+      {
+        heading: 'Deleting One Page vs. Multiple Pages vs. a Range',
+        paragraphs: [
+          'You are not limited to removing a single page. Click as many thumbnails as you need — a scattered set of pages (say, 2, 7, and 15) or a full contiguous range (pages 10 through 20) both work the same way: select what should go, keep everything else.',
+        ],
+        bullets: [
+          'Single page — remove one blank or duplicate page, like a scanned cover sheet that got included by mistake.',
+          'Multiple non-consecutive pages — remove several unrelated pages in one pass, such as ads or filler pages scattered through a scanned book.',
+          'A full range — remove an entire outdated section, like a superseded appendix or an old pricing sheet at the back of a proposal.',
+        ],
+        tip: 'If you are removing more pages than you are keeping, it is often faster to use the Split PDF tool instead and extract just the pages you want to keep.',
+      },
+      {
+        heading: 'Does Deleting a Page Change the Rest of the Document?',
+        paragraphs: [
+          'No. The remaining pages keep their original content, formatting, and quality — nothing about them is re-encoded or altered. Page numbers printed on the page itself (as text) will not automatically renumber, since that text was part of the original page content. If your document relies on sequential printed page numbers, use the Add Page Numbers tool afterward to regenerate them from page 1.',
+          'Internal links and a table of contents that point to the deleted pages will no longer resolve correctly, since those pages no longer exist. Review any cross-references before sharing the final document if that matters for your use case.',
+        ],
+      },
+      {
+        heading: 'What If You Deleted the Wrong Page?',
+        paragraphs: [
+          'Because the tool always outputs a new file and never modifies your original, undoing a mistake is simple: just re-upload the original PDF and start again with the correct selection. Keep your source file until you have confirmed the result looks right — that way there is no risk of losing content permanently.',
+          'This is one of the advantages of a browser-based workflow over editing a PDF "in place" with some desktop software: there is no save-over-the-original step where a mistake becomes permanent. Every run produces a fresh output file, so your source document is always available as a fallback.',
+        ],
+      },
+      {
+        heading: 'Common Reasons to Delete PDF Pages',
+        paragraphs: [
+          'Page deletion comes up in a surprisingly wide range of everyday situations, at work and otherwise. A few of the most common:',
+        ],
+        bullets: [
+          'Removing blank pages left over from a two-sided scan of a document that had an odd number of sides.',
+          'Cutting an outdated terms-and-conditions page before sending a contract for signature.',
+          'Trimming a scanned book, textbook chapter, or magazine down to just the article or section you need.',
+          'Removing a confidential internal page — pricing notes, internal comments, draft watermarks — before sharing a document externally.',
+          'Deleting a duplicate page that got scanned twice by mistake, which is one of the most common scanner errors.',
+          'Stripping an old cover letter or fax header page from a document before archiving it.',
+          'Removing a single defective or corrupted-looking page so the rest of a large scanned batch stays usable.',
+        ],
+      },
+      {
+        heading: 'Deleting Pages vs. a Full Desktop PDF Editor',
+        paragraphs: [
+          'Full desktop PDF editors can delete pages too, but they typically require a paid license, a lengthy install, and — for anything beyond viewing — a subscription to unlock editing features. For a task as simple as removing a handful of pages, that is a lot of overhead.',
+          'A browser-based tool skips all of that: no install, no account, no license to manage, and no software left behind on your device afterward. It is also platform-independent — the same tool works identically whether you are on Windows, macOS, Linux, Chromebook, or a tablet, since everything runs inside the browser itself rather than relying on installed software.',
+        ],
+      },
+      {
+        heading: 'Working with Large or Scanned PDFs',
+        paragraphs: [
+          'Scanned documents are one of the most common places extra pages sneak in — an automatic document feeder occasionally pulls two sheets at once, scans a blank interleaving page from a duplex job, or captures a stray cover sheet from the scanner tray. Because the thumbnail preview shows every page before you delete anything, it is easy to spot these errors even in a scanned batch of 50 or 100 pages, without having to open the full document just to check.',
+          'For very large PDFs, thumbnail generation may take a few extra seconds while the tool renders each page in your browser. This is normal — the entire file is being processed locally on your device rather than on a server, so the time depends on your device\'s performance rather than an internet connection.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I delete a page from a PDF for free?',
+        a: 'Open the Delete PDF Pages tool, upload your file, click the thumbnails of the pages you want to remove, and click "Delete Pages." The tool processes everything in your browser and the new PDF downloads directly — no watermark, no sign-up.',
+      },
+      {
+        q: 'Can I delete multiple pages at once?',
+        a: 'Yes. Select as many pages as you need — scattered pages, a contiguous range, or a mix of both — and they are all removed in a single pass when you click "Delete Pages."',
+      },
+      {
+        q: 'Will deleting pages affect the quality of the remaining pages?',
+        a: 'No. The pages you keep are untouched — same text, same images, same formatting. Only the pages you select for removal are taken out of the document.',
+      },
+      {
+        q: 'Does deleting a page renumber the printed page numbers?',
+        a: 'No. Printed page numbers are part of each page\'s content and do not automatically update. If you need clean sequential numbering after deleting pages, use the Add Page Numbers to PDF tool afterward.',
+      },
+      {
+        q: 'Is my file uploaded to a server when I delete pages?',
+        a: 'No. The Delete PDF Pages tool processes your file entirely in your browser using client-side JavaScript. Your document never leaves your device.',
+      },
+      {
+        q: 'What if I need to remove most of the pages and keep only a few?',
+        a: 'If you are keeping fewer pages than you are removing, it is usually faster to use the Split PDF tool to extract just the pages you want, rather than clicking through and deleting everything else individually.',
+      },
+    ],
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>

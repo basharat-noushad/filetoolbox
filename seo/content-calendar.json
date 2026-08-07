@@ -225,7 +225,10 @@
       "workingTitle": "How to Delete Pages from a PDF (Remove Any Page Free)",
       "relatedTool": "delete-pdf-pages",
       "category": "PDF Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-delete-pages-from-pdf",
+      "publishedDate": "2026-08-06",
+      "note": "Written by blog pipeline"
     },
     {
       "keyword": "add page numbers to pdf",
