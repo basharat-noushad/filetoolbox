@@ -235,7 +235,10 @@
       "workingTitle": "How to Add Page Numbers to a PDF (Free Online Tool)",
       "relatedTool": "add-page-numbers-pdf",
       "category": "PDF Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-add-page-numbers-to-pdf",
+      "publishedDate": "2026-08-10",
+      "note": "Written by blog pipeline"
     },
     {
       "keyword": "convert svg to png",

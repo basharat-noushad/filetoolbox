@@ -97,6 +97,7 @@ PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image pro
 - https://pdfandimage.com/blog/convert-gif-to-mp4-video
 - https://pdfandimage.com/blog/how-to-make-a-gif-from-a-video
 - https://pdfandimage.com/blog/how-to-delete-pages-from-pdf
+- https://pdfandimage.com/blog/how-to-add-page-numbers-to-pdf
 
 ## Common questions PDF and Image + answers
 
