@@ -242,7 +242,10 @@
       "workingTitle": "How to Convert SVG to PNG at Any Resolution (Free)",
       "relatedTool": "svg-to-png",
       "category": "Image Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-convert-svg-to-png",
+      "publishedDate": "2026-08-13",
+      "note": "Written by blog pipeline — skipped 'add page numbers to pdf', already open as PR #15"
     },
     {
       "keyword": "crop image to square circle",
