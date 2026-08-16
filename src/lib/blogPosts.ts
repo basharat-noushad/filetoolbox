@@ -2537,6 +2537,124 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
+  // ── 24 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-add-page-numbers-to-pdf',
+    title: 'How to Add Page Numbers to a PDF (Free, No Software)',
+    metaTitle: 'How to Add Page Numbers to a PDF for Free (2026 Guide)',
+    metaDescription: 'Add page numbers to a PDF in seconds — free, in your browser. Choose the position and starting number, no software or watermark required.',
+    excerpt: 'A merged report, a long contract, a printed handout — none of them are easy to navigate without page numbers. Here is exactly how to add them to any PDF for free, in your browser.',
+    category: 'PDF Guide',
+    readTime: '4 min read',
+    datePublished: '2026-08-10',
+    dateModified: '2026-08-10',
+    relatedTool: 'add-page-numbers-pdf',
+    relatedTools: ['reorder-pdf-pages', 'add-watermark-pdf', 'merge-pdf'],
+    keywords: ['add page numbers to pdf', 'pdf page numbering online', 'number pdf pages free', 'how to number pages in pdf', 'insert page numbers pdf'],
+    sections: [
+      {
+        paragraphs: [
+          'A PDF without page numbers is fine on screen, but it falls apart the moment someone prints it, references "page 12" in a meeting, or tries to find their place after setting a long report down. Word processors add page numbers automatically, but once a document is exported — or merged from several source files — that numbering is gone or inconsistent. Adding page numbers back into a finished PDF should not require reopening the original file in a desktop editor. A free browser-based tool can stamp every page in seconds, with no software to install and no file uploaded to a server.',
+        ],
+      },
+      {
+        heading: 'How to Add Page Numbers to a PDF — Step by Step',
+        steps: [
+          'Open the Add Page Numbers to PDF tool and click "Select File" or drag your PDF into the upload area.',
+          'Choose where the numbers should appear: bottom center, bottom right, or top center.',
+          'Set the starting number — usually 1, but you can start higher if the PDF continues from another document.',
+          'Preview the result to confirm the position and size look right on your pages.',
+          'Click "Add Page Numbers" to generate the new PDF with numbering applied to every page.',
+          'Download the result. Your original file is untouched — the tool creates a brand new PDF.',
+        ],
+      },
+      {
+        heading: 'Why PDFs Lose Their Page Numbers',
+        paragraphs: [
+          'Page numbers usually disappear or become unreliable for one of a few reasons. A Word or Google Docs file with automatic numbering keeps that numbering only as long as it stays in its native format — once exported to PDF, the numbers are burned in as flat text and cannot be edited or regenerated. If pages are later deleted, reordered, or the document is merged with another file, the printed numbers no longer match the actual page order.',
+          'It is also common to receive scanned documents that never had numbering to begin with — a stack of paper run through a scanner produces a PDF with pages but no reference to where you are in the document. In both cases, the fix is the same: add fresh, sequential numbers directly to the finished PDF.',
+        ],
+      },
+      {
+        heading: 'Choosing a Position for Your Page Numbers',
+        paragraphs: [
+          'Where you place page numbers is mostly a matter of convention, but it does depend on the type of document:',
+        ],
+        bullets: [
+          'Bottom center — the most common choice for reports, contracts, and academic papers. It reads naturally and does not compete with headers or footnotes.',
+          'Bottom right — common in business documents and books, especially when a footer already contains other text (like a document title) on the left.',
+          'Top center — useful for documents that already have a footer in use, such as a signature block or confidentiality notice at the bottom of every page.',
+        ],
+        tip: 'If your PDF already has a footer with a date, filename, or logo, place page numbers on the opposite side or in the header to avoid overlap.',
+      },
+      {
+        heading: 'Numbering a PDF Merged from Multiple Files',
+        paragraphs: [
+          'One of the most common reasons to add page numbers is after combining several PDFs into one — a set of exhibits, a multi-chapter report, or several scanned forms stapled into a single file. Each source document may have had its own numbering (or none at all), so once merged, the page numbers no longer make sense as a whole.',
+          'The fix is to add page numbers after merging, not before. Use the Merge PDF tool first to combine your files in the correct order, then run the combined PDF through the Add Page Numbers tool so every page gets one clean, sequential number from start to finish.',
+        ],
+      },
+      {
+        heading: 'Starting the Count at a Number Other Than 1',
+        paragraphs: [
+          'Not every PDF should start counting at page 1. A chapter that continues from a previous document, an appendix that should read "A-1, A-2..." in spirit (numerically, "101, 102..."), or a section inserted partway through a larger set all call for a custom starting number. Setting the start number lets the printed numbering match where the document actually sits within a larger set, rather than restarting from scratch.',
+        ],
+      },
+      {
+        heading: 'Does Adding Page Numbers Affect the Rest of the Document?',
+        paragraphs: [
+          'No. The existing content, images, and formatting on every page stay exactly as they were — the tool adds a small text stamp to each page without altering anything else. Text remains selectable and searchable, and file size increases only slightly, since a page number is just a few characters of text repeated on each page.',
+          'If you already have page numbers baked into your document from before (say, part of a header exported from Word) and add new ones on top, you will end up with two sets. Check a few pages of the source PDF first — if it already has visible numbering, either skip this step or crop/cover the old numbers before adding new ones.',
+        ],
+      },
+      {
+        heading: 'Page Numbers vs. a Table of Contents',
+        paragraphs: [
+          'Page numbers and a table of contents solve related but different problems. Page numbers tell a reader where they are in the document; a table of contents tells them where to go. A long report benefits from both, but if you only have time for one, page numbers are almost always more useful — they work for every reader, whether they are navigating on screen, printing the document, or referencing a specific page out loud in a meeting.',
+        ],
+      },
+      {
+        heading: 'Common Situations That Call for Page Numbers',
+        paragraphs: [
+          'Page numbering comes up constantly in everyday document work. A few of the most common cases:',
+        ],
+        bullets: [
+          'Printing a long report or manual so readers can keep pages in order if they are separated.',
+          'Preparing a contract or legal document where clauses are referenced by page number.',
+          'Combining scanned forms or exhibits into a single file for a court filing or application.',
+          'Distributing a handout or workbook where a facilitator needs to say "turn to page 6."',
+          'Archiving a multi-source report so every page can be cited unambiguously later.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I add page numbers to a PDF for free?',
+        a: 'Open the Add Page Numbers to PDF tool, upload your file, choose a position and starting number, then click "Add Page Numbers." The tool processes everything in your browser and the new PDF downloads directly — no watermark, no sign-up.',
+      },
+      {
+        q: 'Can I choose where the page numbers appear?',
+        a: 'Yes. You can place numbers at the bottom center, bottom right, or top center of every page, depending on your document\'s existing layout.',
+      },
+      {
+        q: 'Can I start numbering from a page other than 1?',
+        a: 'Yes. Set a custom starting number if your PDF continues from another document or represents a section that should not start counting from page 1.',
+      },
+      {
+        q: 'Will adding page numbers change anything else in my document?',
+        a: 'No. The rest of each page — text, images, and formatting — stays exactly as it was. Only a small page number is added to the position you choose.',
+      },
+      {
+        q: 'What if my PDF already has page numbers?',
+        a: 'Check a few pages first. If numbers are already visible, adding new ones will stack a second number on top. In that case, either skip this step or use a page-editing tool to remove the old numbers before adding new ones.',
+      },
+      {
+        q: 'Is my file uploaded to a server when I add page numbers?',
+        a: 'No. The Add Page Numbers to PDF tool processes your file entirely in your browser using client-side JavaScript. Your document never leaves your device.',
+      },
+    ],
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
