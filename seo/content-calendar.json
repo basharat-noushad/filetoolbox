@@ -252,7 +252,10 @@
       "workingTitle": "How to Crop an Image to a Square (Profile Pictures Done Right)",
       "relatedTool": "crop-image",
       "category": "Image Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-crop-image-to-square",
+      "publishedDate": "2026-08-17",
+      "note": "Written by blog pipeline — skipped 'convert svg to png', already open as PR #16"
     },
     {
       "keyword": "powerpoint to pdf converter",
