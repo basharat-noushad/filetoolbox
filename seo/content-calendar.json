@@ -259,7 +259,10 @@
       "workingTitle": "How to Convert PowerPoint to PDF Without Losing Formatting",
       "relatedTool": "ppt-to-pdf",
       "category": "PDF Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-convert-powerpoint-to-pdf",
+      "publishedDate": "2026-08-20",
+      "note": "Written by blog pipeline — skipped 'convert svg to png' (open PR #16) and 'crop image to square circle' (open PR #17), both already in flight"
     },
     {
       "keyword": "compress multiple images at once",
