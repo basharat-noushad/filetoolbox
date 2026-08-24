@@ -2655,6 +2655,108 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
+  // ── 25 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-compress-multiple-images-at-once',
+    title: 'How to Compress Multiple Images at Once (Batch Compression, Free)',
+    metaTitle: 'How to Compress Multiple Images at Once for Free',
+    metaDescription: 'Compress multiple images at once, free and in your browser. Batch-shrink JPG, PNG, and WebP files and download them all as a ZIP in seconds.',
+    excerpt: 'Compressing photos one at a time does not scale past a handful of files. Here is exactly how to compress multiple images at once, for free, and download the results as a single ZIP.',
+    category: 'Image Guide',
+    readTime: '5 min read',
+    datePublished: '2026-08-24',
+    dateModified: '2026-08-24',
+    relatedTool: 'bulk-image-compressor',
+    relatedTools: ['compress-image', 'resize-image', 'png-to-jpg'],
+    keywords: ['compress multiple images at once', 'bulk image compressor', 'batch compress images free', 'compress images in bulk', 'zip compress photos'],
+    sections: [
+      {
+        paragraphs: [
+          'A single oversized photo is a minor annoyance. A folder of 40 of them — from a product shoot, a wedding gallery, or a batch of screenshots — is a real problem, especially if you need to upload them somewhere with a size limit or just want your website to load faster. Compressing images one at a time through a single-file tool does not scale. What you need is a bulk image compressor: upload a whole batch, compress them all with one setting, and download everything at once as a ZIP.',
+        ],
+      },
+      {
+        heading: 'How to Compress Multiple Images at Once — Step by Step',
+        steps: [
+          'Open the Bulk Image Compressor tool and drag in all the images you want to compress, or click "Select Files" to choose up to 20 at a time.',
+          'Choose a quality level that applies to the whole batch.',
+          'Click "Compress All" — each image is processed entirely in your browser.',
+          'Review the before-and-after file sizes for each image in the results list.',
+          'Click "Download All as ZIP" to get every compressed image in one file, or download individual images if you only need a few.',
+        ],
+      },
+      {
+        heading: 'Why Batch Compression Beats Compressing One at a Time',
+        paragraphs: [
+          'Compressing images individually works fine for one or two files, but the moment you have a folder of ten, twenty, or more, it becomes a repetitive chore — upload, wait, download, repeat. A batch compressor removes that repetition entirely. You set the quality once, upload the whole folder, and every image is processed using the same settings, so the results stay consistent across the set.',
+          'This matters most when the images need to look uniform — a product catalog, a set of blog thumbnails, or a client gallery all benefit from every photo being compressed to a similar quality level, rather than each one being eyeballed separately.',
+        ],
+      },
+      {
+        heading: 'Which Quality Setting Should You Use for a Batch?',
+        paragraphs: [
+          'The right setting depends on what the images are for, but for a mixed batch it is usually safest to pick one setting that works for the "worst case" image in the set — a photo with fine detail or gradients needs a slightly higher quality than a flat-color screenshot to avoid visible artifacts.',
+        ],
+        bullets: [
+          'Web and email use — a quality setting around 70–80% typically cuts file size by half or more with no visible difference at normal viewing sizes.',
+          'Product photography or portfolios — use a higher quality setting (85–95%) to preserve fine detail, since these images are often viewed zoomed in.',
+          'Internal use, thumbnails, or archives where storage matters more than sharpness — a lower setting (50–65%) gets the smallest files.',
+        ],
+        tip: 'If your batch mixes photos and screenshots or graphics, consider compressing them in two separate batches at different quality levels rather than forcing one setting on both.',
+      },
+      {
+        heading: 'What Happens to Different File Formats in a Batch?',
+        paragraphs: [
+          'A bulk compressor typically handles JPG, PNG, and WebP files together in the same batch, but the way each format shrinks is different. JPG files compress the most dramatically since JPG compression is designed around adjustable quality loss. PNG files compress less aggressively because PNG is lossless by design — a bulk PNG compressor mainly optimizes the file\'s internal encoding rather than discarding image data, so the size reduction is smaller but the image stays pixel-identical.',
+          'If your batch is mostly PNG screenshots or graphics and file size is the priority, converting them to JPG or WebP first (using the PNG to JPG tool) before compressing will usually get you a much smaller result than compressing the PNGs directly, as long as the images do not need transparency.',
+        ],
+      },
+      {
+        heading: 'Does Batch Compression Resize the Images Too?',
+        paragraphs: [
+          'No — compression and resizing are two different operations. A batch compressor reduces file size by adjusting image quality and encoding, but keeps the original pixel dimensions of every photo. If your images are also larger than you need in terms of width and height (for example, 4000px-wide camera photos being used at 800px on a website), resizing them down first with the Resize Image tool will shrink file size even further, since fewer total pixels means less data to compress.',
+          'For the smallest possible batch of web-ready images, the most effective order is: resize to the dimensions you actually need, then compress.',
+        ],
+      },
+      {
+        heading: 'Common Situations for Batch Image Compression',
+        bullets: [
+          'Preparing a full product catalog or gallery for a website launch.',
+          'Shrinking a folder of camera photos before uploading them to a portfolio or CMS with a total storage limit.',
+          'Compressing screenshots from a bug report or documentation set before attaching them to an email or ticket.',
+          'Getting an event or wedding photo gallery down to a shareable size for clients.',
+          'Cleaning up a phone\'s camera roll backup before uploading it to cloud storage with limited free space.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How many images can I compress at once?',
+        a: 'The Bulk Image Compressor supports up to 20 images per batch. If you have more, run them through in a few batches — each one still processes and downloads in seconds since everything happens in your browser.',
+      },
+      {
+        q: 'Can I compress JPG, PNG, and WebP files in the same batch?',
+        a: 'Yes. You can mix formats in one upload and the tool compresses each file appropriately. Keep in mind PNG files shrink less than JPG or WebP since PNG compression is lossless by design.',
+      },
+      {
+        q: 'How do I download all the compressed images at once?',
+        a: 'After compression finishes, click "Download All as ZIP" to get every compressed image bundled into a single ZIP file. You can also download individual images from the results list if you only need a few.',
+      },
+      {
+        q: 'Will batch compression make all my images look identical in quality?',
+        a: 'They will all use the same quality setting, but the visual result can vary slightly by image — photos with fine detail or gradients show compression more than flat-color graphics at the same setting. Preview a few results before downloading the full batch if quality is critical.',
+      },
+      {
+        q: 'Should I resize images before or after compressing them in bulk?',
+        a: 'Resize first, then compress. Reducing the pixel dimensions of an oversized image removes far more data than compression alone can, so resizing to the size you actually need before running the batch compressor gets you the smallest possible files.',
+      },
+      {
+        q: 'Are my images uploaded to a server when I compress them in bulk?',
+        a: 'No. The Bulk Image Compressor processes every file entirely in your browser using client-side JavaScript. Your images are never uploaded anywhere, even when compressing a full batch.',
+      },
+    ],
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>

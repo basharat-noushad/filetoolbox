@@ -266,7 +266,10 @@
       "workingTitle": "How to Compress Multiple Images at Once (Batch Compression Free)",
       "relatedTool": "bulk-image-compressor",
       "category": "Image Tips",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-compress-multiple-images-at-once",
+      "publishedDate": "2026-08-24",
+      "note": "Written by blog pipeline — skipped 'convert svg to png' (open PR #16), 'crop image to square circle' (open PR #17), and 'powerpoint to pdf converter' (open PR #18), all already in flight"
     }
   ]
 }
