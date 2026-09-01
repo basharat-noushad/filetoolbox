@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const HOW_TO_STEPS = [
   'Click "Select Files" or drag and drop your PDF files into the upload area.',
-  'Arrange the files in the order you want them merged.',
+  'Select your files in the order you want them merged — they combine in the order you add them.',
   'Click "Merge PDFs" — your combined PDF will download automatically.',
 ]
 

@@ -200,7 +200,7 @@ export default async function BlogPostPage({
               )}
 
               {section.tip && (
-                <div className="bg-brand-50 border-l-4 border-brand-500 rounded-r-lg px-5 py-4 my-5">
+                <div className="bg-brand-50 border border-brand-100 rounded-xl px-5 py-4 my-5">
                   <p className="text-sm text-brand-800 leading-relaxed">
                     <span className="font-semibold">Tip: </span>{section.tip}
                   </p>

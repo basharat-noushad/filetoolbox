@@ -3,8 +3,6 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
-import { unlockPdf } from '@/lib/tools/pdf/unlock'
-
 export function UnlockPdfClient() {
   const [files, setFiles] = useState<File[]>([])
   const [password, setPassword] = useState('')
@@ -18,7 +16,12 @@ export function UnlockPdfClient() {
     setProcessing(true)
     setError(null)
     try {
-      setResult(await unlockPdf(files[0], password))
+      const body = new FormData()
+      body.append('file', files[0])
+      body.append('password', password)
+      const res = await fetch('/api/unlock-pdf', { method: 'POST', body })
+      if (!res.ok) throw new Error(await res.text())
+      setResult(await res.blob())
     } catch {
       setError('Failed to unlock the PDF. Please check that the password is correct and try again.')
     } finally {
@@ -45,7 +48,7 @@ export function UnlockPdfClient() {
           className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
           onKeyDown={e => { if (e.key === 'Enter') handleProcess() }}
         />
-        <p className="text-xs text-gray-400 mt-1">Your password is never sent to any server.</p>
+        <p className="text-xs text-gray-400 mt-1">Your file and password are sent to our secure server to remove the password — processed immediately and never stored.</p>
       </div>
 
       {error && (

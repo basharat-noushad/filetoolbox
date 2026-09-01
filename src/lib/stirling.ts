@@ -14,4 +14,6 @@ export const STIRLING = {
   pdfToXlsx:       '/api/v1/convert/pdf/xlsx',
   pdfToPresentation: '/api/v1/convert/pdf/presentation',
   pdfToPdfa:       '/api/v1/convert/pdf/pdfa',
+  addPassword:     '/api/v1/security/add-password',
+  removePassword:  '/api/v1/security/remove-password',
 } as const

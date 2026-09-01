@@ -31,7 +31,7 @@ export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps
               <div className="flex flex-wrap gap-2 mb-6">
                 {['No registration required', 'Files processed in browser', 'Free forever', '100% secure'].map(badge => (
                   <span key={badge} className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 text-sm rounded-full border border-emerald-200 font-medium">
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                     {badge}

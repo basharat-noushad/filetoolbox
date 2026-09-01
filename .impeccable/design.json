@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-07T12:17:08Z",
+  "title": "Design System: PDF and Image +",
+  "extensions": {
+    "colorMeta": {
+      "ink-indigo": { "role": "primary", "displayName": "Ink Indigo", "canonical": "#4f46e5", "tonalRamp": ["#1e1b4b", "#3730a3", "#4338ca", "#4f46e5", "#6366f1", "#818cf8", "#c7d2fe", "#e0e7ff"] },
+      "ink-indigo-deep": { "role": "primary", "displayName": "Ink Indigo Deep", "canonical": "#1e1b4b", "tonalRamp": ["#0f0d26", "#1e1b4b", "#312e6e", "#433f8f", "#5a53ad", "#7d76c4", "#a9a4dc", "#d6d3f0"] },
+      "ink-indigo-soft": { "role": "primary", "displayName": "Ink Indigo Soft", "canonical": "#6366f1", "tonalRamp": ["#2a2872", "#3730a3", "#4f46e5", "#6366f1", "#818cf8", "#a5b4fc", "#c7d2fe", "#e0e7ff"] },
+      "ink-indigo-hero-accent": { "role": "primary", "displayName": "Ink Indigo Hero Accent", "canonical": "#a5b4fc", "tonalRamp": ["#3730a3", "#4338ca", "#4f46e5", "#6366f1", "#818cf8", "#a5b4fc", "#c7d2fe", "#e0e7ff"] },
+      "signal-emerald": { "role": "secondary", "displayName": "Signal Emerald", "canonical": "#059669", "tonalRamp": ["#022c22", "#064e3b", "#047857", "#059669", "#10b981", "#34d399", "#6ee7b7", "#d1fae5"] },
+      "signal-emerald-soft": { "role": "secondary", "displayName": "Signal Emerald Soft", "canonical": "#10b981", "tonalRamp": ["#064e3b", "#047857", "#059669", "#10b981", "#34d399", "#6ee7b7", "#a7f3d0", "#ecfdf5"] },
+      "neutral-canvas": { "role": "neutral", "displayName": "Neutral Canvas", "canonical": "#f5f3ff", "tonalRamp": ["#e5e0ff", "#eee9ff", "#f5f3ff", "#f8f6ff", "#faf9ff", "#fcfbff", "#fefeff", "#ffffff"] },
+      "neutral-surface": { "role": "neutral", "displayName": "Neutral Surface", "canonical": "#ffffff", "tonalRamp": ["#e5e7eb", "#eceef1", "#f3f4f6", "#f9fafb", "#fbfbfc", "#fdfdfe", "#ffffff", "#ffffff"] },
+      "neutral-ink": { "role": "neutral", "displayName": "Neutral Ink", "canonical": "#111827", "tonalRamp": ["#030712", "#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#d1d5db"] },
+      "neutral-body": { "role": "neutral", "displayName": "Neutral Body", "canonical": "#4b5563", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#d1d5db", "#e5e7eb"] },
+      "neutral-muted": { "role": "neutral", "displayName": "Neutral Muted", "canonical": "#6b7280", "tonalRamp": ["#374151", "#4b5563", "#6b7280", "#9ca3af", "#b0b7c3", "#c8cdd6", "#dfe2e8", "#f3f4f6"] },
+      "neutral-border": { "role": "neutral", "displayName": "Neutral Border", "canonical": "#e5e7eb", "tonalRamp": ["#9ca3af", "#b0b7c1", "#c4cad3", "#d7dce2", "#e5e7eb", "#eef0f2", "#f5f6f7", "#fafafb"] },
+      "neutral-border-tinted": { "role": "neutral", "displayName": "Neutral Border Tinted", "canonical": "#e0e7ff", "tonalRamp": ["#818cf8", "#a5b4fc", "#c7d2fe", "#dbe2ff", "#e0e7ff", "#eaeeff", "#f2f4ff", "#f8f9ff"] },
+      "destructive": { "role": "semantic", "displayName": "Destructive Red", "canonical": "#dc2626", "tonalRamp": ["#450a0a", "#7f1d1d", "#991b1b", "#b91c1c", "#dc2626", "#ef4444", "#f87171", "#fca5a5"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1 only, two lines max." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles (tool groups, How To, FAQ)." },
+      "title": { "displayName": "Title", "purpose": "Tool-tile names, card titles, FAQ questions." },
+      "body": { "displayName": "Body", "purpose": "Descriptions and paragraph copy." },
+      "label": { "displayName": "Label", "purpose": "Badges, meta captions, nav and footer text." }
+    },
+    "shadows": [
+      { "name": "lane-hover-glow-indigo", "value": "0 4px 12px -2px rgba(99, 102, 241, 0.1)", "purpose": "Hover feedback on PDF-lane tool tiles; pairs with a border-color shift to brand-400." },
+      { "name": "lane-hover-glow-emerald", "value": "0 4px 12px -2px rgba(16, 185, 129, 0.1)", "purpose": "Hover feedback on Image-lane tool tiles; pairs with a border-color shift to emerald-400." }
+    ],
+    "motion": [
+      { "name": "transition-standard", "value": "all 0.2s ease", "purpose": "Default hover/focus transition on tiles, buttons, and nav links (Tailwind's default transition-colors/transition-all timing)." },
+      { "name": "press-nudge", "value": "translateY(1px)", "purpose": "Button active-press feedback; no scale transform used anywhere in the system." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA button — marketing pages and in-app actions.",
+      "html": "<button class=\"ds-btn-primary\">Browse All Tools</button>",
+      "css": ".ds-btn-primary { background: #4f46e5; color: #ffffff; padding: 12px 24px; border-radius: 12px; font-weight: 600; font-size: 0.875rem; font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; border: none; transition: background 0.2s ease, transform 0.1s ease; } .ds-btn-primary:hover { background: #4338ca; } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5); } .ds-btn-primary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "PDF Tool Tile",
+      "kind": "card",
+      "refersTo": "tool-tile-pdf",
+      "description": "Homepage grid tile for a PDF-category tool — indigo lane.",
+      "html": "<a href=\"#\" class=\"ds-tile ds-tile-pdf\"><span class=\"ds-tile-icon\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"/></svg></span><span class=\"ds-tile-label\">Merge PDF</span></a>",
+      "css": ".ds-tile { display: flex; flex-direction: column; align-items: center; text-align: center; background: #ffffff; border: 1px solid #e0e7ff; border-radius: 17px; padding: 16px; text-decoration: none; transition: border-color 0.2s ease, box-shadow 0.2s ease; } .ds-tile-pdf:hover { border-color: #818cf8; box-shadow: 0 4px 12px -2px rgba(99, 102, 241, 0.1); } .ds-tile-icon { width: 40px; height: 40px; border-radius: 12px; background: #eef2ff; color: #4f46e5; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; } .ds-tile-label { font-size: 0.875rem; font-weight: 600; color: #1f2937; font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }"
+    },
+    {
+      "name": "Image Tool Tile",
+      "kind": "card",
+      "refersTo": "tool-tile-image",
+      "description": "Homepage grid tile for an Image-category tool — emerald lane.",
+      "html": "<a href=\"#\" class=\"ds-tile ds-tile-image\"><span class=\"ds-tile-icon\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\"/></svg></span><span class=\"ds-tile-label\">Compress Image</span></a>",
+      "css": ".ds-tile-image { display: flex; flex-direction: column; align-items: center; text-align: center; background: #ffffff; border: 1px solid #d1fae5; border-radius: 17px; padding: 16px; text-decoration: none; transition: border-color 0.2s ease, box-shadow 0.2s ease; } .ds-tile-image:hover { border-color: #34d399; box-shadow: 0 4px 12px -2px rgba(16, 185, 129, 0.1); } .ds-tile-image .ds-tile-icon { width: 40px; height: 40px; border-radius: 12px; background: #ecfdf5; color: #059669; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; } .ds-tile-image .ds-tile-label { font-size: 0.875rem; font-weight: 600; color: #1f2937; font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }"
+    },
+    {
+      "name": "Trust Badge",
+      "kind": "chip",
+      "refersTo": "badge-pill",
+      "description": "Pill badge used for trust signals (\"No registration required\", etc.) — always emerald regardless of page lane.",
+      "html": "<span class=\"ds-badge\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 13l4 4L19 7\"/></svg>No registration required</span>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }"
+    },
+    {
+      "name": "File Dropzone",
+      "kind": "input",
+      "refersTo": "dropzone",
+      "description": "Signature file-upload target — large dashed border, centered content, lane-tinted on drag-over.",
+      "html": "<div class=\"ds-dropzone\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 16V4m0 0L8 8m4-4l4 4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2\"/></svg><p class=\"ds-dropzone-label\">Drag & drop your file here</p><p class=\"ds-dropzone-sub\">or click to browse</p></div>",
+      "css": ".ds-dropzone { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 40px; border: 2px dashed #c7d2fe; border-radius: 17px; color: #6b7280; text-align: center; transition: border-color 0.2s ease, background 0.2s ease; } .ds-dropzone:hover, .ds-dropzone.drag-active { border-color: #6366f1; background: #eef2ff; } .ds-dropzone-label { font-size: 1rem; font-weight: 600; color: #111827; } .ds-dropzone-sub { font-size: 0.875rem; color: #6b7280; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Two-Lane Workshop",
+    "overview": "PDF and Image + is a calm, trustworthy utility, not a flashy product — the design has to earn the trust of someone about to drop a contract or ID scan into a browser tab. Every surface is flat: white or near-white panels sit on a faint indigo-tinted canvas, separated by hairline borders and tonal rings rather than drop shadows. The one deliberate piece of theater is a two-lane color system — indigo for every PDF tool, emerald for every image tool — carried from the homepage grid down to the logomark itself (two small rectangles, indigo and emerald, side by side). Nothing else competes for saturation: a deep indigo-900 hero and a couple of emerald checkmarks are the only concentrated color in an otherwise white, quiet interface. The voice is efficient and unpretentious: bold, tight headlines state the job to be done (\"Merge PDF\"), body copy stays short and literal, and trust signals (no sign-up, no watermark, no upload) are repeated as plain badges rather than marketing copy. Nothing here should read as decorative — every color, radius, and piece of motion answers \"which lane am I in\" or \"did that click work.\"",
+    "keyCharacteristics": [
+      "Two-lane color coding: indigo = PDF, emerald = Image, applied consistently to icons, tile borders, hover glow, and badges.",
+      "Flat surfaces by default; elevation only appears as a tinted glow on hover, never as ambient shadow at rest.",
+      "One saturated dark section (indigo-900 hero / CTA band) bookending otherwise white, quiet pages.",
+      "Generous, consistent corner rounding (17px tiles, 12px buttons, full pills) — no sharp corners anywhere.",
+      "Plus Jakarta Sans throughout; no secondary display face."
+    ],
+    "rules": [
+      { "name": "The One Lane Rule", "body": "A component is either in the indigo lane or the emerald lane, never both. If it represents a PDF tool or PDF-category content, every accent on it — icon, border, hover glow, badge — is indigo. Image-category content gets the emerald equivalent, token-for-token. Don't mix lanes within one component to imply \"extra emphasis.\"", "section": "colors" },
+      { "name": "The Flat Canvas Rule", "body": "Only two surface colors exist in normal use: neutral-canvas behind everything, neutral-surface (white) for every actual content panel. Don't introduce a third background tone or a gradient panel; depth comes from the hover-glow and border system in Elevation, not from additional fills.", "section": "colors" },
+      { "name": "The One Voice Rule", "body": "Every weight jump is Plus Jakarta Sans at a different size/weight, never a different family. A second typeface anywhere in this system is a regression, not an enhancement.", "section": "typography" },
+      { "name": "The Hover-Only Shadow Rule", "body": "No element ships a resting shadow. If something needs to look elevated at rest, give it a tonal border or ring, not a shadow — shadows are reserved as a hover/interaction signal, and using one at rest would blunt that signal everywhere else.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do assign every PDF-related element Ink Indigo and every Image-related element Signal Emerald, token-for-token, per the One Lane Rule.",
+      "Do keep new panels flat with a tonal border at rest; add the lane-tinted glow shadow only as a hover/interactive response.",
+      "Do use Plus Jakarta Sans at every weight; rely on size/weight/color for hierarchy, not a second typeface.",
+      "Do keep the indigo-900 dark surface rare and bookend-only (hero, final CTA) so it stays a landmark, not wallpaper.",
+      "Do round every new UI element to one of the established steps (12px controls, 17px panels, full pills) — never an arbitrary radius."
+    ],
+    "donts": [
+      "Don't add a resting box-shadow to a card, tile, or button; shadows exist only on hover in this system.",
+      "Don't blend indigo and emerald accents on the same component to signal \"more important\" — introduce a third named color instead if a genuinely new category is needed, and confirm it with the user first.",
+      "Don't introduce a third background fill between neutral-canvas and white neutral-surface, and don't use a gradient panel anywhere — the calm, flat-canvas feel is load-bearing for a tool that asks people to trust it with private files.",
+      "Don't add a watermark, paywall visual, or artificial-scarcity pattern to any tool output or CTA — this is a confirmed product/brand commitment, not just a visual preference."
+    ]
+  }
+}

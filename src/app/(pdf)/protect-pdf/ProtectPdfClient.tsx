@@ -18,14 +18,14 @@ export function ProtectPdfClient() {
     if (password !== confirm) { setError('Passwords do not match.'); return }
     setProcessing(true); setError(null)
     try {
-      const { PDFDocument } = await import('pdf-lib')
-      const pdf = await PDFDocument.load(await files[0].arrayBuffer())
-      void password
-      const saved = await pdf.save()
-      const blob = new Blob([saved.buffer as ArrayBuffer], { type: 'application/pdf' })
-      setResult(blob)
+      const body = new FormData()
+      body.append('file', files[0])
+      body.append('password', password)
+      const res = await fetch('/api/protect-pdf', { method: 'POST', body })
+      if (!res.ok) throw new Error(await res.text())
+      setResult(await res.blob())
     } catch {
-      setError('Failed to process PDF. Please check your file and try again.')
+      setError('Failed to protect PDF. Please check your file and try again.')
     } finally {
       setProcessing(false)
     }
@@ -61,8 +61,8 @@ export function ProtectPdfClient() {
           />
         </div>
       </div>
-      <p className="text-xs text-gray-500 bg-blue-50 border border-blue-100 rounded-lg px-3 py-2">
-        Note: This applies basic PDF password protection via pdf-lib. For bank-grade encryption, use a dedicated server-side solution.
+      <p className="text-xs text-brand-700 bg-brand-50 border border-brand-100 rounded-lg px-3 py-2">
+        Note: Unlike most tools on this site, password protection requires sending your file to our secure server for encryption — it is processed immediately and never stored.
       </p>
       {error && <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2">{error}</p>}
       <Button onClick={handleProtect} disabled={files.length === 0 || processing} className="w-full cursor-pointer" size="lg">

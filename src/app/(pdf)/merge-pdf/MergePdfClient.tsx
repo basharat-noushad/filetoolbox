@@ -24,12 +24,13 @@ export function MergePdfClient() {
   }
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6">
+    <div className="bg-white border border-brand-100 rounded-xl p-6">
       <FileDropzone
         accept={{ 'application/pdf': ['.pdf'] }} multiple maxFiles={20}
         onFilesSelected={setFiles}
         label="Drag & drop PDF files here"
         sublabel="Select multiple files — max 50MB each"
+        privacyNote="Stays on your device — merging happens entirely in your browser, nothing is uploaded"
       />
       {error && (
         <p className="mt-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2">{error}</p>
