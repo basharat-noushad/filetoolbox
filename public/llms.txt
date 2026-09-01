@@ -99,6 +99,7 @@ PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image pro
 - https://pdfandimage.com/blog/how-to-delete-pages-from-pdf
 - https://pdfandimage.com/blog/how-to-add-page-numbers-to-pdf
 - https://pdfandimage.com/blog/how-to-convert-powerpoint-to-pdf
+- https://pdfandimage.com/blog/how-to-crop-image-to-square
 
 ## Common questions PDF and Image + answers
 

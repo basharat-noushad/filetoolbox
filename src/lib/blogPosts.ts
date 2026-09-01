@@ -2764,6 +2764,95 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
+  // ── 26 ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-crop-image-to-square',
+    title: 'How to Crop an Image to a Square (Profile Pictures Done Right)',
+    metaTitle: 'How to Crop an Image to a Square (Free Online Tool)',
+    metaDescription: 'Crop any photo to a perfect square for free in your browser. Step-by-step guide plus tips for profile pictures, avatars, and circular crop previews.',
+    excerpt: 'Profile pictures, avatars, and app icons almost always need a square photo — but most cameras shoot rectangles. Here is exactly how to crop an image to a square for free, with tips for getting the framing right.',
+    category: 'Image Guide',
+    readTime: '4 min read',
+    datePublished: '2026-08-17',
+    dateModified: '2026-08-17',
+    relatedTool: 'crop-image',
+    relatedTools: ['resize-image', 'compress-image', 'rotate-image'],
+    keywords: ['crop image to square', 'crop image to circle', 'square profile picture', 'how to crop a photo to square', 'crop photo online free'],
+    sections: [
+      {
+        paragraphs: [
+          'Most photos come out of a phone or camera as a rectangle, but nearly every profile picture field — LinkedIn, Instagram, Slack, Zoom, Google, Discord — expects a square. Upload a rectangular photo to one of these and the platform will crop it automatically, usually cutting off exactly the part you did not want removed: half a face, the top of someone\'s head, or an important detail on the side. Cropping the image to a square yourself first means you control exactly what stays in frame.',
+        ],
+      },
+      {
+        heading: 'How to Crop an Image to a Square — Step by Step',
+        steps: [
+          'Open the Crop Image tool and click "Select File" or drag your photo into the upload area.',
+          'Choose the 1:1 (square) aspect ratio preset from the ratio options.',
+          'Drag the crop box to position it over the part of the image you want to keep — center faces slightly above the middle for profile pictures.',
+          'Resize the crop box by dragging its corners if you need to include more or less of the surrounding image.',
+          'Click "Crop" to apply, then download the square image.',
+        ],
+      },
+      {
+        heading: 'Cropping to a Square vs. Cropping to a Circle',
+        paragraphs: [
+          'Most platforms that display a "circular" profile picture — Slack, Zoom, Google, Discord — actually still store and expect a square image file underneath. The platform applies the circular mask automatically when it displays your photo; you almost never upload an actual circle-shaped file. This means the right move is always to crop to a square, not to try to export a literal circle cutout.',
+          'The one thing to watch for: because the corners of a square get hidden once a circular mask is applied, keep the subject centered and leave a little breathing room around the edges. A tightly cropped square that fills the frame edge-to-edge can end up with the top of the head or shoulders clipped once it is rounded off.',
+        ],
+      },
+      {
+        heading: 'Framing Tips for Profile Pictures',
+        bullets: [
+          'Center the face slightly above the vertical middle of the square — profile pictures are almost always viewed small, and a face centered too low looks cropped at the chin.',
+          'Leave some space above the head rather than cropping tight to the hairline — this avoids an awkward, cramped look at small sizes.',
+          'Avoid busy backgrounds when possible; at thumbnail size (many avatars render under 100px), background clutter reads as visual noise rather than context.',
+          'If the original photo is landscape and the subject is off to one side, crop around the subject rather than the center of the frame — the square tool lets you drag the crop box anywhere, not just the middle.',
+        ],
+        tip: 'When in doubt, zoom out slightly rather than in. It is easy to crop a square image tighter later; you cannot add back detail that got cut off the first time.',
+      },
+      {
+        heading: 'What Size Should a Square Profile Picture Be?',
+        paragraphs: [
+          'Most platforms accept anywhere from 200×200 to 1000×1000 pixels for profile pictures and will resize automatically on upload, but starting with a reasonably large square avoids the photo looking soft after the platform\'s own compression. A safe target is 512×512 pixels — large enough to look sharp on high-resolution displays, small enough to upload instantly.',
+          'If your cropped square comes out larger or smaller than you need, use the Resize Image tool afterward to hit an exact pixel dimension without affecting the crop you already chose.',
+        ],
+      },
+      {
+        heading: 'Does Cropping Reduce Image Quality?',
+        paragraphs: [
+          'No — cropping only removes pixels outside the selected area; it does not resample or recompress the pixels that remain. The cropped region keeps its original resolution and detail. Quality loss during this workflow usually comes from a separate step, like heavy JPG compression on export — use the Compress Image tool afterward only if file size is a concern, and keep the quality setting high for a photo that will be displayed at profile-picture size.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I crop a photo to a square for free?',
+        a: 'Use the Crop Image tool on this page. Upload your photo, select the 1:1 square aspect ratio, position the crop box over the part of the image you want to keep, and click "Crop." The tool works entirely in your browser and is free with no watermark.',
+      },
+      {
+        q: 'How do I make a circular profile picture?',
+        a: 'Crop the image to a square first — platforms like Slack, Zoom, and Google apply the circular mask automatically once you upload a square image. You do not need to export an actual circle-shaped file.',
+      },
+      {
+        q: 'What is the best size for a square profile picture?',
+        a: '512×512 pixels is a safe default — sharp enough for high-resolution displays without being unnecessarily large. Most platforms accept anywhere from 200×200 up to 1000×1000 and will resize automatically.',
+      },
+      {
+        q: 'Why does my profile picture look cropped weirdly after uploading?',
+        a: 'If you upload a rectangular photo directly, the platform crops it to a square automatically, often cutting off the top of the head or the sides of the frame. Crop the image to a square yourself first so you control exactly what stays visible.',
+      },
+      {
+        q: 'Does cropping an image reduce its quality?',
+        a: 'No. Cropping only removes the pixels outside the selected area — the pixels that remain keep their original resolution and detail. It does not resample or recompress the image.',
+      },
+      {
+        q: 'Is my photo uploaded to a server when I crop it?',
+        a: 'No. The Crop Image tool processes your photo entirely in your browser. Your image is never uploaded or stored anywhere.',
+      },
+    ],
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
