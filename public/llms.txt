@@ -101,6 +101,7 @@ PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image pro
 - https://pdfandimage.com/blog/how-to-convert-powerpoint-to-pdf
 - https://pdfandimage.com/blog/how-to-crop-image-to-square
 - https://pdfandimage.com/blog/how-to-compress-multiple-images-at-once
+- https://pdfandimage.com/blog/convert-svg-to-png
 
 ## Common questions PDF and Image + answers
 
