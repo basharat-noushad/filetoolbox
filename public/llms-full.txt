@@ -4,7 +4,7 @@ This document is intended for AI language model crawlers and indexing systems.
 It provides comprehensive, citation-ready information about pdfandimage.com.
 
 Source: https://pdfandimage.com/llms-full.txt
-Last updated: 2026-08-20
+Last updated: 2026-08-24
 
 ---
 
@@ -256,3 +256,4 @@ Converts raster PNG images to SVG vector format using Potrace. Server-side.
 | How to Add Page Numbers to a PDF (Free, No Software) | https://pdfandimage.com/blog/how-to-add-page-numbers-to-pdf |
 | How to Convert PowerPoint to PDF Without Losing Formatting | https://pdfandimage.com/blog/how-to-convert-powerpoint-to-pdf |
 | How to Crop an Image to a Square (Profile Pictures Done Right) | https://pdfandimage.com/blog/how-to-crop-image-to-square |
+| How to Compress Multiple Images at Once (Batch Compression, Free) | https://pdfandimage.com/blog/how-to-compress-multiple-images-at-once |
