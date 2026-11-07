@@ -35,23 +35,80 @@ export function hasMagic(b: Uint8Array, magic: Magic): boolean {
 }
 
 // ponytail: in-memory fixed window, per-instance only on serverless (each lambda has its own Map,
-// cold starts reset it). Upgrade path: Vercel WAF rate-limit rule or Upstash Redis.
+// cold starts reset it). Used when Upstash Redis (KV_REST_API_URL/TOKEN) is not configured or errors.
+// Upgrade path without Redis: Vercel WAF rate-limit rule.
 const buckets = new Map<string, { count: number; reset: number }>()
-const WINDOW_MS = 60 * 60 * 1000
+const HOUR_MS = 60 * 60 * 1000
+const DAY_MS = 24 * HOUR_MS
 
 export function clientIp(request: Request): string {
   const xff = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
   return xff || request.headers.get('x-real-ip')?.trim() || 'unknown'
 }
 
-/** Returns seconds until the window resets if `key` is over `max`, else null. `consume` records a hit. */
-export function rateLimit(key: string, max: number, consume: boolean, now = Date.now()): number | null {
+/** In-memory limiter. Returns seconds until the window resets if `key` is over `max`, else null. `consume` records a hit. */
+export function rateLimit(key: string, max: number, consume: boolean, windowMs = HOUR_MS, now = Date.now()): number | null {
   if (buckets.size > 10_000) for (const [k, v] of buckets) if (v.reset <= now) buckets.delete(k)
   let b = buckets.get(key)
-  if (!b || b.reset <= now) { b = { count: 0, reset: now + WINDOW_MS }; buckets.set(key, b) }
+  if (!b || b.reset <= now) { b = { count: 0, reset: now + windowMs }; buckets.set(key, b) }
   if (b.count >= max) return Math.max(1, Math.ceil((b.reset - now) / 1000))
   if (consume) b.count++
   return null
+}
+
+// ── Optional shared store: Upstash Redis REST API (Vercel Marketplace "KV" integration) ──
+let kvWarned = false
+
+/** Runs a pipeline on Upstash Redis. Returns null when not configured or on any error (callers fail open). */
+export async function kv(commands: (string | number)[][]): Promise<unknown[] | null> {
+  const url = process.env.KV_REST_API_URL, token = process.env.KV_REST_API_TOKEN
+  if (!url || !token) return null
+  try {
+    const res = await fetch(`${url.replace(/\/+$/, '')}/pipeline`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify(commands),
+      cache: 'no-store',
+      signal: AbortSignal.timeout(3000),
+    })
+    if (!res.ok) throw new Error(`status ${res.status}`)
+    const out = await res.json() as { result?: unknown; error?: string }[]
+    if (!Array.isArray(out) || out.some(r => r.error)) throw new Error('command error')
+    return out.map(r => r.result)
+  } catch (e) {
+    if (!kvWarned) {
+      kvWarned = true
+      console.error(`[kv] Redis unavailable, falling back to in-memory limits (${e instanceof Error ? e.message.slice(0, 60) : 'error'})`)
+    }
+    return null
+  }
+}
+
+/** Shared (Redis) limiter with in-memory fallback. Same contract as rateLimit. */
+async function limit(key: string, max: number, consume: boolean, windowMs: number): Promise<number | null> {
+  const k = `rl:${key}`
+  const r = await kv(consume
+    ? [['SET', k, 0, 'PX', windowMs, 'NX'], ['INCR', k], ['PTTL', k]]
+    : [['GET', k], ['PTTL', k]])
+  if (!r) return rateLimit(key, max, consume, windowMs)
+  const count = Number(r[consume ? 1 : 0] ?? 0)
+  const ttl = Number(r[consume ? 2 : 1])
+  const over = consume ? count > max : count >= max
+  return over ? Math.max(1, Math.ceil((ttl > 0 ? ttl : windowMs) / 1000)) : null
+}
+
+const monthKey = (prefix: string) => `${prefix}:${new Date().toISOString().slice(0, 7)}` // UTC YYYY-MM
+
+/** True if the global monthly counter has reached `max`. Without Redis there is no global counter (false). */
+export async function monthlyCapReached(prefix: string, max: number): Promise<boolean> {
+  const r = await kv([['GET', monthKey(prefix)]])
+  return r ? Number(r[0] ?? 0) >= max : false
+}
+
+/** Increments the global monthly counter (no-op without Redis). */
+export async function countMonthly(prefix: string): Promise<void> {
+  const k = monthKey(prefix)
+  await kv([['INCR', k], ['EXPIRE', k, 40 * 24 * 60 * 60]])
 }
 
 const text = (body: string, status: number, headers?: HeadersInit) => new Response(body, { status, headers })
@@ -70,17 +127,17 @@ export interface GuardedUpload {
  */
 export async function guardUpload(
   request: Request,
-  opts: { exts: string[]; bucket: string; perHour: number },
+  opts: { exts: string[]; bucket: string } & ({ perHour: number } | { perDay: number }),
 ): Promise<GuardedUpload | Response> {
   const key = `${opts.bucket}:${clientIp(request)}`
-  const tooMany = () => {
-    const retry = rateLimit(key, opts.perHour, false)
-    return retry === null ? null : text(
-      `Too many requests. Please try again in ${Math.ceil(retry / 60)} minute(s).`, 429,
-      { 'Retry-After': String(retry) },
-    )
+  const [max, windowMs] = 'perDay' in opts ? [opts.perDay, DAY_MS] : [opts.perHour, HOUR_MS]
+  const tooMany = async (consume: boolean) => {
+    const retry = await limit(key, max, consume, windowMs)
+    if (retry === null) return null
+    const wait = retry >= 3600 ? `${Math.ceil(retry / 3600)} hour(s)` : `${Math.ceil(retry / 60)} minute(s)`
+    return text(`Too many requests. Please try again in ${wait}.`, 429, { 'Retry-After': String(retry) })
   }
-  const limited = tooMany()
+  const limited = await tooMany(false)
   if (limited) return limited
 
   const tooLarge = () => text('File is too large. The maximum size for this tool is 4 MB.', 413)
@@ -101,9 +158,8 @@ export async function guardUpload(
   const bytes = new Uint8Array(await file.arrayBuffer())
   if (!hasMagic(bytes, type.magic)) return text(`This file does not look like a valid .${ext} file.`, 415)
 
-  const limitedNow = tooMany() // re-check: concurrent requests may have filled the window meanwhile
+  const limitedNow = await tooMany(true) // re-check + record: concurrent requests may have filled the window meanwhile
   if (limitedNow) return limitedNow
-  rateLimit(key, opts.perHour, true)
 
   return { form, name: file.name, mime: type.mime, blob: new Blob([bytes], { type: type.mime }) }
 }

@@ -1,21 +1,12 @@
-import { guardUpload, upstreamError } from '@/lib/apiGuard'
-import { stirlingFetch, stirlingUrl, STIRLING, STIRLING_LIMIT } from '@/lib/stirling'
+import { adobeRoute } from '@/lib/adobe'
+
+export const maxDuration = 60
 
 export async function POST(request: Request) {
-  if (!process.env.STIRLING_URL) return new Response('Conversion service not configured.', { status: 503 })
-  const upload = await guardUpload(request, { exts: ['pptx', 'ppt'], ...STIRLING_LIMIT })
-  if (upload instanceof Response) return upload
-
-  const body = new FormData()
-  body.append('fileInput', upload.blob, upload.name)
-
-  const res = await stirlingFetch(stirlingUrl(STIRLING.fileToPdf), body)
-  if (!res.ok) return upstreamError('ppt-to-pdf', res)
-
-  return new Response(await res.arrayBuffer(), {
-    headers: {
-      'Content-Type': 'application/pdf',
-      'Content-Disposition': 'attachment; filename="converted.pdf"',
-    },
+  return adobeRoute(request, {
+    exts: ['pptx', 'ppt'],
+    op: 'createpdf',
+    contentType: 'application/pdf',
+    filename: 'converted.pdf',
   })
 }

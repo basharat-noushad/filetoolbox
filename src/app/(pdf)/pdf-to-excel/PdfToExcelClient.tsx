@@ -17,8 +17,8 @@ export function PdfToExcelClient() {
       const formData = new FormData()
       formData.append('file', files[0])
       const res = await fetch('/api/pdf-to-excel', { method: 'POST', body: formData })
-      if (res.status === 422) throw new Error('No table data found in this PDF. Try a PDF with tables.')
-      if (!res.ok) throw new Error('Conversion failed. Please try again.')
+      // Statuses below carry a plain-text message written by our own API route.
+      if (!res.ok) throw new Error([413, 415, 422, 429, 503, 504].includes(res.status) && (await res.text()).slice(0, 300) || 'Conversion failed. Please try again.')
       setResult(await res.blob())
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An unexpected error occurred.')
@@ -31,7 +31,7 @@ export function PdfToExcelClient() {
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <FileDropzone maxSize={4_000_000}
         accept={{ 'application/pdf': ['.pdf'] }}
-        onFilesSelected={setFiles}
+        onFilesSelected={f => { setFiles(f); setResult(null); setError(null) }}
         label="Drag & drop your PDF here"
         sublabel="Best results with PDFs containing tables — max 4MB"
       />
