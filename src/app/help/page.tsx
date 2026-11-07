@@ -1,10 +1,11 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com'
 
-export const metadata: Metadata = {
-  title: 'Help Centre — PDF and Image + FAQ & Support',
+export const metadata: Metadata = withSocialMetadata({
+  title: 'Help Centre — FAQ & Support',
   description: 'Find answers to common questions about PDF and Image + tools. Learn about file formats, browser support, file size limits, privacy, and more.',
   keywords: ['pdf tool help', 'pdf and image faq', 'how to merge pdf', 'how to compress image online', 'pdf tool support', 'image converter help'],
   alternates: { canonical: `${SITE_URL}/help` },
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     description: 'Answers to common questions about our free PDF and image tools.',
     url: `${SITE_URL}/help`,
   },
-}
+}, '/help')
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -32,7 +33,7 @@ const faqSchema = {
       name: 'Do my files get uploaded to your servers?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For most tools, no. Processing happens entirely in your browser — your files never leave your device. A small number of tools (PDF to Word, Word to PDF, PDF to Excel, PDF to PowerPoint) require server-side processing. In those cases, your file is sent over HTTPS, processed immediately, and never stored.',
+        text: "Most tools process files locally. Tools labeled Server processing send the selected file to a processing service. Check the tool notice and privacy policy before submitting sensitive files.",
       },
     },
     {
@@ -91,15 +92,15 @@ const SECTIONS: { heading: string; faqs: FAQ[] }[] = [
     faqs: [
       {
         q: 'Do my files get uploaded to your servers?',
-        a: 'For most tools, no — processing happens entirely in your browser. A small number of conversion tools (PDF to Word, Word to PDF, PDF to Excel, PDF to PowerPoint) require server-side processing. In those cases, your file is sent over HTTPS, processed immediately, and never stored or logged.',
+        a: "Most tools process files locally. Tools labeled Server processing send the selected file to a processing service. Check the tool notice and privacy policy before submitting sensitive files.",
       },
       {
         q: 'Can you see the contents of my files?',
-        a: 'No. Browser-based tools never send your file anywhere. For server-side tools, your file is handled automatically by software and is never viewed by any person.',
+        a: "Most tools process files locally. Tools labeled Server processing send the selected file to a processing service. Check the tool notice and privacy policy before submitting sensitive files.",
       },
       {
         q: 'How long do you keep my files?',
-        a: 'We do not store files. Browser-side tools never leave your device. Server-side tools delete your file from memory immediately after returning the result to you.',
+        a: "Most tools process files locally. Tools labeled Server processing send the selected file to a processing service. Check the tool notice and privacy policy before submitting sensitive files.",
       },
       {
         q: 'Is it safe to process confidential documents?',

@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
-import { addWatermarkToPdf } from '@/lib/tools/pdf/watermark'
 
 export function AddWatermarkPdfClient() {
   const [files, setFiles] = useState<File[]>([])
@@ -21,6 +20,7 @@ export function AddWatermarkPdfClient() {
     setProcessing(true)
     setError(null)
     try {
+      const { addWatermarkToPdf } = await import('@/lib/tools/pdf/watermark')
       setResult(await addWatermarkToPdf(files[0], watermarkText.trim(), { opacity, fontSize, rotation }))
     } catch {
       setError('An error occurred while adding the watermark. Please check your file and try again.')
@@ -88,7 +88,7 @@ export function AddWatermarkPdfClient() {
               min={-180}
               max={180}
               value={rotation}
-              onChange={e => setRotation(parseInt(e.target.value, 10) || 45)}
+              onChange={e => setRotation(Number(e.target.value))}
               className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
             />
           </div>

@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { PdfToWordClient } from './PdfToWordClient'
 const tool = getToolBySlug('pdf-to-word')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'PDF to Word Online Free — Convert PDF to DOCX',
     description: 'Convert PDF files to editable Word documents (.docx) online for free. No registration, no watermarks. Fast and accurate conversion.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert PDF files to editable Word documents (.docx) online for free. No registration, no watermarks. Fast and accurate conversion.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/pdf-to-word')
 }
 
 const HOW_TO_STEPS = [
@@ -31,8 +32,9 @@ const HOW_TO_STEPS = [
 const FAQS = [
   { q: 'How accurate is the PDF to Word conversion?', a: 'For text-based PDFs, conversion is highly accurate. Scanned PDFs require OCR and may have lower accuracy.' },
   { q: 'What Word format does the output use?', a: 'The converted file is in .docx format, compatible with Microsoft Word, Google Docs, LibreOffice, and all modern word processors.' },
-  { q: 'Is there a page limit for conversion?', a: 'No page limit. However, very large PDFs may take longer to process.' },
-  { q: 'Will my formatting be preserved?', a: 'Basic formatting like paragraphs, headings, and tables is preserved. Complex layouts may need minor adjustments.' },
+  { q: 'What are the conversion limits?', a: 'The file picker accepts one PDF up to 4 MB. The configured server may impose additional size or processing-time limits.' },
+  { q: 'Will my formatting be preserved?', a: 'Review tables, columns, fonts and page breaks after conversion. Complex layouts can need manual reconstruction.' },
+  { q: 'Is my PDF uploaded for conversion?', a: 'Yes. PDF to Word sends your selected file to a processing service. Review the privacy policy before submitting sensitive documents.' },
 ]
 
 export default function PdfToWordPage() {

@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,9 +7,9 @@ import { ProtectPdfClient } from './ProtectPdfClient'
 const tool = getToolBySlug('protect-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Protect PDF — Add Password to PDF Free Online',
-    description: 'Add password protection to your PDF files online for free. Secure sensitive documents with encryption. No registration, files stay private in your browser.',
+    description: 'Add password protection to your PDF files online for free. Secure sensitive documents with strong encryption, applied over HTTPS. No registration needed.',
     keywords: tool.keywords,
     openGraph: {
       title: 'Protect PDF — Add Password to PDF Free Online | PDF and Image +',
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Add password protection to your PDF files online for free. Secure sensitive documents. No registration required.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/protect-pdf')
 }
 
 const HOW_TO_STEPS = [
@@ -43,7 +44,7 @@ const FAQS = [
   },
   {
     q: 'Are my files sent to a server during protection?',
-    a: 'No. All processing happens entirely in your browser using JavaScript. Your PDF and your password never leave your device. This is especially important for sensitive documents like contracts or financial records.',
+    a: 'Yes. Your PDF and password are sent over HTTPS to our processing server, which applies the encryption and returns the protected file. Only upload documents you are comfortable sending to an online service.',
   },
   {
     q: 'Can I remove the password later?',

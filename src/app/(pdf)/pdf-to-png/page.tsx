@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { PdfToPngClient } from './PdfToPngClient'
 const tool = getToolBySlug('pdf-to-png')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'PDF to PNG Online Free — Convert PDF Pages to PNG Images',
     description: 'Convert PDF pages to high-quality PNG images online for free. Transparent background support. Download as ZIP. No registration.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert PDF pages to high-quality PNG images online for free. Transparent background support. Download as ZIP. No registration.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/pdf-to-png')
 }
 
 const HOW_TO_STEPS = [

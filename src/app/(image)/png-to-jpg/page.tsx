@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { PngToJpgClient } from './PngToJpgClient'
 const tool = getToolBySlug('png-to-jpg')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'PNG to JPG Online Free — Convert PNG to JPEG',
     description: 'Convert PNG images to JPG format online for free. Control quality. Batch conversion supported. No registration required.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert PNG images to JPG format online for free. Control quality. Batch conversion supported. No registration required.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/png-to-jpg')
 }
 
 const HOW_TO_STEPS = [

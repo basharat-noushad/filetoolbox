@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { PdfToExcelClient } from './PdfToExcelClient'
 const tool = getToolBySlug('pdf-to-excel')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'PDF to Excel Converter Free Online — PDF to XLSX',
     description: 'Convert PDF files to Excel spreadsheets (.xlsx) online for free. Extract tables and data from any PDF. No registration required.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert PDF files to Excel spreadsheets (.xlsx) online for free. Extract tables and data from any PDF.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/pdf-to-excel')
 }
 
 const HOW_TO_STEPS = [
@@ -39,7 +40,7 @@ const FAQS = [
   },
   {
     q: 'Is there a file size limit?',
-    a: 'Yes, the maximum file size is 50MB. For larger files, consider splitting your PDF first using our Split PDF tool.',
+    a: 'Yes, the maximum file size is 4MB. For larger files, consider splitting your PDF first using our Split PDF tool.',
   },
   {
     q: 'Can I convert a scanned PDF to Excel?',

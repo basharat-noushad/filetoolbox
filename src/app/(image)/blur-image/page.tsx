@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { BlurImageClient } from './BlurImageClient'
 const tool = getToolBySlug('blur-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Blur Image Online Free — Add Gaussian Blur to Photos',
     description: 'Apply Gaussian blur to images online for free. Control blur intensity with a simple slider. Blur backgrounds, hide details, or create effects.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Apply Gaussian blur to images online for free. Control intensity with a slider.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/blur-image')
 }
 
 const HOW_TO_STEPS = [

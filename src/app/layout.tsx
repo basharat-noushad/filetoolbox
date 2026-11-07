@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: '%s | PDF and Image +',
     default: 'PDF and Image + — Free PDF & Image Tools Online',
   },
-  description: 'Free online PDF and image tools. Merge, compress, convert, crop, resize and more — no sign-up, no watermarks, 100% private. Files never leave your browser.',
+  description: 'Free online PDF and image tools to merge, compress, convert, crop and resize files. No sign-up required. Most tools process files directly in your browser.',
   keywords: [
     'pdf tools online free', 'image tools online free',
     'merge pdf', 'compress pdf', 'pdf to word', 'pdf converter',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: ORG_NAME,
     title: `${ORG_NAME} — Free PDF & Image Tools Online`,
-    description: 'Free online PDF and image tools. No sign-up, no watermarks, 100% private. Files processed in your browser.',
+    description: 'Free online PDF and image tools. No sign-up required. Most tools process files in your browser; some conversions use a processing server.',
     url: SITE_URL,
     images: [{
       url: `${SITE_URL}/og-image.png`,
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${ORG_NAME} — Free PDF & Image Tools Online`,
-    description: 'Free online PDF and image tools. No sign-up, no watermarks, 100% private.',
+    description: 'Free PDF and image tools without registration. Most run locally; server tools show a processing notice.',
     images: [`${SITE_URL}/og-image.png`],
   },
 
@@ -78,20 +78,15 @@ export const metadata: Metadata = {
   category: 'productivity',
 }
 
-// ── WebSite schema — enables Google Sitelinks Searchbox ──────────────────────
+// WebSite schema identifies the site. Google retired the sitelinks search box.
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   '@id': `${SITE_URL}/#website`,
   name: ORG_NAME,
   url: SITE_URL,
-  description: 'Free online PDF and image tools. 50+ tools — no sign-up, no file uploads, no watermarks.',
+  description: 'Free online PDF and image tools. Merge, compress, convert, crop and resize files without signing up.',
   inLanguage: 'en',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/?q={search_term_string}` },
-    'query-input': 'required name=search_term_string',
-  },
 }
 
 // ── Organization schema — E-E-A-T + AIO entity recognition ───────────────────
@@ -109,8 +104,7 @@ const organizationSchema = {
     height: 60,
     caption: `${ORG_NAME} logo`,
   },
-  description: 'PDF and Image + provides 50+ free browser-based tools for PDF and image processing. All tools run in your browser — no file uploads, no registration required.',
-  foundingDate: '2024',
+  description: 'PDF and Image + provides free tools for PDF and image processing. Most tools run locally in your browser; some conversions use a processing server. No registration required.',
   areaServed: 'Worldwide',
   knowsAbout: [
     'PDF processing', 'Image editing', 'File format conversion',

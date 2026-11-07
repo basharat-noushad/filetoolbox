@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { SvgToPngClient } from './SvgToPngClient'
 const tool = getToolBySlug('svg-to-png')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'SVG to PNG Converter Online Free — Convert SVG to PNG',
     description: 'Convert SVG vector files to PNG images online for free. Set custom width and height for the output. Perfect for web and print use.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert SVG vector files to PNG images online for free. Set custom dimensions for the output.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/svg-to-png')
 }
 
 const HOW_TO_STEPS = [

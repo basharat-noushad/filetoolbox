@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { PdfToPptClient } from './PdfToPptClient'
 const tool = getToolBySlug('pdf-to-ppt')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'PDF to PowerPoint Converter Free Online — PDF to PPTX',
     description: 'Convert PDF files to editable PowerPoint presentations (.pptx) online for free. Each PDF page becomes a slide. No registration required.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert PDF files to editable PowerPoint presentations (.pptx) online for free. Each PDF page becomes a slide. No registration required.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/pdf-to-ppt')
 }
 
 const HOW_TO_STEPS = [
@@ -39,7 +40,7 @@ const FAQS = [
   },
   {
     q: 'Is there a file size limit?',
-    a: 'Yes, the maximum file size is 50MB. Use our Compress PDF tool first if your file is too large.',
+    a: 'Yes, the maximum file size is 4MB. Use our Compress PDF tool first if your file is too large.',
   },
   {
     q: 'Is my PDF file secure during conversion?',

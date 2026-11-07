@@ -1,60 +1,48 @@
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
+import { withSocialMetadata } from '@/lib/seo'
 import { ToolLayout } from '@/components/tools/ToolLayout'
 import { AddWatermarkImageClient } from './AddWatermarkImageClient'
 
 const tool = getToolBySlug('add-watermark-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Add Watermark to Image Online Free — Photo Watermark Tool',
-    description: 'Add a text watermark to any image online for free. Control position, opacity, and size. Protect your photos and artwork. No registration needed.',
+  return withSocialMetadata({
+    title: "Add Watermark to JPG, PNG & WebP Online Free",
+    description: "Add a text watermark to JPG, PNG or WebP photos free in your browser. Choose a corner or center position and adjust opacity. One image up to 50 MB.",
     keywords: tool.keywords,
-    openGraph: {
-      title: 'Add Watermark to Image Online Free | PDF and Image +',
-      description: 'Add a text watermark to any image online for free. Control position, opacity, and size. Protect your photos and artwork.',
-    },
-    twitter: {
-      title: 'Add Watermark to Image Online Free | PDF and Image +',
-      description: 'Add a text watermark to any image online for free. Control position, opacity, and size. Protect your photos and artwork.',
-    },
-    alternates: { canonical: `/${tool.slug}` },
-  }
+    alternates: { canonical: '/add-watermark-image' },
+  }, '/add-watermark-image')
 }
 
 const HOW_TO_STEPS = [
-  'Upload your JPG, PNG, or WebP image using the file picker or drag and drop.',
-  'Enter your watermark text, choose the position (center, corners) and set the opacity using the slider.',
-  'Click "Add Watermark" to apply it. Your watermarked image will download automatically.',
+  "Select one JPG, PNG or WebP image up to 50 MB.",
+  "Enter your watermark text, choose the center or a corner, and adjust opacity from 10% to 90%.",
+  "Click Add Watermark, then Download to save a copy. Check that the text fits and remains legible."
 ]
-
 const FAQS = [
   {
-    q: 'Will the watermark affect the image quality?',
-    a: 'No. The watermark is applied as an overlay using canvas rendering. The underlying image is preserved at its original quality.',
+    "q": "How do I add a watermark to a JPG?",
+    "a": "Select your JPG, type your name or copyright text, choose its position and opacity, then click Add Watermark. Download the result; your original file is unchanged."
   },
   {
-    q: 'Can I choose where the watermark appears?',
-    a: 'Yes. You can place the watermark at the center, bottom-right, bottom-left, top-right, or top-left of the image.',
+    "q": "Can I add a logo or watermark photos in bulk?",
+    "a": "This tool adds text to one image at a time. It does not upload logo files or apply watermarks to a batch. Font size is selected automatically from the image width."
   },
   {
-    q: 'What image formats are supported?',
-    a: 'JPG, JPEG, PNG, and WebP images are all supported. The output is saved in the same format as the original.',
+    "q": "Does adding a watermark reduce image quality?",
+    "a": "The image keeps its pixel dimensions, but it is re-encoded when exported. JPG and WebP output may lose some detail. Compare the downloaded copy with the original before publishing."
   },
   {
-    q: 'Is my image uploaded to a server?',
-    a: 'No. All processing happens entirely in your browser. Your image never leaves your device, keeping it completely private.',
+    "q": "Are my photos uploaded to a server?",
+    "a": "No file upload is needed for this tool. Watermarking happens in your browser. The site separately uses analytics and advertising as described in the privacy policy."
   },
   {
-    q: 'Can I control how transparent the watermark is?',
-    a: 'Yes. Use the opacity slider to set transparency from 10% (nearly invisible) to 90% (nearly opaque). The default is 50%.',
-  },
+    "q": "Can someone remove the watermark?",
+    "a": "A visible watermark can help identify your work, but it cannot prevent cropping, retouching or copying. Keep the original and avoid putting the mark over important detail."
+  }
 ]
 
-export default function AddWatermarkImagePage() {
-  return (
-    <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}>
-      <AddWatermarkImageClient />
-    </ToolLayout>
-  )
+export default function Page() {
+  return <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}><AddWatermarkImageClient /></ToolLayout>
 }

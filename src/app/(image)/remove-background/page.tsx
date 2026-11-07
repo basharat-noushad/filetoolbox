@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,9 +7,9 @@ import { RemoveBackgroundClient } from './RemoveBackgroundClient'
 const tool = getToolBySlug('remove-background')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Remove Background Online Free — AI Background Remover',
-    description: 'Remove image backgrounds automatically in seconds using AI. Free to use. Download transparent PNG. No registration required, no file uploads.',
+    description: 'Remove image backgrounds automatically in seconds using AI. Free to use, no registration required. Download a transparent PNG ready for any design.',
     keywords: tool.keywords,
     openGraph: {
       title: 'Remove Background Online Free — AI Background Remover | PDF and Image +',
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Remove image backgrounds automatically in seconds using AI. Free, transparent PNG output, no registration.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/remove-background')
 }
 
 const HOW_TO_STEPS = [
@@ -39,7 +40,7 @@ const FAQS = [
   },
   {
     q: 'Is background removal really free?',
-    a: 'Yes, completely free. There are no usage limits, no watermarks, and no registration required. Process as many images as you need at no cost.',
+    a: 'Yes. There are no watermarks and no registration. To keep the service available for everyone, there is a fair-use limit on how many images you can process per hour.',
   },
   {
     q: 'How accurate is the AI at removing backgrounds?',
@@ -47,7 +48,7 @@ const FAQS = [
   },
   {
     q: 'Is my photo uploaded to a server?',
-    a: 'No. Background removal runs entirely in your browser. Your photo never leaves your device — no uploads, no server processing, complete privacy.',
+    a: 'Yes. Your photo is sent over HTTPS to a third-party AI background-removal service, which returns the transparent PNG. Only upload images you are comfortable sending to an online service.',
   },
   {
     q: 'Can I change the background to a different color after removing it?',

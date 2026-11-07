@@ -44,7 +44,7 @@ export function UpscaleImageClient() {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4">
       <div className="text-sm text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3">
-        Uses high-quality bicubic interpolation. AI upscaling (Real-ESRGAN) requires API configuration.
+        Enlarges pixel dimensions using browser interpolation. This does not reconstruct missing detail or use an AI model.
       </div>
       <FileDropzone
         accept={{ 'image/jpeg': ['.jpg', '.jpeg'], 'image/png': ['.png'], 'image/webp': ['.webp'] }}

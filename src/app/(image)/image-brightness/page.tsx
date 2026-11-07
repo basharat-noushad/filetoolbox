@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,14 +7,14 @@ import { ImageBrightnessClient } from './ImageBrightnessClient'
 const tool = getToolBySlug('image-brightness')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Adjust Image Brightness & Contrast Online Free',
     description: 'Adjust brightness, contrast, and saturation of images online for free. Fine-tune your photos with simple sliders. Instant, no registration.',
     keywords: tool.keywords,
     openGraph: { title: 'Adjust Image Brightness & Contrast Free | PDF and Image +', description: 'Adjust brightness, contrast, and saturation of images online for free with simple sliders.' },
     twitter: { title: 'Adjust Image Brightness & Contrast Free | PDF and Image +', description: 'Adjust brightness, contrast, and saturation of images online for free with simple sliders.' },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/image-brightness')
 }
 
 const HOW_TO_STEPS = [

@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,14 +7,14 @@ import { PngToSvgClient } from './PngToSvgClient'
 const tool = getToolBySlug('png-to-svg')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'PNG to SVG Converter Online Free — Raster to Vector',
     description: 'Convert PNG images to SVG format online for free. Embed raster images in scalable SVG containers for web use. Fast and easy conversion.',
     keywords: tool.keywords,
     openGraph: { title: 'PNG to SVG Converter Free | PDF and Image +', description: 'Convert PNG to SVG online for free. Create scalable SVG files for web use.' },
     twitter: { title: 'PNG to SVG Converter Free | PDF and Image +', description: 'Convert PNG to SVG online for free. Create scalable SVG files for web use.' },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/png-to-svg')
 }
 
 const HOW_TO_STEPS = [

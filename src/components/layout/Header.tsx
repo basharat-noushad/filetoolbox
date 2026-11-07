@@ -10,7 +10,7 @@ export function Header() {
       <div className="bg-brand-600 text-white">
         <div className="max-w-7xl mx-auto px-4 h-8 flex items-center justify-between">
           <p className="text-xs font-medium">
-            🎉 All tools are free forever — no sign-up, no watermarks, no limits
+            🎉 All tools are free forever — no sign-up, no watermarks
           </p>
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="text-xs text-white/80 hover:text-white transition-colors">

@@ -22,8 +22,8 @@ export function UnlockPdfClient() {
       const res = await fetch('/api/unlock-pdf', { method: 'POST', body })
       if (!res.ok) throw new Error(await res.text())
       setResult(await res.blob())
-    } catch {
-      setError('Failed to unlock the PDF. Please check that the password is correct and try again.')
+    } catch (err) {
+      setError(err instanceof Error && err.message ? err.message : 'Failed to unlock the PDF. Please check that the password is correct and try again.')
     } finally {
       setProcessing(false)
     }
@@ -31,11 +31,11 @@ export function UnlockPdfClient() {
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
-      <FileDropzone
+      <FileDropzone maxSize={4_000_000}
         accept={{ 'application/pdf': ['.pdf'] }}
         onFilesSelected={f => { setFiles(f); setResult(null); setError(null) }}
         label="Drag & drop your password-protected PDF here"
-        sublabel="or click to browse — max 50MB"
+        sublabel="or click to browse — max 4MB"
       />
 
       <div className="mt-5">

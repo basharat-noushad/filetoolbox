@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { OcrPdfClient } from './OcrPdfClient'
 const tool = getToolBySlug('ocr-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'OCR PDF — Extract Text from Scanned PDF Free',
     description: 'Extract text from scanned PDF files using OCR technology. Convert image-based PDFs to searchable, copyable text. Free online OCR tool.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Extract text from scanned PDF files using OCR technology. Convert image-based PDFs to searchable, copyable text. Free online OCR tool.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/ocr-pdf')
 }
 
 const HOW_TO_STEPS = [

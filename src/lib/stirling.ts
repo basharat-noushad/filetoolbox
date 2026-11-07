@@ -1,3 +1,5 @@
+import { upstreamFetch } from '@/lib/apiGuard'
+
 export function stirlingUrl(path: string): string {
   const base = process.env.STIRLING_URL
   if (!base) throw new Error('STIRLING_URL not configured')
@@ -5,8 +7,11 @@ export function stirlingUrl(path: string): string {
 }
 
 export async function stirlingFetch(url: string, body: FormData): Promise<Response> {
-  return fetch(url, { method: 'POST', body, cache: 'no-store' })
+  return upstreamFetch('stirling', url, { method: 'POST', body }, 60_000)
 }
+
+// Shared per-IP budget across all Stirling-backed routes.
+export const STIRLING_LIMIT = { bucket: 'stirling', perHour: 30 } as const
 
 export const STIRLING = {
   fileToPdf:       '/api/v1/convert/file/pdf',

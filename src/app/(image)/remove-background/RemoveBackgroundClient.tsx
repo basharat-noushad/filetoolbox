@@ -33,7 +33,7 @@ export function RemoveBackgroundClient() {
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
-      <FileDropzone
+      <FileDropzone maxSize={4_000_000}
         accept={{ 'image/jpeg': ['.jpg', '.jpeg'], 'image/png': ['.png'], 'image/webp': ['.webp'] }}
         onFilesSelected={f => { setFile(f[0] || null); setResult(null) }}
         label="Drag & drop your photo here"

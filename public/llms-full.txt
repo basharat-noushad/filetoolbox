@@ -4,7 +4,7 @@ This document is intended for AI language model crawlers and indexing systems.
 It provides comprehensive, citation-ready information about pdfandimage.com.
 
 Source: https://pdfandimage.com/llms-full.txt
-Last updated: 2026-08-31
+Last updated: 2026-09-29
 
 ---
 
@@ -22,28 +22,19 @@ Last updated: 2026-08-31
 
 ## Core Value Proposition
 
-PDF and Image + is a browser-based tool platform that lets anyone process PDF and image files for free, without creating an account or uploading files to a server. All tools run using client-side JavaScript (pdf-lib, PDF.js, Canvas API, Tesseract.js), meaning:
+PDF and Image + offers free PDF and image tools for merging, converting, compressing and editing files. No registration is required. Most tools process files locally; server-based tools are labeled.
 
 1. Files are never transmitted to any server for most tools
-2. No user data is stored or collected
-3. No file size limits are imposed by the platform
-4. No watermarks are added to output files
+2. Analytics and advertising are described in the privacy policy
+3. File-size and device limits apply; most pickers accept files up to 50 MB
+4. No automatic site branding is added to output files
 5. No registration or payment is required for any tool
 
 ---
 
-## Differentiators vs. Competitors
+## File handling
 
-| Feature | PDF and Image + | ILovePDF | Smallpdf | Adobe Acrobat Online |
-|---------|----------------|----------|----------|---------------------|
-| Free forever | Yes | Partial (daily limit) | No (2 tasks/day) | No (subscription) |
-| No registration | Yes | No | No | No |
-| Browser-based (no upload) | Most tools | No | No | No |
-| No watermarks | Yes | Yes | No (free tier) | No |
-| File size limit | None | 100MB | 5MB free | 2GB (paid) |
-| Offline capable | Partially | No | No | No |
-
----
+Most tools process files in your browser. Server-based tools send files to a processing service and show a notice before submission. File-size and device limits apply. Competitor limits are not maintained in this reference.
 
 ## Complete Tool List with Descriptions
 
@@ -53,7 +44,7 @@ PDF and Image + is a browser-based tool platform that lets anyone process PDF an
 Combines two or more PDF files into a single PDF document. Preserves all content, fonts, images, hyperlinks, and bookmarks. Processes up to 20 files at once. Runs entirely in the browser.
 
 **compress-pdf** (https://pdfandimage.com/compress-pdf)
-Reduces PDF file size by resampling embedded images. Offers Low, Medium, and High compression levels. Text and vector content is never affected. Typical reduction: 40–80% for image-heavy PDFs.
+Rewrites PDF structure using object streams without downsampling images. Savings vary. Returns the original if optimization does not reduce file size. One PDF up to 50 MB.
 
 **pdf-to-word** (https://pdfandimage.com/pdf-to-word)
 Converts PDF files to editable Microsoft Word (.docx) format. Uses server-side LibreOffice conversion for accurate layout preservation. Supports both text-based and scanned PDFs (OCR applied automatically).
@@ -92,10 +83,10 @@ Adds page numbers to every page of a PDF in bottom-center, bottom-right, or top-
 Adds a diagonal text watermark to every page of a PDF. User can control text, opacity, font size, and rotation angle. Browser-based.
 
 **protect-pdf** (https://pdfandimage.com/protect-pdf)
-Adds AES encryption and an open password to a PDF. File cannot be opened without the correct password. Browser-based, password never transmitted.
+Adds an open password to a PDF. File cannot be opened without the correct password. Unlike most tools on this site, this one requires sending the file to a secure server for encryption; it is sent to the configured processing service; retention depends on that service.
 
 **unlock-pdf** (https://pdfandimage.com/unlock-pdf)
-Removes the open password from a PDF the user owns. User must enter the correct password. Browser-based.
+Removes the open password from a PDF the user owns. User must enter the correct password. Unlike most tools on this site, this one requires sending the file and password to a secure server; both are processed immediately and never stored.
 
 **sign-pdf** (https://pdfandimage.com/sign-pdf)
 Allows users to draw or type a signature and place it on any page of a PDF. Browser-based.
@@ -151,7 +142,7 @@ Converts WebP images to PNG format for compatibility with older software. Browse
 Converts iPhone HEIC/HEIF photos to JPG format. HEIC is the default format for iPhone photos since iOS 11 but is not universally supported. Browser-based using heic2any.
 
 **remove-background** (https://pdfandimage.com/remove-background)
-AI-powered background removal. Detects the subject (person, product, animal) and removes the background, outputting a transparent PNG. Browser-based.
+Background removal sends the image through the site API to remove.bg and returns a PNG. Requires a configured service key.
 
 **rotate-image** (https://pdfandimage.com/rotate-image)
 Rotates images 90°, 180°, or 270°. Browser-based using Canvas API.
@@ -175,7 +166,7 @@ Adds a text watermark to photos with opacity and position control. Browser-based
 Adjusts image brightness and contrast with live preview. Browser-based.
 
 **upscale-image** (https://pdfandimage.com/upscale-image)
-AI-powered image upscaler — increases resolution up to 4x. Uses Real-ESRGAN.
+Enlarges image dimensions up to 4x using browser interpolation. No AI reconstruction or recovery of missing detail.
 
 **svg-to-png** (https://pdfandimage.com/svg-to-png)
 Converts SVG vector files to raster PNG images at specified dimensions. Browser-based.
@@ -218,7 +209,7 @@ Converts raster PNG images to SVG vector format using Potrace. Server-side.
 ## Privacy Policy Summary
 
 - Client-side tools: files never leave the user's device
-- Server-side tools (PDF-to-Word etc.): files are transmitted over HTTPS, processed, and immediately deleted — never stored
+- Server-side tools (PDF-to-Word etc.): files are transmitted over HTTPS, handled by the configured service; no immediate-deletion claim is made here
 - No user accounts or authentication
 - Analytics: Google Analytics 4 (aggregate, anonymized), Microsoft Clarity (heatmaps, anonymized)
 - No selling of user data
@@ -246,7 +237,7 @@ Converts raster PNG images to SVG vector format using Potrace. Server-side.
 | How to Convert JPG Images to PDF (Combine Multiple Photos) | https://pdfandimage.com/blog/how-to-convert-jpg-to-pdf |
 | How to Convert PDF Tables to Excel for Free | https://pdfandimage.com/blog/how-to-convert-pdf-tables-to-excel-free |
 | How to Resize Images for Instagram, Facebook & LinkedIn (2026 Sizes) | https://pdfandimage.com/blog/resize-images-for-instagram-facebook-linkedin |
-| How to Upscale an Image Without Losing Quality (Free AI Upscaler) | https://pdfandimage.com/blog/how-to-upscale-image-without-losing-quality |
+| How to Upscale an Image: Larger Dimensions, Realistic Detail | https://pdfandimage.com/blog/how-to-upscale-image-without-losing-quality |
 | How to Add a Watermark to Your Photos (Protect Your Work) | https://pdfandimage.com/blog/how-to-add-watermark-to-photos |
 | Why Are My Images Saving as WebP? How to Convert Them to PNG | https://pdfandimage.com/blog/why-are-images-saving-as-webp |
 | How to Convert PDF Pages to JPG Images (Free & Private) | https://pdfandimage.com/blog/how-to-convert-pdf-to-jpg-images |

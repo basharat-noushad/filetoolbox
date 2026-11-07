@@ -13,9 +13,9 @@ export const tools: Tool[] = [
   {
     slug: 'compress-pdf',
     name: 'Compress PDF',
-    description: 'Reduce PDF file size without losing quality. Ideal for email attachments and uploads.',
+    description: "Compress PDF file structure in your browser without downsampling images. Size savings depend on the original; already optimized or scanned PDFs may not get smaller.",
     category: 'pdf', icon: 'FileDown',
-    keywords: ['compress pdf', 'reduce pdf size', 'pdf compressor online free'],
+    keywords: ["compress pdf","compress pdf file size","compress pdf for email","compress pdf lossless"],
     relatedTools: ['merge-pdf', 'pdf-to-jpg', 'split-pdf'], tier: 1,
   },
   {
@@ -29,7 +29,7 @@ export const tools: Tool[] = [
   {
     slug: 'word-to-pdf',
     name: 'Word to PDF',
-    description: 'Convert Word documents (.docx, .doc) to PDF format. Preserves formatting perfectly.',
+    description: 'Convert Word documents (.docx, .doc) to PDF format. Review the converted layout before sharing.',
     category: 'pdf', icon: 'FileOutput',
     keywords: ['word to pdf', 'docx to pdf', 'convert word to pdf free'],
     relatedTools: ['pdf-to-word', 'compress-pdf', 'merge-pdf'], tier: 1,
@@ -177,9 +177,9 @@ export const tools: Tool[] = [
   {
     slug: 'add-watermark-pdf',
     name: 'Add Watermark to PDF',
-    description: 'Add a text watermark to every page of a PDF. Control opacity, size, and rotation.',
+    description: "Add a watermark to PDF pages with your own text. Mark a draft or confidential copy, choose opacity, font size and rotation, and download a new PDF.",
     category: 'pdf', icon: 'Stamp',
-    keywords: ['add watermark to pdf free', 'watermark pdf online', 'pdf watermark tool'],
+    keywords: ["add watermark pdf","add watermark to pdf","watermark pdf","add draft watermark pdf"],
     relatedTools: ['protect-pdf', 'sign-pdf', 'compress-pdf'], tier: 2,
   },
   {
@@ -290,26 +290,26 @@ export const tools: Tool[] = [
   // ── Image Tier 2 ──────────────────────────────────────────────────────
   {
     slug: 'upscale-image',
-    name: 'Upscale Image (AI)',
-    description: 'Upscale images up to 4x using AI. Enhance resolution without losing quality.',
+    name: 'Upscale Image',
+    description: 'Enlarge image dimensions by 2x, 3x or 4x using browser interpolation. Export PNG; enlargement does not recover missing detail.',
     category: 'image', icon: 'ZoomIn',
-    keywords: ['upscale image online free', 'ai image upscaler', 'increase image resolution'],
+    keywords: ['upscale image online free', 'enlarge image online', 'increase image resolution'],
     relatedTools: ['resize-image', 'compress-image', 'png-to-jpg'], tier: 2,
   },
   {
     slug: 'add-watermark-image',
     name: 'Add Watermark to Image',
-    description: 'Add a text or image watermark to photos. Control position, opacity, and font size.',
+    description: "Add a watermark to JPG, PNG or WebP images using your name, copyright notice or brand text. Choose one of five positions and adjust transparency.",
     category: 'image', icon: 'Stamp',
-    keywords: ['add watermark to image', 'watermark photo online free', 'image watermark tool'],
+    keywords: ["add watermark to jpg","add watermark photo","add watermark to photo","photo watermark online","image watermark text"],
     relatedTools: ['compress-image', 'resize-image', 'add-text-to-image'], tier: 2,
   },
   {
     slug: 'heic-to-jpg',
     name: 'HEIC to JPG',
-    description: 'Convert HEIC/HEIF images from iPhone to JPG format. Works directly in your browser.',
+    description: "Convert HEIC to JPG to make iPhone photos easier to share, attach and open on other devices. Select one HEIC or HEIF file and download a JPEG copy.",
     category: 'image', icon: 'Smartphone',
-    keywords: ['heic to jpg converter', 'heic to jpeg online free', 'convert iphone photos to jpg'],
+    keywords: ["heic to jpg","heic to jpg converter","convert heic to jpg online","heic to jpg windows"],
     relatedTools: ['png-to-jpg', 'compress-image', 'jpg-to-png'], tier: 2,
   },
   {

@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { FlipImageClient } from './FlipImageClient'
 const tool = getToolBySlug('flip-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Flip Image Online Free — Mirror Photo Horizontally or Vertically',
     description: 'Flip images horizontally or vertically online for free. Mirror any photo in one click. No registration required.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Flip images horizontally or vertically online for free. Mirror any photo in one click. No registration required.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/flip-image')
 }
 
 const HOW_TO_STEPS = [

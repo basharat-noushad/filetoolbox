@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { BLOG_POSTS } from '@/lib/blogPosts'
+import { usesProcessingServer } from '@/lib/seo'
 import { Tool } from '@/types/tools'
 import { AdBanner } from '@/components/ads/AdBanner'
 import { RelatedTools } from '@/components/tools/RelatedTools'
@@ -11,16 +13,21 @@ interface ToolLayoutProps {
   children: React.ReactNode
 }
 
+const ADS_ON = !!process.env.NEXT_PUBLIC_ADSENSE_ID && process.env.NEXT_PUBLIC_ADSENSE_ID !== 'ca-pub-XXXXXXXXXXXXXXXXX'
+
 export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps) {
+  const serverProcessing = usesProcessingServer(tool.slug)
+  const guides = BLOG_POSTS.filter(post => post.relatedTool === tool.slug || post.relatedTools.includes(tool.slug))
+    .sort((a, b) => Number(b.relatedTool === tool.slug) - Number(a.relatedTool === tool.slug)).slice(0, 3)
   return (
     <>
       <StructuredData tool={tool} howToSteps={howToSteps} faqs={faqs} />
-      <div className="min-dvh bg-background">
-        <div className="bg-white border-b border-brand-100">
+      <div className="min-h-dvh bg-background">
+        {ADS_ON && <div className="bg-white border-b border-brand-100">
           <div className="max-w-6xl mx-auto px-4 py-2 flex justify-center">
             <AdBanner slot="header" format="leaderboard" />
           </div>
-        </div>
+        </div>}
         <div className="max-w-6xl mx-auto px-4 py-8">
           <div className="flex gap-8">
             <main className="flex-1 min-w-0">
@@ -29,7 +36,7 @@ export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps
                 <p className="text-lg text-gray-600 leading-relaxed">{tool.description}</p>
               </div>
               <div className="flex flex-wrap gap-2 mb-6">
-                {['No registration required', 'Files processed in browser', 'Free forever', '100% secure'].map(badge => (
+                {['No registration required', serverProcessing ? 'Server processing' : 'Browser processing', 'Free to use'].map(badge => (
                   <span key={badge} className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 text-sm rounded-full border border-emerald-200 font-medium">
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
@@ -38,6 +45,7 @@ export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps
                   </span>
                 ))}
               </div>
+              {serverProcessing && <p className="mb-6 text-sm text-gray-600 leading-relaxed">This tool uploads your selected file to a processing service. Only submit files you are comfortable sending. <Link href="/privacy" className="text-brand-700 underline">Read how files are handled</Link>.</p>}
               {children}
               <div className="mt-8 flex justify-center">
                 <AdBanner slot="below-tool" format="rectangle" />
@@ -66,6 +74,12 @@ export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps
                   ))}
                 </div>
               </section>
+              {guides.length > 0 && (
+                <nav aria-label="Related guides" className="mt-10">
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Guides for this task</h2>
+                  <ul className="space-y-2">{guides.map(post => <li key={post.slug}><Link href={`/blog/${post.slug}`} className="inline-block py-2 text-brand-700 underline underline-offset-4 leading-relaxed">{post.title}</Link></li>)}</ul>
+                </nav>
+              )}
               <div className="mt-6 p-4 bg-gray-50 rounded-xl border border-gray-100">
                 <p className="text-sm text-gray-600">
                   Want a deeper guide?{' '}
@@ -75,11 +89,11 @@ export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps
                 </p>
               </div>
             </main>
-            <aside className="hidden lg:block w-[300px] flex-shrink-0">
+            {ADS_ON && <aside className="hidden lg:block w-[300px] flex-shrink-0">
               <div className="sticky top-24">
                 <AdBanner slot="sidebar" format="rectangle-tall" />
               </div>
-            </aside>
+            </aside>}
           </div>
           <RelatedTools tool={tool} />
         </div>

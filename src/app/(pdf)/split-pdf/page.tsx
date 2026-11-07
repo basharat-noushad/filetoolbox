@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { SplitPdfClient } from './SplitPdfClient'
 const tool = getToolBySlug('split-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Split PDF Online Free — Extract PDF Pages',
     description: 'Split PDF files by page range or extract individual pages online for free. Download as ZIP. No registration required.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Split PDF files by page range or extract individual pages online for free. Download as ZIP. No registration required.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/split-pdf')
 }
 
 const HOW_TO_STEPS = [

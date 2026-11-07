@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { saveAs } from 'file-saver'
+import { withPdf } from '@/lib/tools/pdf/pdfjs'
 
 export function OcrPdfClient() {
   const [files, setFiles] = useState<File[]>([])
@@ -16,22 +17,21 @@ export function OcrPdfClient() {
     if (files.length === 0) { setError('Please select a PDF file.'); return }
     setProcessing(true); setError(null); setExtractedText(null)
     try {
-      const pdfjs = await import('pdfjs-dist')
-      pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js'
-      const pdf = await pdfjs.getDocument({ data: await files[0].arrayBuffer() }).promise
       const Tesseract = await import('tesseract.js')
-      let fullText = ''
-      for (let i = 1; i <= pdf.numPages; i++) {
-        const page = await pdf.getPage(i)
-        const viewport = page.getViewport({ scale: 2.0 })
-        const canvas = document.createElement('canvas')
-        canvas.width = viewport.width
-        canvas.height = viewport.height
-        const ctx = canvas.getContext('2d')!
-        await page.render({ canvasContext: ctx, viewport, canvas }).promise
-        const result = await Tesseract.recognize(canvas, lang)
-        fullText += `--- Page ${i} ---\n${result.data.text}\n\n`
-      }
+      const fullText = await withPdf(files[0], async pdf => {
+        let text = ''
+        for (let i = 1; i <= pdf.numPages; i++) {
+          const page = await pdf.getPage(i)
+          const viewport = page.getViewport({ scale: 2.0 })
+          const canvas = document.createElement('canvas')
+          canvas.width = viewport.width
+          canvas.height = viewport.height
+          await page.render({ canvas, viewport }).promise
+          const result = await Tesseract.recognize(canvas, lang)
+          text += `--- Page ${i} ---\n${result.data.text}\n\n`
+        }
+        return text
+      })
       setExtractedText(fullText)
     } catch {
       setError('OCR failed. Please check your PDF and try again.')

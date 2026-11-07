@@ -18,14 +18,10 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     const isNonProductionVercel = process.env.VERCEL_ENV && process.env.VERCEL_ENV !== 'production'
-    const baseHeaders = [
-      { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
-      { key: 'Cross-Origin-Embedder-Policy', value: 'require-corp' },
-    ]
-    if (isNonProductionVercel) {
-      baseHeaders.push({ key: 'X-Robots-Tag', value: 'noindex, nofollow' })
-    }
-    return [{ source: '/(.*)', headers: baseHeaders }]
+    // No COOP/COEP: cross-origin isolation blocked analytics and AdSense, and the
+    // single-thread ffmpeg core used by gif/mp4 tools doesn't need SharedArrayBuffer.
+    if (!isNonProductionVercel) return []
+    return [{ source: '/(.*)', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }]
   },
 }
 

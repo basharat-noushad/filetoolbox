@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { CompressImageClient } from './CompressImageClient'
 const tool = getToolBySlug('compress-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Compress Image Online Free — Reduce Image File Size',
     description: 'Compress images online for free without visible quality loss. Supports JPG, PNG, WebP. See before/after file size comparison.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Compress images online for free without visible quality loss. Supports JPG, PNG, WebP. See before/after file size comparison.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/compress-image')
 }
 
 const HOW_TO_STEPS = [

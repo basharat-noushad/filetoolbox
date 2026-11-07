@@ -4,7 +4,8 @@ import { BLOG_POSTS } from '@/lib/blogPosts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com').replace(/\/$/, '')
-  const now = new Date()
+  // Omit lastModified unless we have an actual content revision date.
+  // A deploy or request does not mean every page's content has changed.
 
   const staticPages = [
     { slug: 'about',   changeFrequency: 'monthly'  as const, priority: 0.6 },
@@ -17,12 +18,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     // Homepage
-    { url: siteUrl, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
+    { url: siteUrl, changeFrequency: 'weekly', priority: 1.0 },
 
     // Static pages
     ...staticPages.map(p => ({
       url: `${siteUrl}/${p.slug}`,
-      lastModified: now,
       changeFrequency: p.changeFrequency,
       priority: p.priority,
     })),
@@ -30,7 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // All tool pages
     ...tools.map(tool => ({
       url: `${siteUrl}/${tool.slug}`,
-      lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: tool.tier === 1 ? 0.9 : 0.7,
     })),

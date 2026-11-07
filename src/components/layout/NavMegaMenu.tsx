@@ -1,5 +1,5 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import {
   FilePlus2, Scissors, FileDown, FileText, FileOutput, Image as ImageIcon,
@@ -88,7 +88,7 @@ const MENUS: MegaMenuConfig[] = [
     label: 'PDF Tools',
     tools: PDF_TOOLS,
     viewAllHref: '/#pdf-tools',
-    description: 'Edit, convert, compress and manage PDF files — all free, all in your browser.',
+    description: 'Edit, convert, compress and manage PDF files — free, most run in your browser.',
     accentColor: 'text-brand-600',
     badgeCls: 'bg-brand-100 text-brand-700',
     iconBg: 'bg-brand-50',
@@ -126,6 +126,27 @@ export function NavMegaMenu() {
     if (leaveTimer.current) clearTimeout(leaveTimer.current)
   }
 
+  const triggerRefs = useRef<Record<string, HTMLButtonElement | null>>({})
+
+  // Escape closes (focus back to trigger); click outside closes.
+  useEffect(() => {
+    if (!activeMenu) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return
+      triggerRefs.current[activeMenu]?.focus()
+      setActiveMenu(null)
+    }
+    const onDown = (e: MouseEvent) => {
+      if (!(e.target as Element).closest('[data-megamenu]')) setActiveMenu(null)
+    }
+    document.addEventListener('keydown', onKey)
+    document.addEventListener('mousedown', onDown)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.removeEventListener('mousedown', onDown)
+    }
+  }, [activeMenu])
+
   return (
     <>
       {/* Desktop nav links */}
@@ -141,9 +162,21 @@ export function NavMegaMenu() {
             key={menu.key}
             onMouseEnter={() => openMenu(menu.key)}
             onMouseLeave={scheduleClose}
+            data-megamenu
             className="relative"
           >
             <button
+              ref={el => { triggerRefs.current[menu.key as string] = el }}
+              type="button"
+              aria-expanded={activeMenu === menu.key}
+              aria-controls={`megamenu-${menu.key}`}
+              onClick={() => openMenu(menu.key)}
+              onKeyDown={e => {
+                if (e.key !== 'ArrowDown') return
+                e.preventDefault()
+                openMenu(menu.key)
+                setTimeout(() => document.querySelector<HTMLElement>(`#megamenu-${menu.key} a`)?.focus(), 50)
+              }}
               className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 activeMenu === menu.key
                   ? `${menu.accentColor} bg-gray-100`
@@ -174,12 +207,15 @@ export function NavMegaMenu() {
       {MENUS.map(menu => (
         <div
           key={menu.key}
+          id={`megamenu-${menu.key}`}
+          data-megamenu
           onMouseEnter={() => { cancelClose(); openMenu(menu.key) }}
           onMouseLeave={scheduleClose}
-          className={`absolute top-full left-0 right-0 bg-white border-b border-gray-200 z-50 transition-all duration-200 origin-top ${
+          // hidden below lg (no overflow); invisible when closed = out of tab order + a11y tree
+          className={`hidden lg:block absolute top-full left-0 right-0 bg-white border-b border-gray-200 z-50 transition-all duration-200 origin-top ${
             activeMenu === menu.key
-              ? 'opacity-100 translate-y-0 pointer-events-auto'
-              : 'opacity-0 -translate-y-1 pointer-events-none'
+              ? 'opacity-100 translate-y-0 visible'
+              : 'opacity-0 -translate-y-1 invisible pointer-events-none'
           }`}
         >
           <div className="max-w-7xl mx-auto px-6 py-6 flex gap-8">

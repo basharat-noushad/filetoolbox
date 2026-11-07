@@ -24,8 +24,8 @@ export function ProtectPdfClient() {
       const res = await fetch('/api/protect-pdf', { method: 'POST', body })
       if (!res.ok) throw new Error(await res.text())
       setResult(await res.blob())
-    } catch {
-      setError('Failed to protect PDF. Please check your file and try again.')
+    } catch (err) {
+      setError(err instanceof Error && err.message ? err.message : 'Failed to protect PDF. Please check your file and try again.')
     } finally {
       setProcessing(false)
     }
@@ -33,11 +33,11 @@ export function ProtectPdfClient() {
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4">
-      <FileDropzone
+      <FileDropzone maxSize={4_000_000}
         accept={{ 'application/pdf': ['.pdf'] }}
         onFilesSelected={setFiles}
         label="Drag & drop your PDF here"
-        sublabel="or click to browse — max 50MB"
+        sublabel="or click to browse — max 4MB"
       />
       <div className="space-y-3">
         <div>

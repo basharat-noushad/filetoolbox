@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { WordToPdfClient } from './WordToPdfClient'
 const tool = getToolBySlug('word-to-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Word to PDF Online Free — Convert DOCX to PDF',
     description: 'Convert Word documents to PDF online for free. Preserves formatting perfectly. No registration needed. Fast and reliable.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert Word documents to PDF online for free. Preserves formatting perfectly. No registration needed. Fast and reliable.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/word-to-pdf')
 }
 
 const HOW_TO_STEPS = [
@@ -31,7 +32,7 @@ const HOW_TO_STEPS = [
 const FAQS = [
   { q: 'Does it support both .doc and .docx files?', a: 'Yes, both .doc (older Word format) and .docx (modern format) files are supported.' },
   { q: 'Will my formatting be preserved?', a: 'Yes. Fonts, tables, images, headers, footers, and all formatting are preserved in the PDF output.' },
-  { q: 'Is there a file size limit?', a: 'Files up to 50MB are supported. For larger files, consider splitting the document first.' },
+  { q: 'Is there a file size limit?', a: 'Files up to 4MB are supported. For larger files, consider splitting the document first.' },
   { q: 'Can I convert password-protected Word files?', a: 'Password-protected files cannot be converted. Please remove the password protection first.' },
 ]
 

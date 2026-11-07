@@ -22,7 +22,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           padding: '64px',
         }}
       >
-        <div style={{ color: '#818cf8', fontSize: 20, marginBottom: 16, fontFamily: 'sans-serif' }}>
+        <div style={{ display: 'flex', color: '#818cf8', fontSize: 20, marginBottom: 16, fontFamily: 'sans-serif' }}>
           {post.category} — pdfandimage.com
         </div>
         <div

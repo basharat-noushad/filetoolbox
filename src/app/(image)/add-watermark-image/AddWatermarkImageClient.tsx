@@ -61,7 +61,7 @@ export function AddWatermarkImageClient() {
       <Button onClick={handle} disabled={files.length === 0 || processing} className="w-full cursor-pointer" size="lg">
         {processing ? 'Adding Watermark…' : 'Add Watermark'}
       </Button>
-      {result && <ToolResult blob={result} filename="watermarked.jpg" label="Watermark added!" />}
+      {result && <ToolResult blob={result} filename={`watermarked.${result.type === 'image/png' ? 'png' : result.type === 'image/webp' ? 'webp' : 'jpg'}`} label="Watermark added!" />}
     </div>
   )
 }

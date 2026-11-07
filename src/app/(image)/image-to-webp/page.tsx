@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { ImageToWebpClient } from './ImageToWebpClient'
 const tool = getToolBySlug('image-to-webp')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Convert Image to WebP Online Free — JPG PNG to WebP',
     description: 'Convert JPG or PNG images to WebP format online for free. Smaller files, better web performance. No registration required.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert JPG or PNG images to WebP format online for free. Smaller files, better web performance. No registration required.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/image-to-webp')
 }
 
 const HOW_TO_STEPS = [

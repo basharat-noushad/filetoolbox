@@ -39,402 +39,269 @@ export const BLOG_POSTS: BlogPost[] = [
   // ── 1 ──────────────────────────────────────────────────────────────────────
   {
     slug: 'how-to-compress-pdf-without-losing-quality',
-    title: 'How to Compress a PDF Without Losing Quality',
-    metaTitle: 'How to Compress a PDF Without Losing Quality',
-    metaDescription: 'Compress a PDF without losing quality — free, in your browser. Covers compression levels, what makes PDFs large, and tips for the smallest file size.',
-    excerpt: 'Large PDFs slow down email, uploads, and sharing. This guide explains exactly how to compress a PDF without losing quality — and which settings to use for each situation.',
+    title: "How to Compress a PDF: Lossless Options and Size Limits",
+    metaTitle: "How to Compress a PDF Without Downsampling Images",
+    metaDescription: "Learn how lossless PDF structure compression works, why scanned PDFs may not shrink, and what to try when a file exceeds an email or upload limit.",
+    excerpt: "Start with a lossless attempt, compare the actual file sizes, and keep your original. A smaller PDF is useful only if it still meets your document requirements.",
     category: 'PDF Guide',
-    readTime: '5 min read',
+    readTime: "3 min read",
     datePublished: '2025-05-01',
-    dateModified: '2025-05-01',
+    dateModified: "2026-09-29",
     relatedTool: 'compress-pdf',
     relatedTools: ['merge-pdf', 'split-pdf', 'delete-pdf-pages'],
     keywords: ['compress pdf', 'reduce pdf size', 'compress pdf without losing quality', 'how to compress pdf', 'make pdf smaller'],
     sections: [
-      {
-        paragraphs: [
-          'If you need to compress a PDF without losing quality, you are not alone — it is one of the most common document problems. A single PDF can balloon to 50MB when it should be 2MB. Emails bounce, upload portals reject the file, and sharing becomes a headache. The good news: you can compress a PDF for free in your browser in under 30 seconds, with no quality loss.',
-        ],
-      },
-      {
-        heading: 'What Makes a PDF So Large?',
-        paragraphs: [
-          'Understanding why PDFs get bloated helps you choose the right compression approach. High-resolution images are the biggest culprit — a scan at 600 DPI stores far more data than you ever need for screen viewing. Other contributors include embedded fonts, ICC colour profiles, form fields, embedded videos, and redundant metadata.',
-          'Text-only PDFs — contracts, reports, letters — are usually small regardless. It is image-heavy PDFs (brochures, scanned documents, presentations exported to PDF) where file size becomes a real problem.',
-        ],
-      },
-      {
-        heading: 'How to Compress a PDF Online — Step by Step',
-        steps: [
-          'Open the Compress PDF tool and click "Select File" or drag your PDF into the upload area.',
-          'Choose a compression level: Low, Medium, or High.',
-          'Click "Compress PDF" — the tool processes your file entirely in your browser.',
-          'Download the compressed PDF. Your original file is never changed.',
-        ],
-      },
-      {
-        heading: 'Which Compression Level Should You Use?',
-        paragraphs: [
-          'Most PDF compressors offer three levels. Here is exactly when to use each one:',
-        ],
-        bullets: [
-          'Low compression — minimal size reduction, zero visible change. Use for PDFs going to print or when pixel-perfect image quality matters.',
-          'Medium compression — 40–70% smaller, no visible quality difference on screen. The right choice for email attachments, portal uploads, and most everyday sharing.',
-          'High compression — maximum size reduction, may soften images slightly at 100% zoom. Use when file size is the absolute priority and recipients will view at normal zoom, not print.',
-        ],
-        tip: 'For most situations, choose Medium. You get a dramatically smaller file with no visible quality loss at normal viewing sizes.',
-      },
-      {
-        heading: 'Does PDF Compression Damage the Text?',
-        paragraphs: [
-          'No — text is never affected by PDF compression, no matter which level you choose. Text in a PDF is vector-based and remains perfectly crisp at any zoom level. Only embedded images are resampled during compression.',
-          'Your original file is also never modified. The compressed PDF is always a brand new file — your source document stays intact exactly as you left it.',
-        ],
-      },
-      {
-        heading: 'Tips for Getting the Smallest Possible PDF',
-        bullets: [
-          'Reduce image resolution before exporting — scanning at 150 DPI instead of 600 DPI makes a massive difference.',
-          'Delete unnecessary pages first — use the Split PDF or Delete PDF Pages tool to remove blank pages and unused appendices before compressing.',
-          'Flatten form fields — interactive form fields add overhead. If the form is already filled and submitted, use the Flatten PDF tool before compressing.',
-          'Remove embedded fonts you do not need — if you created the PDF from Word or InDesign, use the "subset fonts" option at export time.',
-          'For scanned documents, try compressing in "black and white" mode if your scanner supports it — this can reduce a 5MB scan to under 500KB.',
-        ],
-      },
-      {
-        heading: 'How Much Can You Reduce a PDF File?',
-        paragraphs: [
-          'Results vary by content type. A scanned A4 page at 300 DPI typically compresses from 800KB to under 150KB at medium compression — an 80% reduction. A 10MB product brochure full of high-res photos typically reduces to 2–3MB. A text-only contract of 500KB may only reduce to 400KB because the file was already efficient.',
-          'The Compress PDF tool shows you the before and after file size in the download result so you can see exactly how much was saved.',
-        ],
-      },
-    ],
+  {
+    "heading": "What this compressor changes",
+    "paragraphs": [
+      "PDF and Image + rewrites PDF structure with compressed object streams. It does not resize the images inside a PDF, rasterize pages or offer a target file size. A document that already uses efficient structures may show no reduction. The tool keeps the original when the rewritten file is not smaller."
+    ]
+  },
+  {
+    "heading": "Compress your PDF and check the result",
+    "paragraphs": [],
+    "steps": [
+      "Open Compress PDF and select one file up to 50 MB.",
+      "Click Compress PDF. Keep the browser tab open while processing finishes.",
+      "Read the size comparison and download the result. If no reduction was possible, the download contains the original.",
+      "Open the downloaded file and check page count, text, diagrams and any interactive content before sharing."
+    ]
+  },
+  {
+    "heading": "Can I compress a PDF to 200 KB or 1 MB?",
+    "paragraphs": [
+      "There is no guaranteed target size. A 20 MB scanned document is mostly image data, so structure compression alone is unlikely to make it fit a 1 MB portal limit. If you have the source document, export it with appropriate image dimensions. Otherwise, ask whether the recipient accepts separate files and use Split PDF or remove pages that are not required."
+    ]
+  },
+  {
+    "heading": "Keep a signed original",
+    "paragraphs": [
+      "Rewriting a PDF can affect digital signatures and specialized document features. Keep the source file, and do not replace an official signed copy with an optimized one without checking the recipient requirements. Password-protected PDFs need to be unlocked first by someone authorized to modify them."
+    ]
+  },
+  {
+    "heading": "For email attachments",
+    "paragraphs": [
+      "Check the attachment limit used by both sender and recipient. Compare the downloaded size against that actual limit rather than assuming every mail service accepts the same size. If the document still does not fit, use an approved file-sharing method or split it only when that is acceptable."
+    ]
+  }
+],
     faqs: [
-      {
-        q: 'How do I compress a PDF without losing quality for free?',
-        a: 'Use the Compress PDF tool on this page. Upload your PDF, select Medium compression, and download the result. All processing happens in your browser — it is completely free with no file size limits and no registration.',
-      },
-      {
-        q: 'Will compressing a PDF affect the text quality?',
-        a: 'No. Text in a PDF is vector-based and is never affected by compression. Only embedded images are resampled. Text remains perfectly sharp at any zoom level regardless of the compression level you choose.',
-      },
-      {
-        q: 'What is the best compression level for emailing a PDF?',
-        a: 'Medium compression is ideal for email. It typically reduces file size by 40–70% with no visible quality difference at normal viewing sizes, which is well within email attachment limits.',
-      },
-      {
-        q: 'Is there a file size limit for the PDF compressor?',
-        a: 'No. The compressor runs entirely in your browser, so you are only limited by your device memory — not an arbitrary server limit. Most devices handle PDFs up to 200–500MB without issue.',
-      },
-      {
-        q: 'Why is my PDF still large after compression?',
-        a: 'If the PDF is text-only (no images), compression will have minimal effect since text is already compact. For image-heavy PDFs, try a higher compression level. If you scanned the document at very high DPI, consider rescanning at 150–200 DPI first.',
-      },
-    ],
+  {
+    "q": "Why did my PDF not get smaller?",
+    "a": "It may already use compressed structures, or most of its size may be image data. This tool does not downsample those images."
+  },
+  {
+    "q": "Are there Low, Medium and High settings?",
+    "a": "No. This compressor uses a single structure-optimization method; it does not offer image-quality levels."
+  },
+  {
+    "q": "Is the PDF uploaded?",
+    "a": "Compression happens in your browser. The current file picker accepts one PDF up to 50 MB."
+  }
+],
   },
 
   // ── 2 ──────────────────────────────────────────────────────────────────────
   {
     slug: 'how-to-merge-pdf-files-online-free',
-    title: 'How to Merge PDF Files Online for Free',
-    metaTitle: 'How to Merge PDF Files Online for Free',
-    metaDescription: 'Merge PDF files online for free in seconds — no software, no registration, no uploads. Step-by-step guide with tips on file order, quality, and privacy.',
-    excerpt: 'Combining multiple PDFs into one document takes seconds in a browser. This guide shows you exactly how to merge PDF files online for free, with no software to install.',
+    title: "How to Merge PDF Files Online: Order, Limits and Checks",
+    metaTitle: "How to Merge PDF Files Online for Free",
+    metaDescription: "Combine up to 20 PDF files in your browser. Check file order, mixed page sizes and the downloaded result, with practical advice for signed documents.",
+    excerpt: "Combine reports, forms or attachments into one PDF. Check the selected order before merging and review the output before sending it.",
     category: 'PDF Guide',
-    readTime: '4 min read',
+    readTime: "3 min read",
     datePublished: '2025-05-01',
-    dateModified: '2025-05-01',
+    dateModified: "2026-09-29",
     relatedTool: 'merge-pdf',
     relatedTools: ['split-pdf', 'reorder-pdf-pages', 'compress-pdf'],
     keywords: ['merge pdf', 'merge pdf files', 'combine pdf', 'join pdf online free', 'how to merge pdf'],
     sections: [
-      {
-        paragraphs: [
-          'To merge PDF files online for free, you do not need Acrobat, a subscription, or anything installed. Any modern browser can handle it — and the best tools do it entirely locally, meaning your files never leave your device. This step-by-step guide covers exactly how to merge PDFs, how to control the order, and what to do when you only need specific pages.',
-        ],
-      },
-      {
-        heading: 'How to Merge PDF Files Online — Step by Step',
-        steps: [
-          'Open the Merge PDF tool and click "Select Files" or drag and drop your PDFs into the upload area.',
-          'Add up to 20 PDF files at once. They appear as a list in the order they will be merged.',
-          'Check the order — the first file in the list becomes the first pages of the combined PDF. Drag files to reorder if needed.',
-          'Click "Merge PDFs." The tool processes everything in your browser and the combined file downloads automatically.',
-          'Open the downloaded file to verify the page order is correct before sending.',
-        ],
-      },
-      {
-        heading: 'Does Merging PDFs Affect Quality?',
-        paragraphs: [
-          'No — merging is completely non-destructive. Each page is copied from the source PDFs into a new document exactly as it was. Fonts, images, hyperlinks, bookmarks, form fields, and annotations are all preserved at their original quality.',
-          'The only change is that the pages are now in a single file instead of multiple files. There is no re-rendering, re-compression, or any quality loss happening.',
-        ],
-      },
-      {
-        heading: 'When Should You Merge PDFs?',
-        paragraphs: [
-          'Merging is useful any time multiple documents belong together. Common use cases include:',
-        ],
-        bullets: [
-          'Job applications — combine your CV, cover letter, and portfolio into one file so nothing gets separated.',
-          'Business documents — bundle monthly invoices, receipts, or statements into a single PDF for accounting.',
-          'Academic submissions — many university portals require assignment, references, and supporting documents as a single PDF.',
-          'Legal documents — contracts with exhibits, schedules, and attachments are much easier to review as one numbered file.',
-          'Client deliverables — combine a proposal, terms, and appendices so the client receives everything together.',
-        ],
-      },
-      {
-        heading: 'Merging All Pages vs. Merging Specific Pages',
-        paragraphs: [
-          'Merge PDF combines two or more complete PDFs end-to-end. If you only need specific pages from one PDF — not the whole document — use the Extract PDF Pages tool first to pull out just those pages, then merge the extracted pages into your target document.',
-          'If you need to insert pages into the middle of a document (not append to the end), merge everything first, then use the Reorder PDF Pages tool to drag pages into their correct position.',
-        ],
-        tip: 'Need to merge just part of a multi-chapter document? Use Split PDF or Extract PDF Pages first to pull out the chapters you need, then merge those into one.',
-      },
-      {
-        heading: 'Privacy: Do My PDF Files Get Uploaded?',
-        paragraphs: [
-          'The merge operation runs entirely inside your browser using JavaScript and pdf-lib. Your files are never uploaded to any server. This matters especially for sensitive documents — contracts, financial records, HR files, medical documents — that should not be processed on third-party servers.',
-          'Once you close the browser tab, there is no trace of your files anywhere. No server ever received them.',
-        ],
-      },
-      {
-        heading: 'File Size After Merging',
-        paragraphs: [
-          'The merged PDF is approximately the sum of the individual file sizes — there is no compression applied during merging. If you need a smaller merged file, run the result through the Compress PDF tool after merging. Medium compression typically reduces the total size by 40–70% with no visible quality loss.',
-        ],
-      },
-    ],
+  {
+    "heading": "Before you start",
+    "paragraphs": [
+      "Gather at least two PDFs. The tool accepts up to 20 files, each up to 50 MB, but your browser may run out of memory with large collections. Keep copies of the originals. If a PDF is encrypted, unlock it only if you are authorized to do so."
+    ]
+  },
+  {
+    "heading": "Merge PDF files",
+    "paragraphs": [],
+    "steps": [
+      "Open Merge PDF and select your files together.",
+      "Review the file list. Pages are copied in the displayed file order; there is no drag-to-reorder control in this merger.",
+      "Click Merge PDFs and wait for the result.",
+      "Download merged.pdf and check page count and transitions between documents."
+    ]
+  },
+  {
+    "heading": "A simple order example",
+    "paragraphs": [
+      "If a two-page cover document appears before a three-page report, the output should have five pages: the two cover pages followed by the three report pages. If the order is wrong, adjust your selection or use Reorder PDF Pages after merging. This is an illustrative workflow, not a claimed compression benchmark."
+    ]
+  },
+  {
+    "heading": "Mixed page sizes and document features",
+    "paragraphs": [
+      "Each copied page keeps its dimensions, so a landscape chart can sit beside portrait pages. Merging is not a way to validate signatures or preserve every document-level feature. Check bookmarks, forms and signatures separately if your workflow depends on them."
+    ]
+  },
+  {
+    "heading": "After merging",
+    "paragraphs": [
+      "Use Delete PDF Pages to remove an unwanted cover, or Split PDF if the recipient needs separate sections. Compression may help structural overhead but cannot guarantee a particular attachment size. Merging itself runs in the browser without sending PDFs to a processing server."
+    ]
+  }
+],
     faqs: [
-      {
-        q: 'How many PDF files can I merge at once?',
-        a: 'You can merge up to 20 PDF files at once. All processing happens in your browser with no file size limits.',
-      },
-      {
-        q: 'Can I merge PDFs with different page sizes?',
-        a: 'Yes. Each page retains its original dimensions in the merged document. An A4 page and a Letter-size page can coexist in the same merged PDF.',
-      },
-      {
-        q: 'Is it safe to merge PDFs online?',
-        a: 'Yes. The merge runs entirely in your browser using JavaScript — your files never leave your device. No server ever sees your PDFs.',
-      },
-      {
-        q: 'Does the merged PDF keep bookmarks and hyperlinks?',
-        a: 'Hyperlinks within the original PDFs are preserved. Bookmarks (outline navigation) from the original files are also carried over into the merged document.',
-      },
-      {
-        q: 'Can I merge a password-protected PDF?',
-        a: 'Password-protected PDFs need to be unlocked first. Use the Unlock PDF tool to remove the password, then merge the unlocked files.',
-      },
-    ],
+  {
+    "q": "How many PDFs can I merge?",
+    "a": "Select 2–20 files, with a 50 MB limit for each file. Available browser memory may limit large jobs."
+  },
+  {
+    "q": "Does it change page dimensions?",
+    "a": "Copied pages keep their original dimensions; the merge operation does not normalize page sizes."
+  },
+  {
+    "q": "Does downloading replace my originals?",
+    "a": "No. The result is a separate merged.pdf file."
+  }
+],
   },
 
   // ── 3 ──────────────────────────────────────────────────────────────────────
   {
     slug: 'pdf-to-word-conversion-tips',
-    title: 'How to Convert PDF to Word Online — Tips for the Best Results',
-    metaTitle: 'How to Convert PDF to Word Online — Best Tips',
-    metaDescription: 'Convert PDF to Word online for free. Learn the difference between text and scanned PDFs, what to expect, and how to fix common issues.',
-    excerpt: 'PDF to Word conversion is not always perfect — the quality depends entirely on your PDF type. This guide shows you what to expect and how to get the cleanest result.',
+    title: "PDF to Word Conversion: Check Layout and Editable Text",
+    metaTitle: "PDF to Word Conversion Tips for Editable DOCX Files",
+    metaDescription: "Convert PDF to Word with realistic expectations. Learn what to check in DOCX output, how scans differ, and when server processing is required.",
+    excerpt: "PDF and Word store page content differently. Treat conversion as a starting point for editing and review the result against your original.",
     category: 'PDF Guide',
-    readTime: '5 min read',
+    readTime: "3 min read",
     datePublished: '2025-04-15',
-    dateModified: '2025-04-15',
+    dateModified: "2026-09-29",
     relatedTool: 'pdf-to-word',
     relatedTools: ['word-to-pdf', 'ocr-pdf', 'compress-pdf'],
     keywords: ['pdf to word', 'convert pdf to word', 'pdf to docx', 'pdf to word online free', 'pdf to word tips'],
     sections: [
-      {
-        paragraphs: [
-          'The fastest way to convert PDF to Word online for free is to use a browser-based tool — no software installation, no registration, and your file never leaves your device. But before you upload, it is worth knowing one key thing: the quality of your conversion depends almost entirely on the type of PDF you are starting with. Understanding this difference takes 30 seconds and saves a lot of frustration.',
-        ],
-      },
-      {
-        heading: 'Text PDF vs. Scanned PDF — The Key Difference',
-        paragraphs: [
-          'A text-based PDF was created digitally — exported from Word, Google Docs, InDesign, or a similar program. The text is stored as actual characters inside the PDF file. When you convert this type of PDF to Word, the text comes out cleanly and editing is straightforward.',
-          'A scanned PDF is a photograph of a physical document. There is no actual text stored in the file — just an image. Converting a scanned PDF to Word requires OCR (Optical Character Recognition) to identify the characters in the image. The result is less perfect, especially for complex layouts or low-resolution scans.',
-        ],
-        tip: 'Test which type you have: try selecting text in your PDF. If text highlights when you click and drag, it is a text-based PDF. If the cursor behaves like you are clicking on a photo, it is scanned.',
-      },
-      {
-        heading: 'How to Convert a PDF to Word — Step by Step',
-        steps: [
-          'Open the PDF to Word tool and click "Select File" or drag your PDF into the upload area.',
-          'Click "Convert to Word." The file is sent securely to the conversion server.',
-          'Wait for processing — text PDFs convert in seconds; large scanned PDFs may take 30–60 seconds.',
-          'Download your .docx file. Open it in Microsoft Word, Google Docs, or LibreOffice.',
-          'Review the output and correct any formatting issues, especially around tables and multi-column layouts.',
-        ],
-      },
-      {
-        heading: 'What to Expect from a Text PDF Conversion',
-        paragraphs: [
-          'For clean, text-based PDFs, conversion to Word is highly accurate. Paragraphs, headings, bold and italic formatting, tables, and bullet points generally transfer correctly.',
-          'Complex layouts may need manual adjustment — multi-column pages, text boxes over images, or densely formatted tables sometimes come out slightly off. The text content is correct, but the positioning may need a quick tidy-up.',
-        ],
-      },
-      {
-        heading: 'What to Expect from a Scanned PDF Conversion',
-        paragraphs: [
-          'Scanned documents require OCR. Accuracy depends on scan quality. A clean, straight, high-contrast scan at 200 DPI or above produces very good results. A crumpled, skewed, or faded page will produce errors.',
-        ],
-        bullets: [
-          'Common OCR mistakes: similar-looking characters confused (0 and O, 1 and l, rn and m).',
-          'Characters near page edges sometimes get missed or distorted.',
-          'Tables in scanned PDFs often come out as flowing text rather than preserved table structure.',
-          'Always proofread names, numbers, and technical terms carefully after converting a scanned PDF.',
-        ],
-      },
-      {
-        heading: 'Tips for a Cleaner Conversion',
-        bullets: [
-          'For scanned documents: scan at 300 DPI minimum. Ensure the page is flat and square in the scanner.',
-          'Increase contrast on poor-quality originals before scanning — higher contrast dramatically improves OCR accuracy.',
-          'Split out only the pages you need before converting — smaller, simpler PDFs convert more accurately.',
-          'After conversion, use Word\'s Find & Replace to catch common OCR errors (search for "1" to find l substitutions).',
-          'For scanned PDFs: consider using the OCR PDF tool first to extract plain text, then paste into a new Word document.',
-        ],
-      },
-      {
-        heading: 'When to Use OCR PDF Instead of PDF to Word',
-        paragraphs: [
-          'If you only need to copy specific text from a scanned PDF — a name, a figure, a paragraph — the OCR PDF tool is faster. It extracts all text and lets you copy it directly without generating a new file. PDF to Word is the right choice when you need to edit or reformat the entire document.',
-        ],
-      },
-    ],
+  {
+    "heading": "Check whether the PDF contains text",
+    "paragraphs": [
+      "Try selecting a sentence in a PDF viewer. A page that is only a scanned picture usually needs optical character recognition before its words can become editable. Selection is a useful first check, although it does not prove that all text or reading order will convert correctly."
+    ]
+  },
+  {
+    "heading": "Convert PDF to Word",
+    "paragraphs": [],
+    "steps": [
+      "Open PDF to Word and select a PDF within the displayed file limit.",
+      "Only continue if you are comfortable sending the document to the processing service. This conversion is not performed entirely in your browser.",
+      "Click Convert to Word. The configured conversion service must be available.",
+      "Download the DOCX and compare it with the PDF in your word processor."
+    ]
+  },
+  {
+    "heading": "Review these details before editing",
+    "paragraphs": [],
+    "bullets": [
+      "Check headers, footers and page breaks.",
+      "Inspect tables cell by cell, especially merged cells and multi-page tables.",
+      "Compare columns, reading order, symbols and font substitutions.",
+      "Check that text is editable rather than an inserted image."
+    ]
+  },
+  {
+    "heading": "Scans and complex layouts",
+    "paragraphs": [
+      "The conversion route does not promise an OCR step. For scans, use an appropriate OCR workflow first and proofread the recognized text. Multi-column pages, forms and image-heavy designs can need substantial manual reconstruction in Word."
+    ]
+  },
+  {
+    "heading": "If conversion is unavailable",
+    "paragraphs": [
+      "This feature depends on a configured server. A service error does not mean your PDF is corrupt. Keep the original and try again later, or use a trusted local converter for files you cannot send to a processing service. Do not assume a retention or deletion policy that has not been confirmed for the deployed service."
+    ]
+  }
+],
     faqs: [
-      {
-        q: 'How accurate is PDF to Word conversion?',
-        a: 'For text-based PDFs, conversion is highly accurate — typically 95%+ with minimal formatting adjustments needed. For scanned PDFs, accuracy depends on scan quality and typically requires some manual cleanup.',
-      },
-      {
-        q: 'What Word format does the output use?',
-        a: 'The converted file is in .docx format, which is compatible with Microsoft Word 2007 and later, Google Docs, LibreOffice, and all modern word processors.',
-      },
-      {
-        q: 'Will my formatting be preserved in the Word document?',
-        a: 'Basic formatting — paragraphs, headings, bold, italic, and simple tables — is preserved. Complex multi-column layouts and floating text boxes may need manual adjustment after conversion.',
-      },
-      {
-        q: 'Is there a page limit for PDF to Word conversion?',
-        a: 'There is no page limit. However, very large PDFs (100+ pages) take longer to process. The maximum file size is 50MB.',
-      },
-      {
-        q: 'My converted Word document has strange characters. What went wrong?',
-        a: 'Strange characters usually mean the PDF was scanned and OCR made errors on certain characters. Check for 0/O, 1/l, and rn/m substitutions. If the PDF has an unusual font or low scan quality, results will have more errors.',
-      },
-    ],
+  {
+    "q": "Is PDF to Word a local browser tool?",
+    "a": "No. It sends the selected PDF to a conversion service and returns a DOCX file."
+  },
+  {
+    "q": "Will formatting be identical?",
+    "a": "Not necessarily. Review tables, fonts, columns and page breaks; a PDF is not the same document model as Word."
+  },
+  {
+    "q": "Does it make scanned text editable automatically?",
+    "a": "Do not rely on that. Scanned pages may require OCR followed by proofreading."
+  }
+],
   },
 
   // ── 4 ──────────────────────────────────────────────────────────────────────
   {
     slug: 'webp-vs-jpg-vs-png-which-format',
-    title: 'WebP vs JPG vs PNG — Which Image Format Should You Use?',
-    metaTitle: 'WebP vs JPG vs PNG — Which Format Should You Use?',
-    metaDescription: 'WebP vs JPG vs PNG explained clearly. See exactly which image format to use for photos, logos, screenshots, and web images — with file size comparisons.',
-    excerpt: 'WebP, JPG, and PNG each have a specific job. Choosing the wrong one means unnecessarily large files or visible quality loss. Here is the complete comparison.',
+    title: "WebP vs JPG vs PNG: Choose an Image Format by Task",
+    metaTitle: "WebP vs JPG vs PNG: Photos, Transparency and Exports",
+    metaDescription: "Compare JPG, PNG and WebP for photos, transparent graphics and web uploads. Understand lossy conversion and test your actual exported image.",
+    excerpt: "Choose based on the image and where it will be used. There is no universal smallest format or quality setting for every file.",
     category: 'Image Guide',
-    readTime: '6 min read',
+    readTime: "3 min read",
     datePublished: '2025-04-10',
-    dateModified: '2025-04-10',
+    dateModified: "2026-09-29",
     relatedTool: 'image-to-webp',
     relatedTools: ['png-to-jpg', 'jpg-to-png', 'compress-image'],
     keywords: ['webp vs jpg', 'webp vs png', 'jpg vs png', 'image format comparison', 'best image format web'],
     sections: [
-      {
-        paragraphs: [
-          'Choosing between WebP, JPG, and PNG affects how large your files are, how sharp images look, and whether they display correctly everywhere. Use the wrong format and you get either unnecessarily large files or visible quality problems. This guide explains the differences clearly so you can pick the right format every time.',
-        ],
-      },
-      {
-        heading: 'JPG — Best for Photographs',
-        paragraphs: [
-          'JPG (also written JPEG) is a lossy format — it discards some image data to achieve smaller file sizes. For photographs, this trade-off is excellent. A high-quality photo saved at 85% quality looks virtually identical to the original but is 60–80% smaller.',
-        ],
-        bullets: [
-          'Use JPG for: photos, product images, lifestyle shots, food photography, portraits, any real-world photograph.',
-          'Do not use JPG for: logos, text overlays, screenshots, or graphics with flat colours — compression artifacts become visible on sharp edges and solid backgrounds.',
-          'Best quality setting: 80–85% for web use, 92–95% for print.',
-        ],
-      },
-      {
-        heading: 'PNG — Best for Graphics and Transparency',
-        paragraphs: [
-          'PNG is a lossless format — it preserves every pixel exactly. This makes it ideal for graphics with crisp edges: logos, icons, UI screenshots, diagrams, and anything with text on top.',
-          'PNG also supports transparency. If you need an image with a transparent background — a logo to place on any colour, or a product photo without its background — PNG is the only option among these three.',
-        ],
-        bullets: [
-          'Use PNG for: logos, icons, UI screenshots, diagrams, images with transparent backgrounds.',
-          'Do not use PNG for: photographs — a PNG photo is 3–5× larger than an equivalent JPG with no visible quality benefit.',
-        ],
-        tip: 'Quick rule: if the image was taken with a camera, use JPG. If it was created in software (Figma, Illustrator, Canva), use PNG.',
-      },
-      {
-        heading: 'WebP — Best of Both Worlds for Websites',
-        paragraphs: [
-          'WebP was developed by Google specifically for the web. It achieves 25–35% smaller files than equivalent JPGs and 60–80% smaller than equivalent PNGs — at the same visual quality. It also supports transparency like PNG.',
-          'Browser support is now universal: Chrome, Firefox, Safari (since 2020), and Edge all support WebP. For any image displayed on a website, WebP is the best format in most situations.',
-        ],
-        bullets: [
-          'Use WebP for: any image displayed on a website where file size matters.',
-          'Do not use WebP when: users will download and edit the image in older software, or when sending to someone on a system that may not support WebP.',
-        ],
-      },
-      {
-        heading: 'File Size Comparison — Real Numbers',
-        paragraphs: [
-          'To make this concrete, here is how a typical 4MB uncompressed photograph compares across formats:',
-        ],
-        bullets: [
-          'PNG (lossless): ~3.8MB — no quality loss, same file size class.',
-          'JPG at 85% quality: ~600KB — 85% smaller, looks identical at normal viewing sizes.',
-          'WebP at 85% quality: ~400KB — 90% smaller than original, same quality as JPG 85%.',
-          'WebP at 90% quality: ~500KB — better quality than JPG 85%, still 87% smaller than original.',
-        ],
-      },
-      {
-        heading: 'Quick Reference — Which Format to Use',
-        bullets: [
-          'Photographs for web → WebP (first choice), JPG (fallback for older systems).',
-          'Photographs for print → JPG at 95%+ quality.',
-          'Logos and icons → PNG with transparency, or WebP with transparency.',
-          'Screenshots and UI → PNG or WebP.',
-          'Images with text overlay → PNG or WebP (JPG artifacts become visible around text).',
-          'Transparent backgrounds → PNG or WebP only (JPG does not support transparency).',
-          'Animated images → Animated WebP (smaller than GIF), or GIF for maximum compatibility.',
-          'Images for email → JPG (many email clients do not support WebP).',
-        ],
-      },
-      {
-        heading: 'Convert Between Formats for Free',
-        paragraphs: [
-          'Use the free tools on this site to convert between any format instantly in your browser. Convert PNG to JPG, JPG to WebP, WebP to PNG — all without uploading your files to any server.',
-        ],
-      },
-    ],
+  {
+    "heading": "JPG for photos and compatibility",
+    "paragraphs": [
+      "JPG is useful for photographs and services that ask specifically for JPEG. It uses lossy compression and does not support transparency. The PNG to JPG tool fills transparent areas with white, so inspect logos and cut-out images before using the result."
+    ]
+  },
+  {
+    "heading": "PNG for transparency and sharp graphics",
+    "paragraphs": [
+      "PNG supports transparency and lossless image encoding. It is often useful for screenshots, interface graphics and logos. A photo saved as PNG can be much larger than a JPEG. Converting an already compressed JPEG to PNG does not recover detail that was previously lost."
+    ]
+  },
+  {
+    "heading": "WebP for web delivery",
+    "paragraphs": [
+      "WebP supports transparency and both lossy and lossless encoding. The current Convert to WebP tool exposes a quality control for browser export; do not assume that every export is lossless. Check that your destination accepts WebP before choosing it."
+    ]
+  },
+  {
+    "heading": "Compare a real export",
+    "paragraphs": [],
+    "steps": [
+      "Keep the original and make a copy in the proposed format.",
+      "Compare pixel dimensions and file sizes.",
+      "Inspect text, edges, gradients and transparent areas at the size people will see.",
+      "Upload the result to your destination only after checking its accepted formats and dimensions."
+    ]
+  },
+  {
+    "heading": "Choose the matching tool",
+    "paragraphs": [
+      "Use PNG to JPG for JPEG-only destinations, WebP to PNG when you need a PNG file, or Convert to WebP for a web export. Resize an oversized source before compression if you do not need its full dimensions. Avoid repeated lossy conversions between formats."
+    ]
+  }
+],
     faqs: [
-      {
-        q: 'Is WebP better than JPG?',
-        a: 'Yes, for web use. WebP produces files 25–35% smaller than JPG at the same visual quality. However, JPG has better compatibility with older software and email clients. For websites, prefer WebP. For files shared outside a browser, use JPG.',
-      },
-      {
-        q: 'Does converting JPG to PNG improve quality?',
-        a: 'No. Converting JPG to PNG does not recover quality lost during JPG compression. It just makes the file larger without any quality benefit. The PNG will look identical to the JPG.',
-      },
-      {
-        q: 'Can I use WebP on my website?',
-        a: 'Yes. All modern browsers — Chrome, Firefox, Safari, and Edge — support WebP. WebP is now the recommended format for images on websites because of its superior compression.',
-      },
-      {
-        q: 'Which format is best for product photos on an e-commerce site?',
-        a: 'WebP is the best choice for web display. If you also need to offer downloads, provide JPG. Avoid PNG for product photos unless you need a transparent background.',
-      },
-      {
-        q: 'Why is my PNG file larger than my JPG?',
-        a: 'PNG is lossless — it stores every pixel exactly, making it larger than JPG for photographs. JPG discards some data to achieve smaller sizes. For photos, JPG or WebP will always be smaller than PNG.',
-      },
-    ],
+  {
+    "q": "Is WebP always smaller?",
+    "a": "No. File size depends on content, dimensions and export settings. Compare your own files."
+  },
+  {
+    "q": "Does JPG to PNG restore quality?",
+    "a": "No. It changes the container and encoding, but cannot reconstruct lost detail."
+  },
+  {
+    "q": "Why did my transparent background become white?",
+    "a": "JPEG has no alpha transparency. The PNG to JPG tool composites transparent pixels onto white."
+  }
+],
   },
 
   // ── 5 ──────────────────────────────────────────────────────────────────────
@@ -547,7 +414,7 @@ export const BLOG_POSTS: BlogPost[] = [
     sections: [
       {
         paragraphs: [
-          'To add a password to a PDF file for free, you can do it directly in your browser — no software to install, no registration, and the file never leaves your device. Password-protecting a PDF encrypts it so that only someone with the correct password can open and read the document. If you are sharing contracts, financial records, medical files, or personal identification, this is an essential step.',
+          'To add a password to a PDF file for free, you can do it directly in your browser — no software to install, and no registration. The file is encrypted on our processing server over HTTPS. Password-protecting a PDF encrypts it so that only someone with the correct password can open and read the document. If you are sharing contracts, financial records, medical files, or personal identification, this is an essential step.',
         ],
       },
       {
@@ -604,7 +471,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         q: 'How do I add a password to a PDF for free?',
-        a: 'Use the Protect PDF tool on this site. Upload your PDF, enter a password, confirm it, and download the protected file. It is completely free, no registration required, and the file never leaves your browser.',
+        a: 'Use the Protect PDF tool on this site. Upload your PDF, enter a password, confirm it, and download the protected file. It is completely free and no registration is required. The file is sent over HTTPS to our processing server to apply the encryption.',
       },
       {
         q: 'What type of encryption is used?',
@@ -620,7 +487,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: 'Is my PDF file sent to a server when I protect it?',
-        a: 'No. All encryption processing happens entirely in your browser. Your PDF and your password never leave your device — no server ever sees them.',
+        a: 'Yes. Your PDF and password are sent over HTTPS to our processing server, which encrypts the file and returns it. Only upload documents you are comfortable sending to an online service.',
       },
     ],
   },
@@ -628,102 +495,67 @@ export const BLOG_POSTS: BlogPost[] = [
   // ── 7 ──────────────────────────────────────────────────────────────────────
   {
     slug: 'compress-images-for-web-without-losing-quality',
-    title: 'How to Compress Images Without Losing Quality',
-    metaTitle: 'How to Compress Images Without Losing Quality',
-    metaDescription: 'Compress images without losing quality — free, in your browser. Right settings for JPG, PNG, and WebP, plus target file sizes for every use case.',
-    excerpt: 'Large images slow down websites, fill up storage, and fail email size limits. This guide shows exactly how to compress images without losing visible quality.',
+    title: "How to Compress Images for the Web and Check Quality",
+    metaTitle: "How to Compress Images for the Web: Quality Checks",
+    metaDescription: "Reduce JPG, PNG or WebP file sizes with practical quality checks. Understand resizing, compression settings and why file-size savings vary.",
+    excerpt: "Compression trades storage and detail differently for each format. Compare the downloaded image instead of relying on a promised saving percentage.",
     category: 'Image Guide',
-    readTime: '5 min read',
+    readTime: "3 min read",
     datePublished: '2025-02-20',
-    dateModified: '2025-02-20',
+    dateModified: "2026-09-29",
     relatedTool: 'compress-image',
     relatedTools: ['resize-image', 'image-to-webp', 'bulk-image-compressor'],
     keywords: ['compress image', 'compress images without losing quality', 'reduce image file size', 'image compressor online free', 'how to compress images'],
     sections: [
-      {
-        paragraphs: [
-          'Compressing images without losing quality is simpler than most people expect — and the results are dramatic. A 4MB photo can become 400KB with no visible difference at normal viewing sizes. Large images slow down everything: websites load slower, emails bounce size limits, and cloud storage fills up faster. The right compression settings fix all of this with zero visible quality loss.',
-        ],
-      },
-      {
-        heading: 'How to Compress an Image for Free — Step by Step',
-        steps: [
-          'Open the Compress Image tool and click "Select File" or drag your image into the upload area.',
-          'Adjust the quality slider. For photos, start at 80%. For graphics, keep it at 90%+.',
-          'Click "Compress Image." The tool shows you the before and after file size instantly.',
-          'If the result is larger than you wanted, reduce the quality slider by 5–10% and try again.',
-          'Download your compressed image. The original file is never changed.',
-        ],
-      },
-      {
-        heading: 'What Quality Setting Should You Use?',
-        paragraphs: [
-          'The right quality setting depends on the image type and how it will be used:',
-        ],
-        bullets: [
-          'Photos for websites or social media → 75–85% quality. At this setting, photos are 50–80% smaller with no visible difference at normal viewing sizes.',
-          'Photos for printing → 92–95% quality. Preserves fine detail that matters at print resolution.',
-          'Product photos for online shops → 80–85%. Balances sharpness and fast loading.',
-          'Logos and graphics with flat colours → 90%+ or use PNG lossless. Compression artifacts show more on solid colours and sharp edges.',
-          'Profile pictures and thumbnails → 70–80%. Small display sizes hide any compression at these settings.',
-        ],
-        tip: 'Stay above 70% for photos. Below 70%, JPEG artifacts (blocky areas and colour banding) start appearing, especially around sharp edges and text.',
-      },
-      {
-        heading: 'Resize First, Then Compress',
-        paragraphs: [
-          'The single most impactful thing you can do before compressing is resize the image to the actual display size. Uploading a 4000×3000 pixel photo when it will only display at 800×600 pixels wastes 80% of the data before you even compress.',
-          'Use the Resize Image tool to set exact dimensions first. Then compress the resized image. This two-step approach consistently gives smaller results than compression alone.',
-        ],
-      },
-      {
-        heading: 'Convert to WebP for Maximum Size Reduction',
-        paragraphs: [
-          'WebP produces files 25–35% smaller than JPG at the same quality level — with no visible difference. Switching your images to WebP is the single biggest format change you can make for file size. All modern browsers support WebP.',
-          'Use the Image to WebP tool to convert. For multiple images, use the Bulk Image Compressor to process up to 20 files at once and download them all as a ZIP.',
-        ],
-      },
-      {
-        heading: 'Target File Sizes to Aim For',
-        bullets: [
-          'Full-width website hero image → under 200KB.',
-          'Product photo (e-commerce) → under 100KB.',
-          'Blog post inline image → under 80KB.',
-          'Thumbnail or card image → under 30KB.',
-          'Profile picture → under 20KB.',
-          'Icon or small UI element → under 10KB.',
-          'Email inline image → under 50KB (many email clients have limits).',
-        ],
-      },
-      {
-        heading: 'Bulk Compress Multiple Images',
-        paragraphs: [
-          'If you have many images to compress, use the Bulk Image Compressor tool. Upload up to 20 images at once and download them all compressed as a ZIP file — no uploads to any server, everything processed locally in your browser.',
-        ],
-      },
-    ],
+  {
+    "heading": "Check the dimensions first",
+    "paragraphs": [
+      "An image can be too large in pixels as well as bytes. The current Compress Image tool caps the longest side at 1920 pixels, so it can resize a larger source. Keep the original for printing, archiving or any workflow that needs full resolution."
+    ]
+  },
+  {
+    "heading": "Compress one image",
+    "paragraphs": [],
+    "steps": [
+      "Select one JPG, PNG or WebP file within the 50 MB picker limit.",
+      "Set the quality slider. The default is 80%; this is an encoder setting, not a measured percentage of preserved detail.",
+      "Click Compress Image and compare the displayed file sizes.",
+      "Download and inspect the image, especially small text, gradients and edges."
+    ]
+  },
+  {
+    "heading": "What the quality setting means",
+    "paragraphs": [
+      "The tool uses browser-image-compression with the input MIME type and an initial quality value. Results differ between formats and browser encoders; PNG does not behave like lossy JPEG. The single-image tool targets at most 10 MB, but that is not a guarantee for every input or device."
+    ]
+  },
+  {
+    "heading": "When the output is still too large",
+    "paragraphs": [
+      "Reduce dimensions to the size actually needed, choose an appropriate format, or try a lower quality setting where supported. For multiple files, use Bulk Image Compressor, which has its own size settings. Do not repeatedly recompress the same JPEG when you still have the original."
+    ]
+  },
+  {
+    "heading": "Make a useful comparison",
+    "paragraphs": [
+      "View the original and export at the intended display size. Compare file size and dimensions together: a smaller export may also contain fewer pixels. There is no universal 80% saving and no promise of zero visible change."
+    ]
+  }
+],
     faqs: [
-      {
-        q: 'How do I compress an image without losing quality?',
-        a: 'Use the Compress Image tool, set quality to 80–85% for photos, and download the result. At this setting, file sizes are 50–80% smaller with no visible quality difference at normal viewing sizes.',
-      },
-      {
-        q: 'What is the best quality setting for compressing a photo?',
-        a: '80–85% is the sweet spot for web use. It gives a dramatic file size reduction with no visible quality loss. Going below 70% starts to introduce visible compression artifacts.',
-      },
-      {
-        q: 'Does compressing an image change its dimensions?',
-        a: 'No. Compression only reduces the file size, not the pixel dimensions. If you also need to change the width and height, use the Resize Image tool.',
-      },
-      {
-        q: 'What is the difference between compressing and resizing an image?',
-        a: 'Resizing changes the pixel dimensions (width × height). Compressing reduces the file size by discarding some image data. Both reduce file size, but in different ways. For the smallest possible file, resize to the actual display dimensions first, then compress.',
-      },
-      {
-        q: 'How do I compress multiple images at once?',
-        a: 'Use the Bulk Image Compressor tool. Upload up to 20 images and download all compressed versions as a single ZIP file.',
-      },
-    ],
+  {
+    "q": "Will this keep my original dimensions?",
+    "a": "Images with a longest side above 1920 pixels may be resized by this tool."
+  },
+  {
+    "q": "Does compression upload my image?",
+    "a": "This tool processes the selected file in your browser."
+  },
+  {
+    "q": "Can I compress without any quality loss?",
+    "a": "It depends on the format and settings. JPEG and lossy WebP can lose detail; always keep and compare the original."
+  }
+],
   },
 
   // ── 8 ──────────────────────────────────────────────────────────────────────
@@ -832,98 +664,67 @@ export const BLOG_POSTS: BlogPost[] = [
   // ── 9 ──────────────────────────────────────────────────────────────────────
   {
     slug: 'heic-to-jpg-convert-iphone-photos',
-    title: 'How to Convert iPhone HEIC Photos to JPG',
-    metaTitle: 'How to Convert iPhone HEIC Photos to JPG — Free',
-    metaDescription: 'Convert iPhone HEIC photos to JPG free, in your browser — no app needed. Learn why HEIC causes compatibility problems and three ways to fix it.',
-    excerpt: 'iPhones save photos in HEIC format by default, which many apps, websites, and Windows PCs cannot open. Here are the fastest ways to convert HEIC to JPG for free.',
+    title: "How to Convert HEIC to JPG for Sharing iPhone Photos",
+    metaTitle: "How to Convert HEIC to JPG on Windows or in a Browser",
+    metaDescription: "Convert an original HEIC or HEIF photo to JPG in your browser. Follow the steps, check orientation and quality, and keep your original iPhone file.",
+    excerpt: "A JPG copy is easier to share with software that cannot decode your HEIC photo. Convert the actual file, then check the result before discarding anything.",
     category: 'Image Guide',
-    readTime: '4 min read',
+    readTime: "3 min read",
     datePublished: '2025-01-25',
-    dateModified: '2025-01-25',
+    dateModified: "2026-09-29",
     relatedTool: 'heic-to-jpg',
     relatedTools: ['compress-image', 'png-to-jpg', 'resize-image'],
     keywords: ['heic to jpg', 'convert heic to jpg', 'iphone heic to jpg', 'heic converter free', 'how to convert heic to jpg'],
     sections: [
-      {
-        paragraphs: [
-          'If you need to convert iPhone HEIC photos to JPG, you can do it free in your browser in seconds — no app to install, no account to create. Since iOS 11, iPhones save photos in HEIC format by default. HEIC is roughly half the size of an equivalent JPG at the same quality — great for iPhone storage, but a problem the moment you try to share the photo with a Windows PC, send it to a website, or open it in older software.',
-        ],
-      },
-      {
-        heading: 'Why HEIC Causes Compatibility Problems',
-        paragraphs: [
-          'HEIC (High Efficiency Image Container) is an Apple format. It is excellent — better compression than JPG, better colour depth — but it is not universally supported outside the Apple ecosystem.',
-        ],
-        bullets: [
-          'Windows cannot open HEIC files without installing a paid Microsoft codec from the Store.',
-          'Most websites and online forms that accept photo uploads expect JPG or PNG — not HEIC.',
-          'Many older apps — photo editors, document management systems, email clients — do not recognise HEIC.',
-          'Android phones cannot open HEIC files natively.',
-          'Some social media platforms auto-convert on upload, but many do not.',
-        ],
-      },
-      {
-        heading: 'How to Convert HEIC to JPG — Step by Step',
-        steps: [
-          'Open the HEIC to JPG tool and click "Select File" or drag your .heic file into the upload area.',
-          'The tool automatically detects the format and converts it to JPG in your browser.',
-          'Download the converted JPG file to your device.',
-          'The original HEIC file on your iPhone is unchanged — only the converted copy is saved.',
-        ],
-      },
-      {
-        heading: 'Three Ways to Convert HEIC to JPG',
-        paragraphs: [
-          'You have several options depending on your situation:',
-        ],
-        bullets: [
-          'Browser converter (fastest, works anywhere) — use the HEIC to JPG tool on this page. Works on Windows, Mac, and any device with a browser. Free, no app needed.',
-          'AirDrop or email to another device — when you send a HEIC photo from iPhone via AirDrop to a Mac, or email it to a non-Apple device, iOS automatically converts it to JPG during transfer.',
-          'Change iPhone camera settings permanently — go to Settings → Camera → Formats → select "Most Compatible." Your iPhone will save all future photos as JPG instead of HEIC.',
-        ],
-        tip: 'Changing to "Most Compatible" mode means slightly larger photo files on your iPhone (JPG is larger than HEIC), but eliminates the conversion problem permanently for new photos.',
-      },
-      {
-        heading: 'Will the Photo Quality Change?',
-        paragraphs: [
-          'Converting HEIC to JPG uses high-quality settings (92% quality) to preserve detail. Some minor quality reduction is inherent when converting to JPG because JPG is a lossy format. However, at 92% quality, photos look excellent and the difference is not visible at normal viewing sizes.',
-          'HEIC files often contain more colour depth than JPG supports, so there is a small technical downgrade in colour information. For everyday photos, this is completely imperceptible.',
-        ],
-      },
-      {
-        heading: 'Batch Converting Multiple HEIC Files',
-        paragraphs: [
-          'The HEIC to JPG tool converts one file at a time. For converting many HEIC photos at once, the most convenient options are:',
-        ],
-        bullets: [
-          'On a Mac: select multiple HEIC photos in the Photos app, right-click, and choose "Export." Select JPEG as the export format.',
-          'On Windows with the codec: once the Microsoft HEVC codec is installed, Windows Photos can open and re-save HEIC files as JPG.',
-          'Using AirDrop in bulk: select multiple photos on your iPhone, share via AirDrop to your Mac — they arrive as JPG automatically.',
-        ],
-      },
-    ],
+  {
+    "heading": "Use the original HEIC file",
+    "paragraphs": [
+      "A file extension is only a label. Renaming photo.heic to photo.jpg does not convert its contents. Transfer or save the original .heic or .heif file, then choose it in the converter. Some sharing apps already create a JPG copy, so check which file you have before converting."
+    ]
+  },
+  {
+    "heading": "Convert HEIC to JPG step by step",
+    "paragraphs": [],
+    "steps": [
+      "Open HEIC to JPG in a current browser on your computer or phone.",
+      "Select one .heic or .heif file up to 50 MB.",
+      "Click Convert to JPG and keep the tab open while decoding runs.",
+      "Download converted.jpg and check its orientation, color and detail."
+    ]
+  },
+  {
+    "heading": "Using a Windows computer",
+    "paragraphs": [
+      "If your usual photo viewer cannot open HEIC, the browser converter offers another workflow. Select the original photo from your computer and download the JPG. You do not need to install a separate desktop converter for this path, although unsupported encodings can still fail."
+    ]
+  },
+  {
+    "heading": "Quality, metadata and multiple images",
+    "paragraphs": [
+      "This converter exports JPEG at a quality setting of 92%. JPEG is lossy, so the output is not identical to the original. Do not rely on preservation of EXIF, HDR information or camera metadata. The tool returns the first image when decoding produces multiple images; it is not a Live Photo or batch archive converter."
+    ]
+  },
+  {
+    "heading": "If conversion fails",
+    "paragraphs": [
+      "Try a smaller original file in a current desktop browser with other heavy tabs closed. The file may be damaged or use an unsupported encoding. Keep the HEIC original and use a trusted local photo application if the browser cannot decode it."
+    ]
+  }
+],
     faqs: [
-      {
-        q: 'How do I convert HEIC to JPG for free?',
-        a: 'Open the HEIC to JPG tool on this page, upload your .heic file, and download the converted JPG. It is completely free, works in any browser, and your photo never leaves your device.',
-      },
-      {
-        q: 'Why can\'t Windows open my iPhone photos?',
-        a: 'iPhones save photos in HEIC format, which Windows does not support natively. You need to either convert the HEIC file to JPG (using this tool) or install the Microsoft HEVC Video Extensions codec from the Microsoft Store.',
-      },
-      {
-        q: 'Will converting HEIC to JPG reduce quality?',
-        a: 'The conversion uses 92% JPG quality, which preserves excellent visual quality. A very slight quality reduction is inherent to the JPG format, but at 92% quality it is not visible at normal viewing sizes.',
-      },
-      {
-        q: 'How do I stop my iPhone from taking HEIC photos?',
-        a: 'Go to Settings → Camera → Formats and select "Most Compatible." This saves all new photos as JPG instead of HEIC. Existing photos are not affected.',
-      },
-      {
-        q: 'Does this work with .heif files too?',
-        a: 'Yes. HEIC and HEIF are closely related formats from the same standard. The HEIC to JPG tool handles both .heic and .heif file extensions.',
-      },
-    ],
+  {
+    "q": "Can I batch convert HEIC to JPG?",
+    "a": "This tool accepts one file at a time. It does not export a batch ZIP."
+  },
+  {
+    "q": "Are my photos uploaded?",
+    "a": "The conversion library runs in the browser; the selected photo is not sent to a conversion server."
+  },
+  {
+    "q": "Should I delete the original?",
+    "a": "Keep it if original quality, metadata or future editing matter. Review the JPG before replacing any files."
+  }
+],
   },
 
   // ── 10 ─────────────────────────────────────────────────────────────────────
@@ -1051,7 +852,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'how-to-remove-password-from-pdf',
     title: 'How to Remove a Password from a PDF You Own',
     metaTitle: 'Remove a Password from a PDF Online for Free (2026)',
-    metaDescription: 'Remove a password from a PDF you own in seconds — free, private, and works entirely in your browser. No software, no email, no file size limits.',
+    metaDescription: 'Remove a password from a PDF you own in seconds — free, no software, no email, no sign-up. Files up to 4 MB are processed securely over HTTPS.',
     excerpt: 'If a PDF keeps asking for a password you already know, you can strip that password out permanently in under a minute — for free, in your browser. Here is exactly how, plus what to do if the password is for opening vs. for restricting printing and editing.',
     category: 'PDF Guide',
     readTime: '5 min read',
@@ -1079,7 +880,7 @@ export const BLOG_POSTS: BlogPost[] = [
         steps: [
           'Open the Unlock PDF tool and click "Select File" or drag your password-protected PDF into the upload area.',
           'When prompted, type in the document\'s current password exactly as it was given to you.',
-          'Click "Unlock PDF." The tool decrypts the file entirely in your browser — nothing is uploaded anywhere.',
+          'Click "Unlock PDF." The file and password are sent over HTTPS to our processing server, which returns an unlocked copy.',
           'Download the unlocked PDF. It opens immediately, with no password prompt, in any PDF viewer.',
           'Open the downloaded file once to confirm it opens without a password and that all pages and content look correct.',
         ],
@@ -1122,7 +923,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           'Removing a password from a PDF that you own, or that was sent to you for your own use, is completely normal and legal in virtually every situation — it is no different from removing a sticky note with a PIN on it once you have memorised the number. The password existed to control access in transit, not to permanently restrict what you, the rightful recipient, can do with your own copy of the document.',
           'The line to be aware of is using password-removal tools to access documents that belong to someone else and that you do not have permission to open — for example, a colleague\'s HR file or a client\'s confidential contract. Always make sure you have the right to access and modify the document before removing any protection from it.',
-          'On the privacy side, the Unlock PDF tool runs entirely in your browser using JavaScript. Your file and its password are never sent to a server, never logged, and never stored anywhere. This matters because the documents people unlock — bank statements, payslips, tax forms — are often the most sensitive files they own.',
+          'On the privacy side, the Unlock PDF tool sends your file and its password over HTTPS to our processing server, which returns the unlocked copy. Think before uploading, because the documents people unlock — bank statements, payslips, tax forms — are often the most sensitive files they own.',
         ],
       },
       {
@@ -1153,7 +954,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         q: 'How do I remove a password from a PDF for free?',
-        a: 'Open the Unlock PDF tool, upload your password-protected PDF, enter the current password when prompted, and click "Unlock PDF." The tool removes the encryption entirely in your browser and gives you a new, password-free file to download. It is completely free with no file size limits.',
+        a: 'Open the Unlock PDF tool, upload your password-protected PDF, enter the current password when prompted, and click "Unlock PDF." Our processing server removes the encryption and gives you a new, password-free file to download. It is free for files up to 4 MB.',
       },
       {
         q: 'Do I need to know the current password to remove it?',
@@ -1161,7 +962,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: 'Is it safe to remove a PDF password using an online tool?',
-        a: 'With this tool, yes — the unlocking happens entirely inside your browser using JavaScript. Your file and password are never uploaded to a server or stored anywhere, which is important since the documents people unlock are often sensitive, like bank statements or payslips.',
+        a: 'The file and password are sent over HTTPS to our processing server to remove the protection. The documents people unlock are often sensitive, like bank statements or payslips, so only upload files you are comfortable sending to an online service; otherwise use an offline PDF editor.',
       },
       {
         q: 'Can I remove a password from a PDF on my phone?',
@@ -1779,211 +1580,126 @@ export const BLOG_POSTS: BlogPost[] = [
   // ── 17 ─────────────────────────────────────────────────────────────────────
   {
     slug: 'how-to-upscale-image-without-losing-quality',
-    title: 'How to Upscale an Image Without Losing Quality (Free AI Upscaler)',
-    metaTitle: 'How to Upscale an Image Without Losing Quality (Free)',
-    metaDescription: 'Upscale an image without losing quality using a free AI upscaler — no Photoshop needed. See how AI upscaling works and when it beats simple resizing.',
-    excerpt: 'Stretching a small image bigger just makes it blurry. AI upscaling adds real detail instead of guessing pixels. Here is how to upscale an image without losing quality, for free.',
+    title: "How to Upscale an Image: Larger Dimensions, Realistic Detail",
+    metaTitle: "How to Upscale an Image to 2x, 3x or 4x",
+    metaDescription: "Enlarge an image to 2x, 3x or 4x in your browser and export PNG. Learn how interpolation differs from AI upscaling and what to check before use.",
+    excerpt: "Increasing pixel dimensions can help a layout, but it does not recreate missing detail. This tool uses browser interpolation, not an AI model.",
     category: 'Image Guide',
-    readTime: '5 min read',
+    readTime: "3 min read",
     datePublished: '2026-07-09',
-    dateModified: '2026-07-09',
+    dateModified: "2026-09-29",
     relatedTool: 'upscale-image',
     relatedTools: ['resize-image', 'compress-image', 'png-to-jpg'],
     keywords: ['ai image upscaler free', 'upscale image without losing quality', 'increase image resolution', 'ai upscaler online', 'how to upscale an image'],
     sections: [
-      {
-        paragraphs: [
-          'To upscale an image without losing quality, you need more than the resize tool built into your photo viewer — you need AI. A free AI upscaler can take a small, low-resolution photo and enlarge it while adding believable detail, instead of just stretching the existing pixels into a blurry mess. This guide explains how AI upscaling actually works, when it helps, and how to get the sharpest possible result from a low-res image, all for free in your browser.',
-        ],
-      },
-      {
-        heading: 'Why Simply Resizing Makes Images Blurry',
-        paragraphs: [
-          'A digital image is a fixed grid of pixels. A 500×500 pixel photo has 250,000 pixels of actual information — no more, no less. When you resize it up to 2000×2000 using a basic resize tool, the software has to invent 16 times more pixels than the original contained. Traditional resizing methods (nearest-neighbor, bilinear, bicubic) do this by averaging and blending nearby pixels, which produces a larger image that looks soft, blurry, or blocky because there is no new detail — just the old detail spread thinner.',
-          'This is the core limitation of ordinary resizing: it can change dimensions, but it cannot add information that was never captured in the first place.',
-        ],
-      },
-      {
-        heading: 'How AI Upscaling Is Different',
-        paragraphs: [
-          'AI upscaling uses a neural network trained on millions of image pairs — each pair showing a low-resolution version and its true high-resolution original. Through this training, the model learns realistic patterns for how edges, textures, skin, fabric, and foliage typically look at higher detail levels.',
-          'When you upscale a new image, the AI does not just stretch pixels — it reconstructs plausible fine detail based on everything it learned, guided by the actual content of your photo. The result is a larger image with sharper edges and more convincing texture than any traditional resize method can produce, especially at 2x and 4x scale.',
-        ],
-      },
-      {
-        heading: 'How to Upscale an Image — Step by Step',
-        steps: [
-          'Open the Upscale Image tool and click "Select File" or drag your image into the upload area.',
-          'Choose an upscale factor — typically 2x or 4x the original dimensions.',
-          'Click "Upscale Image." The AI model processes the photo and reconstructs it at the higher resolution.',
-          'Compare the result against the original at 100% zoom to confirm the detail looks natural.',
-          'Download the upscaled image in its original format.',
-        ],
-      },
-      {
-        heading: 'What Images Upscale Best',
-        paragraphs: [
-          'AI upscaling accuracy depends heavily on what is already in the source image:',
-        ],
-        bullets: [
-          'Portraits and product photos with clear focus → excellent results, especially at 2x.',
-          'Photos with moderate existing detail (not extremely blurry or heavily compressed) → the AI has real information to build on and produces convincing results.',
-          'Logos and simple graphics → very good results since edges are clean and predictable.',
-          'Extremely low-resolution or heavily pixelated source images → the AI can still improve them, but very aggressive upscaling (like 4x from a tiny thumbnail) has more visible artifacts since there is less real detail to work from.',
-          'Heavily JPEG-compressed images with blocky artifacts → the AI may sharpen the compression artifacts along with the real detail, so start from the highest-quality source you have.',
-        ],
-        tip: 'For the best result, always start from the highest-resolution and least-compressed version of the image you can find. AI upscaling improves what is there — it works best when there is genuine detail to enhance.',
-      },
-      {
-        heading: 'When to Upscale vs. When to Just Resize',
-        paragraphs: [
-          'Upscaling and resizing solve different problems, and picking the wrong one wastes time.',
-        ],
-        bullets: [
-          'Use AI upscaling when you are making an image larger than its original size — enlarging an old photo, preparing a small product image for a big banner, or printing a low-resolution image at a bigger size.',
-          'Use ordinary resizing when you are making an image smaller — shrinking a photo for a thumbnail or web upload does not need AI, since no new detail needs to be invented.',
-          'If your image is already high resolution and just needs a smaller file size, use the Compress Image tool instead — that is a file-size problem, not a resolution problem.',
-        ],
-      },
-      {
-        heading: 'Common Use Cases for AI Upscaling',
-        bullets: [
-          'Old or scanned family photos that were digitized at low resolution and need enlarging for printing.',
-          'Product photos received from a supplier at low resolution that need to look sharp on a larger e-commerce banner.',
-          'Profile pictures or logos that were saved small and need to be used somewhere much larger, like a website header.',
-          'Screenshots or images pulled from old documents where the original file no longer exists at higher resolution.',
-        ],
-      },
-    ],
+  {
+    "heading": "Choose a suitable source",
+    "paragraphs": [
+      "Start with the largest clean original you have. A blurry thumbnail stays limited by its source detail even when its pixel dimensions increase."
+    ]
+  },
+  {
+    "heading": "Enlarge your image",
+    "paragraphs": [],
+    "steps": [
+      "Select a JPG, PNG or WebP image.",
+      "Choose 2x, 3x or 4x and click Upscale Image.",
+      "Download the PNG and check its edges and detail at the intended display size."
+    ]
+  },
+  {
+    "heading": "What the scale means",
+    "paragraphs": [
+      "A 2x setting doubles width and height, creating four times as many pixels. A 4x setting creates sixteen times as many pixels. File size and memory use vary; they do not follow a guaranteed byte-size multiplier."
+    ]
+  },
+  {
+    "heading": "Interpolation is not AI reconstruction",
+    "paragraphs": [
+      "This tool uses the browser canvas with high-quality smoothing. The browser chooses the interpolation implementation. There is no configured AI reconstruction path in this tool, and it cannot promise to restore faces, text or other missing detail."
+    ]
+  }
+],
     faqs: [
-      {
-        q: 'How do I upscale an image for free without losing quality?',
-        a: 'Open the Upscale Image tool, upload your photo, choose 2x or 4x, and download the result. The AI model reconstructs realistic detail as it enlarges the image, rather than simply stretching existing pixels. It is free with no registration required.',
-      },
-      {
-        q: 'What is the difference between resizing and AI upscaling?',
-        a: 'Resizing changes an image\'s dimensions using the existing pixel data, which makes enlarged images look soft or blurry. AI upscaling uses a trained neural network to reconstruct plausible new detail as it enlarges, producing a sharper result, especially at 2x or 4x scale.',
-      },
-      {
-        q: 'How much can I upscale an image before it looks fake or artificial?',
-        a: '2x upscaling almost always looks natural. 4x upscaling looks very good on images with reasonable starting detail, but extremely low-resolution or heavily compressed source images can show more visible artifacts at 4x since there is less real information to build from.',
-      },
-      {
-        q: 'Can AI upscaling fix a blurry or out-of-focus photo?',
-        a: 'It can improve apparent sharpness and add texture, but it cannot recover detail that was never captured due to motion blur or being out of focus. Upscaling works best on images that are simply low-resolution, not fundamentally blurry.',
-      },
-      {
-        q: 'What image formats does the upscaler support?',
-        a: 'The tool accepts common formats like JPG, PNG, and WebP, and outputs the upscaled image in the same format as your original upload.',
-      },
-      {
-        q: 'Is my image uploaded to a server when I upscale it?',
-        a: 'The upscaling process uses AI models that run the enhancement and return your enlarged image; no image is stored after processing completes, and there is no registration or account required to use the tool.',
-      },
-    ],
+  {
+    "q": "Is this an AI upscaler?",
+    "a": "No. It enlarges images using browser interpolation."
+  },
+  {
+    "q": "What format is the output?",
+    "a": "The enlarged image is exported as PNG."
+  },
+  {
+    "q": "Will it sharpen a blurry photo?",
+    "a": "Larger dimensions do not recover missing detail. Compare the result before using it."
+  }
+],
   },
 
   // ── 18 ─────────────────────────────────────────────────────────────────────
   {
     slug: 'how-to-add-watermark-to-photos',
-    title: 'How to Add a Watermark to Your Photos (Protect Your Work)',
-    metaTitle: 'How to Add a Watermark to Your Photos (Free)',
-    metaDescription: 'Add a watermark to your photos for free in your browser. Learn how to protect images from theft with text or logo watermarks — position, opacity, and more.',
-    excerpt: 'Unwatermarked photos get lifted and reposted without credit. Here is how to add a watermark to your photos for free, with the positioning and opacity settings that actually deter theft.',
+    title: "How to Add a Text Watermark to JPG, PNG and WebP Photos",
+    metaTitle: "How to Add a Watermark to JPG and PNG Photos",
+    metaDescription: "Add a text watermark to a JPG, PNG or WebP photo. Choose position and opacity, check the export, and understand the limits of a visible watermark.",
+    excerpt: "Put your name or copyright text on a photo without uploading it for processing. This guide matches the controls in the image watermark tool.",
     category: 'Image Guide',
-    readTime: '5 min read',
+    readTime: "3 min read",
     datePublished: '2026-07-13',
-    dateModified: '2026-07-13',
+    dateModified: "2026-09-29",
     relatedTool: 'add-watermark-image',
     relatedTools: ['compress-image', 'resize-image', 'add-text-to-image'],
     keywords: ['add watermark to photos', 'watermark photo online free', 'how to watermark images', 'photo watermark tool', 'protect photos from theft'],
     sections: [
-      {
-        paragraphs: [
-          'If you post photos online — product shots, portfolio work, event photography — someone will eventually save one and reuse it without credit. A watermark will not stop a determined thief, but it does two things that matter: it makes casual reuse annoying enough that most people skip it, and it keeps your name attached to the image wherever it ends up. This guide covers how to add a watermark to your photos for free, and the settings that make a watermark effective without ruining the photo.',
-        ],
-      },
-      {
-        heading: 'Text Watermark or Logo Watermark?',
-        paragraphs: [
-          'Both work, and the right choice depends on what you are protecting.',
-        ],
-        bullets: [
-          'Text watermark — your name, brand, or website URL rendered directly on the image. Fastest to set up, works for any photo, and a URL doubles as free advertising if someone reposts the image.',
-          'Logo watermark — a small PNG of your logo overlaid on the photo. Looks more polished for a business or brand, especially with a transparent-background logo, but takes a bit more setup than typing text.',
-        ],
-        tip: 'For portfolios and client galleries, a subtle text watermark with your studio name or website is usually enough. For product photography going on marketplaces or social media, a logo watermark reinforces brand recognition every time the image is shared.',
-      },
-      {
-        heading: 'How to Add a Watermark to a Photo — Step by Step',
-        steps: [
-          'Open the Add Watermark to Image tool and upload your photo.',
-          'Choose text or image watermark, then enter your text (or upload your logo file).',
-          'Set the position — corner placements are common, but centered or repeated (tiled) watermarks are harder to crop out.',
-          'Adjust opacity and font size so the watermark is clearly visible but does not obscure the photo underneath.',
-          'Click "Add Watermark" and download the result — your original photo is left untouched.',
-        ],
-      },
-      {
-        heading: 'Where to Place a Watermark for Best Protection',
-        paragraphs: [
-          'Placement is the single biggest factor in whether a watermark actually deters reuse. A watermark tucked into a corner takes seconds to crop out, especially on square or landscape photos where cropping five percent off one edge barely changes the composition.',
-        ],
-        bullets: [
-          'Center placement — much harder to crop without cutting into the main subject. The strongest option if theft prevention is the priority.',
-          'Corner placement — less intrusive visually, but easiest to remove by cropping. Best for casual use where you mainly want attribution, not hard protection.',
-          'Diagonal or tiled watermark — repeats the mark across the image so no single crop removes it. Common for stock photography and preview images that should not be usable at all without a license.',
-        ],
-      },
-      {
-        heading: 'Getting the Opacity Right',
-        paragraphs: [
-          'Opacity is a tradeoff between visibility and usability. Too faint, and the watermark is easy to clone-stamp out or simply ignore. Too strong, and it distracts from the photo itself — which defeats the point if you are trying to showcase your work.',
-          'A good starting point is 30–50% opacity for corner or center placements, and lower (15–25%) for a diagonal tiled watermark, since the repetition compensates for the reduced strength of any single instance. Preview the result at the size your photo will actually be viewed — a watermark that looks subtle at full resolution can look heavy-handed once the image is displayed small on a phone screen.',
-        ],
-      },
-      {
-        heading: 'Watermarking Without Ruining the Photo',
-        bullets: [
-          'Use a font size proportional to the image — a fixed pixel size looks tiny on a 4000px photo and huge on a 800px one. Most watermark tools scale text relative to image dimensions for this reason.',
-          'Pick a color with contrast against the busiest part of the photo, or use a semi-transparent white/black watermark that reads on both light and dark backgrounds.',
-          'Avoid placing the watermark directly over the subject\'s face or the product\'s key detail — off-subject areas (background, negative space) keep the watermark visible without distracting from what matters.',
-          'Keep the text short. A full sentence is easy to read once but clutters the image every time it is seen; a name, handle, or short URL communicates the same thing with far less visual weight.',
-        ],
-      },
-      {
-        heading: 'Batch Watermarking Multiple Photos',
-        paragraphs: [
-          'If you are watermarking an entire shoot or product catalog, apply the same text, position, and opacity settings consistently across every photo rather than adjusting per image — consistency reads as professional and makes your work instantly recognizable as a set. After watermarking, run the batch through the Compress Image tool to keep file sizes reasonable for upload, since the extra layer adds a small amount of data to each file.',
-        ],
-      },
-    ],
+  {
+    "heading": "Choose text that fits the photo",
+    "paragraphs": [
+      "Use a short name, website or copyright notice. This tool uses text rather than a logo file and selects the font size automatically from the image width. Long phrases can extend beyond the edge, especially on narrow photos."
+    ]
+  },
+  {
+    "heading": "Add a watermark to a JPG",
+    "paragraphs": [],
+    "steps": [
+      "Open Add Watermark to Image and select one JPG, PNG or WebP file up to 50 MB.",
+      "Enter your text and select Bottom Right, Bottom Left, Center, Top Right or Top Left.",
+      "Adjust opacity between 10% and 90%, then click Add Watermark.",
+      "Click Download and inspect the exported copy. Keep your original photo."
+    ]
+  },
+  {
+    "heading": "Pick a readable position and opacity",
+    "paragraphs": [
+      "Try a corner for a discreet credit, or the center when you want the mark to be harder to crop away. Start near the middle of the opacity range and inspect both light and dark parts of the photo. The best position depends on the image; avoid covering a face, label or other essential detail."
+    ]
+  },
+  {
+    "heading": "What happens to the file?",
+    "paragraphs": [
+      "The image retains its pixel dimensions and is re-encoded in its supported source format. JPG and WebP export can change detail because those formats may be lossy. A PNG export also becomes a newly rendered image, so do not assume original metadata is retained. Processing happens in the browser."
+    ]
+  },
+  {
+    "heading": "Know the limits",
+    "paragraphs": [
+      "There is no batch or logo-watermark option in this tool. A visible mark can identify your work, but it cannot stop copying, cropping or retouching. For a document, use Add Watermark to PDF instead; that tool labels every page with text."
+    ]
+  }
+],
     faqs: [
-      {
-        q: 'How do I add a watermark to a photo for free?',
-        a: 'Use the Add Watermark to Image tool. Upload your photo, choose a text or logo watermark, set the position and opacity, and download the result. It is free, works in your browser, and does not require an account.',
-      },
-      {
-        q: 'Does a watermark actually stop people from stealing photos?',
-        a: 'A watermark will not stop someone determined to steal an image outright, but it deters casual reuse and keeps your name attached to the photo if it is shared or reposted. Center or tiled placements are much harder to crop out than a corner watermark.',
-      },
-      {
-        q: 'What opacity should I use for a photo watermark?',
-        a: '30–50% opacity works well for corner or center placements — visible enough to deter cropping, subtle enough not to distract from the photo. Tiled or diagonal watermarks can use lower opacity (15–25%) since the repetition compensates.',
-      },
-      {
-        q: 'Should I use a text watermark or a logo watermark?',
-        a: 'A text watermark (your name or website) is fastest to set up and works for any photo. A logo watermark looks more polished for a business or brand and reinforces recognition each time the image is shared. Either can be applied with the same tool.',
-      },
-      {
-        q: 'Where is the best place to put a watermark?',
-        a: 'Center or diagonal/tiled placements are the hardest to crop out and offer the strongest protection. Corner placements are less visually intrusive but can be cropped out in seconds, so they work better for attribution than for theft prevention.',
-      },
-      {
-        q: 'Will watermarking reduce my photo quality?',
-        a: 'No — the watermark is added as an overlay on top of the existing image data, and the underlying photo is not recompressed or altered beyond adding the watermark layer. Your original file is also never modified; the tool produces a new watermarked copy.',
-      },
-    ],
+  {
+    "q": "Can I add a watermark to JPG for free?",
+    "a": "Yes. Select a JPG, enter your text, set position and opacity, process it and download a copy without registration."
+  },
+  {
+    "q": "Can I watermark multiple photos at once?",
+    "a": "The current tool works on one image at a time."
+  },
+  {
+    "q": "Can the tool remove someone else’s watermark?",
+    "a": "No. It adds a text overlay; it does not remove an existing watermark."
+  }
+],
   },
 
   // ── 19 ─────────────────────────────────────────────────────────────────────

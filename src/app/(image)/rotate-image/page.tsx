@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { RotateImageClient } from './RotateImageClient'
 const tool = getToolBySlug('rotate-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Rotate Image Online Free — Rotate Photos 90° 180° 270°',
     description: 'Rotate images online for free. Rotate photos 90°, 180°, or 270°. Fix portrait/landscape orientation instantly. No registration.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Rotate images online for free. Rotate photos 90°, 180°, or 270°. Fix portrait/landscape orientation instantly. No registration.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/rotate-image')
 }
 
 const HOW_TO_STEPS = [

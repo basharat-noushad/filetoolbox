@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { PdfToPdfaClient } from './PdfToPdfaClient'
 const tool = getToolBySlug('pdf-to-pdfa')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'PDF to PDF/A Converter Free Online — Archive Format',
     description: 'Convert PDF files to PDF/A format for long-term archiving. Meets ISO 19005 standard. Free online PDF/A converter. No registration required.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert PDF files to PDF/A format for long-term archiving. Meets ISO 19005 standard. Free online PDF/A converter. No registration required.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/pdf-to-pdfa')
 }
 
 const HOW_TO_STEPS = [

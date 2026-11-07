@@ -7,6 +7,7 @@ const AD_SIZES: Record<AdFormat, { w: number; h: number }> = {
   rectangle:        { w: 300, h: 250 },
   'rectangle-tall': { w: 300, h: 600 },
 }
+// Placeholder slot IDs: replace with real AdSense slot IDs before enabling ads.
 const AD_SLOT_IDS: Record<string, string> = {
   header:       '1234567890',
   sidebar:      '0987654321',
@@ -28,18 +29,11 @@ export function AdBanner({ slot, format }: { slot: string; format: AdFormat }) {
     } catch { /* suppress SSR hydration errors */ }
   }, [isConfigured])
 
-  if (!isConfigured) {
-    return (
-      <div style={{ width: w, height: h, maxWidth: '100%' }}
-        className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center text-xs text-gray-400 font-medium">
-        Ad slot — {w}×{h}
-      </div>
-    )
-  }
+  if (!isConfigured) return null
 
   return (
     <ins ref={adRef} className="adsbygoogle"
-      style={{ display: 'block', width: w, height: h, maxWidth: '100%' }}
+      style={{ display: 'block', width: '100%', maxWidth: w, minHeight: h }}
       data-ad-client={publisherId}
       data-ad-slot={AD_SLOT_IDS[slot] ?? '0000000000'}
       data-ad-format="auto"

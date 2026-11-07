@@ -4,25 +4,25 @@ import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
 import { deletePdfPages } from '@/lib/tools/pdf/deletePages'
+import { withPdf } from '@/lib/tools/pdf/pdfjs'
 
 interface PageThumb { pageNum: number; dataUrl: string }
 
 async function renderThumbs(file: File, signal: AbortSignal): Promise<PageThumb[]> {
-  const pdfjs = await import('pdfjs-dist')
-  pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js'
-  const pdf = await pdfjs.getDocument({ data: await file.arrayBuffer() }).promise
-  const thumbs: PageThumb[] = []
-  for (let i = 1; i <= pdf.numPages; i++) {
-    if (signal.aborted) break
-    const page = await pdf.getPage(i)
-    const viewport = page.getViewport({ scale: 0.4 })
-    const canvas = document.createElement('canvas')
-    canvas.width = viewport.width
-    canvas.height = viewport.height
-    await page.render({ canvasContext: canvas.getContext('2d')!, viewport, canvas } as Parameters<typeof page.render>[0]).promise
-    thumbs.push({ pageNum: i, dataUrl: canvas.toDataURL('image/jpeg', 0.7) })
-  }
-  return thumbs
+  return withPdf(file, async pdf => {
+    const thumbs: PageThumb[] = []
+    for (let i = 1; i <= pdf.numPages; i++) {
+      if (signal.aborted) break
+      const page = await pdf.getPage(i)
+      const viewport = page.getViewport({ scale: 0.4 })
+      const canvas = document.createElement('canvas')
+      canvas.width = viewport.width
+      canvas.height = viewport.height
+      await page.render({ canvas, viewport }).promise
+      thumbs.push({ pageNum: i, dataUrl: canvas.toDataURL('image/jpeg', 0.7) })
+    }
+    return thumbs
+  })
 }
 
 export function DeletePdfPagesClient() {

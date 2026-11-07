@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { JpgToPdfClient } from './JpgToPdfClient'
 const tool = getToolBySlug('jpg-to-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'JPG to PDF Online Free — Convert Images to PDF',
     description: 'Convert JPG images to a PDF file online for free. Add multiple images and download as a single PDF. No registration needed.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert JPG images to a PDF file online for free. Add multiple images and download as a single PDF. No registration needed.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/jpg-to-pdf')
 }
 
 const HOW_TO_STEPS = [

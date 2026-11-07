@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
@@ -5,17 +6,17 @@ const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com')
 const LAST_UPDATED = '2025-01-01'
 const LAST_UPDATED_DISPLAY = 'January 1, 2025'
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy — PDF and Image +',
-  description: 'PDF and Image + privacy policy. Your files never leave your browser. We collect no personal information. Full details on data handling and analytics.',
+export const metadata: Metadata = withSocialMetadata({
+  title: 'Privacy Policy',
+  description: 'PDF and Image + privacy policy. Learn which tools process files locally, which use a server, and how analytics and advertising are used.',
   keywords: ['pdf tool privacy policy', 'no data collection pdf tool', 'browser based private pdf', 'image tool privacy'],
   alternates: { canonical: `${SITE_URL}/privacy` },
   openGraph: {
     title: 'Privacy Policy — PDF and Image +',
-    description: 'Your files never leave your browser. PDF and Image + collects no personal information. Full privacy policy.',
+    description: 'File processing, server-based tools, analytics and advertising on PDF and Image +.',
     url: `${SITE_URL}/privacy`,
   },
-}
+}, '/privacy')
 
 // E-E-A-T: privacy policy schema signals to Google this is a legitimate, trustworthy site
 const privacySchema = {
@@ -24,7 +25,7 @@ const privacySchema = {
   '@id': `${SITE_URL}/privacy`,
   url: `${SITE_URL}/privacy`,
   name: 'Privacy Policy — PDF and Image +',
-  description: 'Privacy policy for pdfandimage.com. Files are processed locally in the browser. No personal data collected.',
+  description: 'Privacy policy for pdfandimage.com. Information about local and server file processing, analytics and advertising.',
   datePublished: '2025-01-01',
   dateModified: LAST_UPDATED,
   isPartOf: { '@type': 'WebSite', name: 'PDF and Image +', url: SITE_URL },
@@ -48,18 +49,19 @@ const sections = [
     heading: '1. Overview',
     content: `PDF and Image + ("we", "our", "the site") is a free online tool suite for PDF and image processing available at pdfandimage.com. We are committed to protecting your privacy. This policy explains what information we collect, how we use it, and what we never do with your data.
 
-The short version: your files never leave your device. We do not collect, store, or process any of the documents or images you work with on this site.`,
+Most tools process selected files in your browser. Some tools send files to a processing service. The site also uses analytics and advertising services described below.`,
   },
   {
     id: 'files',
     heading: '2. Your Files',
-    content: `All PDF and image processing on PDF and Image + happens locally in your browser using JavaScript. When you upload a file to a tool, it is loaded into your browser's memory and processed there. No file data is transmitted to our servers.
+    content: `Tools labeled Browser processing load the selected file into browser memory and process it locally. Tools labeled Server processing send the selected file to a processing service.
 
-Exception: a small number of tools that require server-side conversion (such as PDF to Word, Word to PDF, PDF to Excel, and PDF to PowerPoint) send your file to a self-hosted processing server. In these cases:
+Remove Background forwards the image to remove.bg through our API. Other server tools use the configured document-processing services. Server tools include PDF to Word, Word to PDF, PDF to Excel, Excel to PDF, PDF to PowerPoint, PowerPoint to PDF, PDF to PDF/A, Protect PDF, Unlock PDF and Remove Background. In these cases:
 • Your file is transmitted over an encrypted HTTPS connection.
 • It is processed immediately and the result is returned to your browser.
-• The file is never stored on disk and is deleted from server memory immediately after conversion.
-• No logs of the file content are kept.`,
+• Temporary storage, retention and logging depend on the deployed processing service; this page does not promise immediate deletion or memory-only handling.
+• Do not submit sensitive files unless the processing arrangement meets your requirements.
+• To prevent abuse, our server keeps your IP address in memory for up to one hour to apply per-hour usage limits. It is not stored in a database.`,
   },
   {
     id: 'analytics',
@@ -160,9 +162,9 @@ export default function PrivacyPage() {
             <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5 mb-10">
               <p className="text-sm font-semibold text-emerald-800 mb-1">🔒 Key privacy commitment</p>
               <p className="text-sm text-emerald-700 leading-relaxed">
-                Your files are processed locally in your browser and never uploaded to our servers
-                (with the narrow exception of server-side conversion tools described in Section 2).
-                We collect no personal information.
+                Most tools process your files locally in your browser and never upload them. Tools marked
+                "Server processing" send your file to a processing service, as described in Section 2.
+                We don't ask for accounts or personal details; analytics are described in Section 3.
               </p>
             </div>
 

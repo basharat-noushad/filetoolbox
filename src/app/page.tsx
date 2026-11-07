@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import type { LucideIcon } from 'lucide-react'
@@ -15,16 +16,16 @@ import { ToolSearchBar } from '@/components/tools/ToolSearchBar'
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com').replace(/\/$/, '')
 
-export const metadata: Metadata = {
-  title: 'PDF and Image + — Free PDF & Image Tools Online',
-  description: 'Free online tools for PDF and image files. 50+ tools — merge, compress, convert, crop, resize and more. No sign-up required. Files processed in your browser.',
+export const metadata: Metadata = withSocialMetadata({
+  title: { absolute: 'PDF and Image + — Free PDF & Image Tools Online' },
+  description: 'Free online tools for PDF and image files. 50+ tools — merge, compress, convert, crop, resize and more. No sign-up required. Most tools process files in your browser; some use a server.',
   alternates: { canonical: SITE_URL },
   openGraph: {
     title: 'PDF and Image + — Free PDF & Image Tools Online',
     description: 'Free online tools for PDF and image files. 50+ tools — merge, compress, convert, crop, resize and more. No sign-up. Works in your browser.',
     url: SITE_URL,
   },
-}
+}, '/')
 
 // ── ItemList schema — AIO/GEO: tells AI models exactly what tools exist ───────
 const toolListSchema = {
@@ -48,20 +49,6 @@ const toolListSchema = {
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     },
   })),
-}
-
-// ── SiteNavigationElement — helps AI understand site structure ────────────────
-const navigationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SiteLinksSearchBox',
-  url: SITE_URL,
-  potentialAction: [
-    {
-      '@type': 'SearchAction',
-      target: `${SITE_URL}/?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
-  ],
 }
 
 const TOOL_ICONS: Record<string, LucideIcon> = {
@@ -91,7 +78,6 @@ export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolListSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(navigationSchema) }} />
 
       <main className="min-h-dvh">
 
@@ -110,7 +96,7 @@ export default function HomePage() {
             <p className="text-lg text-brand-300 mb-10 max-w-xl mx-auto leading-relaxed site-description" data-speakable>
               50+ free browser-based tools for PDF and image processing.
               Merge, compress, convert, crop, resize and more.
-              Your files never leave your browser. No sign-up required.
+              Most tools process files locally; some conversions use a server. No sign-up required.
             </p>
             <div className="relative mb-4 max-w-2xl mx-auto">
               <ToolSearchBar />
@@ -123,7 +109,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-4 py-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', label: 'Secure & Private', sub: 'Files never uploaded' },
+                { icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', label: 'Clear file handling', sub: 'Processing details on each tool' },
                 { icon: 'M13 10V3L4 14h7v7l9-11h-7z', label: 'Lightning Fast', sub: 'Browser-side processing' },
                 { icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z', label: 'Always Free', sub: 'No subscriptions ever' },
                 { icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2', label: '50+ Tools', sub: 'PDF & Image processing' },
@@ -220,12 +206,12 @@ export default function HomePage() {
             <p className="text-gray-600 leading-relaxed mb-3">
               <strong>PDF and Image +</strong> is a free online toolkit for PDF and image processing.
               It provides 50+ browser-based tools — merge PDFs, compress images, convert file formats,
-              remove backgrounds, and more — completely free, with no registration and no file size limits.
+              remove backgrounds, and more — completely free, with no registration. File and device limits apply.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Unlike ILovePDF or Smallpdf, most tools process your files locally in your browser
-              using JavaScript. Your files never leave your device — there are no server uploads,
-              no watermarks on output, and no daily usage caps.
+              Most tools process files locally in your browser. Server-based tools show a
+              processing notice before you submit a file. Outputs have no automatic branding;
+              file-size and device limits are listed in the tools.
             </p>
             <Link href="/about" className="text-sm text-brand-600 hover:underline font-medium">
               Learn more about PDF and Image + →
@@ -235,7 +221,7 @@ export default function HomePage() {
           {/* Bottom CTA */}
           <section className="bg-brand-900 rounded-2xl p-8 text-center">
             <h2 className="text-xl font-bold text-white mb-2">Start using PDF and Image + today</h2>
-            <p className="text-brand-300 text-sm mb-6">No account. No credit card. No limits. Just pick a tool and go.</p>
+            <p className="text-brand-300 text-sm mb-6">No account. No credit card. Pick a tool and check its file requirements.</p>
             <Link href="#pdf-tools"
               className="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors duration-150 text-sm">
               Browse All Tools →

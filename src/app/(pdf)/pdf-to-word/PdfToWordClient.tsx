@@ -28,11 +28,11 @@ export function PdfToWordClient() {
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
-      <FileDropzone
+      <FileDropzone maxSize={4_000_000}
         accept={{ 'application/pdf': ['.pdf'] }}
         onFilesSelected={setFiles}
         label="Drag & drop your PDF here"
-        sublabel="Converts to editable .docx — max 50MB"
+        sublabel="Converts to editable .docx — max 4MB"
       />
       {error && <p className="mt-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2">{error}</p>}
       <Button onClick={handleConvert} disabled={files.length === 0 || processing} className="mt-4 w-full cursor-pointer" size="lg">

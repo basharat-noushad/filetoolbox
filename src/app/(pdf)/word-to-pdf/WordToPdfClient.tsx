@@ -32,11 +32,11 @@ export function WordToPdfClient() {
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
-      <FileDropzone
+      <FileDropzone maxSize={4_000_000}
         accept={{ 'application/vnd.openxmlformats-officedocument.wordprocessingml.document': ['.docx'], 'application/msword': ['.doc'] }}
         onFilesSelected={f => setFile(f[0] || null)}
         label="Drag & drop your Word document here"
-        sublabel="Supports .docx and .doc formats — max 50MB"
+        sublabel="Supports .docx and .doc formats — max 4MB"
       />
       {error && <p className="mt-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2">{error}</p>}
       {status && !error && <p className="mt-3 text-sm text-blue-700 bg-blue-50 border border-blue-200 rounded-lg px-4 py-2">{status}</p>}

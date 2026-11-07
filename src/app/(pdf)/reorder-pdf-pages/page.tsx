@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { ReorderPdfPagesClient } from './ReorderPdfPagesClient'
 const tool = getToolBySlug('reorder-pdf-pages')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Reorder PDF Pages Online Free — Rearrange PDF Pages',
     description: 'Rearrange pages in a PDF online for free. Simply enter the new page order and download your reorganized PDF. No registration required.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Rearrange pages in a PDF online for free. Simply enter the new page order and download your reorganized PDF. No registration required.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/reorder-pdf-pages')
 }
 
 const HOW_TO_STEPS = [

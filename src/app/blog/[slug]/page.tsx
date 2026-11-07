@@ -17,9 +17,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const post = getBlogPostBySlug(slug)
-  if (!post) return { title: 'Article Not Found | PDF and Image +' }
+  if (!post) notFound()
   return {
-    title: `${post.metaTitle} | PDF and Image +`,
+    title: post.metaTitle,
     description: post.metaDescription,
     keywords: post.keywords,
     authors: [{ name: 'PDF and Image +', url: SITE_URL }],
@@ -65,11 +65,12 @@ export default async function BlogPostPage({
       '@type': 'Organization',
       name: 'PDF and Image +',
       url: SITE_URL,
-      logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon.png` },
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
     keywords: post.keywords.join(', '),
     articleSection: post.category,
+    image: `${postUrl}/opengraph-image`,
   }
 
   const breadcrumbSchema = {
@@ -112,6 +113,10 @@ export default async function BlogPostPage({
 
   const relatedPosts = BLOG_POSTS
     .filter(p => p.slug !== slug && p.category === post.category)
+    .sort((a, b) => {
+      const score = (p: typeof post) => Number(p.relatedTool === post.relatedTool) * 3 + Number(post.relatedTools.includes(p.relatedTool)) * 2 + Number(p.relatedTools.includes(post.relatedTool))
+      return score(b) - score(a)
+    })
     .slice(0, 3)
 
   const toolName = post.relatedTool
@@ -150,8 +155,8 @@ export default async function BlogPostPage({
             </span>
             <span className="flex items-center gap-1.5">
               <Calendar className="w-3.5 h-3.5" />
-              <time dateTime={post.datePublished}>
-                {new Date(post.datePublished).toLocaleDateString('en-US', {
+              <time dateTime={post.dateModified}>
+                Updated {new Date(post.dateModified).toLocaleDateString('en-US', {
                   month: 'long', day: 'numeric', year: 'numeric',
                 })}
               </time>

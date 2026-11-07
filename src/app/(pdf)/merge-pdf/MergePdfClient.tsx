@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
-import { mergePdfs } from '@/lib/tools/pdf/merge'
 
 export function MergePdfClient() {
   const [files, setFiles] = useState<File[]>([])
@@ -15,6 +14,7 @@ export function MergePdfClient() {
     if (files.length < 2) { setError('Please select at least 2 PDF files to merge.'); return }
     setProcessing(true); setError(null)
     try {
+      const { mergePdfs } = await import('@/lib/tools/pdf/merge')
       setResult(await mergePdfs(files))
     } catch {
       setError('An error occurred while merging. Please check your files and try again.')

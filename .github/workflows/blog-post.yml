@@ -74,7 +74,10 @@ jobs:
                  ONLY link to slugs that actually exist in the registry.
 
             3. WRITE THE POST (append a new object to the BLOG_POSTS array)
-               - 1,200–2,000 words of genuinely useful content targeting the keyword.
+               - Use only the length needed to explain the task accurately. No minimum word count.
+               - Read seo/KEYWORD_RESEARCH_2026-09-29.md and seo/keyword-map.csv first. Improve an existing page when it already satisfies the intent; do not create near-duplicate keyword pages.
+               - Verify every capability, file limit, processing location and download step against the tool client and processing code. Never invent test results or savings percentages.
+               - Do not claim AI upscaling, batch support, immediate server deletion or unlimited files unless the implementation and deployment evidence support it.
                - metaTitle: 50–60 chars, primary keyword first.
                - metaDescription: 120–155 chars.
                - Exactly one section with numbered `steps` (3–6 steps) that walks the reader

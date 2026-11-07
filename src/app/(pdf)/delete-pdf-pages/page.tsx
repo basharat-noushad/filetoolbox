@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { DeletePdfPagesClient } from './DeletePdfPagesClient'
 const tool = getToolBySlug('delete-pdf-pages')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Delete PDF Pages Online Free — Remove Pages from PDF',
     description: 'Remove specific pages from a PDF document online for free. Enter page numbers to delete and download the clean PDF instantly.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Remove specific pages from a PDF document online for free. Enter page numbers to delete and download the clean PDF instantly.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/delete-pdf-pages')
 }
 
 const HOW_TO_STEPS = [

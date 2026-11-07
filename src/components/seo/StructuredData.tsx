@@ -21,14 +21,13 @@ export function StructuredData({ tool, howToSteps, faqs }: {
     ],
   }
 
-  // ── 2. HowTo — triggers How-To rich results in Google + AI step extraction ─
+  // HowTo describes the visible instructions; Google retired HowTo rich results.
   const howTo = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: `How to ${tool.name} Online for Free`,
     description: tool.description,
     url: toolUrl,
-    totalTime: 'PT1M',
     estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
     supply: [],
     tool: [{ '@type': 'HowToTool', name: 'Web browser (Chrome, Firefox, Safari, or Edge)' }],
@@ -41,7 +40,7 @@ export function StructuredData({ tool, howToSteps, faqs }: {
     })),
   }
 
-  // ── 3. FAQPage — triggers People Also Ask + AI answer extraction ───────────
+  // Describe visible FAQs; markup does not guarantee a Google search feature.
   const faqPage = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -76,9 +75,7 @@ export function StructuredData({ tool, howToSteps, faqs }: {
     description: tool.description,
     featureList: [
       'Free to use with no registration',
-      'Files processed locally in the browser',
-      'No file size limits',
-      'No watermarks on output files',
+      'No automatic branding on output files',
       'Works on desktop, tablet, and mobile',
       'Supports Chrome, Firefox, Safari, and Edge',
     ],
@@ -110,8 +107,6 @@ export function StructuredData({ tool, howToSteps, faqs }: {
     },
     keywords: tool.keywords.join(', '),
     inLanguage: 'en',
-    datePublished: '2025-01-01',
-    dateModified: new Date().toISOString().split('T')[0],
     publisher: { '@type': 'Organization', name: ORG_NAME, url: SITE_URL },
     // Speakable — helps Google Assistant and voice search read key content
     speakable: {
@@ -124,7 +119,7 @@ export function StructuredData({ tool, howToSteps, faqs }: {
     <>
       {[breadcrumb, howTo, faqPage, softwareApp, webPage].map((schema, i) => (
         <script key={i} type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />
       ))}
     </>
   )

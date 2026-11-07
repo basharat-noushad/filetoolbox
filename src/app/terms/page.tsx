@@ -1,11 +1,12 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com'
 const LAST_UPDATED = 'January 1, 2025'
 
-export const metadata: Metadata = {
-  title: 'Terms of Service — PDF and Image +',
+export const metadata: Metadata = withSocialMetadata({
+  title: 'Terms of Service',
   description: 'Terms of service for PDF and Image +. Read our usage terms, acceptable use policy, and disclaimers for our free PDF and image tools.',
   keywords: ['pdf tool terms of service', 'free pdf tool terms', 'image tool terms', 'pdf and image terms'],
   alternates: { canonical: `${SITE_URL}/terms` },
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Terms of service for PDF and Image +. Free online PDF and image tools.',
     url: `${SITE_URL}/terms`,
   },
-}
+}, '/terms')
 
 const sections = [
   {

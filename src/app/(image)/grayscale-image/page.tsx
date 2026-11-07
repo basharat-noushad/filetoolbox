@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { GrayscaleImageClient } from './GrayscaleImageClient'
 const tool = getToolBySlug('grayscale-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Grayscale Image Online Free — Convert Photo to Black & White',
     description: 'Convert color images to grayscale (black and white) online for free. Instant conversion, no quality loss. Supports JPG, PNG, WebP formats.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert color images to black and white online for free. Instant, no quality loss.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/grayscale-image')
 }
 
 const HOW_TO_STEPS = [

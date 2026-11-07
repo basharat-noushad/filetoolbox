@@ -151,7 +151,7 @@ export function MobileNav() {
             className="block w-full text-center py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-sm font-bold rounded-lg transition-colors">
             All Tools
           </Link>
-          <p className="text-center text-xs text-gray-400 mt-3">Free forever · No registration · 100% private</p>
+          <p className="text-center text-xs text-gray-400 mt-3">Free forever · No registration · No watermarks</p>
         </div>
       </div>
     </>

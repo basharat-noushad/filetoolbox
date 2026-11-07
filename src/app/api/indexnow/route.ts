@@ -1,3 +1,4 @@
+import { timingSafeEqual } from 'crypto'
 import { NextRequest, NextResponse } from 'next/server'
 import { tools } from '@/lib/toolsRegistry'
 import { BLOG_POSTS } from '@/lib/blogPosts'
@@ -22,13 +23,12 @@ function buildUrlList(): string[] {
 }
 
 export async function POST(request: NextRequest) {
-  // Optional bearer-token guard — set INDEXNOW_SECRET in env to protect the endpoint
+  // Bearer-token guard — INDEXNOW_SECRET must be set, otherwise the endpoint is closed.
   const secret = process.env.INDEXNOW_SECRET
-  if (secret) {
-    const authHeader = request.headers.get('authorization')
-    if (authHeader !== `Bearer ${secret}`) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
+  const given = Buffer.from(request.headers.get('authorization') ?? '')
+  const expected = Buffer.from(`Bearer ${secret}`)
+  if (!secret || given.length !== expected.length || !timingSafeEqual(given, expected)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
   const urls = buildUrlList()

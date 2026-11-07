@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,14 +7,14 @@ import { Mp4ToGifClient } from './Mp4ToGifClient'
 const tool = getToolBySlug('mp4-to-gif')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'MP4 to GIF Converter Online Free — Convert Video to GIF',
     description: 'Convert MP4 video clips to animated GIF format online for free. Browser-based conversion via WebAssembly. No upload, no registration needed.',
     keywords: tool.keywords,
     openGraph: { title: 'MP4 to GIF Converter Free | PDF and Image +', description: 'Convert MP4 videos to animated GIF online for free. Browser-based, no upload needed.' },
     twitter: { title: 'MP4 to GIF Converter Free | PDF and Image +', description: 'Convert MP4 videos to animated GIF online for free. Browser-based, no upload needed.' },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/mp4-to-gif')
 }
 
 const HOW_TO_STEPS = [

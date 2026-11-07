@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { SignPdfClient } from './SignPdfClient'
 const tool = getToolBySlug('sign-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Sign PDF Online Free — Electronic Signature',
     description: 'Sign PDF documents online with a hand-drawn digital signature. Draw your signature directly in your browser. Free, secure, no registration.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Sign PDF documents online with a hand-drawn digital signature. Draw your signature directly in your browser. Free, secure, no registration.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/sign-pdf')
 }
 
 const HOW_TO_STEPS = [

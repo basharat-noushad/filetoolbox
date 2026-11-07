@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { RotatePdfClient } from './RotatePdfClient'
 const tool = getToolBySlug('rotate-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Rotate PDF Online Free — Rotate PDF Pages',
     description: 'Rotate PDF pages online for free. Rotate all or specific pages by 90°, 180°, or 270°. Fix scanned documents instantly.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Rotate PDF pages online for free. Rotate all or specific pages by 90°, 180°, or 270°. Fix scanned documents instantly.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/rotate-pdf')
 }
 
 const HOW_TO_STEPS = [

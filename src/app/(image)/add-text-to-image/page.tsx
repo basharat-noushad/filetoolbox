@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { AddTextToImageClient } from './AddTextToImageClient'
 const tool = getToolBySlug('add-text-to-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Add Text to Image Online Free — Write on Photos',
     description: 'Add custom text to photos and images online for free. Choose font size and color. Perfect for captions, labels, and quotes. No registration.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Add custom text to photos and images online for free. Choose font size and color.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/add-text-to-image')
 }
 
 const HOW_TO_STEPS = [

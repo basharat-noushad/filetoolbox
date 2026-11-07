@@ -1,60 +1,48 @@
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
+import { withSocialMetadata } from '@/lib/seo'
 import { ToolLayout } from '@/components/tools/ToolLayout'
 import { AddWatermarkPdfClient } from './AddWatermarkPdfClient'
 
 const tool = getToolBySlug('add-watermark-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Add Watermark to PDF Online Free — Text Watermark Tool',
-    description: 'Add a custom text watermark to every page of your PDF online for free. Control opacity, font size, and rotation. No registration, browser-based.',
+  return withSocialMetadata({
+    title: "Add Watermark to PDF Free — Draft & Confidential Text",
+    description: "Add a text watermark to every PDF page for free. Mark drafts or confidential copies, adjust opacity and rotation, then download. No file upload needed.",
     keywords: tool.keywords,
-    openGraph: {
-      title: 'Add Watermark to PDF Online Free — Text Watermark Tool | PDF and Image +',
-      description: 'Add a custom text watermark to every page of your PDF online for free. Control opacity, font size, and rotation.',
-    },
-    twitter: {
-      title: 'Add Watermark to PDF Online Free — Text Watermark Tool | PDF and Image +',
-      description: 'Add a custom text watermark to every page of your PDF online for free. Control opacity, font size, and rotation.',
-    },
-    alternates: { canonical: `/${tool.slug}` },
-  }
+    alternates: { canonical: '/add-watermark-pdf' },
+  }, '/add-watermark-pdf')
 }
 
 const HOW_TO_STEPS = [
-  'Upload your PDF file by dragging and dropping it into the upload area or clicking to browse.',
-  'Enter your watermark text and adjust the opacity, font size, and rotation angle.',
-  'Click "Add Watermark" and download your watermarked PDF instantly.',
+  "Select one PDF up to 50 MB. Keep the original if it is signed or needs to remain unchanged.",
+  "Enter short text such as DRAFT or CONFIDENTIAL. Adjust opacity, font size and rotation; the text is added to every page.",
+  "Click Add Watermark, then use Download to save watermarked.pdf. Open the result and check every page."
 ]
-
 const FAQS = [
   {
-    q: 'Can I control how visible the watermark is?',
-    a: 'Yes. Use the opacity slider to set transparency between 10% and 90%. A lower value makes the watermark subtle and unobtrusive, while a higher value makes it prominent — useful for "DRAFT" or "CONFIDENTIAL" markings.',
+    "q": "How do I add a draft watermark to a PDF?",
+    "a": "Select your PDF, replace the text with DRAFT, and choose a low opacity so the content remains readable. Click Add Watermark and download the new copy."
   },
   {
-    q: 'What angle is the watermark displayed at?',
-    a: 'By default the watermark is rotated 45 degrees diagonally across the page. You can change this to any angle using the rotation input — including 0 degrees for a horizontal watermark.',
+    "q": "Can I watermark only selected pages or upload a logo?",
+    "a": "This tool adds text to every page. It does not support a logo watermark or page selection. Use short text; long labels can run outside the page."
   },
   {
-    q: 'Will the watermark appear on every page?',
-    a: 'Yes. The watermark is applied uniformly to every page of the PDF document.',
+    "q": "Does a watermark stop someone editing or copying my PDF?",
+    "a": "No. A watermark is a visible label, not an access control or a digital signature. A PDF editor may remove it. Editing an already signed PDF can affect its signature validity."
   },
   {
-    q: 'Can the watermark be removed by the recipient?',
-    a: 'The watermark is embedded directly into the PDF page content. While it is persistent and cannot be removed without a PDF editing tool, it does not provide cryptographic protection. For documents requiring true tamper protection, combine watermarking with password protection.',
+    "q": "Is my PDF uploaded, and what is the file limit?",
+    "a": "Watermarking runs in your browser without uploading the PDF for processing. Select one file up to 50 MB; large documents may also be limited by device memory."
   },
   {
-    q: 'Are my files sent to a server?',
-    a: 'No. All processing happens entirely in your browser. Your PDF never leaves your device, ensuring complete privacy for sensitive documents.',
-  },
+    "q": "Which watermark characters can I use?",
+    "a": "Use short text supported by the built-in Helvetica font, such as DRAFT, CONFIDENTIAL or a Latin-script name. Some scripts and emoji are not supported."
+  }
 ]
 
-export default function AddWatermarkPdfPage() {
-  return (
-    <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}>
-      <AddWatermarkPdfClient />
-    </ToolLayout>
-  )
+export default function Page() {
+  return <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}><AddWatermarkPdfClient /></ToolLayout>
 }

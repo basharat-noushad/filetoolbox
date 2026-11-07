@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { CropImageClient } from './CropImageClient'
 const tool = getToolBySlug('crop-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Crop Image Online Free — Interactive Image Cropper',
     description: 'Crop images with an interactive cropper online for free. Use preset aspect ratios or set custom dimensions. No registration.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Crop images with an interactive cropper online for free. Use preset aspect ratios or set custom dimensions. No registration.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/crop-image')
 }
 
 const HOW_TO_STEPS = [

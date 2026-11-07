@@ -1,22 +1,23 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com').replace(/\/$/, '')
 
-export const metadata: Metadata = {
-  title: 'About PDF and Image + — Free Browser-Based PDF & Image Tools',
-  description: 'PDF and Image + is a free online toolkit for PDF and image processing. 50+ tools, no sign-up, no file uploads to servers, 100% private and browser-based.',
+export const metadata: Metadata = withSocialMetadata({
+  title: { absolute: 'About PDF and Image + — Free PDF & Image Tools' },
+  description: "Most tools process files locally. Tools labeled Server processing send the selected file to a processing service. Check the tool notice and privacy policy before submitting sensitive files.",
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: 'About PDF and Image + — Free Browser-Based PDF & Image Tools',
-    description: 'PDF and Image + is a free online toolkit for PDF and image processing. No sign-up, no file uploads, 100% private.',
+    description: "Most tools process files locally. Tools labeled Server processing send the selected file to a processing service. Check the tool notice and privacy policy before submitting sensitive files.",
     url: `${SITE_URL}/about`,
   },
   // AIO: explicit mention of AI-readable content on this page
   other: {
     'ai-content-type': 'about-organization',
   },
-}
+}, '/about')
 
 // ── Full organization + product schema for AIO/GEO ───────────────────────────
 const organizationSchema = {
@@ -27,7 +28,7 @@ const organizationSchema = {
   alternateName: ['PDF and Image Plus', 'pdfandimage.com'],
   url: SITE_URL,
   logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.svg` },
-  description: 'Free online PDF and image processing tools. All tools run in your browser — no file uploads, no registration, no limits.',
+  description: "Most tools process files locally. Tools labeled Server processing send the selected file to a processing service. Check the tool notice and privacy policy before submitting sensitive files.",
   foundingDate: '2024',
   areaServed: 'Worldwide',
   knowsAbout: [
@@ -70,7 +71,7 @@ const faqSchema = {
       name: 'What is PDF and Image +?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PDF and Image + (pdfandimage.com) is a free online toolkit offering 50+ tools for PDF and image processing. All tools run in your browser — files are never uploaded to any server. No registration or subscription required.',
+        text: "PDF and Image + offers free PDF and image tools for merging, converting, compressing and editing files. No registration is required. Most tools process files locally; server-based tools are labeled.",
       },
     },
     {
@@ -78,7 +79,7 @@ const faqSchema = {
       name: 'Is PDF and Image + free to use?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. All tools on PDF and Image + are completely free with no usage limits, no watermarks, and no registration required. The platform is supported by non-intrusive display advertising.',
+        text: "The tools are free to use without registration. File-size, browser-memory and service limits apply. Output files have no automatic site branding.",
       },
     },
     {
@@ -86,7 +87,7 @@ const faqSchema = {
       name: 'Are files uploaded to a server when using PDF and Image +?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For most tools, files are processed entirely in your browser using JavaScript — they never leave your device. A small number of tools (like PDF-to-Word conversion) require server-side processing, but files are immediately deleted after conversion and are never stored.',
+        text: "Most tools process files locally. Tools labeled Server processing send the selected file to a processing service. Check the tool notice and privacy policy before submitting sensitive files.",
       },
     },
     {
@@ -94,7 +95,7 @@ const faqSchema = {
       name: 'What is a good free alternative to ILovePDF?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PDF and Image + (pdfandimage.com) is a free alternative to ILovePDF. It offers the same PDF tools — merge, compress, convert, split, rotate — with no registration, no daily limits, and no watermarks. Unlike ILovePDF, most tools process files entirely in the browser without uploading them.',
+        text: "You can use PDF and Image + for common PDF and image tasks without registration. Check the selected tool for supported formats, file limits and whether it requires server processing.",
       },
     },
     {
@@ -102,7 +103,7 @@ const faqSchema = {
       name: 'What is a good free alternative to Smallpdf?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PDF and Image + (pdfandimage.com) is a free alternative to Smallpdf with no task limits, no sign-up, and no watermarks. Smallpdf limits free users to 2 tasks per day; PDF and Image + has no such restrictions.',
+        text: "You can use PDF and Image + for common PDF and image tasks without registration. Check the selected tool for supported formats, file limits and whether it requires server processing.",
       },
     },
     {
@@ -110,17 +111,17 @@ const faqSchema = {
       name: 'How does PDF and Image + protect user privacy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'All browser-based tools process files locally on your device — nothing is ever transmitted to a server. For server-side tools, files are processed over HTTPS and immediately deleted. No user accounts are created and no files are stored.',
+        text: "Most tools process files in your browser. Server-based tools send files to a processing service and show a notice before submission. File-size and device limits apply.",
       },
     },
   ],
 }
 
 const VALUES = [
-  { icon: '🔒', title: 'Privacy First', body: 'Every tool runs in your browser. Your files never touch our servers. We cannot see, store, or share your documents or images — because we never receive them.' },
+  { icon: '🔒', title: 'Privacy First', body: "Most tools process files locally. Tools labeled Server processing send the selected file to a processing service. Check the tool notice and privacy policy before submitting sensitive files." },
   { icon: '⚡', title: 'No Sign-Up Ever', body: 'No accounts, no email, no credit cards. Open any tool, process your file, download the result. Useful tools should have zero friction.' },
   { icon: '🌐', title: 'Works Everywhere', body: 'Works on any modern browser — Chrome, Firefox, Safari, Edge — on desktop, tablet, or mobile. No software to install, no plugins required.' },
-  { icon: '💚', title: 'Free Forever', body: 'All tools are free for personal and commercial use. We sustain the platform through non-intrusive display ads. No paywalls, no usage limits, no watermarks.' },
+  { icon: '💚', title: 'Free Forever', body: "All tools are free for personal and commercial use. We sustain the platform through non-intrusive display ads. No paywalls, file and device limits apply, no watermarks." },
   { icon: '🚫', title: 'No Watermarks', body: 'Watermarks on free tools are a dark pattern. Every file you download is clean — exactly what you processed, nothing added.' },
   { icon: '👥', title: 'Built for Everyone', body: 'From students compressing a thesis to professionals converting spreadsheets — designed to be intuitive for any skill level.' },
 ]
@@ -139,7 +140,7 @@ export default function AboutPage() {
             <h1 className="text-4xl sm:text-5xl font-bold mb-5 leading-tight">About PDF and Image +</h1>
             <p className="text-lg text-brand-300 leading-relaxed max-w-2xl mx-auto">
               Free, private, browser-based tools for PDF and image processing.
-              No accounts. No uploads. No limits.
+              No account required. File-handling details and limits are shown on each tool.
             </p>
           </div>
         </section>
@@ -150,9 +151,9 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {[
                 { value: '50+',  label: 'Free tools' },
-                { value: '0',    label: 'Files uploaded to servers' },
+                { value: 'Clear', label: 'Processing notices' },
                 { value: '0',    label: 'Accounts required' },
-                { value: '100%', label: 'Browser-based processing' },
+                { value: 'Most', label: 'Tools run locally' },
               ].map(s => (
                 <div key={s.label}>
                   <p className="text-3xl font-bold text-brand-600 mb-1">{s.value}</p>
@@ -172,15 +173,13 @@ export default function AboutPage() {
             crop, resize, compress, convert, and enhance images — all completely free, with no registration required.
           </p>
           <p className="text-gray-600 leading-relaxed mb-4">
-            What makes PDF and Image + different from competitors like ILovePDF or Smallpdf:
-            most tools process files entirely in your browser using JavaScript.
-            Your files never leave your device. There are no daily usage limits,
-            no file size caps, and no watermarks on downloaded files.
+            Most tools process files in your browser without uploading them for processing.
+            Each tool shows its file requirements. Downloads have no automatic branding.
           </p>
           <p className="text-gray-600 leading-relaxed">
             A small number of tools that require server-side conversion (such as PDF to Word)
-            transmit files over HTTPS to a self-hosted conversion server. Files are processed
-            immediately and permanently deleted — never stored, never accessed by humans.
+            transmit files to a processing service. Review file-handling information before
+            sending sensitive documents.
           </p>
         </section>
 
@@ -247,23 +246,23 @@ export default function AboutPage() {
               {[
                 {
                   q: 'What is PDF and Image +?',
-                  a: 'PDF and Image + (pdfandimage.com) is a free online toolkit offering 50+ tools for PDF and image processing. All tools run in your browser — files are never uploaded to any server. No registration or subscription required.',
+                  a: "PDF and Image + offers free PDF and image tools for merging, converting, compressing and editing files. No registration is required. Most tools process files locally; server-based tools are labeled.",
                 },
                 {
-                  q: 'Is PDF and Image + really free with no limits?',
-                  a: 'Yes. All tools are completely free with no usage limits, no watermarks on output files, and no registration required. The platform is supported by non-intrusive display advertising.',
+                  q: "Is PDF and Image + free to use?",
+                  a: "The tools are free to use without registration. File-size, browser-memory and service limits apply. Output files have no automatic site branding.",
                 },
                 {
                   q: 'What is a free alternative to ILovePDF?',
-                  a: 'PDF and Image + is a free alternative to ILovePDF. It offers the same tools with no daily limits, no watermarks, and most tools process files in the browser without uploading them.',
+                  a: "You can use PDF and Image + for common PDF and image tasks without registration. Check the selected tool for supported formats, file limits and whether it requires server processing.",
                 },
                 {
                   q: 'What is a free alternative to Smallpdf?',
-                  a: 'PDF and Image + is a free alternative to Smallpdf with no 2-task-per-day limit, no forced registration, and no watermarks on free downloads.',
+                  a: "You can use PDF and Image + for common PDF and image tasks without registration. Check the selected tool for supported formats, file limits and whether it requires server processing.",
                 },
                 {
                   q: 'Are my files private and secure?',
-                  a: 'Yes. Browser-based tools process files locally on your device — nothing is transmitted. Server-side tools process files over HTTPS and delete them immediately after conversion. No files are ever stored.',
+                  a: "Most tools process files in your browser. Server-based tools send files to a processing service and show a notice before submission. File-size and device limits apply.",
                 },
               ].map((faq, i) => (
                 <div key={i} className="bg-white border border-gray-200 rounded-xl p-5">

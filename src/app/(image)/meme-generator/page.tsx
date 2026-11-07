@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,14 +7,14 @@ import { MemeGeneratorClient } from './MemeGeneratorClient'
 const tool = getToolBySlug('meme-generator')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Meme Generator Online Free — Create Memes with Custom Text',
     description: 'Create custom memes online for free. Upload any image, add top and bottom text with Impact font. Download your meme instantly. No sign-up.',
     keywords: tool.keywords,
     openGraph: { title: 'Meme Generator Online Free | PDF and Image +', description: 'Create custom memes online for free. Upload any image, add text, download instantly.' },
     twitter: { title: 'Meme Generator Online Free | PDF and Image +', description: 'Create custom memes online for free. Upload any image, add text, download instantly.' },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/meme-generator')
 }
 
 const HOW_TO_STEPS = [

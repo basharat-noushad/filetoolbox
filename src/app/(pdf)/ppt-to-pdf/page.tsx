@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { PptToPdfClient } from './PptToPdfClient'
 const tool = getToolBySlug('ppt-to-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'PowerPoint to PDF Converter Free Online — PPTX to PDF',
     description: 'Convert PowerPoint presentations (.pptx, .ppt) to PDF format online for free. All slides preserved with perfect formatting. No registration needed.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert PowerPoint presentations (.pptx, .ppt) to PDF online for free. All slides preserved.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/ppt-to-pdf')
 }
 
 const HOW_TO_STEPS = [
@@ -39,11 +40,11 @@ const FAQS = [
   },
   {
     q: 'What is the maximum file size I can convert?',
-    a: 'The maximum file size is 50MB. Presentations with many high-resolution images may be large — compress images in PowerPoint beforehand if needed.',
+    a: 'The maximum file size is 4MB. Presentations with many high-resolution images may be large — compress images in PowerPoint beforehand if needed.',
   },
   {
     q: 'Is my presentation file kept private?',
-    a: 'Your file is sent to our conversion server only for processing and is immediately deleted afterward. We never store or access your presentation content.',
+    a: "Your file is sent to a processing service. Temporary storage and retention depend on the configured service. Review the privacy policy before uploading sensitive files.",
   },
   {
     q: 'What PowerPoint formats are supported?',

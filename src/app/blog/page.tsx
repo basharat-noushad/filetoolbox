@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Clock } from 'lucide-react'
@@ -5,8 +6,8 @@ import { BLOG_POSTS } from '@/lib/blogPosts'
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com').replace(/\/$/, '')
 
-export const metadata: Metadata = {
-  title: 'Blog — PDF & Image Tips, Tutorials and Guides | PDF and Image +',
+export const metadata: Metadata = withSocialMetadata({
+  title: 'Blog — PDF & Image Tips, Tutorials and Guides',
   description: 'Tutorials, tips, and guides for working with PDF and image files. Learn how to compress, convert, merge, and edit PDFs and images online for free.',
   keywords: ['pdf tips', 'how to merge pdf', 'compress pdf guide', 'image conversion tutorial', 'pdf to word how to', 'free pdf tools guide'],
   alternates: { canonical: `${SITE_URL}/blog` },
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     description: 'Tutorials and guides for working with PDF and image files online for free.',
     url: `${SITE_URL}/blog`,
   },
-}
+}, '/blog')
 
 const blogSchema = {
   '@context': 'https://schema.org',

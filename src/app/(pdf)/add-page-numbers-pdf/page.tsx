@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { AddPageNumbersPdfClient } from './AddPageNumbersPdfClient'
 const tool = getToolBySlug('add-page-numbers-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Add Page Numbers to PDF Online Free — PDF Page Numbering',
     description: 'Add automatic page numbers to any PDF file online. Choose from bottom center, bottom right, or top center position. Free and instant.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Add automatic page numbers to any PDF file online. Choose from bottom center, bottom right, or top center position. Free and instant.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/add-page-numbers-pdf')
 }
 
 const HOW_TO_STEPS = [

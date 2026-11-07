@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,14 +7,14 @@ import { BulkImageCompressorClient } from './BulkImageCompressorClient'
 const tool = getToolBySlug('bulk-image-compressor')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Bulk Image Compressor Free Online — Compress Multiple Images',
     description: 'Compress multiple images at once online for free. Upload up to 20 images and download all compressed files as a ZIP. Fast batch compression.',
     keywords: tool.keywords,
     openGraph: { title: 'Bulk Image Compressor Free | PDF and Image +', description: 'Compress up to 20 images at once and download as ZIP. Free, fast, browser-based.' },
     twitter: { title: 'Bulk Image Compressor Free | PDF and Image +', description: 'Compress up to 20 images at once and download as ZIP. Free, fast, browser-based.' },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/bulk-image-compressor')
 }
 
 const HOW_TO_STEPS = [

@@ -1,11 +1,12 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { Mail, MessageSquare, Clock, HelpCircle } from 'lucide-react'
 import Link from 'next/link'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com'
 
-export const metadata: Metadata = {
-  title: 'Contact PDF and Image + — Get Support & Send Feedback',
+export const metadata: Metadata = withSocialMetadata({
+  title: { absolute: 'Contact PDF and Image + — Get Support & Send Feedback' },
   description: 'Get in touch with the PDF and Image + team. Report a bug, request a feature, or ask a question. We typically respond within 24–48 hours.',
   keywords: ['contact pdf and image', 'pdf tool support', 'report bug pdf tool', 'feature request', 'pdf image tool help'],
   alternates: { canonical: `${SITE_URL}/contact` },
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Get in touch with the PDF and Image + team. Report bugs, request features, or ask a question.',
     url: `${SITE_URL}/contact`,
   },
-}
+}, '/contact')
 
 const schema = {
   '@context': 'https://schema.org',

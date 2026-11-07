@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { ResizeImageClient } from './ResizeImageClient'
 const tool = getToolBySlug('resize-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Resize Image Online Free — Change Image Dimensions',
     description: 'Resize images to any dimension online for free. Set width, height, or use presets. Aspect ratio lock included. No registration.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Resize images to any dimension online for free. Set width, height, or use presets. Aspect ratio lock included. No registration.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/resize-image')
 }
 
 const HOW_TO_STEPS = [

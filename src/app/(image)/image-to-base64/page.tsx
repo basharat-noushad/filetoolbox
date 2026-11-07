@@ -1,3 +1,4 @@
+import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
@@ -6,7 +7,7 @@ import { ImageToBase64Client } from './ImageToBase64Client'
 const tool = getToolBySlug('image-to-base64')!
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
+  return withSocialMetadata({
     title: 'Image to Base64 Encoder Online Free — Convert to Base64',
     description: 'Convert images to Base64 encoded strings online for free. Useful for embedding images in HTML, CSS, or JSON data. Copy and use instantly.',
     keywords: tool.keywords,
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Convert images to Base64 encoded strings for embedding in HTML, CSS, or JSON. Free and instant.',
     },
     alternates: { canonical: `/${tool.slug}` },
-  }
+  }, '/image-to-base64')
 }
 
 const HOW_TO_STEPS = [

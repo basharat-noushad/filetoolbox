@@ -1,10 +1,10 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import { readFileSync } from 'fs'
 import { join } from 'path'
 
 // Serves /api/llms with correct content-type headers
 // Some AI crawlers prefer API routes over static files
-export async function GET(_request: NextRequest) {
+export async function GET() {
   try {
     const filePath = join(process.cwd(), 'public', 'llms.txt')
     const content = readFileSync(filePath, 'utf-8')

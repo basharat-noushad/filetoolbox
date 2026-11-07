@@ -41,12 +41,12 @@ const RESOURCE_LINKS = [
 const STATS = [
   { value: '50+',  label: 'Free tools',    Icon: Zap },
   { value: '0',    label: 'Sign-ups',      Icon: UserX },
-  { value: '100%', label: 'Browser-based', Icon: Cpu },
+  { value: 'Most', label: 'Tools run locally', Icon: Cpu },
 ]
 
 const FEATURES = [
-  'Files never leave your device',
-  'No watermarks added ever',
+  'Processing details on each tool',
+  'No automatic branding on output',
   'Works on any browser',
   'Always free, no hidden fees',
 ]
@@ -90,7 +90,7 @@ export function Footer() {
           </Link>
 
           <p className="text-[13px] text-slate-300 leading-relaxed mb-5 max-w-[240px]">
-            50+ free tools for PDF &amp; image processing. No registration, no watermarks. Files stay private — always.
+            50+ free tools for PDF &amp; image processing. No registration, no watermarks. Most tools run entirely in your browser.
           </p>
 
           {/* Feature list */}

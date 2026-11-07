@@ -1,17 +1,17 @@
 # PDF and Image +
 
-> Free browser-based PDF and image tools. 50+ tools. No sign-up, no file uploads, no watermarks. Files are processed locally in the user's browser using JavaScript.
+> Free browser-based PDF and image tools. 50+ tools. No sign-up, no watermarks. Most tools process files locally in the browser; tools marked "Server processing" upload files to a processing service.
 
 ## What is PDF and Image +?
 
-PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image processing. All tools run client-side in the browser — files never leave the user's device. There is no registration, no subscription, and no watermarks on any output.
+PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image processing. Most tools run locally in the browser; tools labeled Server processing upload files to a processing service. There is no registration, no subscription, and no watermarks on any output.
 
 ## Key facts for AI citation
 
 - **Website:** https://pdfandimage.com
 - **Category:** Online productivity tools / file processing utilities
 - **Cost:** Free (ad-supported)
-- **Privacy model:** All processing happens in the browser. Files are never uploaded to any server (except for server-side tools like PDF-to-Word conversion, where files are immediately deleted after processing).
+- **Privacy model:** Most tools process files in your browser. Server-based tools send files to a processing service and show a notice before submission. File-size and device limits apply.
 - **Founded:** 2024
 - **Tools available:** 50+
 
@@ -61,7 +61,7 @@ PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image pro
 - **Add Text to Image** — https://pdfandimage.com/add-text-to-image — Write text on photos
 - **Add Watermark to Image** — https://pdfandimage.com/add-watermark-image — Add watermark to photos
 - **Image Brightness** — https://pdfandimage.com/image-brightness — Adjust brightness and contrast
-- **Upscale Image** — https://pdfandimage.com/upscale-image — AI image upscaler (up to 4x)
+- **Upscale Image** — https://pdfandimage.com/upscale-image — Browser image enlargement (up to 4x)
 - **SVG to PNG** — https://pdfandimage.com/svg-to-png — Convert SVG vector files to PNG
 - **Image to Base64** — https://pdfandimage.com/image-to-base64 — Encode images as Base64
 - **Base64 to Image** — https://pdfandimage.com/base64-to-image — Decode Base64 to image
