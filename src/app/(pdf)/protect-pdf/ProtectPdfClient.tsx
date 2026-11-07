@@ -13,19 +13,22 @@ export function ProtectPdfClient() {
   const [error, setError] = useState<string | null>(null)
 
   const handleProtect = async () => {
+    if (processing) return
     if (files.length === 0) { setError('Please select a PDF file.'); return }
     if (!password) { setError('Please enter a password.'); return }
     if (password !== confirm) { setError('Passwords do not match.'); return }
-    setProcessing(true); setError(null)
+    setProcessing(true); setError(null); setResult(null)
     try {
-      const body = new FormData()
-      body.append('file', files[0])
-      body.append('password', password)
-      const res = await fetch('/api/protect-pdf', { method: 'POST', body })
-      if (!res.ok) throw new Error(await res.text())
-      setResult(await res.blob())
-    } catch (err) {
-      setError(err instanceof Error && err.message ? err.message : 'Failed to protect PDF. Please check your file and try again.')
+      // qpdf (WebAssembly) is loaded only when the user clicks.
+      const { protectPdf, QpdfError } = await import('@/lib/tools/pdf/qpdf')
+      try {
+        setResult(await protectPdf(files[0], password))
+      } catch (err) {
+        if (err instanceof QpdfError) setError(err.message)
+        else throw err
+      }
+    } catch {
+      setError('Failed to protect PDF. Please check your file and try again.')
     } finally {
       setProcessing(false)
     }
@@ -33,11 +36,10 @@ export function ProtectPdfClient() {
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4">
-      <FileDropzone maxSize={4_000_000}
+      <FileDropzone
         accept={{ 'application/pdf': ['.pdf'] }}
-        onFilesSelected={setFiles}
+        onFilesSelected={f => { setFiles(f); setResult(null); setError(null) }}
         label="Drag & drop your PDF here"
-        sublabel="or click to browse — max 4MB"
       />
       <div className="space-y-3">
         <div>
@@ -62,7 +64,7 @@ export function ProtectPdfClient() {
         </div>
       </div>
       <p className="text-xs text-brand-700 bg-brand-50 border border-brand-100 rounded-lg px-3 py-2">
-        Note: Unlike most tools on this site, password protection requires sending your file to our secure server for encryption — it is processed immediately and never stored.
+        Your PDF is encrypted with AES-256 right here in your browser. The file and password never leave your device.
       </p>
       {error && <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2">{error}</p>}
       <Button onClick={handleProtect} disabled={files.length === 0 || processing} className="w-full cursor-pointer" size="lg">

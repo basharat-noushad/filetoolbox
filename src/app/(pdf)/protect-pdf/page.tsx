@@ -9,7 +9,7 @@ const tool = getToolBySlug('protect-pdf')!
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
     title: 'Protect PDF — Add Password to PDF Free Online',
-    description: 'Add password protection to your PDF files online for free. Secure sensitive documents with strong encryption, applied over HTTPS. No registration needed.',
+    description: 'Password protect PDF files free with AES-256 encryption. It runs entirely in your browser, so your file and password never leave your device. No sign-up.',
     keywords: tool.keywords,
     openGraph: {
       title: 'Protect PDF — Add Password to PDF Free Online | PDF and Image +',
@@ -44,7 +44,7 @@ const FAQS = [
   },
   {
     q: 'Are my files sent to a server during protection?',
-    a: 'Yes. Your PDF and password are sent over HTTPS to our processing server, which applies the encryption and returns the protected file. Only upload documents you are comfortable sending to an online service.',
+    a: 'No. The encryption (AES-256) is applied entirely in your browser. Your PDF and password never leave your device and are never uploaded to any server, so it is safe to use for confidential documents.',
   },
   {
     q: 'Can I remove the password later?',

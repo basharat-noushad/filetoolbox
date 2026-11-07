@@ -414,7 +414,7 @@ export const BLOG_POSTS: BlogPost[] = [
     sections: [
       {
         paragraphs: [
-          'To add a password to a PDF file for free, you can do it directly in your browser — no software to install, and no registration. The file is encrypted on our processing server over HTTPS. Password-protecting a PDF encrypts it so that only someone with the correct password can open and read the document. If you are sharing contracts, financial records, medical files, or personal identification, this is an essential step.',
+          'To add a password to a PDF file for free, you can do it directly in your browser — no software to install, and no registration. The encryption runs entirely in your browser, so the file and password never leave your device. Password-protecting a PDF encrypts it so that only someone with the correct password can open and read the document. If you are sharing contracts, financial records, medical files, or personal identification, this is an essential step.',
         ],
       },
       {
@@ -471,7 +471,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         q: 'How do I add a password to a PDF for free?',
-        a: 'Use the Protect PDF tool on this site. Upload your PDF, enter a password, confirm it, and download the protected file. It is completely free and no registration is required. The file is sent over HTTPS to our processing server to apply the encryption.',
+        a: 'Use the Protect PDF tool on this site. Upload your PDF, enter a password, confirm it, and download the protected file. It is completely free and no registration is required. The encryption is applied in your browser, so the file is never uploaded anywhere.',
       },
       {
         q: 'What type of encryption is used?',
@@ -487,7 +487,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: 'Is my PDF file sent to a server when I protect it?',
-        a: 'Yes. Your PDF and password are sent over HTTPS to our processing server, which encrypts the file and returns it. Only upload documents you are comfortable sending to an online service.',
+        a: 'No. The Protect PDF tool encrypts the file with AES-256 entirely in your browser. Your PDF and password never leave your device, so it is safe to use for confidential documents.',
       },
     ],
   },
@@ -852,7 +852,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'how-to-remove-password-from-pdf',
     title: 'How to Remove a Password from a PDF You Own',
     metaTitle: 'Remove a Password from a PDF Online for Free (2026)',
-    metaDescription: 'Remove a password from a PDF you own in seconds — free, no software, no email, no sign-up. Files up to 4 MB are processed securely over HTTPS.',
+    metaDescription: 'Remove a password from a PDF you own in seconds — free, no software, no sign-up. Unlocking runs in your browser, so the file never leaves your device.',
     excerpt: 'If a PDF keeps asking for a password you already know, you can strip that password out permanently in under a minute — for free, in your browser. Here is exactly how, plus what to do if the password is for opening vs. for restricting printing and editing.',
     category: 'PDF Guide',
     readTime: '5 min read',
@@ -880,7 +880,7 @@ export const BLOG_POSTS: BlogPost[] = [
         steps: [
           'Open the Unlock PDF tool and click "Select File" or drag your password-protected PDF into the upload area.',
           'When prompted, type in the document\'s current password exactly as it was given to you.',
-          'Click "Unlock PDF." The file and password are sent over HTTPS to our processing server, which returns an unlocked copy.',
+          'Click "Unlock PDF." Your browser removes the encryption on your device and creates an unlocked copy. Nothing is uploaded.',
           'Download the unlocked PDF. It opens immediately, with no password prompt, in any PDF viewer.',
           'Open the downloaded file once to confirm it opens without a password and that all pages and content look correct.',
         ],
@@ -923,7 +923,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           'Removing a password from a PDF that you own, or that was sent to you for your own use, is completely normal and legal in virtually every situation — it is no different from removing a sticky note with a PIN on it once you have memorised the number. The password existed to control access in transit, not to permanently restrict what you, the rightful recipient, can do with your own copy of the document.',
           'The line to be aware of is using password-removal tools to access documents that belong to someone else and that you do not have permission to open — for example, a colleague\'s HR file or a client\'s confidential contract. Always make sure you have the right to access and modify the document before removing any protection from it.',
-          'On the privacy side, the Unlock PDF tool sends your file and its password over HTTPS to our processing server, which returns the unlocked copy. Think before uploading, because the documents people unlock — bank statements, payslips, tax forms — are often the most sensitive files they own.',
+          'On the privacy side, the Unlock PDF tool works entirely in your browser: the file and its password never leave your device. That matters, because the documents people unlock — bank statements, payslips, tax forms — are often the most sensitive files they own.',
         ],
       },
       {
@@ -954,7 +954,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         q: 'How do I remove a password from a PDF for free?',
-        a: 'Open the Unlock PDF tool, upload your password-protected PDF, enter the current password when prompted, and click "Unlock PDF." Our processing server removes the encryption and gives you a new, password-free file to download. It is free for files up to 4 MB.',
+        a: 'Open the Unlock PDF tool, upload your password-protected PDF, enter the current password when prompted, and click "Unlock PDF." Your browser removes the encryption and gives you a new, password-free file to download. It is free, and the file never leaves your device.',
       },
       {
         q: 'Do I need to know the current password to remove it?',
@@ -962,7 +962,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: 'Is it safe to remove a PDF password using an online tool?',
-        a: 'The file and password are sent over HTTPS to our processing server to remove the protection. The documents people unlock are often sensitive, like bank statements or payslips, so only upload files you are comfortable sending to an online service; otherwise use an offline PDF editor.',
+        a: 'Yes. The protection is removed entirely in your browser, so the file and password are never uploaded to a server. That makes it suitable for sensitive documents like bank statements or payslips.',
       },
       {
         q: 'Can I remove a password from a PDF on my phone?',

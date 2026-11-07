@@ -9,15 +9,15 @@ const tool = getToolBySlug('unlock-pdf')!
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
     title: 'Unlock PDF — Remove Password from PDF Free Online',
-    description: 'Remove password protection from PDF files online for free. Enter your password and get an unlocked PDF instantly. Secure and private.',
+    description: 'Remove a password from a PDF free. Enter the password and get an unlocked copy instantly, processed in your browser so your file never leaves your device.',
     keywords: tool.keywords,
     openGraph: {
       title: 'Unlock PDF — Remove Password from PDF Free Online | PDF and Image +',
-      description: 'Remove password protection from PDF files online for free. Enter your password and get an unlocked PDF instantly. Secure and private.',
+      description: 'Remove a password from a PDF free. Enter the password and get an unlocked copy instantly, processed in your browser so your file never leaves your device.',
     },
     twitter: {
       title: 'Unlock PDF — Remove Password from PDF Free Online | PDF and Image +',
-      description: 'Remove password protection from PDF files online for free. Enter your password and get an unlocked PDF instantly. Secure and private.',
+      description: 'Remove a password from a PDF free. Enter the password and get an unlocked copy instantly, processed in your browser so your file never leaves your device.',
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/unlock-pdf')
@@ -31,7 +31,7 @@ const HOW_TO_STEPS = [
 
 const FAQS = [
   { q: 'Do I need to know the password to unlock a PDF?', a: 'Yes. This tool removes password protection from PDFs you own and already know the password for. It does not bypass or crack unknown passwords.' },
-  { q: 'Is this tool safe for sensitive documents?', a: 'Your file and password are sent over HTTPS to our processing server, which removes the protection and returns the unlocked file. For highly sensitive documents, consider an offline PDF editor instead.' },
+  { q: 'Is this tool safe for sensitive documents?', a: 'Yes. The password is removed entirely in your browser. Your file and password never leave your device and are never uploaded to a server, which makes it suitable for bank statements, payslips, and other private files.' },
   { q: 'What types of PDF passwords does this remove?', a: 'This tool removes the open (user) password that prevents opening the file. It uses your provided password to decrypt and re-save the PDF without protection.' },
   { q: 'What if I get a wrong password error?', a: 'Double-check you are entering the correct password. Passwords are case-sensitive. If you do not know the password, this tool cannot help — it does not crack passwords.' },
   { q: 'Can I then edit the unlocked PDF?', a: 'Yes. Once unlocked, you can open the PDF in any viewer or editor without being prompted for a password.' },

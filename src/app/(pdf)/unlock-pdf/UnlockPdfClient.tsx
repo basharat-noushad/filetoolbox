@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
+
 export function UnlockPdfClient() {
   const [files, setFiles] = useState<File[]>([])
   const [password, setPassword] = useState('')
@@ -11,19 +12,23 @@ export function UnlockPdfClient() {
   const [error, setError] = useState<string | null>(null)
 
   const handleProcess = async () => {
+    if (processing) return // Enter key can fire while a run is in flight
     if (files.length === 0) { setError('Please select a PDF file.'); return }
     if (!password) { setError('Please enter the PDF password.'); return }
     setProcessing(true)
     setError(null)
+    setResult(null)
     try {
-      const body = new FormData()
-      body.append('file', files[0])
-      body.append('password', password)
-      const res = await fetch('/api/unlock-pdf', { method: 'POST', body })
-      if (!res.ok) throw new Error(await res.text())
-      setResult(await res.blob())
-    } catch (err) {
-      setError(err instanceof Error && err.message ? err.message : 'Failed to unlock the PDF. Please check that the password is correct and try again.')
+      // qpdf (WebAssembly) is loaded only when the user clicks.
+      const { unlockPdf, QpdfError } = await import('@/lib/tools/pdf/qpdf')
+      try {
+        setResult(await unlockPdf(files[0], password))
+      } catch (err) {
+        if (err instanceof QpdfError) setError(err.message)
+        else throw err
+      }
+    } catch {
+      setError('Failed to unlock the PDF. Please check your file and try again.')
     } finally {
       setProcessing(false)
     }
@@ -31,11 +36,10 @@ export function UnlockPdfClient() {
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
-      <FileDropzone maxSize={4_000_000}
+      <FileDropzone
         accept={{ 'application/pdf': ['.pdf'] }}
         onFilesSelected={f => { setFiles(f); setResult(null); setError(null) }}
         label="Drag & drop your password-protected PDF here"
-        sublabel="or click to browse — max 4MB"
       />
 
       <div className="mt-5">
@@ -48,7 +52,7 @@ export function UnlockPdfClient() {
           className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
           onKeyDown={e => { if (e.key === 'Enter') handleProcess() }}
         />
-        <p className="text-xs text-gray-400 mt-1">Your file and password are sent to our secure server to remove the password — processed immediately and never stored.</p>
+        <p className="text-xs text-gray-400 mt-1">Unlocking happens entirely in your browser. Your file and password never leave your device.</p>
       </div>
 
       {error && (
