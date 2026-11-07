@@ -7,7 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "node -e \"const fs=require('fs');fs.copyFileSync('node_modules/pdfjs-dist/build/pdf.worker.min.mjs','public/pdf.worker.min.js');fs.mkdirSync('public/qpdf',{recursive:true});for(const f of ['qpdf.js','qpdf.wasm'])fs.copyFileSync('node_modules/@neslinesli93/qpdf-wasm/dist/'+f,'public/qpdf/'+f)\""
+    "postinstall": "node scripts/copy-wasm.cjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
@@ -15,6 +15,7 @@
     "@ffmpeg/ffmpeg": "^0.12.15",
     "@ffmpeg/util": "^0.12.2",
     "@neslinesli93/qpdf-wasm": "0.3.0",
+    "@okathira/ghostpdl-wasm": "1.1.0",
     "@types/file-saver": "^2.0.7",
     "@vercel/analytics": "^2.0.1",
     "browser-image-compression": "^2.0.2",
