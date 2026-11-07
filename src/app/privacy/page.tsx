@@ -163,8 +163,8 @@ export default function PrivacyPage() {
               <p className="text-sm font-semibold text-emerald-800 mb-1">🔒 Key privacy commitment</p>
               <p className="text-sm text-emerald-700 leading-relaxed">
                 Most tools process your files locally in your browser and never upload them. Tools marked
-                "Server processing" send your file to a processing service, as described in Section 2.
-                We don't ask for accounts or personal details; analytics are described in Section 3.
+                &ldquo;Server processing&rdquo; send your file to a processing service, as described in Section 2.
+                We don&apos;t ask for accounts or personal details; analytics are described in Section 3.
               </p>
             </div>
 
