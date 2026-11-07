@@ -32,7 +32,7 @@ const HOW_TO_STEPS = [
 const FAQS = [
   { q: 'How accurate is the PDF to Word conversion?', a: 'For text-based PDFs, conversion is highly accurate. Scanned PDFs require OCR and may have lower accuracy.' },
   { q: 'What Word format does the output use?', a: 'The converted file is in .docx format, compatible with Microsoft Word, Google Docs, LibreOffice, and all modern word processors.' },
-  { q: 'What are the conversion limits?', a: 'The file picker accepts one PDF up to 4 MB. The configured server may impose additional size or processing-time limits.' },
+  { q: 'What are the conversion limits?', a: 'The file picker accepts one PDF up to 4 MB. Conversions use Adobe PDF Services and are subject to a monthly free limit.' },
   { q: 'Will my formatting be preserved?', a: 'Review tables, columns, fonts and page breaks after conversion. Complex layouts can need manual reconstruction.' },
   { q: 'Is my PDF uploaded for conversion?', a: 'Yes. PDF to Word sends your selected file to a processing service. Review the privacy policy before submitting sensitive documents.' },
 ]

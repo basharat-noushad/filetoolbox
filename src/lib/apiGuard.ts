@@ -100,15 +100,18 @@ async function limit(key: string, max: number, consume: boolean, windowMs: numbe
 const monthKey = (prefix: string) => `${prefix}:${new Date().toISOString().slice(0, 7)}` // UTC YYYY-MM
 
 /** True if the global monthly counter has reached `max`. Without Redis there is no global counter (false). */
-export async function monthlyCapReached(prefix: string, max: number): Promise<boolean> {
-  const r = await kv([['GET', monthKey(prefix)]])
-  return r ? Number(r[0] ?? 0) >= max : false
-}
-
-/** Increments the global monthly counter (no-op without Redis). */
-export async function countMonthly(prefix: string): Promise<void> {
+/**
+ * Atomically reserves one slot of the global monthly budget (INCR, then compare), so concurrent
+ * requests can't all slip past the cap. Every reserved slot counts, including failed conversions,
+ * because the upstream bills attempts too. Returns false when over the cap. No Redis → always true.
+ */
+export async function reserveMonthly(prefix: string, max: number): Promise<boolean> {
   const k = monthKey(prefix)
-  await kv([['INCR', k], ['EXPIRE', k, 40 * 24 * 60 * 60]])
+  const r = await kv([['INCR', k], ['EXPIRE', k, 40 * 24 * 60 * 60]])
+  if (!r) return true
+  if (Number(r[0]) <= max) return true
+  await kv([['DECR', k]]) // over the cap: give the slot back so the counter stays meaningful
+  return false
 }
 
 const text = (body: string, status: number, headers?: HeadersInit) => new Response(body, { status, headers })

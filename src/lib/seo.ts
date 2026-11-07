@@ -26,7 +26,7 @@ export function withSocialMetadata(metadata: Metadata, path: string): Metadata {
 // These tools send the selected file to an API; all other current tools run locally.
 const SERVER_TOOLS = new Set([
   'pdf-to-word', 'word-to-pdf', 'pdf-to-excel', 'excel-to-pdf', 'ppt-to-pdf',
-  'pdf-to-ppt', 'pdf-to-pdfa', 'protect-pdf', 'unlock-pdf', 'remove-background',
+  'pdf-to-ppt', 'remove-background',
 ])
 
 export function usesProcessingServer(slug: string) {

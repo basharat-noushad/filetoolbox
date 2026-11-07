@@ -56,7 +56,7 @@ Most tools process selected files in your browser. Some tools send files to a pr
     heading: '2. Your Files',
     content: `Tools labeled Browser processing load the selected file into browser memory and process it locally. Tools labeled Server processing send the selected file to a processing service.
 
-Remove Background forwards the image to remove.bg through our API. Other server tools use the configured document-processing services. Server tools include PDF to Word, Word to PDF, PDF to Excel, Excel to PDF, PDF to PowerPoint, PowerPoint to PDF, PDF to PDF/A, Protect PDF, Unlock PDF and Remove Background. In these cases:
+Remove Background forwards the image to remove.bg through our API. Document conversions (PDF to Word, Word to PDF, PDF to Excel, Excel to PDF, PDF to PowerPoint and PowerPoint to PDF) are sent to Adobe PDF Services through our API. Protect PDF, Unlock PDF and PDF to PDF/A run entirely in your browser. In these cases:
 • Your file is transmitted over an encrypted HTTPS connection.
 • It is processed immediately and the result is returned to your browser.
 • Temporary storage, retention and logging depend on the deployed processing service; this page does not promise immediate deletion or memory-only handling.

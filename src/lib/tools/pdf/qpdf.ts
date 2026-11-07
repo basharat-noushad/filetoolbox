@@ -98,7 +98,8 @@ export async function unlockPdf(file: File, password: string): Promise<Blob> {
     // --is-encrypted with the password: ok = encrypted and password accepted.
     const check = run(['--is-encrypted', `--password=${password}`, IN])
     if (!check.ok) {
-      failure = isWrongPassword(check.stderr) ? 'Incorrect password. Passwords are case-sensitive, so please try again.'
+      failure = isWrongPassword(check.stderr)
+        ? (password ? 'Incorrect password. Passwords are case-sensitive, so please try again.' : 'This PDF needs a password to open. Enter it above.')
         : hasErrors(check.stderr) ? CORRUPT
         : 'This PDF is not password-protected, so there is nothing to unlock.'
       return

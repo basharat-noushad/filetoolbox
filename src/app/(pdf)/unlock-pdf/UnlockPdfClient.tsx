@@ -14,7 +14,6 @@ export function UnlockPdfClient() {
   const handleProcess = async () => {
     if (processing) return // Enter key can fire while a run is in flight
     if (files.length === 0) { setError('Please select a PDF file.'); return }
-    if (!password) { setError('Please enter the PDF password.'); return }
     setProcessing(true)
     setError(null)
     setResult(null)
@@ -48,7 +47,7 @@ export function UnlockPdfClient() {
           type="password"
           value={password}
           onChange={e => setPassword(e.target.value)}
-          placeholder="Enter the current PDF password"
+          placeholder="PDF password (leave blank if it opens without one)"
           className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
           onKeyDown={e => { if (e.key === 'Enter') handleProcess() }}
         />

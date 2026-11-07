@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     return new Response('Background removal service not configured. Please add a REMOVE_BG_API_KEY.', { status: 503 })
   }
 
-  // Stricter budget than Stirling: every call here spends paid remove.bg credits.
+  // Strict budget: every call here spends paid remove.bg credits.
   const upload = await guardUpload(request, { exts: ['jpg', 'jpeg', 'png', 'webp'], bucket: 'removebg', perHour: 5 })
   if (upload instanceof Response) return upload
 

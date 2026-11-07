@@ -3,7 +3,7 @@
 // Spec: https://github.com/AdobeDocs/pdfservices-api-documentation/blob/main/static/openapi.json
 // Flow: POST /token → POST /assets → PUT uploadUri → POST /operation/{op} → poll `location` → GET asset.downloadUri
 
-import { countMonthly, guardUpload, monthlyCapReached } from '@/lib/apiGuard'
+import { guardUpload, reserveMonthly } from '@/lib/apiGuard'
 
 export type AdobeErrorKind = 'NotConfigured' | 'QuotaExceeded' | 'Timeout' | 'BadInput' | 'Upstream'
 
@@ -89,6 +89,12 @@ function failedJob(error: { status?: number; code?: string } | undefined): Adobe
  * exportpdf: PDF → targetFormat (docx | xlsx | pptx). createpdf: Office file → PDF.
  * Throws AdobeError; never logs credentials, tokens, presigned URLs or file contents.
  */
+/** Same origin as the configured base (covers the test mock), or an https Adobe PDF Services host. */
+function isTrustedStatusUrl(u: URL, base: string): boolean {
+  if (u.origin === new URL(base).origin) return true
+  return u.protocol === 'https:' && /^pdf-services(-[a-z0-9]+)?\.adobe\.io$/.test(u.hostname)
+}
+
 export async function convertWithAdobe(
   op: 'exportpdf' | 'createpdf', blob: Blob, mediaType: string, targetFormat?: 'docx' | 'xlsx' | 'pptx',
 ): Promise<ArrayBuffer> {
@@ -120,8 +126,9 @@ export async function convertWithAdobe(
       body: JSON.stringify(op === 'exportpdf' ? { assetID: asset.assetID, targetFormat } : { assetID: asset.assetID }),
     }, deadline)
     const location = job.headers.get('location')
-    // The bearer token is sent to `location`, so it must stay on the API origin.
-    if (!location || new URL(location, base).origin !== new URL(base).origin) throw new AdobeError('Upstream')
+    // The bearer token is sent to `location`, so it must stay on Adobe's API. Adobe answers with a
+    // regional host (e.g. pdf-services-ue1.adobe.io), so allow pdf-services[-region].adobe.io over https.
+    if (!location || !isTrustedStatusUrl(new URL(location, base), base)) throw new AdobeError('Upstream')
     const statusUrl = new URL(location, base).toString()
 
     for (let delay = 800; ; delay = Math.min(delay * 1.5, 3000)) {
@@ -164,10 +171,10 @@ export async function adobeRoute(request: Request, cfg: {
   filename: string
 }): Promise<Response> {
   if (!adobeConfigured()) return text('Conversion service not configured.', 503)
-  if (await monthlyCapReached(ADOBE_MONTHLY_KEY, monthlyLimit())) return text(QUOTA_MSG, 503)
-
   const upload = await guardUpload(request, { exts: cfg.exts, bucket: 'adobe', perDay: perIpDaily() })
   if (upload instanceof Response) return upload
+  // Reserve before calling Adobe (atomic; failed attempts count too, Adobe bills them).
+  if (!(await reserveMonthly(ADOBE_MONTHLY_KEY, monthlyLimit()))) return text(QUOTA_MSG, 503)
 
   let out: ArrayBuffer
   try {
@@ -182,8 +189,6 @@ export async function adobeRoute(request: Request, cfg: {
       default: return text('Conversion failed. Please try again.', 502)
     }
   }
-  await countMonthly(ADOBE_MONTHLY_KEY)
-
   if (out.byteLength > MAX_RESPONSE_BYTES) {
     return text('The converted file is larger than 4.4 MB and cannot be delivered. Please try a smaller file.', 413)
   }

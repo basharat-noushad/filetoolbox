@@ -47,10 +47,10 @@ Combines two or more PDF files into a single PDF document. Preserves all content
 Rewrites PDF structure using object streams without downsampling images. Savings vary. Returns the original if optimization does not reduce file size. One PDF up to 50 MB.
 
 **pdf-to-word** (https://pdfandimage.com/pdf-to-word)
-Converts PDF files to editable Microsoft Word (.docx) format. Uses server-side LibreOffice conversion for accurate layout preservation. Supports both text-based and scanned PDFs (OCR applied automatically).
+Converts PDF files to editable Microsoft Word (.docx) format. Converted by Adobe PDF Services for accurate layout preservation. Supports both text-based and scanned PDFs (OCR applied automatically).
 
 **word-to-pdf** (https://pdfandimage.com/word-to-pdf)
-Converts .docx and .doc Microsoft Word files to PDF format. Preserves all formatting, fonts, and layout using LibreOffice.
+Converts .docx and .doc Microsoft Word files to PDF format. Converted by Adobe PDF Services, preserving formatting, fonts, and layout.
 
 **split-pdf** (https://pdfandimage.com/split-pdf)
 Splits a PDF into multiple files by user-defined page ranges (e.g., "1-3, 5, 7-9"). Output is a ZIP archive containing separate PDF files. Browser-based.
@@ -200,8 +200,8 @@ Converts raster PNG images to SVG vector format using Potrace. Server-side.
 - **PDF processing (client-side):** pdf-lib, PDF.js, jsPDF
 - **Image processing (client-side):** Canvas API, browser-image-compression, heic2any, Cropper.js, FFmpeg.wasm
 - **OCR:** Tesseract.js (client-side)
-- **Server-side conversions:** LibreOffice via Gotenberg Docker container (PDF↔Office formats)
-- **Hosting:** Vercel (frontend) + Railway (Gotenberg)
+- **Server-side conversions:** Adobe PDF Services API (PDF↔Office formats); Protect, Unlock and PDF/A run in the browser via WebAssembly
+- **Hosting:** Vercel
 - **CDN:** Cloudflare
 
 ---
