@@ -8,8 +8,8 @@ const tool = getToolBySlug('flatten-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Flatten PDF Online Free — Flatten PDF Form Fields',
-    description: 'Flatten PDF forms and annotations into a static, non-editable document. Prevent form editing and preserve appearance. Free online tool.',
+    title: "Flatten PDF Online Free — Flatten Form Fields",
+    description: "Flatten PDF online for free. Merge form fields and annotations into static page content, so they can no longer be edited. No sign-up needed.",
     keywords: tool.keywords,
     openGraph: { title: 'Flatten PDF Form Fields Online Free | PDF and Image +', description: 'Flatten PDF forms and annotations into a static document. Free, browser-based, no registration.' },
     twitter: { title: 'Flatten PDF Form Fields Online Free | PDF and Image +', description: 'Flatten PDF forms and annotations into a static document. Free, browser-based, no registration.' },

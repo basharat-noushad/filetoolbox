@@ -8,8 +8,8 @@ const tool = getToolBySlug('add-watermark-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: "Add Watermark to JPG, PNG & WebP Online Free",
-    description: "Add a text watermark to JPG, PNG or WebP photos free in your browser. Choose a corner or center position and adjust opacity. One image up to 50 MB.",
+    title: "Add Watermark to Image Online Free — Text",
+    description: "Add watermark to image online free: type text, pick a corner or center, and adjust opacity. One JPG, PNG or WebP up to 50 MB. No sign-up.",
     keywords: tool.keywords,
     alternates: { canonical: '/add-watermark-image' },
   }, '/add-watermark-image')

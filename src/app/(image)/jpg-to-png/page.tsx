@@ -8,16 +8,16 @@ const tool = getToolBySlug('jpg-to-png')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'JPG to PNG Online Free — Convert JPEG to PNG',
-    description: 'Convert JPG/JPEG images to PNG format online for free. Lossless conversion with transparency support. No registration required.',
+    title: "JPG to PNG Online Free — Convert JPG to PNG",
+    description: "Convert JPG to PNG online free in your browser with lossless PNG output for editing and graphics. Multiple files download as a ZIP. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'JPG to PNG Online Free — Convert JPEG to PNG | PDF and Image +',
-      description: 'Convert JPG/JPEG images to PNG format online for free. Lossless conversion with transparency support. No registration required.',
+      title: "JPG to PNG Online Free — Convert JPG to PNG | PDF and Image +",
+      description: "Convert JPG to PNG online free in your browser with lossless PNG output for editing and graphics. Multiple files download as a ZIP. No sign-up.",
     },
     twitter: {
-      title: 'JPG to PNG Online Free — Convert JPEG to PNG | PDF and Image +',
-      description: 'Convert JPG/JPEG images to PNG format online for free. Lossless conversion with transparency support. No registration required.',
+      title: "JPG to PNG Online Free — Convert JPG to PNG | PDF and Image +",
+      description: "Convert JPG to PNG online free in your browser with lossless PNG output for editing and graphics. Multiple files download as a ZIP. No sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/jpg-to-png')

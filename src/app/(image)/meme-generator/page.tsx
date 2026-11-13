@@ -8,8 +8,8 @@ const tool = getToolBySlug('meme-generator')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Meme Generator Online Free — Create Memes with Custom Text',
-    description: 'Create custom memes online for free. Upload any image, add top and bottom text with Impact font. Download your meme instantly. No sign-up.',
+    title: "Meme Generator Online Free — Top & Bottom Text",
+    description: "Meme generator online for free. Upload a JPG or PNG, add top and bottom text, and download your meme instantly. No sign-up needed.",
     keywords: tool.keywords,
     openGraph: { title: 'Meme Generator Online Free | PDF and Image +', description: 'Create custom memes online for free. Upload any image, add text, download instantly.' },
     twitter: { title: 'Meme Generator Online Free | PDF and Image +', description: 'Create custom memes online for free. Upload any image, add text, download instantly.' },

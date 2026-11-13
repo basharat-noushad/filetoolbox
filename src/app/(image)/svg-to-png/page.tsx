@@ -8,8 +8,8 @@ const tool = getToolBySlug('svg-to-png')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'SVG to PNG Converter Online Free — Convert SVG to PNG',
-    description: 'Convert SVG vector files to PNG images online for free. Set custom width and height for the output. Perfect for web and print use.',
+    title: "SVG to PNG Converter Online Free — Custom Size",
+    description: "Convert SVG to PNG online for free in seconds. Set a custom width or height for your image, then download the PNG. No sign-up required.",
     keywords: tool.keywords,
     openGraph: {
       title: 'SVG to PNG Converter Free Online | PDF and Image +',

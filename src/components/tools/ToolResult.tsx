@@ -20,8 +20,9 @@ export function ToolResult({ blob, filename, label }: ToolResultProps) {
         <span className="font-semibold text-emerald-800">{label || 'Processing complete!'}</span>
       </div>
       <Button onClick={handleDownload} size="lg" className="w-full gap-2 cursor-pointer">
-        <Download className="w-5 h-5" />
-        Download {filename} ({(blob.size / 1024).toFixed(1)} KB)
+        <Download className="w-5 h-5 shrink-0" />
+        <span className="min-w-0 truncate">Download {filename}</span>
+        <span className="shrink-0">({(blob.size / 1024).toFixed(1)} KB)</span>
       </Button>
       <div className="mt-4 flex justify-center">
         <AdBanner slot="in-result" format="rectangle" />

@@ -8,16 +8,16 @@ const tool = getToolBySlug('flip-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Flip Image Online Free — Mirror Photo Horizontally or Vertically',
-    description: 'Flip images horizontally or vertically online for free. Mirror any photo in one click. No registration required.',
+    title: "Flip Image Online Free — Horizontal or Vertical",
+    description: "Flip image online free horizontally or vertically in one click. Mirror any photo without quality loss. No sign-up needed to use the tool.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Flip Image Online Free — Mirror Photo Horizontally or Vertically | PDF and Image +',
-      description: 'Flip images horizontally or vertically online for free. Mirror any photo in one click. No registration required.',
+      title: "Flip Image Online Free — Horizontal or Vertical | PDF and Image +",
+      description: "Flip image online free horizontally or vertically in one click. Mirror any photo without quality loss. No sign-up needed to use the tool.",
     },
     twitter: {
-      title: 'Flip Image Online Free — Mirror Photo Horizontally or Vertically | PDF and Image +',
-      description: 'Flip images horizontally or vertically online for free. Mirror any photo in one click. No registration required.',
+      title: "Flip Image Online Free — Horizontal or Vertical | PDF and Image +",
+      description: "Flip image online free horizontally or vertically in one click. Mirror any photo without quality loss. No sign-up needed to use the tool.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/flip-image')

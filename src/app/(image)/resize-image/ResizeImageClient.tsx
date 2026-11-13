@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
@@ -79,6 +80,7 @@ export function ResizeImageClient() {
           </div>
         </div>
       </div>
+      <p className="mt-4 text-xs text-gray-500">Need a file under a certain size, e.g. 100 KB? Use <Link href="/compress-image" className="text-brand-600 underline">Compress Image → Target size</Link>.</p>
       {error && <p className="mt-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2">{error}</p>}
       <Button onClick={handleResize} disabled={!file || processing} className="mt-4 w-full cursor-pointer" size="lg">
         {processing ? 'Resizing…' : 'Resize Image'}

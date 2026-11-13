@@ -8,16 +8,16 @@ const tool = getToolBySlug('ocr-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'OCR PDF — Extract Text from Scanned PDF Free',
-    description: 'Extract text from scanned PDF files using OCR technology. Convert image-based PDFs to searchable, copyable text. Free online OCR tool.',
+    title: "OCR PDF Online Free — Extract Text from Scans",
+    description: "OCR PDF online for free: extract text from scanned PDFs in your browser. English, Spanish, French, German and Simplified Chinese. Download as .txt.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'OCR PDF — Extract Text from Scanned PDF Free | PDF and Image +',
-      description: 'Extract text from scanned PDF files using OCR technology. Convert image-based PDFs to searchable, copyable text. Free online OCR tool.',
+      title: "OCR PDF Online Free — Extract Text from Scans | PDF and Image +",
+      description: "OCR PDF online for free: extract text from scanned PDFs in your browser. English, Spanish, French, German and Simplified Chinese. Download as .txt.",
     },
     twitter: {
-      title: 'OCR PDF — Extract Text from Scanned PDF Free | PDF and Image +',
-      description: 'Extract text from scanned PDF files using OCR technology. Convert image-based PDFs to searchable, copyable text. Free online OCR tool.',
+      title: "OCR PDF Online Free — Extract Text from Scans | PDF and Image +",
+      description: "OCR PDF online for free: extract text from scanned PDFs in your browser. English, Spanish, French, German and Simplified Chinese. Download as .txt.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/ocr-pdf')

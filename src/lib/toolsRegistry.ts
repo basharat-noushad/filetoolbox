@@ -7,15 +7,15 @@ export const tools: Tool[] = [
     name: 'Merge PDF',
     description: 'Combine multiple PDF files into one document. Fast, free, and secure — no upload required.',
     category: 'pdf', icon: 'FilePlus2',
-    keywords: ['merge pdf', 'combine pdf', 'join pdf online free'],
+    keywords: ["merge pdf", "merge pdf online", "merge pdf free", "merge pdf online free", "merge pdf files into one", "combine pdf", "merge pdfs into one", "join pdf files", "merge pdf no sign up"],
     relatedTools: ['split-pdf', 'compress-pdf', 'rotate-pdf'], tier: 1,
   },
   {
     slug: 'compress-pdf',
     name: 'Compress PDF',
-    description: "Compress PDF file structure in your browser without downsampling images. Size savings depend on the original; already optimized or scanned PDFs may not get smaller.",
+    description: "Shrink a PDF in your browser. Lossless mode keeps text intact; target-size mode squeezes it under 100 KB, 200 KB or 1 MB for email and upload forms.",
     category: 'pdf', icon: 'FileDown',
-    keywords: ["compress pdf","compress pdf file size","compress pdf for email","compress pdf lossless"],
+    keywords: ["compress pdf", "compress pdf online", "compress pdf free", "compress pdf to 200kb", "compress pdf to 100kb", "compress pdf to 1mb", "compress pdf for email", "compress pdf online free", "compress pdf file size", "reduce pdf file size", "compress pdf without losing quality", "shrink pdf"],
     relatedTools: ['merge-pdf', 'pdf-to-jpg', 'split-pdf'], tier: 1,
   },
   {
@@ -23,7 +23,7 @@ export const tools: Tool[] = [
     name: 'PDF to Word',
     description: 'Convert PDF files to editable Word documents (.docx) instantly. No email required.',
     category: 'pdf', icon: 'FileText',
-    keywords: ['pdf to word', 'pdf to docx', 'convert pdf to word free'],
+    keywords: ["pdf to word", "pdf to word converter", "pdf to word free", "pdf to word converter online free", "pdf to word online free", "convert pdf to word", "pdf to docx", "scanned pdf to word", "pdf to word ocr"],
     relatedTools: ['word-to-pdf', 'compress-pdf', 'merge-pdf'], tier: 1,
   },
   {
@@ -31,7 +31,7 @@ export const tools: Tool[] = [
     name: 'Word to PDF',
     description: 'Convert Word documents (.docx, .doc) to PDF format. Review the converted layout before sharing.',
     category: 'pdf', icon: 'FileOutput',
-    keywords: ['word to pdf', 'docx to pdf', 'convert word to pdf free'],
+    keywords: ["word to pdf", "word to pdf converter", "word to pdf free", "word to pdf converter online free", "word to pdf online free", "convert word to pdf", "docx to pdf", "doc to pdf", "word to pdf for free online"],
     relatedTools: ['pdf-to-word', 'compress-pdf', 'merge-pdf'], tier: 1,
   },
   {
@@ -39,7 +39,7 @@ export const tools: Tool[] = [
     name: 'Split PDF',
     description: 'Split a PDF into multiple files by page range or extract individual pages.',
     category: 'pdf', icon: 'Scissors',
-    keywords: ['split pdf', 'extract pdf pages', 'split pdf online free'],
+    keywords: ["split pdf", "split pdf online", "split pdf online free", "split pdf free", "split pdf pages", "split pdf into multiple files", "split pdf pages online", "split pdf file", "separate pdf pages"],
     relatedTools: ['merge-pdf', 'delete-pdf-pages', 'rotate-pdf'], tier: 1,
   },
   {
@@ -47,7 +47,7 @@ export const tools: Tool[] = [
     name: 'PDF to JPG',
     description: 'Convert each page of a PDF to a high-quality JPG image. Download individually or as a ZIP.',
     category: 'pdf', icon: 'Image',
-    keywords: ['pdf to jpg', 'pdf to image', 'convert pdf to jpg online'],
+    keywords: ["pdf to jpg", "pdf to jpg converter", "pdf to jpg free", "pdf to jpg online free", "pdf to jpg converter online free", "pdf to jpg online", "pdf to jpg high quality", "convert pdf to jpg"],
     relatedTools: ['jpg-to-pdf', 'pdf-to-png', 'compress-image'], tier: 1,
   },
   {
@@ -55,7 +55,7 @@ export const tools: Tool[] = [
     name: 'JPG to PDF',
     description: 'Convert JPG images to a PDF file. Add multiple images and arrange them in any order.',
     category: 'pdf', icon: 'FileImage',
-    keywords: ['jpg to pdf', 'image to pdf', 'convert jpg to pdf online free'],
+    keywords: ["jpg to pdf", "jpg to pdf converter", "jpg to pdf free", "jpg to pdf online free", "jpg to pdf converter free online", "convert jpg to pdf", "jpeg to pdf", "jpg to pdf merge", "jpg to pdf high quality"],
     relatedTools: ['pdf-to-jpg', 'merge-pdf', 'compress-pdf'], tier: 1,
   },
   {
@@ -63,7 +63,7 @@ export const tools: Tool[] = [
     name: 'Rotate PDF',
     description: 'Rotate all or selected pages of a PDF by 90°, 180°, or 270°. Fix scanned documents.',
     category: 'pdf', icon: 'RotateCw',
-    keywords: ['rotate pdf', 'rotate pdf pages', 'rotate pdf online free'],
+    keywords: ["rotate pdf", "rotate pdf online", "rotate pdf pages", "rotate pdf online free", "rotate pdf free", "rotate pdf pages online", "rotate pdf file", "rotate pdf on iphone", "rotate pdf mac"],
     relatedTools: ['merge-pdf', 'split-pdf', 'delete-pdf-pages'], tier: 1,
   },
   {
@@ -71,7 +71,7 @@ export const tools: Tool[] = [
     name: 'PDF to PNG',
     description: 'Convert PDF pages to transparent PNG images. Perfect for presentations and web use.',
     category: 'pdf', icon: 'FileImage',
-    keywords: ['pdf to png', 'pdf to image png', 'convert pdf to png online'],
+    keywords: ["pdf to png", "pdf to png converter", "pdf to png free", "pdf to png online free", "pdf to png converter free online", "pdf to png high quality", "convert pdf to png", "pdf to png mac", "pdf to png windows"],
     relatedTools: ['pdf-to-jpg', 'jpg-to-pdf', 'compress-image'], tier: 1,
   },
   {
@@ -79,7 +79,7 @@ export const tools: Tool[] = [
     name: 'Delete PDF Pages',
     description: 'Remove specific pages or page ranges from a PDF document. Preview before deleting.',
     category: 'pdf', icon: 'Trash2',
-    keywords: ['delete pdf pages', 'remove pages from pdf', 'delete pages pdf online'],
+    keywords: ["delete pdf pages", "delete pdf pages online", "delete pdf pages online free", "delete pdf pages free", "remove pages from pdf", "delete pages from pdf", "remove pdf pages online free", "delete pdf pages mac", "delete pdf pages without acrobat"],
     relatedTools: ['split-pdf', 'rotate-pdf', 'merge-pdf'], tier: 1,
   },
 
@@ -87,9 +87,9 @@ export const tools: Tool[] = [
   {
     slug: 'compress-image',
     name: 'Compress Image',
-    description: 'Reduce image file size without visible quality loss. Supports JPG, PNG, WebP.',
+    description: 'Reduce JPG, PNG or WebP file size with a quality slider, or compress to an exact target like 100 KB or 50 KB.',
     category: 'image', icon: 'ImageDown',
-    keywords: ['compress image', 'reduce image size', 'image compressor online free'],
+    keywords: ["compress image online", "compress image online free", "compress image", "compress image to 100kb", "compress image to 50kb", "compress image to 20kb", "compress jpeg to 200kb", "reduce image size in kb", "reduce image size", "compress png online", "compress jpg online free", "image compressor online free", "shrink image file size", "compress image online without losing quality", "compress webp image"],
     relatedTools: ['resize-image', 'png-to-jpg', 'image-to-webp'], tier: 1,
   },
   {
@@ -97,7 +97,7 @@ export const tools: Tool[] = [
     name: 'Resize Image',
     description: 'Resize images to any dimension. Set width, height, or percentage. Aspect ratio lock.',
     category: 'image', icon: 'Maximize2',
-    keywords: ['resize image', 'image resizer online', 'change image size free'],
+    keywords: ["resize image online", "resize image online free", "resize image", "resize image online pixel", "resize image pixels"],
     relatedTools: ['compress-image', 'crop-image', 'png-to-jpg'], tier: 1,
   },
   {
@@ -105,7 +105,7 @@ export const tools: Tool[] = [
     name: 'Crop Image',
     description: 'Crop images with an interactive cropper. Set custom dimensions or use preset ratios.',
     category: 'image', icon: 'Crop',
-    keywords: ['crop image', 'crop image online', 'image cropper free'],
+    keywords: ["crop image online", "crop image", "crop image online free", "crop image size"],
     relatedTools: ['resize-image', 'compress-image', 'rotate-image'], tier: 1,
   },
   {
@@ -113,15 +113,15 @@ export const tools: Tool[] = [
     name: 'PNG to JPG',
     description: 'Convert PNG images to JPG format. Control compression quality. Batch supported.',
     category: 'image', icon: 'ArrowRightLeft',
-    keywords: ['png to jpg', 'convert png to jpeg', 'png to jpg online free'],
+    keywords: ["png to jpg", "png to jpg converter", "png to jpg online", "png to jpg online free", "png to jpg converter free", "png to jpg converter online", "png to jpg image converter"],
     relatedTools: ['jpg-to-png', 'compress-image', 'image-to-webp'], tier: 1,
   },
   {
     slug: 'jpg-to-png',
     name: 'JPG to PNG',
-    description: 'Convert JPG/JPEG images to PNG format with transparency support.',
+    description: 'Convert JPG/JPEG images to lossless PNG format. Batch convert and download as a ZIP.',
     category: 'image', icon: 'ArrowRightLeft',
-    keywords: ['jpg to png', 'jpeg to png', 'convert jpg to png online free'],
+    keywords: ["jpg to png", "jpg to png converter", "jpg to png online", "jpg to png online free", "jpg to png converter free", "jpg to png converter online"],
     relatedTools: ['png-to-jpg', 'compress-image', 'webp-to-png'], tier: 1,
   },
   {
@@ -129,7 +129,7 @@ export const tools: Tool[] = [
     name: 'Remove Background',
     description: 'Automatically remove the background from any photo in seconds. Powered by AI.',
     category: 'image', icon: 'Wand2',
-    keywords: ['remove background', 'background remover', 'remove image background free'],
+    keywords: ["remove background", "remove background from image", "remove background from image online", "remove background online free", "remove background free", "remove background online", "remove background png", "remove background from logo"],
     relatedTools: ['compress-image', 'png-to-jpg', 'resize-image'], tier: 1,
   },
   {
@@ -137,7 +137,7 @@ export const tools: Tool[] = [
     name: 'WebP to PNG',
     description: 'Convert WebP images to PNG format. Useful for compatibility with older software.',
     category: 'image', icon: 'FileImage',
-    keywords: ['webp to png', 'convert webp to png', 'webp to png online free'],
+    keywords: ["webp to png", "webp to png converter", "webp to png online", "webp to png online free", "webp to png converter online free", "webp to png converter free"],
     relatedTools: ['png-to-jpg', 'jpg-to-png', 'image-to-webp'], tier: 1,
   },
   {
@@ -145,7 +145,7 @@ export const tools: Tool[] = [
     name: 'Rotate Image',
     description: 'Rotate images 90°, 180°, or 270°. Fix orientation of photos taken on mobile.',
     category: 'image', icon: 'RotateCw',
-    keywords: ['rotate image', 'rotate photo online', 'rotate image free'],
+    keywords: ["rotate image online", "rotate image online free", "rotate image", "rotate picture online free", "rotate photo online", "rotate image free"],
     relatedTools: ['flip-image', 'crop-image', 'resize-image'], tier: 1,
   },
   {
@@ -153,15 +153,15 @@ export const tools: Tool[] = [
     name: 'Flip Image',
     description: 'Flip images horizontally or vertically. Mirror any photo in one click.',
     category: 'image', icon: 'FlipHorizontal',
-    keywords: ['flip image', 'mirror image online', 'flip photo free'],
+    keywords: ["flip image", "flip image online", "flip image online free", "flip image horizontally", "flip image left to right", "flip image left to right online", "mirror image online"],
     relatedTools: ['rotate-image', 'crop-image', 'compress-image'], tier: 1,
   },
   {
     slug: 'image-to-webp',
-    name: 'Convert to WebP',
+    name: 'JPG to WebP',
     description: 'Convert JPG or PNG images to WebP format. Smaller files, better web performance.',
     category: 'image', icon: 'Zap',
-    keywords: ['image to webp', 'convert to webp', 'jpg to webp online free'],
+    keywords: ["jpg to webp", "jpg to webp converter", "jpg to webp online", "jpg to webp converter free", "png to webp", "png to webp converter", "image to webp converter", "image to webp online", "jpg to webp bulk"],
     relatedTools: ['webp-to-png', 'compress-image', 'png-to-jpg'], tier: 1,
   },
 
@@ -171,7 +171,7 @@ export const tools: Tool[] = [
     name: 'Reorder PDF Pages',
     description: 'Rearrange pages in a PDF by dragging and dropping. Reorganize any PDF document instantly.',
     category: 'pdf', icon: 'ArrowUpDown',
-    keywords: ['rearrange pdf pages online', 'reorder pdf pages', 'reorganize pdf'],
+    keywords: ["reorder pdf pages", "reorder pdf pages online", "reorder pdf pages online free", "reorder pdf pages free", "rearrange pdf pages", "rearrange pdf pages online free", "change page order in pdf free", "organize pdf pages free", "reorder pdf pages windows"],
     relatedTools: ['split-pdf', 'delete-pdf-pages', 'rotate-pdf'], tier: 2,
   },
   {
@@ -179,7 +179,7 @@ export const tools: Tool[] = [
     name: 'Add Watermark to PDF',
     description: "Add a watermark to PDF pages with your own text. Mark a draft or confidential copy, choose opacity, font size and rotation, and download a new PDF.",
     category: 'pdf', icon: 'Stamp',
-    keywords: ["add watermark pdf","add watermark to pdf","watermark pdf","add draft watermark pdf"],
+    keywords: ["add watermark to pdf", "add watermark to pdf free", "add watermark to pdf online free", "add watermark to pdf online", "add watermark to pdf for free online", "add watermark to pdf mac", "how to add watermark to pdf", "add watermark to pdf without acrobat"],
     relatedTools: ['protect-pdf', 'sign-pdf', 'compress-pdf'], tier: 2,
   },
   {
@@ -187,7 +187,7 @@ export const tools: Tool[] = [
     name: 'Add Page Numbers to PDF',
     description: 'Add page numbers to a PDF document. Choose position: bottom center, bottom right, or top center.',
     category: 'pdf', icon: 'Hash',
-    keywords: ['add page numbers to pdf', 'pdf page numbering online', 'number pdf pages free'],
+    keywords: ["add page numbers to pdf", "add page numbers to pdf online", "add page numbers to pdf free", "add page numbers to pdf online free", "add page numbers to pdf for free online", "add page numbers to pdf mac", "add page numbers to pdf without acrobat", "add page numbers to pdf in preview", "how to put a page number in pdf"],
     relatedTools: ['reorder-pdf-pages', 'add-watermark-pdf', 'merge-pdf'], tier: 2,
   },
   {
@@ -195,7 +195,7 @@ export const tools: Tool[] = [
     name: 'PDF to Excel',
     description: 'Convert PDF files to editable Excel spreadsheets (.xlsx). Extract tables from any PDF.',
     category: 'pdf', icon: 'Table2',
-    keywords: ['pdf to excel converter free', 'pdf to xlsx online', 'convert pdf to excel'],
+    keywords: ["pdf to excel", "pdf to excel converter", "pdf to excel converter online free", "pdf to excel converter free", "pdf to excel free", "pdf to excel online free", "convert pdf to excel", "pdf to excel free ocr"],
     relatedTools: ['excel-to-pdf', 'pdf-to-word', 'pdf-to-ppt'], tier: 2,
   },
   {
@@ -203,7 +203,7 @@ export const tools: Tool[] = [
     name: 'Excel to PDF',
     description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format. Preserves all formatting.',
     category: 'pdf', icon: 'FileSpreadsheet',
-    keywords: ['excel to pdf online', 'xlsx to pdf free', 'convert excel to pdf'],
+    keywords: ["excel to pdf", "excel to pdf converter", "excel to pdf free", "excel to pdf converter online free", "excel to pdf online free", "excel to pdf free online", "xls to pdf online free", "excel to pdf for free", "convert excel to pdf"],
     relatedTools: ['pdf-to-excel', 'word-to-pdf', 'ppt-to-pdf'], tier: 2,
   },
   {
@@ -211,7 +211,7 @@ export const tools: Tool[] = [
     name: 'PowerPoint to PDF',
     description: 'Convert PowerPoint presentations (.pptx, .ppt) to PDF format. All slides preserved.',
     category: 'pdf', icon: 'Presentation',
-    keywords: ['ppt to pdf converter free', 'powerpoint to pdf online', 'pptx to pdf'],
+    keywords: ["ppt to pdf", "ppt to pdf converter", "ppt to pdf free", "ppt to pdf converter online free", "ppt to pdf online free", "ppt to pdf free online", "powerpoint to pdf", "convert ppt to pdf", "pptx to pdf"],
     relatedTools: ['pdf-to-ppt', 'word-to-pdf', 'excel-to-pdf'], tier: 2,
   },
   {
@@ -219,7 +219,7 @@ export const tools: Tool[] = [
     name: 'PDF to PowerPoint',
     description: 'Convert PDF files to editable PowerPoint presentations (.pptx). Each page becomes a slide.',
     category: 'pdf', icon: 'FileOutput',
-    keywords: ['pdf to ppt online', 'pdf to powerpoint free', 'convert pdf to pptx'],
+    keywords: ["pdf to ppt", "pdf to ppt converter", "pdf to ppt converter free", "pdf to pptx", "pdf to pptx converter free", "pdf to ppt online free", "pdf to ppt free", "pdf to powerpoint", "pdf to ppt free online"],
     relatedTools: ['ppt-to-pdf', 'pdf-to-word', 'pdf-to-excel'], tier: 2,
   },
   {
@@ -227,7 +227,7 @@ export const tools: Tool[] = [
     name: 'Unlock PDF',
     description: 'Remove password protection from a PDF file. Unlock password-protected PDFs instantly.',
     category: 'pdf', icon: 'LockOpen',
-    keywords: ['remove password from pdf', 'unlock pdf online free', 'pdf password remover'],
+    keywords: ["unlock pdf", "unlock pdf online", "unlock pdf free", "unlock pdf online free", "unlock pdf file", "unlock pdf for free", "remove password from pdf", "remove password from pdf online free"],
     relatedTools: ['protect-pdf', 'compress-pdf', 'merge-pdf'], tier: 2,
   },
   {
@@ -235,7 +235,7 @@ export const tools: Tool[] = [
     name: 'Protect PDF',
     description: 'Add password protection to a PDF file. Secure your documents with encryption.',
     category: 'pdf', icon: 'Lock',
-    keywords: ['add password to pdf online', 'protect pdf free', 'encrypt pdf online'],
+    keywords: ["protect pdf", "protect pdf with password", "protect pdf online free", "protect pdf free", "password protect pdf", "password protect pdf online free", "lock pdf", "lock pdf online free", "protect pdf from editing"],
     relatedTools: ['unlock-pdf', 'sign-pdf', 'add-watermark-pdf'], tier: 2,
   },
   {
@@ -243,7 +243,7 @@ export const tools: Tool[] = [
     name: 'Sign PDF Online',
     description: 'Sign PDF documents online with a hand-drawn or typed signature. No registration needed.',
     category: 'pdf', icon: 'PenLine',
-    keywords: ['sign pdf online free', 'electronic signature pdf', 'pdf signature tool'],
+    keywords: ["sign pdf", "sign pdf online", "sign pdf online free", "sign pdf free", "sign pdf document", "sign pdf free no sign up", "sign pdf free online no sign up", "how to sign pdf file for free"],
     relatedTools: ['protect-pdf', 'add-watermark-pdf', 'flatten-pdf'], tier: 2,
   },
   {
@@ -251,7 +251,7 @@ export const tools: Tool[] = [
     name: 'OCR PDF',
     description: 'Extract text from scanned PDFs using OCR technology. Convert image-based PDFs to searchable text.',
     category: 'pdf', icon: 'ScanText',
-    keywords: ['pdf ocr online free', 'ocr pdf text extraction', 'scan pdf to text'],
+    keywords: ["ocr pdf", "ocr pdf free", "ocr pdf online free", "ocr pdf to text", "ocr pdf free online", "pdf ocr online free", "searchable pdf online free", "extract text from scanned pdf"],
     relatedTools: ['pdf-to-word', 'compress-pdf', 'flatten-pdf'], tier: 2,
   },
   {
@@ -259,7 +259,7 @@ export const tools: Tool[] = [
     name: 'Flatten PDF',
     description: 'Flatten PDF form fields and annotations into a static document. Prevents form editing.',
     category: 'pdf', icon: 'Layers',
-    keywords: ['flatten pdf form fields', 'flatten pdf online free', 'pdf flatten tool'],
+    keywords: ["flatten pdf", "flatten pdf online", "flatten pdf online free", "flatten pdf free", "flatten pdf free online", "flatten pdf form fields", "flatten pdf to prevent editing", "flatten pdf meaning"],
     relatedTools: ['sign-pdf', 'protect-pdf', 'compress-pdf'], tier: 2,
   },
   {
@@ -267,7 +267,7 @@ export const tools: Tool[] = [
     name: 'Crop PDF',
     description: 'Crop the margins of a PDF document. Remove white borders or trim content from pages.',
     category: 'pdf', icon: 'Crop',
-    keywords: ['crop pdf online free', 'trim pdf margins', 'crop pdf pages'],
+    keywords: ["crop pdf", "crop pdf online", "crop pdf online free", "crop pdf free", "crop pdf pages", "crop pdf file", "crop pdf pages online", "crop pdf free online"],
     relatedTools: ['rotate-pdf', 'delete-pdf-pages', 'compress-pdf'], tier: 2,
   },
   {
@@ -275,7 +275,7 @@ export const tools: Tool[] = [
     name: 'Extract PDF Pages',
     description: 'Extract specific pages from a PDF and save them as a new PDF document.',
     category: 'pdf', icon: 'FolderOutput',
-    keywords: ['extract pages from pdf', 'pdf page extractor online', 'save pdf pages'],
+    keywords: ["extract pdf pages", "extract pdf pages online", "extract pdf pages online free", "extract pdf pages free", "extract pdf pages and make a new pdf", "extract pdf pages from any pdf document", "separate pdf pages free online", "extract pdf pages adobe"],
     relatedTools: ['split-pdf', 'delete-pdf-pages', 'reorder-pdf-pages'], tier: 2,
   },
   {
@@ -283,7 +283,7 @@ export const tools: Tool[] = [
     name: 'PDF to PDF/A',
     description: 'Convert PDF to PDF/A format for long-term archiving. Meets ISO 19005 standard.',
     category: 'pdf', icon: 'Archive',
-    keywords: ['convert pdf to pdf/a', 'pdf to pdfa online free', 'pdf archiving format'],
+    keywords: ["pdf to pdf/a", "pdf to pdf/a converter", "pdf to pdf/a converter free", "pdf to pdf/a free", "pdf to pdf/a converter online free", "pdf to pdf/a conversion", "pdf to pdf/a-2b", "pdf to pdf/a online free"],
     relatedTools: ['compress-pdf', 'protect-pdf', 'flatten-pdf'], tier: 2,
   },
 
@@ -293,7 +293,7 @@ export const tools: Tool[] = [
     name: 'Upscale Image',
     description: 'Enlarge image dimensions by 2x, 3x or 4x using browser interpolation. Export PNG; enlargement does not recover missing detail.',
     category: 'image', icon: 'ZoomIn',
-    keywords: ['upscale image online free', 'enlarge image online', 'increase image resolution'],
+    keywords: ["upscale image online", "upscale image", "upscale image online free", "upscale image free", "image upscaler free", "increase image resolution online", "increase image resolution online free"],
     relatedTools: ['resize-image', 'compress-image', 'png-to-jpg'], tier: 2,
   },
   {
@@ -301,7 +301,7 @@ export const tools: Tool[] = [
     name: 'Add Watermark to Image',
     description: "Add a watermark to JPG, PNG or WebP images using your name, copyright notice or brand text. Choose one of five positions and adjust transparency.",
     category: 'image', icon: 'Stamp',
-    keywords: ["add watermark to jpg","add watermark photo","add watermark to photo","photo watermark online","image watermark text"],
+    keywords: ["add watermark to image", "add watermark to image online", "add watermark to image online free", "add watermark to image free", "add watermark to photo", "add watermark to photo online", "watermark image online", "watermark photo online"],
     relatedTools: ['compress-image', 'resize-image', 'add-text-to-image'], tier: 2,
   },
   {
@@ -309,7 +309,7 @@ export const tools: Tool[] = [
     name: 'HEIC to JPG',
     description: "Convert HEIC to JPG to make iPhone photos easier to share, attach and open on other devices. Select one HEIC or HEIF file and download a JPEG copy.",
     category: 'image', icon: 'Smartphone',
-    keywords: ["heic to jpg","heic to jpg converter","convert heic to jpg online","heic to jpg windows"],
+    keywords: ["heic to jpg", "heic to jpg converter", "heic to jpg online", "heic to jpg online free", "heic to jpg converter free", "heic to jpg windows", "heic to jpeg free online"],
     relatedTools: ['png-to-jpg', 'compress-image', 'jpg-to-png'], tier: 2,
   },
   {
@@ -317,7 +317,7 @@ export const tools: Tool[] = [
     name: 'SVG to PNG',
     description: 'Convert SVG vector files to PNG images. Set custom width and height for the output.',
     category: 'image', icon: 'FileImage',
-    keywords: ['svg to png converter', 'convert svg to png online free', 'svg to raster'],
+    keywords: ["svg to png", "svg to png converter", "svg to png online", "svg to png online free", "svg to png converter free", "svg to png converter online free", "how to convert svg to png", "svg to png iphone", "svg to png converter high quality"],
     relatedTools: ['png-to-jpg', 'resize-image', 'compress-image'], tier: 2,
   },
   {
@@ -325,7 +325,7 @@ export const tools: Tool[] = [
     name: 'Image to Base64',
     description: 'Convert images to Base64 encoded strings. Useful for embedding images in HTML or CSS.',
     category: 'image', icon: 'Code',
-    keywords: ['image to base64 converter', 'encode image base64 online', 'base64 image encoder'],
+    keywords: ["image to base64", "image to base64 converter", "image to base64 online", "image to base64 online free", "base64 image converter", "image to base64 string", "image to base64 converter online free", "base64 image converter online", "image to base64 encode"],
     relatedTools: ['base64-to-image', 'png-to-jpg', 'svg-to-png'], tier: 2,
   },
   {
@@ -333,7 +333,7 @@ export const tools: Tool[] = [
     name: 'Base64 to Image',
     description: 'Decode Base64 strings back to image files. Preview and download the decoded image.',
     category: 'image', icon: 'ImageDown',
-    keywords: ['base64 to image online', 'decode base64 image', 'base64 image decoder'],
+    keywords: ["base64 to image", "base64 to image converter", "base64 to image online", "base64 to image online free", "base64 to image decoder", "base64 image decoder", "base64 image decoder online", "base64 to png", "base64 to jpg"],
     relatedTools: ['image-to-base64', 'compress-image', 'png-to-jpg'], tier: 2,
   },
   {
@@ -341,15 +341,15 @@ export const tools: Tool[] = [
     name: 'Grayscale Image',
     description: 'Convert color images to black and white (grayscale). Process multiple images at once.',
     category: 'image', icon: 'Contrast',   // fixed: was 'CircleDot' which doesn't exist in Lucide
-    keywords: ['convert image to black and white', 'grayscale image online free', 'desaturate photo'],
+    keywords: ["grayscale image", "grayscale image online", "grayscale image online free", "grayscale image converter", "make image grayscale", "make image grayscale online", "make image grayscale online free", "turn image grayscale online", "black and white photo converter", "black and white photo converter online free", "gray image online"],
     relatedTools: ['compress-image', 'image-brightness', 'png-to-jpg'], tier: 2,
   },
   {
     slug: 'blur-image',
     name: 'Blur Image',
-    description: 'Apply Gaussian blur to images. Control blur intensity. Useful for privacy and effects.',
+    description: 'Blur a whole image, or only the background behind people in portraits. Adjustable strength, processed in your browser.',
     category: 'image', icon: 'Blend',
-    keywords: ['blur image online free', 'gaussian blur photo online', 'pixelate image online'],
+    keywords: ["blur image", "blur image online", "blur image online free", "blur background", "blur background photo", "blur background of picture online free", "gaussian blur image", "how to blur an image", "blur image online tool", "blur image online website"],
     relatedTools: ['grayscale-image', 'image-brightness', 'compress-image'], tier: 2,
   },
   {
@@ -357,7 +357,7 @@ export const tools: Tool[] = [
     name: 'Add Text to Image',
     description: 'Add custom text to images online. Choose font, size, color, and position.',
     category: 'image', icon: 'Type',
-    keywords: ['add text to image online', 'write text on photo free', 'image text editor'],
+    keywords: ["add text to image", "add text to image online", "add text to image online free", "add text to image free", "add text to image online free no sign up", "add text to photo", "add text to photo online free", "how to add text to image"],
     relatedTools: ['meme-generator', 'add-watermark-image', 'compress-image'], tier: 2,
   },
   {
@@ -365,7 +365,7 @@ export const tools: Tool[] = [
     name: 'Meme Generator',
     description: 'Create memes online with custom top and bottom text. Upload any image or use templates.',
     category: 'image', icon: 'Laugh',
-    keywords: ['meme generator online free', 'create meme online', 'meme maker free'],
+    keywords: ["meme generator", "meme generator online", "meme generator free", "meme generator online free", "meme maker", "meme maker online", "meme maker free"],
     relatedTools: ['add-text-to-image', 'resize-image', 'compress-image'], tier: 2,
   },
   {
@@ -373,7 +373,7 @@ export const tools: Tool[] = [
     name: 'Adjust Brightness & Contrast',
     description: 'Adjust image brightness, contrast, and saturation. Enhance your photos online for free.',
     category: 'image', icon: 'Sun',        // fixed: was 'SunMedium' which doesn't exist in Lucide
-    keywords: ['adjust image brightness online', 'image brightness contrast tool', 'photo editor brightness'],
+    keywords: ["image brightness", "adjust image brightness", "adjust image brightness online", "adjust image brightness online free", "image brightness and contrast online", "image brightness and contrast online free", "brighten image online", "brighten image online free", "lighten image online", "increase image brightness"],
     relatedTools: ['grayscale-image', 'blur-image', 'compress-image'], tier: 2,
   },
   {
@@ -381,7 +381,7 @@ export const tools: Tool[] = [
     name: 'Bulk Image Compressor',
     description: 'Compress multiple images at once. Upload up to 20 images and download them all as a ZIP.',
     category: 'image', icon: 'FolderDown',
-    keywords: ['compress multiple images', 'bulk image compressor online', 'batch compress images free'],
+    keywords: ["bulk image compressor", "bulk image compressor online", "bulk image compressor free", "bulk image compressor online free", "batch image compressor", "batch image compressor online", "batch image compressor free", "compress multiple images", "compress multiple images online", "compress multiple images online free", "compress multiple images at once"],
     relatedTools: ['compress-image', 'resize-image', 'png-to-jpg'], tier: 2,
   },
   {
@@ -389,7 +389,7 @@ export const tools: Tool[] = [
     name: 'GIF to MP4',
     description: 'Convert animated GIFs to MP4 video files. Smaller file size, better compatibility.',
     category: 'image', icon: 'Film',
-    keywords: ['gif to mp4 converter', 'convert gif to video online free', 'gif to mp4 online'],
+    keywords: ["gif to mp4", "gif to mp4 converter", "gif to mp4 converter free", "gif to mp4 online", "gif to mp4 online free", "gif to mp4 converter online", "gif to mp4 converter free online", "gif to mp4 converter online free", "gif to video"],
     relatedTools: ['mp4-to-gif', 'compress-image', 'resize-image'], tier: 2,
   },
   {
@@ -397,15 +397,15 @@ export const tools: Tool[] = [
     name: 'MP4 to GIF',
     description: 'Convert MP4 video clips to animated GIF format. Control frame rate and size.',
     category: 'image', icon: 'Clapperboard',
-    keywords: ['mp4 to gif online free', 'video to gif converter', 'convert mp4 to gif'],
+    keywords: ["mp4 to gif", "mp4 to gif converter", "mp4 to gif converter free", "mp4 to gif online", "mp4 to gif online free", "mp4 to gif converter online free", "mp4 to gif maker", "video to gif", "video to gif converter", "mov to gif"],
     relatedTools: ['gif-to-mp4', 'compress-image', 'resize-image'], tier: 2,
   },
   {
     slug: 'png-to-svg',
     name: 'PNG to SVG',
-    description: 'Convert PNG images to SVG vector format. Trace bitmap images to scalable vectors.',
+    description: 'Convert PNG, JPG or WebP images to SVG. Trace logos and icons into real vector paths, or wrap the image in an SVG file.',
     category: 'image', icon: 'MonitorPlay', // fixed: was 'PenTool' which doesn't exist in Lucide
-    keywords: ['png to svg converter', 'image to vector online free', 'raster to vector'],
+    keywords: ["png to svg", "png to svg converter", "png to svg converter free", "png to svg vector", "vectorize image", "convert png to svg vector free", "image to vector", "png to svg online", "png to svg online free", "png to svg converter online", "png to svg converter online free", "png to svg free", "how to convert png to svg"],
     relatedTools: ['svg-to-png', 'png-to-jpg', 'compress-image'], tier: 2,
   },
 ]

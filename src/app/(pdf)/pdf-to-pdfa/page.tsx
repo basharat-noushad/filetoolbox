@@ -8,16 +8,16 @@ const tool = getToolBySlug('pdf-to-pdfa')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'PDF to PDF/A Converter Free Online — Archive Format',
-    description: 'Convert PDF to PDF/A-2b in your browser for long-term archiving. Fonts embedded, sRGB color profile added. Free, no sign-up, files never leave your device.',
+    title: "PDF to PDF/A Online Free — Archive Format",
+    description: "Convert PDF to PDF/A-2b online for free for long-term archiving. Fonts are embedded and an sRGB profile added. Files never leave your device.",
     keywords: tool.keywords,
     openGraph: {
       title: 'PDF to PDF/A Converter Free Online | PDF and Image +',
-      description: 'Convert PDF to PDF/A-2b in your browser for long-term archiving. Fonts embedded, sRGB color profile added. Free, no sign-up, files never leave your device.',
+      description: "Convert PDF to PDF/A-2b online for free for long-term archiving. Fonts are embedded and an sRGB profile added. Files never leave your device.",
     },
     twitter: {
       title: 'PDF to PDF/A Converter Free Online | PDF and Image +',
-      description: 'Convert PDF to PDF/A-2b in your browser for long-term archiving. Fonts embedded, sRGB color profile added. Free, no sign-up, files never leave your device.',
+      description: "Convert PDF to PDF/A-2b online for free for long-term archiving. Fonts are embedded and an sRGB profile added. Files never leave your device.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/pdf-to-pdfa')

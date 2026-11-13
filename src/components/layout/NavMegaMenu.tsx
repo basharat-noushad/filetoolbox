@@ -48,7 +48,7 @@ const IMAGE_TOOLS = [
   { name: 'PNG to JPG',            slug: '/png-to-jpg',          Icon: ArrowRightLeft },
   { name: 'JPG to PNG',            slug: '/jpg-to-png',          Icon: ArrowRightLeft },
   { name: 'WebP to PNG',           slug: '/webp-to-png',         Icon: ArrowRightLeft },
-  { name: 'Convert to WebP',       slug: '/image-to-webp',       Icon: Zap },
+  { name: 'JPG to WebP',           slug: '/image-to-webp',       Icon: Zap },
   { name: 'HEIC to JPG',           slug: '/heic-to-jpg',         Icon: Smartphone },
   { name: 'SVG to PNG',            slug: '/svg-to-png',          Icon: FileImage },
   { name: 'PNG to SVG',            slug: '/png-to-svg',          Icon: PenTool },

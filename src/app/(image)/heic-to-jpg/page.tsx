@@ -8,8 +8,8 @@ const tool = getToolBySlug('heic-to-jpg')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: "HEIC to JPG Converter Free — Convert iPhone Photos",
-    description: "Convert a HEIC or HEIF photo to JPG free in your browser. Make iPhone photos easier to share on Windows and other devices. One file up to 50 MB.",
+    title: "HEIC to JPG Online Free — iPhone Photos",
+    description: "HEIC to JPG converter online free. Turn iPhone HEIC or HEIF photos into JPG to share on Windows and other devices. One file up to 50 MB.",
     keywords: tool.keywords,
     alternates: { canonical: '/heic-to-jpg' },
   }, '/heic-to-jpg')

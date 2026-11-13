@@ -8,16 +8,16 @@ const tool = getToolBySlug('image-to-webp')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Convert Image to WebP Online Free — JPG PNG to WebP',
-    description: 'Convert JPG or PNG images to WebP format online for free. Smaller files, better web performance. No registration required.',
+    title: "JPG to WebP Converter Online Free — JPG & PNG",
+    description: "Convert JPG to WebP online free, and PNG to WebP too. Smaller files for faster pages. Up to 20 images as one ZIP. No sign-up required.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Convert Image to WebP Online Free — JPG PNG to WebP | PDF and Image +',
-      description: 'Convert JPG or PNG images to WebP format online for free. Smaller files, better web performance. No registration required.',
+      title: "JPG to WebP Converter Online Free — JPG & PNG | PDF and Image +",
+      description: "Convert JPG to WebP online free, and PNG to WebP too. Smaller files for faster pages. Up to 20 images as one ZIP. No sign-up required.",
     },
     twitter: {
-      title: 'Convert Image to WebP Online Free — JPG PNG to WebP | PDF and Image +',
-      description: 'Convert JPG or PNG images to WebP format online for free. Smaller files, better web performance. No registration required.',
+      title: "JPG to WebP Converter Online Free — JPG & PNG | PDF and Image +",
+      description: "Convert JPG to WebP online free, and PNG to WebP too. Smaller files for faster pages. Up to 20 images as one ZIP. No sign-up required.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/image-to-webp')

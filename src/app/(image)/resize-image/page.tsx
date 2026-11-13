@@ -8,16 +8,16 @@ const tool = getToolBySlug('resize-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Resize Image Online Free — Change Image Dimensions',
-    description: 'Resize images to any dimension online for free. Set width, height, or use presets. Aspect ratio lock included. No registration.',
+    title: "Resize Image Online Free — Set Width and Height",
+    description: "Resize image online free to exact pixel dimensions. Set width, height or a preset, with an aspect ratio lock. No sign-up, runs in your browser.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Resize Image Online Free — Change Image Dimensions | PDF and Image +',
-      description: 'Resize images to any dimension online for free. Set width, height, or use presets. Aspect ratio lock included. No registration.',
+      title: "Resize Image Online Free — Set Width and Height | PDF and Image +",
+      description: "Resize image online free to exact pixel dimensions. Set width, height or a preset, with an aspect ratio lock. No sign-up, runs in your browser.",
     },
     twitter: {
-      title: 'Resize Image Online Free — Change Image Dimensions | PDF and Image +',
-      description: 'Resize images to any dimension online for free. Set width, height, or use presets. Aspect ratio lock included. No registration.',
+      title: "Resize Image Online Free — Set Width and Height | PDF and Image +",
+      description: "Resize image online free to exact pixel dimensions. Set width, height or a preset, with an aspect ratio lock. No sign-up, runs in your browser.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/resize-image')

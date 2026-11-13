@@ -8,8 +8,8 @@ const tool = getToolBySlug('add-text-to-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Add Text to Image Online Free — Write on Photos',
-    description: 'Add custom text to photos and images online for free. Choose font size and color. Perfect for captions, labels, and quotes. No registration.',
+    title: "Add Text to Image Online Free — Photo Text Tool",
+    description: "Add text to image online for free. Type your caption, set the font size and text color, then download the finished picture. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
       title: 'Add Text to Image Online Free — Photo Text Editor | PDF and Image +',

@@ -8,8 +8,8 @@ const tool = getToolBySlug('upscale-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Upscale Image Online Free — Enlarge to 2x, 3x or 4x',
-    description: 'Upscale images up to 4x resolution online for free. Enlarge pixel dimensions using browser interpolation; missing detail cannot be recovered. No sign-up.',
+    title: "Upscale Image Online Free — 2x, 3x, 4x",
+    description: "Upscale image online free to 2x, 3x or 4x resolution in your browser. Enlarges pixels without AI, so fine detail is not recreated. Saves PNG.",
     keywords: tool.keywords,
     openGraph: { title: 'Upscale Image Free Online | PDF and Image +', description: 'Increase image resolution up to 4x online for free. Browser interpolation; no AI reconstruction.' },
     twitter: { title: 'Upscale Image Free Online | PDF and Image +', description: 'Increase image resolution up to 4x online for free. Browser interpolation; no AI reconstruction.' },

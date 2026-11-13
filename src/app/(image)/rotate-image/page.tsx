@@ -8,16 +8,16 @@ const tool = getToolBySlug('rotate-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Rotate Image Online Free — Rotate Photos 90° 180° 270°',
-    description: 'Rotate images online for free. Rotate photos 90°, 180°, or 270°. Fix portrait/landscape orientation instantly. No registration.',
+    title: "Rotate Image Online Free — 90°, 180°, 270°",
+    description: "Rotate image online free by 90°, 180° or 270°. Fix sideways phone photos, apply several rotations, then download. No sign-up needed.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Rotate Image Online Free — Rotate Photos 90° 180° 270° | PDF and Image +',
-      description: 'Rotate images online for free. Rotate photos 90°, 180°, or 270°. Fix portrait/landscape orientation instantly. No registration.',
+      title: "Rotate Image Online Free — 90°, 180°, 270° | PDF and Image +",
+      description: "Rotate image online free by 90°, 180° or 270°. Fix sideways phone photos, apply several rotations, then download. No sign-up needed.",
     },
     twitter: {
-      title: 'Rotate Image Online Free — Rotate Photos 90° 180° 270° | PDF and Image +',
-      description: 'Rotate images online for free. Rotate photos 90°, 180°, or 270°. Fix portrait/landscape orientation instantly. No registration.',
+      title: "Rotate Image Online Free — 90°, 180°, 270° | PDF and Image +",
+      description: "Rotate image online free by 90°, 180° or 270°. Fix sideways phone photos, apply several rotations, then download. No sign-up needed.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/rotate-image')

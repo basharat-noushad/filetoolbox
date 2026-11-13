@@ -268,7 +268,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "heading": "WebP for web delivery",
     "paragraphs": [
-      "WebP supports transparency and both lossy and lossless encoding. The current Convert to WebP tool exposes a quality control for browser export; do not assume that every export is lossless. Check that your destination accepts WebP before choosing it."
+      "WebP supports transparency and both lossy and lossless encoding. The current JPG to WebP tool exposes a quality control for browser export; do not assume that every export is lossless. Check that your destination accepts WebP before choosing it."
     ]
   },
   {
@@ -284,7 +284,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "heading": "Choose the matching tool",
     "paragraphs": [
-      "Use PNG to JPG for JPEG-only destinations, WebP to PNG when you need a PNG file, or Convert to WebP for a web export. Resize an oversized source before compression if you do not need its full dimensions. Avoid repeated lossy conversions between formats."
+      "Use PNG to JPG for JPEG-only destinations, WebP to PNG when you need a PNG file, or JPG to WebP for a web export. Resize an oversized source before compression if you do not need its full dimensions. Avoid repeated lossy conversions between formats."
     ]
   }
 ],
@@ -1762,7 +1762,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: 'Why Some Sites Force WebP Downloads You Cannot Avoid',
         paragraphs: [
           'A small but growing number of sites only offer WebP with no JPG or PNG fallback at all — there is nothing on your end to change about how the download happens. In these cases, converting after the fact with the WebP to PNG tool is the fastest fix: download the WebP as usual, then convert it locally in a few seconds. There is no browser setting that will make a website hand you a JPG when its server is only configured to send WebP.',
-          'If you manage a website yourself and want the opposite outcome — smaller, faster-loading images — the Convert to WebP tool does exactly what these sites are doing: takes your JPG or PNG images and compresses them into WebP for better page performance.',
+          'If you manage a website yourself and want the opposite outcome — smaller, faster-loading images — the JPG to WebP tool does exactly what these sites are doing: takes your JPG or PNG images and compresses them into WebP for better page performance.',
         ],
       },
       {

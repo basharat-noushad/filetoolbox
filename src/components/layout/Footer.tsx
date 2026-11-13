@@ -21,7 +21,7 @@ const IMAGE_LINKS = [
   { name: 'Compress Image',    slug: '/compress-image' },
   { name: 'Resize Image',      slug: '/resize-image' },
   { name: 'Remove Background', slug: '/remove-background' },
-  { name: 'Convert to WebP',   slug: '/image-to-webp' },
+  { name: 'JPG to WebP',       slug: '/image-to-webp' },
   { name: 'Crop Image',        slug: '/crop-image' },
   { name: 'Grayscale',         slug: '/grayscale-image' },
   { name: 'Flip Image',        slug: '/flip-image' },

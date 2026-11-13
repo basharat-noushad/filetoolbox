@@ -8,8 +8,8 @@ const tool = getToolBySlug('add-watermark-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: "Add Watermark to PDF Free — Draft & Confidential Text",
-    description: "Add a text watermark to every PDF page for free. Mark drafts or confidential copies, adjust opacity and rotation, then download. No file upload needed.",
+    title: "Add Watermark to PDF Free — Text Watermark",
+    description: "Add watermark to PDF online for free with custom text. Mark drafts or confidential copies, set opacity and rotation, then download. No sign-up.",
     keywords: tool.keywords,
     alternates: { canonical: '/add-watermark-pdf' },
   }, '/add-watermark-pdf')

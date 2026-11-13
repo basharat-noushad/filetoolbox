@@ -8,16 +8,16 @@ const tool = getToolBySlug('word-to-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Word to PDF Online Free — Convert DOCX to PDF',
-    description: 'Convert Word documents to PDF online for free. Preserves formatting perfectly. No registration needed. Fast and reliable.',
+    title: "Word to PDF Online Free — Convert DOCX to PDF",
+    description: "Word to PDF online for free: convert .docx and .doc files. Text, tables and images are kept, and conversion runs in your browser. Up to 100 MB.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Word to PDF Online Free — Convert DOCX to PDF | PDF and Image +',
-      description: 'Convert Word documents to PDF online for free. Preserves formatting perfectly. No registration needed. Fast and reliable.',
+      title: "Word to PDF Online Free — Convert DOCX to PDF | PDF and Image +",
+      description: "Word to PDF online for free: convert .docx and .doc files. Text, tables and images are kept, and conversion runs in your browser. Up to 100 MB.",
     },
     twitter: {
-      title: 'Word to PDF Online Free — Convert DOCX to PDF | PDF and Image +',
-      description: 'Convert Word documents to PDF online for free. Preserves formatting perfectly. No registration needed. Fast and reliable.',
+      title: "Word to PDF Online Free — Convert DOCX to PDF | PDF and Image +",
+      description: "Word to PDF online for free: convert .docx and .doc files. Text, tables and images are kept, and conversion runs in your browser. Up to 100 MB.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/word-to-pdf')
@@ -31,8 +31,8 @@ const HOW_TO_STEPS = [
 
 const FAQS = [
   { q: 'Does it support both .doc and .docx files?', a: 'Yes, both .doc (older Word format) and .docx (modern format) files are supported.' },
-  { q: 'Will my formatting be preserved?', a: 'Yes. Fonts, tables, images, headers, footers, and all formatting are preserved in the PDF output.' },
-  { q: 'Is there a file size limit?', a: 'Files up to 4MB are supported. For larger files, consider splitting the document first.' },
+  { q: 'Will my formatting be preserved?', a: 'Text, tables, images, headers and footers are preserved. Calibri, Cambria, Arial and Times New Roman are replaced with matching open fonts, so line breaks can differ slightly; check the PDF before sending it on.' },
+  { q: 'Is there a file size limit?', a: 'Files up to 100MB are supported. The conversion runs in your browser, so the file stays on your device. Only a file your browser cannot convert is sent to our online converter, which accepts up to 4MB.' },
   { q: 'Can I convert password-protected Word files?', a: 'Password-protected files cannot be converted. Please remove the password protection first.' },
 ]
 

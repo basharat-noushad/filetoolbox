@@ -36,7 +36,7 @@ const IMAGE_TOOLS = [
   { name: 'Crop Image',           slug: '/crop-image' },
   { name: 'Convert to JPG',       slug: '/png-to-jpg' },
   { name: 'Convert to PNG',       slug: '/jpg-to-png' },
-  { name: 'Convert to WebP',      slug: '/image-to-webp' },
+  { name: 'JPG to WebP',          slug: '/image-to-webp' },
   { name: 'Rotate Image',         slug: '/rotate-image' },
   { name: 'Flip Image',           slug: '/flip-image' },
   { name: 'Grayscale',            slug: '/grayscale-image' },

@@ -8,15 +8,15 @@ const tool = getToolBySlug('protect-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Protect PDF — Add Password to PDF Free Online',
-    description: 'Password protect PDF files free with AES-256 encryption. It runs entirely in your browser, so your file and password never leave your device. No sign-up.',
+    title: "Protect PDF Online Free — Add Password",
+    description: "Protect PDF online for free with AES-256 password encryption. Encryption runs in your browser, so your file and password never leave your device.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Protect PDF — Add Password to PDF Free Online | PDF and Image +',
+      title: "Protect PDF Online Free — Add Password | PDF and Image +",
       description: 'Add password protection to your PDF files online for free. Secure sensitive documents. No registration required.',
     },
     twitter: {
-      title: 'Protect PDF — Add Password to PDF Free Online | PDF and Image +',
+      title: "Protect PDF Online Free — Add Password | PDF and Image +",
       description: 'Add password protection to your PDF files online for free. Secure sensitive documents. No registration required.',
     },
     alternates: { canonical: `/${tool.slug}` },

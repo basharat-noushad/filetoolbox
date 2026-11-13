@@ -8,15 +8,15 @@ const tool = getToolBySlug('excel-to-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Excel to PDF Converter Free Online — XLSX to PDF',
-    description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout. No registration needed.',
+    title: "Excel to PDF Online Free — Convert XLSX to PDF",
+    description: "Excel to PDF online for free: convert .xlsx and .xls files. All sheets are included, with formatting and layout kept as closely as possible. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Excel to PDF Converter Free Online — XLSX to PDF | PDF and Image +',
+      title: "Excel to PDF Online Free — Convert XLSX to PDF | PDF and Image +",
       description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout.',
     },
     twitter: {
-      title: 'Excel to PDF Converter Free Online — XLSX to PDF | PDF and Image +',
+      title: "Excel to PDF Online Free — Convert XLSX to PDF | PDF and Image +",
       description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout.',
     },
     alternates: { canonical: `/${tool.slug}` },
@@ -40,11 +40,11 @@ const FAQS = [
   },
   {
     q: 'Is there a maximum file size?',
-    a: 'The maximum file size is 4MB. Most Excel spreadsheets are well within this limit.',
+    a: 'The maximum file size is 100MB. The online converter, used as a backup, accepts files up to 4MB.',
   },
   {
     q: 'Is my Excel file stored on your servers?',
-    a: "Your file is sent to a processing service. Temporary storage and retention depend on the configured service. Review the privacy policy before uploading sensitive files.",
+    a: "Usually it never reaches them. The conversion runs in your browser and the file stays on your device. Only a file your browser cannot convert, or one you choose to retry online, is sent to our online converter (Adobe PDF Services). See the privacy policy for how long that service keeps files.",
   },
   {
     q: 'What Excel formats are supported?',

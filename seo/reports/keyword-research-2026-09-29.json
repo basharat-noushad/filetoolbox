@@ -1,0 +1,3510 @@
+{
+  "checkedAt": "2026-09-29",
+  "market": "United States",
+  "language": "en",
+  "keywordSuggestions": {
+    "searched_keywords": [
+      {
+        "keyword": "watermark pdf",
+        "competition": 0.33,
+        "volume": 1600,
+        "cpc": 2.84,
+        "cpcDollars": 2.84,
+        "sd": 39,
+        "updated_at": 1786160780,
+        "pd": 33,
+        "searchIntent": [
+          1
+        ]
+      },
+      {
+        "keyword": "heic to jpg",
+        "competition": 0.05,
+        "volume": 246000,
+        "cpc": 0.055,
+        "cpcDollars": 0.055,
+        "sd": 44,
+        "updated_at": 1774596771,
+        "pd": 5,
+        "searchIntent": null
+      },
+      {
+        "keyword": "compress pdf",
+        "competition": 0.27,
+        "volume": 135000,
+        "cpc": 0.835,
+        "cpcDollars": 0.835,
+        "sd": 46,
+        "updated_at": 1786716216,
+        "pd": 27,
+        "searchIntent": [
+          3,
+          4
+        ]
+      }
+    ],
+    "results": [
+      {
+        "keyword": "compress pdf documents",
+        "competition": 0.3,
+        "volume": 135000,
+        "cpc": 0.83,
+        "cpcDollars": 0.83,
+        "sd": 55,
+        "updated_at": 1773462641,
+        "pd": 30,
+        "searchIntent": [
+          3
+        ]
+      },
+      {
+        "keyword": "pdf to compress pdf",
+        "competition": 0.27,
+        "volume": 90500,
+        "cpc": 0.71,
+        "cpcDollars": 0.71,
+        "sd": 41,
+        "updated_at": 1774596771,
+        "pd": 27,
+        "searchIntent": null
+      },
+      {
+        "keyword": "compress pdf in adobe reader",
+        "competition": 0.02,
+        "volume": 40500,
+        "cpc": 4.59,
+        "cpcDollars": 4.59,
+        "sd": 28,
+        "updated_at": 1788790580,
+        "pd": 2,
+        "searchIntent": [
+          1
+        ]
+      },
+      {
+        "keyword": "compress pdf on adobe reader",
+        "competition": 0.03,
+        "volume": 33100,
+        "cpc": 5.62,
+        "cpcDollars": 5.62,
+        "sd": 30,
+        "updated_at": 1781743888,
+        "pd": 3,
+        "searchIntent": [
+          1
+        ]
+      },
+      {
+        "keyword": "heic to jpg converter",
+        "competition": 0.09,
+        "volume": 27100,
+        "cpc": 0.265,
+        "cpcDollars": 0.265,
+        "sd": 50,
+        "updated_at": 1785756032,
+        "pd": 9,
+        "searchIntent": null
+      },
+      {
+        "keyword": "compress pdf with adobe",
+        "competition": 0.11,
+        "volume": 22200,
+        "cpc": 2.55,
+        "cpcDollars": 2.55,
+        "sd": 15,
+        "updated_at": 1774596771,
+        "pd": 11,
+        "searchIntent": null
+      },
+      {
+        "keyword": "compress pdf in adobe",
+        "competition": 0.16,
+        "volume": 18100,
+        "cpc": 6.14,
+        "cpcDollars": 6.14,
+        "sd": 30,
+        "updated_at": 1781821938,
+        "pd": 16,
+        "searchIntent": [
+          1
+        ]
+      },
+      {
+        "keyword": "compress pdf adobe acrobat dc",
+        "competition": 0.03,
+        "volume": 18100,
+        "cpc": 2.28,
+        "cpcDollars": 2.28,
+        "sd": 38,
+        "updated_at": 1773486160,
+        "pd": 3,
+        "searchIntent": [
+          4
+        ]
+      },
+      {
+        "keyword": "adobe compress pdf",
+        "competition": 0.21,
+        "volume": 18100,
+        "cpc": 1.03,
+        "cpcDollars": 1.03,
+        "sd": 25,
+        "updated_at": 1774596771,
+        "pd": 21,
+        "searchIntent": null
+      },
+      {
+        "keyword": "compress pdf with adobe acrobat",
+        "competition": 0.01,
+        "volume": 14800,
+        "cpc": 3.41,
+        "cpcDollars": 3.41,
+        "sd": 33,
+        "updated_at": 1769501001,
+        "pd": 1,
+        "searchIntent": [
+          3,
+          4
+        ]
+      },
+      {
+        "keyword": "adobe acrobat online compress pdf",
+        "competition": 0.01,
+        "volume": 14800,
+        "cpc": 4.76,
+        "cpcDollars": 4.76,
+        "sd": 34,
+        "updated_at": 1785733447,
+        "pd": 1,
+        "searchIntent": [
+          4
+        ]
+      },
+      {
+        "keyword": "compress pdf document free",
+        "competition": 0.67,
+        "volume": 14800,
+        "cpc": 2.29,
+        "cpcDollars": 2.29,
+        "sd": 67,
+        "updated_at": 1788415962,
+        "pd": 67,
+        "searchIntent": [
+          1
+        ]
+      },
+      {
+        "keyword": "how to convert heic to jpg",
+        "competition": 0.3,
+        "volume": 14800,
+        "cpc": 1.09,
+        "cpcDollars": 1.09,
+        "sd": 45,
+        "updated_at": 1785756037,
+        "pd": 30,
+        "searchIntent": null
+      },
+      {
+        "keyword": "freeware compress pdf",
+        "competition": 0.72,
+        "volume": 12100,
+        "cpc": 1.27,
+        "cpcDollars": 1.27,
+        "sd": 38,
+        "updated_at": 1774596771,
+        "pd": 72,
+        "searchIntent": null
+      },
+      {
+        "keyword": "adobe acrobat compress pdf",
+        "competition": 0.01,
+        "volume": 12100,
+        "cpc": 3.91,
+        "cpcDollars": 3.91,
+        "sd": 31,
+        "updated_at": 1764909935,
+        "pd": 1,
+        "searchIntent": [
+          4
+        ]
+      },
+      {
+        "keyword": "free convert heic to jpg",
+        "competition": 0.02,
+        "volume": 9900,
+        "cpc": 1.14,
+        "cpcDollars": 1.14,
+        "sd": 47,
+        "updated_at": 1788470024,
+        "pd": 2,
+        "searchIntent": [
+          1
+        ]
+      },
+      {
+        "keyword": "iloveimg heic to jpg converter",
+        "competition": 0.01,
+        "volume": 9900,
+        "cpc": 0.625,
+        "cpcDollars": 0.625,
+        "sd": 8,
+        "updated_at": 1774596771,
+        "pd": 1,
+        "searchIntent": null
+      },
+      {
+        "keyword": "compress pdf free"
+      },
+      {
+        "keyword": "compress pdf online free"
+      },
+      {
+        "keyword": "compress pdf in adobe acrobat"
+      },
+      {
+        "keyword": "smallpdf compress pdf"
+      },
+      {
+        "keyword": "file compress pdf"
+      },
+      {
+        "keyword": "preview heic to jpg"
+      },
+      {
+        "keyword": "cloudconvert heic to jpg"
+      },
+      {
+        "keyword": "freeware convert heic to jpg"
+      },
+      {
+        "keyword": "compress pdf file"
+      },
+      {
+        "keyword": "how to compress pdf"
+      },
+      {
+        "keyword": "heic to jpg converter free"
+      },
+      {
+        "keyword": "compress pdf doc online"
+      },
+      {
+        "keyword": "how to change heic to jpg"
+      },
+      {
+        "keyword": "compress pdf by size"
+      },
+      {
+        "keyword": "changing heic to jpg"
+      },
+      {
+        "keyword": "ilovepdf compress pdf"
+      },
+      {
+        "keyword": "compress pdf online"
+      },
+      {
+        "keyword": "compress pdf file size"
+      },
+      {
+        "keyword": "how do i compress pdf file"
+      },
+      {
+        "keyword": "canva heic to jpg"
+      },
+      {
+        "keyword": "delete watermark pdf"
+      },
+      {
+        "keyword": "converter heic to jpg free"
+      },
+      {
+        "keyword": "how to compress pdf size"
+      },
+      {
+        "keyword": "online compress pdf tool"
+      },
+      {
+        "keyword": "how to compress pdf file"
+      },
+      {
+        "keyword": "compress pdf smaller"
+      },
+      {
+        "keyword": "how to convert heic to jpg on windows"
+      },
+      {
+        "keyword": "how to compress pdf files"
+      },
+      {
+        "keyword": "add watermark pdf"
+      },
+      {
+        "keyword": "how to compress pdf file mac"
+      },
+      {
+        "keyword": "how to compress pdf in mac"
+      },
+      {
+        "keyword": "how to add watermark pdf"
+      },
+      {
+        "keyword": "how to convert heic to jpg in iphone"
+      },
+      {
+        "keyword": "freeware heic to jpg converter"
+      },
+      {
+        "keyword": "compress pdf file online"
+      },
+      {
+        "keyword": "converting heic to jpg on iphone"
+      },
+      {
+        "keyword": "watermark pdf documents"
+      },
+      {
+        "keyword": "compress pdf small"
+      },
+      {
+        "keyword": "convert heic to jpg on iphone"
+      },
+      {
+        "keyword": "heic to jpg freeware"
+      },
+      {
+        "keyword": "compress pdf on a mac"
+      },
+      {
+        "keyword": "compress pdf adobe"
+      },
+      {
+        "keyword": "convert heic to jpg iphone"
+      },
+      {
+        "keyword": "compress pdf size"
+      },
+      {
+        "keyword": "compress pdf file free"
+      },
+      {
+        "keyword": "converter from heic to jpg"
+      },
+      {
+        "keyword": "turning heic to jpg"
+      },
+      {
+        "keyword": "how can i compress pdf file"
+      },
+      {
+        "keyword": "smallpdf com compress pdf"
+      },
+      {
+        "keyword": "iloveimg heic to jpg"
+      },
+      {
+        "keyword": "compress pdf in acrobat"
+      },
+      {
+        "keyword": "heic to jpg online converter"
+      },
+      {
+        "keyword": "online converter for heic to jpg"
+      },
+      {
+        "keyword": "online converter heic to jpg"
+      },
+      {
+        "keyword": "compress pdf file for free"
+      },
+      {
+        "keyword": "heic to jpg com"
+      },
+      {
+        "keyword": "compress pdf tool"
+      },
+      {
+        "keyword": "how to change a heic to jpg"
+      },
+      {
+        "keyword": "free conversion heic to jpg"
+      },
+      {
+        "keyword": "iphone photo heic to jpg"
+      },
+      {
+        "keyword": "online convert heic to jpg"
+      },
+      {
+        "keyword": "how do you compress pdf files"
+      },
+      {
+        "keyword": "how to watermark pdf file"
+      },
+      {
+        "keyword": "free online heic to jpg converter"
+      },
+      {
+        "keyword": "how to change photos from heic to jpg"
+      },
+      {
+        "keyword": "adobe pro compress pdf"
+      },
+      {
+        "keyword": "acrobat compress pdf"
+      },
+      {
+        "keyword": "adobe express heic to jpg"
+      },
+      {
+        "keyword": "how to compress pdf adobe"
+      },
+      {
+        "keyword": "compress pdf acrobat"
+      },
+      {
+        "keyword": "freeconvert.com heic to jpg"
+      },
+      {
+        "keyword": "heic to jpg convert online"
+      },
+      {
+        "keyword": "heic to jpg converter app"
+      },
+      {
+        "keyword": "online tool to compress pdf"
+      },
+      {
+        "keyword": "how to compress pdf free"
+      },
+      {
+        "keyword": "converter heic to jpg mac"
+      },
+      {
+        "keyword": "convert heic to jpg on macbook air"
+      },
+      {
+        "keyword": "batch convert heic to jpg"
+      },
+      {
+        "keyword": "ilovepdf watermark pdf"
+      },
+      {
+        "keyword": "how to compress pdf on mac"
+      },
+      {
+        "keyword": "free online convert heic to jpg"
+      },
+      {
+        "keyword": "heic to jpg converter online"
+      },
+      {
+        "keyword": "convert heic to jpg mac"
+      },
+      {
+        "keyword": "converting heic to jpg on mac"
+      },
+      {
+        "keyword": "how to change from heic to jpg"
+      },
+      {
+        "keyword": "convertio heic to jpg"
+      },
+      {
+        "keyword": "converter heic to jpg windows"
+      },
+      {
+        "keyword": "real heic to jpg converter"
+      },
+      {
+        "keyword": "heic to jpg macbook"
+      },
+      {
+        "keyword": "heic to jpg converter app for android"
+      },
+      {
+        "keyword": "pdfgear compress pdf"
+      },
+      {
+        "keyword": "remove watermark pdf free"
+      },
+      {
+        "keyword": "how to convert heic to jpg on android"
+      },
+      {
+        "keyword": "converting heic to jpg windows"
+      },
+      {
+        "keyword": "compress pdf small size"
+      },
+      {
+        "keyword": "compress pdf to 1 mb"
+      },
+      {
+        "keyword": "compress pdf adobe acrobat pro"
+      },
+      {
+        "keyword": "from heic to jpg"
+      },
+      {
+        "keyword": "heic to jpg on iphone"
+      },
+      {
+        "keyword": "convert heic to jpg android"
+      },
+      {
+        "keyword": "watermark pdf remover free"
+      },
+      {
+        "keyword": "compress pdf 1 mb"
+      },
+      {
+        "keyword": "iphone heic to jpg"
+      },
+      {
+        "keyword": "how to compress pdf on iphone"
+      },
+      {
+        "keyword": "compress pdf to small size"
+      },
+      {
+        "keyword": "compress pdf to 1mb free"
+      },
+      {
+        "keyword": "bulk convert heic to jpg"
+      },
+      {
+        "keyword": "change from heic to jpg"
+      },
+      {
+        "keyword": "heic to jpg mac"
+      },
+      {
+        "keyword": "compress pdf on iphone"
+      },
+      {
+        "keyword": "convert heic to jpg windows"
+      },
+      {
+        "keyword": "compress pdf files to small size"
+      },
+      {
+        "keyword": "heic to jpg conversion"
+      },
+      {
+        "keyword": "change photos from heic to jpg"
+      },
+      {
+        "keyword": "how to compress pdf to smaller size"
+      },
+      {
+        "keyword": "imazing converter heic to jpg"
+      },
+      {
+        "keyword": "compress pdf program"
+      },
+      {
+        "keyword": "how to change iphone photos from heic to jpg"
+      },
+      {
+        "keyword": "convert heic to jpg online"
+      },
+      {
+        "keyword": "compress pdf without quality loss"
+      },
+      {
+        "keyword": "compress pdf file size free"
+      },
+      {
+        "keyword": "adobe acrobat compress pdf online tool"
+      },
+      {
+        "keyword": "how to compress pdf files free"
+      },
+      {
+        "keyword": "compress pdf freeware"
+      },
+      {
+        "keyword": "convert photo from heic to jpg"
+      },
+      {
+        "keyword": "luma heic to jpg converter"
+      },
+      {
+        "keyword": "extreme compress pdf"
+      },
+      {
+        "keyword": "how to change heic to jpg on windows"
+      },
+      {
+        "keyword": "free compress pdf file size"
+      },
+      {
+        "keyword": "how compress pdf files"
+      },
+      {
+        "keyword": "preview compress pdf"
+      },
+      {
+        "keyword": "ilovepdf compress pdf file"
+      },
+      {
+        "keyword": "compress pdf 2 mb"
+      },
+      {
+        "keyword": "canva convert heic to jpg"
+      },
+      {
+        "keyword": "compress pdf to 500 kb"
+      },
+      {
+        "keyword": "how do i change heic to jpg"
+      },
+      {
+        "keyword": "photo converter heic to jpg"
+      },
+      {
+        "keyword": "compress pdf best"
+      },
+      {
+        "keyword": "best compress pdf"
+      },
+      {
+        "keyword": "picflow heic to jpg converter"
+      },
+      {
+        "keyword": "compress pdf mac os x"
+      },
+      {
+        "keyword": "file converter heic to jpg"
+      },
+      {
+        "keyword": "how to compress pdf file size without losing quality"
+      },
+      {
+        "keyword": "how to change heic to jpg on android"
+      },
+      {
+        "keyword": "converting heic to jpg on pc"
+      },
+      {
+        "keyword": "cloudconvert com heic to jpg"
+      },
+      {
+        "keyword": "transfer heic to jpg"
+      },
+      {
+        "keyword": "iphone convert heic to jpg"
+      },
+      {
+        "keyword": "adobe compress pdf free"
+      },
+      {
+        "keyword": "watermark pdf remover online"
+      },
+      {
+        "keyword": "imazing convert heic to jpg"
+      },
+      {
+        "keyword": "compress pdf 500 kb"
+      },
+      {
+        "keyword": "how to change pictures from heic to jpg"
+      },
+      {
+        "keyword": "compress pdf free no sign up"
+      },
+      {
+        "keyword": "adobe acrobat compress pdf online"
+      },
+      {
+        "keyword": "can you compress pdf"
+      },
+      {
+        "keyword": "heic to jpg adobe"
+      },
+      {
+        "keyword": "heic to jpg iphone"
+      },
+      {
+        "keyword": "i love pdf compress pdf"
+      },
+      {
+        "keyword": "heic to jpg converter download"
+      },
+      {
+        "keyword": "compress pdf 500kb"
+      },
+      {
+        "keyword": "compress pdf to 2 mb"
+      },
+      {
+        "keyword": "best way to compress pdf"
+      },
+      {
+        "keyword": "compress pdf 200 kb"
+      },
+      {
+        "keyword": "heic to jpg windows 10"
+      },
+      {
+        "keyword": "heic to jpg canva"
+      },
+      {
+        "keyword": "windows convert heic to jpg"
+      },
+      {
+        "keyword": "how to convert photos from heic to jpg"
+      },
+      {
+        "keyword": "image converter heic to jpg"
+      },
+      {
+        "keyword": "combine and compress pdf"
+      },
+      {
+        "keyword": "smallpdf watermark pdf"
+      },
+      {
+        "keyword": "online tool to convert heic to jpg"
+      },
+      {
+        "keyword": "compress pdf file in mac"
+      },
+      {
+        "keyword": "make heic to jpg"
+      },
+      {
+        "keyword": "format heic to jpg"
+      },
+      {
+        "keyword": "compress pdf 200kb"
+      },
+      {
+        "keyword": "change heic to jpg mac"
+      },
+      {
+        "keyword": "heic to jpg online"
+      },
+      {
+        "keyword": "compress pdf large file"
+      },
+      {
+        "keyword": "compress pdf ilovepdf"
+      },
+      {
+        "keyword": "adobe compress pdf file"
+      },
+      {
+        "keyword": "compress pdf application"
+      },
+      {
+        "keyword": "how to change files from heic to jpg"
+      },
+      {
+        "keyword": "foxit reader compress pdf"
+      },
+      {
+        "keyword": "heic to jpg free convert"
+      },
+      {
+        "keyword": "compress pdf to 200kb"
+      },
+      {
+        "keyword": "merge and compress pdf"
+      },
+      {
+        "keyword": "convert images from heic to jpg"
+      },
+      {
+        "keyword": "heic to jpg batch converter"
+      },
+      {
+        "keyword": "compress pdf bluebeam"
+      },
+      {
+        "keyword": "how to compress pdf without losing quality"
+      },
+      {
+        "keyword": "how to convert heic to jpg on windows 11"
+      },
+      {
+        "keyword": "add draft watermark pdf"
+      },
+      {
+        "keyword": "watermark pdf free"
+      },
+      {
+        "keyword": "compress pdf 100 kb"
+      },
+      {
+        "keyword": "can i convert heic to jpg"
+      },
+      {
+        "keyword": "mac os x compress pdf"
+      },
+      {
+        "keyword": "compress pdf to 500kb"
+      },
+      {
+        "keyword": "convert multiple heic to jpg"
+      },
+      {
+        "keyword": "adobe online compress pdf"
+      },
+      {
+        "keyword": "what does compress pdf mean"
+      },
+      {
+        "keyword": "how to compress pdf acrobat"
+      },
+      {
+        "keyword": "convert heic to jpg windows 11"
+      },
+      {
+        "keyword": "how to turn heic to jpg on mac"
+      },
+      {
+        "keyword": "imazing heic to jpg converter"
+      },
+      {
+        "keyword": "heic to jpg windows"
+      },
+      {
+        "keyword": "canva compress pdf"
+      },
+      {
+        "keyword": "converting heic to jpg on windows"
+      },
+      {
+        "keyword": "how to compress pdf in windows"
+      },
+      {
+        "keyword": "can you convert heic to jpg"
+      },
+      {
+        "keyword": "what is a compress pdf"
+      },
+      {
+        "keyword": "windows compress pdf"
+      },
+      {
+        "keyword": "how to batch convert heic to jpg"
+      },
+      {
+        "keyword": "heic to jpg windows 11"
+      },
+      {
+        "keyword": "how to compress pdf for email"
+      },
+      {
+        "keyword": "compress pdf in bluebeam"
+      },
+      {
+        "keyword": "changing heic to jpg on mac"
+      },
+      {
+        "keyword": "smallpdf compress pdf tool"
+      },
+      {
+        "keyword": "sejda watermark pdf"
+      },
+      {
+        "keyword": "how to convert heic to jpg macbook"
+      },
+      {
+        "keyword": "adobe acrobat compress pdf file"
+      },
+      {
+        "keyword": "converting heic to jpg on android"
+      },
+      {
+        "keyword": "compress pdf app"
+      },
+      {
+        "keyword": "change a heic to jpg"
+      },
+      {
+        "keyword": "remove watermark pdf online"
+      },
+      {
+        "keyword": "compress pdf google"
+      },
+      {
+        "keyword": "compress pdf to less then 1 mb"
+      },
+      {
+        "keyword": "how to compress pdf windows"
+      },
+      {
+        "keyword": "adobe free compress pdf"
+      },
+      {
+        "keyword": "adobe acrobat compress pdf file size"
+      },
+      {
+        "keyword": "how to compress pdf to email"
+      },
+      {
+        "keyword": "how to compress pdf file on mac"
+      },
+      {
+        "keyword": "convert heic to jpg on windows"
+      },
+      {
+        "keyword": "convert an heic to jpg"
+      },
+      {
+        "keyword": "freeware heic to jpg"
+      },
+      {
+        "keyword": "compress pdf online tool"
+      },
+      {
+        "keyword": "compress pdf 10 mb"
+      },
+      {
+        "keyword": "images heic to jpg"
+      },
+      {
+        "keyword": "remove watermark pdf online free"
+      },
+      {
+        "keyword": "compress pdf size free online"
+      },
+      {
+        "keyword": "how to change from heic to jpg on iphone"
+      },
+      {
+        "keyword": "how to compress pdf macbook"
+      },
+      {
+        "keyword": "compress pdf software free"
+      },
+      {
+        "keyword": "convert heic to jpg free online"
+      },
+      {
+        "keyword": "change images from heic to jpg"
+      },
+      {
+        "keyword": "google compress pdf"
+      },
+      {
+        "keyword": "how to compress pdf for free"
+      },
+      {
+        "keyword": "heic to jpg converter free online"
+      },
+      {
+        "keyword": "best way to convert heic to jpg"
+      },
+      {
+        "keyword": "convert file from heic to jpg"
+      },
+      {
+        "keyword": "how to convert images from heic to jpg"
+      },
+      {
+        "keyword": "macbook heic to jpg"
+      },
+      {
+        "keyword": "linux compress pdf"
+      },
+      {
+        "keyword": "i love compress pdf"
+      },
+      {
+        "keyword": "google photo heic to jpg"
+      },
+      {
+        "keyword": "heic to jpg converter free download"
+      },
+      {
+        "keyword": "compress pdf to 25mb"
+      },
+      {
+        "keyword": "compress pdf less than 1 mb"
+      },
+      {
+        "keyword": "how to switch heic to jpg"
+      },
+      {
+        "keyword": "compress pdf lossless"
+      },
+      {
+        "keyword": "change file from heic to jpg"
+      },
+      {
+        "keyword": "compress pdf size free"
+      },
+      {
+        "keyword": "compress pdf to less than 1 mb"
+      },
+      {
+        "keyword": "compress pdf to 2 mb free"
+      },
+      {
+        "keyword": "hyper compress pdf"
+      },
+      {
+        "keyword": "compress pdf free download"
+      },
+      {
+        "keyword": "insert watermark pdf"
+      },
+      {
+        "keyword": "how to transfer heic to jpg"
+      },
+      {
+        "keyword": "heic to jpg converter website"
+      },
+      {
+        "keyword": "change picture from heic to jpg"
+      },
+      {
+        "keyword": "pdffiller compress pdf"
+      },
+      {
+        "keyword": "convert heic to jpg online free"
+      },
+      {
+        "keyword": "transform heic to jpg"
+      },
+      {
+        "keyword": "add watermark pdf free"
+      },
+      {
+        "keyword": "compress pdf means"
+      },
+      {
+        "keyword": "compress pdf less than 5 mb free"
+      },
+      {
+        "keyword": "compress heic to jpg"
+      },
+      {
+        "keyword": "compress pdf to 25 mb"
+      },
+      {
+        "keyword": "bulk heic to jpg converter"
+      },
+      {
+        "keyword": "how to convert heic to jpg windows 10"
+      },
+      {
+        "keyword": "compress pdf mac os"
+      },
+      {
+        "keyword": "best heic to jpg converter"
+      },
+      {
+        "keyword": "ilovepdf.com compress pdf"
+      }
+    ],
+    "results_note": "Showing the first 300 suggestions; 61 omitted. Use match_keywords to page through the full set."
+  },
+  "watermarkMatches": {
+    "suggestions": [
+      {
+        "keyword": "how to add watermark in picture",
+        "search_intent": "Informational",
+        "volume": 3600,
+        "cpc": 1.48,
+        "sd": 45,
+        "pd": 39,
+        "competition": 0.39
+      },
+      {
+        "keyword": "how to add watermark in word",
+        "search_intent": "Informational",
+        "volume": 2900,
+        "cpc": 0.29,
+        "sd": 26,
+        "pd": 1,
+        "competition": 0.01
+      },
+      {
+        "keyword": "how to add watermark to word",
+        "search_intent": "Informational",
+        "volume": 2900,
+        "cpc": 0.01,
+        "sd": 31,
+        "pd": 1,
+        "competition": 0
+      },
+      {
+        "keyword": "how to add watermark in image",
+        "search_intent": "Informational",
+        "volume": 2900,
+        "cpc": 1.78,
+        "sd": 51,
+        "pd": 43,
+        "competition": 0.43
+      },
+      {
+        "keyword": "add watermark on pdf",
+        "search_intent": "Commercial",
+        "volume": 2400,
+        "cpc": 2.88,
+        "sd": 43,
+        "pd": 37,
+        "competition": 0.37
+      },
+      {
+        "keyword": "add watermark pdf",
+        "search_intent": null,
+        "volume": 1900,
+        "cpc": 1.865,
+        "sd": 26,
+        "pd": 40,
+        "competition": 0.4
+      },
+      {
+        "keyword": "how to add watermark pdf",
+        "search_intent": "Informational",
+        "volume": 1900,
+        "cpc": 3.37,
+        "sd": 44,
+        "pd": 31,
+        "competition": 0.31
+      },
+      {
+        "keyword": "add watermark word",
+        "search_intent": "Navigational",
+        "volume": 1600,
+        "cpc": 1.79,
+        "sd": 48,
+        "pd": 1,
+        "competition": 0.01
+      },
+      {
+        "keyword": "add watermark photo",
+        "search_intent": null,
+        "volume": 1300,
+        "cpc": 1.41,
+        "sd": 32,
+        "pd": 60,
+        "competition": 0.6
+      },
+      {
+        "keyword": "add watermark to word",
+        "search_intent": "Informational",
+        "volume": 1300,
+        "cpc": 0.76,
+        "sd": 30,
+        "pd": 2,
+        "competition": 0.02
+      },
+      {
+        "keyword": "how to add watermark excel",
+        "search_intent": "Informational",
+        "volume": 1000,
+        "cpc": 0,
+        "sd": 30,
+        "pd": 1,
+        "competition": 0.01
+      },
+      {
+        "keyword": "add watermark to photo",
+        "search_intent": "Informational",
+        "volume": 1000,
+        "cpc": 1.79,
+        "sd": 48,
+        "pd": 46,
+        "competition": 0.46
+      },
+      {
+        "keyword": "how to add watermark in excel",
+        "search_intent": "Informational",
+        "volume": 880,
+        "cpc": 0.14,
+        "sd": 27,
+        "pd": 2,
+        "competition": 0.02
+      },
+      {
+        "keyword": "how to add watermark to word document",
+        "search_intent": "Informational",
+        "volume": 880,
+        "cpc": 0.03,
+        "sd": 30,
+        "pd": 2,
+        "competition": 0.02
+      },
+      {
+        "keyword": "how to add watermark to powerpoint",
+        "search_intent": "Informational",
+        "volume": 880,
+        "cpc": 0.03,
+        "sd": 23,
+        "pd": 1,
+        "competition": 0.01
+      },
+      {
+        "keyword": "how to add watermark in pdf",
+        "search_intent": "Informational",
+        "volume": 880,
+        "cpc": 4.03,
+        "sd": 31,
+        "pd": 25,
+        "competition": 0.25
+      },
+      {
+        "keyword": "how to add watermark on google docs",
+        "search_intent": "Informational",
+        "volume": 720,
+        "cpc": 1.375,
+        "sd": 28,
+        "pd": 1,
+        "competition": 0
+      },
+      {
+        "keyword": "add watermark to powerpoint",
+        "search_intent": "Informational",
+        "volume": 720,
+        "cpc": 0.07,
+        "sd": 22,
+        "pd": 1,
+        "competition": 0.01
+      },
+      {
+        "keyword": "adobe acrobat add watermark",
+        "search_intent": "Transactional",
+        "volume": 720,
+        "cpc": 5.97,
+        "sd": 24,
+        "pd": 2,
+        "competition": 0.02
+      },
+      {
+        "keyword": "how to add watermark on video",
+        "search_intent": null
+      },
+      {
+        "keyword": "add watermark to excel",
+        "search_intent": null
+      },
+      {
+        "keyword": "how to add watermark",
+        "search_intent": null
+      },
+      {
+        "keyword": "free add watermark to photo",
+        "search_intent": null
+      },
+      {
+        "keyword": "how to add watermark on lightroom",
+        "search_intent": null
+      },
+      {
+        "keyword": "how to add watermark in video",
+        "search_intent": null
+      },
+      {
+        "keyword": "add watermark to a video",
+        "search_intent": null
+      },
+      {
+        "keyword": "how to add watermark to video",
+        "search_intent": null
+      },
+      {
+        "keyword": "add watermark word document",
+        "search_intent": null
+      },
+      {
+        "keyword": "add watermark on picture",
+        "search_intent": null
+      },
+      {
+        "keyword": "how to add watermark in powerpoint",
+        "search_intent": null
+      },
+      {
+        "keyword": "add watermark to word doc",
+        "search_intent": null
+      },
+      {
+        "keyword": "add watermark to picture",
+        "search_intent": null
+      },
+      {
+        "keyword": "how to add watermark in adobe",
+        "search_intent": null
+      },
+      {
+        "keyword": "add watermark to google doc",
+        "search_intent": null
+      },
+      {
+        "keyword": "how to add watermark with photoshop",
+        "search_intent": null
+      },
+      {
+        "keyword": "how to add watermark in canva",
+        "search_intent": null
+      },
+      {
+        "keyword": "add watermark in lightroom",
+        "search_intent": null
+      },
+      {
+        "keyword": "add watermark on powerpoint",
+        "search_intent": null
+      },
+      {
+        "keyword": "add watermark to photos online free",
+        "search_intent": null
+      },
+      {
+        "keyword": "how to add watermark to photos iphone",
+        "search_intent": null
+      },
+      {
+        "keyword": "how to add watermark in photoshop",
+        "search_intent": null
+      }
+    ],
+    "suggestionCount": 2041,
+    "nextKey": 98,
+    "searched_keywords": [
+      {
+        "keyword": "add watermark",
+        "search_intent": "Informational",
+        "volume": 720,
+        "cpc": 1.42,
+        "sd": 60,
+        "pd": 27,
+        "competition": 0.27
+      }
+    ]
+  },
+  "shortlist": {
+    "keyword": "add watermark to jpg",
+    "search_volume": 20,
+    "cpc": 1.205,
+    "seo_difficulty": 13,
+    "paid_difficulty": 26,
+    "competition": 0.26,
+    "search_intent": null,
+    "language": "English",
+    "location": "United States",
+    "monthly_searches": [
+      {
+        "period": "202605",
+        "search_volume": 10
+      },
+      {
+        "period": "202606",
+        "search_volume": 20
+      },
+      {
+        "period": "202607",
+        "search_volume": 30
+      },
+      {
+        "period": "202608",
+        "search_volume": 20
+      }
+    ]
+  },
+  "autocomplete": {
+    "keywords": {
+      "add watermark": {
+        "suggestions": [
+          "add watermark to pdf",
+          "add watermark to word",
+          "add watermark to photo",
+          "add watermark to excel",
+          "add watermark to powerpoint",
+          "add watermark google docs",
+          "add watermark to excel spreadsheet",
+          "add watermark to video",
+          "add watermark to word document",
+          "add watermark to image",
+          "add watermark to adobe pdf",
+          "add watermark in bluebeam",
+          "add watermark to ppt",
+          "add watermark adobe acrobat",
+          "add watermark in lightroom",
+          "add watermark",
+          "add watermark adobe acrobat",
+          "add watermark adobe",
+          "add watermark acrobat",
+          "add watermark adobe pdf",
+          "add watermark app",
+          "add watermark android",
+          "add watermark apk",
+          "add watermark apk mod",
+          "add watermark ai",
+          "add watermark acrobat pro",
+          "add watermark autocad",
+          "add watermark all over image",
+          "add watermark adobe express",
+          "add watermark affinity photo",
+          "add watermark apk premium",
+          "add watermark bluebeam",
+          "add watermark bulk",
+          "add watermark batch process",
+          "add watermark background image word",
+          "add watermark batch",
+          "add watermark background",
+          "add watermark background powerpoint",
+          "add watermark background in word",
+          "add watermark background excel",
+          "add watermark background to pdf",
+          "add watermark bridge",
+          "add background watermark image",
+          "add bandicam watermark to video",
+          "add bandicam watermark",
+          "create watermark background online",
+          "add watermark canva",
+          "add watermark capcut",
+          "add watermark canva video",
+          "add watermark capture one",
+          "add watermark capcut video",
+          "add watermark clipchamp",
+          "add watermark capcut pc",
+          "add watermark comfyui",
+          "add watermark confidential",
+          "add watermark confidential to word",
+          "add watermark camera raw",
+          "add watermark clip studio paint",
+          "add watermark capcut desktop",
+          "add watermark canva pdf",
+          "add watermark com",
+          "add watermark davinci resolve",
+          "add watermark draft to word",
+          "add watermark docs",
+          "add watermark draft to pdf",
+          "add watermark date to photo",
+          "add watermark download",
+          "add watermark draft",
+          "add watermark darktable",
+          "add watermark davinci",
+          "add watermark deviantart",
+          "add watermark draft in excel",
+          "add watermark docx",
+          "add watermark date and time",
+          "add watermark document",
+          "add watermark draft to powerpoint",
+          "add watermark excel",
+          "add watermark excel sheet",
+          "add watermark easy",
+          "add watermark excel online",
+          "add watermark ezgif",
+          "add watermark editor",
+          "add watermark etsy",
+          "add example watermark to pdf",
+          "add sample watermark to excel",
+          "create watermark excel",
+          "insert watermark excel sheet",
+          "create edit watermark",
+          "insert watermark excel shortcut",
+          "insert watermark excel 365",
+          "insert watermark excel mac",
+          "add watermark free",
+          "add watermark from pdf",
+          "add watermark free online",
+          "add watermark free pdf",
+          "add watermark foxit",
+          "add watermark foxit pdf",
+          "add watermark from video",
+          "add watermark from pdf online",
+          "add watermark for image",
+          "add watermark foto",
+          "add watermark frame io",
+          "add watermark for excel",
+          "add watermark google docs",
+          "add watermark google photos",
+          "add watermark google sheets",
+          "add watermark google slides",
+          "add watermark gimp",
+          "add watermark gif",
+          "add watermark gdocs",
+          "add watermark google docs mobile",
+          "add watermark github",
+          "add watermark generator",
+          "add watermark grid",
+          "add watermark google drive",
+          "add gemini watermark",
+          "add gemini watermark to image",
+          "add geotag watermark to photo",
+          "add watermark handbrake",
+          "add watermark html",
+          "pdf add watermark how",
+          "how add watermark in word",
+          "how add watermark in excel",
+          "how add watermark in ppt",
+          "how add watermark in video",
+          "how add watermark to photo",
+          "how add watermark in canva",
+          "how add watermark in google docs",
+          "how add watermark",
+          "how add watermark in capcut",
+          "how add watermark in lightroom",
+          "how add watermark in photoshop",
+          "how add watermark in iphone",
+          "add watermark in word",
+          "add watermark in adobe",
+          "add watermark in excel",
+          "add watermark in lightroom",
+          "add watermark in bluebeam",
+          "add watermark in pdf",
+          "add watermark in adobe acrobat",
+          "add watermark in canva",
+          "add watermark in google docs",
+          "add watermark in powerpoint",
+          "add watermark in ppt",
+          "add watermark in video online free",
+          "add watermark in acrobat",
+          "add watermark in lightroom mobile",
+          "add watermark in photoshop",
+          "add watermark jpg",
+          "add watermark to jpg",
+          "add watermark jpg online",
+          "add watermark jasper report",
+          "add jpg watermark to pdf",
+          "create watermark jpg",
+          "add watermark to jpg free",
+          "add watermark to jpg online free",
+          "add watermark to jpg file",
+          "add watermark to jpg mac",
+          "add watermark to jpg windows 11",
+          "add watermark to jpg windows",
+          "add watermark to pdf java",
+          "add watermark to image js",
+          "java add watermark to image",
+          "add watermark kofax",
+          "add watermark keynote",
+          "add watermark kdenlive",
+          "add watermark ktp",
+          "add watermark kofax power pdf",
+          "add watermark krita",
+          "watermark add kaise kare",
+          "create kick watermark",
+          "how to add kick watermark",
+          "add draft watermark to kofax pdf",
+          "kapwing add watermark",
+          "how to add kick watermark to clips",
+          "add watermark lightroom",
+          "add watermark lightroom mobile",
+          "add watermark luminar neo",
+          "add watermark logo",
+          "add watermark logo to pdf",
+          "add watermark logo to image",
+          "add watermark lightroom classic",
+          "add watermark logo to video",
+          "add watermark logo to photo",
+          "add watermark label",
+          "add watermark logo to pdf free",
+          "add watermark latex",
+          "add watermark libreoffice writer",
+          "add watermark logo in word",
+          "add watermark lightroom web",
+          "add watermark mod apk",
+          "add watermark microsoft word",
+          "add watermark mod",
+          "add watermark mac",
+          "add watermark mod apk download",
+          "add watermark multiple photos",
+          "add watermark meaning",
+          "add watermark mac preview",
+          "add watermark multiple images",
+          "add watermark multiple pdf files",
+          "add watermark macbook",
+          "add watermark media encoder",
+          "add watermark maker",
+          "add watermark meitu",
+          "add watermark multiple photos photoshop",
+          "add watermark nitro pdf",
+          "add watermark nitro pro",
+          "add watermark on photos",
+          "add watermark in image",
+          "add watermark in video",
+          "add watermark in pdf online",
+          "add watermark on word",
+          "add watermark on pdf",
+          "add watermark on canva",
+          "add watermark on excel",
+          "add watermark on adobe acrobat",
+          "add watermark online",
+          "add watermark on powerpoint",
+          "add watermark on word document",
+          "add watermark on iphone photo",
+          "add watermark on bluebeam",
+          "add watermark on capcut",
+          "add watermark on all pages in word",
+          "add watermark on excel sheet",
+          "add watermark on pages",
+          "add watermark pdf",
+          "add watermark powerpoint",
+          "add watermark photoshop",
+          "add watermark pdf online",
+          "add watermark photo",
+          "add watermark pdf free",
+          "add watermark pro apk",
+          "add watermark photo to pdf",
+          "add watermark premium apk",
+          "add watermark preview",
+          "add watermark pro mod apk",
+          "add watermark pages",
+          "add watermark pdf acrobat",
+          "add watermark pdf online free",
+          "add watermark picture",
+          "add watermark que es",
+          "add watermark in quicktime",
+          "add watermark without losing quality",
+          "add watermark to video quicktime",
+          "how to add watermark quickly",
+          "quickly add watermark to photos",
+          "qpdf add watermark",
+          "qgis add watermark",
+          "watermark how to add",
+          "how to add watermark on iphone",
+          "how to add a watermark free",
+          "add watermark to quickbooks report",
+          "add watermark to sheets",
+          "add watermark remover",
+          "add watermark revu",
+          "add watermark remover online",
+          "add watermark resolve",
+          "add water mark remover in pdf",
+          "add remove watermark word",
+          "add reddit watermark",
+          "add repeating watermark",
+          "add repeating watermark to pdf",
+          "add realme watermark to photo",
+          "create watermark remover",
+          "insert watermark remover",
+          "add watermark bluebeam revu",
+          "add watermark adobe reader",
+          "add watermark solidworks drawing",
+          "add watermark samsung gallery",
+          "add watermark soda pdf",
+          "add watermark sejda",
+          "add watermark snapseed",
+          "add watermark smallpdf",
+          "add watermark samsung",
+          "add watermark software",
+          "add watermark shortcut iphone",
+          "add watermark signature to photo",
+          "add watermark sketchup",
+          "add watermark sora",
+          "add watermark shortcut",
+          "add watermark shotcut",
+          "add watermark solidworks",
+          "add watermark to pdf",
+          "add watermark to photo",
+          "add watermark to word",
+          "add watermark to excel",
+          "add watermark to powerpoint",
+          "add watermark to excel spreadsheet",
+          "add watermark to video",
+          "add watermark to word document",
+          "add watermark to adobe pdf",
+          "add watermark to image",
+          "add watermark to google doc",
+          "add watermark to photo online free",
+          "add watermark to powerpoint slides",
+          "add watermark to ppt",
+          "add watermark to word doc",
+          "add watermark using canva",
+          "add watermark using lightroom",
+          "add watermark using adobe",
+          "add watermark using preview",
+          "add watermark using adobe acrobat",
+          "add watermark using capcut",
+          "add watermark using iphone",
+          "add watermark using photoshop",
+          "add watermark using adobe reader",
+          "add watermark using paint",
+          "add watermark using word",
+          "add unremovable watermark to pdf",
+          "add unremovable watermark",
+          "add unremovable watermark to image",
+          "create watermark using canva",
+          "add watermark video",
+          "add watermark video free",
+          "add watermark video online free",
+          "add watermark video canva",
+          "add watermark video online",
+          "add watermark video iphone",
+          "add watermark visio",
+          "add watermark vimeo",
+          "add watermark video capcut",
+          "add watermark vlc",
+          "add watermark video ios",
+          "add void watermark to pdf",
+          "add vivo watermark to photo",
+          "add video watermark remover",
+          "put watermark video",
+          "add watermark word",
+          "add watermark word document",
+          "add watermark with canva",
+          "add watermark word online",
+          "add watermark with adobe acrobat",
+          "add watermark with capcut",
+          "add watermark with lightroom",
+          "add watermark with photoshop",
+          "add watermark when printing pdf",
+          "add watermark word file",
+          "add watermark with paint",
+          "add watermark word all pages",
+          "add watermark with iphone",
+          "add watermark with preview",
+          "add watermark with adobe",
+          "add watermark xiaomi",
+          "add watermark pdf xchange editor",
+          "add watermark pdf xchange",
+          "add watermark to xls",
+          "xnview add watermark",
+          "xnconvert add watermark",
+          "add watermark in adobe acrobat xi pro",
+          "xodo add watermark",
+          "how to add watermark",
+          "add watermark youtube",
+          "add watermark youtube video",
+          "add watermark youtube studio",
+          "add your watermark to video",
+          "add your watermark on photos",
+          "how to add your watermark",
+          "create watermark youtube",
+          "add watermark to youtube shorts",
+          "add watermark to your pdf",
+          "add watermark to youtube channel",
+          "add watermark to your image",
+          "create your watermark",
+          "create youtube watermark online free",
+          "create youtube watermark free",
+          "create youtube watermark canva",
+          "add watermark zoom",
+          "add watermark to zoom meeting",
+          "zoom add watermark that identifies the viewing participant",
+          "add watermark to zoom video",
+          "add watermark to svg",
+          "add watermark on kofax",
+          "add watermark to all pages",
+          "add watermark to only one page",
+          "add watermark to onenote",
+          "create watermark 150x150",
+          "add watermark windows 11",
+          "add page 1 watermark excel",
+          "add a confidential 1 watermark to the document",
+          "add a draft 1 watermark to the entire document",
+          "add watermark to photo windows 11",
+          "add the watermark confidential 1 to the current document",
+          "add watermark to jpg windows 11",
+          "add watermark to photo windows 10",
+          "how to add watermark",
+          "add watermark to first page",
+          "add watermark to one page",
+          "add watermark to word 2010",
+          "add watermark word 2010",
+          "add watermark pdf 24",
+          "add sora 2 watermark",
+          "add watermark in word 2007",
+          "add sora 2 watermark to video",
+          "add watermark in word 2016",
+          "add watermark in word 2019",
+          "add watermark in excel 2019",
+          "add watermark in word 2013",
+          "add a draft 2 watermark to the document",
+          "how to add 2 watermark in word",
+          "add watermark in ms word 2007",
+          "how to add 2 watermark in lightroom",
+          "create watermark 3d",
+          "add watermark word 365",
+          "add watermark to excel 365",
+          "add watermark in office 365",
+          "add watermark to email outlook 365",
+          "watermark how to add",
+          "how to add a watermark free",
+          "add watermark paint 3d",
+          "add watermark 4pda",
+          "remove & add watermark 4pda",
+          "how add watermark in video",
+          "add watermark to mp4 video",
+          "add watermark to mp4 free",
+          "add watermark to mp4",
+          "add watermark adobe media encoder",
+          "add watermark visio",
+          "add watermark to word 365",
+          "add watermark to visio diagram",
+          "add watermark to numbers",
+          "add watermark to pdf nuance",
+          "add watermark over pdf",
+          "add watermark to passport photo",
+          "add watermark to ssrs report",
+          "add watermark to deviantart",
+          "add watermark outlook",
+          "add watermark signature to photo",
+          "add watermark deviantart",
+          "add watermark power bi"
+        ],
+        "comparisons": [
+          "add watermark and page number to pdf",
+          "how to add watermark without losing quality",
+          "add watermark visio",
+          "add watermark vimeo",
+          "add watermark to video vlc",
+          "add watermark to video reddit",
+          "add watermark to pdf",
+          "add watermark to photo",
+          "add watermark to image",
+          "add watermark to video",
+          "add watermark to word",
+          "add watermark to excel",
+          "add watermark to photo online free",
+          "add watermark to pdf free",
+          "add watermark to powerpoint",
+          "add watermark to word document",
+          "add watermark to pdf online",
+          "add watermark online",
+          "add watermark to ppt",
+          "add watermark to jpg",
+          "add watermark with lightroom",
+          "add watermark to zoom meeting",
+          "add watermark to visio diagram",
+          "add watermark to video android"
+        ],
+        "prepositions": [
+          "how often add water to smoker",
+          "how often add water to car",
+          "how often to add water to aquarium",
+          "how to add watermark on every page",
+          "what is add watermark",
+          "where is add watermark in word",
+          "is claude adding watermark",
+          "is chatgpt adding watermark",
+          "how add watermark in video",
+          "is watermark in word",
+          "is a watermark the same as a logo",
+          "is a watermark a logo",
+          "is watermark good",
+          "to add watermark",
+          "add watermark for word",
+          "watermark add for free",
+          "no watermark add audio to video",
+          "add watermark without losing quality",
+          "how to add a watermark free",
+          "add logo to video without watermark",
+          "how to add a watermark to image",
+          "how to add watermark that cannot be removed",
+          "word add watermark to entire document",
+          "word add watermark all pages",
+          "to add watermark in pdf",
+          "to add watermark in word",
+          "to add watermark in ppt",
+          "to add watermark in excel",
+          "to add watermark in a document click on",
+          "to put watermark",
+          "to create watermark",
+          "how to add watermark in canva",
+          "how to add watermark in google docs",
+          "how to add watermark in powerpoint",
+          "how to add watermark in pdf for free",
+          "how to add watermark in lightroom",
+          "how to add watermark in capcut",
+          "how to add watermark in photos",
+          "add in watermark",
+          "add watermark with canva",
+          "add watermark with adobe acrobat",
+          "add watermark with capcut",
+          "add watermark with lightroom",
+          "add watermark with photoshop",
+          "add watermark with paint",
+          "add watermark with iphone",
+          "add watermark with preview",
+          "add watermark with adobe",
+          "add watermark with ffmpeg",
+          "add watermark with gimp",
+          "add watermark with foxit",
+          "add watermark with mac preview",
+          "add watermark with ai"
+        ],
+        "questions": [
+          "why add watermark",
+          "why put watermark on photos",
+          "why gemini add watermark",
+          "why capcut add watermark",
+          "why does capcut add watermark",
+          "why does gemini add watermark",
+          "why did snapchat add watermark",
+          "how to add watermark without losing quality",
+          "why watermark is important",
+          "why add watermark to pdf",
+          "why add a watermark to photo",
+          "why watermark not on all pages",
+          "why is watermark only on some pages",
+          "where to add watermark in word",
+          "where to add watermark in excel",
+          "where to add watermark in pdf",
+          "where to add watermark",
+          "where to add watermark in youtube",
+          "where to add watermark in ppt",
+          "where to add watermark in google docs",
+          "where to add watermark in lightroom",
+          "where to add draft watermark in word",
+          "how to add a watermark to image",
+          "where do i add a watermark in word",
+          "to add watermark in pdf",
+          "to add watermark in word",
+          "to add watermark in excel",
+          "to add watermark",
+          "to add watermark in ppt",
+          "to add watermark in a document click on",
+          "can we add watermark in excel",
+          "can we add watermark in ppt",
+          "can you add watermark in lightroom",
+          "can i add watermark in canva",
+          "can i add watermark in google docs",
+          "can we add watermark in pdf",
+          "can you add watermark on canva",
+          "can we add watermark in word",
+          "can you add watermark in adobe acrobat",
+          "claude will add watermark",
+          "how to add a watermark free",
+          "watermark will not appear on all pages",
+          "can you add a watermark to an email",
+          "can you add watermark in google docs",
+          "when did capcut add watermark",
+          "when does capcut add watermark",
+          "how to add watermark",
+          "when add water mark in word document it print on",
+          "add watermark when printing",
+          "add watermark when printing pdf",
+          "what is add watermark",
+          "how to add watermark ppt",
+          "what are watermarks on google docs",
+          "what does adding a watermark do",
+          "what does add watermark mean",
+          "what are watermarks in video editing",
+          "how add watermark in word",
+          "how add watermark in pdf",
+          "how add watermark in excel",
+          "how add watermark to photo",
+          "how add watermark in ppt",
+          "how add watermark in video",
+          "how add watermark in google docs",
+          "how add watermark in canva",
+          "how add watermark in capcut",
+          "how add watermark",
+          "how add watermark in lightroom",
+          "how add watermark in photoshop",
+          "how add watermark in iphone",
+          "how add watermark to word document",
+          "how add watermark in ms word",
+          "how to add many watermark in word",
+          "how to add watermark to many photos at once",
+          "how to add watermark on multiple pictures",
+          "how to add watermark to multiple photos",
+          "how many watermarks are there",
+          "how to add watermark on all pages"
+        ]
+      },
+      "heic to jpg": {
+        "suggestions": [
+          "heic to jpg converter",
+          "https://heictojpg.com/",
+          "heic to jpg converter free",
+          "heic to jpg free",
+          "heic to jpg on mac",
+          "heic to jpg on iphone",
+          "heic to jpg convert",
+          "heic to jpg android",
+          "heic to jpg bulk",
+          "heic to jpg converter online free",
+          "heic to jpg windows",
+          "heic to jpg canva",
+          "heic to jpg converter free download",
+          "heic to jpg windows 10",
+          "heic to jpg adobe",
+          "heic to jpg converter download",
+          "heic to jpg android",
+          "heic to jpg adobe",
+          "heic to jpg app",
+          "heic to jpg apple",
+          "heic to jpg adobe express",
+          "heic to jpg acrobat",
+          "heic to jpg and compress",
+          "heic to jpg android samsung",
+          "heic to jpg apple iphone",
+          "heic to jpg and reduce size",
+          "heic to jpg app windows",
+          "heic to jpg app free",
+          "heic to jpg adobe converter",
+          "heic to jpg app android",
+          "heic to jpg automatically",
+          "heic to jpg bulk",
+          "heic to jpg batch converter",
+          "heic to jpg bulk converter",
+          "heic to jpg batch",
+          "heic to jpg bulk converter free",
+          "heic to jpg batch converter free",
+          "heic to jpg batch converter windows",
+          "heic to jpg bulk free",
+          "heic to jpg best converter",
+          "heic to jpg best quality",
+          "heic to jpg bulk converter windows",
+          "heic to jpg bulk online",
+          "heic to jpg batch conversion",
+          "heic to jpg bash",
+          "heic to jpg browser",
+          "heic to jpg converter",
+          "heic to jpg converter free",
+          "heic to jpg convert",
+          "heic to jpg converter online free",
+          "heic to jpg converter free download",
+          "heic to jpg canva",
+          "heic to jpg converter download",
+          "heic to jpg converter online",
+          "heic to jpg converter software",
+          "heic to jpg converter free unlimited",
+          "heic to jpg cloudconvert",
+          "heic to jpg converter windows",
+          "heic to jpg converter reddit",
+          "heic to jpg compressor",
+          "heic to jpg converter canva",
+          "heic to jpg download",
+          "heic to jpg desktop app",
+          "heic to jpg download free",
+          "heic to jpg difference",
+          "heic to jpg drive",
+          "heic to jpg download windows",
+          "heic to jpg download app",
+          "heic to jpg dropbox",
+          "heic to jpg desktop converter",
+          "heic to jpg download converter",
+          "heic to jpg document",
+          "heic to jpg converter download for windows 10",
+          "heic to jpg google drive",
+          "heic to jpg converter download for windows 7",
+          "heic to jpg converter download for windows 11",
+          "heic to jpg extension",
+          "heic to jpg ezgif",
+          "heic to jpg easy",
+          "heic to jpg extension download",
+          "heic to jpg exe",
+          "heic to jpg extension chrome",
+          "heic to jpg extension windows",
+          "heic to jpg en ligne gratuit",
+          "heic to jpg express",
+          "heic to jpg en mac",
+          "heic to jpg exif",
+          "heic to jpg edit",
+          "heic to jpg email",
+          "heic to jpg converter exe",
+          "heic to jpg free",
+          "heic to jpg free converter",
+          "heic to jpg free online",
+          "heic to jpg file",
+          "heic to jpg file converter",
+          "heic to jpg freeconvert.com",
+          "heic to jpg free online converter",
+          "heic to jpg format",
+          "heic to jpg free unlimited",
+          "heic to jpg ffmpeg",
+          "heic to jpg full quality",
+          "heic to jpg free no limit",
+          "heic to jpg from iphone",
+          "heic to jpg for windows 11",
+          "heic to jpg folder converter",
+          "heic to jpg google photos",
+          "heic to jpg github",
+          "heic to jpg google",
+          "heic to jpg gratis",
+          "heic to jpg group converter",
+          "heic to jpg google pixel",
+          "heic to jpg good quality",
+          "heic to jpg gimp",
+          "heic to jpg gemini",
+          "heic to jpg - google search",
+          "heic to jpg generator",
+          "heic to jpg golang",
+          "heic to jpg google extension",
+          "heic to jpg gimp batch",
+          "heic to jpg how",
+          "heic to jpg high quality",
+          "heic to jpg how to convert",
+          "heic to jpg high quality free",
+          "heic to jpg high resolution",
+          "heic to jpg how to convert on mac",
+          "heic to jpg hd",
+          "heic to jpg hd converter",
+          "heic to jpg hd quality",
+          "heic to jpg high quality converter",
+          "heic to jpg hq",
+          "heic to jpg how to convert on iphone",
+          "heic to jpg iphone",
+          "heic to jpg i love pdf",
+          "heic to jpg in mac",
+          "heic to jpg image converter",
+          "heic to jpg in windows",
+          "heic to jpg iphone settings",
+          "heic to jpg i love",
+          "heic to jpg in google drive",
+          "heic to jpg in google photos",
+          "heic to jpg in windows 11",
+          "heic to jpg ios",
+          "heic to jpg in macbook",
+          "heic to jpg in bulk",
+          "heic to jpg ipad",
+          "heic to jpg image",
+          "heic to jpg js",
+          "heic to jpg jpg",
+          "heic to jpg i love jpg",
+          "convert jpg heic to jpg",
+          "heic jadi jpg",
+          "heic na jpg jak zmienic",
+          "can you convert a heic to jpg",
+          "convert jpg to heic",
+          "heic to jpg software",
+          "heic to jpg jpeg",
+          "heic to jpg jpegmini",
+          "heic to jpg heic to jpg",
+          "heic to jpg java",
+          "heic to jpg keep metadata",
+          "heic to jpg keep quality",
+          "heic to jpg keep exif",
+          "heic in jpg kostenlos",
+          "heic to jpg konwerter",
+          "heic to jpg konvertieren",
+          "heic to jpg konvertálás",
+          "heic to jpg kompres",
+          "heic to jpg 100 kb",
+          "convert heic to jpg keep metadata",
+          "heic to jpg 50 kb",
+          "heic to jpg 300 kb",
+          "heic to jpg 80 kb",
+          "heic to jpg 200 kb",
+          "heic to jpg converter key",
+          "heic to jpg local",
+          "heic to jpg linux",
+          "heic to jpg lossless",
+          "heic to jpg love",
+          "heic to jpg large batch",
+          "heic to jpg local converter",
+          "heic to jpg linux command line",
+          "heic to jpg love pdf",
+          "heic to jpg lossless converter",
+          "heic to jpg less than 1mb",
+          "heic to jpg less than 2mb",
+          "heic to jpg lightroom",
+          "heic to jpg locally mac",
+          "heic to jpg low quality",
+          "heic to jpg ilovepdf",
+          "heic to jpg mac",
+          "heic to jpg macbook",
+          "heic to jpg multiple files",
+          "heic to jpg mass converter",
+          "heic to jpg macos",
+          "heic to jpg microsoft",
+          "heic to jpg multiple photos",
+          "heic to jpg microsoft store",
+          "heic to jpg mass",
+          "heic to jpg meaning",
+          "heic to jpg mac terminal",
+          "heic to jpg mass converter free",
+          "heic to jpg macbook air",
+          "heic to jpg multiple",
+          "heic to jpg multiple files converter",
+          "heic to jpg no limit",
+          "heic to jpg no quality loss",
+          "heic to jpg no compression",
+          "heic to jpg no loss",
+          "heic to jpg no limit free",
+          "heic to jpg npm",
+          "heic to jpg nodejs",
+          "heic to jpg not working",
+          "heic to jpg .net",
+          "heic to jpg node",
+          "heic to jpg not online",
+          "heic to jpg no sign up",
+          "heic to jpg no login",
+          "heic to jpg native",
+          "heic to jpg no upload",
+          "heic to jpg on iphone",
+          "heic to jpg on mac",
+          "heic to jpg online",
+          "heic to jpg on android",
+          "heic to jpg on macbook",
+          "heic to jpg online free",
+          "heic to jpg online converter",
+          "heic to jpg on windows",
+          "heic to jpg or png",
+          "heic to jpg on android phone",
+          "heic to jpg online free converter",
+          "heic to jpg on pc",
+          "heic to jpg on phone",
+          "heic to jpg on chromebook",
+          "heic to jpg on macbook pro",
+          "heic to jpg program",
+          "heic to jpg photo converter",
+          "heic to jpg photoshop",
+          "heic to jpg python",
+          "heic to jpg pdf",
+          "heic to jpg pc",
+          "heic to jpg private",
+          "heic to jpg photo",
+          "heic to jpg pixel",
+          "heic to jpg python script",
+          "heic to jpg powershell",
+          "heic to jpg pi7",
+          "heic to jpg portable",
+          "heic to jpg png",
+          "heic to jpg pc software",
+          "heic to jpg quality",
+          "heic to jpg quality loss",
+          "heic to jpg quick",
+          "heic to jpg quick action",
+          "heic to jpg original quality",
+          "heic to jpg same quality",
+          "heic to jpg without quality loss",
+          "convert heic to jpg quickly",
+          "heic to jpg reddit",
+          "heic to jpg resize",
+          "heic to jpg reduce size",
+          "heic to jpg right click",
+          "heic to jpg review",
+          "heic to jpg react",
+          "heic to jpg react native",
+          "heic to jpg rename",
+          "heic to jpg reader",
+          "heic to jpg reddit windows",
+          "heic to jpg reddit free",
+          "heic to jpg reddit safe",
+          "heic to jpg reducer",
+          "convert heic to jpg reddit",
+          "heic to jpg safe",
+          "heic to jpg secure",
+          "heic to jpg samsung",
+          "heic to jpg smallpdf",
+          "heic to jpg setting iphone",
+          "heic to jpg shortcut ios",
+          "heic to jpg shortcut",
+          "heic to jpg software free",
+          "heic to jpg size reducer",
+          "heic to jpg software download",
+          "heic to jpg sejda",
+          "heic to jpg script",
+          "heic to jpg terminal",
+          "heic to jpg tool",
+          "heic to jpg terminal mac",
+          "heic to jpg tinywow",
+          "heic to jpg to pdf",
+          "heic to jpg to converter",
+          "heic to jpg telegram bot",
+          "heic to jpg transfer",
+          "heic to jpg transform",
+          "heic to the jpg",
+          "convert heic to jpg tool",
+          "heic to jpg to png",
+          "heic t0 jpg",
+          "turn heic to jpg",
+          "transfer heic to jpg free",
+          "heic to jpg unlimited free",
+          "heic to jpg unlimited",
+          "heic to jpg ubuntu",
+          "heic to jpg under 2mb",
+          "heic to jpg under 200kb",
+          "heic to jpg under 100kb",
+          "heic to jpg using iphone",
+          "heic to jpg unlimited converter",
+          "heic to jpg ubuntu terminal",
+          "heic to jpg under 1 mb",
+          "heic to jpg unlimited free converter",
+          "heic to jpg using mac",
+          "heic to jpg using windows",
+          "heic to jpg utility",
+          "heic to jpg upload",
+          "heic to jpg viewer",
+          "heic to jpg windows",
+          "heic to jpg windows 10",
+          "heic to jpg windows 11",
+          "heic to jpg without losing quality",
+          "heic to jpg windows 11 free",
+          "heic to jpg without converter",
+          "heic to jpg windows app",
+          "heic to jpg whatsapp",
+          "heic to jpg without compression",
+          "heic to jpg windows 10 free",
+          "heic to jpg website",
+          "heic to jpg with same quality",
+          "heic to jpg with metadata",
+          "heic to jpg without losing metadata",
+          "heic to jpg windows free",
+          "heic to jpg xnview",
+          "heic to jpg xiaomi",
+          "heic to jpg xnconvert",
+          "convert heic to jpg xiaomi",
+          "heic to jpg windows xp",
+          "heic vs jpeg xl",
+          "xodo heic to jpg",
+          "xodo convert heic to jpg",
+          "xnview mp convert heic to jpg",
+          "os x convert heic to jpg",
+          "heic to jpg",
+          "xiaoya lab heic to jpg",
+          "xnview batch convert heic to jpg",
+          "heic to jpg youtube",
+          "heic to jpg you pdf",
+          "convert heic to jpg on your iphone",
+          "convert heic to jpg on your phone",
+          "can you convert heic to jpg on iphone",
+          "can you change heic to jpg",
+          "can you rename heic to jpg",
+          "can you change heic to jpg on computer",
+          "can you save heic to jpg",
+          "can you change heic to jpg on samsung phone",
+          "can you convert heic to jpg in google photos",
+          "can you convert heic to jpg on android",
+          "can you convert heic to jpg in photoshop",
+          "i love you heic to jpg",
+          "how to change heic to jpg on your phone",
+          "heic to jpg zamzar",
+          "heic to jpg zip",
+          "heic to jpg zdarma",
+          "heic to jpg za darmo",
+          "heic to jpg converter zip file",
+          "heic to jpg 11 zon",
+          "heic to jpg jak zmienić",
+          "heic zu jpg",
+          "heic zu jpg umwandeln",
+          "heic zu jpg converter",
+          "windows heic zu jpg",
+          "heic zu jpg mac",
+          "heic zu jpg umwandeln kostenlos",
+          "heic zu jpg online",
+          "heic zu jpg iphone",
+          "heic to jpg trackid sp 006",
+          "0 heic to jpg",
+          "heic to jpg o png",
+          "heic to jpg terminal",
+          "heic to jpg how",
+          "heic to convert jpg",
+          "heic convert to jpg on iphone",
+          "heic to jpg shortcut",
+          "heic to jpg 0d 0a",
+          "heic to jp0g",
+          "heic to jpg error",
+          "heic t0 jpg",
+          "heic to jpg offline",
+          "heic to jpg 11zon",
+          "heic to jpg 100 kb",
+          "heic to jpg 1mb",
+          "heic to jpg 100 photos",
+          "heic to jpg 150 kb",
+          "heic to jpg 1000 photos",
+          "heic to jpg 100",
+          "heic to jpg windows 10",
+          "heic to jpg windows 11",
+          "heic to jpg windows 11 free",
+          "heic to jpg windows 10 free",
+          "heic to jpg windows 11 batch",
+          "convert heic to jpg 1mb",
+          "convert heic to jpg 100 kb",
+          "heic to jpg converter 11zon",
+          "heic to jpg 200kb",
+          "heic to jpg 2mb",
+          "heic to jpg 20kb",
+          "heic to jpg 200 photos",
+          "heic to jpg 24",
+          "heic to jpg 24 tools",
+          "heic to jpg 200",
+          "heic to jpg 20 photos",
+          "heic to jpg 240 kb",
+          "convert heic to jpg 200kb",
+          "heic to jpg under 2mb",
+          "heic to jpg pdf24",
+          "heic to jpg under 200kb",
+          "convert heic to jpg 2mb",
+          "convert heic to jpg 20 kb",
+          "heic to jpg 300 dpi",
+          "heic to jpg 300 kb",
+          "heic to jpg 3mb",
+          "heic to jpg 3utools",
+          "heic to jpg converter 32 bit",
+          "heic jpg 3am studio",
+          "convert heic to jpg office 365",
+          "how do you convert an heic to a jpeg",
+          "converting jpg to heic",
+          "heic to jp3g",
+          "heic to jpg office 365",
+          "heic to jpg batch",
+          "heic to jpg 4k",
+          "heic to jpg 40 kb",
+          "heic to jpg converter 4k",
+          "heic to jpg for free",
+          "heic to jpg for windows",
+          "heic to jpg for free online",
+          "heic to jpg for windows 11",
+          "heic to jpg for mac",
+          "heic to jpg for pc",
+          "heic to jpg for windows 10",
+          "heic to jpg for android",
+          "heic to jpg for windows 7",
+          "heic to jpg for iphone",
+          "heic to jpg 50 kb",
+          "heic to jpg 500kb",
+          "heic to jpg 50kb converter",
+          "heic to jpg 500 photos",
+          "heic to jpg 5mb",
+          "heic to jpg 50 photos",
+          "heic to jpg more than 5",
+          "heic 5o jpg",
+          "convert 50 heic to jpg",
+          "can you convert a heic to jpg",
+          "heic to 5mb",
+          "heic to jpg uncompressed",
+          "heic to jpg 600 dpi",
+          "heic to jpg jpegmini",
+          "heic to jpg large",
+          "heic to jpg tools",
+          "heic to jpg size",
+          "heic to jpg mass",
+          "heic to jpg windows 7",
+          "heic to jpg windows 7 free",
+          "heic to jpg converter windows 7",
+          "heic to jpg software windows 7",
+          "heic to jpg converter download for windows 7",
+          "heic to jpg converter app for windows 7",
+          "real heic to jpg converter for windows 7",
+          "heic to jpg win 7",
+          "heic to jpg nuget",
+          "heic to jpg lossless",
+          "heic to jpg no limit",
+          "heic to jpg 80 kb",
+          "heic to jpg windows 8",
+          "heic to jpg windows 8.1",
+          "heic to jpg converter windows 8",
+          "heic to jpg converter download for windows 8",
+          "iphone 8 convert heic to jpg",
+          "change a heic to a jpeg",
+          "heic to jpg high resolution",
+          "heic to jpg jpeg",
+          "heic to jpg compressed",
+          "heic to jpg zip"
+        ],
+        "comparisons": [
+          "heic to jpg or png",
+          "heic to jpg and compress",
+          "heic to jpg or pdf",
+          "heic vs jpg",
+          "heic vs jpeg which is better",
+          "what is difference between jpeg and heic",
+          "heic to jpg vlc",
+          "heic vs jpg vs jpeg",
+          "heic to jpg difference",
+          "heic vs jpg photos",
+          "heic to jpg virus",
+          "heic to jpg and reduce size",
+          "heic to jpg and resize",
+          "heic to jpg and pdf",
+          "heic and jpg",
+          "heic and jpg difference",
+          "heic and jpg converter",
+          "can you convert a heic to jpg",
+          "transfer heic to jpg",
+          "heic to jpg android phone",
+          "heic to jpg android free",
+          "heic to jpg android",
+          "heic to jpg android samsung",
+          "heic to jpg android reddit",
+          "heic to jpg lightroom",
+          "heic to jpg legit",
+          "heic to jpg local",
+          "heic to jpeg lightroom",
+          "heic to jpg vs png",
+          "heic to jpg or png converter",
+          "heic to jpg or png which is better",
+          "heic to jpg or jpeg",
+          "heic to jpg and crop",
+          "heic to jpg and merge",
+          "heic to jpg and combine",
+          "heic to jpg or png mac",
+          "heic to jpg or png reddit",
+          "convert heic to jpg or png",
+          "heic or jpg",
+          "heic or jpg which is better",
+          "heic or jpg iphone",
+          "heic or jpg reddit",
+          "heic or jpg converter",
+          "heic or jpg samsung"
+        ],
+        "prepositions": [
+          "keep heic or convert to jpg",
+          "should i keep jpg or heic",
+          "heic or jpg iphone reddit",
+          "should i keep heic or convert to jpg",
+          "how do i change heic to jpg on windows 10",
+          "is heic to jpg safe",
+          "is heic to jpg website safe",
+          "is heic to jpg lossless",
+          "is heic to jpg",
+          "what is heic to jpg converter",
+          "is heic jpg or png",
+          "is heic or jpg better",
+          "is heic a jpg file",
+          "can you convert a heic to jpg",
+          "is heic to jpg legit",
+          "is heic to jpg safe reddit",
+          "for heic to jpg",
+          "from heic to jpg free",
+          "from heic to jpg converter",
+          "from heic to jpg online",
+          "from heic to jpg free online",
+          "from heic to jpg mac",
+          "from heic to jpg iphone",
+          "from heic to jpg i love pdf",
+          "from heic to jpg windows",
+          "from heic to jpg macbook",
+          "from heic to jpg free converter",
+          "from heic to jpg convertio",
+          "app for heic to jpg converter",
+          "software for heic to jpg",
+          "change for heic to jpg",
+          "heic to jpg without losing quality",
+          "how do i convert heic to jpg for free",
+          "how to convert the heic to jpg",
+          "convert heic to jpg without converter",
+          "convert heic to jpg without compressing",
+          "heic to jpg without losing quality reddit",
+          "convert heic to jpg without software",
+          "to heic to jpg",
+          "convert to heic to jpg",
+          "convert to heic to jpg free",
+          "change to heic to jpg",
+          "heic to jpg to pdf",
+          "image to heic to jpg",
+          "how to heic to jpg windows",
+          "convert to heic to jpg online",
+          "how to heic to jpg mac",
+          "how to heic to jpg iphone",
+          "heic to jpg to png",
+          "convert to heic to jpg mac",
+          "heic to jpg free",
+          "heic to jpg online",
+          "heic to jpg converter download",
+          "from heic to jpg",
+          "change from heic to jpg",
+          "transfer from heic to jpg",
+          "transform from heic to jpg"
+        ],
+        "questions": [
+          "why heic to jpg",
+          "is heic to jpg safe",
+          "transfer heic to jpg",
+          "can you convert a heic to jpg",
+          "why heic not jpg",
+          "why heic instead of jpeg",
+          "where to change heic to jpg on iphone",
+          "where to convert heic to jpg",
+          "heic to jpg software",
+          "where to change heic to jpg",
+          "where are heic files stored on mac",
+          "where are heic files from",
+          "where is heic from",
+          "can convert heic to jpg",
+          "can you convert heic to jpg on iphone",
+          "can heic files be converted to jpg",
+          "can i save a heic to jpg",
+          "can heic to jpg",
+          "can heic photos be converted to jpg",
+          "who to convert heic to jpg",
+          "can i convert an heic to jpg",
+          "who is heic",
+          "who uses heic",
+          "who invented heic",
+          "heic to jpg which is better",
+          "how to convert the heic to jpg",
+          "what is the best heic to jpg converter",
+          "which app to open heic files",
+          "what is the best heic to jpg converter for windows 10",
+          "what is the best free heic to jpg converter",
+          "is heic to jpg lossless",
+          "is heic to jpg",
+          "what is heic to jpg converter",
+          "is heic jpg or png",
+          "will heic replace jpg",
+          "will heic open on windows",
+          "will google photos convert heic to jpg",
+          "can i convert heic to jpg on windows 10",
+          "can i convert heic to jpg for free",
+          "what heic to jpg",
+          "what can convert heic to jpg",
+          "how do i convert an heic to a jpeg",
+          "what heic image",
+          "what heic photo",
+          "what heic file",
+          "what heic file format",
+          "are heic files jpeg",
+          "are heic to jpg converters safe",
+          "are heic or jpg better",
+          "are heic and jpg the same",
+          "are heic better than jpeg",
+          "are heic and jpeg the same",
+          "how heic to jpg",
+          "how heic to jpg on mac",
+          "how convert heic to jpg",
+          "how change heic to jpg",
+          "how to heic to jpg on iphone",
+          "how convert heic to jpg on iphone",
+          "how convert heic to jpg windows",
+          "how convert heic to jpg on android",
+          "how convert heic to jpg on pc",
+          "how convert heic to jpg free",
+          "how convert heic to jpg on ipad",
+          "how to convert heic to jpg on windows 11",
+          "how to turn heic to jpg on mac",
+          "how to transfer heic to jpg",
+          "how to change heic to jpg on samsung",
+          "how to convert multiple heic to jpg",
+          "how to convert a bunch of heic to jpg",
+          "how to convert many heic to jpg",
+          "how to convert many heic to jpg for free",
+          "convert many heic to jpg windows",
+          "how to convert many heic photos to jpg",
+          "how to convert many heic files to jpg",
+          "how do i convert heic to jpg for free",
+          "how to convert to heic to jpg",
+          "how convert heic to jpg on windows 10",
+          "how convert heic to jpg on windows",
+          "how to heic to jpg on windows"
+        ]
+      },
+      "compress pdf": {
+        "suggestions": [
+          "compress pdf free",
+          "compress pdf file",
+          "compress pdf online",
+          "compress pdf file size",
+          "compress pdf online free",
+          "compress pdf file for free",
+          "compress pdf adobe",
+          "compress pdf size",
+          "compress pdf on mac",
+          "compress pdf i love pdf",
+          "compress pdf to 1mb free",
+          "compress pdf on iphone",
+          "compress pdf to 1mb",
+          "compress pdf without losing quality",
+          "compress pdf to smaller size",
+          "compress pdf adobe",
+          "compress pdf adobe acrobat",
+          "compress pdf acrobat",
+          "compress pdf android",
+          "compress pdf adobe free",
+          "compress pdf apple",
+          "compress pdf adobe acrobat pro",
+          "compress pdf acrobat pro",
+          "compress pdf adobe pro",
+          "compress pdf adobe express",
+          "compress pdf app",
+          "compress pdf and keep quality",
+          "compress pdf a lot",
+          "compress pdf adobe online",
+          "compress pdf ai",
+          "compress pdf bluebeam",
+          "compress pdf but keep quality",
+          "compress pdf below 1 mb",
+          "compress pdf below 5mb",
+          "compress pdf big pdf",
+          "compress pdf by percentage",
+          "compress pdf below 2mb",
+          "compress pdf below 500kb",
+          "compress pdf by size",
+          "compress pdf below 200kb",
+          "compress pdf batch",
+          "compress pdf below 1000kb",
+          "compress pdf but keep image quality",
+          "compress pdf bluebeam revu",
+          "compress pdf below 100kb",
+          "compress pdf canva",
+          "compress pdf chrome",
+          "compress pdf cloudconvert",
+          "compress pdf command line",
+          "compress pdf converter",
+          "compress pdf custom size",
+          "compress pdf cli",
+          "compress pdf choose size",
+          "compress pdf choose file size",
+          "compress pdf custom",
+          "compress pdf compress",
+          "compress pdf compressor",
+          "compress pdf custom size free",
+          "compress pdf camscanner",
+          "compress pdf candy",
+          "compress pdf document",
+          "compress pdf document free",
+          "compress pdf drawboard",
+          "compress pdf document free online",
+          "compress pdf dibawah 1 mb",
+          "compress pdf docupub",
+          "compress pdf download",
+          "compress pdf doc",
+          "compress pdf document online",
+          "compress pdf dibawah 1 mb gratis",
+          "compress pdf dibawah 2 mb",
+          "compress pdf di nitro",
+          "compress pdf desired size",
+          "compress pdf dibawah 5 mb",
+          "compress pdf di nitro pro",
+          "compress pdf extreme",
+          "compress pdf even more",
+          "compress pdf extreme free",
+          "compress pdf editor",
+          "compress pdf extreme online free",
+          "compress pdf ekstrim",
+          "compress pdf exact size",
+          "compress pdf extra",
+          "compress pdf excel",
+          "compress pdf eleven zone",
+          "compress pdf editor online",
+          "compress pdf edit",
+          "compress pdf ekstrem",
+          "compress pdf elephant",
+          "compress pdf extreme online",
+          "compress pdf free",
+          "compress pdf file",
+          "compress pdf file size",
+          "compress pdf file for free",
+          "compress pdf free online",
+          "compress pdf free no sign up",
+          "compress pdf file size free",
+          "compress pdf file online",
+          "compress pdf file to smaller size",
+          "compress pdf file size free online",
+          "compress pdf for email",
+          "compress pdf file on mac",
+          "compress pdf free adobe",
+          "compress pdf free reddit",
+          "compress pdf file adobe",
+          "compress pdf google drive",
+          "compress pdf google",
+          "compress pdf gear",
+          "compress pdf gratis",
+          "compress pdf github",
+          "compress pdf ghostscript",
+          "compress pdf gratuit",
+          "compress pdf good quality",
+          "compress pdf guru",
+          "compress pdf gratis online",
+          "compress pdf good quality free",
+          "compress pdf go",
+          "compress pdf government website",
+          "compress pdf gb to mb",
+          "compress pdf how to",
+          "compress pdf high quality",
+          "compress pdf high quality free",
+          "compress pdf high",
+          "compress pdf hyper",
+          "compress pdf high quality small size",
+          "compress pdf hd",
+          "compress pdf horizon",
+          "compress pdf hard",
+          "compress pdf high to low",
+          "compress pdf half size",
+          "compress pdf high quality to 200kb",
+          "compress pdf heavily",
+          "compress pdf high resolution",
+          "compress pdf hd quality free",
+          "compress pdf i love pdf",
+          "compress pdf in adobe",
+          "compress pdf in adobe acrobat",
+          "compress pdf iphone",
+          "compress pdf in preview",
+          "compress pdf in acrobat",
+          "compress pdf in bluebeam",
+          "compress pdf in mac",
+          "compress pdf in adobe acrobat pro",
+          "compress pdf into smaller size",
+          "compress pdf images",
+          "compress pdf in preview mac",
+          "compress pdf in foxit",
+          "compress pdf in macbook",
+          "compress pdf in adobe pro",
+          "compress pdf jpg",
+          "compress pdf jadi 1 mb",
+          "compress pdf jpg to 200kb",
+          "compress pdf jadi 2 mb",
+          "compress pdf jpeg",
+          "compress pdf jpg 100 kb",
+          "compress pdf jadi 500kb",
+          "compress pdf jpg 50kb",
+          "compress pdf jadi 5 mb",
+          "compress pdf jpeg to 100kb",
+          "compress pdf jadi 10 mb",
+          "compress pdf jotform",
+          "compress pdf just a little",
+          "compress pdf jadi 200kb",
+          "compress pdf jpg 500 kb",
+          "compress pdf kofax",
+          "compress pdf keep image quality",
+          "compress pdf kb",
+          "compress pdf ke word",
+          "compress pdf kb to mb",
+          "compress pdf kb size",
+          "compress pdf ke word free",
+          "compress pdf ke jpg",
+          "compress pdf ke excel",
+          "compress pdf kurang dari 1 mb",
+          "compress pdf ke 1 mb",
+          "compress pdf kb to mb free",
+          "compress pdf keep quality",
+          "compress pdf kb to 1mb",
+          "compress pdf kecil",
+          "compress pdf less than 5 mb free",
+          "compress pdf love",
+          "compress pdf less than 1mb",
+          "compress pdf locally",
+          "compress pdf linux",
+          "compress pdf less than 5 mb",
+          "compress pdf less than 2mb",
+          "compress pdf lossless",
+          "compress pdf larger than 200mb free",
+          "compress pdf less than 500kb",
+          "compress pdf large file",
+          "compress pdf linux mint",
+          "compress pdf less than 1000kb free",
+          "compress pdf locally windows",
+          "compress pdf locally mac",
+          "compress pdf mac",
+          "compress pdf meaning",
+          "compress pdf macbook",
+          "compress pdf mac preview",
+          "compress pdf more",
+          "compress pdf macos",
+          "compress pdf mb",
+          "compress pdf mac free",
+          "compress pdf more than 200mb",
+          "compress pdf mac command line",
+          "compress pdf mb to kb",
+          "compress pdf manually",
+          "compress pdf multiple files",
+          "compress pdf meaning in hindi",
+          "compress pdf mb to kb free",
+          "compress pdf no sign up",
+          "compress pdf no limit",
+          "compress pdf nitro",
+          "compress pdf no login",
+          "compress pdf not working",
+          "compress pdf nitro pro",
+          "compress pdf no size limit",
+          "compress pdf no quality loss",
+          "compress pdf not reducing size",
+          "compress pdf now",
+          "compress pdf not more than 2mb",
+          "compress pdf not losing quality",
+          "compress pdf no email",
+          "compress pdf online",
+          "compress pdf no account",
+          "compress pdf online free",
+          "compress pdf on mac",
+          "compress pdf on iphone",
+          "compress pdf on macbook",
+          "compress pdf on adobe",
+          "compress pdf offline",
+          "compress pdf on windows",
+          "compress pdf on preview",
+          "compress pdf over 100mb",
+          "compress pdf on ipad",
+          "compress pdf over 200mb free",
+          "compress pdf on adobe acrobat",
+          "compress pdf on android",
+          "compress pdf on canva",
+          "compress pdf preview",
+          "compress pdf preview mac",
+          "compress pdf pages",
+          "compress pdf pdf24",
+          "compress pdf python",
+          "compress pdf pdf xchange",
+          "compress pdf photo",
+          "compress pdf pdffiller",
+          "compress pdf pi7",
+          "compress pdf picture",
+          "compress pdf program",
+          "compress pdf portfolio",
+          "compress pdf pdf gear",
+          "compress pdf pc",
+          "compress pdf pi",
+          "compress pdf quality",
+          "compress pdf quickly",
+          "compress pdf quality high",
+          "compress pdf quick online free pdf24",
+          "compress pdf quality same",
+          "compress pdf quick online free",
+          "compress pdf quillbot",
+          "compress pdf quick online free pdf24 tools",
+          "compress pdf quality loss",
+          "compress pdf quality online",
+          "compress pdf qpdf",
+          "compress pdf qoli info",
+          "compress pdf quick free",
+          "shrink pdf quality",
+          "compressed quran pdf",
+          "compress pdf reddit",
+          "compress pdf reduce size",
+          "compress pdf revu",
+          "compress pdf free no login",
+          "compress pdf free without sign up",
+          "compress pdf free no account",
+          "compress pdf free mac",
+          "compress pdf free without losing quality",
+          "compress pdf free i love pdf",
+          "compress pdf free no limit",
+          "compress pdf size",
+          "compress pdf size free",
+          "compress pdf size online",
+          "compress pdf smaller",
+          "compress pdf size on mac",
+          "compress pdf size online free",
+          "compress pdf sejda",
+          "compress pdf smallpdf",
+          "compress pdf securely",
+          "compress pdf slightly",
+          "compress pdf safely",
+          "compress pdf smaller size",
+          "compress pdf small",
+          "compress pdf software",
+          "compress pdf smaller free",
+          "compress pdf to 1mb",
+          "compress pdf to 1mb free",
+          "compress pdf to smaller size",
+          "compress pdf to 5mb",
+          "compress pdf to 2mb",
+          "compress pdf to 100kb",
+          "compress pdf to 10 mb free",
+          "compress pdf to 500kb",
+          "compress pdf to 10mb",
+          "compress pdf to 200kb",
+          "compress pdf to 2mb free",
+          "compress pdf tool",
+          "compress pdf to smaller file size",
+          "compress pdf to specific size",
+          "compress pdf to smaller size free",
+          "compress pdf using adobe",
+          "compress pdf under 1 mb",
+          "compress pdf under 10 mb",
+          "compress pdf under 2mb",
+          "compress pdf under 5mb",
+          "compress pdf using adobe acrobat",
+          "compress pdf under 500kb",
+          "compress pdf using preview",
+          "compress pdf using acrobat",
+          "compress pdf ubuntu",
+          "compress pdf under 200kb",
+          "compress pdf under 100kb",
+          "compress pdf using preview mac",
+          "compress pdf under 300kb",
+          "compress pdf upto 1 mb",
+          "compress pdf vs flatten pdf",
+          "compress pdf video",
+          "compress pdf via adobe",
+          "compress pdf vs regular pdf",
+          "compress pdf very small",
+          "compress pdf video file size",
+          "compress pdf very small size",
+          "compress pdf very high",
+          "compress pdf very less",
+          "compress pdf viet dreamhouse",
+          "compress pdf version 1.4",
+          "compress pdf via adobe acrobat",
+          "compress pdf video online",
+          "compress pdf very small free",
+          "compress pdf without losing quality",
+          "compress pdf windows",
+          "compress pdf with adobe acrobat",
+          "compress pdf with adobe",
+          "compress pdf with preview",
+          "compress pdf without losing image quality",
+          "compress pdf without losing quality free",
+          "compress pdf with acrobat",
+          "compress pdf website",
+          "compress pdf windows 11",
+          "compress pdf with adobe pro",
+          "compress pdf without adobe",
+          "compress pdf without zip",
+          "compress pdf without sign in",
+          "compress pdf with good quality",
+          "compress pdf xchange",
+          "compress pdf xchange editor",
+          "compress pdf xodo",
+          "compress pdf xtreme",
+          "compress pdf convert",
+          "reduce size pdf xchange",
+          "compress file pdf xchange",
+          "compress file pdf xchange editor",
+          "compress pdf to xlsx",
+          "compress pdf to xml",
+          "compress pdf os x",
+          "compress pdf using pdf xchange editor",
+          "compress pdf using pdf xchange",
+          "compress pdf mac os x",
+          "compress option in pdf xchange editor",
+          "compress pdf yang aman",
+          "kompres pdf yang bisa diatur ukurannya",
+          "compress pdf yang paling kecil",
+          "kompres pdf yang sudah di kompres",
+          "compress pdf yang bisa diatur",
+          "compress pdf yang aman dan cepat",
+          "compress pdf youtube",
+          "compress pdf yang cepat",
+          "compress pdf yang besar",
+          "compress pdf yang paling bagus",
+          "compress pdf",
+          "compress your pdf files online & free",
+          "compress your pdf for free",
+          "compress your pdf in high quality",
+          "compress pdf zip file",
+          "compress pdf zon",
+          "compress pdf zone 11",
+          "compress pdf zone",
+          "compress pdf zion",
+          "compress pdf zamzar",
+          "compress pdf zip folder",
+          "compress pdf z11",
+          "compress pdf zip file online",
+          "compress pdf zip folder online",
+          "compress pdf zoom",
+          "compress pdf zee",
+          "compress pdf zoho",
+          "compress pdf zon 1",
+          "compress pdf 0.5 mb",
+          "compress pdf 0.5 mb online free",
+          "compress pdf 01 mb",
+          "compress pdf 02 mb",
+          "compress pdf 0.5",
+          "compress pdf 0 mb",
+          "compress pdf 0.9 mb",
+          "compress pdf 011",
+          "compress pdf 0.5 kb",
+          "compress pdf 07",
+          "compress pdf 0.97 mb",
+          "compress pdf 0.50 mb",
+          "compress pdf 0 8 mb",
+          "compress pdf 03 mb",
+          "compress pdf 00kb",
+          "compress pdf 11zon",
+          "compress pdf 1 mb",
+          "compress pdf 10 mb",
+          "compress pdf 1gb free",
+          "compress pdf 100kb",
+          "compress pdf 150 kb",
+          "compress pdf 11 zone",
+          "compress pdf 1000kb",
+          "compress pdf 1.5 mb",
+          "compress pdf 180 kb",
+          "compress pdf 1 mb free",
+          "compress pdf 11zon 1mb",
+          "compress pdf 11",
+          "compress pdf 190kb",
+          "compress pdf 100",
+          "compress pdf 24",
+          "compress pdf 200kb",
+          "compress pdf 2mb",
+          "compress pdf 200mb",
+          "compress pdf 250 kb",
+          "compress pdf 20 mb",
+          "compress pdf 20 kb",
+          "compress pdf 200",
+          "compress pdf 2mb free",
+          "compress pdf 2 mb high quality",
+          "compress pdf 2000 kb",
+          "compress pdf 200kb online",
+          "compress pdf 200kb free",
+          "compress pdf 25 mb",
+          "compress pdf 290 kb",
+          "compress pdf 300kb",
+          "compress pdf 3 mb",
+          "compress pdf 300",
+          "compress pdf 30 kb",
+          "compress pdf 300 kb online",
+          "compress pdf 300kb free",
+          "compress pdf 350 kb",
+          "compress pdf 300 kb online free",
+          "compress pdf 300mb",
+          "compress pdf 3 mb free",
+          "compress pdf 30 mb",
+          "compress pdf 3000 kb",
+          "compress pdf 30 kb online free",
+          "compress pdf 300 kb 11zon",
+          "compress pdf 3.5 mb",
+          "compress pdf 400kb",
+          "compress pdf 450 kb",
+          "compress pdf 4 mb",
+          "compress pdf 400kb to 500kb",
+          "compress pdf 450 kb online free",
+          "compress pdf 400",
+          "compress pdf 40 kb",
+          "compress pdf 480 kb",
+          "compress pdf 4mb free",
+          "compress pdf 490kb",
+          "compress pdf 4.5 mb",
+          "compress pdf 400kb free",
+          "compress pdf 400 kb online free",
+          "compress pdf 4000kb",
+          "compress pdf 499kb",
+          "compress pdf 500kb",
+          "compress pdf 5mb",
+          "compress pdf 5mb free",
+          "compress pdf 50 kb",
+          "compress pdf 500",
+          "compress pdf 50",
+          "compress pdf 500 kb online free",
+          "compress pdf 500mb",
+          "compress pdf 500kb free",
+          "compress pdf 5000kb",
+          "compress pdf 500kb hd quality",
+          "compress pdf 512kb",
+          "compress pdf 50 mb",
+          "compress pdf 500kb online",
+          "compress pdf 500kb i love pdf",
+          "compress pdf 600kb",
+          "compress pdf 60 kb",
+          "compress pdf 6 mb",
+          "compress pdf 600mb",
+          "compress pdf 650 kb",
+          "compress pdf 600 kb online free",
+          "compress pdf 600mb free",
+          "compress pdf 60",
+          "compress pdf 6 mb to 3mb",
+          "compress pdf 65 kb",
+          "compress pdf 6mb to 1mb",
+          "compress pdf 60 mb",
+          "compress pdf 6kb",
+          "compress pdf 600",
+          "compress pdf 6mb to 5mb",
+          "compress pdf 700 kb",
+          "compress pdf 75 kb",
+          "compress pdf 7i",
+          "compress pdf 70 kb",
+          "compress pdf 750 kb",
+          "compress pdf 75 to 100 kb",
+          "compress pdf 7 mb",
+          "compress pdf 700 kb online free",
+          "compress pdf 7pi",
+          "compress pdf 750 kb online free",
+          "compress pdf 75kb to 100kb",
+          "compress pdf 700 kb online",
+          "compress pdf 700",
+          "compress pdf 75kb to 500kb",
+          "compress pdf 75",
+          "compress pdf 800 kb",
+          "compress pdf 80 kb",
+          "compress pdf 800 kb online free",
+          "compress pdf 8 mb",
+          "compress pdf 850 kb",
+          "compress pdf 800mb",
+          "compress pdf 85 kb",
+          "compress pdf 800",
+          "compress pdf 80 kb online free",
+          "compress pdf 80",
+          "compress pdf 800kb online",
+          "compress pdf 8 mb to 5 mb",
+          "compress pdf 800 kb i love pdf",
+          "compress pdf 890 kb",
+          "compress pdf 8 kb",
+          "compress pdf 900kb",
+          "compress pdf 90 kb",
+          "compress pdf 900 kb online free",
+          "compress pdf 9 mb",
+          "compress pdf 950kb",
+          "compress pdf 99 kb",
+          "compress pdf 95 kb",
+          "compress pdf 999 kb",
+          "compress pdf 990 kb",
+          "compress pdf 90kb online free",
+          "compress pdf 900kb i love pdf",
+          "compress pdf 98 kb",
+          "compress pdf 9 mb free",
+          "compress pdf 900kb free",
+          "compress pdf 90"
+        ],
+        "comparisons": [
+          "compress pdf vs flatten pdf",
+          "compress pdf vs regular pdf",
+          "compress pdf and convert to jpg",
+          "compress pdf and merge",
+          "compress pdf and jpg",
+          "compress pdf and image",
+          "compress pdf and zip",
+          "compress pdf and download free",
+          "compress pdf and combine",
+          "compress pdf and split",
+          "compress pdf and download",
+          "compress pdf and png",
+          "compress pdf and word file",
+          "compress pdf and email",
+          "compress pdf and",
+          "compress pdf and keep quality",
+          "compress pdf and remove password",
+          "compress pdf and reduce size",
+          "compress pdf and rename",
+          "compress pdf and make zip file",
+          "compress pdf and delete pages",
+          "compress pdf and jpg online",
+          "compress pdf and convert to zip file",
+          "compress pdf and change name",
+          "compress pdf like 100kb",
+          "compress pdf as per required size",
+          "compress pdf as per size",
+          "compress pdf as per requirement",
+          "compress pdf as per my size",
+          "compress pdf as per kb",
+          "compress pdf as required",
+          "compress pdf as zip",
+          "compress pdf as i want",
+          "compress pdf as size",
+          "compress pdf as 1mb",
+          "compress pdf as per choice",
+          "compress pdf as per mb",
+          "compress pdf as image",
+          "compress pdf as per pan card",
+          "compress pdf vs flatten",
+          "compressed pdf vs regular",
+          "compress pdf and reduce file size",
+          "compress pdf or jpg",
+          "compress pdf or flatten pdf",
+          "compress pdf or image",
+          "compress pdf or reduce size",
+          "compress pdf and photo",
+          "compress pdf and choose size"
+        ],
+        "prepositions": [
+          "how long to compress pdf",
+          "how many times can you compress a pdf",
+          "can you compress a pdf twice",
+          "how long does it take to compress a pdf",
+          "can i compress the size of a pdf",
+          "can you compress a pdf file size",
+          "how long does it take to compress a pdf file",
+          "is compress pdf safe",
+          "is compress pdf free",
+          "is pdf compress",
+          "is pdf compression lossless",
+          "does compressing pdf reduce quality",
+          "what is compress pdf in canva",
+          "is adobe compress pdf free",
+          "what is compress pdf means",
+          "what is compress pdf file",
+          "is it compress pdf file size",
+          "what is compress pdf in adobe",
+          "where is the compress pdf tool",
+          "compress for pdf",
+          "compress for pdf file",
+          "to compress pdf file free",
+          "to compress pdf file size",
+          "to compress pdf online",
+          "to compress pdf size",
+          "to compress pdf file online free",
+          "to compress pdf online free",
+          "to compress pdf document",
+          "app for compress pdf",
+          "website for compress pdf",
+          "ai for compress pdf",
+          "tool for compress pdf",
+          "software for compress pdf",
+          "compress to pdf 200kb",
+          "without losing quality compress pdf",
+          "compress pdf without losing quality free",
+          "compress pdf without losing digital signature",
+          "compress pdf without quality loss",
+          "compress pdf without removing digital signature",
+          "compress pdf without losing quality online",
+          "compress pdf without losing quality online free",
+          "compress pdf without losing quality to 1mb",
+          "compress pdf without losing quality to 200kb",
+          "compress pdf without losing quality to 2mb",
+          "compress pdf without losing quality to 300kb",
+          "compress pdf without losing quality to 100kb",
+          "compress pdf without losing quality to 10mb",
+          "compress pdf without losing quality to 5mb",
+          "to compress pdf file",
+          "to compress pdf to 100kb",
+          "to compress pdf",
+          "compress to pdf 100 kb",
+          "compress to pdf 500kb",
+          "compress to pdf 1mb",
+          "compress to pdf 300kb",
+          "compress to pdf 2mb",
+          "compress with pdf",
+          "merge with compress pdf"
+        ],
+        "questions": [
+          "why compress pdf",
+          "can't reduce pdf file size",
+          "what happens when you compress pdf",
+          "compress pdf reduce pdf size",
+          "why compress pdf files",
+          "why can t i compress a pdf file",
+          "where to compress pdf for free",
+          "where to compress pdf",
+          "where to compress pdf for free reddit",
+          "where to compress pdf reddit",
+          "where to compress pdf in adobe",
+          "where is the compress pdf tool",
+          "how to easily compress a pdf",
+          "how to compress pdf to pdf",
+          "how to compress pdf locally",
+          "where is compress in adobe",
+          "where can i compress files",
+          "where to compress",
+          "what's compress pdf",
+          "can compress pdf",
+          "can compress pdf file",
+          "does compress pdf reduce quality",
+          "can canva compress pdf",
+          "can adobe compress pdf",
+          "can chatgpt compress pdf",
+          "can you compress pdf files",
+          "can you compress pdf file size",
+          "can you compress pdf on iphone",
+          "can foxit compress pdf",
+          "can bluebeam compress pdf",
+          "can i compress pdf in adobe acrobat",
+          "can gemini compress pdf",
+          "can nitro compress pdf",
+          "can i compress pdf on mac",
+          "who to compress pdf file",
+          "why compress a pdf",
+          "safest way to compress pdf",
+          "who compress",
+          "which app compress pdf",
+          "what is compressing a pdf file",
+          "what kind of compression does pdf use",
+          "what is the best way to compress a pdf file",
+          "is compress pdf safe",
+          "is compress pdf free",
+          "is compress pdf online safe",
+          "is compress pdf the same as flatten",
+          "will whatsapp compress pdf",
+          "does pdf compress images",
+          "does pdf compress",
+          "does pdf compress files",
+          "does pdf compress file size",
+          "is pdf compress",
+          "does pdf compress well",
+          "will compressing a pdf make it smaller",
+          "when you compress a pdf what happens",
+          "how long does it take to compress a pdf",
+          "can i compress the size of a pdf",
+          "how to further compress a pdf",
+          "when compress",
+          "what happens when you compress a pdf file",
+          "what does it mean when you compress a pdf file",
+          "what compress pdf means",
+          "what compress pdf do",
+          "what does compress pdf mean",
+          "what is compress pdf in canva",
+          "what is compress pdf in adobe",
+          "what is compress pdf file",
+          "pdf compressor",
+          "is pdf compression lossless",
+          "do pdf compress",
+          "are pdfs compressed",
+          "are pdf files compressed",
+          "are pdf compressors safe",
+          "are pdf files already compressed",
+          "how compress pdf file",
+          "how compress pdf file size",
+          "how compress pdf on mac",
+          "how compress pdf adobe",
+          "how compress pdf file free",
+          "how compress pdf without losing quality",
+          "how compress pdf file offline",
+          "how compress pdf file in iphone",
+          "how compress pdf file size free",
+          "how compress pdf file online",
+          "how compress pdf to 1mb",
+          "how compress pdf document",
+          "how compress pdf to 2mb",
+          "how compress pdf in laptop",
+          "how compress pdf for email",
+          "how much can pdf compress",
+          "how much can you compress pdf",
+          "how to compress pdf file size",
+          "can you compress a pdf file size",
+          "how much can i compress a pdf file"
+        ]
+      }
+    },
+    "failedKeywords": [],
+    "emptyKeywords": []
+  },
+  "gsc": {
+    "kind": "table",
+    "title": "Top queries",
+    "source": "api · through 2026-09-26",
+    "columns": [
+      {
+        "key": "query",
+        "label": "Query",
+        "kind": "text"
+      },
+      {
+        "key": "clicks",
+        "label": "Clicks",
+        "kind": "num"
+      },
+      {
+        "key": "impressions",
+        "label": "Impressions",
+        "kind": "num"
+      },
+      {
+        "key": "ctr",
+        "label": "CTR",
+        "kind": "pctp"
+      },
+      {
+        "key": "position",
+        "label": "Position",
+        "kind": "pos"
+      }
+    ],
+    "rows": [],
+    "emptyText": "No queries in this range.",
+    "settledThrough": "2026-09-26",
+    "dataMaturity": {
+      "firstIncompleteDate": "2026-09-27",
+      "settledThrough": "2026-09-26",
+      "dateBasis": "America/Los_Angeles",
+      "source": "gsc-api-metadata",
+      "probe": {
+        "searchType": "web",
+        "startDate": "2026-09-20",
+        "endDate": "2026-09-29",
+        "dataState": "all"
+      }
+    }
+  },
+  "bing": {
+    "notConfigured": true,
+    "hint": "No Bing Webmaster Tools API key is configured for this property in GSC Wizard. Add your Bing Webmaster API key on the connected Google account in the GSC Wizard app to enable Bing data.",
+    "dataSource": "bing"
+  },
+  "ahrefs": {
+    "source": "https://ahrefs.com/keyword-generator/?country=us&input=add%20watermark",
+    "market": "US",
+    "observed": "2026-09-29",
+    "rows": [
+      {
+        "keyword": "add watermark to pdf",
+        "volumeRange": ">1000",
+        "difficulty": "Easy"
+      },
+      {
+        "keyword": "how to add watermark to pdf",
+        "volumeRange": ">100",
+        "difficulty": "Easy"
+      },
+      {
+        "keyword": "add watermark to photo",
+        "volumeRange": ">100",
+        "difficulty": "Hard"
+      }
+    ]
+  }
+}

@@ -8,8 +8,8 @@ const tool = getToolBySlug('extract-pdf-pages')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Extract PDF Pages Online Free — Save Pages as New PDF',
-    description: 'Extract specific pages from a PDF and save as a new PDF file. Enter page numbers or ranges like 1,3,5-7. Free, no registration required.',
+    title: "Extract PDF Pages Online Free — Save as PDF",
+    description: "Extract PDF pages online for free into a new PDF. Enter pages such as 1,3,5-7 and download one file. Processed in your browser, no sign-up.",
     keywords: tool.keywords,
     openGraph: { title: 'Extract PDF Pages Online Free | PDF and Image +', description: 'Extract specific pages from any PDF online for free. Enter page numbers or ranges.' },
     twitter: { title: 'Extract PDF Pages Online Free | PDF and Image +', description: 'Extract specific pages from any PDF online for free. Enter page numbers or ranges.' },

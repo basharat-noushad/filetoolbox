@@ -8,16 +8,16 @@ const tool = getToolBySlug('rotate-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Rotate PDF Online Free — Rotate PDF Pages',
-    description: 'Rotate PDF pages online for free. Rotate all or specific pages by 90°, 180°, or 270°. Fix scanned documents instantly.',
+    title: "Rotate PDF Online Free — Rotate PDF Pages",
+    description: "Rotate PDF pages online for free by 90° or 180°. Turn all pages or only the ones you pick, and save the fixed PDF permanently. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Rotate PDF Online Free — Rotate PDF Pages | PDF and Image +',
-      description: 'Rotate PDF pages online for free. Rotate all or specific pages by 90°, 180°, or 270°. Fix scanned documents instantly.',
+      title: "Rotate PDF Online Free — Rotate PDF Pages | PDF and Image +",
+      description: "Rotate PDF pages online for free by 90° or 180°. Turn all pages or only the ones you pick, and save the fixed PDF permanently. No sign-up.",
     },
     twitter: {
-      title: 'Rotate PDF Online Free — Rotate PDF Pages | PDF and Image +',
-      description: 'Rotate PDF pages online for free. Rotate all or specific pages by 90°, 180°, or 270°. Fix scanned documents instantly.',
+      title: "Rotate PDF Online Free — Rotate PDF Pages | PDF and Image +",
+      description: "Rotate PDF pages online for free by 90° or 180°. Turn all pages or only the ones you pick, and save the fixed PDF permanently. No sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/rotate-pdf')

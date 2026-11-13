@@ -8,16 +8,16 @@ const tool = getToolBySlug('crop-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Crop Image Online Free — Interactive Image Cropper',
-    description: 'Crop images with an interactive cropper online for free. Use preset aspect ratios or set custom dimensions. No registration.',
+    title: "Crop Image Online Free — Interactive Cropper",
+    description: "Crop image online free with an interactive cropper. Choose Free, 1:1, 16:9, 4:3 or 3:2 ratios and download the result. No sign-up needed.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Crop Image Online Free — Interactive Image Cropper | PDF and Image +',
-      description: 'Crop images with an interactive cropper online for free. Use preset aspect ratios or set custom dimensions. No registration.',
+      title: "Crop Image Online Free — Interactive Cropper | PDF and Image +",
+      description: "Crop image online free with an interactive cropper. Choose Free, 1:1, 16:9, 4:3 or 3:2 ratios and download the result. No sign-up needed.",
     },
     twitter: {
-      title: 'Crop Image Online Free — Interactive Image Cropper | PDF and Image +',
-      description: 'Crop images with an interactive cropper online for free. Use preset aspect ratios or set custom dimensions. No registration.',
+      title: "Crop Image Online Free — Interactive Cropper | PDF and Image +",
+      description: "Crop image online free with an interactive cropper. Choose Free, 1:1, 16:9, 4:3 or 3:2 ratios and download the result. No sign-up needed.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/crop-image')

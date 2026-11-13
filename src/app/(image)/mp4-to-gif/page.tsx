@@ -8,8 +8,8 @@ const tool = getToolBySlug('mp4-to-gif')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'MP4 to GIF Converter Online Free — Convert Video to GIF',
-    description: 'Convert MP4 video clips to animated GIF format online for free. Browser-based conversion via WebAssembly. No upload, no registration needed.',
+    title: "MP4 to GIF Converter Online Free — Video to GIF",
+    description: "MP4 to GIF online for free. Upload an MP4 or MOV clip, get a 480px-wide animated GIF, and download it. Processed in your browser, no sign-up.",
     keywords: tool.keywords,
     openGraph: { title: 'MP4 to GIF Converter Free | PDF and Image +', description: 'Convert MP4 videos to animated GIF online for free. Browser-based, no upload needed.' },
     twitter: { title: 'MP4 to GIF Converter Free | PDF and Image +', description: 'Convert MP4 videos to animated GIF online for free. Browser-based, no upload needed.' },

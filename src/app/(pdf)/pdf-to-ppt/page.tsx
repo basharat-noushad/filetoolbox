@@ -8,16 +8,16 @@ const tool = getToolBySlug('pdf-to-ppt')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'PDF to PowerPoint Converter Free Online — PDF to PPTX',
-    description: 'Convert PDF files to editable PowerPoint presentations (.pptx) online for free. Each PDF page becomes a slide. No registration required.',
+    title: "PDF to PPT Online Free — Convert to PowerPoint",
+    description: "PDF to PPT online for free: each PDF page becomes an editable PowerPoint (.pptx) slide. Text-based pages stay editable. Up to 100 MB.",
     keywords: tool.keywords,
     openGraph: {
       title: 'PDF to PowerPoint Converter Free Online | PDF and Image +',
-      description: 'Convert PDF files to editable PowerPoint presentations (.pptx) online for free. Each PDF page becomes a slide. No registration required.',
+      description: "PDF to PPT online for free: each PDF page becomes an editable PowerPoint (.pptx) slide. Text-based pages stay editable. Up to 100 MB.",
     },
     twitter: {
       title: 'PDF to PowerPoint Converter Free Online | PDF and Image +',
-      description: 'Convert PDF files to editable PowerPoint presentations (.pptx) online for free. Each PDF page becomes a slide. No registration required.',
+      description: "PDF to PPT online for free: each PDF page becomes an editable PowerPoint (.pptx) slide. Text-based pages stay editable. Up to 100 MB.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/pdf-to-ppt')
@@ -32,7 +32,7 @@ const HOW_TO_STEPS = [
 const FAQS = [
   {
     q: 'Will the text in my PDF be editable in PowerPoint?',
-    a: 'This depends on the PDF. Text-based PDFs generally produce editable text in PowerPoint. Scanned or image-based PDFs will produce slides with images rather than editable text.',
+    a: 'Usually, yes. Text-based PDFs produce editable text in PowerPoint. Scanned pages are read with OCR in your browser and also become editable text. Pictures with no readable text stay as images.',
   },
   {
     q: 'How many pages can my PDF have?',
@@ -40,11 +40,11 @@ const FAQS = [
   },
   {
     q: 'Is there a file size limit?',
-    a: 'Yes, the maximum file size is 4MB. Use our Compress PDF tool first if your file is too large.',
+    a: 'The maximum file size is 100MB. The online converter, used as a backup, accepts files up to 4MB.',
   },
   {
     q: 'Is my PDF file secure during conversion?',
-    a: 'Yes. Your file is transmitted securely and deleted from our servers immediately after conversion. We do not retain any of your documents.',
+    a: 'Yes. The conversion runs in your browser, including reading scanned pages, so the file normally stays on your device. It is sent to our online converter (Adobe PDF Services) only if your browser cannot convert it, a scanned page cannot be read, or you choose to retry online.',
   },
 ]
 

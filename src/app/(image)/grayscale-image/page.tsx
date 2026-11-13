@@ -8,8 +8,8 @@ const tool = getToolBySlug('grayscale-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Grayscale Image Online Free — Convert Photo to Black & White',
-    description: 'Convert color images to grayscale (black and white) online for free. Instant conversion, no quality loss. Supports JPG, PNG, WebP formats.',
+    title: "Grayscale Image Online Free — B&W Converter",
+    description: "Grayscale image online for free. Convert a color JPG, PNG or WebP to black and white in one click, keeping the same dimensions. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
       title: 'Grayscale Image Online Free — Black & White Photo Converter | PDF and Image +',

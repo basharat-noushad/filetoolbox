@@ -41,7 +41,7 @@ const ALL_TOOLS: ToolEntry[] = [
   { slug: 'crop-image',          name: 'Crop Image',         description: 'Crop images with an interactive cropper tool',       category: 'image' },
   { slug: 'png-to-jpg',          name: 'PNG to JPG',         description: 'Convert PNG images to JPG format',                   category: 'image' },
   { slug: 'jpg-to-png',          name: 'JPG to PNG',         description: 'Convert JPG images to PNG with transparency',        category: 'image' },
-  { slug: 'image-to-webp',       name: 'Convert to WebP',    description: 'Convert images to WebP for better web performance',  category: 'image' },
+  { slug: 'image-to-webp',       name: 'JPG to WebP',        description: 'Convert images to WebP for better web performance',  category: 'image' },
   { slug: 'rotate-image',        name: 'Rotate Image',       description: 'Rotate images 90°, 180°, or 270°',                  category: 'image' },
   { slug: 'flip-image',          name: 'Flip Image',         description: 'Flip images horizontally or vertically',             category: 'image' },
   { slug: 'grayscale-image',     name: 'Grayscale',          description: 'Convert color images to black and white',            category: 'image' },
@@ -52,7 +52,7 @@ const ALL_TOOLS: ToolEntry[] = [
   { slug: 'image-brightness',    name: 'Brightness & Contrast', description: 'Adjust image brightness, contrast, and exposure', category: 'image' },
 ]
 
-const POPULAR = ['Merge PDF', 'Compress Image', 'PDF to Word', 'Remove Background', 'Split PDF', 'Resize Image', 'PDF to JPG', 'Convert to WebP']
+const POPULAR = ['Merge PDF', 'Compress Image', 'PDF to Word', 'Remove Background', 'Split PDF', 'Resize Image', 'PDF to JPG', 'JPG to WebP']
 const MAX_PER_CAT = 4
 
 function highlight(text: string, query: string) {

@@ -8,16 +8,16 @@ const tool = getToolBySlug('unlock-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Unlock PDF — Remove Password from PDF Free Online',
-    description: 'Remove a password from a PDF free. Enter the password and get an unlocked copy instantly, processed in your browser so your file never leaves your device.',
+    title: "Unlock PDF Online Free — Remove Password",
+    description: "Unlock PDF online for free. Enter the password you know and download an unlocked copy. Processed in your browser, never uploaded to a server.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Unlock PDF — Remove Password from PDF Free Online | PDF and Image +',
-      description: 'Remove a password from a PDF free. Enter the password and get an unlocked copy instantly, processed in your browser so your file never leaves your device.',
+      title: "Unlock PDF Online Free — Remove Password | PDF and Image +",
+      description: "Unlock PDF online for free. Enter the password you know and download an unlocked copy. Processed in your browser, never uploaded to a server.",
     },
     twitter: {
-      title: 'Unlock PDF — Remove Password from PDF Free Online | PDF and Image +',
-      description: 'Remove a password from a PDF free. Enter the password and get an unlocked copy instantly, processed in your browser so your file never leaves your device.',
+      title: "Unlock PDF Online Free — Remove Password | PDF and Image +",
+      description: "Unlock PDF online for free. Enter the password you know and download an unlocked copy. Processed in your browser, never uploaded to a server.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/unlock-pdf')

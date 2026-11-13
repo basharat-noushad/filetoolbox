@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { saveAs } from 'file-saver'
 import { withPdf } from '@/lib/tools/pdf/pdfjs'
+import { OCR_LANGUAGES } from '@/lib/tools/ocrLanguages'
 
 export function OcrPdfClient() {
   const [files, setFiles] = useState<File[]>([])
@@ -67,11 +68,7 @@ export function OcrPdfClient() {
           onChange={e => setLang(e.target.value)}
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
         >
-          <option value="eng">English</option>
-          <option value="spa">Spanish</option>
-          <option value="fra">French</option>
-          <option value="deu">German</option>
-          <option value="chi_sim">Chinese (Simplified)</option>
+          {OCR_LANGUAGES.map(l => <option key={l.code} value={l.code}>{l.label}</option>)}
         </select>
       </div>
       {error && <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2">{error}</p>}

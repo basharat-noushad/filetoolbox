@@ -8,16 +8,16 @@ const tool = getToolBySlug('png-to-jpg')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'PNG to JPG Online Free — Convert PNG to JPEG',
-    description: 'Convert PNG images to JPG format online for free. Control quality. Batch conversion supported. No registration required.',
+    title: "PNG to JPG Online Free — Quality Slider",
+    description: "Convert PNG to JPG online free with a quality slider. Multiple files download as a ZIP, and transparent areas become white. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'PNG to JPG Online Free — Convert PNG to JPEG | PDF and Image +',
-      description: 'Convert PNG images to JPG format online for free. Control quality. Batch conversion supported. No registration required.',
+      title: "PNG to JPG Online Free — Quality Slider | PDF and Image +",
+      description: "Convert PNG to JPG online free with a quality slider. Multiple files download as a ZIP, and transparent areas become white. No sign-up.",
     },
     twitter: {
-      title: 'PNG to JPG Online Free — Convert PNG to JPEG | PDF and Image +',
-      description: 'Convert PNG images to JPG format online for free. Control quality. Batch conversion supported. No registration required.',
+      title: "PNG to JPG Online Free — Quality Slider | PDF and Image +",
+      description: "Convert PNG to JPG online free with a quality slider. Multiple files download as a ZIP, and transparent areas become white. No sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/png-to-jpg')

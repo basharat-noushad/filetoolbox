@@ -1,5 +1,5 @@
 {
-  "instructions": "Queue of blog topics for the automated pipeline. The blog-post.yml workflow picks the FIRST item with status 'pending', writes the post, then sets status to 'published' with the slug and date. Add new topics anytime — keep highest-priority keywords at the top. 28 topics = ~14 weeks at 2 posts/week.",
+  "instructions": "Queue of blog topics for the automated pipeline (blog-post.yml, Mon & Thu). It picks the FIRST item with status 'pending', writes the post, then sets status to 'published' with the slug and date. When no topic is pending, the pipeline adds new topics itself. Keep highest-priority keywords at the top of the pending block. Prefer how-to / why / troubleshooting angles; tool pages own \"X converter free online\" searches.",
   "topics": [
     {
       "keyword": "how to compress a pdf without losing quality",
@@ -279,6 +279,111 @@
       "publishedSlug": "how-to-compress-multiple-images-at-once",
       "publishedDate": "2026-08-24",
       "note": "Written by blog pipeline — skipped 'convert svg to png' (open PR #16), 'crop image to square circle' (open PR #17), and 'powerpoint to pdf converter' (open PR #18), all already in flight"
+    },
+    {
+      "keyword": "how to convert word to pdf without losing formatting",
+      "workingTitle": "How to Convert Word to PDF Without Losing Formatting",
+      "relatedTool": "word-to-pdf",
+      "category": "PDF Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to rotate a pdf and save it",
+      "workingTitle": "How to Rotate PDF Pages and Save Them Permanently",
+      "relatedTool": "rotate-pdf",
+      "category": "PDF Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to make an image black and white",
+      "workingTitle": "How to Make an Image Black and White (Grayscale) Online",
+      "relatedTool": "grayscale-image",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "what is pdf/a and when do you need it",
+      "workingTitle": "What Is PDF/A? When You Need It and How to Convert",
+      "relatedTool": "pdf-to-pdfa",
+      "category": "PDF Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to blur part of an image",
+      "workingTitle": "How to Blur Part of a Photo (Faces, Plates, Private Info)",
+      "relatedTool": "blur-image",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to rearrange pages in a pdf",
+      "workingTitle": "How to Rearrange Pages in a PDF Without Acrobat",
+      "relatedTool": "reorder-pdf-pages",
+      "category": "PDF Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to convert excel to pdf on one page",
+      "workingTitle": "How to Convert Excel to PDF and Fit It on One Page",
+      "relatedTool": "excel-to-pdf",
+      "category": "PDF Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to add a watermark to a pdf",
+      "workingTitle": "How to Add a Watermark to a PDF (Text, Free)",
+      "relatedTool": "add-watermark-pdf",
+      "category": "PDF Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to flip an image horizontally",
+      "workingTitle": "How to Flip or Mirror an Image (Selfies, Text, Designs)",
+      "relatedTool": "flip-image",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to extract pages from a pdf",
+      "workingTitle": "How to Extract Specific Pages From a PDF",
+      "relatedTool": "extract-pdf-pages",
+      "category": "PDF Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "png vs jpg which should you use",
+      "workingTitle": "PNG vs JPG: Which Format Should You Use (and How to Convert)",
+      "relatedTool": "png-to-jpg",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to flatten a pdf form",
+      "workingTitle": "How to Flatten a Filled PDF Form So It Can’t Be Edited",
+      "relatedTool": "flatten-pdf",
+      "category": "PDF Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to brighten a dark photo",
+      "workingTitle": "How to Brighten a Dark Photo and Fix Contrast Online",
+      "relatedTool": "image-brightness",
+      "category": "Image Tips",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to convert pdf to powerpoint",
+      "workingTitle": "How to Turn a PDF Into an Editable PowerPoint",
+      "relatedTool": "pdf-to-ppt",
+      "category": "PDF Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to crop a pdf page",
+      "workingTitle": "How to Crop PDF Pages (Trim Margins and White Space)",
+      "relatedTool": "crop-pdf",
+      "category": "PDF Guides",
+      "status": "pending"
     }
   ]
 }

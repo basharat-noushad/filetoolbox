@@ -41,5 +41,17 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# in-browser document converter bundle (built on postinstall by scripts/build-doc-convert.mjs)
+/public/doc-convert/
+# Tesseract worker, cores and English data for OCR (copied on postinstall by scripts/copy-wasm.cjs)
+/public/tesseract/
+# MediaPipe wasm runtime (copied on postinstall); selfie_segmenter.tflite next to it IS committed
+/public/mediapipe/wasm/
+
 # editor/script backups
 *.backup
+
+# local tooling output
+/.claude/
+/graphify-out/
+/.impeccable/

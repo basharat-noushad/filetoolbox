@@ -8,16 +8,16 @@ const tool = getToolBySlug('pdf-to-jpg')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'PDF to JPG Online Free — Convert PDF Pages to Images',
-    description: 'Convert PDF pages to high-quality JPG images online for free. Download individually or as a ZIP. No registration required.',
+    title: "PDF to JPG Online Free — Convert PDF Pages",
+    description: "Convert PDF to JPG online for free at 72, 150 or 300 DPI. Each page becomes a numbered JPG, bundled in one ZIP. No registration needed.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'PDF to JPG Online Free — Convert PDF Pages to Images | PDF and Image +',
-      description: 'Convert PDF pages to high-quality JPG images online for free. Download individually or as a ZIP. No registration required.',
+      title: "PDF to JPG Online Free — Convert PDF Pages | PDF and Image +",
+      description: "Convert PDF to JPG online for free at 72, 150 or 300 DPI. Each page becomes a numbered JPG, bundled in one ZIP. No registration needed.",
     },
     twitter: {
-      title: 'PDF to JPG Online Free — Convert PDF Pages to Images | PDF and Image +',
-      description: 'Convert PDF pages to high-quality JPG images online for free. Download individually or as a ZIP. No registration required.',
+      title: "PDF to JPG Online Free — Convert PDF Pages | PDF and Image +",
+      description: "Convert PDF to JPG online for free at 72, 150 or 300 DPI. Each page becomes a numbered JPG, bundled in one ZIP. No registration needed.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/pdf-to-jpg')

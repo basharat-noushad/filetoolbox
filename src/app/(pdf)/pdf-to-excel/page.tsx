@@ -8,15 +8,15 @@ const tool = getToolBySlug('pdf-to-excel')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'PDF to Excel Converter Free Online — PDF to XLSX',
-    description: 'Convert PDF files to Excel spreadsheets (.xlsx) online for free. Extract tables and data from any PDF. No registration required.',
+    title: "PDF to Excel Online Free — Convert to XLSX",
+    description: "Convert PDF to Excel (.xlsx) online for free. Extracts tables and data, and reads scanned pages with OCR in your browser. Up to 100 MB, no sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'PDF to Excel Converter Free Online — PDF to XLSX | PDF and Image +',
+      title: "PDF to Excel Online Free — Convert to XLSX | PDF and Image +",
       description: 'Convert PDF files to Excel spreadsheets (.xlsx) online for free. Extract tables and data from any PDF.',
     },
     twitter: {
-      title: 'PDF to Excel Converter Free Online — PDF to XLSX | PDF and Image +',
+      title: "PDF to Excel Online Free — Convert to XLSX | PDF and Image +",
       description: 'Convert PDF files to Excel spreadsheets (.xlsx) online for free. Extract tables and data from any PDF.',
     },
     alternates: { canonical: `/${tool.slug}` },
@@ -36,15 +36,15 @@ const FAQS = [
   },
   {
     q: 'What happens to my PDF data during conversion?',
-    a: 'Your file is sent securely to our conversion server, converted, and immediately returned to you. Files are not stored after conversion.',
+    a: 'The conversion runs in your browser, including reading scanned pages, so the file normally stays on your device. It is sent to our online converter (Adobe PDF Services) only if your browser cannot convert it, a scanned page cannot be read, or you choose to retry online.',
   },
   {
     q: 'Is there a file size limit?',
-    a: 'Yes, the maximum file size is 4MB. For larger files, consider splitting your PDF first using our Split PDF tool.',
+    a: 'The maximum file size is 100MB. The online converter, used as a backup, accepts files up to 4MB.',
   },
   {
     q: 'Can I convert a scanned PDF to Excel?',
-    a: 'Scanned PDFs contain images rather than text, so direct conversion has limited results. Try the OCR PDF tool first to extract the text, then copy the data into Excel manually.',
+    a: 'Yes. Scanned pages are read with OCR in your browser and the words go into cells. Columns with clear gaps between them usually land in separate cells, but ruled tables in a scan are not rebuilt, so check the result. Pick the language of the scan before converting.',
   },
   {
     q: 'Will formulas be preserved in the converted Excel file?',

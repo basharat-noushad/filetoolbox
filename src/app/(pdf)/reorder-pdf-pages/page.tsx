@@ -8,16 +8,16 @@ const tool = getToolBySlug('reorder-pdf-pages')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Reorder PDF Pages Online Free — Rearrange PDF Pages',
-    description: 'Rearrange pages in a PDF online for free. Simply enter the new page order and download your reorganized PDF. No registration required.',
+    title: "Reorder PDF Pages Online Free — Rearrange",
+    description: "Reorder PDF pages online for free. Type the new order, such as 3,1,2,4, and download the rearranged PDF. Processed in your browser, no sign-up.",
     keywords: tool.keywords,
     openGraph: {
       title: 'Reorder PDF Pages Online Free — Rearrange PDF | PDF and Image +',
-      description: 'Rearrange pages in a PDF online for free. Simply enter the new page order and download your reorganized PDF. No registration required.',
+      description: "Reorder PDF pages online for free. Type the new order, such as 3,1,2,4, and download the rearranged PDF. Processed in your browser, no sign-up.",
     },
     twitter: {
       title: 'Reorder PDF Pages Online Free — Rearrange PDF | PDF and Image +',
-      description: 'Rearrange pages in a PDF online for free. Simply enter the new page order and download your reorganized PDF. No registration required.',
+      description: "Reorder PDF pages online for free. Type the new order, such as 3,1,2,4, and download the rearranged PDF. Processed in your browser, no sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/reorder-pdf-pages')

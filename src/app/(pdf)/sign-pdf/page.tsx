@@ -8,16 +8,16 @@ const tool = getToolBySlug('sign-pdf')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'Sign PDF Online Free — Electronic Signature',
-    description: 'Sign PDF documents online with a hand-drawn digital signature. Draw your signature directly in your browser. Free, secure, no registration.',
+    title: "Sign PDF Online Free — Electronic Signature",
+    description: "Sign PDF online for free with a hand-drawn signature. Draw it in your browser and it goes on the first page. Your files never leave your device.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Sign PDF Online Free — Electronic Signature | PDF and Image +',
-      description: 'Sign PDF documents online with a hand-drawn digital signature. Draw your signature directly in your browser. Free, secure, no registration.',
+      title: "Sign PDF Online Free — Electronic Signature | PDF and Image +",
+      description: "Sign PDF online for free with a hand-drawn signature. Draw it in your browser and it goes on the first page. Your files never leave your device.",
     },
     twitter: {
-      title: 'Sign PDF Online Free — Electronic Signature | PDF and Image +',
-      description: 'Sign PDF documents online with a hand-drawn digital signature. Draw your signature directly in your browser. Free, secure, no registration.',
+      title: "Sign PDF Online Free — Electronic Signature | PDF and Image +",
+      description: "Sign PDF online for free with a hand-drawn signature. Draw it in your browser and it goes on the first page. Your files never leave your device.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/sign-pdf')

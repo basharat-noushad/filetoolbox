@@ -8,26 +8,28 @@ const tool = getToolBySlug('png-to-svg')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: 'PNG to SVG Converter Online Free — Raster to Vector',
-    description: 'Convert PNG images to SVG format online for free. Embed raster images in scalable SVG containers for web use. Fast and easy conversion.',
+    title: "PNG to SVG Converter Free — Vectorize Images",
+    description: "Convert PNG, JPG or WebP to a real SVG vector online for free. Traces your logo into scalable paths in your browser. No sign-up, no upload.",
     keywords: tool.keywords,
-    openGraph: { title: 'PNG to SVG Converter Free | PDF and Image +', description: 'Convert PNG to SVG online for free. Create scalable SVG files for web use.' },
-    twitter: { title: 'PNG to SVG Converter Free | PDF and Image +', description: 'Convert PNG to SVG online for free. Create scalable SVG files for web use.' },
+    openGraph: { title: 'PNG to SVG Converter Free | PDF and Image +', description: 'Trace PNG, JPG and WebP images into real scalable SVG vector paths, free and in your browser.' },
+    twitter: { title: 'PNG to SVG Converter Free | PDF and Image +', description: 'Trace PNG, JPG and WebP images into real scalable SVG vector paths, free and in your browser.' },
     alternates: { canonical: `/${tool.slug}` },
   }, '/png-to-svg')
 }
 
 const HOW_TO_STEPS = [
-  'Upload your PNG image file.',
-  'Click "Convert to SVG" to wrap your image in an SVG container.',
-  'Download the SVG file — it can now be scaled without quality loss.',
+  'Upload a PNG, JPG or WebP image. Logos, icons and flat artwork work best.',
+  'Choose "Trace to vector" and a preset (Logo, Illustration, Detailed or Black & white), then click convert.',
+  'Check the live preview and download your SVG file.',
 ]
 
 const FAQS = [
-  { q: 'Is this true vector conversion?', a: 'This tool creates an SVG with your PNG embedded as a raster image. It allows SVG scaling and embedding but does not trace actual vector paths. True vector tracing requires server-side Potrace processing.' },
-  { q: 'When is this useful?', a: 'When you need to embed a raster image in SVG-based workflows, web pages, or vector editors — without needing true vector paths.' },
-  { q: 'Can I open the SVG in Illustrator or Inkscape?', a: 'Yes. The SVG file opens in any vector editor. The embedded image will be visible and you can add vector elements around it.' },
-  { q: 'Will the SVG file be large?', a: 'The SVG file size will be similar to the original PNG since it contains the same image data embedded in an SVG wrapper.' },
+  { q: 'Does this create a real vector?', a: 'Yes. In Trace mode the image is converted into colored vector paths that scale to any size without blur. Embed mode only wraps the original PNG inside an SVG and creates no paths.' },
+  { q: 'Which images trace well?', a: 'Logos, icons, signatures, line art and flat illustrations with solid colors give clean results. Photos and gradients trace poorly: they become many small shapes, large files and a posterized look.' },
+  { q: 'Which preset should I choose?', a: 'Use Logo / icon for simple artwork with few colors, Illustration for more colors, Detailed for finer shapes at the cost of file size, and Black & white for line art and silhouettes.' },
+  { q: 'Are my files uploaded anywhere?', a: 'No. Tracing runs in your browser, so your image never leaves your device.' },
+  { q: 'Why was my large image reduced in size?', a: 'Images are scaled down to 1200px on the longest side before tracing to keep it fast. The SVG keeps the original aspect ratio and size, and vectors scale up without losing sharpness.' },
+  { q: 'Can I edit the SVG in Illustrator or Inkscape?', a: 'Yes. The traced SVG opens in any vector editor, where you can recolor, merge or delete individual paths.' },
 ]
 
 export default function PngToSvgPage() {
