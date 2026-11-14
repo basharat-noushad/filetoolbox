@@ -94,7 +94,7 @@ export function CompressImageClient() {
           <input id="quality" type="range" min={10} max={100} value={quality} onChange={e => { setQuality(Number(e.target.value)); reset() }}
             className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-brand-600"
           />
-          <div className="flex justify-between text-xs text-gray-400 mt-1"><span>Smaller file</span><span>Better quality</span></div>
+          <div className="flex justify-between text-xs text-gray-500 mt-1"><span>Smaller file</span><span>Better quality</span></div>
         </div>
       ) : (
         <div className="mt-4">

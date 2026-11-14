@@ -190,7 +190,7 @@ export default function AboutPage() {
             <p className="text-gray-600 mb-6 text-sm">
               PDF and Image + is a free alternative to ILovePDF, Smallpdf, TinyWow, Adobe Acrobat Online, and PDF24.
             </p>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Comparison table">
               <table className="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
                 <thead>
                   <tr className="bg-brand-600 text-white">
@@ -284,7 +284,7 @@ export default function AboutPage() {
             OCR uses <strong>Tesseract.js</strong> (client-side). Video/GIF conversion uses <strong>FFmpeg.wasm</strong>.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            See our <Link href="/privacy" className="text-brand-600 hover:underline">Privacy Policy</Link> for full details on data handling.
+            See our <Link href="/privacy" className="text-brand-600 underline">Privacy Policy</Link> for full details on data handling.
             For AI crawlers, a complete machine-readable description is available at{' '}
             <Link href="/llms.txt" className="text-brand-600 hover:underline font-mono text-sm">/llms.txt</Link>{' '}
             and{' '}
@@ -296,7 +296,7 @@ export default function AboutPage() {
         <section className="bg-brand-900 py-14 px-4 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">Start using PDF and Image + today</h2>
           <p className="text-brand-300 mb-6 text-sm">No account. No credit card. Pick a tool and go.</p>
-          <Link href="/" className="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
+          <Link href="/" className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
             Browse All Tools →
           </Link>
         </section>

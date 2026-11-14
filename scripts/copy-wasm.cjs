@@ -24,3 +24,8 @@ for (const [from, to] of copies) {
 const wasmSrc = 'node_modules/@mediapipe/tasks-vision/wasm'
 fs.mkdirSync('public/mediapipe/wasm', { recursive: true })
 for (const f of fs.readdirSync(wasmSrc)) fs.copyFileSync(wasmSrc + '/' + f, 'public/mediapipe/wasm/' + f)
+// onnxruntime-web runtime (wasm + its .mjs loaders) for in-browser AI models (background blur, upscale);
+// self-hosted so the CSP stays 'self' and nothing loads from a CDN. Set ort.env.wasm.wasmPaths = '/ort/'.
+const ortSrc = 'node_modules/onnxruntime-web/dist'
+fs.mkdirSync('public/ort', { recursive: true })
+for (const f of fs.readdirSync(ortSrc)) if (/^ort-wasm.*\.(wasm|mjs)$/.test(f)) fs.copyFileSync(ortSrc + '/' + f, 'public/ort/' + f)

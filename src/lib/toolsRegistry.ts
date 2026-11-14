@@ -5,9 +5,9 @@ export const tools: Tool[] = [
   {
     slug: 'merge-pdf',
     name: 'Merge PDF',
-    description: "Combine PDF files, and JPG or PNG images, into one PDF in the order you select them. Runs in your browser.",
+    description: "Combine PDF files and JPG or PNG images into one PDF. Drag to reorder before merging. Runs in your browser.",
     category: 'pdf', icon: 'FilePlus2',
-    keywords: ["merge pdf", "merge pdf online", "merge pdf free", "merge pdf with jpg", "merge pdf and images", "combine pdf and jpg", "merge pdf online free", "merge pdf files into one", "combine pdf", "merge pdfs into one", "join pdf files", "merge pdf no sign up"],
+    keywords: ["merge pdf", "merge pdf online", "merge pdf free", "merge pdf in order", "rearrange and merge pdf", "merge pdf with jpg", "merge pdf and images", "combine pdf and jpg", "merge pdf online free", "merge pdf files into one", "combine pdf", "merge pdfs into one", "join pdf files", "merge pdf no sign up"],
     relatedTools: ['split-pdf', 'compress-pdf', 'rotate-pdf'], tier: 1,
   },
   {
@@ -53,7 +53,7 @@ export const tools: Tool[] = [
   {
     slug: 'jpg-to-pdf',
     name: 'JPG to PDF',
-    description: "Convert JPG and PNG images to one PDF. Pages follow the order you select the images in.",
+    description: "Convert JPG and PNG images to one PDF. Drag the images into the order you want, then download.",
     category: 'pdf', icon: 'FileImage',
     keywords: ["jpg to pdf", "jpg to pdf converter", "jpg to pdf free", "jpg to pdf online free", "jpg to pdf converter free online", "convert jpg to pdf", "jpeg to pdf", "jpg to pdf merge", "jpg to pdf high quality"],
     relatedTools: ['pdf-to-jpg', 'merge-pdf', 'compress-pdf'], tier: 1,
@@ -241,9 +241,9 @@ export const tools: Tool[] = [
   {
     slug: 'sign-pdf',
     name: 'Sign PDF Online',
-    description: "Sign a PDF by drawing your signature or uploading a signature image. Processed in your browser, no sign-up.",
+    description: "Draw or upload your signature, then drag it into place on any page and add the date. Processed in your browser.",
     category: 'pdf', icon: 'PenLine',
-    keywords: ["sign pdf", "sign pdf online", "sign pdf online free", "sign pdf with image", "add signature image to pdf", "upload signature to pdf", "sign pdf free", "sign pdf document", "sign pdf free no sign up", "sign pdf free online no sign up", "how to sign pdf file for free"],
+    keywords: ["sign pdf", "sign pdf online", "sign pdf online free", "add signature to pdf", "place signature on pdf", "add date to pdf", "sign pdf with image", "add signature image to pdf", "upload signature to pdf", "sign pdf free", "sign pdf document", "sign pdf free no sign up", "sign pdf free online no sign up", "how to sign pdf file for free"],
     relatedTools: ['protect-pdf', 'add-watermark-pdf', 'flatten-pdf'], tier: 2,
   },
   {
@@ -291,9 +291,9 @@ export const tools: Tool[] = [
   {
     slug: 'upscale-image',
     name: 'Upscale Image',
-    description: 'Enlarge image dimensions by 2x, 3x or 4x using browser interpolation. Export PNG; enlargement does not recover missing detail.',
+    description: "Upscale images 2× or 4× with AI (Real-ESRGAN) right in your browser for sharper detail, or enlarge fast without AI.",
     category: 'image', icon: 'ZoomIn',
-    keywords: ["upscale image online", "upscale image", "upscale image online free", "upscale image free", "image upscaler free", "increase image resolution online", "increase image resolution online free"],
+    keywords: ["upscale image online", "upscale image", "upscale image online free", "ai image upscaler", "upscale image ai free", "ai photo enhancer online", "increase image resolution ai", "upscale image free", "image upscaler free", "increase image resolution online", "increase image resolution online free"],
     relatedTools: ['resize-image', 'compress-image', 'png-to-jpg'], tier: 2,
   },
   {
@@ -347,9 +347,9 @@ export const tools: Tool[] = [
   {
     slug: 'blur-image',
     name: 'Blur Image',
-    description: "Blur a whole image, the background behind people, or selected areas. Detect faces automatically to blur or pixelate them.",
+    description: "Blur the background behind people, pets or products with on-device AI, blur selected areas, or detect and hide faces.",
     category: 'image', icon: 'Blend',
-    keywords: ["blur image", "blur image online", "blur image online free", "blur faces automatically", "anonymize faces in photo", "pixelate faces online", "blur part of image", "blur face in photo", "pixelate part of image", "censor image online", "blur background", "blur background photo", "blur background of picture online free", "gaussian blur image", "how to blur an image", "blur image online tool", "blur image online website"],
+    keywords: ["blur image", "blur image online", "blur image online free", "blur background ai", "blur background of product photo", "blur faces automatically", "anonymize faces in photo", "pixelate faces online", "blur part of image", "blur face in photo", "pixelate part of image", "censor image online", "blur background", "blur background photo", "blur background of picture online free", "gaussian blur image", "how to blur an image", "blur image online tool", "blur image online website"],
     relatedTools: ['grayscale-image', 'image-brightness', 'compress-image'], tier: 2,
   },
   {
@@ -435,7 +435,7 @@ export const tools: Tool[] = [
   {
     slug: 'png-to-pdf',
     name: 'PNG to PDF',
-    description: "Convert PNG images to a PDF document. Each image becomes a page, in the order you select them.",
+    description: "Convert PNG images to a PDF document. Each image becomes a page; drag to reorder them first.",
     category: 'pdf', icon: 'FileImage',
     keywords: ["png to pdf", "png to pdf converter", "png to pdf converter free", "png to pdf free", "png to pdf online", "png to pdf merge", "png to pdf high quality", "png to pdf converter free online"],
     relatedTools: ['jpg-to-pdf', 'image-to-pdf', 'merge-pdf'], tier: 2,
@@ -443,7 +443,7 @@ export const tools: Tool[] = [
   {
     slug: 'image-to-pdf',
     name: 'Image to PDF',
-    description: "Turn JPG, PNG, WebP, GIF, BMP or AVIF images into one PDF, in the order you select them.",
+    description: "Turn JPG, PNG, WebP, GIF, BMP or AVIF images into one PDF. Drag to set the page order.",
     category: 'pdf', icon: 'FileImage',
     keywords: ["image to pdf", "image to pdf converter", "image to pdf converter free", "image to pdf free", "image to pdf online", "image to pdf maker", "image to pdf online free", "image to pdf converter free online"],
     relatedTools: ['jpg-to-pdf', 'png-to-pdf', 'merge-pdf'], tier: 2,
@@ -459,9 +459,9 @@ export const tools: Tool[] = [
   {
     slug: 'txt-to-pdf',
     name: 'TXT to PDF',
-    description: "Convert plain text files or pasted text into a clean, readable PDF document.",
+    description: "Convert text files or pasted text into a clean PDF, including Urdu, Arabic, Hindi and Chinese text.",
     category: 'pdf', icon: 'FileOutput',
-    keywords: ["txt to pdf", "txt to pdf converter", "txt to pdf free", "txt to pdf converter free", "txt to pdf converter online free", "txt to pdf online", "txt to pdf maker", "txt to pdf converter online"],
+    keywords: ["txt to pdf", "txt to pdf converter", "txt to pdf free", "urdu text to pdf", "hindi text to pdf", "text to pdf converter", "txt to pdf converter free", "txt to pdf converter online free", "txt to pdf online", "txt to pdf maker", "txt to pdf converter online"],
     relatedTools: ['pdf-to-text', 'word-to-pdf', 'merge-pdf'], tier: 2,
   },
   {
@@ -475,17 +475,17 @@ export const tools: Tool[] = [
   {
     slug: 'qr-code-generator',
     name: 'QR Code Generator',
-    description: "Create QR codes for links, text, Wi-Fi and contacts. Download PNG or SVG. Static codes that never expire.",
+    description: "Make QR codes for links, Wi-Fi, WhatsApp, UPI, contacts and more. Custom colours, logo and frames; PNG, SVG or PDF. Never expires.",
     category: 'image', icon: 'QrCode',
-    keywords: ["qr code generator", "qr code generator free", "qr code generator free online", "qr code generator online", "qr code generator free lifetime", "qr code generator free no expiration", "qr code generator with logo"],
+    keywords: ["qr code generator", "qr code generator free", "qr code generator free online", "wifi qr code generator", "whatsapp qr code generator", "upi qr code generator", "vcard qr code generator", "bulk qr code generator", "qr code generator with logo free", "qr code generator online", "qr code generator free lifetime", "qr code generator free no expiration", "qr code generator with logo"],
     relatedTools: ['favicon-generator', 'add-text-to-image', 'compress-image'], tier: 2,
   },
   {
     slug: 'favicon-generator',
     name: 'Favicon Generator',
-    description: "Create a favicon.ico and app icons from a PNG, JPG or SVG logo. Also converts images to ICO.",
+    description: "Create favicon.ico and app icons from your logo, with optional background removal, padding and rounded corners.",
     category: 'image', icon: 'AppWindow',
-    keywords: ["favicon generator", "favicon generator free", "favicon generator online", "favicon generator online free", "favicon generator from image", "favicon generator from logo", "favicon generator from png", "favicon generator from svg", "ico converter", "ico converter online"],
+    keywords: ["favicon generator", "favicon generator free", "favicon generator online", "favicon generator with transparent background", "logo to favicon", "favicon generator online free", "favicon generator from image", "favicon generator from logo", "favicon generator from png", "favicon generator from svg", "ico converter", "ico converter online"],
     relatedTools: ['resize-image', 'png-to-svg', 'svg-to-png'], tier: 2,
   },
   {
@@ -495,6 +495,22 @@ export const tools: Tool[] = [
     category: 'image', icon: 'Music',
     keywords: ["mp4 to mp3", "mp4 to mp3 converter", "mp4 to mp3 converter online free", "mp4 to mp3 converter online", "mp4 to mp3 converter free", "mp4 to mp3 online"],
     relatedTools: ['mp4-to-gif', 'gif-to-mp4', 'compress-image'], tier: 2,
+  },
+  {
+    slug: 'passport-photo-maker',
+    name: 'Passport Photo Maker',
+    description: "Make passport and visa photos at the right size for your country. Change the background to white or blue and print several on one sheet.",
+    category: 'image', icon: 'IdCard',
+    keywords: ["passport photo maker", "passport photo maker online free", "passport size photo maker", "passport photo maker with white background", "passport photo maker with blue background", "visa photo maker", "passport photo 35x45", "2x2 photo maker", "passport photo print sheet", "passport size photo online"],
+    relatedTools: ['crop-image', 'resize-image', 'remove-background'], tier: 2,
+  },
+  {
+    slug: 'qr-code-scanner',
+    name: 'QR Code Scanner',
+    description: 'Scan a QR code from an image, screenshot or your camera and read its link, text, Wi-Fi or contact details. Nothing is uploaded.',
+    category: 'image', icon: 'ScanLine',
+    keywords: ['qr code scanner', 'qr code scanner online', 'scan qr code from image', 'qr code reader', 'qr code reader online', 'read qr code from screenshot', 'scan qr code on laptop', 'decode qr code'],
+    relatedTools: ['qr-code-generator', 'image-to-text', 'favicon-generator'], tier: 2,
   },
 ]
 

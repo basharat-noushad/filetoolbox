@@ -188,7 +188,7 @@ export function Footer() {
       {/* ── Bottom bar ──────────────────────────────────────────── */}
       <div className="border-t border-brand-800">
         <div className="max-w-7xl mx-auto px-6 h-11 flex items-center justify-between gap-4">
-          <span className="text-[12px] text-slate-500">
+          <span className="text-[12px] text-slate-400">
             © {new Date().getFullYear()} PDF and Image +. All rights reserved.
           </span>
           <nav className="flex items-center gap-4" aria-label="Footer legal links">
@@ -200,7 +200,7 @@ export function Footer() {
               <Link
                 key={href}
                 href={href}
-                className="text-[12px] text-slate-500 hover:text-slate-200 transition-colors duration-150"
+                className="text-[12px] text-slate-400 hover:text-slate-200 transition-colors duration-150"
               >
                 {label}
               </Link>

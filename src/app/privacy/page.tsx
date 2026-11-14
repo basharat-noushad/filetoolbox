@@ -123,7 +123,7 @@ We do not sell, trade, or rent personal information to third parties under any c
   {
     id: 'contact',
     heading: '10. Contact',
-    content: `If you have any questions about this privacy policy or our data practices, please contact us at support@pdfandimage.com.`,
+    content: `If you have any questions about this privacy policy or our data practices, please contact us at contact@pdfandimage.com.`,
   },
 ]
 
@@ -143,7 +143,7 @@ export default function PrivacyPage() {
         <div className="max-w-5xl mx-auto px-4 py-14 flex flex-col lg:flex-row gap-10">
           <aside className="lg:w-56 shrink-0">
             <div className="sticky top-24">
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Contents</p>
+              <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">Contents</p>
               <nav aria-label="Privacy policy sections">
                 <ul className="space-y-1">
                   {sections.map(s => (
@@ -177,8 +177,8 @@ export default function PrivacyPage() {
               ))}
             </div>
 
-            <div className="mt-12 pt-8 border-t border-gray-100 text-sm text-gray-500">
-              Have questions? <Link href="/contact" className="text-brand-600 hover:underline">Contact us</Link>.
+            <div className="mt-12 pt-8 border-t border-gray-100 text-sm text-gray-600">
+              Have questions? <Link href="/contact" className="text-brand-600 underline">Contact us</Link>.
             </div>
           </article>
         </div>

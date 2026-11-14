@@ -26,7 +26,7 @@ export function MergePdfClient() {
   return (
     <div className="bg-white border border-brand-100 rounded-xl p-6">
       <FileDropzone
-        accept={{ 'application/pdf': ['.pdf'], 'image/jpeg': ['.jpg', '.jpeg'], 'image/png': ['.png'] }} multiple maxFiles={20}
+        accept={{ 'application/pdf': ['.pdf'], 'image/jpeg': ['.jpg', '.jpeg'], 'image/png': ['.png'] }} multiple reorderable maxFiles={20}
         onFilesSelected={f => { setFiles(f); setResult(null) }}
         label="Drag & drop PDF, JPG or PNG files here"
         sublabel="Mix PDFs and images — each JPG/PNG becomes one page sized to the image. Max 50MB each"

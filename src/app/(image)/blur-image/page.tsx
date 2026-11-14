@@ -25,14 +25,14 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const HOW_TO_STEPS = [
   'Upload your JPG, PNG, or WebP image using the file picker or drag and drop.',
-  'Choose "Whole image", "Background only" (for photos of people), or "Selected areas" and click "Detect faces" or drag boxes over what to hide, then set the strength slider.',
+  'Choose "Whole image", "Background only" (keeps the person, pet or product sharp), or "Selected areas" and click "Detect faces" or drag boxes over what to hide, then set the strength slider.',
   'Click the blur button, compare the before and after previews, and download the result.',
 ]
 
 const FAQS = [
   {
     q: 'How do I blur the background of a photo?',
-    a: 'Pick "Background only" and click Blur Background. The tool finds the people in your photo, keeps them sharp, and blurs everything behind them. It works best on portraits, selfies, and other clear photos of people.',
+    a: 'Pick "Background only" and click Blur Background. The tool cuts out the main subject with an AI matting model, keeps it sharp, and blurs everything behind it with a lens-style blur. Fine detail like hair is kept, and the colours of the subject do not bleed into the blur. Turn on depth-graded blur for a portrait-mode look where the blur grows with distance.',
   },
   {
     q: 'How do I blur a face, licence plate, or private info in a photo?',
@@ -44,11 +44,11 @@ const FAQS = [
   },
   {
     q: 'Does background blur work on objects, pets, or products?',
-    a: 'No. Background mode detects people only. For a photo of an object or animal it will tell you no person was found. Use "Whole image" for an overall blur instead.',
+    a: 'Yes. Leave the subject on Auto, or pick "Any subject (pets, products)". If a face is found it uses a portrait model tuned for people and hair, otherwise a general subject model. It works best when the subject stands out from the background; busy scenes with several similar objects can confuse it.',
   },
   {
     q: 'Is my photo uploaded to a server?',
-    a: 'No. All modes run in your browser. The small person-detection model is served from this site and runs locally, so your image never leaves your device.',
+    a: 'No. All modes run in your browser. The AI models are served from this site and run on your device, so your image never leaves it. The first background blur downloads a model once (about 26 MB for people, 5 MB for other subjects, plus 27 MB if you enable depth blur); your browser keeps it for later visits.',
   },
   {
     q: 'What blur strength should I use?',

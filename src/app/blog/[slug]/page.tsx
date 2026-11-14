@@ -148,7 +148,7 @@ export default async function BlogPostPage({
           </span>
           <h1 className="text-3xl font-bold text-gray-900 leading-tight mb-4">{post.title}</h1>
           <p className="text-lg text-gray-600 leading-relaxed mb-5">{post.excerpt}</p>
-          <div className="flex items-center gap-4 text-sm text-gray-400 border-t border-gray-100 pt-4">
+          <div className="flex items-center gap-4 text-sm text-gray-600 border-t border-gray-100 pt-4">
             <span className="flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5" />
               {post.readTime}
@@ -222,7 +222,7 @@ export default async function BlogPostPage({
           <p className="text-brand-300 text-sm mb-5">No registration, no file uploads to external servers, 100% private.</p>
           <Link
             href={`/${post.relatedTool}`}
-            className="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
+            className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
           >
             Use {toolName} Tool →
           </Link>
@@ -277,7 +277,7 @@ export default async function BlogPostPage({
                     <p className="text-sm font-semibold text-gray-900 group-hover:text-brand-600 transition-colors leading-snug">
                       {related.title}
                     </p>
-                    <p className="text-xs text-gray-500 mt-0.5 flex items-center gap-1">
+                    <p className="text-xs text-gray-600 mt-0.5 flex items-center gap-1">
                       <Clock className="w-3 h-3" /> {related.readTime}
                     </p>
                   </div>

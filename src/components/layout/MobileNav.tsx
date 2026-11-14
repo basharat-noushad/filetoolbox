@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronDown, X, Menu, Home, BookOpen, Info } from 'lucide-react'
@@ -34,6 +34,7 @@ const IMAGE_TOOLS = [
   { name: 'Compress Image',       slug: '/compress-image' },
   { name: 'Resize Image',         slug: '/resize-image' },
   { name: 'Crop Image',           slug: '/crop-image' },
+  { name: 'Passport Photo Maker', slug: '/passport-photo-maker' },
   { name: 'Convert to JPG',       slug: '/png-to-jpg' },
   { name: 'Convert to PNG',       slug: '/jpg-to-png' },
   { name: 'JPG to WebP',          slug: '/image-to-webp' },
@@ -53,14 +54,39 @@ const IMAGE_TOOLS = [
 export function MobileNav() {
   const [open, setOpen] = useState(false)
   const [section, setSection] = useState<'pdf' | 'image' | null>(null)
-  const close = () => { setOpen(false); setSection(null) }
+  const toggleRef = useRef<HTMLButtonElement>(null)
+  const drawerRef = useRef<HTMLDivElement>(null)
+  const close = () => { setOpen(false); setSection(null); toggleRef.current?.focus() }
+
+  // Focus trap + Escape + body scroll lock while the drawer is open.
+  useEffect(() => {
+    if (!open) return
+    const drawer = drawerRef.current
+    drawer?.querySelector<HTMLElement>('button, a')?.focus()
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { e.preventDefault(); close(); return }
+      if (e.key !== 'Tab' || !drawer) return
+      const f = drawer.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')
+      if (!f.length) return
+      const first = f[0], last = f[f.length - 1]
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus() }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus() }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = prev }
+  }, [open])
 
   return (
     <>
       <button
+        ref={toggleRef}
         onClick={() => setOpen(true)}
         className="lg:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
         aria-label="Open menu"
+        aria-expanded={open}
+        aria-controls="mobile-drawer"
       >
         <Menu className="w-5 h-5" />
       </button>
@@ -69,7 +95,8 @@ export function MobileNav() {
         <div className="fixed inset-0 bg-black/40 z-40 lg:hidden" onClick={close} aria-hidden="true" />
       )}
 
-      <div className={`fixed top-0 left-0 h-full w-72 bg-white z-50 shadow-2xl transform transition-transform duration-300 ease-out lg:hidden flex flex-col ${open ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div id="mobile-drawer" ref={drawerRef} role="dialog" aria-modal="true" aria-label="Site menu" inert={!open}
+        className={`fixed top-0 left-0 h-full w-72 bg-white z-50 shadow-2xl transform transition-transform duration-300 ease-out motion-reduce:transition-none lg:hidden flex flex-col ${open ? 'translate-x-0' : '-translate-x-full'}`}>
         {/* Drawer header */}
         <div className="flex items-center justify-between px-4 h-14 border-b border-gray-200">
           <Link href="/" onClick={close} className="hover:opacity-80 transition-opacity">
@@ -89,6 +116,8 @@ export function MobileNav() {
           {/* PDF Tools */}
           <button
             onClick={() => setSection(section === 'pdf' ? null : 'pdf')}
+            aria-expanded={section === 'pdf'}
+            aria-controls="mobile-sec-pdf"
             className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
           >
             <span className="flex items-center gap-2.5">
@@ -99,10 +128,10 @@ export function MobileNav() {
               PDF Tools
               <span className="text-xs font-semibold px-1.5 py-0.5 rounded-full bg-brand-100 text-brand-700">25</span>
             </span>
-            <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${section === 'pdf' ? 'rotate-180' : ''}`} />
+            <ChevronDown aria-hidden="true" className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${section === 'pdf' ? 'rotate-180' : ''}`} />
           </button>
           {section === 'pdf' && (
-            <div className="bg-brand-50/60 border-y border-brand-100">
+            <div id="mobile-sec-pdf" className="bg-brand-50/60 border-y border-brand-100">
               {PDF_TOOLS.map(tool => (
                 <Link key={tool.slug + tool.name} href={tool.slug} onClick={close}
                   className="block px-8 py-2 text-sm text-gray-600 hover:text-brand-600 hover:bg-brand-100 transition-colors">
@@ -115,6 +144,8 @@ export function MobileNav() {
           {/* Image Tools */}
           <button
             onClick={() => setSection(section === 'image' ? null : 'image')}
+            aria-expanded={section === 'image'}
+            aria-controls="mobile-sec-image"
             className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
           >
             <span className="flex items-center gap-2.5">
@@ -125,10 +156,10 @@ export function MobileNav() {
               Image Tools
               <span className="text-xs font-semibold px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700">25</span>
             </span>
-            <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${section === 'image' ? 'rotate-180' : ''}`} />
+            <ChevronDown aria-hidden="true" className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${section === 'image' ? 'rotate-180' : ''}`} />
           </button>
           {section === 'image' && (
-            <div className="bg-emerald-50/60 border-y border-emerald-100">
+            <div id="mobile-sec-image" className="bg-emerald-50/60 border-y border-emerald-100">
               {IMAGE_TOOLS.map(tool => (
                 <Link key={tool.slug + tool.name} href={tool.slug} onClick={close}
                   className="block px-8 py-2 text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-100 transition-colors">

@@ -73,8 +73,8 @@ export default function BlogPage() {
                   <h3 className="font-bold text-gray-900 text-sm leading-snug mb-2 group-hover:text-brand-600 transition-colors flex-1">
                     {post.title}
                   </h3>
-                  <p className="text-xs text-gray-500 line-clamp-2 mb-4">{post.excerpt}</p>
-                  <div className="flex items-center gap-1.5 text-xs text-gray-400">
+                  <p className="text-xs text-gray-600 line-clamp-2 mb-4">{post.excerpt}</p>
+                  <div className="flex items-center gap-1.5 text-xs text-gray-600">
                     <Clock className="w-3 h-3" />
                     {post.readTime}
                     <span className="mx-1">·</span>
@@ -100,14 +100,14 @@ export default function BlogPage() {
                       <span className="text-xs font-semibold text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full">
                         {post.category}
                       </span>
-                      <span className="text-xs text-gray-400">{formatDate(post.datePublished)}</span>
+                      <span className="text-xs text-gray-600">{formatDate(post.datePublished)}</span>
                     </div>
                     <h3 className="font-semibold text-gray-900 text-sm mb-1 group-hover:text-brand-600 transition-colors leading-snug">
                       {post.title}
                     </h3>
-                    <p className="text-xs text-gray-500 line-clamp-2 leading-relaxed">{post.excerpt}</p>
+                    <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed">{post.excerpt}</p>
                   </div>
-                  <div className="flex items-center gap-1 text-xs text-gray-400 shrink-0 mt-1">
+                  <div className="flex items-center gap-1 text-xs text-gray-600 shrink-0 mt-1">
                     <Clock className="w-3 h-3" />
                     {post.readTime}
                   </div>
@@ -128,17 +128,17 @@ export default function BlogPage() {
                 >
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1.5">
-                      <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
+                      <span className="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full">
                         {post.category}
                       </span>
-                      <span className="text-xs text-gray-400">{formatDate(post.datePublished)}</span>
+                      <span className="text-xs text-gray-600">{formatDate(post.datePublished)}</span>
                     </div>
                     <h3 className="font-semibold text-gray-900 text-sm mb-1 group-hover:text-brand-600 transition-colors leading-snug">
                       {post.title}
                     </h3>
-                    <p className="text-xs text-gray-500 line-clamp-2 leading-relaxed">{post.excerpt}</p>
+                    <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed">{post.excerpt}</p>
                   </div>
-                  <div className="flex items-center gap-1 text-xs text-gray-400 shrink-0 mt-1">
+                  <div className="flex items-center gap-1 text-xs text-gray-600 shrink-0 mt-1">
                     <Clock className="w-3 h-3" />
                     {post.readTime}
                   </div>

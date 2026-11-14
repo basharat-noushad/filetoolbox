@@ -95,7 +95,7 @@ export function ProtectPdfClient() {
       }`}
     >
       <span className="block text-sm font-medium text-gray-900">{title}</span>
-      <span className="block text-xs text-gray-500 mt-0.5">{sub}</span>
+      <span className="block text-xs text-gray-600 mt-0.5">{sub}</span>
     </button>
   )
 

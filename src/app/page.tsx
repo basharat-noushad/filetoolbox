@@ -122,7 +122,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900 text-sm leading-tight">{item.label}</p>
-                    <p className="text-xs text-gray-500">{item.sub}</p>
+                    <p className="text-xs text-gray-600">{item.sub}</p>
                   </div>
                 </div>
               ))}
@@ -143,7 +143,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h2 id="pdf-tools-heading" className="text-xl font-bold text-gray-900">PDF Tools</h2>
-                  <p className="text-xs text-gray-500">{pdfTools.length} tools available</p>
+                  <p className="text-xs text-gray-600">{pdfTools.length} tools available</p>
                 </div>
               </div>
             </div>
@@ -179,7 +179,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h2 id="image-tools-heading" className="text-xl font-bold text-gray-900">Image Tools</h2>
-                  <p className="text-xs text-gray-500">{imageTools.length} tools available</p>
+                  <p className="text-xs text-gray-600">{imageTools.length} tools available</p>
                 </div>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function HomePage() {
             <h2 className="text-xl font-bold text-white mb-2">Start using PDF and Image + today</h2>
             <p className="text-brand-300 text-sm mb-6">No account. No credit card. Pick a tool and check its file requirements.</p>
             <Link href="#pdf-tools"
-              className="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors duration-150 text-sm">
+              className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors duration-150 text-sm">
               Browse All Tools →
             </Link>
           </section>

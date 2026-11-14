@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const HOW_TO_STEPS = [
   "Select your PNG images, or drag them into the upload area.",
-  "Check the list. The PDF pages follow the order of the files shown.",
+  "Drag the images (or use the up/down arrows) into the order you want. Pages follow the list.",
   "Click \"Convert to PDF\" and download your PDF.",
 ]
 

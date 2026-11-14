@@ -114,7 +114,7 @@ export function ToolSearchBar() {
           onKeyDown={handleKeyDown}
           placeholder="Search 60+ tools — merge PDF, resize image…"
           className="flex-1 h-14 px-3 bg-transparent text-gray-900 text-[15px] placeholder-gray-400 focus:outline-none"
-          aria-label="Search tools"
+          role="combobox" aria-label="Search tools"
           aria-autocomplete="list"
           aria-expanded={showDropdown}
         />
@@ -124,7 +124,7 @@ export function ToolSearchBar() {
             <X className="w-4 h-4" />
           </button>
         ) : (
-          <kbd className="mr-4 hidden sm:flex items-center text-[11px] text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded font-mono select-none">
+          <kbd className="mr-4 hidden sm:flex items-center text-[11px] text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded font-mono select-none">
             /
           </kbd>
         )}
@@ -137,7 +137,7 @@ export function ToolSearchBar() {
           {/* Popular tools */}
           {showPopular && (
             <div className="p-4">
-              <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-gray-400 mb-3">
+              <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-gray-500 mb-3">
                 <TrendingUp className="w-3 h-3" /> Popular
               </p>
               <div className="flex flex-wrap gap-2">
@@ -172,7 +172,7 @@ export function ToolSearchBar() {
                   <div className="flex items-center justify-between px-4 pt-3 pb-1">
                     <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-brand-500">
                       <FileText className="w-3 h-3" strokeWidth={2.5} /> PDF Tools
-                      <span className="text-gray-400 normal-case tracking-normal font-normal">({pdfResults.length})</span>
+                      <span className="text-gray-500 normal-case tracking-normal font-normal">({pdfResults.length})</span>
                     </p>
                   </div>
                   {visiblePdf.map(tool => {
@@ -194,7 +194,7 @@ export function ToolSearchBar() {
                           <p className={`text-[13px] font-semibold leading-tight ${active ? 'text-brand-700' : 'text-gray-900'}`}>
                             {highlight(tool.name, query.trim())}
                           </p>
-                          <p className="text-[12px] text-gray-400 truncate">{highlight(tool.description, query.trim())}</p>
+                          <p className="text-[12px] text-gray-500 truncate">{highlight(tool.description, query.trim())}</p>
                         </div>
                         <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-brand-100 text-brand-600">
                           PDF
@@ -224,7 +224,7 @@ export function ToolSearchBar() {
                   <div className="flex items-center justify-between px-4 pt-2 pb-1">
                     <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-emerald-600">
                       <ImageIcon className="w-3 h-3" strokeWidth={2.5} /> Image Tools
-                      <span className="text-gray-400 normal-case tracking-normal font-normal">({imageResults.length})</span>
+                      <span className="text-gray-500 normal-case tracking-normal font-normal">({imageResults.length})</span>
                     </p>
                   </div>
                   {visibleImage.map(tool => {
@@ -246,7 +246,7 @@ export function ToolSearchBar() {
                           <p className={`text-[13px] font-semibold leading-tight ${active ? 'text-emerald-700' : 'text-gray-900'}`}>
                             {highlight(tool.name, query.trim())}
                           </p>
-                          <p className="text-[12px] text-gray-400 truncate">{highlight(tool.description, query.trim())}</p>
+                          <p className="text-[12px] text-gray-500 truncate">{highlight(tool.description, query.trim())}</p>
                         </div>
                         <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-emerald-100 text-emerald-600">
                           Image
@@ -272,10 +272,10 @@ export function ToolSearchBar() {
           {showEmpty && (
             <div className="px-4 py-8 text-center">
               <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-3">
-                <Search className="w-5 h-5 text-gray-400" />
+                <Search className="w-5 h-5 text-gray-500" />
               </div>
               <p className="text-[14px] font-medium text-gray-700 mb-1">No results for &ldquo;{query}&rdquo;</p>
-              <p className="text-[12px] text-gray-400">Try &ldquo;compress&rdquo;, &ldquo;convert&rdquo;, or &ldquo;merge&rdquo;</p>
+              <p className="text-[12px] text-gray-500">Try &ldquo;compress&rdquo;, &ldquo;convert&rdquo;, or &ldquo;merge&rdquo;</p>
             </div>
           )}
         </div>

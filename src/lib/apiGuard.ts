@@ -85,7 +85,7 @@ export async function kv(commands: (string | number)[][]): Promise<unknown[] | n
 }
 
 /** Shared (Redis) limiter with in-memory fallback. Same contract as rateLimit. */
-async function limit(key: string, max: number, consume: boolean, windowMs: number): Promise<number | null> {
+export async function limit(key: string, max: number, consume: boolean, windowMs: number): Promise<number | null> {
   const k = `rl:${key}`
   const r = await kv(consume
     ? [['SET', k, 0, 'PX', windowMs, 'NX'], ['INCR', k], ['PTTL', k]]

@@ -25,13 +25,13 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const HOW_TO_STEPS = [
   'Click "Select Files" or drag and drop your PDF files (and JPG or PNG images, if you like) into the upload area.',
-  'Select your files in the order you want them merged — they combine in the order you add them.',
+  'Drag files (or use the up/down arrows) to set the order you want. Files you add later go to the end.',
   'Click "Merge" — then click Download to save your combined PDF.',
 ]
 
 const FAQS = [
   { q: 'How many PDF files can I merge at once?', a: 'You can merge up to 20 PDF files at once with PDF and Image +. All processing happens in your browser — up to 50 MB per file, subject to device memory.' },
-  { q: 'Can I merge PDF with JPG or PNG images?', a: 'Yes. Add JPG or PNG files alongside your PDFs. Each image becomes one page in the output, sized to the image itself (not fitted to A4), in the order you added the files.' },
+  { q: 'Can I merge PDF with JPG or PNG images?', a: 'Yes. Add JPG or PNG files alongside your PDFs. Each image becomes one page in the output, sized to the image itself (not fitted to A4), in the order shown in the list.' },
   { q: 'Is it safe to merge PDFs online?', a: 'Merging happens locally. Your files never leave your device — all merging is done locally in your browser. We never see your files.' },
   { q: 'Will the quality change after merging?', a: 'Copied pages keep their dimensions and content. Check forms, bookmarks and signatures separately; merging may affect document-level features.' },
   { q: 'Can I merge PDFs with different page sizes?', a: 'Yes. Each page keeps its original dimensions when merging PDFs with different page sizes.' },

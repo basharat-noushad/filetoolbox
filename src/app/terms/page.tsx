@@ -106,7 +106,7 @@ Nothing in these terms limits any rights you may have under the mandatory consum
   {
     id: 'contact',
     heading: '11. Contact',
-    content: `For questions about these terms, contact us at support@pdfandimage.com.`,
+    content: `For questions about these terms, contact us at contact@pdfandimage.com.`,
   },
 ]
 
@@ -126,7 +126,7 @@ export default function TermsPage() {
         {/* ToC sidebar */}
         <aside className="lg:w-56 shrink-0">
           <div className="sticky top-24">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Contents</p>
+            <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">Contents</p>
             <nav className="space-y-1">
               {sections.map(s => (
                 <a
@@ -152,9 +152,9 @@ export default function TermsPage() {
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100 text-sm text-gray-500">
-            Questions? <Link href="/contact" className="text-brand-600 hover:underline">Contact us</Link>.
-            Also read our <Link href="/privacy" className="text-brand-600 hover:underline">Privacy Policy</Link>.
+          <div className="mt-12 pt-8 border-t border-gray-100 text-sm text-gray-600">
+            Questions? <Link href="/contact" className="text-brand-600 underline">Contact us</Link>.
+            Also read our <Link href="/privacy" className="text-brand-600 underline">Privacy Policy</Link>.
           </div>
         </article>
       </div>

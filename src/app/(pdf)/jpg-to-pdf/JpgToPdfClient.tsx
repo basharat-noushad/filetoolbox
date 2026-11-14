@@ -39,7 +39,7 @@ export function JpgToPdfClient({
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <FileDropzone
         accept={accept}
-        multiple maxFiles={20}
+        multiple reorderable maxFiles={20}
         onFilesSelected={f => { setFiles(f); setResult(null); setError(null) }}
         label={label}
         sublabel={sublabel}

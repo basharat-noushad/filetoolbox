@@ -70,8 +70,7 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/og-image.png`],
   },
 
-  // ── Canonical ─────────────────────────────────────────────────────────────
-  alternates: { canonical: SITE_URL },
+  // Canonical is set per page (homepage in page.tsx) — never at root.
 
   // ── App links (GEO/AIO: signals this is a real web app, not spam) ─────────
   applicationName: ORG_NAME,
@@ -184,8 +183,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
       </head>
       <body className="antialiased">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to main content</a>
         <Header />
-        {children}
+        <div id="main-content" tabIndex={-1} className="outline-none">{children}</div>
         <Footer />
         <Toaster />
         <Analytics />

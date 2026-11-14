@@ -62,8 +62,8 @@ export function OcrPdfClient() {
         sublabel="Works best with scanned PDFs — max 50MB"
       />
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Language</label>
-        <select
+        <label htmlFor="ocr-lang" className="block text-sm font-medium text-gray-700 mb-1">Language</label>
+        <select id="ocr-lang"
           value={lang}
           onChange={e => setLang(e.target.value)}
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"

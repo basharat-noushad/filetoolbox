@@ -2,12 +2,13 @@ import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { Mail, MessageSquare, Clock, HelpCircle } from 'lucide-react'
 import Link from 'next/link'
+import { ContactForm } from './ContactForm'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com'
 
 export const metadata: Metadata = withSocialMetadata({
   title: { absolute: 'Contact PDF and Image + — Get Support & Send Feedback' },
-  description: 'Get in touch with the PDF and Image + team. Report a bug, request a feature, or ask a question. We typically respond within 24–48 hours.',
+  description: 'Get in touch with the PDF and Image + team. Report a bug, request a feature, or ask a question. Send a message and we usually reply within 1–2 business days.',
   keywords: ['contact pdf and image', 'pdf tool support', 'report bug pdf tool', 'feature request', 'pdf image tool help'],
   alternates: { canonical: `${SITE_URL}/contact` },
   openGraph: {
@@ -27,37 +28,26 @@ const schema = {
 
 const CHANNELS = [
   {
-    Icon: Mail,
-    title: 'Email Support',
-    body: 'Send us an email for bug reports, feature requests, or general enquiries.',
-    action: 'support@pdfandimage.com',
-    href: 'mailto:support@pdfandimage.com',
-    label: 'Send an email',
-  },
-  {
     Icon: Clock,
     title: 'Response Time',
-    body: 'We aim to respond to all messages within 24–48 hours on business days.',
-    action: null,
+    body: 'A real person reads every message. We usually reply within 1–2 business days; bug reports with steps to reproduce get fixed fastest.',
     href: null,
     label: null,
+  },
+  {
+    Icon: Mail,
+    title: 'Prefer Email?',
+    body: 'You can also write to us directly at contact@pdfandimage.com.',
+    href: 'mailto:contact@pdfandimage.com',
+    label: 'Send an email',
   },
   {
     Icon: HelpCircle,
     title: 'Help Centre',
     body: 'Browse answers to the most common questions about our tools before writing in.',
-    action: 'Visit Help Centre',
     href: '/help',
     label: 'Visit Help Centre',
   },
-]
-
-const TOPICS = [
-  { label: 'Bug report', desc: 'A tool isn\'t working correctly' },
-  { label: 'Feature request', desc: 'Suggest a new tool or improvement' },
-  { label: 'General question', desc: 'Ask anything about the site' },
-  { label: 'Privacy concern', desc: 'Questions about data handling' },
-  { label: 'Business enquiry', desc: 'Partnerships and integrations' },
 ]
 
 export default function ContactPage() {
@@ -117,32 +107,13 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right — topics + email CTA */}
-            <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-6">What Can We Help With?</h2>
-              <div className="space-y-3 mb-8">
-                {TOPICS.map(t => (
-                  <div key={t.label} className="flex items-start gap-3 p-4 bg-white border border-gray-100 rounded-xl">
-                    <div className="w-2 h-2 rounded-full bg-brand-500 mt-1.5 shrink-0" />
-                    <div>
-                      <p className="text-sm font-semibold text-gray-800">{t.label}</p>
-                      <p className="text-xs text-gray-500">{t.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="p-6 bg-brand-900 rounded-xl text-center">
-                <Mail className="w-8 h-8 text-brand-400 mx-auto mb-3" />
-                <p className="text-white font-semibold mb-1">Email us directly</p>
-                <p className="text-brand-300 text-sm mb-4">We read every message and reply personally.</p>
-                <a
-                  href="mailto:support@pdfandimage.com"
-                  className="inline-block bg-brand-500 hover:bg-brand-400 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
-                >
-                  support@pdfandimage.com
-                </a>
-              </div>
+            {/* Right — contact form (first on mobile) */}
+            <div className="order-first lg:order-none">
+              <h2 className="text-xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
+              <p className="text-sm text-gray-500 mb-6">
+                Bug report, tool idea, privacy question or business enquiry — pick a topic and we&apos;ll get back to you by email.
+              </p>
+              <ContactForm />
             </div>
           </div>
         </div>

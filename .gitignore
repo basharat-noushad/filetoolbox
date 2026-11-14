@@ -47,6 +47,7 @@ next-env.d.ts
 /public/tesseract/
 # MediaPipe wasm runtime (copied on postinstall); selfie_segmenter.tflite next to it IS committed
 /public/mediapipe/wasm/
+/public/ort/
 
 # editor/script backups
 *.backup

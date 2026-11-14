@@ -4,7 +4,9 @@ import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
 import { blurImage } from '@/lib/tools/image/blur'
-import { blurBackground, closeSegmenter, isSegmenterLoaded, NoPersonError } from '@/lib/tools/image/backgroundBlur'
+import { blurBackground, closeSegmenter, NoPersonError } from '@/lib/tools/image/backgroundBlur'
+import { blurBackgroundLens } from '@/lib/tools/image/lensBlur'
+import { closeMatting, NoSubjectError, type SubjectMode } from '@/lib/tools/image/matting'
 import { closeFaceDetector, detectFaces, isFaceDetectorLoaded } from '@/lib/tools/image/faceDetect'
 import { effectRegions, type NormRect, type RegionEffect } from '@/lib/tools/image/regionBlur'
 
@@ -12,7 +14,7 @@ type Mode = 'whole' | 'background' | 'areas'
 
 const MODES: { id: Mode; label: string; hint: string }[] = [
   { id: 'whole', label: 'Whole image', hint: 'Blur the entire picture' },
-  { id: 'background', label: 'Background only', hint: 'Keep people sharp, blur the rest' },
+  { id: 'background', label: 'Background only', hint: 'Keep the subject sharp, blur the rest' },
   { id: 'areas', label: 'Selected areas', hint: 'Draw boxes over faces, plates or text' },
 ]
 
@@ -37,7 +39,10 @@ export function BlurImageClient() {
   const [radius, setRadius] = useState(10)
   const [result, setResult] = useState<Blob | null>(null)
   const [processing, setProcessing] = useState(false)
-  const [loadingModel, setLoadingModel] = useState(false)
+  const [status, setStatus] = useState<string | null>(null)
+  const [subject, setSubject] = useState<SubjectMode>('auto')
+  const [depth, setDepth] = useState(false)
+  const [notice, setNotice] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [rects, setRects] = useState<NormRect[]>([])
   const [draft, setDraft] = useState<NormRect | null>(null)
@@ -51,9 +56,9 @@ export function BlurImageClient() {
   const [faceMsg, setFaceMsg] = useState<string | null>(null)
   const [loadingFaces, setLoadingFaces] = useState(false)
 
-  useEffect(() => () => { closeSegmenter(); closeFaceDetector() }, [])
+  useEffect(() => () => { closeSegmenter(); closeFaceDetector(); closeMatting() }, [])
 
-  const reset = () => { setResult(null); setError(null) }
+  const reset = () => { setResult(null); setError(null); setNotice(null) }
   const onFiles = useCallback((f: File[]) => { setFiles(f); setFaceMsg(null); setRects([]); setDraft(null); setResult(null); setError(null) }, [])
   const changeRects = (f: (p: NormRect[]) => NormRect[]) => { setRects(f); reset() }
 
@@ -95,25 +100,37 @@ export function BlurImageClient() {
     setProcessing(true); setError(null); setResult(null)
     try {
       if (mode === 'background') {
-        setLoadingModel(!isSegmenterLoaded())
-        setResult(await blurBackground(files[0], radius))
+        setNotice(null)
+        try {
+          const { blob, info } = await blurBackgroundLens(files[0], radius, {
+            subject, depth, progress: (label, pct) => setStatus(pct === undefined ? label : `${label} ${Math.round(pct * 100)}%`),
+          })
+          setResult(blob)
+          setNotice(depth && info.depthFailed ? 'Depth model unavailable, used a uniform blur instead.' : null)
+        } catch (e) {
+          if (e instanceof NoSubjectError) throw e
+          // old browser / model failed to load: fall back to the basic people-only detector
+          setStatus('Loading basic model')
+          setResult(await blurBackground(files[0], radius))
+          setNotice('The advanced model could not run in this browser, so the basic people-only detector was used.')
+        }
       } else if (mode === 'areas') {
         setResult(await effectRegions(files[0], rects, effect, radius))
       } else {
         setResult(await blurImage(files[0], radius))
       }
     } catch (e) {
-      setError(e instanceof NoPersonError
-        ? 'No person detected. Background mode works best on portraits and photos of people. Try "Whole image" instead.'
+      setError(e instanceof NoSubjectError || e instanceof NoPersonError
+        ? 'No clear subject found. Try "Any subject", or a photo where the subject stands out from the background, or use "Whole image".'
         : 'An error occurred. Please check your image and try again.')
     } finally {
-      setProcessing(false); setLoadingModel(false)
+      setProcessing(false); setStatus(null)
     }
   }
 
   const ext = result?.type === 'image/png' ? 'png' : result?.type === 'image/webp' ? 'webp' : 'jpg'
   const areas = mode === 'areas'
-  const sliderLabel = areas ? (effect === 'pixelate' ? `Block Size: ${radius}` : `Blur Intensity: ${radius}`) : `Blur Intensity: ${radius}px`
+  const sliderLabel = areas ? (effect === 'pixelate' ? `Block Size: ${radius}` : `Blur Intensity: ${radius}`) : mode === 'background' ? `Blur strength: ${radius}` : `Blur Intensity: ${radius}px`
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4">
@@ -138,7 +155,25 @@ export function BlurImageClient() {
           ))}
         </div>
         {mode === 'background' && (
-          <p className="mt-2 text-xs text-gray-600">Runs in your browser. The first run loads a small (0.3 MB) detection model from this site. Works on people, not other objects.</p>
+          <div className="mt-3 space-y-3">
+            <div>
+              <span className="block text-sm font-medium text-gray-700 mb-2">Subject to keep sharp</span>
+              <div role="radiogroup" aria-label="Subject to keep sharp" className="flex flex-wrap gap-2">
+                {([['auto', 'Auto'], ['person', 'Person'], ['any', 'Any subject (pets, products)']] as const).map(([id, label]) => (
+                  <button key={id} type="button" role="radio" aria-checked={subject === id}
+                    onClick={() => { setSubject(id); reset() }}
+                    className={`rounded-lg border px-3 py-1.5 text-sm font-medium cursor-pointer ${
+                      subject === id ? 'border-brand-600 bg-brand-50 ring-1 ring-brand-600' : 'border-gray-200 hover:bg-gray-50'
+                    }`}>{label}</button>
+                ))}
+              </div>
+            </div>
+            <label className="flex items-start gap-2 text-sm text-gray-700 cursor-pointer">
+              <input type="checkbox" checked={depth} onChange={e => { setDepth(e.target.checked); reset() }} className="mt-1" />
+              <span>Depth-graded blur (portrait mode)<span className="block text-xs text-gray-600">Blur grows with distance. Downloads an extra 27 MB model once and can add around 10 seconds on slower devices.</span></span>
+            </label>
+            <p className="text-xs text-gray-600">Runs in your browser. The first run downloads an AI model from this site once (about 26 MB for people, 5 MB for other subjects). Your photo never leaves your device.</p>
+          </div>
         )}
       </div>
       {areas && !original && (
@@ -195,9 +230,10 @@ export function BlurImageClient() {
           onChange={e => { setRadius(Number(e.target.value)); reset() }} className="w-full" />
         <div className="flex justify-between text-xs text-gray-500 mt-1"><span>Subtle</span><span>Strong</span></div>
       </div>
+      {notice && <p role="status" className="text-xs text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2">{notice}</p>}
       {error && <p role="alert" className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2">{error}</p>}
       <Button onClick={handle} disabled={files.length === 0 || processing || (areas && rects.length === 0)} className="w-full cursor-pointer" size="lg">
-        {processing ? (loadingModel ? 'Loading model…' : 'Blurring…')
+        {processing ? (status && mode === 'background' ? `${status}…` : 'Blurring…')
           : mode === 'background' ? 'Blur Background'
           : areas ? (effect === 'pixelate' ? 'Pixelate Areas' : 'Blur Areas')
           : 'Apply Blur'}

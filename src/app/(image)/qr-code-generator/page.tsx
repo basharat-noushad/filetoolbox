@@ -7,28 +7,31 @@ import { QrCodeGeneratorClient } from './QrCodeGeneratorClient'
 const tool = getToolBySlug('qr-code-generator')!
 
 export async function generateMetadata(): Promise<Metadata> {
+  const title = 'QR Code Generator Free, No Expiration'
+  const description = 'QR code generator free online with logo, colours, frames and bulk export. 17 types incl. Wi-Fi, WhatsApp and UPI. Static codes that never expire.'
   return withSocialMetadata({
-    title: 'QR Code Generator Free, No Expiration',
-    description: 'QR code generator free online: make QR codes for links, Wi-Fi, text and contacts, add a logo, and download PNG or SVG. Static codes that never expire.',
+    title,
+    description,
     keywords: tool.keywords,
-    openGraph: { title: 'QR Code Generator Free, No Expiration | PDF and Image +', description: 'Create static QR codes for URLs, Wi-Fi, email and more. PNG and SVG download, optional logo, no sign-up.' },
-    twitter: { title: 'QR Code Generator Free, No Expiration | PDF and Image +', description: 'Create static QR codes for URLs, Wi-Fi, email and more. PNG and SVG download, optional logo, no sign-up.' },
+    openGraph: { title: `${title} | PDF and Image +`, description },
+    twitter: { title: `${title} | PDF and Image +`, description },
     alternates: { canonical: `/${tool.slug}` },
   }, '/qr-code-generator')
 }
 
 const HOW_TO_STEPS = [
-  'Choose what the code should hold (link, text, Wi-Fi, email, phone, SMS or contact) and fill in the details.',
-  'Pick size, colours and error correction, and optionally add a centre logo. The preview updates as you type.',
-  'Download the QR code as a PNG or SVG file and test-scan it before you print it.',
+  'Pick what the code should hold (link, Wi-Fi, WhatsApp, location, calendar event, payment and more) and fill in the short form.',
+  'Style it: dot and corner shapes, colours or a gradient, a centre logo and an optional "Scan me" frame. The preview updates live and checks that it still scans.',
+  'Download PNG, JPG, SVG or a print-size PDF, copy the image, or switch to Bulk to make up to 500 codes as a ZIP.',
 ]
 
 const FAQS = [
-  { q: 'Is this QR code generator free for life?', a: 'Yes. Everything is free and there is no account. The codes are generated in your browser and the tool has no paid tier.' },
-  { q: 'Do these QR codes expire?', a: 'No. The code is static: your link or text is encoded directly in the image, with no redirect through our servers, no tracking and no subscription behind it. It works for as long as the destination does.' },
-  { q: 'Can I add a logo to my QR code?', a: 'Yes. Upload a logo and it is placed in the centre at about 20% of the code width. Error correction is switched to the highest level (H) so the code stays scannable. Always test-scan the result.' },
-  { q: 'Which format should I download, PNG or SVG?', a: 'Use SVG for print and anything that must scale without blurring. Use PNG for web pages, slides and documents.' },
-  { q: 'Why is my QR code not scanning?', a: 'Usually the colours: keep the dark colour clearly darker than the background and avoid inverted codes. Also keep the quiet margin, and shorten long text since dense codes are harder to scan.' },
+  { q: 'Is this QR code generator free for life?', a: 'Yes. There is no account, no paid tier and no watermark. Codes are generated in your browser, so your content is never uploaded.' },
+  { q: 'Do these QR codes expire?', a: 'No. These are static codes: your link or text is encoded directly in the image, with no redirect through our servers, no tracking and no subscription behind it. They work for as long as the destination does. The trade-off is that a static code cannot be edited after printing, and we do not offer scan statistics.' },
+  { q: 'How does the scan check work?', a: 'After every change the preview is decoded again in your browser and compared with what you typed. You see "Scans OK" or a warning if contrast, a gradient, a big logo or the content length makes it risky. It is a strong check but not a replacement for a real test scan with your phone before printing.' },
+  { q: 'Which format should I download?', a: 'SVG for print and anything that must scale sharply. PNG for web and slides, JPG when a flat white background is fine, and PDF when you need an exact print size in cm or inches. The PDF is a 300 DPI image, not vector artwork.' },
+  { q: 'Can I add a logo or a Scan me frame?', a: 'Yes. Upload a logo, choose its size and hide the dots behind it; error correction switches to High (30%) automatically. Frames add a label bar or outline with your own text and colour and are included in every download.' },
+  { q: 'How do I make many QR codes at once?', a: 'Use Bulk mode: paste one value per line or upload a CSV with a url, text or value column and an optional name column. Up to 500 codes are made with your current design and downloaded as one ZIP of PNG files.' },
 ]
 
 export default function QrCodeGeneratorPage() {

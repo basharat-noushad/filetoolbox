@@ -8,7 +8,7 @@ import {
   ScanText, Layers, Archive, ImageDown, Maximize2, ArrowRightLeft, Zap, Film,
   FlipHorizontal, Contrast, Wand2, Type, Blend, Sun, ZoomIn,
   Smartphone, Code, FolderDown, Clapperboard, Laugh, ChevronDown, ArrowRight,
-  Home, Info, BookOpen, QrCode, Music, AppWindow, FileType,
+  Home, Info, BookOpen, QrCode, Music, AppWindow, FileType, IdCard, ScanLine,
 } from 'lucide-react'
 
 const PDF_TOOLS = [
@@ -47,6 +47,7 @@ const IMAGE_TOOLS = [
   { name: 'Compress Image',        slug: '/compress-image',      Icon: ImageDown },
   { name: 'Resize Image',          slug: '/resize-image',        Icon: Maximize2 },
   { name: 'Crop Image',            slug: '/crop-image',          Icon: Crop },
+  { name: 'Passport Photo Maker',  slug: '/passport-photo-maker', Icon: IdCard },
   { name: 'Rotate Image',          slug: '/rotate-image',        Icon: RotateCw },
   { name: 'Flip Image',            slug: '/flip-image',          Icon: FlipHorizontal },
   { name: 'PNG to JPG',            slug: '/png-to-jpg',          Icon: ArrowRightLeft },
@@ -74,6 +75,7 @@ const IMAGE_TOOLS = [
   { name: 'Base64 to Image',       slug: '/base64-to-image',     Icon: ImageDown },
   { name: 'Image to Text',         slug: '/image-to-text',       Icon: ScanText },
   { name: 'QR Code Generator',     slug: '/qr-code-generator',   Icon: QrCode },
+  { name: 'QR Code Scanner',       slug: '/qr-code-scanner',     Icon: ScanLine },
   { name: 'Favicon Generator',     slug: '/favicon-generator',   Icon: AppWindow },
   { name: 'MP4 to MP3',            slug: '/mp4-to-mp3',          Icon: Music },
 ]
@@ -161,7 +163,7 @@ export function NavMegaMenu() {
   return (
     <>
       {/* Desktop nav links */}
-      <nav className="hidden lg:flex items-center gap-1">
+      <nav aria-label="Main" className="hidden lg:flex items-center gap-1">
         <Link href="/"
           className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors">
           <Home className="w-3.5 h-3.5" />
@@ -179,9 +181,14 @@ export function NavMegaMenu() {
             <button
               ref={el => { triggerRefs.current[menu.key as string] = el }}
               type="button"
+              onBlur={e => { if (e.relatedTarget && !(e.relatedTarget as Element).closest(`#megamenu-${menu.key}`)) setActiveMenu(null) }}
               aria-expanded={activeMenu === menu.key}
               aria-controls={`megamenu-${menu.key}`}
-              onClick={() => openMenu(menu.key)}
+              onClick={e => {
+                openMenu(menu.key)
+                // keyboard activation (Enter/Space => detail 0): move into the panel
+                if (e.detail === 0) setTimeout(() => document.querySelector<HTMLElement>(`#megamenu-${menu.key} a`)?.focus(), 50)
+              }}
               onKeyDown={e => {
                 if (e.key !== 'ArrowDown') return
                 e.preventDefault()
@@ -220,10 +227,13 @@ export function NavMegaMenu() {
           key={menu.key}
           id={`megamenu-${menu.key}`}
           data-megamenu
+          role="region"
+          aria-label={menu.label}
+          onBlur={e => { if (activeMenu === menu.key && !e.currentTarget.contains(e.relatedTarget as Node) && e.relatedTarget !== triggerRefs.current[menu.key as string]) setActiveMenu(null) }}
           onMouseEnter={() => { cancelClose(); openMenu(menu.key) }}
           onMouseLeave={scheduleClose}
           // hidden below lg (no overflow); invisible when closed = out of tab order + a11y tree
-          className={`hidden lg:block absolute top-full left-0 right-0 bg-white border-b border-gray-200 z-50 transition-all duration-200 origin-top ${
+          className={`hidden lg:block absolute top-full left-0 right-0 bg-white border-b border-gray-200 z-50 transition-[opacity,transform] duration-200 motion-reduce:transition-none origin-top ${
             activeMenu === menu.key
               ? 'opacity-100 translate-y-0 visible'
               : 'opacity-0 -translate-y-1 invisible pointer-events-none'

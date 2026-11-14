@@ -40,7 +40,7 @@ export function TxtToPdfClient() {
       const r = await txtToPdf(text, { pageSize, fontSize, margin: MARGINS[margin] })
       setResult({ blob: r.blob, pages: r.pages })
       if (r.replaced.length) {
-        setNotice(`${r.replaced.length} character${r.replaced.length === 1 ? '' : 's'} could not be drawn with the built-in font and ${r.replaced.length === 1 ? 'was' : 'were'} replaced with "?": ${r.replaced.slice(0, 12).join(' ')}${r.replaced.length > 12 ? ' …' : ''}`)
+        setNotice(`${r.replaced.length} character${r.replaced.length === 1 ? '' : 's'} are not in the supported fonts and were replaced with "?": ${r.replaced.slice(0, 12).join(' ')}${r.replaced.length > 12 ? ' …' : ''}`)
       }
     } catch {
       setError('Could not create the PDF. Please try again with different text.')
