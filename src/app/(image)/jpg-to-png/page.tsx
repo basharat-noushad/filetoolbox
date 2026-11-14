@@ -8,16 +8,16 @@ const tool = getToolBySlug('jpg-to-png')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: "JPG to PNG Online Free — Convert JPG to PNG",
-    description: "Convert JPG to PNG online free in your browser with lossless PNG output for editing and graphics. Multiple files download as a ZIP. No sign-up.",
+    title: "JPG to PNG Converter — Transparent Background",
+    description: "Convert JPG to PNG online free and optionally make the background transparent. Batch ZIP, full resolution, runs in your browser. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: "JPG to PNG Online Free — Convert JPG to PNG | PDF and Image +",
-      description: "Convert JPG to PNG online free in your browser with lossless PNG output for editing and graphics. Multiple files download as a ZIP. No sign-up.",
+      title: "JPG to PNG Converter — Transparent Background | PDF and Image +",
+      description: "Convert JPG to PNG online free and optionally make the background transparent. Batch ZIP, full resolution, runs in your browser. No sign-up.",
     },
     twitter: {
-      title: "JPG to PNG Online Free — Convert JPG to PNG | PDF and Image +",
-      description: "Convert JPG to PNG online free in your browser with lossless PNG output for editing and graphics. Multiple files download as a ZIP. No sign-up.",
+      title: "JPG to PNG Converter — Transparent Background | PDF and Image +",
+      description: "Convert JPG to PNG online free and optionally make the background transparent. Batch ZIP, full resolution, runs in your browser. No sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/jpg-to-png')
@@ -25,17 +25,17 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const HOW_TO_STEPS = [
   'Upload one or more JPG images by clicking "Select Files" or dragging and dropping.',
-  'The conversion is lossless — no quality options needed.',
-  'Click "Convert to PNG" and download your converted files.',
+  'Optional: tick "Make background transparent", adjust the tolerance, or click the preview to pick the background colour.',
+  'Click "Convert to PNG" and download your PNG or ZIP.',
 ]
 
 const FAQS = [
-  { q: 'Why convert JPG to PNG?', a: 'PNG is lossless and supports transparency, making it better for logos, graphics, and images that need editing.' },
-  { q: 'Can I convert multiple JPGs at once?', a: 'Yes. Select multiple files and all will be converted. Multiple files are delivered as a ZIP.' },
-  { q: 'Will the image quality improve?', a: 'Converting JPG to PNG is lossless — quality will not degrade further. However, JPG compression artifacts already in the image will remain.' },
-  { q: 'What is the output file size?', a: 'PNG files are typically larger than JPG. The exact size depends on image content and complexity.' },
-  { q: 'Why does my JPG to PNG file get larger?', a: 'PNG is a lossless format that stores pixel data without compression artifacts. It is naturally larger than JPG. The upside is zero quality degradation.' },
-  { q: 'When should I convert JPG to PNG?', a: 'Convert to PNG when you need transparency support, plan to edit the image further, or need pixel-perfect quality for logos or graphics.' },
+  { q: 'How do I convert JPG to PNG with a transparent background?', a: 'Tick "Make background transparent". The tool detects the background colour from the image border, removes it, and shows a live preview on a checkerboard. You can click the preview to pick a different colour and adjust the tolerance.' },
+  { q: 'When does the transparent background work well?', a: 'Best for logos, signatures, icons, scans and products photographed on a plain white or solid-colour background. It removes one colour range, so gradients, shadows and busy backgrounds will not come out clean.' },
+  { q: 'Should I use Remove Background instead?', a: 'For photos of people, pets or objects on a complex background, use our Remove Background tool, which is designed for that. This option only removes a solid background colour.' },
+  { q: 'Why is the inside of a letter like "O" still white?', a: 'By default only background connected to the image edges is removed, so enclosed areas stay. Tick "Remove all matching colour" to clear those too, but this also removes the same colour anywhere inside your artwork.' },
+  { q: 'Can I convert multiple JPGs at once?', a: 'Yes. Select up to 20 files and they download as a ZIP. The same settings apply to every file, and the background colour is auto-detected per file unless you picked one.' },
+  { q: 'Is the output lossless and full size?', a: 'The PNG has the same pixel dimensions as your JPG, and the conversion itself adds no loss. JPG compression artifacts already in the picture remain, so PNG files are usually larger.' },
 ]
 
 export default function JpgToPngPage() {

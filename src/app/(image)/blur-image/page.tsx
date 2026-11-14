@@ -8,15 +8,15 @@ const tool = getToolBySlug('blur-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: "Blur Image, Face & Background Online Free",
-    description: "Blur or pixelate part of an image online free: faces, plates, text, or just the background. Runs in your browser, no sign-up, no upload.",
-    keywords: [...tool.keywords, 'blur background of photo', 'blur background online free', 'background blur portrait', 'blur part of image online free', 'blur face in photo', 'pixelate part of image', 'censor image'],
+    title: "Blur Faces & Background in Photos Free",
+    description: "Blur faces in photos automatically, or blur plates, text or the background. Face detection runs in your browser: no sign-up, no upload.",
+    keywords: [...tool.keywords, 'blur background of photo', 'blur background online free', 'background blur portrait', 'blur part of image online free', 'blur face in photo', 'blur faces automatically', 'pixelate faces online', 'anonymize faces in photo', 'pixelate part of image', 'censor image'],
     openGraph: {
-      title: 'Blur Image, Face & Background Online Free | PDF and Image +',
+      title: 'Blur Faces & Background in Photos Free | PDF and Image +',
       description: 'Blur a whole image, selected areas like faces, or the background behind people, free, in your browser. Files never leave your device.',
     },
     twitter: {
-      title: 'Blur Image, Face & Background Online Free | PDF and Image +',
+      title: 'Blur Faces & Background in Photos Free | PDF and Image +',
       description: 'Blur a whole image or just the background behind people, free, in your browser. Files never leave your device.',
     },
     alternates: { canonical: `/${tool.slug}` },
@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const HOW_TO_STEPS = [
   'Upload your JPG, PNG, or WebP image using the file picker or drag and drop.',
-  'Choose "Whole image", "Background only" (for photos of people), or "Selected areas" and drag boxes over what to hide, then set the strength slider.',
+  'Choose "Whole image", "Background only" (for photos of people), or "Selected areas" and click "Detect faces" or drag boxes over what to hide, then set the strength slider.',
   'Click the blur button, compare the before and after previews, and download the result.',
 ]
 
@@ -36,7 +36,11 @@ const FAQS = [
   },
   {
     q: 'How do I blur a face, licence plate, or private info in a photo?',
-    a: 'Pick "Selected areas", drag a box over each face, plate, address, or line of text, choose Blur or Pixelate, and apply. Use a strong setting for anything sensitive: light blur can sometimes be reversed or guessed, and pixelate with large blocks is harder to undo. Check the result at full size before sharing.',
+    a: 'Pick "Selected areas" and click "Detect faces" to box faces automatically, or drag a box over each face, plate, address, or line of text, choose Blur or Pixelate, and apply. Use a strong setting for anything sensitive: light blur can sometimes be reversed or guessed, and pixelate with large blocks is harder to undo. Check the result at full size before sharing.',
+  },
+  {
+    q: 'Can it blur or pixelate all faces in a photo automatically?',
+    a: 'Yes. In "Selected areas", click Detect faces. Boxes are added over each face it finds, slightly enlarged to cover hair and chin. You can remove any box, draw more, then choose Blur or Pixelate. The detector is tuned for faces within a few metres, so small, distant, side-on or covered faces in group photos can be missed. Always check the boxes and add any missing ones by hand before sharing.',
   },
   {
     q: 'Does background blur work on objects, pets, or products?',

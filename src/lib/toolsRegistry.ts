@@ -37,9 +37,9 @@ export const tools: Tool[] = [
   {
     slug: 'split-pdf',
     name: 'Split PDF',
-    description: 'Split a PDF into multiple files by page range or extract individual pages.',
+    description: "Split a PDF by page ranges, every N pages, or into parts under a file size such as 10 MB. Runs in your browser.",
     category: 'pdf', icon: 'Scissors',
-    keywords: ["split pdf", "split pdf online", "split pdf online free", "split pdf free", "split pdf pages", "split pdf into multiple files", "split pdf pages online", "split pdf file", "separate pdf pages"],
+    keywords: ["split pdf", "split pdf online", "split pdf online free", "split pdf by size", "split pdf by file size", "split pdf into 10mb files", "split pdf every page", "split pdf free", "split pdf pages", "split pdf into multiple files", "split pdf pages online", "split pdf file", "separate pdf pages"],
     relatedTools: ['merge-pdf', 'delete-pdf-pages', 'rotate-pdf'], tier: 1,
   },
   {
@@ -95,9 +95,9 @@ export const tools: Tool[] = [
   {
     slug: 'resize-image',
     name: 'Resize Image',
-    description: "Resize images in pixels, cm, mm or inches with a DPI setting, aspect lock and passport photo presets.",
+    description: "Resize one image or up to 20 in px, cm, mm or inches, with DPI, passport presets and an optional KB size limit.",
     category: 'image', icon: 'Maximize2',
-    keywords: ["resize image online", "resize image online free", "resize image", "resize image in cm", "resize image in mm", "resize image in inches", "passport size photo resize", "resize image online pixel", "resize image pixels"],
+    keywords: ["resize image online", "resize image online free", "resize image", "resize image to 100kb", "resize image to 50kb", "resize image in cm and kb", "batch image resizer", "resize multiple images at once", "resize image in cm", "resize image in mm", "resize image in inches", "passport size photo resize", "resize image online pixel", "resize image pixels"],
     relatedTools: ['compress-image', 'crop-image', 'png-to-jpg'], tier: 1,
   },
   {
@@ -119,9 +119,9 @@ export const tools: Tool[] = [
   {
     slug: 'jpg-to-png',
     name: 'JPG to PNG',
-    description: 'Convert JPG/JPEG images to lossless PNG format. Batch convert and download as a ZIP.',
+    description: "Convert JPG to lossless PNG, with an optional transparent background for logos and signatures. Batch to ZIP.",
     category: 'image', icon: 'ArrowRightLeft',
-    keywords: ["jpg to png", "jpg to png converter", "jpg to png online", "jpg to png online free", "jpg to png converter free", "jpg to png converter online"],
+    keywords: ["jpg to png", "jpg to png converter", "jpg to png online", "jpg to png transparent background", "make background transparent", "remove white background from image", "jpg to png online free", "jpg to png converter free", "jpg to png converter online"],
     relatedTools: ['png-to-jpg', 'compress-image', 'webp-to-png'], tier: 1,
   },
   {
@@ -347,9 +347,9 @@ export const tools: Tool[] = [
   {
     slug: 'blur-image',
     name: 'Blur Image',
-    description: 'Blur a whole image, or only the background behind people in portraits. Adjustable strength, processed in your browser.',
+    description: "Blur a whole image, the background behind people, or selected areas. Detect faces automatically to blur or pixelate them.",
     category: 'image', icon: 'Blend',
-    keywords: ["blur image", "blur image online", "blur image online free", "blur part of image", "blur face in photo", "pixelate part of image", "censor image online", "blur background", "blur background photo", "blur background of picture online free", "gaussian blur image", "how to blur an image", "blur image online tool", "blur image online website"],
+    keywords: ["blur image", "blur image online", "blur image online free", "blur faces automatically", "anonymize faces in photo", "pixelate faces online", "blur part of image", "blur face in photo", "pixelate part of image", "censor image online", "blur background", "blur background photo", "blur background of picture online free", "gaussian blur image", "how to blur an image", "blur image online tool", "blur image online website"],
     relatedTools: ['grayscale-image', 'image-brightness', 'compress-image'], tier: 2,
   },
   {
@@ -381,7 +381,7 @@ export const tools: Tool[] = [
     name: 'Bulk Image Compressor',
     description: 'Compress multiple images at once. Upload up to 20 images and download them all as a ZIP.',
     category: 'image', icon: 'FolderDown',
-    keywords: ["bulk image compressor", "bulk image compressor online", "bulk image compressor free", "bulk image compressor online free", "batch image compressor", "batch image compressor online", "batch image compressor free", "compress multiple images", "compress multiple images online", "compress multiple images online free", "compress multiple images at once"],
+    keywords: ["bulk image compressor", "bulk image compressor online", "bulk image compressor free", "batch image resizer and compressor", "resize and compress multiple images", "bulk image compressor online free", "batch image compressor", "batch image compressor online", "batch image compressor free", "compress multiple images", "compress multiple images online", "compress multiple images online free", "compress multiple images at once"],
     relatedTools: ['compress-image', 'resize-image', 'png-to-jpg'], tier: 2,
   },
   {

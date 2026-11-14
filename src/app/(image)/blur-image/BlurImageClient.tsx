@@ -5,6 +5,7 @@ import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
 import { blurImage } from '@/lib/tools/image/blur'
 import { blurBackground, closeSegmenter, isSegmenterLoaded, NoPersonError } from '@/lib/tools/image/backgroundBlur'
+import { closeFaceDetector, detectFaces, isFaceDetectorLoaded } from '@/lib/tools/image/faceDetect'
 import { effectRegions, type NormRect, type RegionEffect } from '@/lib/tools/image/regionBlur'
 
 type Mode = 'whole' | 'background' | 'areas'
@@ -46,10 +47,14 @@ export function BlurImageClient() {
   const original = useObjectUrl(files[0] ?? null)
   const blurred = useObjectUrl(result)
 
-  useEffect(() => closeSegmenter, [])
+  const [detecting, setDetecting] = useState(false)
+  const [faceMsg, setFaceMsg] = useState<string | null>(null)
+  const [loadingFaces, setLoadingFaces] = useState(false)
+
+  useEffect(() => () => { closeSegmenter(); closeFaceDetector() }, [])
 
   const reset = () => { setResult(null); setError(null) }
-  const onFiles = useCallback((f: File[]) => { setFiles(f); setRects([]); setDraft(null); setResult(null); setError(null) }, [])
+  const onFiles = useCallback((f: File[]) => { setFiles(f); setFaceMsg(null); setRects([]); setDraft(null); setResult(null); setError(null) }, [])
   const changeRects = (f: (p: NormRect[]) => NormRect[]) => { setRects(f); reset() }
 
   // pointer events cover mouse, touch and pen; touch-none on the wrapper stops page scroll while drawing
@@ -70,6 +75,19 @@ export function BlurImageClient() {
     if (r.w > 0.01 && r.h > 0.01) changeRects(p => [...p, r])
   }
   const onCancel = () => { start.current = null; setDraft(null) }
+
+  const findFaces = async () => {
+    setDetecting(true); setError(null); setFaceMsg(null); setLoadingFaces(!isFaceDetectorLoaded())
+    try {
+      const faces = await detectFaces(files[0])
+      if (faces.length === 0) setFaceMsg('No faces found. Draw boxes manually.')
+      else { changeRects(p => [...p, ...faces]); setFaceMsg(`Found ${faces.length} ${faces.length === 1 ? 'face' : 'faces'}. Review the boxes, remove or add any, then apply.`) }
+    } catch {
+      setError('Face detection failed. You can still draw boxes manually.')
+    } finally {
+      setDetecting(false); setLoadingFaces(false)
+    }
+  }
 
   const handle = async () => {
     if (files.length === 0) { setError('Please select an image.'); return }
@@ -128,7 +146,7 @@ export function BlurImageClient() {
       )}
       {areas && original && (
         <div className="space-y-3">
-          <p className="text-xs text-gray-600">Drag on the image to draw a box around each area to hide. Draw as many as you need.</p>
+          <p className="text-xs text-gray-600">Click Detect faces to box faces automatically, or drag on the image to draw a box around each area to hide. Detection runs in your browser and can miss small, distant or turned-away faces, so check the boxes.</p>
           <div className="relative mx-auto w-fit max-w-full touch-none select-none cursor-crosshair"
             onMouseDown={e => e.preventDefault()} onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onCancel}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -150,6 +168,10 @@ export function BlurImageClient() {
             ))}
           </div>
           <div className="flex flex-wrap items-center gap-2">
+            <Button type="button" variant="outline" size="sm" disabled={detecting || processing} className="cursor-pointer" onClick={findFaces}>
+              {detecting ? (loadingFaces ? 'Loading model…' : 'Detecting…') : 'Detect faces'}
+            </Button>
+            <p role="status" className="basis-full text-xs text-gray-600 empty:hidden order-last">{faceMsg}</p>
             <div role="radiogroup" aria-label="Effect" className="flex gap-2">
               {(['blur', 'pixelate'] as const).map(id => (
                 <button key={id} type="button" role="radio" aria-checked={effect === id}
