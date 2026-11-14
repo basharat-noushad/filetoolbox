@@ -1,4 +1,4 @@
-export interface ResizeOptions { width?: number; height?: number; keepAspectRatio?: boolean; format?: string; quality?: number }
+export interface ResizeOptions { width?: number; height?: number; keepAspectRatio?: boolean; format?: string; quality?: number; cover?: boolean }
 
 export async function resizeImage(file: File, options: ResizeOptions): Promise<Blob> {
   return new Promise((resolve, reject) => {
@@ -14,7 +14,13 @@ export async function resizeImage(file: File, options: ResizeOptions): Promise<B
       }
       const canvas = document.createElement('canvas')
       canvas.width = width!; canvas.height = height!
-      canvas.getContext('2d')!.drawImage(img, 0, 0, width!, height!)
+      const ctx = canvas.getContext('2d')!
+      if (options.cover) {
+        // fill the exact size, center-crop the overflow (no distortion)
+        const s = Math.max(width! / img.naturalWidth, height! / img.naturalHeight)
+        const dw = img.naturalWidth * s, dh = img.naturalHeight * s
+        ctx.drawImage(img, (width! - dw) / 2, (height! - dh) / 2, dw, dh)
+      } else ctx.drawImage(img, 0, 0, width!, height!)
       URL.revokeObjectURL(url)
       canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('Resize failed')), options.format || file.type || 'image/jpeg', options.quality ?? 0.92)
     }

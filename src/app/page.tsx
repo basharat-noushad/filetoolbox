@@ -18,11 +18,11 @@ const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com')
 
 export const metadata: Metadata = withSocialMetadata({
   title: { absolute: 'PDF and Image + — Free PDF & Image Tools Online' },
-  description: 'Free online tools for PDF and image files. 50+ tools — merge, compress, convert, crop, resize and more. No sign-up required. Most tools process files in your browser; some use a server.',
+  description: 'Free online tools for PDF and image files. 60+ tools — merge, compress, convert, crop, resize and more. No sign-up required. Most tools process files in your browser; some use a server.',
   alternates: { canonical: SITE_URL },
   openGraph: {
     title: 'PDF and Image + — Free PDF & Image Tools Online',
-    description: 'Free online tools for PDF and image files. 50+ tools — merge, compress, convert, crop, resize and more. No sign-up. Works in your browser.',
+    description: 'Free online tools for PDF and image files. 60+ tools — merge, compress, convert, crop, resize and more. No sign-up. Works in your browser.',
     url: SITE_URL,
   },
 }, '/')
@@ -86,7 +86,7 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-brand-800 border border-brand-700 rounded-full px-4 py-1.5 text-sm font-medium text-brand-300 mb-8">
               <span className="w-2 h-2 bg-emerald-400 rounded-full" />
-              50+ Free Tools — No Registration Required
+              60+ Free Tools — No Registration Required
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight tracking-tight" data-speakable>
               PDF & Image Tools<br />
@@ -94,7 +94,7 @@ export default function HomePage() {
             </h1>
             {/* AEO: site description as speakable paragraph — used by AI Overviews and voice */}
             <p className="text-lg text-brand-300 mb-10 max-w-xl mx-auto leading-relaxed site-description" data-speakable>
-              50+ free browser-based tools for PDF and image processing.
+              60+ free browser-based tools for PDF and image processing.
               Merge, compress, convert, crop, resize and more.
               Most tools process files locally; some conversions use a server. No sign-up required.
             </p>
@@ -112,7 +112,7 @@ export default function HomePage() {
                 { icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', label: 'Clear file handling', sub: 'Processing details on each tool' },
                 { icon: 'M13 10V3L4 14h7v7l9-11h-7z', label: 'Lightning Fast', sub: 'Browser-side processing' },
                 { icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z', label: 'Always Free', sub: 'No subscriptions ever' },
-                { icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2', label: '50+ Tools', sub: 'PDF & Image processing' },
+                { icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2', label: '60+ Tools', sub: 'PDF & Image processing' },
               ].map(item => (
                 <div key={item.label} className="flex items-center gap-3 py-2">
                   <div className="w-9 h-9 bg-brand-50 rounded-lg flex items-center justify-center shrink-0">
@@ -205,7 +205,7 @@ export default function HomePage() {
             <h2 className="text-xl font-bold text-gray-900 mb-4">What is PDF and Image +?</h2>
             <p className="text-gray-600 leading-relaxed mb-3">
               <strong>PDF and Image +</strong> is a free online toolkit for PDF and image processing.
-              It provides 50+ browser-based tools — merge PDFs, compress images, convert file formats,
+              It provides 60+ browser-based tools — merge PDFs, compress images, convert file formats,
               remove backgrounds, and more — completely free, with no registration. File and device limits apply.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">

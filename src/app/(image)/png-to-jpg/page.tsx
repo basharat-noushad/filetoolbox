@@ -2,7 +2,7 @@ import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { ToolLayout } from '@/components/tools/ToolLayout'
-import { PngToJpgClient } from './PngToJpgClient'
+import { ToJpgClient } from './ToJpgClient'
 
 const tool = getToolBySlug('png-to-jpg')!
 
@@ -40,7 +40,7 @@ const FAQS = [
 export default function PngToJpgPage() {
   return (
     <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}>
-      <PngToJpgClient />
+      <ToJpgClient accept={{ 'image/png': ['.png'] }} sourceLabel="PNG" />
     </ToolLayout>
   )
 }

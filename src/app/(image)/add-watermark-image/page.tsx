@@ -8,8 +8,8 @@ const tool = getToolBySlug('add-watermark-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: "Add Watermark to Image Online Free — Text",
-    description: "Add watermark to image online free: type text, pick a corner or center, and adjust opacity. One JPG, PNG or WebP up to 50 MB. No sign-up.",
+    title: "Add Watermark or Logo to Image Online Free",
+    description: "Add watermark to image online free: type text or add your logo (PNG, JPG, SVG), set size, position and opacity. Done in your browser, no sign-up.",
     keywords: tool.keywords,
     alternates: { canonical: '/add-watermark-image' },
   }, '/add-watermark-image')
@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const HOW_TO_STEPS = [
   "Select one JPG, PNG or WebP image up to 50 MB.",
-  "Enter your watermark text, choose the center or a corner, and adjust opacity from 10% to 90%.",
+  "Type watermark text, or switch to Logo / image and upload a PNG, JPG or SVG logo. Set its size, position and opacity.",
   "Click Add Watermark, then Download to save a copy. Check that the text fits and remains legible."
 ]
 const FAQS = [
@@ -26,8 +26,12 @@ const FAQS = [
     "a": "Select your JPG, type your name or copyright text, choose its position and opacity, then click Add Watermark. Download the result; your original file is unchanged."
   },
   {
-    "q": "Can I add a logo or watermark photos in bulk?",
-    "a": "This tool adds text to one image at a time. It does not upload logo files or apply watermarks to a batch. Font size is selected automatically from the image width."
+    "q": "How do I add a logo to a photo?",
+    "a": "Choose Logo / image, upload a PNG, JPG or SVG logo, then set its size as a percentage of the photo width, its position and opacity. Transparent PNG and SVG logos keep their transparency. You can also repeat the logo across the whole image."
+  },
+  {
+    "q": "Can I watermark photos in bulk?",
+    "a": "No. The tool processes one image at a time. Text size is chosen automatically from the image width."
   },
   {
     "q": "Does adding a watermark reduce image quality?",

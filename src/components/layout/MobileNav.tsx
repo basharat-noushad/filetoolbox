@@ -43,7 +43,9 @@ const IMAGE_TOOLS = [
   { name: 'Remove Background',    slug: '/remove-background' },
   { name: 'Add Watermark',        slug: '/add-watermark-image' },
   { name: 'Add Text',             slug: '/add-text-to-image' },
-  { name: 'Image to PDF',         slug: '/jpg-to-pdf' },
+  { name: 'Image to PDF',         slug: '/image-to-pdf' },
+  { name: 'Image to Text',        slug: '/image-to-text' },
+  { name: 'QR Code Generator',    slug: '/qr-code-generator' },
   { name: 'Blur Image',           slug: '/blur-image' },
   { name: 'Brightness & Contrast',slug: '/image-brightness' },
 ]

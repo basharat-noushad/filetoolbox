@@ -8,7 +8,7 @@ import {
   ScanText, Layers, Archive, ImageDown, Maximize2, ArrowRightLeft, Zap, Film,
   FlipHorizontal, Contrast, Wand2, Type, Blend, Sun, ZoomIn,
   Smartphone, Code, FolderDown, Clapperboard, Laugh, ChevronDown, ArrowRight,
-  Home, Info, BookOpen,
+  Home, Info, BookOpen, QrCode, Music, AppWindow, FileType,
 } from 'lucide-react'
 
 const PDF_TOOLS = [
@@ -37,6 +37,10 @@ const PDF_TOOLS = [
   { name: 'Crop PDF',            slug: '/crop-pdf',             Icon: Crop },
   { name: 'Extract PDF Pages',   slug: '/extract-pdf-pages',    Icon: FolderOutput },
   { name: 'PDF to PDF/A',        slug: '/pdf-to-pdfa',          Icon: Archive },
+  { name: 'PDF to Text',         slug: '/pdf-to-text',          Icon: FileType },
+  { name: 'TXT to PDF',          slug: '/txt-to-pdf',           Icon: FileOutput },
+  { name: 'PNG to PDF',          slug: '/png-to-pdf',           Icon: FileImage },
+  { name: 'Image to PDF',        slug: '/image-to-pdf',         Icon: FileImage },
 ]
 
 const IMAGE_TOOLS = [
@@ -48,6 +52,9 @@ const IMAGE_TOOLS = [
   { name: 'PNG to JPG',            slug: '/png-to-jpg',          Icon: ArrowRightLeft },
   { name: 'JPG to PNG',            slug: '/jpg-to-png',          Icon: ArrowRightLeft },
   { name: 'WebP to PNG',           slug: '/webp-to-png',         Icon: ArrowRightLeft },
+  { name: 'WebP to JPG',           slug: '/webp-to-jpg',         Icon: ArrowRightLeft },
+  { name: 'AVIF to JPG',           slug: '/avif-to-jpg',         Icon: ArrowRightLeft },
+  { name: 'BMP to JPG',            slug: '/bmp-to-jpg',          Icon: ArrowRightLeft },
   { name: 'JPG to WebP',           slug: '/image-to-webp',       Icon: Zap },
   { name: 'HEIC to JPG',           slug: '/heic-to-jpg',         Icon: Smartphone },
   { name: 'SVG to PNG',            slug: '/svg-to-png',          Icon: FileImage },
@@ -58,13 +65,17 @@ const IMAGE_TOOLS = [
   { name: 'Brightness & Contrast', slug: '/image-brightness',    Icon: Sun },
   { name: 'Add Watermark',         slug: '/add-watermark-image', Icon: Stamp },
   { name: 'Add Text to Image',     slug: '/add-text-to-image',   Icon: Type },
-  { name: 'Upscale Image (AI)',    slug: '/upscale-image',       Icon: ZoomIn },
+  { name: 'Upscale Image',         slug: '/upscale-image',       Icon: ZoomIn },
   { name: 'Bulk Compressor',       slug: '/bulk-image-compressor',Icon: FolderDown },
   { name: 'GIF to MP4',            slug: '/gif-to-mp4',          Icon: Film },
   { name: 'MP4 to GIF',            slug: '/mp4-to-gif',          Icon: Clapperboard },
   { name: 'Meme Generator',        slug: '/meme-generator',      Icon: Laugh },
   { name: 'Image to Base64',       slug: '/image-to-base64',     Icon: Code },
   { name: 'Base64 to Image',       slug: '/base64-to-image',     Icon: ImageDown },
+  { name: 'Image to Text',         slug: '/image-to-text',       Icon: ScanText },
+  { name: 'QR Code Generator',     slug: '/qr-code-generator',   Icon: QrCode },
+  { name: 'Favicon Generator',     slug: '/favicon-generator',   Icon: AppWindow },
+  { name: 'MP4 to MP3',            slug: '/mp4-to-mp3',          Icon: Music },
 ]
 
 type MenuKey = 'pdf' | 'image' | null

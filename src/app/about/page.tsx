@@ -150,7 +150,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto px-4 py-10">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {[
-                { value: '50+',  label: 'Free tools' },
+                { value: '60+',  label: 'Free tools' },
                 { value: 'Clear', label: 'Processing notices' },
                 { value: '0',    label: 'Accounts required' },
                 { value: 'Most', label: 'Tools run locally' },
@@ -169,7 +169,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">What is PDF and Image +?</h2>
           <p className="text-gray-600 leading-relaxed mb-4">
             <strong>PDF and Image +</strong> (pdfandimage.com) is a free online toolkit for PDF and image processing.
-            It offers 50+ tools — merge, split, compress, convert, rotate, protect PDFs;
+            It offers 60+ tools — merge, split, compress, convert, rotate, protect PDFs;
             crop, resize, compress, convert, and enhance images — all completely free, with no registration required.
           </p>
           <p className="text-gray-600 leading-relaxed mb-4">

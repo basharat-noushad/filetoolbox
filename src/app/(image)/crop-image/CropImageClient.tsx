@@ -1,8 +1,11 @@
 'use client'
-import { useState, useRef, useCallback, useEffect } from 'react'
+import { useState, useRef, useCallback, useEffect, useMemo } from 'react'
 import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
+import { SizeControls } from '@/lib/tools/image/SizeControls'
+import { setBlobDpi, toPx, convertUnit, fmtUnit, type Unit } from '@/lib/tools/image/dpi'
+import type { IdPreset } from '@/lib/tools/image/passportPresets'
 
 const RATIOS: { label: string; value: number | null }[] = [
   { label: 'Free', value: null },
@@ -15,16 +18,21 @@ const RATIOS: { label: string; value: number | null }[] = [
 interface CropBox { x: number; y: number; w: number; h: number }
 interface DragState { type: string; startX: number; startY: number; origBox: CropBox }
 
-const FULL: CropBox = { x: 0, y: 0, w: 100, h: 100 }
+// Inset so the corner handles start inside the image (the wrapper clips anything outside it)
+const INITIAL: CropBox = { x: 10, y: 10, w: 80, h: 80 }
 const MAX_H = 420
 
 export function CropImageClient() {
   const [file, setFile] = useState<File | null>(null)
   const [imgSrc, setImgSrc] = useState<string | null>(null)
   const [ratio, setRatio] = useState<number | null>(null)
-  const [cropBox, setCropBox] = useState<CropBox>(FULL)
+  const [cropBox, setCropBox] = useState<CropBox>(INITIAL)
   const [naturalSize, setNaturalSize] = useState<{ w: number; h: number } | null>(null)
   const [imgDims, setImgDims] = useState<{ width: number; height: number } | null>(null)
+  const [unit, setUnit] = useState<Unit>('mm')
+  const [dpi, setDpi] = useState('300')
+  const [outW, setOutW] = useState('')
+  const [outH, setOutH] = useState('')
   const [result, setResult] = useState<Blob | null>(null)
   const [processing, setProcessing] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -41,7 +49,7 @@ export function CropImageClient() {
     if (!file) return
     const url = URL.createObjectURL(file)
     setImgSrc(url)
-    setCropBox(FULL)
+    setCropBox(INITIAL)
     setResult(null)
     setError(null)
     setNaturalSize(null)
@@ -67,22 +75,25 @@ export function CropImageClient() {
     }
   }, [])
 
+  // crop box is in percent of each side, so a pixel ratio needs converting
+  const pRatio = ratio && naturalSize ? (ratio * naturalSize.h) / naturalSize.w : null
+
   useEffect(() => {
-    if (!ratio) return
+    if (!pRatio) return
     setCropBox(prev => {
       const cx = prev.x + prev.w / 2
       const cy = prev.y + prev.h / 2
       let w = prev.w
-      let h = w / ratio
-      if (h > 100) { h = 100; w = h * ratio }
-      if (w > 100) { w = 100; h = w / ratio }
+      let h = w / pRatio
+      if (h > 100) { h = 100; w = h * pRatio }
+      if (w > 100) { w = 100; h = w / pRatio }
       return {
         x: Math.max(0, Math.min(100 - w, cx - w / 2)),
         y: Math.max(0, Math.min(100 - h, cy - h / 2)),
         w, h,
       }
     })
-  }, [ratio])
+  }, [pRatio])
 
   const pct = useCallback((e: React.MouseEvent) => {
     const rect = containerRef.current!.getBoundingClientRect()
@@ -92,20 +103,22 @@ export function CropImageClient() {
     }
   }, [])
 
-  const onMouseDown = useCallback((e: React.MouseEvent, type: string) => {
+  const onMouseDown = useCallback((e: React.PointerEvent, type: string) => {
+    containerRef.current?.setPointerCapture(e.pointerId)
     e.preventDefault()
     e.stopPropagation()
     const pt = pct(e)
     dragRef.current = { type, startX: pt.x, startY: pt.y, origBox: { ...cropBox } }
   }, [cropBox, pct])
 
-  const onContainerMouseDown = useCallback((e: React.MouseEvent) => {
+  const onContainerMouseDown = useCallback((e: React.PointerEvent) => {
+    containerRef.current?.setPointerCapture(e.pointerId)
     e.preventDefault()
     const pt = pct(e)
     dragRef.current = { type: 'new', startX: pt.x, startY: pt.y, origBox: { x: pt.x, y: pt.y, w: 0, h: 0 } }
   }, [pct])
 
-  const onMouseMove = useCallback((e: React.MouseEvent) => {
+  const onMouseMove = useCallback((e: React.PointerEvent) => {
     // Capture dragRef BEFORE setCropBox — React may flush the state update
     // after onMouseUp has already nulled dragRef.current
     const drag = dragRef.current
@@ -121,7 +134,7 @@ export function CropImageClient() {
         const ny = Math.min(drag.startY, pt.y)
         const nw = Math.abs(dx)
         let nh = Math.abs(dy)
-        if (ratio) nh = nw / ratio
+        if (pRatio) nh = nw / pRatio
         return {
           x: Math.max(0, Math.min(100 - nw, nx)),
           y: Math.max(0, Math.min(100 - nh, ny)),
@@ -145,12 +158,26 @@ export function CropImageClient() {
       if (t.includes('s')) h = Math.max(5, Math.min(orig.h + dy, 100 - orig.y))
       if (t.includes('w')) { x = Math.max(0, Math.min(orig.x + dx, orig.x + orig.w - 5)); w = orig.x + orig.w - x }
       if (t.includes('n')) { y = Math.max(0, Math.min(orig.y + dy, orig.y + orig.h - 5)); h = orig.y + orig.h - y }
-      if (ratio) h = w / ratio
+      if (pRatio) h = w / pRatio
       return { x, y, w, h }
     })
-  }, [pct, ratio])
+  }, [pct, pRatio])
 
   const onMouseUp = useCallback(() => { dragRef.current = null }, [])
+
+  const dpiNum = Math.min(1200, Math.max(1, Number(dpi) || 300))
+  const pos = (v: string) => { const n = Number(v); return n > 0 ? n : 0 }
+  const ow = pos(outW), oh = pos(outH)
+  const outPx = useMemo(() => (ow && oh ? { w: Math.max(1, toPx(ow, unit, dpiNum)), h: Math.max(1, toPx(oh, unit, dpiNum)) } : null), [ow, oh, unit, dpiNum])
+  const setOut = (w: string, h: string, u: Unit, d: number) => {
+    setOutW(w); setOutH(h); setResult(null)
+    if (pos(w) && pos(h)) setRatio(toPx(pos(w), u, d) / toPx(pos(h), u, d))
+  }
+  const applyId = (p: IdPreset) => { setUnit(p.unit); setDpi('300'); setOut(String(p.w), String(p.h), p.unit, 300) }
+  const changeUnit = (u: Unit) => {
+    const conv = (v: string) => (pos(v) ? fmtUnit(convertUnit(Number(v), unit, u, dpiNum), u) : v)
+    setUnit(u); setOut(conv(outW), conv(outH), u, dpiNum)
+  }
 
   const handleCrop = useCallback(async () => {
     if (!imgRef.current || !naturalSize) { setError('Please select an image first.'); return }
@@ -161,22 +188,25 @@ export function CropImageClient() {
       const sy = Math.round((cropBox.y / 100) * ih)
       const sw = Math.max(1, Math.round((cropBox.w / 100) * iw))
       const sh = Math.max(1, Math.round((cropBox.h / 100) * ih))
+      const dw = outPx ? outPx.w : sw
+      const dh = outPx ? outPx.h : sh
+      if (dw > 16000 || dh > 16000) { setError('That size is too large. Keep each side under 16,000 pixels.'); setProcessing(false); return }
       const canvas = document.createElement('canvas')
-      canvas.width = sw
-      canvas.height = sh
+      canvas.width = dw
+      canvas.height = dh
       // imgRef is a full-res hidden img — drawImage reads natural pixels regardless of CSS size
-      canvas.getContext('2d')!.drawImage(imgRef.current, sx, sy, sw, sh, 0, 0, sw, sh)
-      canvas.toBlob(blob => {
-        if (blob) { setResult(blob) } else { setError('Crop failed. Please try again.') }
-        setProcessing(false)
-      }, file?.type || 'image/jpeg', 0.95)
+      canvas.getContext('2d')!.drawImage(imgRef.current, sx, sy, sw, sh, 0, 0, dw, dh)
+      const blob = await new Promise<Blob | null>(res => canvas.toBlob(res, file?.type || 'image/jpeg', 0.95))
+      if (!blob) { setError('Crop failed. Please try again.'); setProcessing(false); return }
+      setResult(unit !== 'px' && outPx ? await setBlobDpi(blob, dpiNum) : blob) // DPI: JPEG/PNG only
+      setProcessing(false)
     } catch {
       setError('Crop failed. Please try again.')
       setProcessing(false)
     }
-  }, [file, cropBox, naturalSize])
+  }, [file, cropBox, naturalSize, outPx, unit, dpiNum])
 
-  const ext = file?.name.split('.').pop()?.toLowerCase() || 'jpg'
+  const ext = result?.type === 'image/png' ? 'png' : result?.type === 'image/webp' ? 'webp' : 'jpg'
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
@@ -203,7 +233,7 @@ export function CropImageClient() {
             <p className="text-sm font-medium text-gray-700 mb-2">Aspect Ratio</p>
             <div className="flex gap-2 flex-wrap mb-4">
               {RATIOS.map(r => (
-                <button key={r.label} onClick={() => setRatio(r.value)}
+                <button key={r.label} onClick={() => { setRatio(r.value); setOutW(''); setOutH(''); setResult(null) }}
                   className={`px-4 py-1.5 rounded-lg border text-sm font-medium transition-all cursor-pointer ${
                     ratio === r.value
                       ? 'border-brand-600 bg-brand-50 text-brand-700'
@@ -213,6 +243,22 @@ export function CropImageClient() {
                 </button>
               ))}
             </div>
+          </div>
+
+          <div className="mt-4 mb-4">
+            <p className="text-sm font-medium text-gray-700 mb-2">Output size (optional)</p>
+            <SizeControls unit={unit} dpi={dpi} onUnit={changeUnit} onDpi={d => { setDpi(d); setResult(null) }} onPreset={applyId} />
+            <div className="flex gap-3 mt-4">
+              <div className="flex-1 min-w-0">
+                <label htmlFor="cr-w" className="block text-xs text-gray-600 mb-1">Width ({unit})</label>
+                <input id="cr-w" type="number" min="0" step="any" value={outW} onChange={e => setOut(e.target.value, outH, unit, dpiNum)} placeholder="e.g. 35" className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <label htmlFor="cr-h" className="block text-xs text-gray-600 mb-1">Height ({unit})</label>
+                <input id="cr-h" type="number" min="0" step="any" value={outH} onChange={e => setOut(outW, e.target.value, unit, dpiNum)} placeholder="e.g. 45" className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500" />
+              </div>
+            </div>
+            <p className="mt-2 text-xs text-gray-500">Enter width and height to lock the crop shape and export at exactly that size.{unit !== 'px' && ' DPI is saved in JPG and PNG files; WebP files do not carry it.'}</p>
           </div>
 
           <div className="mt-2">
@@ -232,10 +278,10 @@ export function CropImageClient() {
                   ref={containerRef}
                   className="relative select-none"
                   style={{ width: imgDims.width, height: imgDims.height, cursor: 'crosshair', touchAction: 'none', flexShrink: 0 }}
-                  onMouseDown={onContainerMouseDown}
-                  onMouseMove={onMouseMove}
-                  onMouseUp={onMouseUp}
-                  onMouseLeave={onMouseUp}
+                  onPointerDown={onContainerMouseDown}
+                  onPointerMove={onMouseMove}
+                  onPointerUp={onMouseUp}
+                  onPointerCancel={onMouseUp}
                 >
                   {/* Visible scaled image — same src, browser uses cache */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -265,7 +311,7 @@ export function CropImageClient() {
                       width: `${cropBox.w}%`, height: `${cropBox.h}%`,
                       cursor: 'move',
                     }}
-                    onMouseDown={e => onMouseDown(e, 'move')}
+                    onPointerDown={e => onMouseDown(e, 'move')}
                   >
                     {/* Rule-of-thirds grid */}
                     <div className="absolute inset-0 pointer-events-none" style={{
@@ -284,7 +330,7 @@ export function CropImageClient() {
                           right: pos.endsWith('e') ? -6 : 'auto',
                           cursor: `${pos}-resize`,
                         }}
-                        onMouseDown={e => onMouseDown(e, pos)}
+                        onPointerDown={e => onMouseDown(e, pos)}
                       />
                     ))}
 
@@ -298,7 +344,7 @@ export function CropImageClient() {
                       <div key={pos}
                         className="absolute w-3 h-3 bg-white border-2 border-brand-600 rounded-sm z-10"
                         style={style as React.CSSProperties}
-                        onMouseDown={e => onMouseDown(e, pos)}
+                        onPointerDown={e => onMouseDown(e, pos)}
                       />
                     ))}
                   </div>
@@ -308,7 +354,7 @@ export function CropImageClient() {
 
             <p className="text-xs text-gray-400 mt-1">
               {naturalSize && imgDims
-                ? `Output: ${Math.round(cropBox.w / 100 * naturalSize.w)} × ${Math.round(cropBox.h / 100 * naturalSize.h)} px`
+                ? `Output: ${outPx ? outPx.w : Math.round(cropBox.w / 100 * naturalSize.w)} × ${outPx ? outPx.h : Math.round(cropBox.h / 100 * naturalSize.h)} px${outPx && unit !== 'px' ? ` at ${dpiNum} DPI` : ''}`
                 : ''}
             </p>
           </div>

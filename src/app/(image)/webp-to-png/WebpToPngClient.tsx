@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
@@ -32,6 +33,9 @@ export function WebpToPngClient() {
         onFilesSelected={f => { setFile(f[0] || null); setResult(null) }}
         label="Drag & drop your WebP image here"
       />
+      <p className="mt-3 text-sm text-gray-500">
+        Need JPG instead? <Link href="/webp-to-jpg" className="font-medium text-brand-600 hover:underline">WebP to JPG</Link>
+      </p>
       {error && <p className="mt-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2">{error}</p>}
       <Button onClick={handleConvert} disabled={!file || processing} className="mt-4 w-full cursor-pointer" size="lg">
         {processing ? 'Converting…' : 'Convert to PNG'}

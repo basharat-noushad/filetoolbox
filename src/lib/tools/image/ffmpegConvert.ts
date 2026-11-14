@@ -3,7 +3,7 @@ import { fetchFile } from '@ffmpeg/util'
 
 let loading: Promise<FFmpeg> | null = null
 
-function getFFmpeg(): Promise<FFmpeg> {
+export function getFFmpeg(): Promise<FFmpeg> {
   if (!loading) {
     loading = (async () => {
       const ff = new FFmpeg()

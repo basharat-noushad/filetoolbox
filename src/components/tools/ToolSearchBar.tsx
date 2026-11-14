@@ -1,6 +1,7 @@
 'use client'
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import Link from 'next/link'
+import { tools } from '@/lib/toolsRegistry'
 import { Search, X, FileText, ImageIcon, TrendingUp, ArrowRight, ChevronRight } from 'lucide-react'
 
 interface ToolEntry {
@@ -10,47 +11,7 @@ interface ToolEntry {
   category: 'pdf' | 'image'
 }
 
-const ALL_TOOLS: ToolEntry[] = [
-  // PDF
-  { slug: 'merge-pdf',           name: 'Merge PDF',          description: 'Combine multiple PDF files into one document',         category: 'pdf' },
-  { slug: 'split-pdf',           name: 'Split PDF',          description: 'Split a PDF into multiple files by page range',        category: 'pdf' },
-  { slug: 'compress-pdf',        name: 'Compress PDF',       description: 'Reduce PDF file size without losing quality',          category: 'pdf' },
-  { slug: 'pdf-to-word',         name: 'PDF to Word',        description: 'Convert PDF to editable Word documents (.docx)',       category: 'pdf' },
-  { slug: 'word-to-pdf',         name: 'Word to PDF',        description: 'Convert Word documents to PDF format',                 category: 'pdf' },
-  { slug: 'pdf-to-jpg',          name: 'PDF to JPG',         description: 'Convert each PDF page to a high-quality JPG image',   category: 'pdf' },
-  { slug: 'jpg-to-pdf',          name: 'JPG to PDF',         description: 'Convert JPG images to a PDF file',                    category: 'pdf' },
-  { slug: 'pdf-to-png',          name: 'PDF to PNG',         description: 'Convert PDF pages to transparent PNG images',         category: 'pdf' },
-  { slug: 'rotate-pdf',          name: 'Rotate PDF',         description: 'Rotate all or selected PDF pages by 90° or 180°',    category: 'pdf' },
-  { slug: 'delete-pdf-pages',    name: 'Delete PDF Pages',   description: 'Remove specific pages from a PDF document',           category: 'pdf' },
-  { slug: 'unlock-pdf',          name: 'Unlock PDF',         description: 'Remove password protection from PDF files',           category: 'pdf' },
-  { slug: 'protect-pdf',         name: 'Protect PDF',        description: 'Add password protection to your PDF files',           category: 'pdf' },
-  { slug: 'add-watermark-pdf',   name: 'Watermark PDF',      description: 'Add a text or image watermark to PDF pages',         category: 'pdf' },
-  { slug: 'sign-pdf',            name: 'Sign PDF',           description: 'Electronically sign PDF documents online',            category: 'pdf' },
-  { slug: 'crop-pdf',            name: 'Crop PDF',           description: 'Crop the margins and visible area of PDF pages',      category: 'pdf' },
-  { slug: 'reorder-pdf-pages',   name: 'Reorder Pages',      description: 'Drag and drop to rearrange PDF pages',               category: 'pdf' },
-  { slug: 'extract-pdf-pages',   name: 'Extract Pages',      description: 'Extract specific pages from a PDF as a new file',    category: 'pdf' },
-  { slug: 'add-page-numbers-pdf',name: 'Add Page Numbers',   description: 'Add page numbers to your PDF document',              category: 'pdf' },
-  { slug: 'ocr-pdf',             name: 'OCR PDF',            description: 'Extract text from scanned PDFs using OCR',           category: 'pdf' },
-  { slug: 'pdf-to-excel',        name: 'PDF to Excel',       description: 'Convert PDF tables to editable Excel spreadsheets',  category: 'pdf' },
-  { slug: 'excel-to-pdf',        name: 'Excel to PDF',       description: 'Convert Excel spreadsheets to PDF format',           category: 'pdf' },
-  { slug: 'pdf-to-ppt',          name: 'PDF to PPT',         description: 'Convert PDF files to PowerPoint presentations',      category: 'pdf' },
-  { slug: 'ppt-to-pdf',          name: 'PPT to PDF',         description: 'Convert PowerPoint presentations to PDF',            category: 'pdf' },
-  // Image
-  { slug: 'compress-image',      name: 'Compress Image',     description: 'Reduce image file size without visible quality loss', category: 'image' },
-  { slug: 'resize-image',        name: 'Resize Image',       description: 'Resize images to any dimension or percentage',       category: 'image' },
-  { slug: 'crop-image',          name: 'Crop Image',         description: 'Crop images with an interactive cropper tool',       category: 'image' },
-  { slug: 'png-to-jpg',          name: 'PNG to JPG',         description: 'Convert PNG images to JPG format',                   category: 'image' },
-  { slug: 'jpg-to-png',          name: 'JPG to PNG',         description: 'Convert JPG images to PNG with transparency',        category: 'image' },
-  { slug: 'image-to-webp',       name: 'JPG to WebP',        description: 'Convert images to WebP for better web performance',  category: 'image' },
-  { slug: 'rotate-image',        name: 'Rotate Image',       description: 'Rotate images 90°, 180°, or 270°',                  category: 'image' },
-  { slug: 'flip-image',          name: 'Flip Image',         description: 'Flip images horizontally or vertically',             category: 'image' },
-  { slug: 'grayscale-image',     name: 'Grayscale',          description: 'Convert color images to black and white',            category: 'image' },
-  { slug: 'remove-background',   name: 'Remove Background',  description: 'Automatically remove background from photos with AI',category: 'image' },
-  { slug: 'add-watermark-image', name: 'Add Watermark',      description: 'Add text or image watermarks to photos',             category: 'image' },
-  { slug: 'add-text-to-image',   name: 'Add Text',           description: 'Add custom text overlays to images',                 category: 'image' },
-  { slug: 'blur-image',          name: 'Blur Image',         description: 'Apply blur effect to entire image or selected area', category: 'image' },
-  { slug: 'image-brightness',    name: 'Brightness & Contrast', description: 'Adjust image brightness, contrast, and exposure', category: 'image' },
-]
+const ALL_TOOLS: ToolEntry[] = tools.map(({ slug, name, description, category }) => ({ slug, name, description, category }))
 
 const POPULAR = ['Merge PDF', 'Compress Image', 'PDF to Word', 'Remove Background', 'Split PDF', 'Resize Image', 'PDF to JPG', 'JPG to WebP']
 const MAX_PER_CAT = 4
@@ -151,7 +112,7 @@ export function ToolSearchBar() {
           onChange={e => { setQuery(e.target.value); setOpen(true); setActiveIdx(-1) }}
           onFocus={() => { setFocused(true); setOpen(true) }}
           onKeyDown={handleKeyDown}
-          placeholder="Search 50+ tools — merge PDF, resize image…"
+          placeholder="Search 60+ tools — merge PDF, resize image…"
           className="flex-1 h-14 px-3 bg-transparent text-gray-900 text-[15px] placeholder-gray-400 focus:outline-none"
           aria-label="Search tools"
           aria-autocomplete="list"

@@ -39,7 +39,7 @@ const RESOURCE_LINKS = [
 
 
 const STATS = [
-  { value: '50+',  label: 'Free tools',    Icon: Zap },
+  { value: '60+',  label: 'Free tools',    Icon: Zap },
   { value: '0',    label: 'Sign-ups',      Icon: UserX },
   { value: 'Most', label: 'Tools run locally', Icon: Cpu },
 ]
@@ -90,7 +90,7 @@ export function Footer() {
           </Link>
 
           <p className="text-[13px] text-slate-300 leading-relaxed mb-5 max-w-[240px]">
-            50+ free tools for PDF &amp; image processing. No registration, no watermarks. Most tools run entirely in your browser.
+            60+ free tools for PDF &amp; image processing. No registration, no watermarks. Most tools run entirely in your browser.
           </p>
 
           {/* Feature list */}

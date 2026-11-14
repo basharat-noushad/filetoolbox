@@ -3,21 +3,22 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { FileDropzone } from '@/components/tools/FileDropzone'
 import { ToolResult } from '@/components/tools/ToolResult'
-import { heicToJpg } from '@/lib/tools/image/heicToJpg'
+import { heicBatchToJpg } from '@/lib/tools/image/heicToJpg'
 
 export function HeicToJpgClient() {
   const [files, setFiles] = useState<File[]>([])
-  const [result, setResult] = useState<Blob | null>(null)
+  const [result, setResult] = useState<{ blob: Blob; filename: string } | null>(null)
   const [processing, setProcessing] = useState(false)
+  const [done, setDone] = useState(0)
   const [error, setError] = useState<string | null>(null)
 
   const handle = async () => {
     if (files.length === 0) { setError('Please select a HEIC file.'); return }
-    setProcessing(true); setError(null)
+    setProcessing(true); setError(null); setResult(null); setDone(0)
     try {
-      setResult(await heicToJpg(files[0]))
+      setResult(await heicBatchToJpg(files, setDone))
     } catch {
-      setError('Conversion failed. Make sure you have a valid HEIC/HEIF file.')
+      setError('Conversion failed. Make sure every file is a valid HEIC/HEIF file.')
     } finally {
       setProcessing(false)
     }
@@ -28,17 +29,20 @@ export function HeicToJpgClient() {
       <div className="text-sm text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3">
         HEIC files are used by iPhones (iOS 11+). This tool converts them to JPG for universal compatibility.
       </div>
-      <FileDropzone
+      <FileDropzone multiple maxFiles={20}
         accept={{ 'image/heic': ['.heic', '.heif'], 'image/heif': ['.heif', '.heic'] }}
-        onFilesSelected={setFiles}
-        label="Drag & drop your HEIC file here"
-        sublabel="Supports .heic and .heif — max 50MB"
+        onFilesSelected={f => { setFiles(f); setResult(null) }}
+        label="Drag & drop your HEIC files here"
+        sublabel="Up to 20 files (.heic, .heif) — max 50MB each"
       />
       {error && <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2">{error}</p>}
       <Button onClick={handle} disabled={files.length === 0 || processing} className="mt-4 w-full cursor-pointer" size="lg">
-        {processing ? 'Converting…' : 'Convert to JPG'}
+        {processing ? `Converting ${Math.min(done + 1, files.length)} of ${files.length}…` : files.length > 1 ? `Convert ${files.length} files to JPG` : 'Convert to JPG'}
       </Button>
-      {result && <ToolResult blob={result} filename="converted.jpg" label="HEIC converted to JPG!" />}
+      {processing && files.length > 1 && (
+        <div className="h-2 bg-gray-100 rounded-full overflow-hidden"><div className="h-full bg-brand-600 transition-all" style={{ width: `${(done / files.length) * 100}%` }} /></div>
+      )}
+      {result && <ToolResult blob={result.blob} filename={result.filename} label={files.length > 1 ? `${files.length} HEIC files converted to JPG!` : 'HEIC converted to JPG!'} />}
     </div>
   )
 }

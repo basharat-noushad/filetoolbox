@@ -8,17 +8,17 @@ const tool = getToolBySlug('heic-to-jpg')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: "HEIC to JPG Online Free — iPhone Photos",
-    description: "HEIC to JPG converter online free. Turn iPhone HEIC or HEIF photos into JPG to share on Windows and other devices. One file up to 50 MB.",
+    title: "HEIC to JPG Online Free — Bulk, iPhone Photos",
+    description: "HEIC to JPG converter online free. Convert up to 20 iPhone HEIC or HEIF photos at once, in your browser. Download JPGs as a ZIP. No sign-up.",
     keywords: tool.keywords,
     alternates: { canonical: '/heic-to-jpg' },
   }, '/heic-to-jpg')
 }
 
 const HOW_TO_STEPS = [
-  "Select one .heic or .heif file up to 50 MB. Use the original file rather than a screenshot or a renamed extension.",
-  "Click Convert to JPG. Keep this tab open while your browser decodes the photo.",
-  "Click Download to save converted.jpg. Check orientation and quality before deleting or replacing any original."
+  "Select up to 20 .heic or .heif files, each up to 50 MB. Use the original files rather than screenshots or renamed extensions.",
+  "Click Convert to JPG. Keep this tab open while your browser converts the files one by one.",
+  "Click Download: one file downloads as a JPG, several files as a ZIP. Check orientation and quality before deleting any original."
 ]
 const FAQS = [
   {
@@ -30,8 +30,8 @@ const FAQS = [
     "a": "The HEIC decoder runs in your browser. Your selected file is not uploaded for conversion. Large photos can take more time and memory on mobile devices."
   },
   {
-    "q": "Can I batch convert HEIC files to JPG?",
-    "a": "The current tool converts one file at a time, up to 50 MB. For a file containing multiple images, it returns the first converted image. It does not create a batch ZIP."
+    "q": "Can I bulk convert HEIC to JPG?",
+    "a": "Yes, up to 20 files at once, each up to 50 MB. Files are converted one after another with a progress count, and several results download as one ZIP. For a HEIC file containing multiple images, only the first is converted."
   },
   {
     "q": "Will my photo lose quality or metadata?",

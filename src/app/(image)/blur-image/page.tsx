@@ -8,15 +8,15 @@ const tool = getToolBySlug('blur-image')!
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: "Blur Image & Background Online Free",
-    description: "Blur a photo or just its background online for free. Keeps people sharp and softens the rest, right in your browser. No sign-up, no upload.",
-    keywords: [...tool.keywords, 'blur background of photo', 'blur background online free', 'background blur portrait'],
+    title: "Blur Image, Face & Background Online Free",
+    description: "Blur or pixelate part of an image online free: faces, plates, text, or just the background. Runs in your browser, no sign-up, no upload.",
+    keywords: [...tool.keywords, 'blur background of photo', 'blur background online free', 'background blur portrait', 'blur part of image online free', 'blur face in photo', 'pixelate part of image', 'censor image'],
     openGraph: {
-      title: 'Blur Image & Background Online Free | PDF and Image +',
-      description: 'Blur a whole image or just the background behind people, free, in your browser. Files never leave your device.',
+      title: 'Blur Image, Face & Background Online Free | PDF and Image +',
+      description: 'Blur a whole image, selected areas like faces, or the background behind people, free, in your browser. Files never leave your device.',
     },
     twitter: {
-      title: 'Blur Image & Background Online Free | PDF and Image +',
+      title: 'Blur Image, Face & Background Online Free | PDF and Image +',
       description: 'Blur a whole image or just the background behind people, free, in your browser. Files never leave your device.',
     },
     alternates: { canonical: `/${tool.slug}` },
@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const HOW_TO_STEPS = [
   'Upload your JPG, PNG, or WebP image using the file picker or drag and drop.',
-  'Choose "Whole image" or "Background only" (for photos of people), then set the Blur Intensity slider.',
+  'Choose "Whole image", "Background only" (for photos of people), or "Selected areas" and drag boxes over what to hide, then set the strength slider.',
   'Click the blur button, compare the before and after previews, and download the result.',
 ]
 
@@ -35,12 +35,16 @@ const FAQS = [
     a: 'Pick "Background only" and click Blur Background. The tool finds the people in your photo, keeps them sharp, and blurs everything behind them. It works best on portraits, selfies, and other clear photos of people.',
   },
   {
+    q: 'How do I blur a face, licence plate, or private info in a photo?',
+    a: 'Pick "Selected areas", drag a box over each face, plate, address, or line of text, choose Blur or Pixelate, and apply. Use a strong setting for anything sensitive: light blur can sometimes be reversed or guessed, and pixelate with large blocks is harder to undo. Check the result at full size before sharing.',
+  },
+  {
     q: 'Does background blur work on objects, pets, or products?',
     a: 'No. Background mode detects people only. For a photo of an object or animal it will tell you no person was found. Use "Whole image" for an overall blur instead.',
   },
   {
     q: 'Is my photo uploaded to a server?',
-    a: 'No. Both modes run in your browser. The small person-detection model is served from this site and runs locally, so your image never leaves your device.',
+    a: 'No. All modes run in your browser. The small person-detection model is served from this site and runs locally, so your image never leaves your device.',
   },
   {
     q: 'What blur strength should I use?',
@@ -48,7 +52,7 @@ const FAQS = [
   },
   {
     q: 'Will the image size or quality change?',
-    a: 'No. The output keeps the original dimensions and format (PNG stays PNG, JPG stays JPG). Only the blurred areas change.',
+    a: 'No. The output keeps the original dimensions and format (PNG stays PNG, JPG stays JPG). Only the blurred or pixelated areas change.',
   },
 ]
 

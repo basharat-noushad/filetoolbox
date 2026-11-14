@@ -9,15 +9,15 @@ const tool = getToolBySlug('sign-pdf')!
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
     title: "Sign PDF Online Free — Electronic Signature",
-    description: "Sign PDF online for free with a hand-drawn signature. Draw it in your browser and it goes on the first page. Your files never leave your device.",
+    description: "Sign PDF online for free: draw your signature or upload a PNG/JPG signature image. Placed on page 1, in your browser, nothing uploaded.",
     keywords: tool.keywords,
     openGraph: {
       title: "Sign PDF Online Free — Electronic Signature | PDF and Image +",
-      description: "Sign PDF online for free with a hand-drawn signature. Draw it in your browser and it goes on the first page. Your files never leave your device.",
+      description: "Sign PDF online for free: draw your signature or upload a PNG/JPG signature image. Placed on page 1, in your browser, nothing uploaded.",
     },
     twitter: {
       title: "Sign PDF Online Free — Electronic Signature | PDF and Image +",
-      description: "Sign PDF online for free with a hand-drawn signature. Draw it in your browser and it goes on the first page. Your files never leave your device.",
+      description: "Sign PDF online for free: draw your signature or upload a PNG/JPG signature image. Placed on page 1, in your browser, nothing uploaded.",
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/sign-pdf')
@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const HOW_TO_STEPS = [
   'Upload your PDF file using the file selector or drag and drop.',
-  'Draw your signature in the signature box using your mouse or touchscreen.',
+  'Draw your signature with your mouse or touchscreen, or switch to "Upload signature image" and pick a PNG or JPG.',
   'Click "Add Signature to PDF" to embed your signature and download the signed document.',
 ]
 
@@ -45,6 +45,10 @@ const FAQS = [
   {
     q: 'Can I sign a multi-page PDF?',
     a: 'Yes, you can upload any PDF. The signature will be placed on the first page. All other pages remain unchanged in the downloaded document.',
+  },
+  {
+    q: 'Can I sign a PDF with an image of my signature?',
+    a: 'Yes. Choose "Upload signature image" and select a PNG or JPG. PNG transparency is kept. For a JPG with a white background, tick "Remove white background" to make near-white pixels transparent.',
   },
   {
     q: 'What if my signature looks messy?',

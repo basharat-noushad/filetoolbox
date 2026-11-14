@@ -80,12 +80,52 @@ function randomPassword(): string {
   return Array.from(crypto.getRandomValues(new Uint8Array(32)), b => b.toString(16).padStart(2, '0')).join('')
 }
 
-export async function protectPdf(file: File, userPassword: string): Promise<Blob> {
+export interface PdfPermissions {
+  print: 'full' | 'low' | 'none'
+  copy: boolean      // extract text and images
+  edit: boolean      // modify content + assemble (insert, delete, rotate pages)
+  annotate: boolean  // comments and form filling
+}
+
+export const ALL_PERMISSIONS: PdfPermissions = { print: 'full', copy: true, edit: true, annotate: true }
+
+// qpdf 12 256-bit flags, set one by one (not --modify=, whose levels bundle bits together).
+function permissionArgs(p: PdfPermissions): string[] {
+  const yn = (b: boolean) => (b ? 'y' : 'n')
+  return [
+    `--print=${p.print}`,
+    `--extract=${yn(p.copy)}`,
+    `--modify-other=${yn(p.edit)}`,
+    `--assemble=${yn(p.edit)}`,
+    `--annotate=${yn(p.annotate)}`,
+    `--form=${yn(p.annotate)}`,
+  ]
+}
+
+// Emscripten passes argv as C strings, so a NUL would silently truncate the password.
+const BAD_CHARS = /[\u0000-\u001f\u007f]/
+
+export interface ProtectOptions {
+  userPassword: string       // '' = opens without a password (restrictions only)
+  ownerPassword?: string     // omitted = random, never shown (fine when a user password is set)
+  permissions?: PdfPermissions
+}
+
+export async function protectPdf(file: File, opts: ProtectOptions): Promise<Blob> {
+  const { userPassword } = opts
+  const ownerPassword = opts.ownerPassword || randomPassword()
+  // qpdf 12 itself accepts an empty owner password with an empty user password, which would let
+  // anyone strip the restrictions. Enforce the rules here, not only in the UI.
+  if (!userPassword && !opts.ownerPassword) throw new QpdfError('A permissions password is required.')
+  if (ownerPassword === userPassword) throw new QpdfError('The permissions password must be different from the open password.')
+  if (BAD_CHARS.test(userPassword) || BAD_CHARS.test(ownerPassword)) throw new QpdfError('Passwords cannot contain control characters.')
   let failure = ''
   const out = await withQpdf(file, run => {
-    // --*-password= options, not positional args, so a password starting with "@" or "-" is never
-    // parsed as an argument file or option. Owner password is random: the user sets only one.
-    const r = run([IN, '--encrypt', `--user-password=${userPassword}`, `--owner-password=${randomPassword()}`, '--bits=256', '--', OUT])
+    // --*-password=value options, never positional args: qpdf takes everything after the first "="
+    // literally, so a password starting with "-" or "@" or containing spaces/quotes is never parsed
+    // as an option or argument file. argv is an array, so there is no shell splitting either.
+    const r = run([IN, '--encrypt', `--user-password=${userPassword}`, `--owner-password=${ownerPassword}`, '--bits=256',
+      ...permissionArgs(opts.permissions ?? ALL_PERMISSIONS), '--', OUT])
     if (!r.ok) failure = isWrongPassword(r.stderr) ? 'This PDF is already password-protected. Unlock it first, then protect it again.' : CORRUPT
   })
   if (failure || !out) throw new QpdfError(failure || CORRUPT)

@@ -15,7 +15,7 @@ function buildUrlList(): string[] {
     SITE_URL,
     // Static pages
     ...STATIC_PAGES.map(p => `${SITE_URL}/${p}`),
-    // All tool pages (50+)
+    // All tool pages (60+)
     ...tools.map(t => `${SITE_URL}/${t.slug}`),
     // All blog posts — was missing before
     ...BLOG_POSTS.map(p => `${SITE_URL}/blog/${p.slug}`),
