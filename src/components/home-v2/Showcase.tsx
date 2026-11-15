@@ -1,8 +1,9 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { AnimatePresence, m, useReducedMotion } from 'motion/react'
-import { ArrowRight } from 'lucide-react'
+import { AnimatePresence, animate, m, useReducedMotion } from 'motion/react'
+import { ArrowRight, Check } from 'lucide-react'
+import { useLoopActive } from './useLoopActive'
 import { EASE, iconFor, type ToolItem } from './data'
 
 /* ---------- mini illustrations (decorative, aria-hidden) ---------- */
@@ -47,27 +48,45 @@ function PassportMock({ reduce }: { reduce: boolean | null }) {
   )
 }
 
+const STAGES = [4200, 1100, 200] // KB: original, first pass, under the 200 KB target
+const fmt = (kb: number) => (kb >= 1000 ? `${(kb / 1000).toFixed(1)} MB` : `${Math.round(kb)} KB`)
+
 function CompressMock({ reduce }: { reduce: boolean | null }) {
-  const targets = [{ l: '100 KB', kb: 100 }, { l: '200 KB', kb: 200 }, { l: '1 MB', kb: 1000 }]
-  const i = useCycle(3, 2200, reduce)
-  const ratio = Math.max(targets[i].kb / 4200, 0.04)
+  const ref = useRef<HTMLDivElement>(null)
+  const active = useLoopActive(ref)
+  const [s, setS] = useState(reduce ? 2 : 0)
+  const [kb, setKb] = useState(STAGES[reduce ? 2 : 0])
+  useEffect(() => {
+    if (reduce) { setS(2); return }
+    if (!active) return
+    const t = setTimeout(() => setS(x => (x + 1) % STAGES.length), s === 2 ? 2600 : 1400)
+    return () => clearTimeout(t)
+  }, [s, active, reduce])
+  useEffect(() => {
+    if (reduce) { setKb(STAGES[2]); return }
+    const c = animate(kb, STAGES[s], { duration: s === 0 ? 0.01 : 0.9, ease: [0.16, 1, 0.3, 1], onUpdate: setKb })
+    return () => c.stop()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [s, reduce])
+  const done = s === 2 && kb <= STAGES[2] + 0.5
   return (
-    <div className="mx-auto flex h-full max-w-sm flex-col justify-center gap-5" aria-hidden>
+    <div ref={ref} className="mx-auto flex h-full max-w-sm flex-col justify-center gap-5" aria-hidden>
       <div>
         <div className="mb-1.5 flex justify-between text-xs font-semibold text-gray-700"><span>Original (example)</span><span>4.2 MB</span></div>
         <div className="h-3 rounded-full bg-gray-300" />
       </div>
       <div>
-        <div className="mb-1.5 flex justify-between text-xs font-semibold text-brand-700"><span>Target size</span><span>{targets[i].l}</span></div>
+        <div className="mb-1.5 flex justify-between text-xs font-semibold text-brand-700"><span>Compressed</span><span className="tabular-nums">{fmt(kb)}</span></div>
         <div className="h-3 overflow-hidden rounded-full bg-gray-100">
-          <m.div className="h-full origin-left rounded-full bg-brand-600" initial={false} animate={{ scaleX: ratio }}
-            transition={reduce ? { duration: 0 } : { type: 'spring', stiffness: 120, damping: 20 }} style={{ width: '100%' }} />
+          <m.div className={`h-full origin-left rounded-full ${done ? 'bg-emerald-600' : 'bg-brand-600'}`} initial={false}
+            animate={{ scaleX: Math.max(STAGES[s] / 4200, 0.04) }}
+            transition={reduce ? { duration: 0 } : { duration: s === 0 ? 0.01 : 0.9, ease: [0.16, 1, 0.3, 1] }} style={{ width: '100%' }} />
         </div>
       </div>
-      <div className="flex gap-2">
-        {targets.map((t, k) => (
-          <span key={t.l} className={`rounded-full px-3.5 py-1.5 text-xs font-bold transition-colors ${k === i ? 'bg-brand-600 text-white' : 'bg-gray-100 text-gray-700'}`}>{t.l}</span>
-        ))}
+      <div className="h-8">
+        <span className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-bold transition-opacity duration-300 ${done ? 'bg-emerald-50 text-emerald-800 opacity-100' : 'bg-gray-100 text-gray-700 opacity-100'}`}>
+          {done ? <>Under 200 KB <Check className="h-3.5 w-3.5" strokeWidth={3} /></> : 'Compressing...'}
+        </span>
       </div>
     </div>
   )
