@@ -2781,6 +2781,112 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
+  // ── passport photo ─────────────────────────────────────────────────────────
+  {
+    slug: 'how-to-make-passport-size-photo-at-home',
+    title: 'How to Make a Passport Size Photo at Home (Right Size, White Background)',
+    metaTitle: 'How to Make a Passport Size Photo at Home (Free Guide)',
+    metaDescription: 'Make a passport size photo at home: pick your country size, set a white background, and download a 300 DPI photo or a ready-to-print sheet.',
+    excerpt: 'You can make a passport or visa photo from a phone picture in a few minutes. Here is how to take a usable portrait, pick the right size, fix the background and print several copies.',
+    category: 'Image Guide',
+    readTime: '5 min read',
+    datePublished: '2026-11-15',
+    dateModified: '2026-11-15',
+    relatedTool: 'passport-photo-maker',
+    relatedTools: ['crop-image', 'resize-image', 'remove-background'],
+    keywords: ['how to make a passport size photo at home', 'passport size photo at home', 'make passport photo from phone', 'passport photo white background', 'print passport photos at home'],
+    sections: [
+      {
+        paragraphs: [
+          'A passport photo is mostly a matter of three things: a clean source picture, the correct dimensions for your document, and a plain background. All three are doable at home with a phone and a browser.',
+          'Always check the rules of the authority that issues your document. Head size, background colour and glasses rules differ by country and change over time, so treat any tool, including this one, as a helper rather than a guarantee of acceptance.',
+        ],
+      },
+      {
+        heading: 'Take a Good Source Photo First',
+        paragraphs: [
+          'The editing step cannot fix a bad original. Spend a minute on the shot itself.',
+        ],
+        bullets: [
+          'Stand facing a window or other soft light so there are no shadows on your face or behind you.',
+          'Have someone hold the camera at eye level, a little way back, so your face is centred and your shoulders are visible.',
+          'Look straight at the lens with a neutral expression, mouth closed and eyes open.',
+          'Remove glasses if your country does not allow them, and pull hair back from your face.',
+          'Use the rear camera if you can, and keep the picture sharp rather than zoomed in digitally.',
+        ],
+      },
+      {
+        heading: 'Common Passport Photo Sizes',
+        paragraphs: [
+          'The Passport Photo Maker includes these presets, each exported at 300 DPI:',
+        ],
+        bullets: [
+          'US 2×2 in (600×600 px).',
+          'UK / EU / India / Pakistan 35×45 mm.',
+          'Schengen visa 35×45 mm.',
+          'Canada 50×70 mm.',
+          'China 33×48 mm.',
+        ],
+        tip: 'If your document needs a size that is not in the list, make the closest photo here and then adjust it with the Crop Image or Resize Image tool.',
+      },
+      {
+        heading: 'Make the Photo Step by Step',
+        steps: [
+          'Open the Passport Photo Maker and drop in your portrait (JPG, PNG or WebP, up to 50 MB).',
+          'Choose the country or document size. The tool looks for your face on your device and positions the crop automatically; if no face is found it tells you, and you can position the photo by hand.',
+          'Pick a background: white, off-white, light blue, light grey, a custom colour, or keep the original. Replacing the background needs a clear, front-facing person in the picture.',
+          'Fine-tune the framing by dragging the preview and using the zoom slider. The tool shows an approximate head-height guide for the size you chose.',
+          'If the application sets a file size limit, choose a maximum (50, 100, 240 or 500 KB), then click Create photo and download the JPG.',
+          'To print at home or at a shop, pick a 4×6 in or A4 sheet, click Create print sheet, and download the JPG or PDF with several copies laid out.',
+        ],
+      },
+      {
+        heading: 'Hitting a File Size Limit for Online Applications',
+        paragraphs: [
+          'Online portals often cap uploads at a few hundred kilobytes. Choosing a limit in the tool compresses the JPG to fit. If the photo cannot fit at the standard pixel size, the tool reduces the dimensions and tells you the new size, so check that the portal still accepts it. If the limit cannot be reached at all, you will see a message saying so.',
+        ],
+      },
+      {
+        heading: 'Printing Passport Photos at Home',
+        paragraphs: [
+          'Print the sheet at 100% scale, with "fit to page" or "shrink to fit" switched off, on glossy or good-quality photo paper. Measure one printed photo with a ruler before cutting the rest. If it is not the right size, your printer settings scaled it.',
+        ],
+      },
+      {
+        heading: 'Privacy',
+        paragraphs: [
+          'The face detection, background replacement and file creation run in your browser, and the page states that nothing is uploaded. Background replacement loads a small model file (about 0.3 MB) from the site the first time you use it.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can I make a passport photo with my phone?',
+        a: 'Yes. Take a front-facing, evenly lit portrait, upload it to the Passport Photo Maker, choose your country size and download the result. Whether it is accepted depends on your issuing authority, so check their rules.',
+      },
+      {
+        q: 'How do I get a white background for a passport photo?',
+        a: 'Select White in the Background options. The tool cuts out the person on your device and fills the background with white. A plain, evenly lit original gives the cleanest edges.',
+      },
+      {
+        q: 'What size is a passport photo in pixels?',
+        a: 'At 300 DPI, a US 2×2 in photo is 600×600 px. The 35×45 mm size works out to roughly 413×531 px. The tool shows the exact pixel size for the preset you choose.',
+      },
+      {
+        q: 'How do I make a passport photo under 100 KB?',
+        a: 'Choose the 100 KB limit before creating the photo. The tool compresses the JPG to fit, and if it has to shrink the dimensions it tells you the new size.',
+      },
+      {
+        q: 'How do I print several passport photos on one page?',
+        a: 'Use Create print sheet with a 4×6 in or A4 layout, then download the JPG or PDF. Print at 100% scale and cut along the gaps.',
+      },
+      {
+        q: 'Will my photo be accepted?',
+        a: 'We cannot guarantee that. The head-size guide is approximate, and requirements vary by country and change. Check the official guidance before you submit.',
+      },
+    ],
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
