@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert PNG to JPG online free with a quality slider. Multiple files download as a ZIP, and transparent areas become white. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: "PNG to JPG Online Free — Quality Slider | PDF and Image +",
+      title: "PNG to JPG Online Free — Quality Slider | PDF and Image",
       description: "Convert PNG to JPG online free with a quality slider. Multiple files download as a ZIP, and transparent areas become white. No sign-up.",
     },
     twitter: {
-      title: "PNG to JPG Online Free — Quality Slider | PDF and Image +",
+      title: "PNG to JPG Online Free — Quality Slider | PDF and Image",
       description: "Convert PNG to JPG online free with a quality slider. Multiple files download as a ZIP, and transparent areas become white. No sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },

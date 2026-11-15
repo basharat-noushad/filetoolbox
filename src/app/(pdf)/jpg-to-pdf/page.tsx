@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert JPG to PDF online for free. Add up to 20 JPG or PNG images and download them as one PDF, with no quality loss and no sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: "JPG to PDF Online Free — Convert Images to PDF | PDF and Image +",
+      title: "JPG to PDF Online Free — Convert Images to PDF | PDF and Image",
       description: "Convert JPG to PDF online for free. Add up to 20 JPG or PNG images and download them as one PDF, with no quality loss and no sign-up.",
     },
     twitter: {
-      title: "JPG to PDF Online Free — Convert Images to PDF | PDF and Image +",
+      title: "JPG to PDF Online Free — Convert Images to PDF | PDF and Image",
       description: "Convert JPG to PDF online for free. Add up to 20 JPG or PNG images and download them as one PDF, with no quality loss and no sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },

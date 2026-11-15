@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert PNG to PDF online free. Combine several PNG images into one PDF, keep them in the order you add them, and stay private in your browser.",
     keywords: tool.keywords,
     openGraph: {
-      title: "PNG to PDF Converter Online Free | PDF and Image +",
+      title: "PNG to PDF Converter Online Free | PDF and Image",
       description: "Convert PNG to PDF online free. Combine several PNG images into one PDF, keep them in the order you add them, and stay private in your browser.",
     },
     twitter: {
-      title: "PNG to PDF Converter Online Free | PDF and Image +",
+      title: "PNG to PDF Converter Online Free | PDF and Image",
       description: "Convert PNG to PDF online free. Combine several PNG images into one PDF, keep them in the order you add them, and stay private in your browser.",
     },
     alternates: { canonical: `/${tool.slug}` },

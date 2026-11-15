@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert PDF to PNG online free at 72, 150 or 300 DPI. High-resolution PNG pages in one ZIP. Runs in your browser, nothing is uploaded.",
     keywords: tool.keywords,
     openGraph: {
-      title: "PDF to PNG Online Free — Convert PDF Pages | PDF and Image +",
+      title: "PDF to PNG Online Free — Convert PDF Pages | PDF and Image",
       description: "Convert PDF to PNG online free at 72, 150 or 300 DPI. High-resolution PNG pages in one ZIP. Runs in your browser, nothing is uploaded.",
     },
     twitter: {
-      title: "PDF to PNG Online Free — Convert PDF Pages | PDF and Image +",
+      title: "PDF to PNG Online Free — Convert PDF Pages | PDF and Image",
       description: "Convert PDF to PNG online free at 72, 150 or 300 DPI. High-resolution PNG pages in one ZIP. Runs in your browser, nothing is uploaded.",
     },
     alternates: { canonical: `/${tool.slug}` },

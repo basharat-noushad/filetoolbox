@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Excel to PDF online for free: convert .xlsx and .xls files. All sheets are included, with formatting and layout kept as closely as possible. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Excel to PDF Online Free — Convert XLSX to PDF | PDF and Image +",
+      title: "Excel to PDF Online Free — Convert XLSX to PDF | PDF and Image",
       description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout.',
     },
     twitter: {
-      title: "Excel to PDF Online Free — Convert XLSX to PDF | PDF and Image +",
+      title: "Excel to PDF Online Free — Convert XLSX to PDF | PDF and Image",
       description: 'Convert Excel spreadsheets (.xlsx, .xls) to PDF format online for free. Preserves all formatting and layout.',
     },
     alternates: { canonical: `/${tool.slug}` },

@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert BMP to JPG online free. Shrink huge bitmap files to small JPGs with an adjustable quality slider. Batch convert and keep files private.",
     keywords: tool.keywords,
     openGraph: {
-      title: "BMP to JPG Converter Online Free | PDF and Image +",
+      title: "BMP to JPG Converter Online Free | PDF and Image",
       description: "Convert BMP to JPG online free. Shrink huge bitmap files to small JPGs with an adjustable quality slider. Batch convert and keep files private.",
     },
     twitter: {
-      title: "BMP to JPG Converter Online Free | PDF and Image +",
+      title: "BMP to JPG Converter Online Free | PDF and Image",
       description: "Convert BMP to JPG online free. Shrink huge bitmap files to small JPGs with an adjustable quality slider. Batch convert and keep files private.",
     },
     alternates: { canonical: `/${tool.slug}` },

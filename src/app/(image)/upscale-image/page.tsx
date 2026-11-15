@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "AI Image Upscaler Online Free — 2× and 4×",
     description: "Upscale images online free with AI (Real-ESRGAN) at 2× or 4×. Runs privately on your device, nothing is uploaded. Saves PNG or JPG.",
     keywords: tool.keywords,
-    openGraph: { title: 'AI Image Upscaler Online Free — 2× and 4× | PDF and Image +', description: 'Upscale images 2× or 4× with an AI model that runs in your browser. Free, private, no upload.' },
-    twitter: { title: 'AI Image Upscaler Online Free — 2× and 4× | PDF and Image +', description: 'Upscale images 2× or 4× with an AI model that runs in your browser. Free, private, no upload.' },
+    openGraph: { title: 'AI Image Upscaler Online Free — 2× and 4× | PDF and Image', description: 'Upscale images 2× or 4× with an AI model that runs in your browser. Free, private, no upload.' },
+    twitter: { title: 'AI Image Upscaler Online Free — 2× and 4× | PDF and Image', description: 'Upscale images 2× or 4× with an AI model that runs in your browser. Free, private, no upload.' },
     alternates: { canonical: `/${tool.slug}` },
   }, '/upscale-image')
 }

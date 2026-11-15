@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Word to PDF online for free: convert .docx and .doc files. Text, tables and images are kept, and conversion runs in your browser. Up to 100 MB.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Word to PDF Online Free — Convert DOCX to PDF | PDF and Image +",
+      title: "Word to PDF Online Free — Convert DOCX to PDF | PDF and Image",
       description: "Word to PDF online for free: convert .docx and .doc files. Text, tables and images are kept, and conversion runs in your browser. Up to 100 MB.",
     },
     twitter: {
-      title: "Word to PDF Online Free — Convert DOCX to PDF | PDF and Image +",
+      title: "Word to PDF Online Free — Convert DOCX to PDF | PDF and Image",
       description: "Word to PDF online for free: convert .docx and .doc files. Text, tables and images are kept, and conversion runs in your browser. Up to 100 MB.",
     },
     alternates: { canonical: `/${tool.slug}` },

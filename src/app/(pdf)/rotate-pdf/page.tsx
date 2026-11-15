@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Rotate PDF pages online for free by 90° or 180°. Turn all pages or only the ones you pick, and save the fixed PDF permanently. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Rotate PDF Online Free — Rotate PDF Pages | PDF and Image +",
+      title: "Rotate PDF Online Free — Rotate PDF Pages | PDF and Image",
       description: "Rotate PDF pages online for free by 90° or 180°. Turn all pages or only the ones you pick, and save the fixed PDF permanently. No sign-up.",
     },
     twitter: {
-      title: "Rotate PDF Online Free — Rotate PDF Pages | PDF and Image +",
+      title: "Rotate PDF Online Free — Rotate PDF Pages | PDF and Image",
       description: "Rotate PDF pages online for free by 90° or 180°. Turn all pages or only the ones you pick, and save the fixed PDF permanently. No sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },

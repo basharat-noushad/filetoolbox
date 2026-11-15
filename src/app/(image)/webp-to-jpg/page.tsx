@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert WebP to JPG online free. Pick the quality, batch convert many files to a ZIP, and get images that open in any app. Runs in your browser.",
     keywords: tool.keywords,
     openGraph: {
-      title: "WebP to JPG Converter Online Free | PDF and Image +",
+      title: "WebP to JPG Converter Online Free | PDF and Image",
       description: "Convert WebP to JPG online free. Pick the quality, batch convert many files to a ZIP, and get images that open in any app. Runs in your browser.",
     },
     twitter: {
-      title: "WebP to JPG Converter Online Free | PDF and Image +",
+      title: "WebP to JPG Converter Online Free | PDF and Image",
       description: "Convert WebP to JPG online free. Pick the quality, batch convert many files to a ZIP, and get images that open in any app. Runs in your browser.",
     },
     alternates: { canonical: `/${tool.slug}` },

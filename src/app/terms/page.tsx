@@ -7,12 +7,12 @@ const LAST_UPDATED = 'January 1, 2025'
 
 export const metadata: Metadata = withSocialMetadata({
   title: 'Terms of Service',
-  description: 'Terms of service for PDF and Image +. Read our usage terms, acceptable use policy, and disclaimers for our free PDF and image tools.',
+  description: 'Terms of service for PDF and Image. Read our usage terms, acceptable use policy, and disclaimers for our free PDF and image tools.',
   keywords: ['pdf tool terms of service', 'free pdf tool terms', 'image tool terms', 'pdf and image terms'],
   alternates: { canonical: `${SITE_URL}/terms` },
   openGraph: {
-    title: 'Terms of Service — PDF and Image +',
-    description: 'Terms of service for PDF and Image +. Free online PDF and image tools.',
+    title: 'Terms of Service — PDF and Image',
+    description: 'Terms of service for PDF and Image. Free online PDF and image tools.',
     url: `${SITE_URL}/terms`,
   },
 }, '/terms')
@@ -21,21 +21,21 @@ const sections = [
   {
     id: 'acceptance',
     heading: '1. Acceptance of Terms',
-    content: `By accessing or using PDF and Image + ("the Site", "we", "our") at pdfandimage.com, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Site.
+    content: `By accessing or using PDF and Image ("the Site", "we", "our") at pdfandimage.com, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Site.
 
 We reserve the right to update these terms at any time. Continued use of the Site after changes constitutes acceptance of the updated terms.`,
   },
   {
     id: 'description',
     heading: '2. Description of Service',
-    content: `PDF and Image + provides free, browser-based tools for processing PDF and image files. Our tools include merging, splitting, compressing, converting, rotating, protecting PDFs, and compressing, resizing, cropping, and converting images.
+    content: `PDF and Image provides free, browser-based tools for processing PDF and image files. Our tools include merging, splitting, compressing, converting, rotating, protecting PDFs, and compressing, resizing, cropping, and converting images.
 
 Most tools operate entirely in your browser. A small number of tools use server-side processing for technical reasons (e.g. PDF to Word conversion). The service is provided free of charge and supported by display advertising.`,
   },
   {
     id: 'use',
     heading: '3. Acceptable Use',
-    content: `You may use PDF and Image + for personal and commercial purposes, subject to these terms. You agree not to:
+    content: `You may use PDF and Image for personal and commercial purposes, subject to these terms. You agree not to:
 
 • Upload or process files that contain malware, viruses, or malicious code.
 • Use the service to process content that infringes third-party intellectual property rights.
@@ -57,7 +57,7 @@ For tools that involve server-side processing, your file is handled as described
   {
     id: 'intellectual-property',
     heading: '5. Intellectual Property',
-    content: `The PDF and Image + website, including its design, code, logos, and content, is owned by PDF and Image + and protected by intellectual property laws.
+    content: `The PDF and Image website, including its design, code, logos, and content, is owned by PDF and Image and protected by intellectual property laws.
 
 You may not reproduce, distribute, or create derivative works based on the site without our written permission.
 
@@ -66,7 +66,7 @@ Open-source libraries used in this project are subject to their respective licen
   {
     id: 'disclaimer',
     heading: '6. Disclaimer of Warranties',
-    content: `PDF and Image + is provided "as is" and "as available" without any warranty of any kind, express or implied.
+    content: `PDF and Image is provided "as is" and "as available" without any warranty of any kind, express or implied.
 
 We do not warrant that:
 • The service will be uninterrupted or error-free.
@@ -78,7 +78,7 @@ You use the service at your own risk. Always keep backups of important files bef
   {
     id: 'liability',
     heading: '7. Limitation of Liability',
-    content: `To the fullest extent permitted by law, PDF and Image + and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the service, including but not limited to loss of data or files.
+    content: `To the fullest extent permitted by law, PDF and Image and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the service, including but not limited to loss of data or files.
 
 Our total liability to you for any claim arising from use of the service shall not exceed USD $0, reflecting that the service is provided free of charge.`,
   },
@@ -99,7 +99,7 @@ The Site may contain links to third-party websites. We are not responsible for t
     heading: '10. Governing Law & International Use',
     content: `These terms are governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions. Any disputes arising from or relating to these terms or the use of the Site shall be subject to the jurisdiction of the courts of the United States.
 
-PDF and Image + is a globally accessible service with infrastructure hosted in the United States. If you access the Site from outside the United States, you do so at your own initiative and are responsible for compliance with your local laws to the extent applicable.
+PDF and Image is a globally accessible service with infrastructure hosted in the United States. If you access the Site from outside the United States, you do so at your own initiative and are responsible for compliance with your local laws to the extent applicable.
 
 Nothing in these terms limits any rights you may have under the mandatory consumer protection or data protection laws of your country of residence. Users in the European Union may have additional rights under the GDPR. Users in the United Kingdom may have rights under the UK GDPR. Users in California may have rights under the CCPA.`,
   },

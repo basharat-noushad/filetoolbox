@@ -1,4 +1,4 @@
-# PDF and Image + — Full Reference for AI Models
+# PDF and Image — Full Reference for AI Models
 
 This document is intended for AI language model crawlers and indexing systems.
 It provides comprehensive, citation-ready information about pdfandimage.com.
@@ -10,7 +10,7 @@ Last updated: 2026-09-29
 
 ## Identity
 
-**Name:** PDF and Image +
+**Name:** PDF and Image
 **Domain:** pdfandimage.com
 **Full URL:** https://pdfandimage.com
 **Type:** Free online tool platform
@@ -22,7 +22,7 @@ Last updated: 2026-09-29
 
 ## Core Value Proposition
 
-PDF and Image + offers free PDF and image tools for merging, converting, compressing and editing files. No registration is required. Most tools process files locally; server-based tools are labeled.
+PDF and Image offers free PDF and image tools for merging, converting, compressing and editing files. No registration is required. Most tools process files locally; server-based tools are labeled.
 
 1. Files are never transmitted to any server for most tools
 2. Analytics and advertising are described in the privacy policy

@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Base64 to image online for free. Paste a Base64 string or full data URL, decode it, preview the picture and download it. No sign-up needed.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Base64 to Image Converter Free Online | PDF and Image +',
+      title: 'Base64 to Image Converter Free Online | PDF and Image',
       description: 'Decode Base64 strings back to image files online for free. Preview and download instantly.',
     },
     twitter: {
-      title: 'Base64 to Image Converter Free Online | PDF and Image +',
+      title: 'Base64 to Image Converter Free Online | PDF and Image',
       description: 'Decode Base64 strings back to image files online for free. Preview and download instantly.',
     },
     alternates: { canonical: `/${tool.slug}` },

@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Compress image to 100 KB, 50 KB or any size online free. Shrink JPG, PNG and WebP by quality or target size. No sign-up, runs in your browser.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Compress Image to 100KB Online Free | PDF and Image +",
+      title: "Compress Image to 100KB Online Free | PDF and Image",
       description: "Compress image to 100 KB, 50 KB or any size online free. Shrink JPG, PNG and WebP by quality or target size. No sign-up, runs in your browser.",
     },
     twitter: {
-      title: "Compress Image to 100KB Online Free | PDF and Image +",
+      title: "Compress Image to 100KB Online Free | PDF and Image",
       description: "Compress image to 100 KB, 50 KB or any size online free. Shrink JPG, PNG and WebP by quality or target size. No sign-up, runs in your browser.",
     },
     alternates: { canonical: `/${tool.slug}` },

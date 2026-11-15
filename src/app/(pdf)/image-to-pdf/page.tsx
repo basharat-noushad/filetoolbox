@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert images to PDF online free. Mix JPG, PNG, WebP, GIF, BMP or AVIF files, in the order you pick them, and get one PDF. No upload, no sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Image to PDF Converter Online Free | PDF and Image +",
+      title: "Image to PDF Converter Online Free | PDF and Image",
       description: "Convert images to PDF online free. Mix JPG, PNG, WebP, GIF, BMP or AVIF files, in the order you pick them, and get one PDF. No upload, no sign-up.",
     },
     twitter: {
-      title: "Image to PDF Converter Online Free | PDF and Image +",
+      title: "Image to PDF Converter Online Free | PDF and Image",
       description: "Convert images to PDF online free. Mix JPG, PNG, WebP, GIF, BMP or AVIF files, in the order you pick them, and get one PDF. No upload, no sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },

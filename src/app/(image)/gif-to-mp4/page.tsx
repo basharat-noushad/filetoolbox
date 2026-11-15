@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "GIF to MP4 Converter Online Free — Smaller Video",
     description: "Convert GIF to MP4 online for free. Turn an animated GIF into a smaller MP4 video that plays almost anywhere, processed in your browser with FFmpeg.",
     keywords: tool.keywords,
-    openGraph: { title: 'GIF to MP4 Converter Free | PDF and Image +', description: 'Convert animated GIFs to MP4 video online for free. Browser-based WebAssembly processing.' },
-    twitter: { title: 'GIF to MP4 Converter Free | PDF and Image +', description: 'Convert animated GIFs to MP4 video online for free. Browser-based WebAssembly processing.' },
+    openGraph: { title: 'GIF to MP4 Converter Free | PDF and Image', description: 'Convert animated GIFs to MP4 video online for free. Browser-based WebAssembly processing.' },
+    twitter: { title: 'GIF to MP4 Converter Free | PDF and Image', description: 'Convert animated GIFs to MP4 video online for free. Browser-based WebAssembly processing.' },
     alternates: { canonical: `/${tool.slug}` },
   }, '/gif-to-mp4')
 }

@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert PDF to PDF/A-2b online for free for long-term archiving. Fonts are embedded and an sRGB profile added. Files never leave your device.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'PDF to PDF/A Converter Free Online | PDF and Image +',
+      title: 'PDF to PDF/A Converter Free Online | PDF and Image',
       description: "Convert PDF to PDF/A-2b online for free for long-term archiving. Fonts are embedded and an sRGB profile added. Files never leave your device.",
     },
     twitter: {
-      title: 'PDF to PDF/A Converter Free Online | PDF and Image +',
+      title: 'PDF to PDF/A Converter Free Online | PDF and Image',
       description: "Convert PDF to PDF/A-2b online for free for long-term archiving. Fonts are embedded and an sRGB profile added. Files never leave your device.",
     },
     alternates: { canonical: `/${tool.slug}` },

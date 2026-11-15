@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Unlock PDF online for free. Enter the password you know and download an unlocked copy. Processed in your browser, never uploaded to a server.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Unlock PDF Online Free — Remove Password | PDF and Image +",
+      title: "Unlock PDF Online Free — Remove Password | PDF and Image",
       description: "Unlock PDF online for free. Enter the password you know and download an unlocked copy. Processed in your browser, never uploaded to a server.",
     },
     twitter: {
-      title: "Unlock PDF Online Free — Remove Password | PDF and Image +",
+      title: "Unlock PDF Online Free — Remove Password | PDF and Image",
       description: "Unlock PDF online for free. Enter the password you know and download an unlocked copy. Processed in your browser, never uploaded to a server.",
     },
     alternates: { canonical: `/${tool.slug}` },

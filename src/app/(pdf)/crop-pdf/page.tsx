@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Crop PDF Online Free — Trim PDF Margins",
     description: "Crop PDF online for free. Set top, right, bottom and left margins in points, applied to every page at once. Instant results, no registration.",
     keywords: tool.keywords,
-    openGraph: { title: 'Crop PDF Online Free | PDF and Image +', description: 'Crop PDF margins online for free. Set top, right, bottom, and left margins. Instant processing.' },
-    twitter: { title: 'Crop PDF Online Free | PDF and Image +', description: 'Crop PDF margins online for free. Set top, right, bottom, and left margins. Instant processing.' },
+    openGraph: { title: 'Crop PDF Online Free | PDF and Image', description: 'Crop PDF margins online for free. Set top, right, bottom, and left margins. Instant processing.' },
+    twitter: { title: 'Crop PDF Online Free | PDF and Image', description: 'Crop PDF margins online for free. Set top, right, bottom, and left margins. Instant processing.' },
     alternates: { canonical: `/${tool.slug}` },
   }, '/crop-pdf')
 }

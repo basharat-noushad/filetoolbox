@@ -5,11 +5,11 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimag
 // Next replaces nested metadata objects rather than merging their fields.
 export function withSocialMetadata(metadata: Metadata, path: string): Metadata {
   const title = typeof metadata.title === 'string' ? metadata.title : undefined
-  const images = [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: 'PDF and Image + — free PDF and image tools' }]
+  const images = [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: 'PDF and Image — free PDF and image tools' }]
   return {
     ...metadata,
     openGraph: {
-      type: 'website', siteName: 'PDF and Image +', locale: 'en_US',
+      type: 'website', siteName: 'PDF and Image', locale: 'en_US',
       title, description: metadata.description || undefined,
       ...metadata.openGraph,
       url: `${SITE_URL}${path === '/' ? '' : path}`,

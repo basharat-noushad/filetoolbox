@@ -6,11 +6,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com'
 
 export const metadata: Metadata = withSocialMetadata({
   title: 'Help Centre — FAQ & Support',
-  description: 'Find answers to common questions about PDF and Image + tools. Learn about file formats, browser support, file size limits, privacy, and more.',
+  description: 'Find answers to common questions about PDF and Image tools. Learn about file formats, browser support, file size limits, privacy, and more.',
   keywords: ['pdf tool help', 'pdf and image faq', 'how to merge pdf', 'how to compress image online', 'pdf tool support', 'image converter help'],
   alternates: { canonical: `${SITE_URL}/help` },
   openGraph: {
-    title: 'Help Centre — PDF and Image + FAQ & Support',
+    title: 'Help Centre — PDF and Image FAQ & Support',
     description: 'Answers to common questions about our free PDF and image tools.',
     url: `${SITE_URL}/help`,
   },
@@ -25,7 +25,7 @@ const faqSchema = {
       name: 'Are the tools really free?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, all tools on PDF and Image + are completely free. There are no subscriptions, no hidden fees, and no credits system. The service is supported by display advertising.',
+        text: 'Yes, all tools on PDF and Image are completely free. There are no subscriptions, no hidden fees, and no credits system. The service is supported by display advertising.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Which browsers are supported?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PDF and Image + works on all modern browsers: Google Chrome, Mozilla Firefox, Apple Safari, and Microsoft Edge. We recommend using an up-to-date version for the best experience.',
+        text: 'PDF and Image works on all modern browsers: Google Chrome, Mozilla Firefox, Apple Safari, and Microsoft Edge. We recommend using an up-to-date version for the best experience.',
       },
     },
     {
@@ -191,7 +191,7 @@ export default function HelpPage() {
           <div className="max-w-2xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-4">Help Centre</h1>
             <p className="text-brand-300 text-lg">
-              Answers to the most common questions about PDF and Image + tools.
+              Answers to the most common questions about PDF and Image tools.
             </p>
           </div>
         </section>

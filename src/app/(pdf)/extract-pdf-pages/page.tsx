@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Extract PDF Pages Online Free — Save as PDF",
     description: "Extract PDF pages online for free into a new PDF. Enter pages such as 1,3,5-7 and download one file. Processed in your browser, no sign-up.",
     keywords: tool.keywords,
-    openGraph: { title: 'Extract PDF Pages Online Free | PDF and Image +', description: 'Extract specific pages from any PDF online for free. Enter page numbers or ranges.' },
-    twitter: { title: 'Extract PDF Pages Online Free | PDF and Image +', description: 'Extract specific pages from any PDF online for free. Enter page numbers or ranges.' },
+    openGraph: { title: 'Extract PDF Pages Online Free | PDF and Image', description: 'Extract specific pages from any PDF online for free. Enter page numbers or ranges.' },
+    twitter: { title: 'Extract PDF Pages Online Free | PDF and Image', description: 'Extract specific pages from any PDF online for free. Enter page numbers or ranges.' },
     alternates: { canonical: `/${tool.slug}` },
   }, '/extract-pdf-pages')
 }

@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "PDF to Word online for free: convert to editable .docx. Runs in your browser, with OCR for scanned pages. Files up to 100 MB, no sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: "PDF to Word Online Free — Convert to DOCX | PDF and Image +",
+      title: "PDF to Word Online Free — Convert to DOCX | PDF and Image",
       description: "PDF to Word online for free: convert to editable .docx. Runs in your browser, with OCR for scanned pages. Files up to 100 MB, no sign-up.",
     },
     twitter: {
-      title: "PDF to Word Online Free — Convert to DOCX | PDF and Image +",
+      title: "PDF to Word Online Free — Convert to DOCX | PDF and Image",
       description: "PDF to Word online for free: convert to editable .docx. Runs in your browser, with OCR for scanned pages. Files up to 100 MB, no sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },

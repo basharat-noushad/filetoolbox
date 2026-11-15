@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Add text to image online for free. Type your caption, set the font size and text color, then download the finished picture. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Add Text to Image Online Free — Photo Text Editor | PDF and Image +',
+      title: 'Add Text to Image Online Free — Photo Text Editor | PDF and Image',
       description: 'Add custom text to photos and images online for free. Choose font size and color.',
     },
     twitter: {
-      title: 'Add Text to Image Online Free — Photo Text Editor | PDF and Image +',
+      title: 'Add Text to Image Online Free — Photo Text Editor | PDF and Image',
       description: 'Add custom text to photos and images online for free. Choose font size and color.',
     },
     alternates: { canonical: `/${tool.slug}` },

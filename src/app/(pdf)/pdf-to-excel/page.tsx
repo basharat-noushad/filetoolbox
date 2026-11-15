@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert PDF to Excel (.xlsx) online for free. Extracts tables and data, and reads scanned pages with OCR in your browser. Up to 100 MB, no sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: "PDF to Excel Online Free — Convert to XLSX | PDF and Image +",
+      title: "PDF to Excel Online Free — Convert to XLSX | PDF and Image",
       description: 'Convert PDF files to Excel spreadsheets (.xlsx) online for free. Extract tables and data from any PDF.',
     },
     twitter: {
-      title: "PDF to Excel Online Free — Convert to XLSX | PDF and Image +",
+      title: "PDF to Excel Online Free — Convert to XLSX | PDF and Image",
       description: 'Convert PDF files to Excel spreadsheets (.xlsx) online for free. Extract tables and data from any PDF.',
     },
     alternates: { canonical: `/${tool.slug}` },

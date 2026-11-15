@@ -12,7 +12,7 @@ export const metadata: Metadata = withSocialMetadata({
   keywords: ['pdf tips', 'how to merge pdf', 'compress pdf guide', 'image conversion tutorial', 'pdf to word how to', 'free pdf tools guide'],
   alternates: { canonical: `${SITE_URL}/blog` },
   openGraph: {
-    title: 'Blog — PDF & Image Tips, Tutorials and Guides | PDF and Image +',
+    title: 'Blog — PDF & Image Tips, Tutorials and Guides | PDF and Image',
     description: 'Tutorials and guides for working with PDF and image files online for free.',
     url: `${SITE_URL}/blog`,
   },
@@ -21,10 +21,10 @@ export const metadata: Metadata = withSocialMetadata({
 const blogSchema = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
-  name: 'PDF and Image + Blog',
+  name: 'PDF and Image Blog',
   url: `${SITE_URL}/blog`,
   description: 'Tips, tutorials and guides for PDF and image processing.',
-  publisher: { '@type': 'Organization', name: 'PDF and Image +', url: SITE_URL },
+  publisher: { '@type': 'Organization', name: 'PDF and Image', url: SITE_URL },
 }
 
 // Derived from single source of truth — blogPosts.ts

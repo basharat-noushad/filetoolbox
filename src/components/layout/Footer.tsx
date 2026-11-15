@@ -82,7 +82,7 @@ export function Footer() {
             </div>
             <Image
               src="/logo.svg"
-              alt="PDF and Image +"
+              alt="PDF and Image"
               width={130}
               height={32}
               className="brightness-0 invert opacity-90"
@@ -189,7 +189,7 @@ export function Footer() {
       <div className="border-t border-brand-800">
         <div className="max-w-7xl mx-auto px-6 h-11 flex items-center justify-between gap-4">
           <span className="text-[12px] text-slate-400">
-            © {new Date().getFullYear()} PDF and Image +. All rights reserved.
+            © {new Date().getFullYear()} PDF and Image. All rights reserved.
           </span>
           <nav className="flex items-center gap-4" aria-label="Footer legal links">
             {[

@@ -251,7 +251,7 @@ export function buildPayload(kind: QrKind, f: QrFields): PayloadResult {
         if (end <= start) return bad('The end time must be after the start time.')
       }
       const d = allDay ? ';VALUE=DATE' : ''
-      return ok(['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//PDF and Image +//QR//EN', 'BEGIN:VEVENT',
+      return ok(['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//PDF and Image//QR//EN', 'BEGIN:VEVENT',
         `DTSTAMP:${allDay ? `${start}T000000Z` : start}`, `DTSTART${d}:${start}`, `DTEND${d}:${end}`,
         `SUMMARY:${vEsc(title)}`, f.evLoc && `LOCATION:${vEsc(f.evLoc)}`, f.evDesc && `DESCRIPTION:${vEsc(f.evDesc)}`,
         'END:VEVENT', 'END:VCALENDAR'].filter(Boolean).join('\r\n'))

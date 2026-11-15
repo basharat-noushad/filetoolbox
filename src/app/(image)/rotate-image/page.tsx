@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Rotate image online free by 90°, 180° or 270°. Fix sideways phone photos, apply several rotations, then download. No sign-up needed.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Rotate Image Online Free — 90°, 180°, 270° | PDF and Image +",
+      title: "Rotate Image Online Free — 90°, 180°, 270° | PDF and Image",
       description: "Rotate image online free by 90°, 180° or 270°. Fix sideways phone photos, apply several rotations, then download. No sign-up needed.",
     },
     twitter: {
-      title: "Rotate Image Online Free — 90°, 180°, 270° | PDF and Image +",
+      title: "Rotate Image Online Free — 90°, 180°, 270° | PDF and Image",
       description: "Rotate image online free by 90°, 180° or 270°. Fix sideways phone photos, apply several rotations, then download. No sign-up needed.",
     },
     alternates: { canonical: `/${tool.slug}` },

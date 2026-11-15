@@ -13,8 +13,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     keywords: tool.keywords,
-    openGraph: { title: `${title} | PDF and Image +`, description },
-    twitter: { title: `${title} | PDF and Image +`, description },
+    openGraph: { title: `${title} | PDF and Image`, description },
+    twitter: { title: `${title} | PDF and Image`, description },
     alternates: { canonical: `/${tool.slug}` },
   }, '/qr-code-scanner')
 }

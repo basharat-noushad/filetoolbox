@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Resize image in cm, mm, inches or pixels online free. Set DPI and a max file size in KB, resize up to 20 images at once. Runs in your browser.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Resize Image in cm, KB or px Online Free | PDF and Image +",
+      title: "Resize Image in cm, KB or px Online Free | PDF and Image",
       description: "Resize image in cm, mm, inches or pixels online free. Set DPI and a max file size in KB, resize up to 20 images at once. Runs in your browser.",
     },
     twitter: {
-      title: "Resize Image in cm, KB or px Online Free | PDF and Image +",
+      title: "Resize Image in cm, KB or px Online Free | PDF and Image",
       description: "Resize image in cm, mm, inches or pixels online free. Set DPI and a max file size in KB, resize up to 20 images at once. Runs in your browser.",
     },
     alternates: { canonical: `/${tool.slug}` },

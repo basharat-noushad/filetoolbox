@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Add page numbers to PDF online for free. Pick bottom center, bottom right or top center, then download. Runs in your browser, no sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Add Page Numbers to PDF Online Free | PDF and Image +',
+      title: 'Add Page Numbers to PDF Online Free | PDF and Image',
       description: "Add page numbers to PDF online for free. Pick bottom center, bottom right or top center, then download. Runs in your browser, no sign-up.",
     },
     twitter: {
-      title: 'Add Page Numbers to PDF Online Free | PDF and Image +',
+      title: 'Add Page Numbers to PDF Online Free | PDF and Image',
       description: "Add page numbers to PDF online for free. Pick bottom center, bottom right or top center, then download. Runs in your browser, no sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },

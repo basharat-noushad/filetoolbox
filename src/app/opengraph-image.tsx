@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'PDF and Image + — Free PDF & Image Tools Online'
+export const alt = 'PDF and Image — Free PDF & Image Tools Online'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -31,7 +31,7 @@ export default function Image() {
             P+
           </div>
           <span style={{ fontSize: 58, fontWeight: 800, color: 'white', letterSpacing: '-1px' }}>
-            PDF and Image +
+            PDF and Image
           </span>
         </div>
 

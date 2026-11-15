@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Blur faces in photos automatically, or blur plates, text or the background. Face detection runs in your browser: no sign-up, no upload.",
     keywords: [...tool.keywords, 'blur background of photo', 'blur background online free', 'background blur portrait', 'blur part of image online free', 'blur face in photo', 'blur faces automatically', 'pixelate faces online', 'anonymize faces in photo', 'pixelate part of image', 'censor image'],
     openGraph: {
-      title: 'Blur Faces & Background in Photos Free | PDF and Image +',
+      title: 'Blur Faces & Background in Photos Free | PDF and Image',
       description: 'Blur a whole image, selected areas like faces, or the background behind people, free, in your browser. Files never leave your device.',
     },
     twitter: {
-      title: 'Blur Faces & Background in Photos Free | PDF and Image +',
+      title: 'Blur Faces & Background in Photos Free | PDF and Image',
       description: 'Blur a whole image or just the background behind people, free, in your browser. Files never leave your device.',
     },
     alternates: { canonical: `/${tool.slug}` },

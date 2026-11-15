@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert JPG to WebP online free, and PNG to WebP too. Smaller files for faster pages. Up to 20 images as one ZIP. No sign-up required.",
     keywords: tool.keywords,
     openGraph: {
-      title: "JPG to WebP Converter Online Free — JPG & PNG | PDF and Image +",
+      title: "JPG to WebP Converter Online Free — JPG & PNG | PDF and Image",
       description: "Convert JPG to WebP online free, and PNG to WebP too. Smaller files for faster pages. Up to 20 images as one ZIP. No sign-up required.",
     },
     twitter: {
-      title: "JPG to WebP Converter Online Free — JPG & PNG | PDF and Image +",
+      title: "JPG to WebP Converter Online Free — JPG & PNG | PDF and Image",
       description: "Convert JPG to WebP online free, and PNG to WebP too. Smaller files for faster pages. Up to 20 images as one ZIP. No sign-up required.",
     },
     alternates: { canonical: `/${tool.slug}` },

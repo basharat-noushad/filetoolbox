@@ -8,12 +8,12 @@ const LAST_UPDATED_DISPLAY = 'January 1, 2025'
 
 export const metadata: Metadata = withSocialMetadata({
   title: 'Privacy Policy',
-  description: 'PDF and Image + privacy policy. Learn which tools process files locally, which use a server, and how analytics and advertising are used.',
+  description: 'PDF and Image privacy policy. Learn which tools process files locally, which use a server, and how analytics and advertising are used.',
   keywords: ['pdf tool privacy policy', 'no data collection pdf tool', 'browser based private pdf', 'image tool privacy'],
   alternates: { canonical: `${SITE_URL}/privacy` },
   openGraph: {
-    title: 'Privacy Policy — PDF and Image +',
-    description: 'File processing, server-based tools, analytics and advertising on PDF and Image +.',
+    title: 'Privacy Policy — PDF and Image',
+    description: 'File processing, server-based tools, analytics and advertising on PDF and Image.',
     url: `${SITE_URL}/privacy`,
   },
 }, '/privacy')
@@ -24,19 +24,19 @@ const privacySchema = {
   '@type': 'WebPage',
   '@id': `${SITE_URL}/privacy`,
   url: `${SITE_URL}/privacy`,
-  name: 'Privacy Policy — PDF and Image +',
+  name: 'Privacy Policy — PDF and Image',
   description: 'Privacy policy for pdfandimage.com. Information about local and server file processing, analytics and advertising.',
   datePublished: '2025-01-01',
   dateModified: LAST_UPDATED,
-  isPartOf: { '@type': 'WebSite', name: 'PDF and Image +', url: SITE_URL },
+  isPartOf: { '@type': 'WebSite', name: 'PDF and Image', url: SITE_URL },
   about: {
     '@type': 'Organization',
-    name: 'PDF and Image +',
+    name: 'PDF and Image',
     url: SITE_URL,
   },
   publisher: {
     '@type': 'Organization',
-    name: 'PDF and Image +',
+    name: 'PDF and Image',
     url: SITE_URL,
     logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.svg` },
   },
@@ -47,7 +47,7 @@ const sections = [
   {
     id: 'overview',
     heading: '1. Overview',
-    content: `PDF and Image + ("we", "our", "the site") is a free online tool suite for PDF and image processing available at pdfandimage.com. We are committed to protecting your privacy. This policy explains what information we collect, how we use it, and what we never do with your data.
+    content: `PDF and Image ("we", "our", "the site") is a free online tool suite for PDF and image processing available at pdfandimage.com. We are committed to protecting your privacy. This policy explains what information we collect, how we use it, and what we never do with your data.
 
 Most tools process selected files in your browser. Some tools send files to a processing service. The site also uses analytics and advertising services described below.`,
   },
@@ -77,7 +77,7 @@ Neither service receives any of your file content. All data collected is aggrega
   {
     id: 'advertising',
     heading: '4. Advertising',
-    content: `PDF and Image + is supported by display advertising provided by Google AdSense. Google may use cookies and similar technologies to show you relevant ads based on your browsing history.
+    content: `PDF and Image is supported by display advertising provided by Google AdSense. Google may use cookies and similar technologies to show you relevant ads based on your browsing history.
 
 You can manage your ad personalisation settings at g.co/adsettings or opt out of personalised advertising via the NAI opt-out page at optout.networkadvertising.org.`,
   },
@@ -113,7 +113,7 @@ We do not sell, trade, or rent personal information to third parties under any c
   {
     id: 'childrens',
     heading: "8. Children's Privacy",
-    content: `PDF and Image + is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.`,
+    content: `PDF and Image is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.`,
   },
   {
     id: 'changes',

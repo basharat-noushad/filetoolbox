@@ -14,13 +14,13 @@ const plusJakarta = Plus_Jakarta_Sans({
 })
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com').replace(/\/$/, '')
-const ORG_NAME  = 'PDF and Image +'
+const ORG_NAME  = 'PDF and Image'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    template: '%s | PDF and Image +',
-    default: 'PDF and Image + — Free PDF & Image Tools Online',
+    template: '%s | PDF and Image',
+    default: 'PDF and Image — Free PDF & Image Tools Online',
   },
   description: 'Free online PDF and image tools to merge, compress, convert, crop and resize files. No sign-up required. Most tools process files directly in your browser.',
   keywords: [
@@ -83,6 +83,8 @@ const websiteSchema = {
   '@type': 'WebSite',
   '@id': `${SITE_URL}/#website`,
   name: ORG_NAME,
+  // Google reads WebSite.alternateName for the site name shown in search results.
+  alternateName: ['pdfandimage', 'pdfandimage.com', 'PDF & Image'],
   url: SITE_URL,
   description: 'Free online PDF and image tools. Merge, compress, convert, crop and resize files without signing up.',
   inLanguage: 'en',
@@ -94,7 +96,7 @@ const organizationSchema = {
   '@type': 'Organization',
   '@id': `${SITE_URL}/#organization`,
   name: ORG_NAME,
-  alternateName: ['PDF and Image Plus', 'pdfandimage.com', 'PDF Image Tools'],
+  alternateName: ['pdfandimage', 'pdfandimage.com', 'PDF & Image', 'PDF and Image Plus'],
   url: SITE_URL,
   logo: {
     '@type': 'ImageObject',
@@ -103,7 +105,7 @@ const organizationSchema = {
     height: 60,
     caption: `${ORG_NAME} logo`,
   },
-  description: 'PDF and Image + provides free tools for PDF and image processing. Most tools run locally in your browser; some conversions use a processing server. No registration required.',
+  description: 'PDF and Image provides free tools for PDF and image processing. Most tools run locally in your browser; some conversions use a processing server. No registration required.',
   areaServed: 'Worldwide',
   knowsAbout: [
     'PDF processing', 'Image editing', 'File format conversion',

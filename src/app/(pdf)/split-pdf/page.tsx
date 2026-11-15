@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Split PDF by page range, every N pages or max file size (2, 5, 10 MB) online for free. Runs in your browser, no upload, no registration.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Split PDF Online Free — By Pages or File Size | PDF and Image +",
+      title: "Split PDF Online Free — By Pages or File Size | PDF and Image",
       description: "Split PDF by page range, every N pages or max file size (2, 5, 10 MB) online for free. Runs in your browser, no upload, no registration.",
     },
     twitter: {
-      title: "Split PDF Online Free — By Pages or File Size | PDF and Image +",
+      title: "Split PDF Online Free — By Pages or File Size | PDF and Image",
       description: "Split PDF by page range, every N pages or max file size (2, 5, 10 MB) online for free. Runs in your browser, no upload, no registration.",
     },
     alternates: { canonical: `/${tool.slug}` },

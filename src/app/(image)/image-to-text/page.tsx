@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Image to text converter with OCR: extract text from a photo, screenshot or scan in your browser. Paste with Ctrl+V, copy or save as .txt.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Image to Text Converter Online Free | PDF and Image +",
+      title: "Image to Text Converter Online Free | PDF and Image",
       description: "Image to text converter with OCR: extract text from a photo, screenshot or scan in your browser. Paste with Ctrl+V, copy or save as .txt.",
     },
     twitter: {
-      title: "Image to Text Converter Online Free | PDF and Image +",
+      title: "Image to Text Converter Online Free | PDF and Image",
       description: "Image to text converter with OCR: extract text from a photo, screenshot or scan in your browser. Paste with Ctrl+V, copy or save as .txt.",
     },
     alternates: { canonical: `/${tool.slug}` },

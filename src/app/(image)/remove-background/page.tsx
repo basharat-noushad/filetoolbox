@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Remove background from image online free with AI, then keep it transparent or switch to a white, blue or custom color. Photos are sent to an AI service.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Remove Background & Change Color Online Free | PDF and Image +",
+      title: "Remove Background & Change Color Online Free | PDF and Image",
       description: 'Remove image backgrounds automatically in seconds using AI. Free, transparent PNG output, no registration.',
     },
     twitter: {
-      title: "Remove Background & Change Color Online Free | PDF and Image +",
+      title: "Remove Background & Change Color Online Free | PDF and Image",
       description: 'Remove image backgrounds automatically in seconds using AI. Free, transparent PNG output, no registration.',
     },
     alternates: { canonical: `/${tool.slug}` },

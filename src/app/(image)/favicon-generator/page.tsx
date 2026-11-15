@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'Favicon Generator from Image, PNG or SVG',
     description: 'Favicon generator online free: turn a PNG, JPG, WebP or SVG logo into favicon.ico plus Apple touch and Android icons. Runs in your browser.',
     keywords: tool.keywords,
-    openGraph: { title: 'Favicon Generator from Image | PDF and Image +', description: 'Create favicon.ico, apple-touch-icon and PWA icons from your logo. Free, private, no upload.' },
-    twitter: { title: 'Favicon Generator from Image | PDF and Image +', description: 'Create favicon.ico, apple-touch-icon and PWA icons from your logo. Free, private, no upload.' },
+    openGraph: { title: 'Favicon Generator from Image | PDF and Image', description: 'Create favicon.ico, apple-touch-icon and PWA icons from your logo. Free, private, no upload.' },
+    twitter: { title: 'Favicon Generator from Image | PDF and Image', description: 'Create favicon.ico, apple-touch-icon and PWA icons from your logo. Free, private, no upload.' },
     alternates: { canonical: `/${tool.slug}` },
   }, '/favicon-generator')
 }

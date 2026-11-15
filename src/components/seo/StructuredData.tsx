@@ -1,7 +1,7 @@
 import { Tool } from '@/types/tools'
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com').replace(/\/$/, '')
-const ORG_NAME = 'PDF and Image +'
+const ORG_NAME = 'PDF and Image'
 
 export function StructuredData({ tool, howToSteps, faqs }: {
   tool: Tool

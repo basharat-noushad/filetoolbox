@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert SVG to PNG online for free in seconds. Set a custom width or height for your image, then download the PNG. No sign-up required.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'SVG to PNG Converter Free Online | PDF and Image +',
+      title: 'SVG to PNG Converter Free Online | PDF and Image',
       description: 'Convert SVG vector files to PNG images online for free. Set custom dimensions for the output.',
     },
     twitter: {
-      title: 'SVG to PNG Converter Free Online | PDF and Image +',
+      title: 'SVG to PNG Converter Free Online | PDF and Image',
       description: 'Convert SVG vector files to PNG images online for free. Set custom dimensions for the output.',
     },
     alternates: { canonical: `/${tool.slug}` },

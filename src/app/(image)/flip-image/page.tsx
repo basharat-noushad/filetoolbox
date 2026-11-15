@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Flip image online free horizontally or vertically in one click. Mirror any photo without quality loss. No sign-up needed to use the tool.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Flip Image Online Free — Horizontal or Vertical | PDF and Image +",
+      title: "Flip Image Online Free — Horizontal or Vertical | PDF and Image",
       description: "Flip image online free horizontally or vertically in one click. Mirror any photo without quality loss. No sign-up needed to use the tool.",
     },
     twitter: {
-      title: "Flip Image Online Free — Horizontal or Vertical | PDF and Image +",
+      title: "Flip Image Online Free — Horizontal or Vertical | PDF and Image",
       description: "Flip image online free horizontally or vertically in one click. Mirror any photo without quality loss. No sign-up needed to use the tool.",
     },
     alternates: { canonical: `/${tool.slug}` },

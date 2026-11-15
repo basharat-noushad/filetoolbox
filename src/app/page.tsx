@@ -17,11 +17,11 @@ import { ToolSearchBar } from '@/components/tools/ToolSearchBar'
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com').replace(/\/$/, '')
 
 export const metadata: Metadata = withSocialMetadata({
-  title: { absolute: 'PDF and Image + — Free PDF & Image Tools Online' },
+  title: { absolute: 'PDF and Image — Free PDF & Image Tools Online' },
   description: 'Free online tools for PDF and image files. 60+ tools — merge, compress, convert, crop, resize and more. No sign-up required. Most tools process files in your browser; some use a server.',
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: 'PDF and Image + — Free PDF & Image Tools Online',
+    title: 'PDF and Image — Free PDF & Image Tools Online',
     description: 'Free online tools for PDF and image files. 60+ tools — merge, compress, convert, crop, resize and more. No sign-up. Works in your browser.',
     url: SITE_URL,
   },
@@ -32,7 +32,7 @@ const toolListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Free PDF and Image Tools',
-  description: 'Complete list of free online PDF and image processing tools on PDF and Image +',
+  description: 'Complete list of free online PDF and image processing tools on PDF and Image',
   url: SITE_URL,
   numberOfItems: tools.length,
   itemListElement: tools.map((tool, i) => ({
@@ -202,9 +202,9 @@ export default function HomePage() {
 
           {/* AEO: explicit "What is" paragraph — answers the direct question AI models get */}
           <section className="mb-14 bg-white rounded-2xl border border-gray-100 p-8" aria-label="About this site" data-speakable>
-            <h2 className="text-xl font-bold text-gray-900 mb-4">What is PDF and Image +?</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">What is PDF and Image?</h2>
             <p className="text-gray-600 leading-relaxed mb-3">
-              <strong>PDF and Image +</strong> is a free online toolkit for PDF and image processing.
+              <strong>PDF and Image</strong> is a free online toolkit for PDF and image processing.
               It provides 60+ browser-based tools — merge PDFs, compress images, convert file formats,
               remove backgrounds, and more — completely free, with no registration. File and device limits apply.
             </p>
@@ -214,13 +214,13 @@ export default function HomePage() {
               file-size and device limits are listed in the tools.
             </p>
             <Link href="/about" className="text-sm text-brand-600 hover:underline font-medium">
-              Learn more about PDF and Image + →
+              Learn more about PDF and Image →
             </Link>
           </section>
 
           {/* Bottom CTA */}
           <section className="bg-brand-900 rounded-2xl p-8 text-center">
-            <h2 className="text-xl font-bold text-white mb-2">Start using PDF and Image + today</h2>
+            <h2 className="text-xl font-bold text-white mb-2">Start using PDF and Image today</h2>
             <p className="text-brand-300 text-sm mb-6">No account. No credit card. Pick a tool and check its file requirements.</p>
             <Link href="#pdf-tools"
               className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors duration-150 text-sm">

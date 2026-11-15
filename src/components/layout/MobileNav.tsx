@@ -100,7 +100,7 @@ export function MobileNav() {
         {/* Drawer header */}
         <div className="flex items-center justify-between px-4 h-14 border-b border-gray-200">
           <Link href="/" onClick={close} className="hover:opacity-80 transition-opacity">
-            <Image src="/logo.svg" alt="PDF and Image +" width={140} height={36} />
+            <Image src="/logo.svg" alt="PDF and Image" width={140} height={36} />
           </Link>
           <button onClick={close} className="p-2 text-gray-400 hover:text-gray-600 transition-colors" aria-label="Close menu">
             <X className="w-5 h-5" />

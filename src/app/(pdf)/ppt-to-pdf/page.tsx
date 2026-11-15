@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "PPT to PDF online for free: convert .pptx and .ppt presentations. Each slide becomes a page with selectable text. Up to 100 MB, no sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: "PPT to PDF Online Free — Convert PowerPoint | PDF and Image +",
+      title: "PPT to PDF Online Free — Convert PowerPoint | PDF and Image",
       description: 'Convert PowerPoint presentations (.pptx, .ppt) to PDF online for free. All slides preserved.',
     },
     twitter: {
-      title: "PPT to PDF Online Free — Convert PowerPoint | PDF and Image +",
+      title: "PPT to PDF Online Free — Convert PowerPoint | PDF and Image",
       description: 'Convert PowerPoint presentations (.pptx, .ppt) to PDF online for free. All slides preserved.',
     },
     alternates: { canonical: `/${tool.slug}` },

@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Protect PDF online free: add an AES-256 password or block printing, copying and editing. Runs in your browser, so files never leave your device.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Protect PDF Online Free — Password & Permissions | PDF and Image +",
+      title: "Protect PDF Online Free — Password & Permissions | PDF and Image",
       description: 'Password protect a PDF or restrict printing, copying and editing. Free, in your browser, no sign-up.',
     },
     twitter: {
-      title: "Protect PDF Online Free — Password & Permissions | PDF and Image +",
+      title: "Protect PDF Online Free — Password & Permissions | PDF and Image",
       description: 'Password protect a PDF or restrict printing, copying and editing. Free, in your browser, no sign-up.',
     },
     alternates: { canonical: `/${tool.slug}` },

@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert AVIF to JPG online for free. Turn AVIF photos into JPG files that open everywhere, in batches, right in your browser with no upload.",
     keywords: tool.keywords,
     openGraph: {
-      title: "AVIF to JPG Converter Online Free | PDF and Image +",
+      title: "AVIF to JPG Converter Online Free | PDF and Image",
       description: "Convert AVIF to JPG online for free. Turn AVIF photos into JPG files that open everywhere, in batches, right in your browser with no upload.",
     },
     twitter: {
-      title: "AVIF to JPG Converter Online Free | PDF and Image +",
+      title: "AVIF to JPG Converter Online Free | PDF and Image",
       description: "Convert AVIF to JPG online for free. Turn AVIF photos into JPG files that open everywhere, in batches, right in your browser with no upload.",
     },
     alternates: { canonical: `/${tool.slug}` },

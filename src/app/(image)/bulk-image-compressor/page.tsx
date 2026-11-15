@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Bulk Image Compressor Free — Batch to ZIP",
     description: "Bulk image compressor online for free. Compress up to 20 images to a 0.5, 1 or 2 MB target, optionally cap width and height, then get one ZIP.",
     keywords: tool.keywords,
-    openGraph: { title: 'Bulk Image Compressor Free | PDF and Image +', description: 'Compress up to 20 images at once and download as ZIP. Free, fast, browser-based.' },
-    twitter: { title: 'Bulk Image Compressor Free | PDF and Image +', description: 'Compress up to 20 images at once and download as ZIP. Free, fast, browser-based.' },
+    openGraph: { title: 'Bulk Image Compressor Free | PDF and Image', description: 'Compress up to 20 images at once and download as ZIP. Free, fast, browser-based.' },
+    twitter: { title: 'Bulk Image Compressor Free | PDF and Image', description: 'Compress up to 20 images at once and download as ZIP. Free, fast, browser-based.' },
     alternates: { canonical: `/${tool.slug}` },
   }, '/bulk-image-compressor')
 }

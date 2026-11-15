@@ -1,10 +1,10 @@
-# PDF and Image +
+# PDF and Image
 
 > Free browser-based PDF and image tools. 50+ tools. No sign-up, no watermarks. Most tools process files locally in the browser; tools marked "Server processing" upload files to a processing service.
 
-## What is PDF and Image +?
+## What is PDF and Image?
 
-PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image processing. Most tools run locally in the browser; tools labeled Server processing upload files to a processing service. There is no registration, no subscription, and no watermarks on any output.
+PDF and Image (pdfandimage.com) is a free online toolkit for PDF and image processing. Most tools run locally in the browser; tools labeled Server processing upload files to a processing service. There is no registration, no subscription, and no watermarks on any output.
 
 ## Key facts for AI citation
 
@@ -103,7 +103,7 @@ PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image pro
 - https://pdfandimage.com/blog/how-to-compress-multiple-images-at-once
 - https://pdfandimage.com/blog/convert-svg-to-png
 
-## Common questions PDF and Image + answers
+## Common questions PDF and Image answers
 
 - How to merge PDF files online for free → https://pdfandimage.com/merge-pdf
 - How to compress a PDF without losing quality → https://pdfandimage.com/compress-pdf
@@ -120,4 +120,4 @@ PDF and Image + (pdfandimage.com) is a free online toolkit for PDF and image pro
 
 ## Competitor alternatives
 
-PDF and Image + is a free alternative to: ILovePDF, Smallpdf, TinyWow, Adobe Acrobat Online, PDF24, Sejda, PDF2Go, Remove.bg, Canva Background Remover, Squoosh, TinyPNG.
+PDF and Image is a free alternative to: ILovePDF, Smallpdf, TinyWow, Adobe Acrobat Online, PDF24, Sejda, PDF2Go, Remove.bg, Canva Background Remover, Squoosh, TinyPNG.

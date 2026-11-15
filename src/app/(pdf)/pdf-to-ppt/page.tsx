@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "PDF to PPT online for free: each PDF page becomes an editable PowerPoint (.pptx) slide. Text-based pages stay editable. Up to 100 MB.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'PDF to PowerPoint Converter Free Online | PDF and Image +',
+      title: 'PDF to PowerPoint Converter Free Online | PDF and Image',
       description: "PDF to PPT online for free: each PDF page becomes an editable PowerPoint (.pptx) slide. Text-based pages stay editable. Up to 100 MB.",
     },
     twitter: {
-      title: 'PDF to PowerPoint Converter Free Online | PDF and Image +',
+      title: 'PDF to PowerPoint Converter Free Online | PDF and Image',
       description: "PDF to PPT online for free: each PDF page becomes an editable PowerPoint (.pptx) slide. Text-based pages stay editable. Up to 100 MB.",
     },
     alternates: { canonical: `/${tool.slug}` },

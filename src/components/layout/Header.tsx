@@ -33,7 +33,7 @@ export function Header() {
               <div className="w-4 h-5 bg-brand-600 rounded-sm" />
               <div className="w-4 h-5 bg-emerald-500 rounded-sm" />
             </div>
-            <Image src="/logo.svg" alt="PDF and Image +" width={150} height={38} priority />
+            <Image src="/logo.svg" alt="PDF and Image" width={150} height={38} priority />
           </Link>
 
           {/* Desktop mega menu nav (client component) */}

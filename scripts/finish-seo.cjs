@@ -54,7 +54,7 @@ for(const file of ['src/app/about/page.tsx','src/app/help/page.tsx']) {
     if(ts.isStringLiteral(n) && /all tools run in your browser|every tool runs in your browser|immediately deleted|never stored|never viewed by any person|delete your file from memory|files are never uploaded to any server|no file uploads|all browser-based tools process/i.test(n.text)) {
       changes.push([n.getStart(ast),n.end,JSON.stringify(handling)])
     } else if(ts.isStringLiteral(n) && /no usage limits|no task limits|no daily limits|no limits/.test(n.text)) {
-      changes.push([n.getStart(ast),n.end,JSON.stringify(n.text.replace(/no usage limits|no task limits|no daily limits|no limits/g,'file and device limits apply').replace('Smallpdf limits free users to 2 tasks per day; PDF and Image + has no such restrictions.','Check current tool requirements before processing.'))])
+      changes.push([n.getStart(ast),n.end,JSON.stringify(n.text.replace(/no usage limits|no task limits|no daily limits|no limits/g,'file and device limits apply').replace('Smallpdf limits free users to 2 tasks per day; PDF and Image has no such restrictions.','Check current tool requirements before processing.'))])
     }
     ts.forEachChild(n,visit)
   }
@@ -71,10 +71,10 @@ edit('src/app/about/page.tsx', [
 ])
 edit('src/app/privacy/page.tsx', [
   ['Your files never leave your browser. We collect no personal information. Full details on data handling and analytics.','Learn which tools process files locally, which use a server, and how analytics and advertising are used.'],
-  ['Your files never leave your browser. PDF and Image + collects no personal information. Full privacy policy.','File processing, server-based tools, analytics and advertising on PDF and Image +.'],
+  ['Your files never leave your browser. PDF and Image collects no personal information. Full privacy policy.','File processing, server-based tools, analytics and advertising on PDF and Image.'],
   ['Files are processed locally in the browser. No personal data collected.','Information about local and server file processing, analytics and advertising.'],
   ['The short version: your files never leave your device. We do not collect, store, or process any of the documents or images you work with on this site.','Most tools process selected files in your browser. Some tools send files to a processing service. The site also uses analytics and advertising services described below.'],
-  ['All PDF and image processing on PDF and Image + happens locally in your browser using JavaScript. When you upload a file to a tool, it is loaded into your browser\'s memory and processed there. No file data is transmitted to our servers.','Tools labeled Browser processing load the selected file into browser memory and process it locally. Tools labeled Server processing send the selected file to a processing service.'],
+  ['All PDF and image processing on PDF and Image happens locally in your browser using JavaScript. When you upload a file to a tool, it is loaded into your browser\'s memory and processed there. No file data is transmitted to our servers.','Tools labeled Browser processing load the selected file into browser memory and process it locally. Tools labeled Server processing send the selected file to a processing service.'],
   ['Exception: a small number of tools that require server-side conversion (such as PDF to Word, Word to PDF, PDF to Excel, and PDF to PowerPoint) send your file to a self-hosted processing server. In these cases:','Server tools include PDF to Word, Word to PDF, PDF to Excel, Excel to PDF, PDF to PowerPoint, PowerPoint to PDF, PDF to PDF/A, Protect PDF, Unlock PDF and Remove Background. In these cases:'],
   ['• The file is never stored on disk and is deleted from server memory immediately after conversion.\n• No logs of the file content are kept.','• Temporary storage, retention and logging depend on the deployed processing service; this page does not promise immediate deletion or memory-only handling.\n• Do not submit sensitive files unless the processing arrangement meets your requirements.'],
 ])

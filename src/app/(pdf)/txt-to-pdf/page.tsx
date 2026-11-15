@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "TXT to PDF converter: turn a text file or pasted text into a clean PDF with word wrap and pages. Choose A4 or Letter. Runs in your browser.",
     keywords: tool.keywords,
     openGraph: {
-      title: "TXT to PDF Converter Online Free | PDF and Image +",
+      title: "TXT to PDF Converter Online Free | PDF and Image",
       description: "TXT to PDF converter: turn a text file or pasted text into a clean PDF with word wrap and pages. Choose A4 or Letter. Runs in your browser.",
     },
     twitter: {
-      title: "TXT to PDF Converter Online Free | PDF and Image +",
+      title: "TXT to PDF Converter Online Free | PDF and Image",
       description: "TXT to PDF converter: turn a text file or pasted text into a clean PDF with word wrap and pages. Choose A4 or Letter. Runs in your browser.",
     },
     alternates: { canonical: `/${tool.slug}` },

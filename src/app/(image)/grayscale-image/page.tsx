@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Grayscale image online for free. Convert a color JPG, PNG or WebP to black and white in one click, keeping the same dimensions. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Grayscale Image Online Free — Black & White Photo Converter | PDF and Image +',
+      title: 'Grayscale Image Online Free — Black & White Photo Converter | PDF and Image',
       description: 'Convert color images to black and white online for free. Instant, no quality loss.',
     },
     twitter: {
-      title: 'Grayscale Image Online Free — Black & White Photo Converter | PDF and Image +',
+      title: 'Grayscale Image Online Free — Black & White Photo Converter | PDF and Image',
       description: 'Convert color images to black and white online for free. Instant, no quality loss.',
     },
     alternates: { canonical: `/${tool.slug}` },

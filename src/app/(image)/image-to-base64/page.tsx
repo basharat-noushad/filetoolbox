@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Image to Base64 online for free. Encode a JPG, PNG, WebP or GIF into a data URL you can paste into HTML, CSS or JSON. Copy it in one click.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Image to Base64 Converter Free Online | PDF and Image +',
+      title: 'Image to Base64 Converter Free Online | PDF and Image',
       description: 'Convert images to Base64 encoded strings for embedding in HTML, CSS, or JSON. Free and instant.',
     },
     twitter: {
-      title: 'Image to Base64 Converter Free Online | PDF and Image +',
+      title: 'Image to Base64 Converter Free Online | PDF and Image',
       description: 'Convert images to Base64 encoded strings for embedding in HTML, CSS, or JSON. Free and instant.',
     },
     alternates: { canonical: `/${tool.slug}` },

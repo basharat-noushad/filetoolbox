@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Crop image online free with an interactive cropper. Set the output size in cm, mm, inches or pixels, or pick a passport photo size. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Crop Image in cm, mm or px Online Free | PDF and Image +",
+      title: "Crop Image in cm, mm or px Online Free | PDF and Image",
       description: "Crop image online free with an interactive cropper. Set the output size in cm, mm, inches or pixels, or pick a passport photo size. No sign-up.",
     },
     twitter: {
-      title: "Crop Image in cm, mm or px Online Free | PDF and Image +",
+      title: "Crop Image in cm, mm or px Online Free | PDF and Image",
       description: "Crop image online free with an interactive cropper. Set the output size in cm, mm, inches or pixels, or pick a passport photo size. No sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },

@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Adjust Image Brightness & Contrast Online Free",
     description: "Adjust image brightness online for free. Use simple sliders for brightness, contrast and saturation, then download your enhanced photo. No sign-up.",
     keywords: tool.keywords,
-    openGraph: { title: 'Adjust Image Brightness & Contrast Free | PDF and Image +', description: 'Adjust brightness, contrast, and saturation of images online for free with simple sliders.' },
-    twitter: { title: 'Adjust Image Brightness & Contrast Free | PDF and Image +', description: 'Adjust brightness, contrast, and saturation of images online for free with simple sliders.' },
+    openGraph: { title: 'Adjust Image Brightness & Contrast Free | PDF and Image', description: 'Adjust brightness, contrast, and saturation of images online for free with simple sliders.' },
+    twitter: { title: 'Adjust Image Brightness & Contrast Free | PDF and Image', description: 'Adjust brightness, contrast, and saturation of images online for free with simple sliders.' },
     alternates: { canonical: `/${tool.slug}` },
   }, '/image-brightness')
 }

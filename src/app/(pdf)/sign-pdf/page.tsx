@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Sign PDF online for free: draw or upload a signature, drag it onto any page, resize it and add the date. Works in your browser, nothing uploaded.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Sign PDF Online Free — Place Your Signature | PDF and Image +",
+      title: "Sign PDF Online Free — Place Your Signature | PDF and Image",
       description: "Sign PDF online for free: draw or upload a signature, drag it onto any page, resize it and add the date. Works in your browser, nothing uploaded.",
     },
     twitter: {
-      title: "Sign PDF Online Free — Place Your Signature | PDF and Image +",
+      title: "Sign PDF Online Free — Place Your Signature | PDF and Image",
       description: "Sign PDF online for free: draw or upload a signature, drag it onto any page, resize it and add the date. Works in your browser, nothing uploaded.",
     },
     alternates: { canonical: `/${tool.slug}` },

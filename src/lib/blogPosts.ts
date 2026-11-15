@@ -54,7 +54,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "heading": "What this compressor changes",
     "paragraphs": [
-      "PDF and Image + rewrites PDF structure with compressed object streams. It does not resize the images inside a PDF, rasterize pages or offer a target file size. A document that already uses efficient structures may show no reduction. The tool keeps the original when the rewritten file is not smaller."
+      "PDF and Image rewrites PDF structure with compressed object streams. It does not resize the images inside a PDF, rasterize pages or offer a target file size. A document that already uses efficient structures may show no reduction. The tool keeps the original when the rewritten file is not smaller."
     ]
   },
   {

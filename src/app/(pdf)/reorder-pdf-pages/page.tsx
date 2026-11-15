@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Reorder PDF pages online for free. Type the new order, such as 3,1,2,4, and download the rearranged PDF. Processed in your browser, no sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Reorder PDF Pages Online Free — Rearrange PDF | PDF and Image +',
+      title: 'Reorder PDF Pages Online Free — Rearrange PDF | PDF and Image',
       description: "Reorder PDF pages online for free. Type the new order, such as 3,1,2,4, and download the rearranged PDF. Processed in your browser, no sign-up.",
     },
     twitter: {
-      title: 'Reorder PDF Pages Online Free — Rearrange PDF | PDF and Image +',
+      title: 'Reorder PDF Pages Online Free — Rearrange PDF | PDF and Image',
       description: "Reorder PDF pages online for free. Type the new order, such as 3,1,2,4, and download the rearranged PDF. Processed in your browser, no sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },

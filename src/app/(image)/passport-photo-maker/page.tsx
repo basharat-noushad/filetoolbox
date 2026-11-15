@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Passport photo maker online free: pick your country size, set a white or blue background, and print on a 4×6 sheet. Runs in your browser.",
     keywords: tool.keywords,
     openGraph: {
-      title: 'Passport Photo Maker Online Free, Any Size | PDF and Image +',
+      title: 'Passport Photo Maker Online Free, Any Size | PDF and Image',
       description: 'Make passport and visa photos at the right size, change the background and print several on one sheet. Files never leave your device.',
     },
     twitter: {
-      title: 'Passport Photo Maker Online Free, Any Size | PDF and Image +',
+      title: 'Passport Photo Maker Online Free, Any Size | PDF and Image',
       description: 'Make passport and visa photos at the right size, change the background and print several on one sheet.',
     },
     alternates: { canonical: `/${tool.slug}` },

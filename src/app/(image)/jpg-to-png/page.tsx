@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert JPG to PNG online free and optionally make the background transparent. Batch ZIP, full resolution, runs in your browser. No sign-up.",
     keywords: tool.keywords,
     openGraph: {
-      title: "JPG to PNG Converter — Transparent Background | PDF and Image +",
+      title: "JPG to PNG Converter — Transparent Background | PDF and Image",
       description: "Convert JPG to PNG online free and optionally make the background transparent. Batch ZIP, full resolution, runs in your browser. No sign-up.",
     },
     twitter: {
-      title: "JPG to PNG Converter — Transparent Background | PDF and Image +",
+      title: "JPG to PNG Converter — Transparent Background | PDF and Image",
       description: "Convert JPG to PNG online free and optionally make the background transparent. Batch ZIP, full resolution, runs in your browser. No sign-up.",
     },
     alternates: { canonical: `/${tool.slug}` },

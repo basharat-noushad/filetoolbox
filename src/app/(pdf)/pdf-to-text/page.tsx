@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "PDF to text converter that extracts the text from any PDF in your browser. Copy it or download a UTF-8 .txt file. Nothing is uploaded.",
     keywords: tool.keywords,
     openGraph: {
-      title: "PDF to Text Converter Online Free | PDF and Image +",
+      title: "PDF to Text Converter Online Free | PDF and Image",
       description: "PDF to text converter that extracts the text from any PDF in your browser. Copy it or download a UTF-8 .txt file. Nothing is uploaded.",
     },
     twitter: {
-      title: "PDF to Text Converter Online Free | PDF and Image +",
+      title: "PDF to Text Converter Online Free | PDF and Image",
       description: "PDF to text converter that extracts the text from any PDF in your browser. Copy it or download a UTF-8 .txt file. Nothing is uploaded.",
     },
     alternates: { canonical: `/${tool.slug}` },

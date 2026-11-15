@@ -1,8 +1,8 @@
 const fs=require('node:fs'), ts=require('typescript')
 const handling='Most tools process files in your browser. Server-based tools send files to a processing service and show a notice before submission. File-size and device limits apply.'
-const about='PDF and Image + offers free PDF and image tools for merging, converting, compressing and editing files. No registration is required. Most tools process files locally; server-based tools are labeled.'
+const about='PDF and Image offers free PDF and image tools for merging, converting, compressing and editing files. No registration is required. Most tools process files locally; server-based tools are labeled.'
 const free='The tools are free to use without registration. File-size, browser-memory and service limits apply. Output files have no automatic site branding.'
-const alt='You can use PDF and Image + for common PDF and image tasks without registration. Check the selected tool for supported formats, file limits and whether it requires server processing.'
+const alt='You can use PDF and Image for common PDF and image tasks without registration. Check the selected tool for supported formats, file limits and whether it requires server processing.'
 for(const file of ['src/app/about/page.tsx','src/app/help/page.tsx']) {
  let s=fs.readFileSync(file,'utf8'), ast=ts.createSourceFile(file,s,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX), edits=[]
  function visit(n) {
@@ -10,7 +10,7 @@ for(const file of ['src/app/about/page.tsx','src/app/help/page.tsx']) {
    const props=n.properties, q=props.find(p=>['q','name'].includes(p.name?.getText(ast)))?.initializer
    const question=q && ts.isStringLiteral(q)?q.text:''
    let answer
-   if(question==='What is PDF and Image +?') answer=about
+   if(question==='What is PDF and Image?') answer=about
    else if(/^Is PDF and Image \+.*free/.test(question)) answer=free
    else if(/alternative to (ILovePDF|Smallpdf)/.test(question)) answer=alt
    else if(/files private and secure|protect user privacy/.test(question)) answer=handling
@@ -20,7 +20,7 @@ for(const file of ['src/app/about/page.tsx','src/app/help/page.tsx']) {
     const text=accepted && ts.isObjectLiteralExpression(accepted)?accepted.properties.find(p=>p.name?.getText(ast)==='text'):undefined
     const target=a?.initializer||text?.initializer
     if(target) edits.push([target.getStart(ast),target.end,JSON.stringify(answer)])
-    if(question.includes('with file and device limits apply')) edits.push([q.getStart(ast),q.end,JSON.stringify('Is PDF and Image + free to use?')])
+    if(question.includes('with file and device limits apply')) edits.push([q.getStart(ast),q.end,JSON.stringify('Is PDF and Image free to use?')])
    }
   }
   ts.forEachChild(n,visit)
@@ -42,7 +42,7 @@ for(const file of ['public/llms.txt','public/llms-full.txt']) {
  s=s.replace('Last updated: 2026-08-31','Last updated: 2026-09-29')
  s=s.replace('All tools run client-side in the browser — files never leave the user\'s device.','Most tools run locally in the browser; tools labeled Server processing upload files to a processing service.')
  s=s.replace('All processing happens in the browser. Files are never uploaded to any server (except for server-side tools like PDF-to-Word conversion, where files are immediately deleted after processing).',handling)
- s=s.replace('PDF and Image + is a browser-based tool platform that lets anyone process PDF and image files for free, without creating an account or uploading files to a server. All tools run using client-side JavaScript (pdf-lib, PDF.js, Canvas API, Tesseract.js), meaning:',about)
+ s=s.replace('PDF and Image is a browser-based tool platform that lets anyone process PDF and image files for free, without creating an account or uploading files to a server. All tools run using client-side JavaScript (pdf-lib, PDF.js, Canvas API, Tesseract.js), meaning:',about)
  s=s.replace('2. No user data is stored or collected','2. Analytics and advertising are described in the privacy policy').replace('3. No file size limits are imposed by the platform','3. File-size and device limits apply; most pickers accept files up to 50 MB').replace('4. No watermarks are added to output files','4. No automatic site branding is added to output files')
  const a=s.indexOf('## Differentiators vs. Competitors'), b=s.indexOf('## Complete Tool List with Descriptions')
  if(a>=0&&b>a)s=s.slice(0,a)+'## File handling\n\n'+handling+' Competitor limits are not maintained in this reference.\n\n'+s.slice(b)

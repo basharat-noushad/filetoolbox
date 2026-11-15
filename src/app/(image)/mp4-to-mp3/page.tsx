@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'MP4 to MP3 Converter Online Free',
     description: 'MP4 to MP3 converter online free: extract the audio from an MP4, MOV, WebM or MKV video at 128, 192 or 320 kbps. Private, runs in your browser.',
     keywords: tool.keywords,
-    openGraph: { title: 'MP4 to MP3 Converter Online Free | PDF and Image +', description: 'Extract MP3 audio from MP4 video online for free. Browser-based, no upload, no sign-up.' },
-    twitter: { title: 'MP4 to MP3 Converter Online Free | PDF and Image +', description: 'Extract MP3 audio from MP4 video online for free. Browser-based, no upload, no sign-up.' },
+    openGraph: { title: 'MP4 to MP3 Converter Online Free | PDF and Image', description: 'Extract MP3 audio from MP4 video online for free. Browser-based, no upload, no sign-up.' },
+    twitter: { title: 'MP4 to MP3 Converter Online Free | PDF and Image', description: 'Extract MP3 audio from MP4 video online for free. Browser-based, no upload, no sign-up.' },
     alternates: { canonical: `/${tool.slug}` },
   }, '/mp4-to-mp3')
 }

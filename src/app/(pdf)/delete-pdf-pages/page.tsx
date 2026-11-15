@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Delete PDF pages online for free. Enter the page numbers or ranges to remove and download a clean new PDF. Your original file stays unchanged.",
     keywords: tool.keywords,
     openGraph: {
-      title: "Delete PDF Pages Online Free — Remove Pages | PDF and Image +",
+      title: "Delete PDF Pages Online Free — Remove Pages | PDF and Image",
       description: "Delete PDF pages online for free. Enter the page numbers or ranges to remove and download a clean new PDF. Your original file stays unchanged.",
     },
     twitter: {
-      title: "Delete PDF Pages Online Free — Remove Pages | PDF and Image +",
+      title: "Delete PDF Pages Online Free — Remove Pages | PDF and Image",
       description: "Delete PDF pages online for free. Enter the page numbers or ranges to remove and download a clean new PDF. Your original file stays unchanged.",
     },
     alternates: { canonical: `/${tool.slug}` },

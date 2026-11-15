@@ -7,13 +7,13 @@ import { ContactForm } from './ContactForm'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com'
 
 export const metadata: Metadata = withSocialMetadata({
-  title: { absolute: 'Contact PDF and Image + — Get Support & Send Feedback' },
-  description: 'Get in touch with the PDF and Image + team. Report a bug, request a feature, or ask a question. Send a message and we usually reply within 1–2 business days.',
+  title: { absolute: 'Contact PDF and Image — Get Support & Send Feedback' },
+  description: 'Get in touch with the PDF and Image team. Report a bug, request a feature, or ask a question. Send a message and we usually reply within 1–2 business days.',
   keywords: ['contact pdf and image', 'pdf tool support', 'report bug pdf tool', 'feature request', 'pdf image tool help'],
   alternates: { canonical: `${SITE_URL}/contact` },
   openGraph: {
-    title: 'Contact PDF and Image + — Get Support & Send Feedback',
-    description: 'Get in touch with the PDF and Image + team. Report bugs, request features, or ask a question.',
+    title: 'Contact PDF and Image — Get Support & Send Feedback',
+    description: 'Get in touch with the PDF and Image team. Report bugs, request features, or ask a question.',
     url: `${SITE_URL}/contact`,
   },
 }, '/contact')
@@ -21,9 +21,9 @@ export const metadata: Metadata = withSocialMetadata({
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  name: 'Contact PDF and Image +',
+  name: 'Contact PDF and Image',
   url: `${SITE_URL}/contact`,
-  description: 'Contact page for PDF and Image + — free online PDF and image tools.',
+  description: 'Contact page for PDF and Image — free online PDF and image tools.',
 }
 
 const CHANNELS = [

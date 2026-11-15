@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "PNG to SVG Converter Free — Vectorize Images",
     description: "Convert PNG, JPG or WebP to a real SVG vector online for free. Traces your logo into scalable paths in your browser. No sign-up, no upload.",
     keywords: tool.keywords,
-    openGraph: { title: 'PNG to SVG Converter Free | PDF and Image +', description: 'Trace PNG, JPG and WebP images into real scalable SVG vector paths, free and in your browser.' },
-    twitter: { title: 'PNG to SVG Converter Free | PDF and Image +', description: 'Trace PNG, JPG and WebP images into real scalable SVG vector paths, free and in your browser.' },
+    openGraph: { title: 'PNG to SVG Converter Free | PDF and Image', description: 'Trace PNG, JPG and WebP images into real scalable SVG vector paths, free and in your browser.' },
+    twitter: { title: 'PNG to SVG Converter Free | PDF and Image', description: 'Trace PNG, JPG and WebP images into real scalable SVG vector paths, free and in your browser.' },
     alternates: { canonical: `/${tool.slug}` },
   }, '/png-to-svg')
 }

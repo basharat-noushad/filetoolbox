@@ -98,7 +98,7 @@ export async function POST(request: Request) {
       method: 'POST',
       headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        from: process.env.CONTACT_FROM_EMAIL || 'PDF and Image + <noreply@pdfandimage.com>',
+        from: process.env.CONTACT_FROM_EMAIL || 'PDF and Image <noreply@pdfandimage.com>',
         to: [process.env.CONTACT_TO_EMAIL || 'contact@pdfandimage.com'],
         reply_to: email,
         subject: oneLine(`[Contact] ${subject}: ${name}`).slice(0, 150),

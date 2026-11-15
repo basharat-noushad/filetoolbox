@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Convert WebP to PNG online free. Transparency is kept in the PNG output. One file at a time, quick and lossless, no sign-up required.",
     keywords: tool.keywords,
     openGraph: {
-      title: "WebP to PNG Online Free — Convert WebP Images | PDF and Image +",
+      title: "WebP to PNG Online Free — Convert WebP Images | PDF and Image",
       description: "Convert WebP to PNG online free. Transparency is kept in the PNG output. One file at a time, quick and lossless, no sign-up required.",
     },
     twitter: {
-      title: "WebP to PNG Online Free — Convert WebP Images | PDF and Image +",
+      title: "WebP to PNG Online Free — Convert WebP Images | PDF and Image",
       description: "Convert WebP to PNG online free. Transparency is kept in the PNG output. One file at a time, quick and lossless, no sign-up required.",
     },
     alternates: { canonical: `/${tool.slug}` },
