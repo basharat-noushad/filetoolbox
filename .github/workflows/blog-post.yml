@@ -47,7 +47,7 @@ jobs:
         run: npm ci
 
       - name: Generate blog post with Claude Code
-        uses: anthropics/claude-code-action@v1
+        uses: anthropics/claude-code-action@f3b070c88125d33dbae5653df5f143101d4ea9dc # v1
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -82,7 +82,16 @@ jobs:
                  ONLY link to slugs that actually exist in the registry.
 
             3. WRITE THE POST (append a new object to the BLOG_POSTS array)
-               - Use only the length needed to explain the task accurately. No minimum word count.
+               - LENGTH: 1,500–2,200 words of body text (sections + FAQs). Count with node before
+                 committing. Depth, not padding: every paragraph must add a fact, a decision, an
+                 example or a fix. Never repeat the same point in different words.
+               - REQUIRED STRUCTURE (as `sections`, in this order, headings phrased the way people
+                 search): (1) short intro answering the query in the first 2 sentences;
+                 (2) when/why you need this (real situations: forms, email limits, printing, etc.);
+                 (3) the step-by-step section; (4) a reference section with concrete specifics
+                 (sizes, formats, settings, limits — use bullets); (5) common mistakes / troubleshooting
+                 with the fix for each; (6) tips for best results; (7) related tasks linking 2–3 other
+                 EXISTING tools by name and what they solve. Use `tip` on 2–3 sections.
                - Read seo/KEYWORD_RESEARCH_2026-09-29.md and seo/keyword-map.csv first. Improve an existing page when it already satisfies the intent; do not create near-duplicate keyword pages.
                - Verify every capability, file limit, processing location and download step against the tool client and processing code. Never invent test results or savings percentages.
                - Do not claim AI upscaling, batch support, immediate server deletion or unlimited files unless the implementation and deployment evidence support it.
@@ -90,7 +99,8 @@ jobs:
                - metaDescription: 120–155 chars.
                - Exactly one section with numbered `steps` (3–6 steps) that walks the reader
                  through doing the task with the related tool on pdfandimage.com.
-               - 4–6 FAQs answering real questions people search for around the keyword.
+               - 6–8 FAQs answering real questions people search for around the keyword (each answer
+                 2–4 sentences, specific).
                - relatedTool: the tool slug from the calendar. relatedTools: 2–3 additional
                  EXISTING tool slugs that fit the topic.
                - Tone: practical, direct, no fluff, no keyword stuffing. Mention competitor
