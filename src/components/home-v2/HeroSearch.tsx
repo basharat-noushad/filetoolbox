@@ -2,7 +2,7 @@
 import { useId, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { Search } from 'lucide-react'
+import { Search, X } from 'lucide-react'
 import { iconFor, LANE, type ToolItem } from './data'
 
 export function HeroSearch({ items, total }: { items: ToolItem[]; total: number }) {
@@ -33,8 +33,8 @@ export function HeroSearch({ items, total }: { items: ToolItem[]; total: number 
   return (
     <div className="relative">
       <label htmlFor={id} className="sr-only">Search {total} tools</label>
-      <div className="flex items-center gap-3 rounded-2xl border border-gray-300 bg-white px-4 focus-within:border-brand-600 focus-within:ring-4 focus-within:ring-brand-600/15">
-        <Search className="h-5 w-5 shrink-0 text-gray-600" aria-hidden />
+      <div className="group flex items-center gap-3 rounded-2xl border border-gray-300 bg-white pl-4 pr-2 shadow-sm shadow-gray-900/5 transition-[border-color,box-shadow] hover:border-gray-400 focus-within:border-brand-600 focus-within:ring-4 focus-within:ring-brand-600/15">
+        <Search className="h-5 w-5 shrink-0 text-gray-500 transition-colors group-focus-within:text-brand-600" aria-hidden />
         <input
           id={id} type="search" autoComplete="off" value={q} role="combobox"
           aria-expanded={show} aria-controls={`${id}-list`} aria-autocomplete="list"
@@ -42,8 +42,16 @@ export function HeroSearch({ items, total }: { items: ToolItem[]; total: number 
           onFocus={() => setOpen(true)} onBlur={() => setTimeout(() => setOpen(false), 120)}
           onKeyDown={onKey}
           placeholder="Search tools: merge, QR, HEIC"
-          className="h-14 min-w-0 flex-1 bg-transparent text-base text-gray-900 placeholder:text-gray-600 focus:outline-none"
+          className="h-14 min-w-0 flex-1 appearance-none bg-transparent text-base text-gray-900 outline-none placeholder:text-gray-500 focus:outline-none focus-visible:outline-none [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none"
         />
+        {q && (
+          <button type="button" aria-label="Clear search"
+            onMouseDown={e => e.preventDefault()}
+            onClick={() => { setQ(''); setIdx(0) }}
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-800 focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-brand-600">
+            <X className="h-4 w-4" aria-hidden />
+          </button>
+        )}
       </div>
       {show && (
         <ul id={`${id}-list`} role="listbox"
