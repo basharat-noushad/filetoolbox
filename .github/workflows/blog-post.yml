@@ -146,13 +146,15 @@ jobs:
         run: |
           set -euo pipefail
           since=$(date -u -d '45 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
-          pr=$(gh pr list --state open --json number,headRefName,createdAt \
-            --jq "[.[] | select(.headRefName | startswith(\"blog/\")) | select(.createdAt >= \"$since\")] | first | .number // empty")
+          pr=$(gh pr list --state open --json number,headRefName,createdAt,isCrossRepository,author \
+            --jq "[.[] | select(.isCrossRepository == false and .author.login == \"app/claude\") | select(.headRefName | startswith(\"blog/\")) | select(.createdAt >= \"$since\")] | first | .number // empty")
           if [ -z "$pr" ]; then echo "No new blog PR from this run; nothing to publish."; exit 0; fi
           allowed='^(src/lib/blogPosts\.ts|seo/content-calendar\.json|public/llms-full\.txt)$'
           bad=$(gh pr diff "$pr" --name-only | grep -Ev "$allowed" || true)
           if [ -n "$bad" ]; then echo "::error::PR #$pr changes files outside the allowlist:"; echo "$bad"; exit 1; fi
           gh pr checkout "$pr"
-          npm run build
+          # Only same-repo PRs opened by the Claude bot are accepted above. Build without the
+          # GitHub token so PR code can't use it; only the merge below needs it.
+          env -u GH_TOKEN -u GITHUB_TOKEN npm run build
           gh pr merge "$pr" --squash --delete-branch
           echo "Published PR #$pr"
