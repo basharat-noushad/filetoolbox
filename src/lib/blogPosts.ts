@@ -2789,7 +2789,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaDescription: 'Make a passport size photo at home: pick your country size, set a white background, and download a 300 DPI photo or a ready-to-print sheet.',
     excerpt: 'You can make a passport or visa photo from a phone picture in a few minutes. Here is how to take a usable portrait, pick the right size, fix the background and print several copies.',
     category: 'Image Guide',
-    readTime: '5 min read',
+    readTime: '10 min read',
     datePublished: '2026-11-15',
     dateModified: '2026-11-15',
     relatedTool: 'passport-photo-maker',
@@ -2798,36 +2798,23 @@ export const BLOG_POSTS: BlogPost[] = [
     sections: [
       {
         paragraphs: [
-          'A passport photo is mostly a matter of three things: a clean source picture, the correct dimensions for your document, and a plain background. All three are doable at home with a phone and a browser.',
-          'Always check the rules of the authority that issues your document. Head size, background colour and glasses rules differ by country and change over time, so treat any tool, including this one, as a helper rather than a guarantee of acceptance.',
+          'To make a passport size photo at home, take a sharp, evenly lit, front-facing portrait with your phone, upload it to the free Passport Photo Maker, choose your country size and background colour, and download the 300 DPI result. For paper copies, create a print sheet and print it at 100% scale.',
+          'Three things decide whether the result is usable: a clean source picture, the correct dimensions for your document, and a plain background. All three are doable with a phone and a browser. Always check the rules of the authority that issues your document, though. Head size, background colour and glasses rules differ by country and change over time, so treat any tool, including this one, as a helper rather than a guarantee of acceptance.',
         ],
       },
       {
-        heading: 'Take a Good Source Photo First',
+        heading: 'When and Why You Need to Make Your Own Passport Photo',
         paragraphs: [
-          'The editing step cannot fix a bad original. Spend a minute on the shot itself.',
+          'Most people reach for a photo booth or a shop, and that is still the safest route when an application is high-stakes. Making your own makes sense in several common situations, and knowing which one you are in tells you which output to create.',
         ],
         bullets: [
-          'Stand facing a window or other soft light so there are no shadows on your face or behind you.',
-          'Have someone hold the camera at eye level, a little way back, so your face is centred and your shoulders are visible.',
-          'Look straight at the lens with a neutral expression, mouth closed and eyes open.',
-          'Remove glasses if your country does not allow them, and pull hair back from your face.',
-          'Use the rear camera if you can, and keep the picture sharp rather than zoomed in digitally.',
+          'Online applications and renewals: many portals ask for a digital upload, often with a file size cap, so you need a single JPG rather than a printed sheet.',
+          'Visa applications: Schengen, Chinese and Canadian visas each use a different size, and a shop may not stock the exact dimensions.',
+          'Multiple copies: school, exam, employer and bank forms often want two to eight small prints. A single sheet is cheaper than several booth sessions.',
+          'Children and babies: it is easier to wait for a calm moment at home than to book a studio slot.',
+          'Convenience and cost: you avoid travel, and you can retake the shot as often as you like until it is right.',
         ],
-      },
-      {
-        heading: 'Common Passport Photo Sizes',
-        paragraphs: [
-          'The Passport Photo Maker includes these presets, each exported at 300 DPI:',
-        ],
-        bullets: [
-          'US 2×2 in (600×600 px).',
-          'UK / EU / India / Pakistan 35×45 mm.',
-          'Schengen visa 35×45 mm.',
-          'Canada 50×70 mm.',
-          'China 33×48 mm.',
-        ],
-        tip: 'If your document needs a size that is not in the list, make the closest photo here and then adjust it with the Crop Image or Resize Image tool.',
+        tip: 'Decide the output before you start. An online upload needs one JPG, possibly under a size limit. A paper form needs a print sheet. You can make both from the same source photo.',
       },
       {
         heading: 'Make the Photo Step by Step',
@@ -2835,27 +2822,102 @@ export const BLOG_POSTS: BlogPost[] = [
           'Open the Passport Photo Maker and drop in your portrait (JPG, PNG or WebP, up to 50 MB).',
           'Choose the country or document size. The tool looks for your face on your device and positions the crop automatically; if no face is found it tells you, and you can position the photo by hand.',
           'Pick a background: white, off-white, light blue, light grey, a custom colour, or keep the original. Replacing the background needs a clear, front-facing person in the picture.',
-          'Fine-tune the framing by dragging the preview and using the zoom slider. The tool shows an approximate head-height guide for the size you chose.',
+          'Fine-tune the framing by dragging the preview and using the zoom slider (0.5× to 3×). The tool shows an approximate head-height guide for the size you chose.',
           'If the application sets a file size limit, choose a maximum (50, 100, 240 or 500 KB), then click Create photo and download the JPG.',
           'To print at home or at a shop, pick a 4×6 in or A4 sheet, click Create print sheet, and download the JPG or PDF with several copies laid out.',
         ],
       },
       {
+        heading: 'Sizes, Pixels and Print Sheets: Reference',
+        paragraphs: [
+          'The Passport Photo Maker includes five presets, each exported at 300 DPI. The pixel size below is what the tool produces, and the head range is the approximate chin-to-crown guide it shows for each preset. These are guidance values built into the tool, not official requirements.',
+        ],
+        bullets: [
+          'US 2×2 in: 600×600 px, head guide about 50–69% of the photo height.',
+          'UK / EU / India / Pakistan 35×45 mm: 413×531 px, head guide about 71–80%.',
+          'Schengen visa 35×45 mm: 413×531 px, head guide about 71–80%.',
+          'Canada 50×70 mm: 591×827 px, head guide about 44–51%.',
+          'China 33×48 mm: 390×567 px, head guide about 58–69%.',
+          'Backgrounds: white, off-white, light blue, light grey, custom colour, or keep the original.',
+          'File size limits for a single photo: no limit, 50, 100, 240 or 500 KB.',
+          'Print sheets: 4×6 in or A4, downloadable as JPG or PDF, with thin grey cut guides and a small gap between photos.',
+        ],
+        tip: 'If your document needs a size that is not in the list, make the closest photo here and then adjust it with the Crop Image or Resize Image tool.',
+      },
+      {
+        heading: 'How Many Photos Fit on a Sheet',
+        paragraphs: [
+          'The sheet maker tries both portrait and landscape and places as many copies as fit, with a margin around the edge and a gap between photos. The counts below follow from the layout rules in the tool for each size.',
+        ],
+        bullets: [
+          '35×45 mm (UK, EU, India, Pakistan, Schengen): 8 copies on 4×6 in, 30 on A4.',
+          'US 2×2 in: 2 copies on 4×6 in, 15 on A4.',
+          'Canada 50×70 mm: 2 copies on 4×6 in, 12 on A4.',
+          'China 33×48 mm: 4 copies on 4×6 in, 32 on A4.',
+        ],
+      },
+      {
         heading: 'Hitting a File Size Limit for Online Applications',
         paragraphs: [
-          'Online portals often cap uploads at a few hundred kilobytes. Choosing a limit in the tool compresses the JPG to fit. If the photo cannot fit at the standard pixel size, the tool reduces the dimensions and tells you the new size, so check that the portal still accepts it. If the limit cannot be reached at all, you will see a message saying so.',
+          'Online portals often cap uploads at a few hundred kilobytes. Choosing a limit in the tool lowers the JPG quality until the file fits. If quality alone is not enough, the tool reduces the pixel dimensions and tells you the new size, so check that the portal still accepts it. If the limit cannot be reached at all, you will see a message saying so.',
+          'Smaller limits cost more detail. A 240 KB or 500 KB target usually keeps the standard pixel size, while 50 KB is a tight budget and is the one most likely to trigger the dimension reduction. Start with the highest limit the portal allows rather than the lowest.',
+        ],
+      },
+      {
+        heading: 'Common Mistakes and How to Fix Them',
+        paragraphs: [
+          'Most rejected or poor-looking photos come from a handful of repeat problems. Each has a quick fix.',
+        ],
+        bullets: [
+          'The tool says no face was found: the face may be too small, turned away or in shadow. Retake the photo facing the camera in better light, or position the photo by hand with zoom and drag.',
+          'The background will not change and you see "No person detected": the cut-out needs a clear, front-facing person. Retake the picture with your head and shoulders fully in frame, or choose Keep original and use a plain wall instead.',
+          'Rough or haloed hair edges after background replacement: check the preview at full size. A plain, evenly lit wall behind you gives the cleanest edges, and a background that contrasts with your hair helps.',
+          'Shadows on one side of the face: you were lit from the side. Face the window directly or add a second light source in front.',
+          'Printed photo is the wrong size: your printer scaled the page. Turn off "fit to page" or "shrink to fit", print at 100%, and measure one photo with a ruler before cutting.',
+          'Photo is blurry or pixelated: the source was too small or digitally zoomed. The tool caps very large images at 2,400 px on the longest side for speed, so a normal phone picture is more than enough, but a tiny or heavily cropped one is not.',
+          'File rejected for size: choose a lower limit in the tool, or see whether the portal specifies a minimum pixel size that a very small limit pushes below.',
         ],
       },
       {
         heading: 'Printing Passport Photos at Home',
         paragraphs: [
           'Print the sheet at 100% scale, with "fit to page" or "shrink to fit" switched off, on glossy or good-quality photo paper. Measure one printed photo with a ruler before cutting the rest. If it is not the right size, your printer settings scaled it.',
+          'The PDF download is the easiest to print accurately, because the page is already set to the sheet size. Cut along the thin grey guide lines, and trim just inside them so no line shows on the finished photo.',
         ],
+      },
+      {
+        heading: 'Tips for the Best Result',
+        paragraphs: ['The editing step cannot fix a bad original: the tool finds your face, crops and swaps the background, but it cannot remove a harsh shadow or sharpen a blurry shot. Most of the quality is decided when you take the picture.'],
+        bullets: [
+          'Stand facing a window or other soft light so there are no shadows on your face or behind you.',
+          'Have someone hold the camera at eye level, a little way back, so your face is centred and your shoulders are visible.',
+          'Look straight at the lens with a neutral expression, mouth closed and eyes open; remove glasses if your country forbids them and pull hair back from your face.',
+          'Stand a step in front of a plain, light wall; the background tool copes better with an uncluttered scene.',
+          'Choose the size first and fine-tune the framing afterwards, because changing the size re-runs the automatic face placement.',
+          'Take several shots and pick the sharpest one with the most neutral expression.',
+          'Shoot in daylight near a window rather than using the flash, which flattens the face and creates a harsh shadow on the wall.',
+          'Keep your head level and your shoulders square to the camera; a tilted head will look tilted in the crop.',
+          'Check the head-size guide shown for your chosen preset and use the zoom slider if the face looks too big or too small.',
+          'Choose the background colour your authority asks for, and compare the preview with their sample photo.',
+          'Download the single photo as well as the sheet. You will often need the digital file later for a renewal or an online form.',
+        ],
+        tip: 'Keep the original, unedited portrait. If a rule changes or an application is rejected, you can remake the photo in a minute instead of retaking it.',
       },
       {
         heading: 'Privacy',
         paragraphs: [
-          'The face detection, background replacement and file creation run in your browser, and the page states that nothing is uploaded. Background replacement loads a small model file (about 0.3 MB) from the site the first time you use it.',
+          'The face detection, background replacement and file creation run in your browser, and the page states that nothing is uploaded. Background replacement loads a small model file (about 0.3 MB) from the site the first time you use it, which is why the first background change takes a moment.',
+        ],
+      },
+      {
+        heading: 'Related Tasks',
+        paragraphs: [
+          'A few other tools help when your photo needs something the maker does not do directly.',
+        ],
+        bullets: [
+          'Use the Crop Image tool to trim a photo to an exact custom size not in the preset list.',
+          'Use the Resize Image tool to set exact pixel dimensions for a portal that asks for them.',
+          'Use the Remove Background tool when you want a transparent cut-out of yourself to reuse elsewhere.',
         ],
       },
     ],
@@ -2866,23 +2928,31 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: 'How do I get a white background for a passport photo?',
-        a: 'Select White in the Background options. The tool cuts out the person on your device and fills the background with white. A plain, evenly lit original gives the cleanest edges.',
+        a: 'Select White in the Background options. The tool cuts out the person on your device and fills the background with white. A plain, evenly lit original gives the cleanest edges, and you should check hair edges in the preview before downloading.',
       },
       {
         q: 'What size is a passport photo in pixels?',
-        a: 'At 300 DPI, a US 2×2 in photo is 600×600 px. The 35×45 mm size works out to roughly 413×531 px. The tool shows the exact pixel size for the preset you choose.',
+        a: 'At 300 DPI, a US 2×2 in photo is 600×600 px and the 35×45 mm size is 413×531 px. Canada 50×70 mm is 591×827 px and China 33×48 mm is 390×567 px. The tool shows the exact pixel size for the preset you choose.',
       },
       {
         q: 'How do I make a passport photo under 100 KB?',
-        a: 'Choose the 100 KB limit before creating the photo. The tool compresses the JPG to fit, and if it has to shrink the dimensions it tells you the new size.',
+        a: 'Choose the 100 KB limit before creating the photo. The tool lowers the JPG quality to fit, and if it has to shrink the dimensions it tells you the new size. Check that the portal still accepts that size.',
       },
       {
         q: 'How do I print several passport photos on one page?',
-        a: 'Use Create print sheet with a 4×6 in or A4 layout, then download the JPG or PDF. Print at 100% scale and cut along the gaps.',
+        a: 'Use Create print sheet with a 4×6 in or A4 layout, then download the JPG or PDF. For 35×45 mm photos that gives 8 copies on 4×6 in or 30 on A4. Print at 100% scale and cut along the guides.',
+      },
+      {
+        q: 'Can I use a different background colour, such as blue?',
+        a: 'Yes. Besides white and off-white you can pick light blue, light grey or any custom colour. Use the colour your authority specifies, since the tool cannot know which one your country requires.',
+      },
+      {
+        q: 'Is my photo uploaded anywhere?',
+        a: 'No. Face detection, background replacement and file creation run in your browser. The only thing downloaded is a small background model of about 0.3 MB the first time you replace a background.',
       },
       {
         q: 'Will my photo be accepted?',
-        a: 'We cannot guarantee that. The head-size guide is approximate, and requirements vary by country and change. Check the official guidance before you submit.',
+        a: 'We cannot guarantee that. The head-size guide is approximate, and requirements vary by country and change over time. Check the official guidance of the authority before you submit.',
       },
     ],
   },
