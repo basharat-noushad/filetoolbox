@@ -6,7 +6,9 @@ const CANONICAL_DOMAIN = 'pdfandimage.com'
 export function middleware(request: NextRequest) {
   const host = request.headers.get('host') || ''
 
-  if (host.endsWith('.vercel.app')) {
+  // Only production redirects: preview deployments must stay reachable on their .vercel.app URL
+  // (they are noindexed via X-Robots-Tag in next.config.ts).
+  if (host.endsWith('.vercel.app') && process.env.VERCEL_ENV === 'production') {
     const url = request.nextUrl.clone()
     url.host = CANONICAL_DOMAIN
     url.protocol = 'https:'
