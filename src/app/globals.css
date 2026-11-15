@@ -101,9 +101,14 @@
 }
 
 /* ── Accessibility ─────────────────────────────────────────────────────── */
-:focus-visible {
-  outline: 2px solid #4f46e5;
-  outline-offset: 2px;
+/* In the components layer: it beats the faint base default (outline-ring/50 on *), while
+   components that draw their own focus ring (e.g. search boxes using focus-within:ring-*) can
+   still override it with utilities like outline-none. Unlayered, it beat every Tailwind class. */
+@layer components {
+  :focus-visible {
+    outline: 2px solid #4f46e5;
+    outline-offset: 2px;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
