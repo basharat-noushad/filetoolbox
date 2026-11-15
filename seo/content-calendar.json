@@ -281,6 +281,48 @@
       "note": "Written by blog pipeline — skipped 'convert svg to png' (open PR #16), 'crop image to square circle' (open PR #17), and 'powerpoint to pdf converter' (open PR #18), all already in flight"
     },
     {
+      "keyword": "how to make a passport size photo at home",
+      "workingTitle": "How to Make a Passport Size Photo at Home (Right Size, White Background)",
+      "relatedTool": "passport-photo-maker",
+      "category": "Image Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to compress an image to 100kb",
+      "workingTitle": "How to Compress an Image to 100KB (or 50KB, 20KB) Without Losing Quality",
+      "relatedTool": "compress-image",
+      "category": "Image Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to create a wifi qr code",
+      "workingTitle": "How to Create a Wi-Fi QR Code Guests Can Scan to Connect",
+      "relatedTool": "qr-code-generator",
+      "category": "Image Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to extract text from an image",
+      "workingTitle": "How to Extract Text From an Image or Screenshot",
+      "relatedTool": "image-to-text",
+      "category": "Image Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to compress a pdf to 200kb",
+      "workingTitle": "How to Compress a PDF to 200KB for Online Forms",
+      "relatedTool": "compress-pdf",
+      "category": "PDF Guides",
+      "status": "pending"
+    },
+    {
+      "keyword": "how to blur the background of a photo",
+      "workingTitle": "How to Blur the Background of a Photo (Portrait Mode Without a Fancy Camera)",
+      "relatedTool": "blur-image",
+      "category": "Image Guides",
+      "status": "pending"
+    },
+    {
       "keyword": "how to convert word to pdf without losing formatting",
       "workingTitle": "How to Convert Word to PDF Without Losing Formatting",
       "relatedTool": "word-to-pdf",
