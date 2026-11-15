@@ -1,33 +1,9 @@
 'use client'
-import { useEffect, useId, useMemo, useRef, useState } from 'react'
+import { useId, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Search } from 'lucide-react'
 import { iconFor, LANE, type ToolItem } from './data'
-import { useLoopActive } from './useLoopActive'
-import { useReduceAfterMount } from './useReduce'
-
-const EXAMPLES = ['merge pdf', 'passport photo', 'compress to 100kb', 'pdf to word', 'qr code with logo', 'remove background']
-
-/** Decorative typing loop (aria-hidden). The real input keeps its static placeholder for assistive tech. */
-function TypeLoop() {
-  const [n, setN] = useState(0)
-  const [word, setWord] = useState(0)
-  const [del, setDel] = useState(false)
-  const text = EXAMPLES[word]
-  useEffect(() => {
-    let ms = del ? 35 : 75
-    if (!del && n === text.length) ms = 1500
-    else if (del && n === 0) ms = 350
-    const t = setTimeout(() => {
-      if (!del && n === text.length) setDel(true)
-      else if (del && n === 0) { setDel(false); setWord(w => (w + 1) % EXAMPLES.length) }
-      else setN(x => x + (del ? -1 : 1))
-    }, ms)
-    return () => clearTimeout(t)
-  }, [n, del, text])
-  return <>{text.slice(0, n)}<span className="hv2-caret ml-px inline-block h-5 w-px translate-y-1 bg-gray-600" /></>
-}
 
 export function HeroSearch({ items, total }: { items: ToolItem[]; total: number }) {
   const router = useRouter()
@@ -35,14 +11,6 @@ export function HeroSearch({ items, total }: { items: ToolItem[]; total: number 
   const [q, setQ] = useState('')
   const [idx, setIdx] = useState(0)
   const [open, setOpen] = useState(false)
-  const [focused, setFocused] = useState(false)
-  const box = useRef<HTMLDivElement>(null)
-  const run = useLoopActive(box)
-  const reduce = useReduceAfterMount()
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
-  const typing = mounted && !reduce && run && !focused && q === ''
-  const showOverlay = mounted && !reduce && !focused && q === ''
 
   const results = useMemo(() => {
     const s = q.trim().toLowerCase()
@@ -63,28 +31,19 @@ export function HeroSearch({ items, total }: { items: ToolItem[]; total: number 
   }
 
   return (
-    <div className="relative" ref={box}>
+    <div className="relative">
       <label htmlFor={id} className="sr-only">Search {total} tools</label>
-      <div data-run={run} className="hv2-gborder rounded-2xl p-[1.5px] focus-within:bg-brand-600 focus-within:ring-4 focus-within:ring-brand-600/15 focus-within:[background-image:none]">
-      <div className="flex items-center gap-3 rounded-[calc(1rem-1.5px)] bg-white px-4">
+      <div className="flex items-center gap-3 rounded-2xl border border-gray-300 bg-white px-4 focus-within:border-brand-600 focus-within:ring-4 focus-within:ring-brand-600/15">
         <Search className="h-5 w-5 shrink-0 text-gray-600" aria-hidden />
-        <div className="relative min-w-0 flex-1">
         <input
           id={id} type="search" autoComplete="off" value={q} role="combobox"
           aria-expanded={show} aria-controls={`${id}-list`} aria-autocomplete="list"
           onChange={e => { setQ(e.target.value); setIdx(0); setOpen(true) }}
-          onFocus={() => { setOpen(true); setFocused(true) }} onBlur={() => { setFocused(false); setTimeout(() => setOpen(false), 120) }}
+          onFocus={() => setOpen(true)} onBlur={() => setTimeout(() => setOpen(false), 120)}
           onKeyDown={onKey}
           placeholder="Search tools: merge, QR, HEIC"
-          className={`h-14 w-full min-w-0 bg-transparent text-base text-gray-900 focus:outline-none ${showOverlay ? 'placeholder:text-transparent' : 'placeholder:text-gray-600'}`}
+          className="h-14 min-w-0 flex-1 bg-transparent text-base text-gray-900 placeholder:text-gray-600 focus:outline-none"
         />
-        {showOverlay && (
-          <span aria-hidden className="pointer-events-none absolute inset-y-0 left-0 right-0 flex items-center overflow-hidden whitespace-nowrap text-base text-gray-600">
-            {typing ? <TypeLoop /> : 'Search tools: merge, QR, HEIC'}
-          </span>
-        )}
-        </div>
-      </div>
       </div>
       {show && (
         <ul id={`${id}-list`} role="listbox"

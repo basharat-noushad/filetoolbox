@@ -10,7 +10,6 @@ import { MotionRoot } from '@/components/home-v2/MotionRoot'
 import { Reveal } from '@/components/home-v2/Reveal'
 import { CountUp } from '@/components/home-v2/CountUp'
 import { HeroDemo } from '@/components/home-v2/HeroDemo'
-import { FloatingCards } from '@/components/home-v2/FloatingCards'
 import { PrivacyPulse } from '@/components/home-v2/PrivacyPulse'
 import { HeroSearch } from '@/components/home-v2/HeroSearch'
 import { PopularTools } from '@/components/home-v2/PopularTools'
@@ -83,21 +82,12 @@ export default function HomePreview() {
         .hv2-rise{animation:hv2-rise .7s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--d,0s)}
         .hv2-h1{animation:hv2-h1 .8s cubic-bezier(.16,1,.3,1) both}
         @keyframes hv2-h1{from{transform:translateY(16px)}to{transform:none}}
-        @property --hv2-a{syntax:'<angle>';inherits:false;initial-value:0deg}
-        @keyframes hv2-spin{to{--hv2-a:360deg}}
-        .hv2-gborder{background-image:conic-gradient(from var(--hv2-a),#a5b4fc,#6ee7b7,#a5b4fc);animation:hv2-spin 7s linear infinite paused}
-        [data-run=true]>.hv2-gborder,.hv2-gborder[data-run=true]{animation-play-state:running}
-        @keyframes hv2-float{50%{transform:translateY(var(--dy)) rotate(var(--r1))}}
-        .hv2-float{transform:rotate(var(--r0));animation:hv2-float var(--t) ease-in-out var(--d) infinite paused}
-        [data-run=true] .hv2-float{animation-play-state:running}
         @keyframes hv2-glide{0%{transform:translateX(0);opacity:0}12%{opacity:1}55%{transform:translateX(100px);opacity:1}62%,100%{transform:translateX(100px);opacity:0}}
         @keyframes hv2-ring{0%,52%{transform:scale(.9);opacity:0}58%{opacity:.45}100%{transform:scale(1.45);opacity:0}}
         .hv2-glide{opacity:0;animation:hv2-glide 4s cubic-bezier(.4,0,.2,1) infinite paused}
         .hv2-ring{opacity:0;animation:hv2-ring 4s ease-out infinite paused}
         [data-run=true] .hv2-glide,[data-run=true] .hv2-ring{animation-play-state:running}
-        @keyframes hv2-blink{50%{opacity:0}}
-        .hv2-caret{animation:hv2-blink 1s steps(1) infinite}
-        @media (prefers-reduced-motion:reduce){.hv2-rise,.hv2-h1,.hv2-gborder,.hv2-float,.hv2-glide,.hv2-ring,.hv2-caret{animation:none}}
+        @media (prefers-reduced-motion:reduce){.hv2-rise,.hv2-h1,.hv2-glide,.hv2-ring{animation:none}}
       `}</style>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
@@ -126,11 +116,8 @@ export default function HomePreview() {
                 </p>
               </div>
             </div>
-            <div className="hv2-rise relative" style={{ '--d': '.3s' } as React.CSSProperties}>
-              <FloatingCards />
-              <div className="relative">
-                <HeroDemo />
-              </div>
+            <div className="hv2-rise" style={{ '--d': '.3s' } as React.CSSProperties}>
+              <HeroDemo />
             </div>
           </div>
 
