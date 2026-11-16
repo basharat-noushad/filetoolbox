@@ -294,7 +294,9 @@
       "workingTitle": "How to Compress an Image to 100KB (or 50KB, 20KB) Without Losing Quality",
       "relatedTool": "compress-image",
       "category": "Image Guides",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-compress-image-to-100kb",
+      "publishedDate": "2026-11-16"
     },
     {
       "keyword": "how to create a wifi qr code",
