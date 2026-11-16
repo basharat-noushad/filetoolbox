@@ -2957,6 +2957,163 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 
+  // ── compress image to 100kb ──
+  {
+    "slug": "how-to-compress-image-to-100kb",
+    "title": "How to Compress an Image to 100KB (or 50KB, 20KB) Without Ruining It",
+    "metaTitle": "How to Compress an Image to 100KB Without Quality Loss",
+    "metaDescription": "Get a JPG, PNG or WebP under 100KB for upload forms. Learn what to change first, how target-size compression works, and how to fix common failures.",
+    "excerpt": "Upload forms often reject photos over 100KB, 50KB or 20KB. Here is how to hit an exact size limit, what the tool trades off, and what to do when it will not fit.",
+    "category": "Image Guide",
+    "readTime": "8 min read",
+    "datePublished": "2026-11-16",
+    "dateModified": "2026-11-16",
+    "relatedTool": "compress-image",
+    "relatedTools": [
+      "resize-image",
+      "png-to-jpg",
+      "image-to-webp"
+    ],
+    "keywords": [
+      "how to compress an image to 100kb",
+      "compress image to 100kb",
+      "reduce image size to 100kb",
+      "compress image to 50kb",
+      "compress image to 20kb",
+      "reduce image size in kb"
+    ],
+    "sections": [
+      {
+        "heading": "How do you compress an image to 100KB?",
+        "paragraphs": [
+          "Open the Compress Image tool, switch to the \"To target size\" tab, pick the 100 KB preset and press the button. The tool searches for the highest JPEG or WebP quality that still fits under the limit, and only shrinks the pixel dimensions if even its lowest quality setting is too big.",
+          "The same steps work for 20 KB, 50 KB, 200 KB, 500 KB and 1 MB, or for any custom number of kilobytes you type in. Processing happens in your browser, so the photo is not uploaded to our servers to be compressed."
+        ]
+      },
+      {
+        "heading": "When do you need an image under a fixed KB limit?",
+        "paragraphs": [
+          "Most of these limits come from government and exam portals, job applications, university admissions and bank KYC forms. They were designed around old storage constraints and still reject anything over the cap with a vague \"file too large\" message.",
+          "The sizes you will meet most often are below. Always read the portal text, because the same form can ask for a different cap on the photo and the signature."
+        ],
+        "bullets": [
+          "Passport-style photos and ID uploads: usually 20 KB to 100 KB.",
+          "Signature images on application forms: often 10 KB to 50 KB.",
+          "Scanned certificates and proof documents: commonly 100 KB to 500 KB.",
+          "Email attachments and CMS uploads: typically 1 MB to 2 MB.",
+          "Profile pictures on internal HR or school systems: often 100 KB to 200 KB."
+        ]
+      },
+      {
+        "heading": "How to compress an image to a target size, step by step",
+        "steps": [
+          "Open Compress Image on pdfandimage.com and drop in your JPG, PNG or WebP file. The picker accepts files up to 50 MB.",
+          "Click the \"To target size\" tab, then choose a preset (20, 50, 100, 200, 500 KB or 1 MB) or type your own number in the Target file size box.",
+          "If your file is a PNG, choose the output format: JPG (white background) or WebP (keeps transparency). PNG is lossless, so it has to change format to reach a small size.",
+          "Click the Compress to button. The original and new sizes are shown side by side, plus the new pixel dimensions if the image had to be shrunk.",
+          "Download the result and check it at the size it will be used. If the tool says it could not reach the target, read the note, it reports the smallest size it achieved."
+        ],
+        "tip": "Aim a little under the cap, for example 95 KB for a 100 KB limit. Some portals count 1 KB as 1,024 bytes and some as 1,000. The tool targets the decimal figure, which fits under both, but a small margin avoids surprises."
+      },
+      {
+        "heading": "How target-size compression actually works",
+        "paragraphs": [
+          "Knowing what the tool does helps you predict the result. For JPG and WebP it encodes the image at several quality levels and keeps the highest one that is still within your limit. It never picks a lower quality than it needs.",
+          "If the image is still too large even at the lowest quality, the tool reduces the dimensions in 15% steps and tries again, up to fourteen times. This is the trade-off to watch: a very large photo squeezed into 20 KB will end up with noticeably fewer pixels, and the result card shows the new width and height when that happens.",
+          "If the file is already under your target, it is returned unchanged. That is intentional: re-encoding a file that already fits would only lose detail."
+        ]
+      },
+      {
+        "heading": "Reference: what size is realistic for what image?",
+        "paragraphs": [
+          "File size depends on pixel count, how detailed the picture is, and the format. These are rules of thumb, not guarantees, because every photo compresses differently."
+        ],
+        "bullets": [
+          "Flat images (signatures, scans of white paper with black ink, logos) compress very well, so 20 KB is usually achievable at normal dimensions.",
+          "Detailed photos (hair, foliage, textured walls) need more bytes. A 12-megapixel phone photo will almost certainly be downscaled to hit 50 KB or less.",
+          "JPG is the safest format for portals. WebP is often smaller at the same visual quality, but many government forms still reject it.",
+          "PNG converted to JPG loses transparency; transparent areas become white. Use WebP if you need transparency kept.",
+          "A passport photo at roughly 413 x 531 pixels (35 x 45 mm at 300 DPI) commonly lands near 40 to 100 KB as a JPG."
+        ]
+      },
+      {
+        "heading": "Common mistakes and how to fix them",
+        "paragraphs": [
+          "Most failed uploads come down to a handful of causes. Work through them in this order."
+        ],
+        "bullets": [
+          "The tool says it could not reach the target. Your goal is too small for that image content. Raise the target a little (for example 50 KB to 80 KB), or first crop away empty borders so fewer pixels have to be stored.",
+          "The result looks blurry. The tool had to reduce pixel dimensions. Resize the photo to the exact dimensions the form asks for before compressing, so quality is not spent on pixels the portal will throw away.",
+          "The portal still rejects the file. Check the file type, not only the size. Some forms accept only JPG, and some reject WebP. If a form wants a .jpg extension, choose JPG output.",
+          "You compressed a screenshot and it looks fuzzy around text. Text and sharp edges show JPEG artefacts quickly. Try a higher target size, or keep the screenshot as PNG if the limit allows.",
+          "You compressed the same file three times. Each pass of lossy compression removes detail permanently. Always go back to the original and compress once to the final target.",
+          "The photo is rotated after upload. Some portals ignore the rotation flag stored by phone cameras. Rotate the image so it looks right before you compress it."
+        ]
+      },
+      {
+        "heading": "Quality-slider mode versus target-size mode",
+        "paragraphs": [
+          "The same tool has a \"By quality\" tab with a slider from 10% to 100%, defaulting to 80%. That mode applies one quality setting and does not aim at a number of kilobytes, and it also limits the longest side to 1920 pixels. Use it when you simply want a lighter file for sharing or a website, and you do not have a hard limit.",
+          "Use \"To target size\" whenever a form states a maximum. Guessing a quality value and retrying takes far longer than letting the tool search for the best fit."
+        ]
+      },
+      {
+        "heading": "Tips for the best result at a small size",
+        "paragraphs": [
+          "Spend your bytes where they matter. These habits give noticeably better pictures at 100 KB and below."
+        ],
+        "bullets": [
+          "Crop first. A tight crop on the face or document removes pixels you do not need.",
+          "Resize to the required dimensions before you compress, not after.",
+          "Start from the original file, never from a copy that was already compressed or sent through a chat app.",
+          "Use a plain, evenly lit background for photos. Smooth areas cost almost nothing to store, which leaves more bytes for the face.",
+          "Zoom to 100% on the downloaded file and check eyes, text and edges before you submit."
+        ],
+        "tip": "For scanned documents that need to be tiny, a black-and-white or grayscale version often compresses to a fraction of the colour size with no loss of readability."
+      },
+      {
+        "heading": "Related tasks",
+        "paragraphs": [
+          "If the size limit comes with exact pixel or centimetre dimensions, use Resize Image, which also has passport presets and an optional KB limit. If you hold a PNG and the form wants a JPG, PNG to JPG converts it first. If your file is a PDF rather than an image, use Compress PDF instead. To check how a lighter modern format compares, try Image to WebP, and keep a JPG copy for portals that do not accept it."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can I compress a PNG to 100KB?",
+        "a": "Yes, but the output will be JPG or WebP, because PNG is lossless and cannot be squeezed to a target the same way. Choose JPG for the widest compatibility, or WebP if you need to keep transparency."
+      },
+      {
+        "q": "Will compressing to 100KB make my image blurry?",
+        "a": "It depends on the image. Most ordinary photos at moderate resolution stay clear at 100 KB. A very large photo may need its dimensions reduced as well, and the tool shows the new pixel size when that happens."
+      },
+      {
+        "q": "How do I compress an image to 20KB or 50KB?",
+        "a": "Use the same target-size mode and pick the 20 KB or 50 KB preset, or type the number. Expect lower dimensions for detailed photos. Simple images such as signatures usually reach these sizes easily."
+      },
+      {
+        "q": "What if the tool cannot reach my target size?",
+        "a": "It gives you the smallest file it could produce and tells you how large it is. Raise your target slightly, crop out unused areas, or resize the image to smaller dimensions first and try again."
+      },
+      {
+        "q": "Is my image uploaded when I compress it?",
+        "a": "No. Target-size compression runs in your browser using the canvas, so the file stays on your device. You only download the result."
+      },
+      {
+        "q": "Is 100KB in the tool the same as 100KB on my computer?",
+        "a": "The tool uses 1,000 bytes per KB for the limit, which is slightly stricter than the 1,024-byte figure some systems use. A file that fits under it will fit under either definition."
+      },
+      {
+        "q": "Does it work for several images at once?",
+        "a": "The target-size mode handles one image at a time. If you have many files, use the Bulk Image Compressor, which has its own settings."
+      },
+      {
+        "q": "Should I use JPG or WebP for a form upload?",
+        "a": "Use JPG unless the form says WebP is allowed. JPG is accepted nearly everywhere, while many older portals reject WebP even though the file would be smaller."
+      }
+    ]
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
