@@ -93,36 +93,39 @@ export const toJpeg = (c: HTMLCanvasElement, q = 0.95) =>
 
 export const photoPx = (w: number, h: number, unit: Unit) => ({ w: toPx(w, unit, DPI), h: toPx(h, unit, DPI) })
 
-export interface SheetSize { id: string; label: string; w: number; h: number } // inches
+// margin = blank border in px at 300 DPI. 4x6 prints are borderless at photo labs, so photos can run
+// to the edge (6 US 2x2 photos fit, as at print shops). Home printers can't print the outer ~3-5 mm of
+// A4, so keep a 5 mm border there. Photos touch each other; thin cut lines mark where to cut.
+export interface SheetSize { id: string; label: string; w: number; h: number; margin: number } // inches
 export const SHEETS: SheetSize[] = [
-  { id: '4x6', label: '4×6 in', w: 4, h: 6 },
-  { id: 'a4', label: 'A4', w: 210 / 25.4, h: 297 / 25.4 },
+  { id: '4x6', label: '4×6 in', w: 4, h: 6, margin: 0 },
+  { id: 'a4', label: 'A4', w: 210 / 25.4, h: 297 / 25.4, margin: Math.round((5 / 25.4) * 300) },
 ]
-const MARGIN = 20, GAP = 30
 
-function grid(W: number, H: number, pw: number, ph: number) {
-  const cols = Math.max(0, Math.floor((W - 2 * MARGIN + GAP) / (pw + GAP)))
-  const rows = Math.max(0, Math.floor((H - 2 * MARGIN + GAP) / (ph + GAP)))
+export function grid(W: number, H: number, pw: number, ph: number, margin: number) {
+  const cols = Math.max(0, Math.floor((W - 2 * margin) / pw))
+  const rows = Math.max(0, Math.floor((H - 2 * margin) / ph))
   return { cols, rows, n: cols * rows }
 }
 
 /** Sheet at 300 DPI with as many copies as fit (tries both orientations), thin cut guides. */
 export async function makeSheet(photo: HTMLCanvasElement, sheet: SheetSize): Promise<{ jpg: Blob; pdf: Blob; copies: number; width: number; height: number }> {
   const sw = Math.round(sheet.w * DPI), sh = Math.round(sheet.h * DPI)
-  const land = grid(sh, sw, photo.width, photo.height), port = grid(sw, sh, photo.width, photo.height)
+  const land = grid(sh, sw, photo.width, photo.height, sheet.margin), port = grid(sw, sh, photo.width, photo.height, sheet.margin)
   const [W, H, g] = land.n > port.n ? [sh, sw, land] : [sw, sh, port]
   if (g.n === 0) throw new Error('Photo does not fit on this sheet')
   const c = canvas(W, H)
   const ctx = c.getContext('2d')!
   ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, W, H)
-  const gw = g.cols * photo.width + (g.cols - 1) * GAP, gh = g.rows * photo.height + (g.rows - 1) * GAP
+  const gw = g.cols * photo.width, gh = g.rows * photo.height
   const ox = Math.round((W - gw) / 2), oy = Math.round((H - gh) / 2)
+  for (let r = 0; r < g.rows; r++) for (let k = 0; k < g.cols; k++) ctx.drawImage(photo, ox + k * photo.width, oy + r * photo.height)
+  // Cut lines on every photo edge, extended to the sheet edge so they work as crop marks too.
   ctx.strokeStyle = '#9ca3af'; ctx.lineWidth = 1
-  for (let r = 0; r < g.rows; r++) for (let k = 0; k < g.cols; k++) {
-    const x = ox + k * (photo.width + GAP), y = oy + r * (photo.height + GAP)
-    ctx.drawImage(photo, x, y)
-    ctx.strokeRect(x - 0.5, y - 0.5, photo.width + 1, photo.height + 1)
-  }
+  ctx.beginPath()
+  for (let k = 0; k <= g.cols; k++) { const x = ox + k * photo.width + 0.5; ctx.moveTo(x, 0); ctx.lineTo(x, H) }
+  for (let r = 0; r <= g.rows; r++) { const y = oy + r * photo.height + 0.5; ctx.moveTo(0, y); ctx.lineTo(W, y) }
+  ctx.stroke()
   const jpg = await setBlobDpi(await toJpeg(c, 0.95), DPI)
   const pdf = await PDFDocument.create()
   const page = pdf.addPage([(W / DPI) * 72, (H / DPI) * 72])

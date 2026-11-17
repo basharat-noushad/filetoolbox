@@ -2840,20 +2840,20 @@ export const BLOG_POSTS: BlogPost[] = [
           'China 33×48 mm: 390×567 px, head guide about 58–69%.',
           'Backgrounds: white, off-white, light blue, light grey, custom colour, or keep the original.',
           'File size limits for a single photo: no limit, 50, 100, 240 or 500 KB.',
-          'Print sheets: 4×6 in or A4, downloadable as JPG or PDF, with thin grey cut guides and a small gap between photos.',
+          'Print sheets: 4×6 in or A4, downloadable as JPG or PDF, with photos placed edge to edge and thin grey cut lines between them.',
         ],
         tip: 'If your document needs a size that is not in the list, make the closest photo here and then adjust it with the Crop Image or Resize Image tool.',
       },
       {
         heading: 'How Many Photos Fit on a Sheet',
         paragraphs: [
-          'The sheet maker tries both portrait and landscape and places as many copies as fit, with a margin around the edge and a gap between photos. The counts below follow from the layout rules in the tool for each size.',
+          'The sheet maker tries both portrait and landscape and places as many copies as fit, edge to edge, with thin grey cut lines between them. A 4×6 in sheet has no border because photo labs print 4×6 borderless; A4 keeps a 5 mm border because home printers cannot print right to the edge. The counts below follow from those layout rules.',
         ],
         bullets: [
-          '35×45 mm (UK, EU, India, Pakistan, Schengen): 8 copies on 4×6 in, 30 on A4.',
-          'US 2×2 in: 2 copies on 4×6 in, 15 on A4.',
-          'Canada 50×70 mm: 2 copies on 4×6 in, 12 on A4.',
-          'China 33×48 mm: 4 copies on 4×6 in, 32 on A4.',
+          '35×45 mm (UK, EU, India, Pakistan, Schengen): 8 copies on 4×6 in, 32 on A4.',
+          'US 2×2 in: 6 copies on 4×6 in, 15 on A4.',
+          'Canada 50×70 mm: 4 copies on 4×6 in, 12 on A4.',
+          'China 33×48 mm: 9 copies on 4×6 in, 32 on A4.',
         ],
       },
       {
@@ -2940,7 +2940,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: 'How do I print several passport photos on one page?',
-        a: 'Use Create print sheet with a 4×6 in or A4 layout, then download the JPG or PDF. For 35×45 mm photos that gives 8 copies on 4×6 in or 30 on A4. Print at 100% scale and cut along the guides.',
+        a: 'Use Create print sheet with a 4×6 in or A4 layout, then download the JPG or PDF. For 35×45 mm photos that gives 8 copies on 4×6 in or 32 on A4. Print at 100% scale and cut along the guides.',
       },
       {
         q: 'Can I use a different background colour, such as blue?',
