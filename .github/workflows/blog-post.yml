@@ -1,12 +1,12 @@
 name: Generate Blog Post
 
 # Triggered by:
-#  - Built-in schedule (Mon & Thu 09:00 PKT) — no Zapier needed
+#  - Built-in schedule (Mondays 09:00 PKT) — no Zapier needed
 #  - Zapier (optional: Webhooks POST to /repos/{owner}/{repo}/dispatches with event_type "generate-blog-post")
 #  - Manual run from the Actions tab (optionally passing a specific keyword)
 on:
   schedule:
-    - cron: "0 4 * * 1,4" # Mon & Thu 04:00 UTC = 09:00 PKT
+    - cron: "0 4 * * 1" # Mondays 04:00 UTC = 09:00 PKT (one post a week keeps Vercel deployment storage low)
   repository_dispatch:
     types: [generate-blog-post]
   workflow_dispatch:

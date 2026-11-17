@@ -23,9 +23,12 @@ for (const [from, to] of copies) {
 // MediaPipe wasm runtime for background blur (src/lib/tools/image/backgroundBlur.ts); the .tflite model is committed
 const wasmSrc = 'node_modules/@mediapipe/tasks-vision/wasm'
 fs.mkdirSync('public/mediapipe/wasm', { recursive: true })
-for (const f of fs.readdirSync(wasmSrc)) fs.copyFileSync(wasmSrc + '/' + f, 'public/mediapipe/wasm/' + f)
+// forVisionTasks(path) without useModule only loads vision_wasm_internal.*; the *_module_* build is unused (15 MB).
+for (const f of fs.readdirSync(wasmSrc)) if (!f.includes('_module_')) fs.copyFileSync(wasmSrc + '/' + f, 'public/mediapipe/wasm/' + f)
 // onnxruntime-web runtime (wasm + its .mjs loaders) for in-browser AI models (background blur, upscale);
 // self-hosted so the CSP stays 'self' and nothing loads from a CDN. Set ort.env.wasm.wasmPaths = '/ort/'.
 const ortSrc = 'node_modules/onnxruntime-web/dist'
 fs.mkdirSync('public/ort', { recursive: true })
-for (const f of fs.readdirSync(ortSrc)) if (/^ort-wasm.*\.(wasm|mjs)$/.test(f)) fs.copyFileSync(ortSrc + '/' + f, 'public/ort/' + f)
+// The default 'onnxruntime-web' import (ort.bundle.min.mjs) only loads the jsep build (WebGPU + wasm).
+// asyncify/jspi/plain builds are never requested; copying them added ~61 MB to every deployment.
+for (const f of fs.readdirSync(ortSrc)) if (/^ort-wasm-simd-threaded\.jsep\.(wasm|mjs)$/.test(f)) fs.copyFileSync(ortSrc + '/' + f, 'public/ort/' + f)

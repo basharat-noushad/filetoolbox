@@ -1,5 +1,5 @@
 {
-  "instructions": "Queue of blog topics for the automated pipeline (blog-post.yml, Mon & Thu). It picks the FIRST item with status 'pending', writes the post, then sets status to 'published' with the slug and date. When no topic is pending, the pipeline adds new topics itself. Keep highest-priority keywords at the top of the pending block. Prefer how-to / why / troubleshooting angles; tool pages own \"X converter free online\" searches.",
+  "instructions": "Queue of blog topics for the automated pipeline (blog-post.yml, weekly, Mondays). It picks the FIRST item with status 'pending', writes the post, then sets status to 'published' with the slug and date. When no topic is pending, the pipeline adds new topics itself. Keep highest-priority keywords at the top of the pending block. Prefer how-to / why / troubleshooting angles; tool pages own \"X converter free online\" searches.",
   "topics": [
     {
       "keyword": "how to compress a pdf without losing quality",

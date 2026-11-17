@@ -1,11 +1,11 @@
 name: Refresh Blog Post
 
-# Expands one existing blog post per week to the current quality bar (1,500–2,200 words,
+# Expands one existing blog post per month to the current quality bar (1,500–2,200 words,
 # full structure). Same publish gate as blog-post.yml: file allowlist + production build,
 # then auto-merge. Set repository variable BLOG_AUTO_MERGE=false to review by hand.
 on:
   schedule:
-    - cron: "0 4 * * 0" # Sun 04:00 UTC = 09:00 PKT
+    - cron: "0 4 1 * *" # 1st of each month 04:00 UTC = 09:00 PKT
   workflow_dispatch:
     inputs:
       slug:
