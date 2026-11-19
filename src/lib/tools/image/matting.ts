@@ -26,7 +26,7 @@ const ready = new Map<ModelKey, Promise<void>>()
 
 function getWorker() {
   if (worker) return worker
-  const w = new Worker(new URL('./ortWorker.ts', import.meta.url))
+  const w = new Worker('/image-workers/ortWorker.js', { type: 'module' })
   w.onmessage = (ev: MessageEvent<OrtReply>) => {
     const p = pending.get(ev.data.id); pending.delete(ev.data.id)
     if (!p) return

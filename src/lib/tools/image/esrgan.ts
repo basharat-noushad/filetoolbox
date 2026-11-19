@@ -6,7 +6,7 @@ export type AIScale = keyof typeof AI_MAX_EDGE
 export type AIProgress = { done: number; total: number; backend: 'webgpu' | 'wasm'; etaSec: number | null }
 
 export function runUpscale(rgba: Uint8ClampedArray, w: number, h: number, scale: AIScale, onProgress: (p: AIProgress) => void) {
-  const worker = new Worker(new URL('./upscaleWorker.ts', import.meta.url))
+  const worker = new Worker('/image-workers/upscaleWorker.js', { type: 'module' })
   let rejectFn: (e: Error) => void = () => {}
   const promise = new Promise<{ data: Uint8ClampedArray; w: number; h: number }>((resolve, reject) => {
     rejectFn = reject

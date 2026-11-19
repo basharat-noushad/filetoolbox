@@ -2,6 +2,8 @@
 // and always match the installed package versions. Runs on postinstall.
 const fs = require('fs')
 const copies = [
+  ['@ffmpeg/core/dist/umd/ffmpeg-core.js', 'ffmpeg/ffmpeg-core.js'],
+  ['@ffmpeg/core/dist/umd/ffmpeg-core.wasm', 'ffmpeg/ffmpeg-core.wasm'],
   ['pdfjs-dist/build/pdf.worker.min.mjs', 'pdf.worker.min.js'],
   ['@neslinesli93/qpdf-wasm/dist/qpdf.js', 'qpdf/qpdf.js'],
   ['@neslinesli93/qpdf-wasm/dist/qpdf.wasm', 'qpdf/qpdf.wasm'],

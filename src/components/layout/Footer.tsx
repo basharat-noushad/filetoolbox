@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { getToolsByCategory } from '@/lib/toolsRegistry'
 import Image from 'next/image'
 import {
   FileText, ImageIcon, UserX, ArrowRight,
@@ -122,12 +123,14 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <Link
+          {/* Native fragment navigation also updates the directory filter on the homepage. */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a
             href="/#pdf-tools"
             className="inline-flex items-center gap-1 mt-4 text-[12px] font-semibold text-brand-400 hover:text-brand-200 transition-colors"
           >
-            All 25 PDF tools <ArrowRight className="w-3 h-3" />
-          </Link>
+            All {getToolsByCategory('pdf').length} PDF tools <ArrowRight className="w-3 h-3" />
+          </a>
         </div>
 
         {/* Col 3 — Image Tools */}
@@ -148,12 +151,14 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <Link
+          {/* Native fragment navigation also updates the directory filter on the homepage. */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a
             href="/#image-tools"
             className="inline-flex items-center gap-1 mt-4 text-[12px] font-semibold text-emerald-400 hover:text-emerald-300 transition-colors"
           >
-            All 25 image tools <ArrowRight className="w-3 h-3" />
-          </Link>
+            All {getToolsByCategory('image').length} image tools <ArrowRight className="w-3 h-3" />
+          </a>
         </div>
 
         {/* Col 4 — Resources */}
@@ -179,7 +184,7 @@ export function Footer() {
           <div className="mt-6 p-3 rounded-lg border border-brand-800 bg-brand-800/40">
             <p className="text-[12px] font-semibold text-slate-200 mb-1">100% Free, Forever</p>
             <p className="text-[12px] text-slate-400 leading-relaxed">
-              No premium plans. No paywalls. Every tool on this site is free to use without limits.
+              No premium plans. No paywalls. Tools are free to use. Online services have usage limits.
             </p>
           </div>
         </div>

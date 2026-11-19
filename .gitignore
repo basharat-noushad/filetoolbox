@@ -56,3 +56,5 @@ next-env.d.ts
 /.claude/
 /graphify-out/
 /.impeccable/
+
+/public/image-workers/

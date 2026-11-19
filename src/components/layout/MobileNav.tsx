@@ -4,52 +4,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronDown, X, Menu, Home, BookOpen, Info } from 'lucide-react'
 
-const PDF_TOOLS = [
-  { name: 'Merge PDF',         slug: '/merge-pdf' },
-  { name: 'Split PDF',         slug: '/split-pdf' },
-  { name: 'Compress PDF',      slug: '/compress-pdf' },
-  { name: 'PDF to Word',       slug: '/pdf-to-word' },
-  { name: 'Word to PDF',       slug: '/word-to-pdf' },
-  { name: 'PDF to JPG',        slug: '/pdf-to-jpg' },
-  { name: 'JPG to PDF',        slug: '/jpg-to-pdf' },
-  { name: 'PDF to PNG',        slug: '/pdf-to-png' },
-  { name: 'PDF to Excel',      slug: '/pdf-to-excel' },
-  { name: 'Excel to PDF',      slug: '/excel-to-pdf' },
-  { name: 'PDF to PPT',        slug: '/pdf-to-ppt' },
-  { name: 'PPT to PDF',        slug: '/ppt-to-pdf' },
-  { name: 'Rotate PDF',        slug: '/rotate-pdf' },
-  { name: 'Unlock PDF',        slug: '/unlock-pdf' },
-  { name: 'Protect PDF',       slug: '/protect-pdf' },
-  { name: 'Watermark PDF',     slug: '/add-watermark-pdf' },
-  { name: 'Sign PDF',          slug: '/sign-pdf' },
-  { name: 'Crop PDF',          slug: '/crop-pdf' },
-  { name: 'Reorder Pages',     slug: '/reorder-pdf-pages' },
-  { name: 'Delete Pages',      slug: '/delete-pdf-pages' },
-  { name: 'Extract Pages',     slug: '/extract-pdf-pages' },
-  { name: 'Add Page Numbers',  slug: '/add-page-numbers-pdf' },
-  { name: 'OCR PDF',           slug: '/ocr-pdf' },
-]
+import { getToolsByCategory } from '@/lib/toolsRegistry'
 
-const IMAGE_TOOLS = [
-  { name: 'Compress Image',       slug: '/compress-image' },
-  { name: 'Resize Image',         slug: '/resize-image' },
-  { name: 'Crop Image',           slug: '/crop-image' },
-  { name: 'Passport Photo Maker', slug: '/passport-photo-maker' },
-  { name: 'Convert to JPG',       slug: '/png-to-jpg' },
-  { name: 'Convert to PNG',       slug: '/jpg-to-png' },
-  { name: 'JPG to WebP',          slug: '/image-to-webp' },
-  { name: 'Rotate Image',         slug: '/rotate-image' },
-  { name: 'Flip Image',           slug: '/flip-image' },
-  { name: 'Grayscale',            slug: '/grayscale-image' },
-  { name: 'Remove Background',    slug: '/remove-background' },
-  { name: 'Add Watermark',        slug: '/add-watermark-image' },
-  { name: 'Add Text',             slug: '/add-text-to-image' },
-  { name: 'Image to PDF',         slug: '/image-to-pdf' },
-  { name: 'Image to Text',        slug: '/image-to-text' },
-  { name: 'QR Code Generator',    slug: '/qr-code-generator' },
-  { name: 'Blur Image',           slug: '/blur-image' },
-  { name: 'Brightness & Contrast',slug: '/image-brightness' },
-]
+const PDF_TOOLS = getToolsByCategory('pdf')
+const IMAGE_TOOLS = getToolsByCategory('image')
 
 export function MobileNav() {
   const [open, setOpen] = useState(false)
@@ -126,14 +84,14 @@ export function MobileNav() {
                 <span className="w-3 h-3.5 bg-brand-300 rounded-sm block" />
               </span>
               PDF Tools
-              <span className="text-xs font-semibold px-1.5 py-0.5 rounded-full bg-brand-100 text-brand-700">25</span>
+              <span className="text-xs font-semibold px-1.5 py-0.5 rounded-full bg-brand-100 text-brand-700">{PDF_TOOLS.length}</span>
             </span>
             <ChevronDown aria-hidden="true" className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${section === 'pdf' ? 'rotate-180' : ''}`} />
           </button>
           {section === 'pdf' && (
             <div id="mobile-sec-pdf" className="bg-brand-50/60 border-y border-brand-100">
               {PDF_TOOLS.map(tool => (
-                <Link key={tool.slug + tool.name} href={tool.slug} onClick={close}
+                <Link key={tool.slug + tool.name} href={'/' + tool.slug} onClick={close}
                   className="block px-8 py-2 text-sm text-gray-600 hover:text-brand-600 hover:bg-brand-100 transition-colors">
                   {tool.name}
                 </Link>
@@ -154,14 +112,14 @@ export function MobileNav() {
                 <span className="w-3 h-3.5 bg-emerald-300 rounded-sm block" />
               </span>
               Image Tools
-              <span className="text-xs font-semibold px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700">25</span>
+              <span className="text-xs font-semibold px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700">{IMAGE_TOOLS.length}</span>
             </span>
             <ChevronDown aria-hidden="true" className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${section === 'image' ? 'rotate-180' : ''}`} />
           </button>
           {section === 'image' && (
             <div id="mobile-sec-image" className="bg-emerald-50/60 border-y border-emerald-100">
               {IMAGE_TOOLS.map(tool => (
-                <Link key={tool.slug + tool.name} href={tool.slug} onClick={close}
+                <Link key={tool.slug + tool.name} href={'/' + tool.slug} onClick={close}
                   className="block px-8 py-2 text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-100 transition-colors">
                   {tool.name}
                 </Link>

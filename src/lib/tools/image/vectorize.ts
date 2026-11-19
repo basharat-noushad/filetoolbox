@@ -41,7 +41,7 @@ export async function vectorizeImage(file: File, preset: VectorPreset): Promise<
   let svg: string
   try {
     svg = await new Promise<string>((resolve, reject) => {
-      const worker = new Worker(new URL('./vectorizeWorker.ts', import.meta.url))
+      const worker = new Worker('/image-workers/vectorizeWorker.js', { type: 'module' })
       worker.onmessage = e => { worker.terminate(); if (e.data.error) reject(new Error(e.data.error)); else resolve(e.data.svg) }
       worker.onerror = ev => { worker.terminate(); reject(new Error(ev.message)) }
       worker.postMessage(req)

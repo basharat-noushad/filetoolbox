@@ -39,7 +39,7 @@ const total = items.length
 const pdfCount = items.filter(t => t.category === 'pdf').length
 const imageCount = total - pdfCount
 const serverTools = items.filter(t => t.server)
-const browserCount = total - serverTools.length
+const browserCount = items.filter(t => !t.server && !HYBRID_SLUGS.has(t.slug)).length
 
 // ── ItemList schema — AIO/GEO: tells AI models exactly what tools exist ───────
 const toolListSchema = {
@@ -92,7 +92,7 @@ const COMPARE = [
   ['Account needed', 'Often', 'No sign-up'],
   ['Watermark on the result', 'Sometimes, unless you pay', 'None added'],
   ['Where your file goes', 'Usually uploaded', `Stays on your device for ${browserCount} of ${total} tools`],
-  ['Daily limits', 'Common', 'None'],
+  ['Daily limits', 'Common', 'Browser tools have no daily quota. Online conversions have usage limits.'],
   ['Cost', 'Free tier, then a plan', 'Free'],
 ]
 
@@ -154,7 +154,7 @@ export default function HomePage() {
           {/* trust strip */}
           <div className="border-y border-brand-100 bg-white">
             <ul className={`${wrap} grid grid-cols-2 gap-y-3 py-4 md:grid-cols-4 md:divide-x md:divide-brand-100`}>
-              {['No sign-up', 'No watermarks', 'Free to use', `${browserCount} tools run in your browser`].map(t => (
+              {['No sign-up', 'No watermarks', 'Free to use', `${browserCount} tools run entirely in your browser`].map(t => (
                 <li key={t} className="flex items-center gap-2.5 text-sm font-semibold text-gray-900 md:justify-center md:px-4">
                   <Check className="h-4 w-4 shrink-0 text-emerald-700" strokeWidth={2.75} aria-hidden /> {t}
                 </li>
@@ -239,9 +239,9 @@ export default function HomePage() {
                     <h3 className="text-lg font-bold">On your device</h3>
                   </div>
                   <p className="mt-6 text-7xl font-bold leading-none tracking-tight text-gray-900 tabular-nums">{browserCount}</p>
-                  <p className="mt-2 text-lg font-semibold text-gray-900">of {total} tools run in your browser</p>
+                  <p className="mt-2 text-lg font-semibold text-gray-900">of {total} tools run entirely in your browser</p>
                   <p className="mt-3 max-w-[52ch] leading-relaxed text-gray-700">
-                    Merging, compressing, cropping, signing, OCR and most conversions happen locally using your browser. The file is not sent to our servers to do the work.
+                    These tools do all file processing on your device, including merging, compressing, cropping and signing. The file is not sent to our servers to do the work.
                   </p>
                 </div>
               </Reveal>
@@ -253,7 +253,7 @@ export default function HomePage() {
                   </div>
                   <p className="mt-6 text-5xl font-bold leading-none tracking-tight text-gray-900 tabular-nums">{serverTools.length}</p>
                   <p className="mt-2 font-semibold text-gray-900">tool always uses a server: Remove Background</p>
-                  <p className="mt-3 leading-relaxed text-gray-700">Word, Excel and PowerPoint conversions run in your browser first and only use a server for scanned or complex files. You see a notice before any file leaves your device.</p>
+                  <p className="mt-3 leading-relaxed text-gray-700">Six Office conversions run locally first and offer an online fallback. You see a notice before any file leaves your device.</p>
                   <ul className="mt-4 flex flex-wrap gap-1.5">
                     {items.filter(t => t.server || HYBRID_SLUGS.has(t.slug)).map(t => (
                       <li key={t.slug}>

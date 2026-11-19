@@ -1,5 +1,5 @@
 'use client'
-import { useId, useMemo, useState } from 'react'
+import { useEffect, useId, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { AnimatePresence, m, useReducedMotion } from 'motion/react'
 import { ChevronRight, Search, Server, X } from 'lucide-react'
@@ -12,6 +12,18 @@ export function AllTools({ items }: { items: ToolItem[] }) {
   const inputId = useId()
   const [cat, setCat] = useState<Cat>('all')
   const [q, setQ] = useState('')
+
+  useEffect(() => {
+    const selectCategory = () => {
+      const hash = window.location.hash
+      if (!['#pdf-tools', '#image-tools', '#directory', ''].includes(hash)) return
+      setCat(hash === '#pdf-tools' ? 'pdf' : hash === '#image-tools' ? 'image' : 'all')
+      setQ('')
+    }
+    selectCategory()
+    window.addEventListener('hashchange', selectCategory)
+    return () => window.removeEventListener('hashchange', selectCategory)
+  }, [])
 
   const counts = useMemo(() => ({
     all: items.length,
@@ -38,7 +50,14 @@ export function AllTools({ items }: { items: ToolItem[] }) {
           {tabs.map(t => {
             const on = cat === t.id
             return (
-              <button key={t.id} role="tab" aria-selected={on} onClick={() => setCat(t.id)}
+              <button key={t.id} id={t.id === 'all' ? undefined : t.id + '-tools'} role="tab" aria-selected={on}
+                style={{ scrollMarginTop: '7rem' }}
+                onClick={() => {
+                  const hash = t.id === 'all' ? 'directory' : t.id + '-tools'
+                  window.history.replaceState(window.history.state, '', '#' + hash)
+                  setCat(t.id)
+                  setQ('')
+                }}
                 className="relative rounded-full px-4 py-2 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">
                 {on && (
                   <m.span layoutId="dir-tab" aria-hidden

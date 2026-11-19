@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { withSocialMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
@@ -56,6 +57,15 @@ export default function PdfToExcelPage() {
   return (
     <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}>
       <PdfToExcelClient />
+      <section className="mt-8 space-y-3" aria-labelledby="sample-table">
+        <h2 id="sample-table" className="text-xl font-semibold">Try a PDF table with three columns</h2>
+        <p>The sample lists two office supplies. In the converted workbook, Item, Units and Total occupy separate columns. The quantities and totals are numbers you can sum. The spacing in the PDF leaves a blank row between entries.</p>
+        <div className="flex flex-wrap gap-4 text-brand-700 underline">
+          <a href="/examples/supplies.pdf" download>Download the sample PDF</a>
+          <a href="/examples/supplies.xlsx" download>Compare the converted workbook</a>
+        </div>
+        <p>For a scan, check column alignment and decimal points after OCR. <Link className="text-brand-700 underline" href="/blog/how-to-convert-pdf-tables-to-excel-free">Read the PDF table extraction guide</Link>.</p>
+      </section>
     </ToolLayout>
   )
 }

@@ -103,7 +103,7 @@ async function main() {
   const end = new Date()
   end.setDate(end.getDate() - 2) // GSC data lags ~2 days
   const start = new Date(end)
-  start.setDate(start.getDate() - LOOKBACK_DAYS)
+  start.setDate(start.getDate() - LOOKBACK_DAYS + 1)
   const startDate = isoDate(start)
   const endDate = isoDate(end)
 
@@ -118,6 +118,10 @@ async function main() {
     rowLimit: 5000,
   })
 
+  const queryData = await queryGsc(token, { startDate, endDate, dimensions: ['query'], rowLimit: 25000 })
+  const observedQueries = (queryData.rows || []).map(r => ({
+    query: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: Number(r.position.toFixed(1)),
+  })).sort((a, b) => b.impressions - a.impressions)
   const rows = data.rows || []
   console.log(`Fetched ${rows.length} page+query rows.`)
 
@@ -166,6 +170,13 @@ async function main() {
   md += `Improving the title tag, meta description, and adding FAQ content targeting `
   md += `the listed queries is the fastest way to gain clicks.\n\n---\n\n`
 
+  md += '## Search queries across the site\n\n'
+  for (const row of observedQueries) {
+    md += `- ${row.query} — ${row.impressions} impressions, ${row.clicks} clicks, average position ${row.position}\n`
+  }
+  if (!observedQueries.length) md += 'Google disclosed no queries for this period.\n'
+  md += '\n'
+
   if (pages.length === 0) {
     md += `No quick wins matched the filter this week. If the site is new, lower MIN_IMPRESSIONS or wait for more impression data.\n`
   }
@@ -186,7 +197,7 @@ async function main() {
   fs.writeFileSync(mdPath, md)
   fs.writeFileSync(
     path.join(REPORTS_DIR, 'latest.json'),
-    JSON.stringify({ generated: today, startDate, endDate, siteUrl: SITE_URL, pages }, null, 2)
+    JSON.stringify({ generated: today, startDate, endDate, siteUrl: SITE_URL, observedQueries, pages }, null, 2)
   )
   console.log(`Report written: ${mdPath}`)
 

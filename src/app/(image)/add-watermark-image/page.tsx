@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import { getToolBySlug } from '@/lib/toolsRegistry'
 import { withSocialMetadata } from '@/lib/seo'
@@ -48,5 +49,20 @@ const FAQS = [
 ]
 
 export default function Page() {
-  return <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}><AddWatermarkImageClient /></ToolLayout>
+  return <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}><AddWatermarkImageClient />
+      <section className="mt-8 space-y-3">
+        <h2 className="text-xl font-semibold">Adding a logo to a JPG</h2>
+        <p>Compare the lower-right corner. The transparent logo leaves the landscape visible around its edges. Both JPG files are 420 × 240 pixels.</p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {[
+            ['landscape.jpg', 'Original JPG'],
+            ['landscape-marked.jpg', 'Watermarked JPG'],
+          ].map(([file, label]) => (
+            <figure key={file}>
+              <Image unoptimized src={'/examples/' + file} width={420} height={240} alt={label + ' of an illustrated mountain landscape'} className="h-auto w-full rounded-lg" />
+              <figcaption><a className="text-brand-700 underline" href={'/examples/' + file} download>{label}</a></figcaption>
+            </figure>
+          ))}
+        </div>
+      </section></ToolLayout>
 }

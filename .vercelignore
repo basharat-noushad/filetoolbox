@@ -1,0 +1,11 @@
+# Recreated by postinstall from the locked dependencies.
+public/ffmpeg/ffmpeg-core.js
+public/ffmpeg/ffmpeg-core.wasm
+public/pdf.worker.min.js
+public/ghostscript/gs.js
+public/ghostscript/gs.wasm
+public/qpdf/qpdf.js
+public/qpdf/qpdf.wasm
+
+# Internal research and generated audit reports are not used by the site.
+seo/reports/

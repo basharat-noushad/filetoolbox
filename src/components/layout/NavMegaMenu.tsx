@@ -113,7 +113,7 @@ const MENUS: MegaMenuConfig[] = [
     label: 'Image Tools',
     tools: IMAGE_TOOLS,
     viewAllHref: '/#image-tools',
-    description: 'Compress, resize, convert and enhance images in seconds — no upload required.',
+    description: 'Compress, resize, convert and enhance images in your browser or with online background removal.',
     accentColor: 'text-emerald-600',
     badgeCls: 'bg-emerald-100 text-emerald-700',
     iconBg: 'bg-emerald-50',
@@ -249,13 +249,13 @@ export function NavMegaMenu() {
                 </span>
                 <p className="text-xs text-gray-500 leading-relaxed">{menu.description}</p>
               </div>
-              <Link
+              <a
                 href={menu.viewAllHref}
                 className={`inline-flex items-center gap-1 text-sm font-semibold mt-6 ${menu.accentColor} hover:underline`}
                 onClick={() => setActiveMenu(null)}
               >
                 View all <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+              </a>
             </div>
 
             {/* Divider */}

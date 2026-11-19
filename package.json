@@ -7,7 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "node scripts/copy-wasm.cjs && node scripts/build-doc-convert.mjs",
+    "postinstall": "node scripts/copy-wasm.cjs && node scripts/build-doc-convert.mjs && node scripts/build-image-workers.mjs",
     "build:doc-convert": "node scripts/build-doc-convert.mjs"
   },
   "dependencies": {
