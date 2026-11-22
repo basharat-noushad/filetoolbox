@@ -23,7 +23,7 @@ const HOW_TO_STEPS = [
 const FAQS = [
   {
     "q": "How do I compress a PDF to 200 KB?",
-    "a": "Choose Target size, select 200 KB and compress. The tool re-renders each page as a JPEG and lowers resolution and quality over several passes until the file fits. Very long or image-heavy PDFs may not reach 200 KB; you then get the smallest result and its actual size."
+    "a": "For a form with a 200 KB upload limit, choose Target size, select 200 KB and compress. Check the reported size and open the download to make sure small text is readable. If the result is still above the limit, try extracting only the pages the form asks for and compress those."
   },
   {
     "q": "Can I compress a PDF for email?",
@@ -48,5 +48,5 @@ const FAQS = [
 ]
 
 export default function Page() {
-  return <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}><CompressPdfClient /></ToolLayout>
+  return <ToolLayout tool={tool} howToTitle="How to compress a PDF to a target size" howToSteps={HOW_TO_STEPS} faqs={FAQS}><CompressPdfClient /></ToolLayout>
 }

@@ -5,28 +5,30 @@ import { ToolLayout } from '@/components/tools/ToolLayout'
 import { RemoveBackgroundClient } from './RemoveBackgroundClient'
 
 const tool = getToolBySlug('remove-background')!
+const title = 'Remove Image Background or Make It White Online'
+const description = 'Remove a photo background with AI, then make it white or keep it transparent. Download a PNG or save a solid background as JPG.'
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: "Remove Background & Change Color Online Free",
-    description: "Remove background from image online free with AI, then keep it transparent or switch to a white, blue or custom color. Photos are sent to an AI service.",
+    title,
+    description,
     keywords: tool.keywords,
     openGraph: {
-      title: "Remove Background & Change Color Online Free | PDF and Image",
-      description: 'Remove image backgrounds automatically in seconds using AI. Free, transparent PNG output, no registration.',
+      title: `${title} | PDF and Image`,
+      description,
     },
     twitter: {
-      title: "Remove Background & Change Color Online Free | PDF and Image",
-      description: 'Remove image backgrounds automatically in seconds using AI. Free, transparent PNG output, no registration.',
+      title: `${title} | PDF and Image`,
+      description,
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/remove-background')
 }
 
 const HOW_TO_STEPS = [
-  'Upload your photo by clicking "Select File" or dragging and dropping it into the upload area.',
-  'The AI automatically detects the subject and removes the background in seconds.',
-  'Keep it transparent or pick a white, grey, blue, red or custom background, then download the PNG or JPG.',
+  'Select a JPG, PNG or WebP photo up to 4 MB and click "Remove Background". An AI service cuts out the subject.',
+  'Choose White for a plain background, or leave Transparent selected if you want to place the cutout on another design.',
+  'Download the PNG, or choose "Save as JPG" for an image with a solid background.',
 ]
 
 const FAQS = [
@@ -51,14 +53,14 @@ const FAQS = [
     a: 'Yes. Your photo is sent over HTTPS to a third-party AI background-removal service, which returns the transparent PNG. Only upload images you are comfortable sending to an online service.',
   },
   {
-    q: 'Can I change the background to a different color after removing it?',
-    a: 'Yes. After the background is removed, choose White, Light grey, Blue, Red or any custom colour. This is applied in your browser and does not use the AI service again. For a background image or texture, download the transparent PNG and place it in a design tool.',
+    q: 'How do I make the background of a product photo white?',
+    a: 'Click Remove Background, then select White under Background. Check the edges of the product before downloading. You can try other colours in the browser without sending the photo to the AI service again.',
   },
 ]
 
 export default function RemoveBackgroundPage() {
   return (
-    <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}>
+    <ToolLayout tool={tool} howToTitle="How to remove or replace a photo background" howToSteps={HOW_TO_STEPS} faqs={FAQS}>
       <RemoveBackgroundClient />
     </ToolLayout>
   )

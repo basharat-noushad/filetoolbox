@@ -6,28 +6,30 @@ import { ToolLayout } from '@/components/tools/ToolLayout'
 import { PdfToExcelClient } from './PdfToExcelClient'
 
 const tool = getToolBySlug('pdf-to-excel')!
+const title = 'PDF to Excel Converter – Extract Tables to XLSX'
+const description = 'Convert PDF tables to Excel (.xlsx) for free. Use OCR for scanned pages, then check the rows, columns and numbers in the exported workbook.'
 
 export async function generateMetadata(): Promise<Metadata> {
   return withSocialMetadata({
-    title: "PDF to Excel Online Free — Convert to XLSX",
-    description: "Convert PDF to Excel (.xlsx) online for free. Extracts tables and data, and reads scanned pages with OCR in your browser. Up to 100 MB, no sign-up.",
+    title,
+    description,
     keywords: tool.keywords,
     openGraph: {
-      title: "PDF to Excel Online Free — Convert to XLSX | PDF and Image",
-      description: 'Convert PDF files to Excel spreadsheets (.xlsx) online for free. Extract tables and data from any PDF.',
+      title: `${title} | PDF and Image`,
+      description,
     },
     twitter: {
-      title: "PDF to Excel Online Free — Convert to XLSX | PDF and Image",
-      description: 'Convert PDF files to Excel spreadsheets (.xlsx) online for free. Extract tables and data from any PDF.',
+      title: `${title} | PDF and Image`,
+      description,
     },
     alternates: { canonical: `/${tool.slug}` },
   }, '/pdf-to-excel')
 }
 
 const HOW_TO_STEPS = [
-  'Upload your PDF file using the file selector or drag and drop.',
-  'Click "Convert to Excel" to start the conversion process.',
-  'Download your converted Excel (.xlsx) spreadsheet when ready.',
+  'Select a PDF that contains a table. If it is a scan, choose the document language so OCR can read it.',
+  'Click "Convert to Excel", then download and open the .xlsx workbook.',
+  'Compare the column headers, row count and a few totals with the PDF before using the spreadsheet.',
 ]
 
 const FAQS = [
@@ -55,11 +57,11 @@ const FAQS = [
 
 export default function PdfToExcelPage() {
   return (
-    <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}>
+    <ToolLayout tool={tool} howToTitle="How to convert PDF tables to Excel" howToSteps={HOW_TO_STEPS} faqs={FAQS}>
       <PdfToExcelClient />
       <section className="mt-8 space-y-3" aria-labelledby="sample-table">
         <h2 id="sample-table" className="text-xl font-semibold">Try a PDF table with three columns</h2>
-        <p>The sample lists two office supplies. In the converted workbook, Item, Units and Total occupy separate columns. The quantities and totals are numbers you can sum. The spacing in the PDF leaves a blank row between entries.</p>
+        <p>Open the sample PDF and compare it with the workbook. The notebook row should show 3 units and a total of 18. The pencil row should show 5 units and a total of 10. Check that Units and Total land in separate columns and that the two totals add up to 28 in Excel.</p>
         <div className="flex flex-wrap gap-4 text-brand-700 underline">
           <a href="/examples/supplies.pdf" download>Download the sample PDF</a>
           <a href="/examples/supplies.xlsx" download>Compare the converted workbook</a>

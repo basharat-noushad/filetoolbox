@@ -3,8 +3,9 @@ import { Tool } from '@/types/tools'
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://pdfandimage.com').replace(/\/$/, '')
 const ORG_NAME = 'PDF and Image'
 
-export function StructuredData({ tool, howToSteps, faqs }: {
+export function StructuredData({ tool, howToTitle, howToSteps, faqs }: {
   tool: Tool
+  howToTitle?: string
   howToSteps: string[]
   faqs: { q: string; a: string }[]
 }) {
@@ -25,7 +26,7 @@ export function StructuredData({ tool, howToSteps, faqs }: {
   const howTo = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: `How to ${tool.name} Online for Free`,
+    name: howToTitle ?? `How to ${tool.name} Online for Free`,
     description: tool.description,
     url: toolUrl,
     estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },

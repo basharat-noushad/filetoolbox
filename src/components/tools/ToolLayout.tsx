@@ -8,6 +8,7 @@ import { StructuredData } from '@/components/seo/StructuredData'
 
 interface ToolLayoutProps {
   tool: Tool
+  howToTitle?: string
   howToSteps: string[]
   faqs: { q: string; a: string }[]
   children: React.ReactNode
@@ -15,13 +16,13 @@ interface ToolLayoutProps {
 
 const ADS_ON = !!process.env.NEXT_PUBLIC_ADSENSE_ID && process.env.NEXT_PUBLIC_ADSENSE_ID !== 'ca-pub-XXXXXXXXXXXXXXXXX'
 
-export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps) {
+export function ToolLayout({ tool, howToTitle, howToSteps, faqs, children }: ToolLayoutProps) {
   const serverProcessing = usesProcessingServer(tool.slug)
   const guides = BLOG_POSTS.filter(post => post.relatedTool === tool.slug || post.relatedTools.includes(tool.slug))
     .sort((a, b) => Number(b.relatedTool === tool.slug) - Number(a.relatedTool === tool.slug)).slice(0, 3)
   return (
     <>
-      <StructuredData tool={tool} howToSteps={howToSteps} faqs={faqs} />
+      <StructuredData tool={tool} howToTitle={howToTitle} howToSteps={howToSteps} faqs={faqs} />
       <div className="min-h-dvh bg-background">
         {ADS_ON && <div className="bg-white border-b border-brand-100">
           <div className="max-w-6xl mx-auto px-4 py-2 flex justify-center">
@@ -51,7 +52,7 @@ export function ToolLayout({ tool, howToSteps, faqs, children }: ToolLayoutProps
                 <AdBanner slot="below-tool" format="rectangle" />
               </div>
               <section className="mt-10">
-                <h2 className="text-xl font-semibold text-gray-900 mb-4">How to {tool.name}</h2>
+                <h2 className="text-xl font-semibold text-gray-900 mb-4">{howToTitle ?? `How to ${tool.name}`}</h2>
                 <ol className="space-y-3">
                   {howToSteps.map((step, i) => (
                     <li key={i} className="flex gap-3">
