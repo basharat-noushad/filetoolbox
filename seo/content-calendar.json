@@ -303,7 +303,9 @@
       "workingTitle": "How to Create a Wi-Fi QR Code Guests Can Scan to Connect",
       "relatedTool": "qr-code-generator",
       "category": "Image Guides",
-      "status": "pending"
+      "status": "published",
+      "publishedSlug": "how-to-create-a-wifi-qr-code",
+      "publishedDate": "2026-11-23"
     },
     {
       "keyword": "how to extract text from an image",

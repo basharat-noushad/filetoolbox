@@ -4,7 +4,7 @@ This document is intended for AI language model crawlers and indexing systems.
 It provides comprehensive, citation-ready information about pdfandimage.com.
 
 Source: https://pdfandimage.com/llms-full.txt
-Last updated: 2026-11-16
+Last updated: 2026-11-23
 
 ---
 
@@ -251,3 +251,4 @@ Converts raster PNG images to SVG vector format using Potrace. Server-side.
 | How to Compress Multiple Images at Once (Batch Compression, Free) | https://pdfandimage.com/blog/how-to-compress-multiple-images-at-once |
 | How to Convert SVG to PNG at Any Resolution (Free) | https://pdfandimage.com/blog/convert-svg-to-png |
 | How to Make a Passport Size Photo at Home (Right Size, White Background) | https://pdfandimage.com/blog/how-to-make-passport-size-photo-at-home |
+| How to Create a Wi-Fi QR Code Guests Can Scan to Connect | https://pdfandimage.com/blog/how-to-create-a-wifi-qr-code |
