@@ -3120,6 +3120,154 @@ export const BLOG_POSTS: BlogPost[] = [
     ]
   },
 
+  {
+    "slug": "how-to-create-a-wifi-qr-code",
+    "title": "How to Create a Wi-Fi QR Code Guests Can Scan to Connect",
+    "metaTitle": "How to Create a Wi-Fi QR Code for Guests (Free Guide)",
+    "metaDescription": "Create a Wi-Fi QR code in minutes: enter your network name and password, check it scans, then download and print it for guests.",
+    "excerpt": "A Wi-Fi QR code lets guests join your network by pointing their camera at it, with no password to read out. Here is how to make one, print it and fix it when it does not work.",
+    "category": "Image Guide",
+    "readTime": "8 min read",
+    "datePublished": "2026-11-23",
+    "dateModified": "2026-11-23",
+    "relatedTool": "qr-code-generator",
+    "relatedTools": [
+      "qr-code-scanner",
+      "add-text-to-image",
+      "compress-image"
+    ],
+    "keywords": [
+      "how to create a wifi qr code",
+      "wifi qr code",
+      "make a qr code for wifi password",
+      "share wifi with qr code",
+      "wifi qr code for guests",
+      "print wifi qr code"
+    ],
+    "sections": [
+      {
+        "paragraphs": [
+          "To create a Wi-Fi QR code, open the QR Code Generator, choose the Wi-Fi type, enter your network name (SSID), pick the security type and type the password, then download the image. Guests scan it with their phone camera and are offered a one-tap join, with no password to spell out.",
+          "The code simply stores your network details as text in a standard format that iPhone and Android cameras understand. Nothing is looked up online when someone scans it, so the code keeps working for as long as your network name and password stay the same."
+        ]
+      },
+      {
+        "heading": "When and Why You Need a Wi-Fi QR Code",
+        "paragraphs": [
+          "Reading out a long, random router password is slow and error-prone, especially with characters like 0 and O or l and I. A QR code removes that friction in places where people connect repeatedly."
+        ],
+        "bullets": [
+          "Guests at home: stick a small card on the fridge or in the guest room instead of dictating the password every visit.",
+          "Short-term rentals and B&Bs: put the code in the welcome folder so arrivals connect without messaging you.",
+          "Cafés, waiting rooms and offices: print a table or reception sign for visitors.",
+          "Events and meetings: show the code on a slide so a room of people can join quickly.",
+          "Smart devices and tablets: scan once instead of typing a password on a small on-screen keyboard."
+        ],
+        "tip": "Use a separate guest network if your router offers one. The code then never exposes the password to your main network, and you can change it without disturbing your own devices."
+      },
+      {
+        "heading": "How to Make a Wi-Fi QR Code Step by Step",
+        "steps": [
+          "Open the QR Code Generator and select the Wi-Fi type under Basics.",
+          "Enter the network name exactly as it appears on your devices, including capital letters, spaces and symbols. Choose the security type: WPA / WPA2 / WPA3 for nearly all modern routers, WEP only for very old ones, or None for an open network.",
+          "Type the password (it is not needed for an open network). If your network does not broadcast its name, tick Hidden network.",
+          "Check the preview. The tool decodes the code again in your browser and shows \"Scans OK\" when it reads back your exact details, or a warning if something risks scanning badly.",
+          "Download PNG for screens and documents, SVG for sharp printing at any size, or a PDF at an exact print width. Then test it with a real phone before you print copies."
+        ],
+        "tip": "The code is generated in your browser, so your password is not uploaded to produce it. The image itself still contains the password in readable form once decoded, so treat it like the password."
+      },
+      {
+        "heading": "Wi-Fi QR Code Settings and Specifics",
+        "paragraphs": [
+          "These are the options that matter for this code type, based on what the generator offers."
+        ],
+        "bullets": [
+          "Security: WPA covers WPA, WPA2 and WPA3 personal networks. WEP is legacy. None omits the password from the code entirely.",
+          "Hidden network: sets a flag so the phone knows to join a network that does not broadcast its name.",
+          "Special characters: semicolons, commas, colons, quotation marks and backslashes in the name or password are escaped for you, so you type them normally.",
+          "Error correction: Medium (15%) is the default. Choose Quartile or High if the printed code may get scuffed or you add a logo; a logo switches it to High automatically.",
+          "Download formats: PNG, JPG, SVG and PDF. PNG and JPG widths go from 128 up to 4,000 px; the PDF is a 300 DPI image sized to the width you choose.",
+          "Quiet zone: the blank margin around the code, adjustable from 0 to 8 modules. Leave it at the default of 4 so scanners can find the edges.",
+          "Colours: dark code on a light background is safest. The tool warns below a 3:1 contrast ratio and for inverted or transparent-background codes."
+        ]
+      },
+      {
+        "heading": "How Guests Scan and Join",
+        "paragraphs": [
+          "On a recent iPhone, open the Camera app and point it at the code; a banner offers to join the network. On most Android phones the camera app, Google Lens or the Wi-Fi settings screen has a scan option, and the exact wording varies by manufacturer and version.",
+          "Older devices may need a separate scanner app. If a guest has trouble, you can verify the code yourself with the QR Code Scanner, which decodes an image and shows the network name, security type and password it contains."
+        ]
+      },
+      {
+        "heading": "Common Mistakes and Troubleshooting",
+        "paragraphs": [
+          "Most failed Wi-Fi codes come down to a typo or a print problem rather than the code format. Work through these in order."
+        ],
+        "bullets": [
+          "The phone says it cannot join: the network name or password differs from the router. Names are case-sensitive, so \"Home-WiFi\" and \"home-wifi\" are different networks. Copy them from the router settings and regenerate.",
+          "Wrong security type: choosing WPA for an open network, or None for a protected one, makes joining fail. Check the router page and match it.",
+          "Hidden network will not connect: tick Hidden network and regenerate. Without the flag some phones will not look for a name that is not being broadcast.",
+          "The code will not scan at all: it is probably too small, low in contrast or blurry. Print it at least 2.5 cm (about 1 inch) wide, use dark on light, and avoid glossy lamination that reflects light.",
+          "It worked, then stopped: you changed the router password or name. Static codes cannot be edited, so create and reprint a new one.",
+          "The code looks cut off: a tight crop removed the quiet zone. Keep a white margin around it when you place it in a document.",
+          "The generator shows a warning: a gradient, a large logo or low contrast can lower reliability. Remove the styling or raise contrast, then confirm \"Scans OK\" again."
+        ],
+        "tip": "Always test the final printed copy with two different phones, ideally one iPhone and one Android, before you laminate or hand out a batch."
+      },
+      {
+        "heading": "Tips for Best Results",
+        "bullets": [
+          "Keep the design plain. A black code on white is the most reliable choice, and styling only helps if the preview still says it scans.",
+          "Add a human fallback. Print the network name under the code, and the password too if the sign stays private, so someone with an old phone can type it.",
+          "Use the Scan me frame or a short label such as \"Guest Wi-Fi\" so people know what the code does. A frame is included in the downloaded image.",
+          "Choose SVG or a large PNG for posters and table signs. A small image enlarged in a document goes soft and scans poorly.",
+          "Store the file somewhere you can find it. When you change your password, you will need to generate and reprint the code with the new details.",
+          "Think about where it hangs. A code in a public space gives anyone who sees it access, so use a guest network and change the password if the sign goes missing."
+        ]
+      },
+      {
+        "heading": "Related Tasks",
+        "paragraphs": [
+          "Once the code is made, a few other tools help finish the job. Use the QR Code Scanner to read back any existing code, including one from a router label, and confirm what it contains. To turn the code into a printable sign with a title like \"Guest Wi-Fi\" and some instructions, Add Text to Image lets you place text on the downloaded PNG. If you are dropping the image into an email or a web page and it is heavier than you want, Compress Image reduces its file size, though SVG is already tiny and needs no compression."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is a Wi-Fi QR code safe to share?",
+        "a": "It is as safe as sharing the password itself, because anyone who scans it can read the network name and password. Share it only where you would be happy to give out the password, and use a guest network for visitors."
+      },
+      {
+        "q": "Does a Wi-Fi QR code work on both iPhone and Android?",
+        "a": "Yes. The WIFI text format is understood by the built-in camera or scanner on current iPhones and most Android phones. The exact join prompt differs, and very old devices may need a scanner app."
+      },
+      {
+        "q": "What happens if I change my Wi-Fi password?",
+        "a": "The old code stops working for new connections, because the password is stored inside the image. Make a new code with the updated password and replace the printed copies."
+      },
+      {
+        "q": "Do I need to choose WPA, WPA2 or WPA3?",
+        "a": "No. The WPA / WPA2 / WPA3 option covers all of them, so pick it for any modern password-protected network. Only choose WEP for a very old router, or None for an open network."
+      },
+      {
+        "q": "Is my Wi-Fi password uploaded when I make the code?",
+        "a": "No. The QR Code Generator creates the code in your browser, so the details you type are not sent to a server to produce the image. The finished image still contains the password, so keep it private."
+      },
+      {
+        "q": "Will the QR code expire?",
+        "a": "No. It is a static code with the details encoded in the image itself, with no redirect or subscription behind it. It works until your network name or password changes."
+      },
+      {
+        "q": "How big should I print a Wi-Fi QR code?",
+        "a": "About 2.5 cm (1 inch) wide is a practical minimum for scanning from close range, and larger is better for a wall sign. Keep the white margin, use dark on light, and scan a test print before making copies."
+      },
+      {
+        "q": "Can I make a QR code for a hidden network?",
+        "a": "Yes. Tick Hidden network in the Wi-Fi form so the code flags it as non-broadcasting. Enter the exact network name and password, since the phone cannot find it by browsing."
+      }
+    ]
+  },
+
 ]
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
