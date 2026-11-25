@@ -36,7 +36,7 @@ const FAQS = [
 
 export default function QrCodeGeneratorPage() {
   return (
-    <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}>
+    <ToolLayout tool={tool} howToTitle="How to create a QR code" howToSteps={HOW_TO_STEPS} faqs={FAQS}>
       <QrCodeGeneratorClient />
     </ToolLayout>
   )

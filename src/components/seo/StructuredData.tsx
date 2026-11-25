@@ -5,7 +5,7 @@ const ORG_NAME = 'PDF and Image'
 
 export function StructuredData({ tool, howToTitle, howToSteps, faqs }: {
   tool: Tool
-  howToTitle?: string
+  howToTitle: string
   howToSteps: string[]
   faqs: { q: string; a: string }[]
 }) {
@@ -26,7 +26,7 @@ export function StructuredData({ tool, howToTitle, howToSteps, faqs }: {
   const howTo = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: howToTitle ?? `How to ${tool.name} Online for Free`,
+    name: howToTitle,
     description: tool.description,
     url: toolUrl,
     estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
@@ -109,11 +109,6 @@ export function StructuredData({ tool, howToTitle, howToSteps, faqs }: {
     keywords: tool.keywords.join(', '),
     inLanguage: 'en',
     publisher: { '@type': 'Organization', name: ORG_NAME, url: SITE_URL },
-    // Speakable — helps Google Assistant and voice search read key content
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', 'h2', '.tool-description'],
-    },
   }
 
   return (

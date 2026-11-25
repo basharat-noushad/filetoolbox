@@ -219,7 +219,7 @@ export default async function BlogPostPage({
         {/* Primary tool CTA */}
         <div className="mt-10 bg-brand-900 rounded-2xl p-6 text-center">
           <h2 className="text-lg font-bold text-white mb-2">Try it now — free</h2>
-          <p className="text-brand-300 text-sm mb-5">No registration, no file uploads to external servers, 100% private.</p>
+          <p className="text-brand-300 text-sm mb-5">Free to use with no registration.</p>
           <Link
             href={`/${post.relatedTool}`}
             className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"

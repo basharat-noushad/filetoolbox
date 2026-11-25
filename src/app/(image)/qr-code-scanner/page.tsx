@@ -35,7 +35,7 @@ const FAQS = [
 
 export default function QrCodeScannerPage() {
   return (
-    <ToolLayout tool={tool} howToSteps={HOW_TO_STEPS} faqs={FAQS}>
+    <ToolLayout tool={tool} howToTitle="How to scan a QR code from an image or camera" howToSteps={HOW_TO_STEPS} faqs={FAQS}>
       <QrCodeScannerClient />
     </ToolLayout>
   )

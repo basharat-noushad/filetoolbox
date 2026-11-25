@@ -107,12 +107,12 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'how-to-merge-pdf-files-online-free',
     title: "How to Merge PDF Files Online: Order, Limits and Checks",
     metaTitle: "How to Merge PDF Files Online for Free",
-    metaDescription: "Combine up to 20 PDF files in your browser. Check file order, mixed page sizes and the downloaded result, with practical advice for signed documents.",
+    metaDescription: "Merge up to 20 PDFs, JPGs and PNGs in your browser. Reorder files before merging and check page sizes, signatures and the downloaded PDF.",
     excerpt: "Combine reports, forms or attachments into one PDF. Check the selected order before merging and review the output before sending it.",
     category: 'PDF Guide',
     readTime: "3 min read",
     datePublished: '2025-05-01',
-    dateModified: "2026-09-29",
+    dateModified: "2026-11-25",
     relatedTool: 'merge-pdf',
     relatedTools: ['split-pdf', 'reorder-pdf-pages', 'compress-pdf'],
     keywords: ['merge pdf', 'merge pdf files', 'combine pdf', 'join pdf online free', 'how to merge pdf'],
@@ -120,29 +120,29 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "heading": "Before you start",
     "paragraphs": [
-      "Gather at least two PDFs. The tool accepts up to 20 files, each up to 50 MB, but your browser may run out of memory with large collections. Keep copies of the originals. If a PDF is encrypted, unlock it only if you are authorized to do so."
+      "Gather at least two files. You can mix PDFs, JPGs and PNGs in the same job, with up to 20 files and a 50 MB limit per file. Large collections can exceed your browser’s available memory. If a PDF is encrypted, unlock it only if you are authorized to do so."
     ]
   },
   {
     "heading": "Merge PDF files",
     "paragraphs": [],
     "steps": [
-      "Open Merge PDF and select your files together.",
-      "Review the file list. Pages are copied in the displayed file order; there is no drag-to-reorder control in this merger.",
-      "Click Merge PDFs and wait for the result.",
+      "Open Merge PDF and select your files. Use Add more files if you need to include another document or image.",
+      "Drag files into order or use the move buttons. The tool copies each PDF’s pages in their original order and combines the files in the order shown.",
+      "Click the Merge button and wait for the result.",
       "Download merged.pdf and check page count and transitions between documents."
     ]
   },
   {
     "heading": "A simple order example",
     "paragraphs": [
-      "If a two-page cover document appears before a three-page report, the output should have five pages: the two cover pages followed by the three report pages. If the order is wrong, adjust your selection or use Reorder PDF Pages after merging. This is an illustrative workflow, not a claimed compression benchmark."
+      "Put a one-page cover before a three-page report and add a PNG at the end. The result should have five pages, with the cover on page 1, the report on pages 2 to 4 and the image on page 5. To move individual pages after merging, use Reorder PDF Pages."
     ]
   },
   {
     "heading": "Mixed page sizes and document features",
     "paragraphs": [
-      "Each copied page keeps its dimensions, so a landscape chart can sit beside portrait pages. Merging is not a way to validate signatures or preserve every document-level feature. Check bookmarks, forms and signatures separately if your workflow depends on them."
+      "Copied PDF pages keep their dimensions, and each JPG or PNG becomes a separate page sized to the image. A landscape chart can sit beside portrait pages. Keep signed originals and check bookmarks, interactive forms and signatures separately if your workflow depends on them."
     ]
   },
   {
@@ -155,7 +155,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
   {
     "q": "How many PDFs can I merge?",
-    "a": "Select 2–20 files, with a 50 MB limit for each file. Available browser memory may limit large jobs."
+    "a": "Select 2 to 20 PDFs, JPGs or PNGs, with a 50 MB limit per file. Available browser memory may limit large jobs."
   },
   {
     "q": "Does it change page dimensions?",
@@ -173,12 +173,12 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'pdf-to-word-conversion-tips',
     title: "PDF to Word Conversion: Check Layout and Editable Text",
     metaTitle: "PDF to Word Conversion Tips for Editable DOCX Files",
-    metaDescription: "Convert PDF to Word with realistic expectations. Learn what to check in DOCX output, how scans differ, and when server processing is required.",
+    metaDescription: "Convert PDF to editable Word in your browser, use OCR for scanned pages, and check tables, reading order and layout in the downloaded DOCX.",
     excerpt: "PDF and Word store page content differently. Treat conversion as a starting point for editing and review the result against your original.",
     category: 'PDF Guide',
     readTime: "3 min read",
     datePublished: '2025-04-15',
-    dateModified: "2026-09-29",
+    dateModified: "2026-11-25",
     relatedTool: 'pdf-to-word',
     relatedTools: ['word-to-pdf', 'ocr-pdf', 'compress-pdf'],
     keywords: ['pdf to word', 'convert pdf to word', 'pdf to docx', 'pdf to word online free', 'pdf to word tips'],
@@ -193,10 +193,10 @@ export const BLOG_POSTS: BlogPost[] = [
     "heading": "Convert PDF to Word",
     "paragraphs": [],
     "steps": [
-      "Open PDF to Word and select a PDF within the displayed file limit.",
-      "Only continue if you are comfortable sending the document to the processing service. This conversion is not performed entirely in your browser.",
-      "Click Convert to Word. The configured conversion service must be available.",
-      "Download the DOCX and compare it with the PDF in your word processor."
+      "Open PDF to Word and select one PDF up to 100 MB.",
+      "If the document contains scanned pages, choose the scan language to help text recognition.",
+      "Click Convert to Word. The tool tries browser conversion first. For files up to 4 MB, it can automatically send the PDF to the online converter if browser conversion fails or a scanned page cannot be read.",
+      "Download the DOCX and compare it with the PDF in your word processor. Check whether the words you need are editable."
     ]
   },
   {
@@ -212,28 +212,28 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "heading": "Scans and complex layouts",
     "paragraphs": [
-      "The conversion route does not promise an OCR step. For scans, use an appropriate OCR workflow first and proofread the recognized text. Multi-column pages, forms and image-heavy designs can need substantial manual reconstruction in Word."
+      "The browser uses optical character recognition (OCR) on scanned pages. Compare the result with your original, especially names, dates and numbers. A page that the browser cannot read may remain a picture in the DOCX. Multi-column pages, forms and image-heavy designs can need manual reconstruction in Word."
     ]
   },
   {
-    "heading": "If conversion is unavailable",
+    "heading": "When to use the online converter",
     "paragraphs": [
-      "This feature depends on a configured server. A service error does not mean your PDF is corrupt. Keep the original and try again later, or use a trusted local converter for files you cannot send to a processing service. Do not assume a retention or deletion policy that has not been confirmed for the deployed service."
+      "If the browser result has layout problems and your PDF is up to 4 MB, the result panel lets you try the online converter. This uploads the file for processing. Use an offline desktop converter for files that must stay on your device."
     ]
   }
 ],
     faqs: [
   {
-    "q": "Is PDF to Word a local browser tool?",
-    "a": "No. It sends the selected PDF to a conversion service and returns a DOCX file."
+    "q": "Does PDF to Word upload my file?",
+    "a": "Conversion starts in your browser. For files up to 4 MB, the tool may upload the PDF automatically if the browser cannot convert it or read a scanned page. Choosing the online converter also uploads the file."
   },
   {
     "q": "Will formatting be identical?",
-    "a": "Not necessarily. Review tables, fonts, columns and page breaks; a PDF is not the same document model as Word."
+    "a": "Formatting can change. Review tables, fonts, columns and page breaks in the downloaded DOCX."
   },
   {
     "q": "Does it make scanned text editable automatically?",
-    "a": "Do not rely on that. Scanned pages may require OCR followed by proofreading."
+    "a": "The browser tries OCR on scanned pages. Proofread the recognized text. Unreadable pages may remain pictures in the DOCX."
   }
 ],
   },
@@ -3119,7 +3119,6 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ]
   },
-
   {
     "slug": "how-to-create-a-wifi-qr-code",
     "title": "How to Create a Wi-Fi QR Code Guests Can Scan to Connect",
@@ -3267,6 +3266,7 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ]
   },
+
 
 ]
 
