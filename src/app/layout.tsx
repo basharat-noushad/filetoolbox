@@ -135,18 +135,6 @@ const organizationSchema = {
   ],
 }
 
-// ── Speakable — Google Assistant / voice search ───────────────────────────────
-const speakableSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': `${SITE_URL}/#webpage`,
-  speakable: {
-    '@type': 'SpeakableSpecification',
-    cssSelector: ['h1', '.site-description', '[data-speakable]'],
-  },
-  url: SITE_URL,
-}
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const publisherId = process.env.NEXT_PUBLIC_ADSENSE_ID
   const isAdSenseConfigured = publisherId && publisherId !== 'ca-pub-XXXXXXXXXXXXXXXXX'
@@ -154,10 +142,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={plusJakarta.variable}>
       <head>
-        {/* ── Structured data: Website + Organization + Speakable ────────────── */}
+        {/* Structured data for the site and its publisher */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
         {/* ── Analytics ──────────────────────────────────────────────────────── */}
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="RX6OShW8isolrP6Ut1Gq1w" async />
