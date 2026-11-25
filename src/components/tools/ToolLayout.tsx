@@ -16,7 +16,7 @@ interface ToolLayoutProps {
 
 const ADS_ON = !!process.env.NEXT_PUBLIC_ADSENSE_ID && process.env.NEXT_PUBLIC_ADSENSE_ID !== 'ca-pub-XXXXXXXXXXXXXXXXX'
 
-export function ToolLayout({ tool, howToTitle, howToSteps, faqs, children }: ToolLayoutProps) {
+export function ToolLayout({ tool, howToTitle = `How to use ${tool.name}`, howToSteps, faqs, children }: ToolLayoutProps) {
   const serverProcessing = usesProcessingServer(tool.slug)
   const guides = BLOG_POSTS.filter(post => post.relatedTool === tool.slug || post.relatedTools.includes(tool.slug))
     .sort((a, b) => Number(b.relatedTool === tool.slug) - Number(a.relatedTool === tool.slug)).slice(0, 3)
@@ -52,7 +52,7 @@ export function ToolLayout({ tool, howToTitle, howToSteps, faqs, children }: Too
                 <AdBanner slot="below-tool" format="rectangle" />
               </div>
               <section className="mt-10">
-                <h2 className="text-xl font-semibold text-gray-900 mb-4">{howToTitle ?? `How to ${tool.name}`}</h2>
+                <h2 className="text-xl font-semibold text-gray-900 mb-4">{howToTitle}</h2>
                 <ol className="space-y-3">
                   {howToSteps.map((step, i) => (
                     <li key={i} className="flex gap-3">
